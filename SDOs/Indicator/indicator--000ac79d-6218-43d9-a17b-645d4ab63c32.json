@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--000ac79d-6218-43d9-a17b-645d4ab63c32",
+    "created": "2024-08-13T15:14:23.637760Z",
+    "modified": "2024-08-13T15:14:23.637762Z",
+    "name": "WarzoneRAT hash",
+    "description": "This is an IoC for WarzoneRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'abf0480eb01d840ee627519cc00086badd7a27f80f654d1cc44fec8f34353257' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.637763Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

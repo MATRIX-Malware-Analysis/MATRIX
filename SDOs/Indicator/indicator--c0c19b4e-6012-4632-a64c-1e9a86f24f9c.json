@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--c0c19b4e-6012-4632-a64c-1e9a86f24f9c",
+    "created": "2024-08-13T15:14:23.631652Z",
+    "modified": "2024-08-13T15:14:23.631653Z",
+    "name": "WastedLocker hash",
+    "description": "This is an IoC for WastedLocker",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'aa05e7a187ddec2e11fc1c9eafe61408d085b0ab6cd12caeaf531c9dca129772' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.631655Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

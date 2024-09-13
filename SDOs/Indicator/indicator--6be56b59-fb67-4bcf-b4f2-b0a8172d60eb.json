@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--6be56b59-fb67-4bcf-b4f2-b0a8172d60eb",
+    "created": "2024-08-13T15:14:23.797827Z",
+    "modified": "2024-08-13T15:14:23.797830Z",
+    "name": "Cobian RAT hash",
+    "description": "This is an IoC for Cobian RAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '1f2c145fc77049b9437c9aedfd8332be167246bc270d98c22deca902fc967563' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.797832Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

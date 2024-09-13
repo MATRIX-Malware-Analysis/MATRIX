@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e1a301d3-bf8c-429c-8647-aa89f7eb873a",
+    "created": "2024-08-13T15:14:22.792946Z",
+    "modified": "2024-08-13T15:14:22.792948Z",
+    "name": "Astaroth hash",
+    "description": "This is an IoC for Astaroth",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'fc1485b00d7c0b3ba4614d34a162578f34943e0369779ef65fca84fd6a4a80b8' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:22.792949Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

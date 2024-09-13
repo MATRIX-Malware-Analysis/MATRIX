@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a6f25782-e6f4-4e04-8923-99c9f7eb7ceb",
+    "created": "2024-08-13T15:14:23.465760Z",
+    "modified": "2024-08-13T15:14:23.465762Z",
+    "name": "Cobalt Strike hash",
+    "description": "This is an IoC for Cobalt Strike",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '53c31c1987e6d560be5ed2cea896b4f7053aa9719ad9e9909bff6cf503b7921d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.465763Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

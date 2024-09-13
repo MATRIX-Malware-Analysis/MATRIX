@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--c8b6a811-2b6a-4849-ae6e-cb2f7da18780",
+    "created": "2024-08-13T15:14:23.754061Z",
+    "modified": "2024-08-13T15:14:23.754064Z",
+    "name": "MESSAGETAP hash",
+    "description": "This is an IoC for MESSAGETAP",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '427a0860365f15c1408708c2d6ed527e4e12ad917a1fa111d190c6601148a1eb' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.754066Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

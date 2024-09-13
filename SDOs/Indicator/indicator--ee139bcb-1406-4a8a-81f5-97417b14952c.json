@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ee139bcb-1406-4a8a-81f5-97417b14952c",
+    "created": "2024-08-13T15:14:23.351172Z",
+    "modified": "2024-08-13T15:14:23.351175Z",
+    "name": "InvisiMole hash",
+    "description": "This is an IoC for InvisiMole",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '2debef67c4e8e9a28af920688b23e858876be623573f2cf23edcd50856388622' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.351176Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

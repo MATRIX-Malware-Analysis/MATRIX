@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--907cad0e-366e-4973-a74b-5e0c5379a397",
+    "created": "2024-08-29T13:01:02.867517Z",
+    "modified": "2024-08-29T13:01:02.867519Z",
+    "name": "Sliver hash",
+    "description": "This is an IoC for Sliver",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '015a6855e016e07ee1525bfb6510050443ad5482039143f4986c0e2ab8638343' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.867520Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

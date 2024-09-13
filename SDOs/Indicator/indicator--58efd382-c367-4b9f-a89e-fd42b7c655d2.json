@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--58efd382-c367-4b9f-a89e-fd42b7c655d2",
+    "created": "2024-08-13T15:14:23.085362Z",
+    "modified": "2024-08-13T15:14:23.085364Z",
+    "name": "Bumblebee hash",
+    "description": "This is an IoC for Bumblebee",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'cc9d10b98fd094d95ce155a5815e039a3eb6f3545708564c09e27834dc3768ab' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.085366Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

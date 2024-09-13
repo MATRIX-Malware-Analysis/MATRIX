@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--95b0ae2a-7e55-403d-aa4c-59138fae2779",
+    "created": "2024-08-29T13:01:02.753868Z",
+    "modified": "2024-08-29T13:01:02.753870Z",
+    "name": "NanoCore hash",
+    "description": "This is an IoC for NanoCore",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '020e75bba53b32452b70c2796aabfd51dbd2c82380bf138158ad590d9db1df72' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.753871Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

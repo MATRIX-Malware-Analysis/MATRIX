@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--35181c4b-5121-4503-bc5a-2dfe278d597e",
+    "created": "2024-08-13T15:14:23.991111Z",
+    "modified": "2024-08-13T15:14:23.991113Z",
+    "name": "certutil hash",
+    "description": "This is an IoC for certutil",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '5015c54014939fbeac22f665ccaa4f94bb043de2209cf4ae27585d76e3617442' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.991114Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

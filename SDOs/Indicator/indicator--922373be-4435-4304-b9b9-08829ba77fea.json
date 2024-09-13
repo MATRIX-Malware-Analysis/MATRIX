@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--922373be-4435-4304-b9b9-08829ba77fea",
+    "created": "2024-08-29T13:01:02.972428Z",
+    "modified": "2024-08-29T13:01:02.972430Z",
+    "name": "AsyncRAT hash",
+    "description": "This is an IoC for AsyncRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '07ed90ecdab75f680a5203e3e46c6edd4c5c55054d495bfdacf159f8ba7de9f8' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.972431Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

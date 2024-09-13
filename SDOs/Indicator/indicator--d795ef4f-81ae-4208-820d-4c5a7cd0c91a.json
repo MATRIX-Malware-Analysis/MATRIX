@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d795ef4f-81ae-4208-820d-4c5a7cd0c91a",
+    "created": "2024-08-13T15:14:23.311248Z",
+    "modified": "2024-08-13T15:14:23.311250Z",
+    "name": "Cerberus hash",
+    "description": "This is an IoC for Cerberus",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'acdba5189ad88501274c446dbf3b040917cc4c1f1b67fb9e4d2f69c6805920c2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.311251Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--02bd0cae-dd7b-4fd4-8f65-d6ae3239b624",
+    "created": "2024-08-13T15:14:23.365036Z",
+    "modified": "2024-08-13T15:14:23.365038Z",
+    "name": "Machete hash",
+    "description": "This is an IoC for Machete",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'c61128282c1829416341e5e4a1947831ffe1e2d930e0d5fd7099016dc1f564ef' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.365039Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

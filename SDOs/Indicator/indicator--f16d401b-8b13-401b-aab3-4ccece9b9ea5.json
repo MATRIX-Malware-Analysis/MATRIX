@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f16d401b-8b13-401b-aab3-4ccece9b9ea5",
+    "created": "2024-08-13T15:14:23.573037Z",
+    "modified": "2024-08-13T15:14:23.573041Z",
+    "name": "StoneDrill hash",
+    "description": "This is an IoC for StoneDrill",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '15c069fcb2407bfeb791823dfb849f30df28ec00c8b4e2b27bcde99007cb618c' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.573043Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

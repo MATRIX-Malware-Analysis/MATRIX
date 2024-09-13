@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--3e5e95fd-3cce-4b66-b8c7-750d8874c3c2",
+    "created": "2024-08-13T15:14:23.445667Z",
+    "modified": "2024-08-13T15:14:23.445669Z",
+    "name": "Ryuk hash",
+    "description": "This is an IoC for Ryuk",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '61e88158da4636ab0c11db75e376f42e11a02ebe0387223934fb10944b52794f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.445670Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fddd0817-a588-4917-b192-8f92cbfb052a",
+    "created": "2024-08-13T15:14:23.067717Z",
+    "modified": "2024-08-13T15:14:23.067719Z",
+    "name": "BendyBear hash",
+    "description": "This is an IoC for BendyBear",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '682122f34027e3f8025928d446989b02952449f5e5930c2670f8f789f41573ff' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.067721Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

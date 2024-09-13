@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--84d4dbc2-89a9-4dd4-895d-c7c32ce8be42",
+    "created": "2024-08-13T15:14:23.132735Z",
+    "modified": "2024-08-13T15:14:23.132737Z",
+    "name": "Dridex hash",
+    "description": "This is an IoC for Dridex",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0341b7e0b66e27bee166ba1fd9fad700d85e58a257bbfed1b60a662d97fc1617' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.132738Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

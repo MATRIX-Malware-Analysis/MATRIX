@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--93460066-3ab5-4996-9616-5b13b8d8e5b9",
+    "created": "2024-08-13T15:14:23.080807Z",
+    "modified": "2024-08-13T15:14:23.080812Z",
+    "name": "SDBbot hash",
+    "description": "This is an IoC for SDBbot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'ac3db13e7b17b4724d503aac7b9f4d27a9dfa9d48b069aef32ee5e393c5a544e' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.080814Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

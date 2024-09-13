@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--521add62-c838-474a-bab7-f220efe1b4a7",
+    "created": "2024-08-29T13:01:02.883204Z",
+    "modified": "2024-08-29T13:01:02.883206Z",
+    "name": "Pony hash",
+    "description": "This is an IoC for Pony",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f431b9e474fca77c9cd6265cfa6224845371d1cf281b3c8b48eb050d055f72fe' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.883207Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

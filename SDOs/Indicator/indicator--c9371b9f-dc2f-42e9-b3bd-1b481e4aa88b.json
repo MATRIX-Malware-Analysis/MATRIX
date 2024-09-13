@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--c9371b9f-dc2f-42e9-b3bd-1b481e4aa88b",
+    "created": "2024-08-13T15:14:23.856950Z",
+    "modified": "2024-08-13T15:14:23.856954Z",
+    "name": "ThreatNeedle hash",
+    "description": "This is an IoC for ThreatNeedle",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '775bcd723e8f75f51f612bccbd7ecc4811658508025a3056248e999c7c2b0f9b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.856955Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--8629ad5a-c75e-4fac-913e-90b69647c8b4",
+    "created": "2024-08-13T15:14:23.282717Z",
+    "modified": "2024-08-13T15:14:23.282720Z",
+    "name": "PoisonIvy hash",
+    "description": "This is an IoC for PoisonIvy",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f650372e00f6c16633c4e07d202d6c1d5e94c6dd7e19154498654689c90cf278' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.282721Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

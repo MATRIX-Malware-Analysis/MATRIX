@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--51e4e4fc-c6b9-46a1-8a47-2f4f13f78c19",
+    "created": "2024-08-13T15:14:23.629750Z",
+    "modified": "2024-08-13T15:14:23.629753Z",
+    "name": "Socksbot hash",
+    "description": "This is an IoC for Socksbot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '7a868ed90a11896307c01b283519eefe82886622ae165b3c4f678008fedddf35' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.629754Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

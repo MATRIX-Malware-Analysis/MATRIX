@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--55007986-29ae-4afe-aa2c-ac0f8a077d3d",
+    "created": "2024-08-13T15:14:23.328557Z",
+    "modified": "2024-08-13T15:14:23.328561Z",
+    "name": "NotPetya hash",
+    "description": "This is an IoC for NotPetya",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '63545fa195488ff51955f09833332b9660d18f8afb16bdf579134661962e548a' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.328563Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

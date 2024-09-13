@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--0fdaad92-8cb7-4699-bceb-a44e80992dc2",
+    "created": "2024-08-13T15:14:23.747049Z",
+    "modified": "2024-08-13T15:14:23.747051Z",
+    "name": "Conti hash",
+    "description": "This is an IoC for Conti",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '2ff3f8766332a55fd714923c8822ef236f772551b32e25c2068eb19c9215ed67' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.747053Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

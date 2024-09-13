@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d39c96db-7ce2-4f5d-ab66-543bb774958f",
+    "created": "2024-08-13T15:14:23.118933Z",
+    "modified": "2024-08-13T15:14:23.118935Z",
+    "name": "Hancitor hash",
+    "description": "This is an IoC for Hancitor",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'cef7ccf63ab0648d312c44000f29f93d672e6a99a8ab5d08b599719d3f2ac23d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.118936Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

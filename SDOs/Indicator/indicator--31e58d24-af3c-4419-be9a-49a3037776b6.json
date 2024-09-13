@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--31e58d24-af3c-4419-be9a-49a3037776b6",
+    "created": "2024-08-13T15:14:23.485749Z",
+    "modified": "2024-08-13T15:14:23.485751Z",
+    "name": "Squirrelwaffle hash",
+    "description": "This is an IoC for Squirrelwaffle",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '278f92d704ed714c94aa4ccf397552d57e04455565cf18139ac46e6f3b30177d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.485752Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

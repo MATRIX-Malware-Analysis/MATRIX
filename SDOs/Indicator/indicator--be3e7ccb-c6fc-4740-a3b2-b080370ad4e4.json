@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--be3e7ccb-c6fc-4740-a3b2-b080370ad4e4",
+    "created": "2024-08-13T15:14:23.584565Z",
+    "modified": "2024-08-13T15:14:23.584567Z",
+    "name": "Amadey hash",
+    "description": "This is an IoC for Amadey",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0a99030a240947af81b26659ab5d740920b5caac8dee8cd415c1bc14ca410f8a' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.584568Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

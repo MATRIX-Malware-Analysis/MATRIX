@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--4de54872-df1e-472f-9851-6870862eb869",
+    "created": "2024-08-13T15:14:23.239983Z",
+    "modified": "2024-08-13T15:14:23.239986Z",
+    "name": "EKANS hash",
+    "description": "This is an IoC for EKANS",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '057026ba4e1aa40f708688ad2fbb32ddb069cf3a1e277e92c5b14a275b7a5ae4' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.239987Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

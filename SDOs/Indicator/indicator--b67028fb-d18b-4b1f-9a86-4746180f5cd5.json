@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--b67028fb-d18b-4b1f-9a86-4746180f5cd5",
+    "created": "2024-08-13T15:14:23.615350Z",
+    "modified": "2024-08-13T15:14:23.615352Z",
+    "name": "KONNI hash",
+    "description": "This is an IoC for KONNI",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '062aa6a968090cf6fd98e1ac8612dd4985bf9b29e13d60eba8f24e5a706f8311' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.615353Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

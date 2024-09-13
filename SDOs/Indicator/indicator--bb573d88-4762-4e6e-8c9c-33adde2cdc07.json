@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--bb573d88-4762-4e6e-8c9c-33adde2cdc07",
+    "created": "2024-08-13T15:14:23.579659Z",
+    "modified": "2024-08-13T15:14:23.579661Z",
+    "name": "Valak hash",
+    "description": "This is an IoC for Valak",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f832c39ea27975ce3cb9fb60b6369274afd59b732a04624787cb820e0b52cee2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.579662Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

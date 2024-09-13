@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f24ef444-25ef-44e8-a20a-72d72228e9ee",
+    "created": "2024-08-29T13:01:02.614204Z",
+    "modified": "2024-08-29T13:01:02.614206Z",
+    "name": "RunningRAT hash",
+    "description": "This is an IoC for RunningRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '4a954f2b0d13c4916fb79c5b78e60979871b1ded51c0fe80bc9e636585a5bd06' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.614207Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

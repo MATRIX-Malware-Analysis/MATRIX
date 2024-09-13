@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--946e2961-0360-4a70-a1c8-c93dac52cd68",
+    "created": "2024-08-13T15:14:23.749194Z",
+    "modified": "2024-08-13T15:14:23.749196Z",
+    "name": "RobbinHood hash",
+    "description": "This is an IoC for RobbinHood",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '3f56501f764d49723188bb119845fec4f2419a5080b74513fd0734e2a628e754' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.749197Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

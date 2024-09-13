@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--85fa3531-4175-4276-8444-0bd4f1f35e96",
+    "created": "2024-08-13T15:12:06.635646Z",
+    "modified": "2024-08-13T15:12:06.635650Z",
+    "name": "EventBot hash",
+    "description": "This is an IoC for EventBot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e6e736df1923c47f6624dab18bf6a341995b5e756395256aa0b3f4c43594481a' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.635652Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

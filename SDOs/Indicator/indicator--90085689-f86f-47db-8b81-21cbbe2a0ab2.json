@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--90085689-f86f-47db-8b81-21cbbe2a0ab2",
+    "created": "2024-08-13T15:14:23.572132Z",
+    "modified": "2024-08-13T15:14:23.572137Z",
+    "name": "QUIETCANARY hash",
+    "description": "This is an IoC for QUIETCANARY",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '3f94b20cb7f4ff55207660649ebbb02679c991fe03efbcb0bd3840fc7f0bd527' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.572139Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

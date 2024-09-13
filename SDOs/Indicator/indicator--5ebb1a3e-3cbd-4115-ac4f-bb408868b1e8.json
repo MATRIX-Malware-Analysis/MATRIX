@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--5ebb1a3e-3cbd-4115-ac4f-bb408868b1e8",
+    "created": "2024-08-13T15:14:23.453227Z",
+    "modified": "2024-08-13T15:14:23.453229Z",
+    "name": "EVILNUM hash",
+    "description": "This is an IoC for EVILNUM",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '62e348a281df1a3ef489cb719c3c1a9f3dfddcb774b2f94e2c288e0ae8600eda' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.453231Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

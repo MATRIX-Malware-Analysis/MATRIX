@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ad052d19-43fd-4a7f-ba7e-9925f61339ae",
+    "created": "2024-08-13T15:14:23.364696Z",
+    "modified": "2024-08-13T15:14:23.364698Z",
+    "name": "Shark hash",
+    "description": "This is an IoC for Shark",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f6ae4f4373510c4e096fab84383b547c8997ccf3673c00660df8a3dc9ed1f3ca' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.364700Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

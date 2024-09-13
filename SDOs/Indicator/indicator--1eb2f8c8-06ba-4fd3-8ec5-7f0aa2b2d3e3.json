@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--1eb2f8c8-06ba-4fd3-8ec5-7f0aa2b2d3e3",
+    "created": "2024-08-13T15:14:22.734242Z",
+    "modified": "2024-08-13T15:14:22.734244Z",
+    "name": "HermeticWiper hash",
+    "description": "This is an IoC for HermeticWiper",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '06086c1da4590dcc7f1e10a6be3431e1166286a9e7761f2de9de79d7fda9c397' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:22.734245Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

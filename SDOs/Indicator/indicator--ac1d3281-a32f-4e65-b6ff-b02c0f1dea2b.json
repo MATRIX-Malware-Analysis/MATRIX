@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ac1d3281-a32f-4e65-b6ff-b02c0f1dea2b",
+    "created": "2024-08-13T15:14:23.225538Z",
+    "modified": "2024-08-13T15:14:23.225541Z",
+    "name": "Lokibot hash",
+    "description": "This is an IoC for Lokibot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0080ce04186ec4c7492a676c80136e84006b1dac3558f741ef4b2822251b22f2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.225543Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

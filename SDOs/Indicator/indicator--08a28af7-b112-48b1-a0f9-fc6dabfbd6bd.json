@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--08a28af7-b112-48b1-a0f9-fc6dabfbd6bd",
+    "created": "2024-08-13T15:14:22.743384Z",
+    "modified": "2024-08-13T15:14:22.743386Z",
+    "name": "Tor hash",
+    "description": "This is an IoC for Tor",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '68599aed1a59ea181bd317a0ac5ec38b57c2537c4ef3ef606708576bf87036c7' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:22.743388Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

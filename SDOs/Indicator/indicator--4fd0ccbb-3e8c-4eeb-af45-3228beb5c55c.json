@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--4fd0ccbb-3e8c-4eeb-af45-3228beb5c55c",
+    "created": "2024-08-13T15:14:23.860325Z",
+    "modified": "2024-08-13T15:14:23.860327Z",
+    "name": "CryptoLocker hash",
+    "description": "This is an IoC for CryptoLocker",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '8d2f2ee24882afe11f50e3d6d9400e35fa66724b321cb9f5a246baf63cbc1788' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.860328Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--2e8f0c92-6a34-4c06-8863-21fc691ca65f",
+    "created": "2024-08-13T15:12:06.635192Z",
+    "modified": "2024-08-13T15:12:06.635197Z",
+    "name": "Brute Ratel C4 hash",
+    "description": "This is an IoC for Brute Ratel C4",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'd71dc7ba8523947e08c6eec43a726fe75aed248dfd3a7c4f6537224e9ed05f6f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.635199Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--787f0ec8-da3e-4779-9eba-7450fa3574e6",
+    "created": "2024-08-13T15:14:23.781668Z",
+    "modified": "2024-08-13T15:14:23.781670Z",
+    "name": "EnvyScout hash",
+    "description": "This is an IoC for EnvyScout",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '6dc08be554674d05a630d6f3a5fd851d804ed5360b8d954b5d1096ca25e41e52' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.781671Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fed2b8e0-1ac7-449e-b71a-9a5e21652afb",
+    "created": "2024-08-13T15:14:23.377799Z",
+    "modified": "2024-08-13T15:14:23.377801Z",
+    "name": "ConnectWise hash",
+    "description": "This is an IoC for ConnectWise",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'bb98a88346b10b19b1e13e4e50e7e635bd400c3f6ab932ceddb943e758b62b50' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.377802Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

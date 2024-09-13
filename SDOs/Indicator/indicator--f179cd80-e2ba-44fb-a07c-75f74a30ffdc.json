@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f179cd80-e2ba-44fb-a07c-75f74a30ffdc",
+    "created": "2024-08-13T15:14:23.340802Z",
+    "modified": "2024-08-13T15:14:23.340804Z",
+    "name": "QakBot hash",
+    "description": "This is an IoC for QakBot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '8386c26ef88062db37966613ac32debe4ec5be1e44ea42ae89d8ad7fbf3f83e5' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.340805Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

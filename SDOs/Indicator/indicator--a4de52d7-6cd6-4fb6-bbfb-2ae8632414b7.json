@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a4de52d7-6cd6-4fb6-bbfb-2ae8632414b7",
+    "created": "2024-08-13T15:14:23.435136Z",
+    "modified": "2024-08-13T15:14:23.435138Z",
+    "name": "Carbanak hash",
+    "description": "This is an IoC for Carbanak",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '64d66908a9872c8ab1733d34ee664910cdd729925aa9fc61cae68dc3e6367efb' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.435139Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

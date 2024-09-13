@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f8b82611-a5d6-4f57-99d8-19319c6fc102",
+    "created": "2024-08-13T15:14:23.482047Z",
+    "modified": "2024-08-13T15:14:23.482049Z",
+    "name": "Snake hash",
+    "description": "This is an IoC for Snake",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'ca91c53a4aafe29d189b11ddbc1d1dbffcb360402050e93c29b48e3fad832538' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.482050Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

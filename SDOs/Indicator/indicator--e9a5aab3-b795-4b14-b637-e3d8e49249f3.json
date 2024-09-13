@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e9a5aab3-b795-4b14-b637-e3d8e49249f3",
+    "created": "2024-08-13T15:14:23.483144Z",
+    "modified": "2024-08-13T15:14:23.483146Z",
+    "name": "Cadelspy hash",
+    "description": "This is an IoC for Cadelspy",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f3b0ad96c8529399bd7117bd67cdf0297191476d3a81a60b147960306ae5f068' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.483147Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

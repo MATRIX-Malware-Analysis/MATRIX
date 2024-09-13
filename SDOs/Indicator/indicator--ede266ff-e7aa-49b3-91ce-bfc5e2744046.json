@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ede266ff-e7aa-49b3-91ce-bfc5e2744046",
+    "created": "2024-08-29T13:01:02.670395Z",
+    "modified": "2024-08-29T13:01:02.670397Z",
+    "name": "DarkComet hash",
+    "description": "This is an IoC for DarkComet",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '2d45132772614f7090746c39e6730b0710fe868666ccc59f53ce4fe2f16b0fa2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.670399Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

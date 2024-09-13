@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--0db0d33b-8339-46d2-9fd1-91cdcbb15738",
+    "created": "2024-08-13T15:14:23.424349Z",
+    "modified": "2024-08-13T15:14:23.424351Z",
+    "name": "BITSAdmin hash",
+    "description": "This is an IoC for BITSAdmin",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'cbcb8717dd2bf61581ad3847422ab41d077f45ab5804c60052d4ce1da437f5c5' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.424352Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

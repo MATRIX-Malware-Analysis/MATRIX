@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--52e1a48a-86ea-450c-aed4-b67d612ee3a9",
+    "created": "2024-08-13T15:14:23.291548Z",
+    "modified": "2024-08-13T15:14:23.291550Z",
+    "name": "PS1 hash",
+    "description": "This is an IoC for PS1",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '405c8f26a11bae2d80ed7bd40173fe4877a2ff84267e79198cfa3c96e0e9f4c7' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.291551Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

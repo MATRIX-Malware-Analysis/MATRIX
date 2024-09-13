@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--8fc124f3-91b3-4924-848f-8d331cd88f14",
+    "created": "2024-08-13T15:14:23.066174Z",
+    "modified": "2024-08-13T15:14:23.066177Z",
+    "name": "Mispadu hash",
+    "description": "This is an IoC for Mispadu",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '44239ac8cea7ab1b58dbb687e8894c4e53a2e21762160feed5a25e54cf15eed2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.066178Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

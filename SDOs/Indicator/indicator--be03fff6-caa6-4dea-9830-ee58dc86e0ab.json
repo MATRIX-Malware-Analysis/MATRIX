@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--be03fff6-caa6-4dea-9830-ee58dc86e0ab",
+    "created": "2024-08-13T15:14:23.595142Z",
+    "modified": "2024-08-13T15:14:23.595144Z",
+    "name": "Kraken hash",
+    "description": "This is an IoC for Kraken",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'b639e26a0f0354515870ee167ae46fdd9698c2f0d405ad8838e2e024eb282e39' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.595145Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--dcc4c788-d4b8-440b-80c9-1383aff688bb",
+    "created": "2024-08-13T15:14:23.325206Z",
+    "modified": "2024-08-13T15:14:23.325208Z",
+    "name": "Ursnif hash",
+    "description": "This is an IoC for Ursnif",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '417b67a06ded53fcdad56551352c62fd097a664f03b6f15ff89c78090e7f8859' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.325209Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

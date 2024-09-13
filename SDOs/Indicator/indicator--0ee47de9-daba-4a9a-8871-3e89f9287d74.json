@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--0ee47de9-daba-4a9a-8871-3e89f9287d74",
+    "created": "2024-08-13T15:14:23.068429Z",
+    "modified": "2024-08-13T15:14:23.068431Z",
+    "name": "StrongPity hash",
+    "description": "This is an IoC for StrongPity",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f81d16d98d7c5423e8f231fe47778b0824360fb41525fd545097bb8e700e1a8d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.068432Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--955c766f-6d24-46aa-890e-9f7ed91846e5",
+    "created": "2024-08-13T15:14:22.788371Z",
+    "modified": "2024-08-13T15:14:22.788373Z",
+    "name": "CryptoWall hash",
+    "description": "This is an IoC for CryptoWall",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0715240d1af82c1cea262cde2a286b8b400805dc1f35f49422c7ee39e00f93ce' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:22.788374Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

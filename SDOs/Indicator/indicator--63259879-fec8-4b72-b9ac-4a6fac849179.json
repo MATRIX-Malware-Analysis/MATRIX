@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--63259879-fec8-4b72-b9ac-4a6fac849179",
+    "created": "2024-08-13T15:14:23.329190Z",
+    "modified": "2024-08-13T15:14:23.329192Z",
+    "name": "DarkWatchman hash",
+    "description": "This is an IoC for DarkWatchman",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e4f97acece971ec0c7d0bb221162e20b4ee97679eaf77b73e0d58a6866555201' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.329193Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

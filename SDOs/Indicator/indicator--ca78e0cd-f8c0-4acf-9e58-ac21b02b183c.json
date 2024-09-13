@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ca78e0cd-f8c0-4acf-9e58-ac21b02b183c",
+    "created": "2024-08-13T15:14:23.417113Z",
+    "modified": "2024-08-13T15:14:23.417115Z",
+    "name": "cmd hash",
+    "description": "This is an IoC for cmd",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '19ade27def45cd5c0b8749a4eef0a146bff4574bbdaab1d4e5510a1ea9ce8aeb' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.417116Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

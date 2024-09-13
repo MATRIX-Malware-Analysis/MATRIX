@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--3bdb4a93-c941-468a-81f0-210c1f2bece0",
+    "created": "2024-08-13T15:12:06.719564Z",
+    "modified": "2024-08-13T15:12:06.719566Z",
+    "name": "RemoteUtilities hash",
+    "description": "This is an IoC for RemoteUtilities",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'ed20ff85f5df587140e0780e16a5eb28df94e1b6330c8256de39d94b5a772e83' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.719568Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

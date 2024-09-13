@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d46efe82-8989-4295-826e-03c4282ac261",
+    "created": "2024-08-13T15:14:23.655856Z",
+    "modified": "2024-08-13T15:14:23.655859Z",
+    "name": "Mosquito hash",
+    "description": "This is an IoC for Mosquito",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'b5ae16de99b839819da534f951d4f53977f602d2f0dc8b3e7ad74489ebed8a75' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.655860Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

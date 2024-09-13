@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--3f7462c0-7f38-4311-bba9-a8fb218dcea1",
+    "created": "2024-08-13T15:14:23.609106Z",
+    "modified": "2024-08-13T15:14:23.609109Z",
+    "name": "Dtrack hash",
+    "description": "This is an IoC for Dtrack",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '3fe624c33790b409421f4fa2bb8abfd701df2231a959493c33187ed34bec0ae7' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.609110Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

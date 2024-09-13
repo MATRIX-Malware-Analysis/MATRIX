@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--100eb48a-d1fe-4776-89d5-5c8908a5d841",
+    "created": "2024-08-29T13:01:02.652178Z",
+    "modified": "2024-08-29T13:01:02.652180Z",
+    "name": "DarkTortilla hash",
+    "description": "This is an IoC for DarkTortilla",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'dd544b5ed95e6aed5e3e8d9001692f6833016b4e6b038d4f6c4194c169941f7f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.652182Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

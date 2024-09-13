@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d6e9d05c-d88e-4200-8a28-b08e3b7464a0",
+    "created": "2024-08-13T15:14:23.659640Z",
+    "modified": "2024-08-13T15:14:23.659642Z",
+    "name": "Clop hash",
+    "description": "This is an IoC for Clop",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '15f9ed36d9efc6e570b4f506791ce2c6a849853e2f6d587f30fb12d39dba2649' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.659643Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d6f13360-2ede-430a-8bfb-4519ffc47985",
+    "created": "2024-08-13T15:14:23.313332Z",
+    "modified": "2024-08-13T15:14:23.313334Z",
+    "name": "NativeZone hash",
+    "description": "This is an IoC for NativeZone",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '3b94cc71c325f9068105b9e7d5c9667b1de2bde85b7abc5b29ff649fd54715c4' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.313335Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

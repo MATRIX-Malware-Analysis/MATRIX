@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f5a817c1-6b05-4648-b606-5a7edce48fb5",
+    "created": "2024-08-13T15:12:06.718851Z",
+    "modified": "2024-08-13T15:12:06.718853Z",
+    "name": "BoxCaon hash",
+    "description": "This is an IoC for BoxCaon",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '8be3b10406f690ae5cf46c1dba18cb9a1c75bf646defcc9cab81d40fe0e0cc1b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.718854Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

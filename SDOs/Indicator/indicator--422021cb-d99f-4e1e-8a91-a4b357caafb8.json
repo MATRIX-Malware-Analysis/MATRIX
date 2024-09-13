@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--422021cb-d99f-4e1e-8a91-a4b357caafb8",
+    "created": "2024-08-13T15:14:23.122458Z",
+    "modified": "2024-08-13T15:14:23.122460Z",
+    "name": "Wiper hash",
+    "description": "This is an IoC for Wiper",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'c9de316342aff789e9dcd725b893f48256f381c936ba19a7ccd9336e1ed9cace' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.122462Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

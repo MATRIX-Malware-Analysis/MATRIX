@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--cda765f6-4e21-40c5-97bb-d03dbbc7c345",
+    "created": "2024-08-13T15:14:23.797068Z",
+    "modified": "2024-08-13T15:14:23.797071Z",
+    "name": "OutSteel hash",
+    "description": "This is an IoC for OutSteel",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'd0aad99f10bdd6f6af2f7a0f6c319ed7d126de4d1ff44ca86858e7ffc17cc39b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.797072Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

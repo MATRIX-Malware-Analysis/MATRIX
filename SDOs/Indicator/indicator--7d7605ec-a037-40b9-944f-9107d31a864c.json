@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--7d7605ec-a037-40b9-944f-9107d31a864c",
+    "created": "2024-08-13T15:14:23.752541Z",
+    "modified": "2024-08-13T15:14:23.752543Z",
+    "name": "Bandook hash",
+    "description": "This is an IoC for Bandook",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '512dc2e5252c2063a348f3475789b0cd02fce90c68f17845e3b99dd2fd8049e4' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.752544Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

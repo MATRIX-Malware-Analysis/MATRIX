@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e57088fd-5ba2-4c71-97c0-ede1375651aa",
+    "created": "2024-08-13T15:14:23.314793Z",
+    "modified": "2024-08-13T15:14:23.314795Z",
+    "name": "ObliqueRAT hash",
+    "description": "This is an IoC for ObliqueRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '9da1a55b88bda3810ccd482051dc7e0088e8539ef8da5ddd29c583f593244e1c' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.314796Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

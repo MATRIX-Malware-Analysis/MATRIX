@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--305e60d4-7dc0-4ed6-ac23-37262c8efff0",
+    "created": "2024-08-13T15:14:23.964703Z",
+    "modified": "2024-08-13T15:14:23.964717Z",
+    "name": "PoetRAT hash",
+    "description": "This is an IoC for PoetRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '4ddae23da7181ed5e7d290080f2117e7e52e0003b12ef87c04bb5d95a212ba3d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.964723Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fec9615a-0ac5-48c2-b1f6-a08dec4f912f",
+    "created": "2024-08-13T15:12:06.717077Z",
+    "modified": "2024-08-13T15:12:06.717078Z",
+    "name": "HELLOKITTY hash",
+    "description": "This is an IoC for HELLOKITTY",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'fa722d0667418d68c4935e1461010a8f730f02fa1f595ee68bd0768fd5d1f8bb' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.717080Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

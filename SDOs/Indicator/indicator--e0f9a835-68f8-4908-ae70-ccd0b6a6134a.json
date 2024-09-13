@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e0f9a835-68f8-4908-ae70-ccd0b6a6134a",
+    "created": "2024-08-13T15:14:23.218532Z",
+    "modified": "2024-08-13T15:14:23.218537Z",
+    "name": "SharkBot hash",
+    "description": "This is an IoC for SharkBot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '900fe34d5394689c86ead76666e79620ad7a10109c75d661af9bc7d8fb0c27b8' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.218541Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

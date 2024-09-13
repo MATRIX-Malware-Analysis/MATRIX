@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--57de3601-ab2a-4d49-8b4a-c89aa1f07b24",
+    "created": "2024-08-13T15:14:23.629972Z",
+    "modified": "2024-08-13T15:14:23.629974Z",
+    "name": "Chameleon hash",
+    "description": "This is an IoC for Chameleon",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '15569757171999c15ac7ab7248bb75efb9bcb7a273c5fe4e59fde2d7582e0e0d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.629975Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

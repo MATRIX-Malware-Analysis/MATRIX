@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ed11849f-45e2-49bb-86b5-a3e614df2cba",
+    "created": "2024-08-13T15:12:06.638450Z",
+    "modified": "2024-08-13T15:12:06.638455Z",
+    "name": "Maze hash",
+    "description": "This is an IoC for Maze",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e8a091a84dd2ea7ee429135ff48e9f48f7787637ccb79f6c3eb42f34588bc684' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.638457Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

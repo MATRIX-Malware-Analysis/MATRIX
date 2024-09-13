@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--3d54c1db-c409-47ae-8e0c-fd2c03690c9f",
+    "created": "2024-08-13T15:12:06.732247Z",
+    "modified": "2024-08-13T15:12:06.732249Z",
+    "name": "TrickBot hash",
+    "description": "This is an IoC for TrickBot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'ddf18de4cbb6d9731b53cff4a3285dfc913ea70fcf4ac88a829a21cf4911bdd6' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.732251Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

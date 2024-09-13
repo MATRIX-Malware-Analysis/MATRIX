@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f00c48c1-3d80-4757-80b2-011c9e60d0f8",
+    "created": "2024-08-13T15:14:23.662094Z",
+    "modified": "2024-08-13T15:14:23.662096Z",
+    "name": "Avaddon hash",
+    "description": "This is an IoC for Avaddon",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0f081ea4e30ca05fc2977235bf239992b17fa9968b58b001990e4539f0899269' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.662097Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

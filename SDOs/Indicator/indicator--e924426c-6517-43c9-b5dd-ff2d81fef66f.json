@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e924426c-6517-43c9-b5dd-ff2d81fef66f",
+    "created": "2024-08-13T15:14:23.278136Z",
+    "modified": "2024-08-13T15:14:23.278138Z",
+    "name": "Kinsing hash",
+    "description": "This is an IoC for Kinsing",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '8e27b76b3903312cc5e93f250d7cf90b7b999592d70dcf2922bb450023014006' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.278140Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

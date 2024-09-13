@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a9e93418-94a0-4037-93da-24fb4eba4f12",
+    "created": "2024-08-13T15:14:23.989109Z",
+    "modified": "2024-08-13T15:14:23.989111Z",
+    "name": "Emotet hash",
+    "description": "This is an IoC for Emotet",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'a4d9ab88cc9ec953cff80c5cb954f02bde1586c0818f4843acfae3812b4bb476' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.989112Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

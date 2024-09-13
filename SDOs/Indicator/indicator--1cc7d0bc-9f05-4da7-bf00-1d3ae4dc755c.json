@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--1cc7d0bc-9f05-4da7-bf00-1d3ae4dc755c",
+    "created": "2024-08-13T15:14:23.969544Z",
+    "modified": "2024-08-13T15:14:23.969551Z",
+    "name": "DEATHRANSOM hash",
+    "description": "This is an IoC for DEATHRANSOM",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '1ee39f6cd500940ad97c444778dc717361e01ce5579a28d761aedae86e85af64' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.969555Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

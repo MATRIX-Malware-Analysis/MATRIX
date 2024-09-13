@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--bd6a248e-021f-4c9a-906b-44e17555a859",
+    "created": "2024-08-13T15:12:06.658690Z",
+    "modified": "2024-08-13T15:12:06.658693Z",
+    "name": "Metamorfo hash",
+    "description": "This is an IoC for Metamorfo",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'ea40f470a58fe5a436cbcfc5e812d176ec30adae405aedea780d38c231c88926' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.658695Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

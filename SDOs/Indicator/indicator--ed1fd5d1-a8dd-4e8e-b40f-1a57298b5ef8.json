@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ed1fd5d1-a8dd-4e8e-b40f-1a57298b5ef8",
+    "created": "2024-08-13T15:14:23.796824Z",
+    "modified": "2024-08-13T15:14:23.796826Z",
+    "name": "AcidRain hash",
+    "description": "This is an IoC for AcidRain",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '9b4dfaca873961174ba935fddaf696145afe7bbf5734509f95feb54f3584fd9a' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.796828Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

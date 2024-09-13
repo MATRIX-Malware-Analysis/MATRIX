@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a2ed948e-7038-4502-999a-6c2f7fb9ad37",
+    "created": "2024-08-13T15:12:06.690354Z",
+    "modified": "2024-08-13T15:12:06.690356Z",
+    "name": "BADNEWS hash",
+    "description": "This is an IoC for BADNEWS",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'd6d71a98f72303737cdaa5b2bf670b96d08e2d47ac2670137202c3cb62ffcff1' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.690357Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

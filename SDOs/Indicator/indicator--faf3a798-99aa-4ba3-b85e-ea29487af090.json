@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--faf3a798-99aa-4ba3-b85e-ea29487af090",
+    "created": "2024-08-13T15:14:23.281199Z",
+    "modified": "2024-08-13T15:14:23.281200Z",
+    "name": "AvosLocker hash",
+    "description": "This is an IoC for AvosLocker",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'fb544e1f74ce02937c3a3657be8d125d5953996115f65697b7d39e237020706f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.281202Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

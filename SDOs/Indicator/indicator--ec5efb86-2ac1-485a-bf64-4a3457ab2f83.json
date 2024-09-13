@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ec5efb86-2ac1-485a-bf64-4a3457ab2f83",
+    "created": "2024-08-13T15:14:23.276670Z",
+    "modified": "2024-08-13T15:14:23.276672Z",
+    "name": "ROKRAT hash",
+    "description": "This is an IoC for ROKRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'aa76b4db29cf929b4b22457ccb8cd77308191f091cde2f69e578ade9708d7949' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.276673Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

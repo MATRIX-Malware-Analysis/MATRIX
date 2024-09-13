@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--9d164675-67fb-48f8-8828-fb55c95fadaa",
+    "created": "2024-08-13T15:14:23.595667Z",
+    "modified": "2024-08-13T15:14:23.595670Z",
+    "name": "ZLib hash",
+    "description": "This is an IoC for ZLib",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '7800e9c6403b8f3ac6d9ef664488cbd762444eb2ba75dbea6c7a954b34ab93b2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.595671Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

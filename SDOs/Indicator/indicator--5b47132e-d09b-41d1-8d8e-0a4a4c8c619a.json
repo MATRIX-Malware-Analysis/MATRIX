@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--5b47132e-d09b-41d1-8d8e-0a4a4c8c619a",
+    "created": "2024-08-13T15:14:23.628979Z",
+    "modified": "2024-08-13T15:14:23.628982Z",
+    "name": "BoomBox hash",
+    "description": "This is an IoC for BoomBox",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0acb884f2f4cfa75b726cb8290b20328c8ddbcd49f95a1d761b7d131b95bafec' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.628983Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

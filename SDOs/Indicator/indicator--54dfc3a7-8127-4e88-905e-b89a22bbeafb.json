@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--54dfc3a7-8127-4e88-905e-b89a22bbeafb",
+    "created": "2024-08-13T15:14:23.875169Z",
+    "modified": "2024-08-13T15:14:23.875171Z",
+    "name": "Anubis hash",
+    "description": "This is an IoC for Anubis",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '5abaa68c979f7fa1933cf02b421d99e8109494c6038fd4eb3c9f4f338edfd7af' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.875172Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

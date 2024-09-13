@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e59c6517-2af2-4a6b-bb6c-d909e61f2612",
+    "created": "2024-08-13T15:14:23.385266Z",
+    "modified": "2024-08-13T15:14:23.385268Z",
+    "name": "Remcos hash",
+    "description": "This is an IoC for Remcos",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'c04f7cfb13eff22b612e0809dd48b2c3ad4e6ab8ea30d0d91fd077194eb52cfa' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.385269Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

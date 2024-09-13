@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--8528b51e-5261-41bc-9146-e0c105dd2906",
+    "created": "2024-08-13T15:14:23.786999Z",
+    "modified": "2024-08-13T15:14:23.787001Z",
+    "name": "QuasarRAT hash",
+    "description": "This is an IoC for QuasarRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '164e19d48c8d3ed423d4d4c68dff47899f375b6ef4f2a27005562e16b3a8d33f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.787002Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

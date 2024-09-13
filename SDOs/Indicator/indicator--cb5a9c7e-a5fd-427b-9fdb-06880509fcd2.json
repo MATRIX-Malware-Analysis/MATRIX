@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--cb5a9c7e-a5fd-427b-9fdb-06880509fcd2",
+    "created": "2024-08-13T15:14:23.890934Z",
+    "modified": "2024-08-13T15:14:23.890936Z",
+    "name": "GoldenSpy hash",
+    "description": "This is an IoC for GoldenSpy",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e2f55047a690ed67d5e3a5f90679576e3cca6ceac36bce39dc60b4748a176a09' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.890937Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

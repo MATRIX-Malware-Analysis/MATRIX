@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--2f5f4680-4f27-4f21-ac8b-b9f75233fbdf",
+    "created": "2024-08-29T13:01:02.665398Z",
+    "modified": "2024-08-29T13:01:02.665400Z",
+    "name": "Vobfus hash",
+    "description": "This is an IoC for Vobfus",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '26e1edee4418a65f38b013d4b2630d0a17d72defc24d96d364d069d985638a8f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.665402Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

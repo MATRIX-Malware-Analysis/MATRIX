@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fc538479-72ee-48cf-a3af-74c0b91c3ba3",
+    "created": "2024-08-13T15:14:23.844318Z",
+    "modified": "2024-08-13T15:14:23.844321Z",
+    "name": "ASPXSpy hash",
+    "description": "This is an IoC for ASPXSpy",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e4e97352fb7ab030ad3c1208d59f68b09e86b8d97731adb0dbb40226537c0b5e' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.844322Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a46f0ac1-64f4-435d-8f3c-ee4ea5c0970f",
+    "created": "2024-08-13T15:14:23.992798Z",
+    "modified": "2024-08-13T15:14:23.992800Z",
+    "name": "SysUpdate hash",
+    "description": "This is an IoC for SysUpdate",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e05e853cca1a8e9c8b1674f59c27b562887742f3110499f8ff38d0d287f0e7de' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.992801Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

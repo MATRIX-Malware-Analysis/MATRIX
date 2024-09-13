@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--196b4b1c-54bf-4576-86a4-60781e2f6819",
+    "created": "2024-08-13T15:14:23.970078Z",
+    "modified": "2024-08-13T15:14:23.970086Z",
+    "name": "Sibot hash",
+    "description": "This is an IoC for Sibot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'cb80a074e5fde8d297c2c74a0377e612b4030cc756baf4fff3cc2452ebc04a9c' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.970092Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

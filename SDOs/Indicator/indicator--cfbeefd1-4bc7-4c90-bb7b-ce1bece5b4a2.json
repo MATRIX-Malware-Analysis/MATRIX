@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--cfbeefd1-4bc7-4c90-bb7b-ce1bece5b4a2",
+    "created": "2024-08-13T15:14:23.472223Z",
+    "modified": "2024-08-13T15:14:23.472225Z",
+    "name": "Babuk hash",
+    "description": "This is an IoC for Babuk",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e08f17b42e47bf973bf866f167a49b931b99fe1b50bc820078ac2644bd8c209c' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.472226Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a5ac1292-64f6-464c-ab42-f4f3b223513c",
+    "created": "2024-08-13T15:12:06.748535Z",
+    "modified": "2024-08-13T15:12:06.748538Z",
+    "name": "Killdisk hash",
+    "description": "This is an IoC for Killdisk",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '910794985057f0d5c30953edb89d4f690bd851325fba40daca245d67f5067ff4' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.748539Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

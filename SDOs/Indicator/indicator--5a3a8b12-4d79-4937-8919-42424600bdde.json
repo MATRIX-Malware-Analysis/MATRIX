@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--5a3a8b12-4d79-4937-8919-42424600bdde",
+    "created": "2024-08-29T13:01:02.953248Z",
+    "modified": "2024-08-29T13:01:02.953251Z",
+    "name": "Smoke Loader hash",
+    "description": "This is an IoC for Smoke Loader",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '92ee2da920a44d940887d3fe1c08091dc5f8ccdf2b2ba67e484ee6123a88fb27' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.953252Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

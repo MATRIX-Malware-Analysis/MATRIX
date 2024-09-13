@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a7e76a5e-31cd-4090-bf7a-f639f22994fd",
+    "created": "2024-08-13T15:14:23.596166Z",
+    "modified": "2024-08-13T15:14:23.596168Z",
+    "name": "Empire hash",
+    "description": "This is an IoC for Empire",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '4c3857d1b17b76c2520ce3892dfd7c527332910c4795e1ef029825504d6b907f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.596169Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

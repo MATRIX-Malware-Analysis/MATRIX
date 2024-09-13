@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a290e0fe-6ee2-4679-aae8-eb64d218fad1",
+    "created": "2024-08-13T15:14:23.846176Z",
+    "modified": "2024-08-13T15:14:23.846178Z",
+    "name": "FinFisher hash",
+    "description": "This is an IoC for FinFisher",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'bd1b8bc046dbf19f8c9bbf9398fdbc47c777e1d9e6d9ff1787ada05ed75c1b12' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.846180Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

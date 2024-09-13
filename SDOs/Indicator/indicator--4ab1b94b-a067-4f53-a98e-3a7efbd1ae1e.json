@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--4ab1b94b-a067-4f53-a98e-3a7efbd1ae1e",
+    "created": "2024-08-29T13:01:02.932856Z",
+    "modified": "2024-08-29T13:01:02.932859Z",
+    "name": "Azorult hash",
+    "description": "This is an IoC for Azorult",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'cd28fdc0ba5ed24ae7ef0916f835cb8eacaffe2f339da2081edf1de791223ec9' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-29T13:01:02.932861Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

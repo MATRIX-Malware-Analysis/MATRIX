@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--14ecb6e8-61a3-4bd7-a0ef-a55995aa731b",
+    "created": "2024-08-13T15:14:23.264672Z",
+    "modified": "2024-08-13T15:14:23.264673Z",
+    "name": "Chaos hash",
+    "description": "This is an IoC for Chaos",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '1f0efbc1828ca978f4db5d847ccae5044c27c8efa266a71289f0d824035d44be' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.264675Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

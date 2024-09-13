@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--6ecfed05-706b-4001-9c3d-03d3a7a7806e",
+    "created": "2024-08-13T15:14:23.755667Z",
+    "modified": "2024-08-13T15:14:23.755669Z",
+    "name": "BRATA hash",
+    "description": "This is an IoC for BRATA",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'fa816c631249922539eeeb3e8f73d3ef4ea997ab729751adebcea3d0de32a63b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.755670Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

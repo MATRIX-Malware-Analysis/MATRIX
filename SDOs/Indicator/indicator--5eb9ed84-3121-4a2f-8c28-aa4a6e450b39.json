@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--5eb9ed84-3121-4a2f-8c28-aa4a6e450b39",
+    "created": "2024-08-13T15:14:23.610208Z",
+    "modified": "2024-08-13T15:14:23.610210Z",
+    "name": "PingPull hash",
+    "description": "This is an IoC for PingPull",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'de14f22c88e552b61c62ab28d27a617fb8c0737350ca7c631de5680850282761' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.610211Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

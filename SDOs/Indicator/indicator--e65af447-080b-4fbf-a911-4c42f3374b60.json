@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--e65af447-080b-4fbf-a911-4c42f3374b60",
+    "created": "2024-08-13T15:14:23.492478Z",
+    "modified": "2024-08-13T15:14:23.492480Z",
+    "name": "njRAT hash",
+    "description": "This is an IoC for njRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '015c8775ff5e46f8ac053936d1652d82db5c1aaa5a275aa1b957f723e8ec9b23' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.492481Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

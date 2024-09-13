@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a909d4fa-cdea-4ca1-be15-72039e752ae5",
+    "created": "2024-08-13T15:14:23.632285Z",
+    "modified": "2024-08-13T15:14:23.632288Z",
+    "name": "ZxShell hash",
+    "description": "This is an IoC for ZxShell",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '885cc904c0af88eb2250351cf158387007c27e14456137334707d04a84b1a9b7' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.632290Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

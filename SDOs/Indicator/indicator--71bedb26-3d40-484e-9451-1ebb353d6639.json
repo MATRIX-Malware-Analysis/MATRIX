@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--71bedb26-3d40-484e-9451-1ebb353d6639",
+    "created": "2024-08-13T15:12:06.748093Z",
+    "modified": "2024-08-13T15:12:06.748097Z",
+    "name": "Diavol hash",
+    "description": "This is an IoC for Diavol",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'b3da793a00eebaf8987fe2b759369e3d7ff02d91111c219c707bcb9709357637' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.748098Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

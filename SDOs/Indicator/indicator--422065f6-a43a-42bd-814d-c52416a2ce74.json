@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--422065f6-a43a-42bd-814d-c52416a2ce74",
+    "created": "2024-08-13T15:14:23.654714Z",
+    "modified": "2024-08-13T15:14:23.654716Z",
+    "name": "AndroRAT hash",
+    "description": "This is an IoC for AndroRAT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '347f1b018f643de0b9c946c94bd490a7426503869a0828b0a70b4d318fa097d6' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.654718Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

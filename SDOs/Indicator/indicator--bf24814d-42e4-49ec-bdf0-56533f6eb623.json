@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--bf24814d-42e4-49ec-bdf0-56533f6eb623",
+    "created": "2024-08-13T15:14:23.601407Z",
+    "modified": "2024-08-13T15:14:23.601409Z",
+    "name": "PlugX hash",
+    "description": "This is an IoC for PlugX",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '75ad7745e2b81cb5ffc6d1e267b6c06f56f260452edf09ef4d6fd3ecad584e66' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.601411Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

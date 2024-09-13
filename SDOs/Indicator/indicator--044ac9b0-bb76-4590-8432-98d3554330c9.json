@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--044ac9b0-bb76-4590-8432-98d3554330c9",
+    "created": "2024-08-13T15:14:23.476627Z",
+    "modified": "2024-08-13T15:14:23.476630Z",
+    "name": "MiniDuke hash",
+    "description": "This is an IoC for MiniDuke",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '6057b19975818ff4487ee62d5341834c53ab80a507949a52422ab37c7c46b7a1' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.476631Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

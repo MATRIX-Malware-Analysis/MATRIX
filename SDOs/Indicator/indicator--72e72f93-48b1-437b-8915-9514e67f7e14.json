@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--72e72f93-48b1-437b-8915-9514e67f7e14",
+    "created": "2024-08-13T15:14:23.411017Z",
+    "modified": "2024-08-13T15:14:23.411019Z",
+    "name": "Agent Tesla hash",
+    "description": "This is an IoC for Agent Tesla",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '7a9ce4040d1e9d8f0f522baa64d89f327e5be63c5705af00da93180bb6658934' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.411020Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

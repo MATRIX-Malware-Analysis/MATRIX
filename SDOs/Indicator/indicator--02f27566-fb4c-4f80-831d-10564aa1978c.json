@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--02f27566-fb4c-4f80-831d-10564aa1978c",
+    "created": "2024-08-13T15:14:22.772407Z",
+    "modified": "2024-08-13T15:14:22.772409Z",
+    "name": "BLUELIGHT hash",
+    "description": "This is an IoC for BLUELIGHT",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '7c40019c1d4cef2ffdd1dd8f388aaba537440b1bffee41789c900122d075a86d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:22.772410Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

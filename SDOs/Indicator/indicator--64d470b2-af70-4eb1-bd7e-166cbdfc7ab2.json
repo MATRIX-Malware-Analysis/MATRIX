@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--64d470b2-af70-4eb1-bd7e-166cbdfc7ab2",
+    "created": "2024-08-13T15:14:23.576381Z",
+    "modified": "2024-08-13T15:14:23.576383Z",
+    "name": "Anchor hash",
+    "description": "This is an IoC for Anchor",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e799e731544a2516301735429bebfefd215ed782b1aa827a62d857d692e41560' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.576385Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--27f584d7-08ff-42cd-9349-3b4176e39711",
+    "created": "2024-08-13T15:14:23.330294Z",
+    "modified": "2024-08-13T15:14:23.330297Z",
+    "name": "Pandora hash",
+    "description": "This is an IoC for Pandora",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '5b56c5d86347e164c6e571c86dbf5b1535eae6b979fede6ed66b01e79ea33b7b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.330298Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

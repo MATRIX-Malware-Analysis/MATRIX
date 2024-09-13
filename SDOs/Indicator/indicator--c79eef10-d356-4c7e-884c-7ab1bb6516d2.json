@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--c79eef10-d356-4c7e-884c-7ab1bb6516d2",
+    "created": "2024-08-13T15:14:23.992348Z",
+    "modified": "2024-08-13T15:14:23.992350Z",
+    "name": "Skidmap hash",
+    "description": "This is an IoC for Skidmap",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f005c2a40cdb4e020c3542eb51aef5bac0c87b4090545c741e1705fcbc8ca120' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.992352Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

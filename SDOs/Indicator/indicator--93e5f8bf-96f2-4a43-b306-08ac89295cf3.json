@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--93e5f8bf-96f2-4a43-b306-08ac89295cf3",
+    "created": "2024-08-13T15:14:23.654397Z",
+    "modified": "2024-08-13T15:14:23.654399Z",
+    "name": "BADHATCH hash",
+    "description": "This is an IoC for BADHATCH",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e058280f4b15c1be6488049e0bdba555f1baf42e139b7251d6b2c230e28e0aef' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.654401Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

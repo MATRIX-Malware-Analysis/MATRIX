@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ac3bb5b7-f19c-42d8-8bc2-d191273f6f44",
+    "created": "2024-08-13T15:14:23.857542Z",
+    "modified": "2024-08-13T15:14:23.857544Z",
+    "name": "Get2 hash",
+    "description": "This is an IoC for Get2",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '32286ed3acc2ab1145b88677ae0924fbe4c39d5156d5dfe5985275d0a01f732f' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.857545Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

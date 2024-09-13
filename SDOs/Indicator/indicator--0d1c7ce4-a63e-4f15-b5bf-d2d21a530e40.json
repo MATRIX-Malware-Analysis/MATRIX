@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--0d1c7ce4-a63e-4f15-b5bf-d2d21a530e40",
+    "created": "2024-08-13T15:14:23.253275Z",
+    "modified": "2024-08-13T15:14:23.253279Z",
+    "name": "MacMa hash",
+    "description": "This is an IoC for MacMa",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '2e3d636ff79b418fd6745d6474f01f137b798bd84008a4cf5f82b38be4e878e3' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.253280Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--76df0d31-7633-4b51-a56b-8cae4d685b71",
+    "created": "2024-08-13T15:14:23.620987Z",
+    "modified": "2024-08-13T15:14:23.620989Z",
+    "name": "GuLoader hash",
+    "description": "This is an IoC for GuLoader",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '213681de7f4ab18c2338f5aa57c7aae1d2082f369fa557167b11e5b5ec2b69db' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.620990Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

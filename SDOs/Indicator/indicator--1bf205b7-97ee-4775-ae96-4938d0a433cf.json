@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--1bf205b7-97ee-4775-ae96-4938d0a433cf",
+    "created": "2024-08-13T15:14:23.332036Z",
+    "modified": "2024-08-13T15:14:23.332038Z",
+    "name": "Rifdoor hash",
+    "description": "This is an IoC for Rifdoor",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'e1f9bd4989f24c3445741084687d9983f3227f86349065187b4e03672c49d7b0' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.332040Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

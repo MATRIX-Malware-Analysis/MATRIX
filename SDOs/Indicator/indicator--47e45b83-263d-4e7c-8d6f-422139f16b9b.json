@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--47e45b83-263d-4e7c-8d6f-422139f16b9b",
+    "created": "2024-08-13T15:14:23.333065Z",
+    "modified": "2024-08-13T15:14:23.333067Z",
+    "name": "GoldFinder hash",
+    "description": "This is an IoC for GoldFinder",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f2a8bdf135caca0d7359a7163a4343701a5bdfbc8007e71424649e45901ab7e2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.333068Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

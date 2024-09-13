@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--97164ecc-3284-46fa-b8c8-4cc04caf2cb6",
+    "created": "2024-08-13T15:14:23.055417Z",
+    "modified": "2024-08-13T15:14:23.055420Z",
+    "name": "DarkGate hash",
+    "description": "This is an IoC for DarkGate",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '196bb36f7d63c845afd40c5c17ce061e320d110f28ebe8c7c998b9e6b3fe1005' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.055422Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--5ce53ae5-671b-4c83-bc14-f23f1aed34f2",
+    "created": "2024-08-13T15:14:23.502231Z",
+    "modified": "2024-08-13T15:14:23.502233Z",
+    "name": "GoldMax hash",
+    "description": "This is an IoC for GoldMax",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'b9a2c986b6ad1eb4cfb0303baede906936fe96396f3cf490b0984a4798d741d8' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.502235Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

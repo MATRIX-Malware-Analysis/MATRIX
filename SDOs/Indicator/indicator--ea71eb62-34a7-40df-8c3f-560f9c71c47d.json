@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ea71eb62-34a7-40df-8c3f-560f9c71c47d",
+    "created": "2024-08-13T15:14:23.267243Z",
+    "modified": "2024-08-13T15:14:23.267245Z",
+    "name": "VPNFilter hash",
+    "description": "This is an IoC for VPNFilter",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0e0094d9bd396a6594da8e21911a3982cd737b445f591581560d766755097d92' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.267246Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

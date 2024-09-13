@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fa71fa88-c6ca-4080-bd7d-364d22b4aa61",
+    "created": "2024-08-13T15:14:23.066901Z",
+    "modified": "2024-08-13T15:14:23.066904Z",
+    "name": "RTM hash",
+    "description": "This is an IoC for RTM",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '7409cc811f88455e360a645b886acf6779eed0e1f31dc6a9998c6dd63abe9881' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.066906Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

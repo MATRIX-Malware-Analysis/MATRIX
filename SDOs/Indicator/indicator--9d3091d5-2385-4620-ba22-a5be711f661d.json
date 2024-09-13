@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--9d3091d5-2385-4620-ba22-a5be711f661d",
+    "created": "2024-08-13T15:14:23.331135Z",
+    "modified": "2024-08-13T15:14:23.331137Z",
+    "name": "Conficker hash",
+    "description": "This is an IoC for Conficker",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'c111825cd9ce4d7bc82d64eda636d54653d243ec392dc37cee312791e9013d89' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.331138Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

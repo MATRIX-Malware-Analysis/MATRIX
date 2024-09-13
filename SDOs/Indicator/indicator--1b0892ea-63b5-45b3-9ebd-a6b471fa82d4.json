@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--1b0892ea-63b5-45b3-9ebd-a6b471fa82d4",
+    "created": "2024-08-13T15:14:23.283574Z",
+    "modified": "2024-08-13T15:14:23.283576Z",
+    "name": "HyperBro hash",
+    "description": "This is an IoC for HyperBro",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '5d3383e033fb7ee0b2c8a4cbd11619017012b126f736f93243cb2b26bb2572da' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.283577Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

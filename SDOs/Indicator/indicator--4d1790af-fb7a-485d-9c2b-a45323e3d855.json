@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--4d1790af-fb7a-485d-9c2b-a45323e3d855",
+    "created": "2024-08-13T15:14:23.502525Z",
+    "modified": "2024-08-13T15:14:23.502527Z",
+    "name": "NightClub hash",
+    "description": "This is an IoC for NightClub",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '25412a1a41069d7c09a0b4968bdbc818155bfa02db696ea3c34350ef50fad933' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.502529Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

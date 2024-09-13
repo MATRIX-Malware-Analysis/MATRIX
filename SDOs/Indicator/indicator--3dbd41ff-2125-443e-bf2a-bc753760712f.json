@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--3dbd41ff-2125-443e-bf2a-bc753760712f",
+    "created": "2024-08-13T15:14:23.272696Z",
+    "modified": "2024-08-13T15:14:23.272698Z",
+    "name": "Netwalker hash",
+    "description": "This is an IoC for Netwalker",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '63ad8faf3c2b306ccd8aa7874e24e7d48e0f6bbeeb37adab26c2efa1410022c4' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.272699Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

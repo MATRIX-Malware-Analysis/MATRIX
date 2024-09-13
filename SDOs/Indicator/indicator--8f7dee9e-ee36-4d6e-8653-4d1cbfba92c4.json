@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--8f7dee9e-ee36-4d6e-8653-4d1cbfba92c4",
+    "created": "2024-08-13T15:14:23.998046Z",
+    "modified": "2024-08-13T15:14:23.998048Z",
+    "name": "FluBot hash",
+    "description": "This is an IoC for FluBot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'fe52bed001f28a4b218bcd0ad31b92fb59022778cf68a1445cf3e8c612a5e04c' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.998049Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

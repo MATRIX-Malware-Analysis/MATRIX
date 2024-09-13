@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--0b70d196-1781-4bc9-812e-4a5efd74b0e4",
+    "created": "2024-08-13T15:14:23.315454Z",
+    "modified": "2024-08-13T15:14:23.315456Z",
+    "name": "LockerGoga hash",
+    "description": "This is an IoC for LockerGoga",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '8d5c41543fcc5b7b652b1a16cd3fca0fe3062f8379447c04968c5261cde7deb0' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.315458Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

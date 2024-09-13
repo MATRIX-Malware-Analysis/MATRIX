@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--2a5d71a1-c042-4674-b6fd-38c39fb8dfeb",
+    "created": "2024-08-13T15:14:23.284754Z",
+    "modified": "2024-08-13T15:14:23.284756Z",
+    "name": "TEARDROP hash",
+    "description": "This is an IoC for TEARDROP",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '0201b92d3d877df4de0d109ce6f3d647cfde3ab9d881f8cddc10d4bb8e5f21ad' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.284757Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

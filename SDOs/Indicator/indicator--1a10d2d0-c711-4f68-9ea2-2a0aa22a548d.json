@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--1a10d2d0-c711-4f68-9ea2-2a0aa22a548d",
+    "created": "2024-08-13T15:14:23.847751Z",
+    "modified": "2024-08-13T15:14:23.847753Z",
+    "name": "SVCReady hash",
+    "description": "This is an IoC for SVCReady",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '48d000ff9202665a6ceb03d8ef0fe9e1ddc82c9fff1e346c6f7db418588c6d0b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.847754Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

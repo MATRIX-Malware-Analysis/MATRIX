@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--536b4c87-1c75-44d6-8838-2b7f58cd71b5",
+    "created": "2024-08-13T15:14:23.069995Z",
+    "modified": "2024-08-13T15:14:23.069997Z",
+    "name": "BlackCat hash",
+    "description": "This is an IoC for BlackCat",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '62ae5ad22213d2adaf0e7cf1ce23ff47b996f60065244b63f361a22daed2bdda' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.069999Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

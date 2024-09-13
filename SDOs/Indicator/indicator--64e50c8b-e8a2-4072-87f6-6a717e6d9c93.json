@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--64e50c8b-e8a2-4072-87f6-6a717e6d9c93",
+    "created": "2024-08-13T15:14:23.721015Z",
+    "modified": "2024-08-13T15:14:23.721018Z",
+    "name": "ServHelper hash",
+    "description": "This is an IoC for ServHelper",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '723fe07654cfbf19c4cbe7b63617f3a5aaf306c11e092841397abaeff80c50c1' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.721020Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

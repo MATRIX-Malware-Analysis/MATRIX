@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f08e7ff6-ae7a-4e1d-a035-a60d1c66f39b",
+    "created": "2024-08-13T15:14:23.312255Z",
+    "modified": "2024-08-13T15:14:23.312257Z",
+    "name": "ftp hash",
+    "description": "This is an IoC for ftp",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'd9dd51c371aab5077bacedcd241ab41b7a34bb6ad09857e20be8bf6c7120b76b' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.312258Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

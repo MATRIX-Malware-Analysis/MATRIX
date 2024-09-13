@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--721ac58b-d477-41c0-8ebf-5e3f9cd4aea2",
+    "created": "2024-08-13T15:14:23.367055Z",
+    "modified": "2024-08-13T15:14:23.367057Z",
+    "name": "Nebulae hash",
+    "description": "This is an IoC for Nebulae",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'bad4fba4b2863ddbf85aaabf1c77f60ea972dd2ea39d7b7963b862b0b4aacbb5' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.367058Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

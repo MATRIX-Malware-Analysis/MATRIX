@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f39e3e19-c036-499b-b309-a38c821506ea",
+    "created": "2024-08-13T15:14:23.609502Z",
+    "modified": "2024-08-13T15:14:23.609504Z",
+    "name": "Mythic hash",
+    "description": "This is an IoC for Mythic",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'db44c7e225058655834c5fe3db31fe3b00ea46069531b779b9a5d9219c7d5b17' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.609505Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

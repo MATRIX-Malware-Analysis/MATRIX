@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ff8666c3-07c2-42ae-bb37-d1e3e2b156cc",
+    "created": "2024-08-13T15:14:23.444162Z",
+    "modified": "2024-08-13T15:14:23.444164Z",
+    "name": "NGLite hash",
+    "description": "This is an IoC for NGLite",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '3da8d1bfb8192f43cf5d9247035aa4445381d2d26bed981662e3db34824c71fd' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.444165Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

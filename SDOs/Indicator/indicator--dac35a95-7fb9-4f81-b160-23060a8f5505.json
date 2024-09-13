@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--dac35a95-7fb9-4f81-b160-23060a8f5505",
+    "created": "2024-08-13T15:14:23.399559Z",
+    "modified": "2024-08-13T15:14:23.399561Z",
+    "name": "IcedID hash",
+    "description": "This is an IoC for IcedID",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'f3100825207882bc6014c3f5b1a168e5e0328e41869b2f360a3733da2e096e41' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.399562Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

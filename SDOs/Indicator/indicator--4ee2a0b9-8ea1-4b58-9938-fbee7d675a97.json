@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--4ee2a0b9-8ea1-4b58-9938-fbee7d675a97",
+    "created": "2024-08-13T15:14:23.652547Z",
+    "modified": "2024-08-13T15:14:23.652549Z",
+    "name": "REvil hash",
+    "description": "This is an IoC for REvil",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '75175009b6864cf3a0147051272ccf63d8fac7f7a521e32f9d3c69a7acd4866d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.652551Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

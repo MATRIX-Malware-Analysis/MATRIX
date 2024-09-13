@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fd6345f2-73a6-4878-9d67-c606967ff28e",
+    "created": "2024-08-13T15:14:23.776413Z",
+    "modified": "2024-08-13T15:14:23.776415Z",
+    "name": "Mimikatz hash",
+    "description": "This is an IoC for Mimikatz",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'a50bac9dc3d8ed53ad87c9408bc6f019b83d14555e4c622714b8da5dba8ddd5a' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.776416Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ddc6c67a-412b-46b4-8f0c-d64f21b1f593",
+    "created": "2024-08-13T15:14:23.125470Z",
+    "modified": "2024-08-13T15:14:23.125473Z",
+    "name": "UACMe hash",
+    "description": "This is an IoC for UACMe",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'dc9be8293900ef1d19955104d742da1ae58e7cbf7072c31d7254f85ac38bdfff' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.125474Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

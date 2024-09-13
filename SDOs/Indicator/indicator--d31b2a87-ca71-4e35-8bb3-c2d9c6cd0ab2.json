@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d31b2a87-ca71-4e35-8bb3-c2d9c6cd0ab2",
+    "created": "2024-08-13T15:14:23.467917Z",
+    "modified": "2024-08-13T15:14:23.467920Z",
+    "name": "Raindrop hash",
+    "description": "This is an IoC for Raindrop",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'be9dbbec6937dfe0a652c0603d4972ba354e83c06b8397d6555fd1847da36725' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.467922Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

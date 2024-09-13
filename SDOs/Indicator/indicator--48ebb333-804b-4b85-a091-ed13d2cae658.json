@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--48ebb333-804b-4b85-a091-ed13d2cae658",
+    "created": "2024-08-13T15:14:23.735482Z",
+    "modified": "2024-08-13T15:14:23.735484Z",
+    "name": "Pysa hash",
+    "description": "This is an IoC for Pysa",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '9986b6881fc1df8f119a6ed693a7858c606aed291b0b2f2b3d9ed866337bdbde' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.735485Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

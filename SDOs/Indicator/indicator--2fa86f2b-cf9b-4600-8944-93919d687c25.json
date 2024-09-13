@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--2fa86f2b-cf9b-4600-8944-93919d687c25",
+    "created": "2024-08-13T15:14:23.845259Z",
+    "modified": "2024-08-13T15:14:23.845261Z",
+    "name": "WhisperGate hash",
+    "description": "This is an IoC for WhisperGate",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'fc39ec35d767a2c0a178ca9874be8aaf87033f8b834ee8dcb57d3904516e4335' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.845263Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

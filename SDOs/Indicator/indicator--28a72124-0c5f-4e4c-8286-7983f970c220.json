@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--28a72124-0c5f-4e4c-8286-7983f970c220",
+    "created": "2024-08-13T15:14:23.298735Z",
+    "modified": "2024-08-13T15:14:23.298739Z",
+    "name": "HermeticWizard hash",
+    "description": "This is an IoC for HermeticWizard",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'a259e9b0acf375a8bef8dbc27a8a1996ee02a56889cba07ef58c49185ab033ec' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.298741Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

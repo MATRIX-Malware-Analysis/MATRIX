@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d2b35f2c-5f8d-49e5-9a57-a1bb10e655f6",
+    "created": "2024-08-13T15:14:23.406420Z",
+    "modified": "2024-08-13T15:14:23.406423Z",
+    "name": "PoshC2 hash",
+    "description": "This is an IoC for PoshC2",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'a0ab8fa2314861edb85c0b2ad8d9a240f0e58722559bc5698466605c7514ffe2' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.406424Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

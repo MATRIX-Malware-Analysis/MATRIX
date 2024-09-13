@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--886b3dde-e65b-4416-9ce9-f605d679b7f4",
+    "created": "2024-08-13T15:14:22.773091Z",
+    "modified": "2024-08-13T15:14:22.773093Z",
+    "name": "CaddyWiper hash",
+    "description": "This is an IoC for CaddyWiper",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:22.773095Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

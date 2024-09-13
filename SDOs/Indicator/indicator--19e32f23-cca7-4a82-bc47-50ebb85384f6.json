@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--19e32f23-cca7-4a82-bc47-50ebb85384f6",
+    "created": "2024-08-13T15:14:23.312682Z",
+    "modified": "2024-08-13T15:14:23.312684Z",
+    "name": "Exobot hash",
+    "description": "This is an IoC for Exobot",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'a93d66a127091d11090f544514d7e677c24db69d361008e60fffc5200331a1fe' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.312686Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

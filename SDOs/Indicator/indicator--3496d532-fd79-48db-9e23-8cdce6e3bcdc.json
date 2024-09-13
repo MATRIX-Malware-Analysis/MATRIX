@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--3496d532-fd79-48db-9e23-8cdce6e3bcdc",
+    "created": "2024-08-13T15:14:23.754408Z",
+    "modified": "2024-08-13T15:14:23.754410Z",
+    "name": "ngrok hash",
+    "description": "This is an IoC for ngrok",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'd6356866d600a2be0fc8589b1dd09b2d04c8bd1bf98699be5f1376f9d88ad4cd' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.754411Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

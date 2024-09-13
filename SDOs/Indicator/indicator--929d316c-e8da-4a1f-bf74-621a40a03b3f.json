@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--929d316c-e8da-4a1f-bf74-621a40a03b3f",
+    "created": "2024-08-13T15:14:23.102821Z",
+    "modified": "2024-08-13T15:14:23.102823Z",
+    "name": "WannaCry hash",
+    "description": "This is an IoC for WannaCry",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = '05cb77461871fedcfd7046b19f15f3e0f42bb8c8194f74b9f510e0aa70a72b44' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.102825Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

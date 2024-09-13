@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--fec6826a-d154-4976-bd33-18ca7a4fee59",
+    "created": "2024-08-13T15:12:06.717405Z",
+    "modified": "2024-08-13T15:12:06.717407Z",
+    "name": "Tomiris hash",
+    "description": "This is an IoC for Tomiris",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'b144229fb62799aa23537eaf0ce267b1445a182c28f4679e8f8234eeb5e603f3' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.717409Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

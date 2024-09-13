@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--0f8f09c6-4a3c-487b-acc8-6986a5bc02ba",
+    "created": "2024-08-13T15:12:06.699333Z",
+    "modified": "2024-08-13T15:12:06.699335Z",
+    "name": "NETWIRE hash",
+    "description": "This is an IoC for NETWIRE",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'b1cb6321f2ebbbb2f5a02ebc78f70dcfbc182be63660f8fa4da9ea0b8048d3f3' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:12:06.699336Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a497447f-c8aa-4bb6-bcd2-29c87e6f13fe",
+    "created": "2024-08-13T15:14:23.483664Z",
+    "modified": "2024-08-13T15:14:23.483667Z",
+    "name": "Flagpro hash",
+    "description": "This is an IoC for Flagpro",
+    "indicator_types": [
+        "malicious-activity"
+    ],
+    "pattern": "[ file:hashes.'SHA-256' = 'bd431a53c65170dee9ff174ea2865b49edf395023bd5d69f61150d83babba52d' ]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2024-08-13T15:14:23.483668Z",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ]
+}
