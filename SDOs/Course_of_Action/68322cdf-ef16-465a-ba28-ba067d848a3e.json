@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--68322cdf-ef16-465a-ba28-ba067d848a3e",
+    "created": "2024-08-14T07:36:37.325477Z",
+    "modified": "2024-08-14T07:36:37.325477Z",
+    "name": "Process Spawn Analysis",
+    "description": "Analyzing spawn arguments or attributes of a process to detect processes that are unauthorized.",
+    "x_d3fend_id": "D3-PSA",
+    "x_kb_article": "## How it works\nProcess attributes are established when an operating system spawns a new process. These attributes are analyzed to look for the presence or absence of specific values or patterns.\n\nSome attributes of interest are:\n - user\n - process name\n - image path\n - security content\n\n## Considerations\n\n - Attackers can spoof the parent process identifier (PPID), which could bypass this defense to allow execution of a malicious process from an arbitrary parent process.\n - Attackers could have legitimately compromised any of the process properties, such as the user, to make the execution appear legitimate.\n - Location: If the full image path is not checked, there could be a conflict with an executable that appears earlier due to resolution involving the system environment path/classpath variable.\n - Parsing issues: If the raw command from a shell is analyzed, rather than the actual function call, it is important to identify the actual command  being run from its arguments.  In Windows, services with unquoted file paths containing spaces will try to use the first token as the executable and the rest as arguments -- and shift tokens to the executable until a valid one is found.\n - Some [operating systems](/dao/artifact/d3f:OperatingSystem) can spawn processes without forking."
+}

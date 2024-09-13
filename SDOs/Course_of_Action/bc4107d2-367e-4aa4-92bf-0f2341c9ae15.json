@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--bc4107d2-367e-4aa4-92bf-0f2341c9ae15",
+    "created": "2024-08-14T07:36:41.271903Z",
+    "modified": "2024-08-14T07:36:41.271903Z",
+    "name": "IO Port Restriction",
+    "description": "Limiting access to computer input/output (IO) ports to restrict unauthorized devices.",
+    "x_d3fend_id": "D3-IOPR",
+    "x_kb_article": "## How It works\n\nSoftware-based restriction uses agent software installed on a computer system. The agent software monitors all IO port system traffic. The agent software is configurable to limit the use of certain devices connected to IO ports. The restriction software can also be configured to limit the access to files and applications on external storage devices connected to IO ports.\n\nHardware-based restriction can also be employed to limit access to IO ports. For example, a hardware USB filter device that is placed between the host system and the external devices can filter IO port connections based on configurable rules. When new devices are connected to the USB filter the type of device is determined. Using an allow list a connection determination is made for the device.\n\nSome implementations detect when a device is connected in order to authorize the connection against a list of approved devices, in some cases by device type. For example, if the device is determined to be a storage device, then the contained files and executables are examined to more accurately identify the device type.\n\nTypes of restrictions that may be applied:\n- Device connection\n- Device command filtering\n- Device file system read or write restrictions\n\n## Considerations\n * Agent software will need to be installed on host systems\n * Configurations for allow/deny for devices and files will need to be maintained"
+}

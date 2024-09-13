@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--64341fd0-e951-462d-a12e-0a77b74b8d40",
+    "created": "2024-08-14T07:36:37.623968Z",
+    "modified": "2024-08-14T07:36:37.623968Z",
+    "name": "Process Lineage Analysis",
+    "description": "Identification of suspicious processes executing on an end-point device by examining the ancestry and siblings of a process, and the associated metadata of each node on the tree, such as process execution, duration, and order relative to siblings and ancestors.",
+    "x_d3fend_id": "D3-PLA",
+    "x_kb_article": "## How it works\nProcess tree analysis techniques gather information on how a process was initiated to determine if a process is malicious. For example, if a process was not initiated from boot or not initiated by another process, that process is identified as suspicious. Also, if a new process was started before a process initiated by the device (ex. during boot) and that new process was not initiated by a user (which can be determined by examining process parameters such as type of process, its creator, source, etc.) the process is identified as suspicious.\n\nFor example, Microsoft Word may block execution of any subprocess that is not in an approved path.\n\n## Considerations\n* Attackers may spoof the parent PID (https://attack.mitre.org/techniques/T1502/), rendering such after-the-fact analysis on process lineage ineffective.\n* Processes may hide from various means of detection; an example on Linux is where a rootkit might remove key files for the process from its directory in /proc.\n* Zombie processes.",
+    "x_synonym": "Process Tree Analysis"
+}

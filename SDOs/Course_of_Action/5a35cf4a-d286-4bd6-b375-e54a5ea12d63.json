@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--5a35cf4a-d286-4bd6-b375-e54a5ea12d63",
+    "created": "2024-08-14T07:36:40.764617Z",
+    "modified": "2024-08-14T07:36:40.764617Z",
+    "name": "Reference - CAR-2015-07-001: All Logins Since Last Boot - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Once a credential dumper like mimikatz runs, every user logged on since boot is potentially compromised, because the credentials were accessed via the memory of lsass.exe. When such an event occurs, this analytic will give the forensic context to identify compromised users. Those users could potentially be used in later events for additional logons.\n\nThe time field indicates the first and last time a system reported a user logged into a given system. This means that activity could be intermittent between the times given and should not be considered a duration.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialCompromiseScopeAnalysis",
+    "x_kb_reference_title": "CAR-2015-07-001: All Logins Since Last Boot"
+}

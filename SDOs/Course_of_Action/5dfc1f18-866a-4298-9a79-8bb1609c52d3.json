@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--5dfc1f18-866a-4298-9a79-8bb1609c52d3",
+    "created": "2024-08-14T07:36:37.538593Z",
+    "modified": "2024-08-14T07:36:37.538593Z",
+    "name": "Scheduled Job Analysis",
+    "description": "Analysis of source files, processes, destination files, or destination servers associated with a scheduled job to detect unauthorized use of job scheduling.",
+    "x_d3fend_id": "D3-SJA",
+    "x_kb_article": "## How it works\nScheduled job execution can be utilized by adversaries for the purpose of persistence, conducting remote execution, or gaining privileges. Details of a scheduled job such as associated source files, processes, destination files, or destination servers are first identified and analyzed and then compared against an anti-malware signature database, whitelist, or reputation server. For example, a file associated with a scheduled job to be executed at a specified time or a remote server that is accessed as part of a scheduled task is compared against an anti-malware signature database, whitelist, or reputation server, and if a match is found, execution is denied and an alert is generated.\n\nIn addition to traditional scheduled jobs, triggers can be set to execute a specific command after detecting a specific event in the system, such as with WMI Event Subscriptions in Windows.\n\n## Considerations\nJobs can be scheduled in many different and sometimes creative ways through operating system capabilities.",
+    "x_synonym": "Scheduled Job Execution"
+}

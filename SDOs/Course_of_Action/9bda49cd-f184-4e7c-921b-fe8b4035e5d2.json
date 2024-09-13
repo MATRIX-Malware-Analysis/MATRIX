@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--9bda49cd-f184-4e7c-921b-fe8b4035e5d2",
+    "created": "2024-08-14T07:36:40.803852Z",
+    "modified": "2024-08-14T07:36:40.803852Z",
+    "name": "Reference - Indirect Branching Calls",
+    "description": "No description available",
+    "x_kb_abstract": "Return-oriented programming (ROP) has become the\nprimary exploitation technique for system compromise\nin the presence of non-executable page protections. ROP\nexploits are facilitated mainly by the lack of complete\naddress space randomization coverage or the presence\nof memory disclosure vulnerabilities, necessitating additional ROP-specific mitigations.\nIn this paper we present a practical runtime ROP exploit prevention technique for the protection of thirdparty applications. Our approach is based on the detection of abnormal control transfers that take place during\nROP code execution. This is achieved using hardware\nfeatures of commodity processors, which incur negligible runtime overhead and allow for completely transparent operation without requiring any modifications to\nthe protected applications. Our implementation for Windows 7, named kBouncer, can be selectively enabled for\ninstalled programs in the same fashion as user-friendly\nmitigation toolkits like Microsoft's EMET. The results of\nour evaluation demonstrate that kBouncer has low runtime overhead of up to 4%, when stressed with specially\ncrafted workloads that continuously trigger its core detection component, while it has negligible overhead for\nactual user applications. In our experiments with in-thewild ROP exploits, kBouncer successfully protected all\ntested applications, including Internet Explorer, Adobe\nFlash Player, and Adobe Reader.",
+    "x_kb_author": "Vasilis Pappas, Michalis Polychronakis, Angelos D. Keromytis\nColumbia University",
+    "x_kb_organization": "Columbia University",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#IndirectBranchCallAnalysis",
+    "x_kb_reference_title": "Transparent ROP Exploit Mitigation using Indirect Branch Tracing"
+}

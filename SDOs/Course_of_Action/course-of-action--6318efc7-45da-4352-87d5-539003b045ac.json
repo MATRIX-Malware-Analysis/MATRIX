@@ -1,0 +1,28 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--6318efc7-45da-4352-87d5-539003b045ac",
+    "created": "2024-08-13T14:49:16.519954Z",
+    "modified": "2024-08-13T14:49:16.519957Z",
+    "name": "Startup Items Mitigation",
+    "description": "Since StartupItems are deprecated, preventing all users from writing to the <code>/Library/StartupItems</code> directory would prevent any startup items from getting registered. Similarly, appropriate permissions should be applied such that only specific users can edit the startup items so that they can\u2019t be leveraged for privilege escalation.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1165",
+            "external_id": "T1165"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

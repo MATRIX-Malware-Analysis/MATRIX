@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--d9bfb5a6-803b-450b-9280-cd134c814989",
+    "created": "2024-08-14T07:36:34.27489Z",
+    "modified": "2024-08-14T07:36:34.27489Z",
+    "name": "Web Session Activity Analysis",
+    "description": "Monitoring changes in user web session behavior by comparing current web session activity to a baseline behavior profile or a catalog of predetermined malicious behavior.",
+    "x_d3fend_id": "D3-WSAA",
+    "x_kb_article": "## How it works\nUser web session data is collected over a period of time to create a user behavior profile. Data collected includes clicks made on a website, average time between clicks, filling out web forms, order in which pages are viewed, and downloading files. Current user web session behavior is then compared against the use behavior profile to identify anomalies and a likelihood that the current user web session is malicious. Current user web session behavior can also be compared to predetermined known malicious behavior profiles that are developed through analysis of malware in run time at a threat research facility.\n\n## Considerations\n* Potential for false positives from anomalies that are not associated with malicious activity.\n* Attackers may not differentiate their web session activity enough to trigger an alert."
+}

@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--dbe9d868-b131-412b-ae92-6a015bc6dff5",
+    "created": "2024-08-14T07:36:40.663718Z",
+    "modified": "2024-08-14T07:36:40.663718Z",
+    "name": "Reference - Trusted Communications With Child Processes - Microsoft Technology Licensing LLC",
+    "description": "No description available",
+    "x_kb_abstract": "A method to identify a child process to a parent process in an operating system includes obtaining a token and login identifier from the operating system. The parent process creates a remote procedure call communications endpoint to communicate with the child process. Thereafter, a child process is spawned by the parent process. A child-initiated request to communicate with the parent process is then received by the parent process. In order to verify the identity of the child-initiated request, the parent process impersonates the child process and receives as identifier that identifies the requestor child process. The requestor process identifier and the spawned child identifier are compared. Based on the comparison, the parent process responds to the child-initiated request. In another embodiment, process identifiers are used by the parent process to verify the identity of a child process the requests communication with the parent process.",
+    "x_kb_author": "Kedarnath Atmaram Dubhashi, Jonathan D. Schwartz, Sambavi Muthukrishnan, Simon Skaria",
+    "x_kb_mitre_analysis": "This patent describes a technique for detecting malicious processes that claim to be the child process of a legitimate parent process. During the spawning of a child process, a child process identifier is generated. The child process identifier is a unique identifier that can be used to identify a child process. The child process identifier is transmitted by the security system of the operating system to the parent process. The parent process keeps track of the child process identifier. When a new child-initiated communications request is received by the parent process, the parent process checks if the requesting child process identifier and the child process identifier that the parent process is tracking are the same. If the identifiers are not the same, the parent process refuses the request.",
+    "x_kb_organization": "Microsoft Technology Licensing LLC",
+    "x_kb_reference_title": "Trusted Communications With Child Processes"
+}

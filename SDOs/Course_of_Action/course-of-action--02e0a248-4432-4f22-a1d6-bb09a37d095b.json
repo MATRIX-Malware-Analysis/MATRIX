@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--02e0a248-4432-4f22-a1d6-bb09a37d095b",
+    "created": "2024-08-13T14:49:16.524952Z",
+    "modified": "2024-08-13T14:49:16.524954Z",
+    "name": "Windows Management Instrumentation Event Subscription Mitigation",
+    "description": "Disabling WMI services may cause system instability and should be evaluated to assess the impact to a network. By default, only administrators are allowed to connect remotely using WMI; restrict other users that are allowed to connect, or disallow all users from connecting remotely to WMI. Prevent credential overlap across systems of administrator and privileged accounts. (Citation: FireEye WMI 2015)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1084",
+            "external_id": "T1084"
+        },
+        {
+            "source_name": "FireEye WMI 2015",
+            "description": "Ballenthin, W., et al. (2015). Windows Management Instrumentation (WMI) Offense, Defense, and Forensics. Retrieved March 30, 2016.",
+            "url": "https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

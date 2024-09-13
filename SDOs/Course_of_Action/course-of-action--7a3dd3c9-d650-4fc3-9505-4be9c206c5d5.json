@@ -1,0 +1,28 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7a3dd3c9-d650-4fc3-9505-4be9c206c5d5",
+    "created": "2024-08-13T14:49:16.487130Z",
+    "modified": "2024-08-13T14:49:16.487134Z",
+    "name": "Application Deployment Software Mitigation",
+    "description": "Grant access to application deployment systems only to a limited number of authorized administrators. Ensure proper system and access isolation for critical network systems through use of firewalls, account privilege separation, group policy, and multifactor authentication. Verify that account credentials that may be used to access deployment systems are unique and not used throughout the enterprise network. Patch deployment systems regularly to prevent potential remote access through [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068). \n\nIf the application deployment system can be configured to deploy only signed binaries, then ensure that the trusted signing certificates are not co-located with the application deployment system and are instead located on a system that cannot be accessed remotely or to which remote access is tightly controlled.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1017",
+            "external_id": "T1017"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

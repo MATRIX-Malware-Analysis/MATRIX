@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--5a8d28b6-c829-4e39-975f-ce5aff708ab2",
+    "created": "2024-08-14T07:36:41.333087Z",
+    "modified": "2024-08-14T07:36:41.333087Z",
+    "name": "Per Host Download-Upload Ratio Analysis",
+    "description": "Detecting anomalies that indicate malicious activity by comparing the amount of data downloaded versus data uploaded by a host.",
+    "x_d3fend_id": "D3-PHDURA",
+    "x_kb_article": "## How it works\nAggregate pull vs. push ratios from metadata are used to develop a baseline for a given host over a specific time period, e.g., over a three-hour period, one day, one week, etc. Anomalies identified over a threshold produce an alert.\n\n## Considerations\nCollection and analysis of large network packet captures requires large storage and intensive computing power. The time windows used to calculate the ratio may vary in implementations, this consideration should take into account a threat model and likely effects (impacts) delivered by an adversary."
+}

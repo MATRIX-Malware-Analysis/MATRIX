@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--0f3bd122-235b-463f-9fad-eb171bfc02f9",
+    "created": "2024-08-14T07:36:40.644565Z",
+    "modified": "2024-08-14T07:36:40.644565Z",
+    "name": "Reference - Heuristic botnet detection - Palo Alto Networks Inc",
+    "description": "No description available",
+    "x_kb_abstract": "In some embodiments, heuristic botnet detection is provided. In some embodiments, heuristic botnet detection includes monitoring network traffic to identify suspicious network traffic; and detecting a bot based on a heuristic analysis of the suspicious network traffic behavior using a processor, in which the suspicious network traffic behavior includes command and control traffic associated with a bot master. In some embodiments, heuristic botnet detection further includes assigning a score to the monitored network traffic, in which the score corresponds to a botnet risk characterization of the monitored network traffic (e.g., based on one or more heuristic botnet detection techniques); increasing the score based on a correlation of additional suspicious behaviors associated with the monitored network traffic (e.g., based on one or more heuristic botnet detection techniques); and determining the suspicious behavior is associated with a botnet based on the score.",
+    "x_kb_author": "Xinran Wang; Huagang Xie",
+    "x_kb_mitre_analysis": "This patent describes detecting botnets using heuristic analysis techniques on collected network flows. The heuristic techniques include:\n\n* Identifying suspicious traffic patterns to detect command and control traffic ex. periodically visiting a known malware URL, a host visiting a malware domain twice every 5 hour and 14 minutes (this is a specific pattern for a variant of Swizzor botnets).\n* Identifying non-standard behaviors such as connecting to a non-standard HTTP port for HTTP traffic, visiting a non-existent domain, downloading executable files with non-standard executable file extensions, communicating using HTTP header with a shorter than common length\n* Analyzing visited domain information to identify the following: visiting a domain with a domain name that is longer than a common domain name length, visiting a dynamic DNS domain, visiting a fast-flux domain, and visiting a recently created domain.\n\nA score is determined based on these factors and if the score is over a threshold, a responsive action is performed.",
+    "x_kb_organization": "Palo Alto Networks Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis",
+    "x_kb_reference_title": "Heuristic botnet detection"
+}

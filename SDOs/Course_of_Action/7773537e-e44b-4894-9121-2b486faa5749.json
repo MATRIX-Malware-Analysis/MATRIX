@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7773537e-e44b-4894-9121-2b486faa5749",
+    "created": "2024-08-14T07:36:41.187365Z",
+    "modified": "2024-08-14T07:36:41.187365Z",
+    "name": "Outbound Traffic Filtering",
+    "description": "Restricting network traffic originating from a private host or enclave destined towards untrusted networks.",
+    "x_d3fend_id": "D3-OTF",
+    "x_kb_article": "## How it works\n\nOutbound traffic, in this context, is network traffic originating from a private host or enclave destined towards untrusted networks.\nFor example:\n\n* An enterprise desktop intranet user connecting to www.example.com\n* An internal mail server connecting to an external mail server, mail.example.com\n\nFiltering is commonly implemented as firewall rulesets to limit outbound traffic permitted to egress a host or network. Firewalls are deployed either directly on hosts through kernel level software implementations or installed in-line directly on network links. There are benefits and disadvantages to each approach.\n\nThere are various strategies for developing filtering rulesets:\n\n* Block everything by default\n* Limit destination hosts\n* Limit destination transport or application protocols\n* Restrict content outbound (Ex. strings formatted as social security numbers, or proprietary data)\n\n## Considerations\n* Dynamic IP assignment creates challenges for Outbound Traffic Filtering because users are not necessarily associated with the same IP address. This can be addressed by linking IP address management information with the filtering logic.\n* Connections using non-standard transport layer ports may circumvent outbound traffic filtering technology which does not detect application protocol based on traffic content.\n* Business requirements typically drive the development of filtering rule sets.\n\n## Implementations\n- iptables (Linux)\n- Windows Firewall\n- pf (BSD)"
+}

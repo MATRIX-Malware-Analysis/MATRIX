@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--2e12a957-5cfa-44ae-94ba-5aa8659e50eb",
+    "created": "2024-08-13T14:49:16.518427Z",
+    "modified": "2024-08-13T14:49:16.518431Z",
+    "name": "Screensaver Mitigation",
+    "description": "Block .scr files from being executed from non-standard locations. Set Group Policy to force users to have a dedicated screensaver where local changes should not override the settings to prevent changes. Use Group Policy to disable screensavers if they are unnecessary. (Citation: TechNet Screensaver GP)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1180",
+            "external_id": "T1180"
+        },
+        {
+            "url": "https://technet.microsoft.com/library/cc938799.aspx",
+            "description": "Microsoft. (n.d.). Customizing the Desktop. Retrieved December 5, 2017.",
+            "source_name": "TechNet Screensaver GP"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

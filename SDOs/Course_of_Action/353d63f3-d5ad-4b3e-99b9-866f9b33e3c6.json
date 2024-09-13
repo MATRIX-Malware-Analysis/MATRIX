@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--353d63f3-d5ad-4b3e-99b9-866f9b33e3c6",
+    "created": "2024-08-14T07:36:41.234386Z",
+    "modified": "2024-08-14T07:36:41.234386Z",
+    "name": "Connection Attempt Analysis",
+    "description": "Analyzing failed connections in a network to detect unauthorized activity.",
+    "x_d3fend_id": "D3-CAA",
+    "x_kb_article": "## How it works\nConnection Attempt Analysis in multiple ways.\n\n### Monitoring traffic to unallocated IP space\nOne approach looks for failed connection attempts against unallocated IP space. First, network traffic is captured to map out the network to identify network assets as well as unallocated IP space. The map is then used to determine if connection attempts are being made to the unallocated IP space.\n\n### Monitoring for sequentially transmitted traffic\nAnother approach passively inspects network traffic with application protocol analyzers observing network activity characteristics such as volume of packets sent/ received, TCP session attributes, and connection information between hosts (start time, source/destination host, services, etc.). Then using pattern matching to identify traffic which appears to be probing for network hosts.\n\n## Considerations\n\n* Implementations that rely on analysis of unallocated IP address space increase in their complexity with network size and decentralized network infrastructure.\n* Inventory of unallocated IP space should should be continuously updated to mitigate the risk of false positives.\n* IPv6 also introduces challenges including IPv6 traffic bypassing IPv4 specific protection systems (ex. firewalls and IDS) and complexity in managing both IPv6 and IPv4 addresses.",
+    "x_synonym": "Network Scan Detection"
+}

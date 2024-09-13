@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--291181be-d9a7-4724-bcb5-52fca355377d",
+    "created": "2024-08-14T07:36:41.017406Z",
+    "modified": "2024-08-14T07:36:41.017406Z",
+    "name": "Administrative Network Activity Analysis",
+    "description": "Detection of unauthorized use of administrative network protocols by analyzing network activity against a baseline.",
+    "x_d3fend_id": "D3-ANAA",
+    "x_kb_article": "## How it works\nNetwork protocols such as RDP, IPMI, SSH, SNMP, VNC, MOSH, NX, TeamViewer, SPICE, PCoIP, and others are used by system administrators to remotely manage servers. Defenders monitor administrative network activity to determine if the use of remote protocols is malicious. Attackers can abuse administrative protocols and leverage them for initial access to various endpoints. For example, an attacker with valid credentials will remotely SSH or RDP into a server and attempt to blend in with existing traffic from system administrators. By monitoring the traffic activity, it is possible to detect when the protocols are behaving differently from a known baseline of system administration activity.\n\n## Considerations\n* Administrative traffic can be encrypted, making network protocol analysis a challenge\n* False alarms can be mitigated by integration with inventory management systems"
+}

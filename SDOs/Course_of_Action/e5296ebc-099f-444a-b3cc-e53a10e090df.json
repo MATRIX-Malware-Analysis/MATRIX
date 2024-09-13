@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--e5296ebc-099f-444a-b3cc-e53a10e090df",
+    "created": "2024-08-14T07:36:38.718274Z",
+    "modified": "2024-08-14T07:36:38.718274Z",
+    "name": "Reference - CAR-2019-04-004: Credential Dumping via Mimikatz - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Credential dumpers like Mimikatz can be loaded into memory and from there read data from another processes. This analytic looks for instances where processes are requesting specific permissions to read parts of the LSASS process in order to detect when credential dumping is occurring. One weakness is that all current implementations are \"overtuned\" to look for common access patterns used by Mimikatz.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSpawnAnalysis",
+    "x_kb_reference_title": "CAR-2019-04-004: Credential Dumping via Mimikatz"
+}

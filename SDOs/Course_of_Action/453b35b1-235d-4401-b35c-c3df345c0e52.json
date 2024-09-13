@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--453b35b1-235d-4401-b35c-c3df345c0e52",
+    "created": "2024-08-14T07:36:41.256133Z",
+    "modified": "2024-08-14T07:36:41.256133Z",
+    "name": "File Integrity Monitoring",
+    "description": "Detecting any suspicious changes to files in a computer system.",
+    "x_d3fend_id": "D3-FIM",
+    "x_kb_article": "## How it Works\nThere are a number of tools in Windows and Unix that can monitor specific files in a system and generate alerts if any artifacts have been created, modified, or removed. They accomplish this by comparing the current artifacts to a previous snapshot.\n\nUnix - Unix systems have a file integrity checker tool called tripwire. Tripwire first initializes a database that serves as a basis for comparison and can then scan the system to compare the state of the current file system against the initial baseline database. Additionally, users can define policies that specify potential violations.\n\nWindows - In Microsoft Azure, file integrity monitoring can be enabled which can track file and registry key creation, removals, and modifications of specific files.\n\n## Considerations\nFiles can change constantly due to the non-static nature of a computer system. File Integrity Monitoring works best when pointed at a narrow scope of critical files to limit the number of unneccessary files that may be modified over the course of normal use. The accuracy and precision of defined policies also affect the efficacy of this technique."
+}

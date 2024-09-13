@@ -1,0 +1,43 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--30b90255-8ca3-4e37-a1f1-ed59653706c8",
+    "created": "2024-08-13T14:49:16.512179Z",
+    "modified": "2024-08-13T14:49:16.512182Z",
+    "name": "Kernel Modules and Extensions Mitigation",
+    "description": "Common tools for detecting Linux rootkits include: rkhunter (Citation: SourceForge rkhunter), chrootkit (Citation: Chkrootkit Main), although rootkits may be designed to evade certain detection tools.\n\nLKMs and Kernel extensions require root level permissions to be installed. Limit access to the root account and prevent users from loading kernel modules and extensions through proper privilege separation and limiting Privilege Escalation opportunities.\n\nApplication whitelisting and software restriction tools, such as SELinux, can also aide in restricting kernel module loading. (Citation: Kernel.org Restrict Kernel Module)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1215",
+            "external_id": "T1215"
+        },
+        {
+            "url": "http://rkhunter.sourceforge.net",
+            "description": "Rootkit Hunter Project. (2018, February 20). The Rootkit Hunter project. Retrieved April 9, 2018.",
+            "source_name": "SourceForge rkhunter"
+        },
+        {
+            "url": "http://www.chkrootkit.org/",
+            "description": "Murilo, N., Steding-Jessen, K. (2017, August 23). Chkrootkit. Retrieved April 9, 2018.",
+            "source_name": "Chkrootkit Main"
+        },
+        {
+            "url": "https://patchwork.kernel.org/patch/8754821/",
+            "description": "Vander Stoep, J. (2016, April 5). [v3] selinux: restrict kernel module loadinglogin  register. Retrieved April 9, 2018.",
+            "source_name": "Kernel.org Restrict Kernel Module"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

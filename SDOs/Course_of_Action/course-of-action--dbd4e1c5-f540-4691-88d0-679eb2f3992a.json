@@ -1,0 +1,38 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--dbd4e1c5-f540-4691-88d0-679eb2f3992a",
+    "created": "2024-08-13T14:49:16.527578Z",
+    "modified": "2024-08-13T14:49:16.527580Z",
+    "name": "Shared Webroot Mitigation",
+    "description": "Networks that allow for open development and testing of Web content and allow users to set up their own Web servers on the enterprise network may be particularly vulnerable if the systems and Web servers are not properly secured to limit privileged account use, unauthenticated network share access, and network/system isolation.\n\nEnsure proper permissions on directories that are accessible through a Web server. Disallow remote access to the webroot or other directories used to serve Web content. Disable execution on directories within the webroot. Ensure that permissions of the Web server process are only what is required by not using built-in accounts; instead, create specific accounts to limit unnecessary access or permissions overlap across multiple systems. (Citation: acunetix Server Secuirty) (Citation: NIST Server Security July 2008)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1051",
+            "external_id": "T1051"
+        },
+        {
+            "url": "https://www.acunetix.com/websitesecurity/webserver-security/",
+            "description": "Acunetix. (n.d.). Web Server Security and Database Server Security. Retrieved July 26, 2018.",
+            "source_name": "acunetix Server Secuirty"
+        },
+        {
+            "url": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-123.pdf",
+            "description": "Scarfone, K. et al.. (2008, July). NIST Special Publication 800-123 - Guide to General Server Security. Retrieved July 26, 2018.",
+            "source_name": "NIST Server Security July 2008"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

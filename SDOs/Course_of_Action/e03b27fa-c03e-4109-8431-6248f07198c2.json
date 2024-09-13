@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--e03b27fa-c03e-4109-8431-6248f07198c2",
+    "created": "2024-08-14T07:36:40.801586Z",
+    "modified": "2024-08-14T07:36:40.801586Z",
+    "name": "Reference - Enhancing Network Security By Preventing User-Initiated Malware Execution - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "In this paper, we describe characteristics of the most widely used defense techniques for the blocking of user-initiated malware and why these techniques are insufficient. We then introduce a module verification strategy that will eliminate, or at least severely reduce, this problem by extending the classic \"defense in depth\" network security strategy. We then describe how the augmentation of a standard operating system loader to include references to a database of cryptographic hashes of module executables can be used to implement this strategy. Finally, we describe our efforts towards the creation of a prototype system that implements the module verification strategy.",
+    "x_kb_author": "John V. Harrison",
+    "x_kb_mitre_analysis": "This paper describes application whitelisting. New software executable code is compared to a database of allowed software to determine if the new executable code should be loaded and executed. A database of cryptographic hashes is first created for all allowed software executables. Prior to loading any new executable code, a hash is computed and compared against the hash database. If the hash for the new code does not appear in the database, the executable is not loaded and executed.",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting",
+    "x_kb_reference_title": "Enhancing Network Security By Preventing User-Initiated Malware Execution"
+}

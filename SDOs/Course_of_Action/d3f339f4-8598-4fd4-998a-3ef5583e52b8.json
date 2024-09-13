@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--d3f339f4-8598-4fd4-998a-3ef5583e52b8",
+    "created": "2024-08-14T07:36:41.378146Z",
+    "modified": "2024-08-14T07:36:41.378146Z",
+    "name": "Executable Allowlisting",
+    "description": "Using a digital signature to authenticate a file before opening.",
+    "x_d3fend_id": "D3-EAL",
+    "x_kb_article": "## How it works\n\nThis technique is generic and there are numerous ways to compute and authenticate digital signatures.\nA digital certificate is generated from a private/public key pair issued by a certificate authority (CA). A hash of the file is encrypted using the private key. When the file is downloaded by another user, the user's system uses the public key to decrypt the hash and a new hash is created of the downloaded file. The hash decrypted by the public key is compared to the new hash and if there is a mismatch, further techniques, such as file deletion, file quarantine, or **Executable Blacklisting** may be invoked.\n\nThis technique may be invoked when deciding whether to execute a file.\n\n## Considerations\n\nOrganizations which download or create high volumes of software make management complex, in particular engineering or scientific organizations.",
+    "x_synonym": "File Signature Authentication"
+}

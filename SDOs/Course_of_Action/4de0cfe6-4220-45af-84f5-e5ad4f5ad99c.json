@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--4de0cfe6-4220-45af-84f5-e5ad4f5ad99c",
+    "created": "2024-08-14T07:36:35.25647Z",
+    "modified": "2024-08-14T07:36:35.25647Z",
+    "name": "User Geolocation Logon Pattern Analysis",
+    "description": "Monitoring geolocation data of user logon attempts and comparing it to a baseline user behavior profile to identify anomalies in logon location.",
+    "x_d3fend_id": "D3-UGLPA",
+    "x_kb_article": "## How it works\nGeolocation data for each user logon attempt is collected and used to create a baseline user behavior profile. Current geolocation logon data is then compared against the user behavior profile. Logon activity that deviates from normal patterns and can help in identifying situations that may be indicative of a remote attacker using stolen credentials. For example:\n\n* logons from locations that are different from where a user usually logs in\n* logons from a location in which an enterprise has no users located\n* logon that is not physically possible given the elapsed time since a logon from another location.\n\n## Considerations\n* Potential for false positives from logon anomalies that are not associated with malicious activity.\n* Attackers may not differentiate their logon behavior enough to trigger an alert."
+}

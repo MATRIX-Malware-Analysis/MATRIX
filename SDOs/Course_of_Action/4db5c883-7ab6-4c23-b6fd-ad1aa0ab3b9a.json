@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--4db5c883-7ab6-4c23-b6fd-ad1aa0ab3b9a",
+    "created": "2024-08-14T07:36:37.198557Z",
+    "modified": "2024-08-14T07:36:37.198557Z",
+    "name": "Reference - CAR-2020-05-001: MiniDump of LSASS - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "This analytic detects the minidump variant of credential dumping where a process opens lsass.exe in order to extract credentials using the Win32 API call MiniDumpWriteDump. Tools like SafetyKatz, SafetyDump, and Outflank-Dumpert default to this variant and may be detected by this analytic, though keep in mind that not all options for using those tools will result in this specific behavior.\n\nThe analytic is based on a Sigma analytic contributed by Samir Bousseaden and written up in a blog on MENASEC. It looks for a call trace that includes either dbghelp.dll or dbgcore.dll, which export the relevant functions/permissions to perform the dump. It also detects using the Windows Task Manager (taskmgr.exe) to dump lsass, which is described in CAR-2019-08-001. In this iteration of the Sigma analytic, the GrantedAccess filter isn\u2019t included because it didn\u2019t seem to filter out any false positives and introduces the potential for evasion.\n\nThis analytic was tested both in a lab and in a production environment with a very low false-positive rate. werfault.exe and tasklist.exe, both standard Windows processes, showed up multiple times as false positives.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis",
+    "x_kb_reference_title": "CAR-2020-05-001: MiniDump of LSASS"
+}

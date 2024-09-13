@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--f99a1e36-923d-4e61-8785-d830ef6a5e82",
+    "created": "2024-08-14T07:36:36.523906Z",
+    "modified": "2024-08-14T07:36:36.523906Z",
+    "name": "Network Node Inventory",
+    "description": "Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture.",
+    "x_d3fend_id": "D3-NNI",
+    "x_kb_article": "## How it works\nAdministrators collect information on network nodes in their architecture using a variety of administrative and management tools that query network devices and nodes for information.  In some cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through network enumeration methods to include host discovery and scanning for active ports and services.\n\n## Considerations\n* Scanning and probing techniques using mapping tools can result in side effects to information technology (IT) and operational technology (OT) systems.\n* An adversary conducting network enumeration may engage in activities that parallel normal network node inventorying activities, but would require escalating to admin privileges for most of the operations requiting administrative tools\n\n## Examples\n* Link-layer discovery\n   * Link-layer Discovery Protocol (LLDP)\n   * Cisco Discovery Protocol (CDP)\n* Application-layer discovery\n   * Simple Network Management Protocol (SNMP) collects MIB information\n   * Web-based Enterprise Management (WBEM) collects CIM information\n      * Windows Management Instrumentation (WMI)\n      * Windows Management Infrastructure (MI)",
+    "x_synonym": "System Inventorying"
+}

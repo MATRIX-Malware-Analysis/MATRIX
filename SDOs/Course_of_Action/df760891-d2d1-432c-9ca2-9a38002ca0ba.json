@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--df760891-d2d1-432c-9ca2-9a38002ca0ba",
+    "created": "2024-08-14T07:36:40.747367Z",
+    "modified": "2024-08-14T07:36:40.747367Z",
+    "name": "Reference - CAR-2020-11-001: Boot or Logon Initialization Scripts - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Adversaries may schedule software to run whenever a user logs into the system; this is done to establish persistence and sometimes for lateral movement. This trigger is established through the registry key HKEY_CURRENT_USER\\EnvironmentUserInitMprLogonScript. This signature looks edits to existing keys or creation of new keys in that path. Users purposefully adding benign scripts to this path will result in false positives; that case is rare, however. There are other ways of running a script at startup or login that are not covered in this signature. Note that this signature overlaps with the Windows Sysinternals Autoruns tool, which would also show changes to this registry path.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemInitConfigAnalysis",
+    "x_kb_reference_title": "CAR-2020-11-001: Boot or Logon Initialization Scripts"
+}

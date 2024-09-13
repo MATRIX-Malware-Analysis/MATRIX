@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--a42f6412-05be-4f16-a120-ef5c8a0aca8c",
+    "created": "2024-08-14T07:36:37.363124Z",
+    "modified": "2024-08-14T07:36:37.363124Z",
+    "name": "TPM Boot Integrity",
+    "description": "Assuring the integrity of a platform by demonstrating that the boot process starts from a trusted combination of hardware and software and continues until the operating system has fully booted and applications are running.  Sometimes called Static Root of Trust Measurement (STRM).",
+    "x_d3fend_id": "D3-TBI",
+    "x_kb_article": "## How it works\nDuring the boot process, the BIOS boot block (which with this defense enabled, is the Core Root of Trust for Measurement) measures boot components (firmware, ROM). The TPM hashes those measurements and stores the hashes in Platform Configuration Registers (PCRs).  Upon a subsequent boot, these hashes are provided to a verifier which compares the stored measurements to the new boot measurements. Integrity of the boot components is assured if they match.\n\nAttestation of the secure boot occurs when a verifying entity requests a Quote which is a concatenation of the requested PCR values, hashed and signed by the TPM's unique RSA key.  The TPM signature is trusted because the private key is stored securely in hardware and never leaves the TPM.\n\n## Considerations\n\n* The TPM does not perform the follow-on actions of acting on the PCR value information, it just provides the PCR stored information.\n* The current version of TPM is 2.0.; most existing implementations use TPM 1.2.\n\n## Citations\n[1] [TPM 2.0 Library](https://trustedcomputinggroup.org/resource/tpm-library-specification/)\n[2] [TCG Trusted Attestation Protocol (TAP) Use Cases for TPM Families 1.2 and 2.0 and DICE](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TNC_TAP_Use_Cases_v1r0p35_published.pdf)",
+    "x_synonym": "STRM"
+}

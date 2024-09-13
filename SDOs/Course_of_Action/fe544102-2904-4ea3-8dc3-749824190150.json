@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--fe544102-2904-4ea3-8dc3-749824190150",
+    "created": "2024-08-14T07:36:37.626905Z",
+    "modified": "2024-08-14T07:36:37.626905Z",
+    "name": "Reference - Threat detection for return oriented programming - Crowdstrike Inc",
+    "description": "No description available",
+    "x_kb_abstract": "This disclosure describes, in part, techniques for detecting security exploits associated with return-oriented programming. The techniques include determining that a retrieved count is indicative of malicious activity, such as return oriented programming. The count may be retrieved from a processor performance counter of prediction mismatches, the prediction mismatches resulting from comparisons of a call stack of a computing device and of a shadow call stack maintained by a processor of the computing device. The techniques further include performing at least one security response action in response to determining that the count indicates malicious activity.",
+    "x_kb_author": "Georg WICHERSKI",
+    "x_kb_mitre_analysis": "This patent describes a technique for detecting shellcode security exploits. A call stack of a computing device is compared with a shadow call stack maintained by a processor of the computing device since a return oriented program may only be able to control or spoof the call stack and not the shadow call stack. Mismatches between the two are counted and if the number of mismatches exceeds a certain threshold it is an indication of malicious activity and a security response action is performed.",
+    "x_kb_organization": "Crowdstrike Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ShadowStackComparisons",
+    "x_kb_reference_title": "Threat detection for return oriented programming"
+}

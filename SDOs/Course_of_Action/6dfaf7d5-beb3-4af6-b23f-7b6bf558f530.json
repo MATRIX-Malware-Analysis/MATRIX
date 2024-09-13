@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--6dfaf7d5-beb3-4af6-b23f-7b6bf558f530",
+    "created": "2024-08-14T07:36:40.507617Z",
+    "modified": "2024-08-14T07:36:40.507617Z",
+    "name": "Reference - Detecting script-based malware - Crowdstrike Inc",
+    "description": "No description available",
+    "x_kb_abstract": "Described herein are systems, techniques, and computer program products for preventing execution, by a scripting engine, of harmful commands that may be introduced by computer malware or other mechanisms. The system identifies certain host processes that may attempt to utilize a hosted scripting engine. An unmanaged interface module is injected into an identified host process. The unmanaged interface module is configured to detect certain conditions indicating the likelihood that a scripting engine will be instantiated, and in response to inject a managed interface module into the host process. The managed interface module hooks into certain methods of the scripting engine to intercept commands before they are executed by the scripting engine. The managed and unmanaged interface components then communicate with a kernel-mode threat detection component to determine whether any commands should be blocked.",
+    "x_kb_author": "Ion-Alexandru IONESCU; Satoshi Tanda",
+    "x_kb_mitre_analysis": "The patent describes techniques that can be implemented to detect and block malicious commands and command scripts from being executed by scripting engines.\n\n### Script Execution Monitoring explanation\nThis patent describes software installed on the host system that hooks into methods of a scripting engine to intercept commands before they are executed and block commands if they are determined to be harmful. For example regular expression checking may be used to identify commands having malicious patterns. Expression checking may be used for script files as well as interactively - typed commands.\n\n### File Content Signatures explanation\nThis patent includes File Content Signatures because in the case of a script file, a hash of the file is compared against hashes of known malicious script files to determine whether the script file is malicious.",
+    "x_kb_organization": "Crowdstrike Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules",
+    "x_kb_reference_title": "Detecting script-based malware"
+}

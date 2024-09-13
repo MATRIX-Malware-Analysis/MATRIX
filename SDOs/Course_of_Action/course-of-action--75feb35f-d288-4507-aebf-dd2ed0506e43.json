@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--75feb35f-d288-4507-aebf-dd2ed0506e43",
+    "created": "2024-08-13T14:49:16.469957Z",
+    "modified": "2024-08-13T14:49:16.469960Z",
+    "name": "Brute Force Mitigation",
+    "description": "Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. \nToo strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to [Valid Accounts](https://attack.mitre.org/techniques/T1078)\n\nRefer to NIST guidelines when creating passwords.(Citation: NIST 800-63-3)\n\nWhere possible, also enable multi factor authentication on external facing services.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.1",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1110",
+            "external_id": "T1110"
+        },
+        {
+            "source_name": "NIST 800-63-3",
+            "url": "https://pages.nist.gov/800-63-3/sp800-63b.html",
+            "description": "Grassi, P., et al. (2017, December 1). SP 800-63-3, Digital Identity Guidelines. Retrieved January 16, 2019."
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

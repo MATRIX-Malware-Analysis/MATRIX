@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--5a7550c6-25a5-4070-8fed-3ae7a03b96e3",
+    "created": "2024-08-14T07:36:35.50014Z",
+    "modified": "2024-08-14T07:36:35.50014Z",
+    "name": "Identifier Activity Analysis",
+    "description": "Taking known malicious identifiers and determining if they are present in a system.",
+    "x_d3fend_id": "D3-IAA",
+    "x_kb_article": "## How it works\n\nIdentifier activity analysis is the process of taking identifiers--typically known malicious identifiers--and determining the artifacts that have interacted with those identifiers.\n\nThere are many open and closed source repositories of identifiers that represent indicators of compromise. For example, VirusTotal contains hash signatures of malware and IP Addresses used by threat actors. Defenders can search for these indicators of compromise their own systems to gain context on activity around an identifier.\n\n## Considerations\n\nIndicator activity analysis is a good way to gain high precision analysis, but adversaries can modify their own signatures such as hashes quickly to evade detection. This is related to David Bianco\u2019s Pyramid of Pain - Indicators on the lower level (hash values, IP addresses domain names) are easy for adversaries to change.\n\nIdentifier activity data of interest for analysis with the identifier might include, but is not limited to:\n\n* network traffic activity where the identifier was used to identify communicating entities or referred to in the communication\n* process activity referencing the identifier, especially for resource access\n* file activity referencing the identifier\n* registry settings referencing the identifier"
+}

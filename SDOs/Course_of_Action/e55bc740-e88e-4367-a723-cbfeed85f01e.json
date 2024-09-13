@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--e55bc740-e88e-4367-a723-cbfeed85f01e",
+    "created": "2024-08-14T07:36:40.502949Z",
+    "modified": "2024-08-14T07:36:40.502949Z",
+    "name": "Reference - Detecting network reconnaissance by tracking intranet dark-net communications - VECTRA NETWORKS Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A method and system for detecting network reconnaissance is disclosed wherein network traffic can be parsed into unidirectional flows that correspond to sessions. A learning module may categorize computing entities inside the network into assets and generate asset data to monitor the computing entities. If one or more computing entities address a flow to an address of a host that no longer exists, ghost asset data may be recorded and updated in the asset data. When a computing entity inside the network contacts an object in the dark-net, the computing entity may be recorded a potential mapper. When the computing entity tries to contact a number of objects in the dark-net, such that a computed threshold is exceeded, the computing entity is identified a malicious entity performing network reconnaissance.",
+    "x_kb_author": "Nicolas BEAUCHESNE; Sungwook Yoon",
+    "x_kb_mitre_analysis": "This patent describes detecting an attacker performing internal reconnaissance within an organization's network to gather intelligence about the configuration of the network or identify the next target.  Network packets are collected (ex. tapped from a network switch) and processed to create flows that are used to map out the network to identify network assets as well as ghost assets (addresses not assigned to a device or an existing device that is temporarily disabled). Once this mapping is complete it is used to monitor the network to determine if an attacker is attempting to connect to a ghost asset. If an attacker attempts to connect to a ghost asset over a threshold (ex. contacting four ghost assets in less than seven minutes), an alert is generated.",
+    "x_kb_organization": "VECTRA NETWORKS Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectionAttemptAnalysis",
+    "x_kb_reference_title": "Detecting network reconnaissance by tracking intranet dark-net communications"
+}

@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--a00078c3-ed99-42d2-bb12-f0f558bbcca7",
+    "created": "2024-08-14T07:36:36.849024Z",
+    "modified": "2024-08-14T07:36:36.849024Z",
+    "name": "Reference - Method and system for detecting threats using metadata vectors - VECTRA NETWORKS Inc",
+    "description": "No description available",
+    "x_kb_abstract": "An approach for detecting network attacks using metadata vectors may initially involve receiving network communications or packets, extracting metadata items from the packets. The metadata items describe the communications without requiring deep content inspection of the data payload or contents. The communications may be clustered into groups using the metadata items. If a cluster exceeds a threshold, an alarm may be generated.",
+    "x_kb_author": "Nicolas BEAUCHESNE; David Lopes Pegna; Karl Lynn",
+    "x_kb_mitre_analysis": "This patent describes detecting network threats by first passively collecting network traffic and storing it for processing. Metadata from network traffic such as packet header information or information about a session (ex. time between request/responses) is extracted. After the metadata is extracted, the data is grouped into cluster maps of matching events to track how many instances of a network communication have occurred, such as five requests sent and five responses received. Threshold limits are set on the clusters to monitor them and if a cluster grows too large (ex. ten instances of requests and responses) this can correspond to unauthorized behavior. This method might detect, for example, a network attack using malicious payloads with automated scripts, in which a bot sends replicated malicious payloads to the same destination port.",
+    "x_kb_organization": "VECTRA NETWORKS Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProtocolMetadataAnomalyDetection",
+    "x_kb_reference_title": "Method and system for detecting threats using metadata vectors"
+}

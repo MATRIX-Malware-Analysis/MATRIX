@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7522080d-ea64-4386-9aa5-d8a06dd90b09",
+    "created": "2024-08-14T07:36:40.724341Z",
+    "modified": "2024-08-14T07:36:40.724341Z",
+    "name": "Reference - CAR-2013-05-005: SMB Copy and Execution - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "An adversary needs to gain access to other hosts to move throughout an environment. In many cases, this is a twofold process. First, a file is remotely written to a host via an SMB share (detected by CAR-2013-05-003). Then, a variety of Execution techniques can be used to remotely establish execution of the file or script. To detect this behavior, look for files that are written to a host over SMB and then later run directly as a process or in the command line arguments. SMB File Writes and Remote Execution may happen normally in an environment, but the combination of the two behaviors is less frequent and more likely to indicate adversarial activity.\n\nThis can possibly extend to more copy protocols in order to widen its reach, or it could be tuned more finely to focus on specific program run locations (e.g. %SYSTEMROOT%\\system32) to gain a higher detection rate.",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#IPCTrafficAnalysis",
+    "x_kb_reference_title": "CAR-2013-05-005: SMB Copy and Execution"
+}

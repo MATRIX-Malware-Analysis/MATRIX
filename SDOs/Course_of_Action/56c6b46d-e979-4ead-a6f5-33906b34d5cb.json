@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--56c6b46d-e979-4ead-a6f5-33906b34d5cb",
+    "created": "2024-08-14T07:36:41.215247Z",
+    "modified": "2024-08-14T07:36:41.215247Z",
+    "name": "Container Image Analysis",
+    "description": "Analyzing a Container Image with respect to a set of policies.",
+    "x_d3fend_id": "D3-CIA",
+    "x_kb_article": "## How it works\n\nContainer images are standalone collections of the executable code and\ncontent that are used to populate a container environment.\nThey are usually created by either building a container from scratch or by\nbuilding on top of an existing image pulled from a repository.\n\nThroughout the container build workflow,\nimages should be scanned to identify:\n\n- outdated libraries,\n- known vulnerabilities,\n- or misconfigurations, such as insecure ports or permissions.\n\nScanning should also provide the flexibility to disregard false positives\nfor vulnerability detection where knowledgeable\ncybersecurity professionals have deemed alerts to be inaccurate.\n\nOne approach to implementing image scanning is to use an admission controller\nto block deployments if the image does not comply with the organization's\nsecurity policies.\n\nAn admission controller is a Container Orchestration feature that can intercept and\nprocess requests to the Container Orchestration API prior to persistence of the object,\nbut after the request is authenticated and authorized.\nA webhook can be implemented to scan any image before it is deployed in the orchestrator.\nThis admission controller\n\n## Considerations\n\n* Image scanning is key to ensuring deployed containers are secure.\n* Using trusted repositories to build containers is a critical part of the container build workflow.\n* This technique does not necessarly prevent the build process to add insecure or unsecured\n  files to the Image.\n",
+    "x_synonym": "Container Image Scanning"
+}

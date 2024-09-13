@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--8f67bb8f-b6b8-4873-9f25-1a2e069bc2de",
+    "created": "2024-08-14T07:36:38.447508Z",
+    "modified": "2024-08-14T07:36:38.447508Z",
+    "name": "Reference - Preventing execution of task scheduled malware - McAfee LLC",
+    "description": "No description available",
+    "x_kb_abstract": "A method for preventing malware attacks includes the steps of detecting an attempt on an electronic device to access a task scheduler, determining an entity associated with the attempt to access the task scheduler, determining a malware status of the entity, and, based on the malware status of the entity, allowing or denying the attempted access to the task scheduler. The task scheduler is configured to launch one or more applications at a specified time or interval.",
+    "x_kb_author": "Anil Ramabhatta, Harinath Vishwanath Ramachetty, Nandi Dharma Kishore",
+    "x_kb_mitre_analysis": "Access to a job scheduler is intercepted using hooking or file filters to identify and analyze the source files, processes, destination files, or destination servers associated with a scheduled job. The identified servers or files associated with a job are compared against an anti-malware signature database or reputation server to determine if it there is a match. If so, execution is denied and an alert is generated.",
+    "x_kb_organization": "McAfee LLC",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ScheduledJobAnalysis",
+    "x_kb_reference_title": "Preventing execution of task scheduled malware"
+}

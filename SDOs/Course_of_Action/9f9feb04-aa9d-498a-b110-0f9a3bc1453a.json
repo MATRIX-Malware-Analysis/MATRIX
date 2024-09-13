@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--9f9feb04-aa9d-498a-b110-0f9a3bc1453a",
+    "created": "2024-08-14T07:36:36.84518Z",
+    "modified": "2024-08-14T07:36:36.84518Z",
+    "name": "Reference - CAR-2014-05-002: Services launching Cmd - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Windows runs the Service Control Manager (SCM) within the process services.exe. Windows launches services as independent processes or DLL loads within a svchost.exe group. To be a legitimate service, a process (or DLL) must have the appropriate service entry point SvcMain. If an application does not have the entry point, then it will timeout (default is 30 seconds) and the process will be killed.\n\nTo survive the timeout, adversaries and red teams can create services that direct to cmd.exe with the flag /c, followed by the desired command. The /c flag causes the command shell to run a command and immediately exit. As a result, the desired program will remain running and it will report an error starting the service. This analytic will catch that command prompt instance that is used to launch the actual malicious executable. Additionally, the children and descendants of services.exe will run as a SYSTEM user by default. Thus, services are a convenient way for an adversary to gain Persistence and Privilege Escalation.",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "CAR-2014-05-002: Services launching Cmd"
+}

@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--76c5510e-6a8d-49b7-a41d-5cc3eac84ea5",
+    "created": "2024-08-14T07:36:40.50643Z",
+    "modified": "2024-08-14T07:36:40.50643Z",
+    "name": "Reference - Post sandbox methods and systems for detecting and blocking zero-day exploits via api call validation - K2 Cyber Security Inc",
+    "description": "No description available",
+    "x_kb_abstract": "In one aspect, a method useful for monitoring and validating execution of executable binary code, includes the step of disassembling an executable binary code of an application. The method includes the step of detecting and obtaining location and type of an application programming interface (API) call, system call, and privileged instruction that is executed by the executable binary code. The method includes the step of detecting and obtaining return address from an Al call and system call. The method includes the step of validating location of the API call system call, and privileged instruction. The method includes the step of validating return from the API call and system call.",
+    "x_kb_author": "Jayant Shukla",
+    "x_kb_mitre_analysis": "The patent describes a technique for monitoring API calls. Executable binary code of an application is first disassembled and scanned for API calls. Based on the recorded API calls, a rule list is generated. Software hooks are placed in the code for monitoring API calls during program execution and then each API call is validated using the generated rule list to permit or deny execution of API calls.\n\nRules are created that specify the type and location of the API call. For example, data collected for an application can show an API call to libc at address 0x43e0 and an API call by libc at address 0xlfb47. Accordingly, two rules are generated. The first rule specifies the location type and target of the API call at address 0x43e0, as well as the return address. The second rule is for the API call to the kernel and states the target address, return address, instruction, and target type.",
+    "x_kb_organization": "K2 Cyber Security Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis",
+    "x_kb_reference_title": "Post sandbox methods and systems for detecting and blocking zero-day exploits via api call validation"
+}

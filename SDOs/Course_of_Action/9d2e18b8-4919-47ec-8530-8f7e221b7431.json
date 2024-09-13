@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--9d2e18b8-4919-47ec-8530-8f7e221b7431",
+    "created": "2024-08-14T07:36:40.650915Z",
+    "modified": "2024-08-14T07:36:40.650915Z",
+    "name": "Reference - System and methods thereof for identification of suspicious system processes - Palo Alto Networks Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A computerized method for identification of suspicious processes executing on an end-point device communicatively connected to network, the network communicatively connected to a server, the method comprising receiving, by the server, a record of at least one process, initiated by and executing on by the end-point device. One or more parameters associated with the at least one process are identified. A first time pointer is identified corresponding to the identified one or more parameters, a first time pointer. A second time pointer at which a user associated with the end-point device initiated a user dependent process is identified. Whether the second time pointer occurred before the first time pointer is identified. It is determined whether the at least one process was initiated by the user based on identification of user dependent processes and corresponding attribution. An action is performed based on the above determination.",
+    "x_kb_author": "Gil BARAK",
+    "x_kb_mitre_analysis": "The patent describes detecting malicious processes by identifying the order of process initiation. The start of a user initiated process (user query, opening an application, etc.) is compared with the start of processes initiated by the device (ex. during boot). In addition, a determination is made on whether processes are not initiated by a user by examining process parameters such as type of process, its creator, source, etc. If it is determined that a user initiated process was started before a process initiated by the device and a process was not initiated by the user, the process is marked as suspicious.",
+    "x_kb_organization": "Palo Alto Networks Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "System and methods thereof for identification of suspicious system processes"
+}

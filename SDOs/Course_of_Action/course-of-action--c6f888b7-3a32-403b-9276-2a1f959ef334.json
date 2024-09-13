@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c6f888b7-3a32-403b-9276-2a1f959ef334",
+    "created": "2024-08-13T14:49:16.496595Z",
+    "modified": "2024-08-13T14:49:16.496598Z",
+    "name": "Indicator Blocking Mitigation",
+    "description": "Ensure event tracers/forwarders (Citation: Microsoft ETW May 2018), firewall policies, and other associated mechanisms are secured with appropriate permissions and access controls. Consider automatically relaunching forwarding mechanisms at recurring intervals (ex: temporal, on-logon, etc.) as well as applying appropriate change management to firewall rules and other related system configurations.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1054",
+            "external_id": "T1054"
+        },
+        {
+            "url": "https://docs.microsoft.com/windows/desktop/etw/event-tracing-portal",
+            "description": "Microsoft. (2018, May 30). Event Tracing. Retrieved September 6, 2018.",
+            "source_name": "Microsoft ETW May 2018"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

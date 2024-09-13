@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--636298a5-2724-45f8-9945-69aa0cd3389d",
+    "created": "2024-08-14T07:36:38.371429Z",
+    "modified": "2024-08-14T07:36:38.371429Z",
+    "name": "Sender MTA Reputation Analysis",
+    "description": "Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails.",
+    "x_d3fend_id": "D3-SMRA",
+    "x_kb_article": "## How it works\nThe sender message transfer agent (MTA) trust rating can be considered an indicator of the level of security risk and/or a trust level associated with sender MTAs in an email header.\n\nThe features considered in determining the trust rating may include:\n\n* Length of time MTA has interacted with the enterprise\n* Number of sender domains sending emails from the MTA\n* Number of recipients in the enterprise the MTA sends emails to\n* Number of emails received from this MTA\n* Number of email replies received from this MTA\n\nFor example, higher values for the length of time an MTA has interacted with the enterprise, or number of emails received from an MTA can result in a higher trust rating. The trust rating categorizes the sender MTA as unrated, neutral, trusted, suspicious, or malicious.\n\n## Considerations\nLegitimate emails from a sender MTA may receive a lower trust rating over time if the sender's domain gets spoofed and is used to send unauthorized emails."
+}

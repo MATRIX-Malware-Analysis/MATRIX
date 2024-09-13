@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--82aa8ad7-0bf2-4af2-b4f0-edfdbbd232c0",
+    "created": "2024-08-14T07:36:37.936736Z",
+    "modified": "2024-08-14T07:36:37.936736Z",
+    "name": "Reference - CAR-2014-03-005: Remotely Launched Executables via Services - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "There are several ways to cause code to execute on a remote host. One of the most common methods is via the Windows Service Control Manager (SCM), which allows authorized users to remotely create and modify services. Several tools, such as PsExec, use this functionality.\n\nWhen a client remotely communicates with the Service Control Manager, there are two observable behaviors. First, the client connects to the RPC Endpoint Mapper over 135/tcp. This handles authentication, and tells the client what port the endpoint--in this case the SCM--is listening on. Then, the client connects directly to the listening port on services.exe. If the request is to start an existing service with a known command line, the the SCM process will run the corresponding command.\n\nThis compound behavior can be detected by looking for services.exe receiving a network connection and immediately spawning a child process.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#RPCTrafficAnalysis",
+    "x_kb_reference_title": "CAR-2014-03-005: Remotely Launched Executables via Services"
+}

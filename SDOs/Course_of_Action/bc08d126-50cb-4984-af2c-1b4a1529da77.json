@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--bc08d126-50cb-4984-af2c-1b4a1529da77",
+    "created": "2024-08-14T07:36:35.88599Z",
+    "modified": "2024-08-14T07:36:35.88599Z",
+    "name": "Boosting",
+    "description": "Boosting is a sequential process where each subsequent model attempts to correct the errors of the previous model",
+    "x_d3fend_id": "D3A-BOO",
+    "x_kb_article": "## How it works\nBoosting consists of using sequentially weak learners where each iteration\u2019s training focuses on previously misclassified instances in order to improve on the previous iteration. This process is continued iteratively until the final prediction is made by aggregating the previous predictions.\n\n## Considerations\nBoosting can be computationally expensive, prone to overfitting, and slower to train compared to other ensemble methods.\n\nThere are three main types of Boosting algorithms\n - Adaptive Boosting\nAdaptive Boosting (sometimes called AdaBoost) works by adding equal importance to each piece of a dataset and running it through the base learning algorithms. Every algorithm that errors, the boosting algorithm assigns a higher importance to. This continues until an acceptable level of confidence is reached.\n - Gradient Boosting\nGradient Boosting starts by training multiple models simultaneously to\u00a0gather a strong estimate of strength to build new base learning algorithms.\n - XGBoosting\nXGBoosting\u00a0is a scalable tree boosting model. Using decision trees, weight is assigned to each variable and put into a decision tree. Outputs that are classified by the algorithm as wrong or weak are put into a second decision tree and the results form a stronger model.\n\n## References\nSciencedirect. (n.d.). Semi-supervised learning: An overview. [Link](https://www.sciencedirect.com/science/article/pii/S1319157823000228)"
+}

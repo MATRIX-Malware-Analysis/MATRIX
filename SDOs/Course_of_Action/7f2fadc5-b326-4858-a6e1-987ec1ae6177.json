@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7f2fadc5-b326-4858-a6e1-987ec1ae6177",
+    "created": "2024-08-14T07:36:35.230264Z",
+    "modified": "2024-08-14T07:36:35.230264Z",
+    "name": "Firmware Embedded Monitoring Code",
+    "description": "Monitoring code is injected into firmware for integrity monitoring of firmware and firmware data.",
+    "x_d3fend_id": "D3-FEMC",
+    "x_kb_article": "## How it works\nFirmware in deployed network devices is typically not monitored for malicious changes. This technique provides a method to embed a software security component into the deployed firmware which provides a near real-time monitoring hook. The exception handling code, in the firmware, is typically used to expose any detected vulnerabilities.\n\nThe injected software components provide a feature similar to intrusion detection systems for the firmware by detecting unauthorized modifications of the embedded firmware. The integrity of static code and firmware data are monitored continuously in the hosted devices. Comparisons are made to monitored elements like firmware memory addresses and data segments. Memory pages are scanned and if a modification is detected the software component may lock the page. This will protect subsequent attempted modifications to the firmware. The software component may utilize the exception handling code and thus be able to disclose the exact address of the modified memory.\n\nThe injected software components are inserted during the firmware imaging process. The injected software is assumed to have knowledge of both the embedded code and the current execution state of the host program. The injected software will monitor and alert, in near real-time, on potential suspicious activity. The injected code is run alongside of the embedded code in the host. The injected software operates as an independent entity and is not dependent on the host software.\n\nFinally, this technique may implement other countermeasure techniques as part of their analytical processes. These should be identified by referencing other countermeasure techniques directly as necessary.\n\n## Considerations\n* The firmware code will need to be modified and re-hosted on the device.\n* Exposing monitoring hooks to the injected code may introduce additional risk."
+}

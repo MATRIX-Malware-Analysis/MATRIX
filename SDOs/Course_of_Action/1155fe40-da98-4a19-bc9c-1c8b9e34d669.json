@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--1155fe40-da98-4a19-bc9c-1c8b9e34d669",
+    "created": "2024-08-14T07:36:40.749634Z",
+    "modified": "2024-08-14T07:36:40.749634Z",
+    "name": "Reference - CAR-2013-02-003: Processes Spawning cmd.exe - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "The Windows Command Prompt (cmd.exe) is a utility that provides a command line interface to Windows operating systems. It provides the ability to run additional programs and also has several built-in commands such as dir, copy, mkdir, and type, as well as batch scripts (.bat). Typically, when a user runs a command prompt, the parent process is explorer.exe or another instance of the prompt. There may be automated programs, logon scripts, or administrative tools that launch instances of the command prompt in order to run scripts or other built-in commands. Spawning the process cmd.exe from certain parents may be more indicative of malice. For example, if Adobe Reader or Outlook launches a command shell, this may suggest that a malicious document has been loaded and should be investigated. Thus, by looking for abnormal parent processes of cmd.exe, it may be possible to detect adversaries.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "CAR-2013-02-003: Processes Spawning cmd.exe"
+}

@@ -1,0 +1,48 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--e508f37d-0e73-45cb-bd2a-58f5e4f229dc",
+    "created": "2024-08-13T14:49:16.476729Z",
+    "modified": "2024-08-13T14:49:16.476732Z",
+    "name": "LSASS Driver Mitigation",
+    "description": "On Windows 8.1 and Server 2012 R2, enable LSA Protection by setting the Registry key <code>HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\RunAsPPL</code> to <code>dword:00000001</code>. (Citation: Microsoft LSA Protection Mar 2014) LSA Protection ensures that LSA plug-ins and drivers are only loaded if they are digitally signed with a Microsoft signature and adhere to the Microsoft Security Development Lifecycle (SDL) process guidance.\n\nOn Windows 10 and Server 2016, enable Windows Defender Credential Guard (Citation: Microsoft Enable Cred Guard April 2017) to run lsass.exe in an isolated virtualized environment without any device drivers. (Citation: Microsoft Credential Guard April 2017)\n\nEnsure safe DLL search mode is enabled <code>HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\SafeDllSearchMode</code> to mitigate risk that lsass.exe loads a malicious code library. (Citation: Microsoft DLL Security)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1177",
+            "external_id": "T1177"
+        },
+        {
+            "source_name": "Microsoft LSA Protection Mar 2014",
+            "description": "Microsoft. (2014, March 12). Configuring Additional LSA Protection. Retrieved November 27, 2017.",
+            "url": "https://technet.microsoft.com/library/dn408187.aspx"
+        },
+        {
+            "url": "https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard-manage",
+            "description": "Lich, B., Tobin, J., Hall, J. (2017, April 5). Manage Windows Defender Credential Guard. Retrieved November 27, 2017.",
+            "source_name": "Microsoft Enable Cred Guard April 2017"
+        },
+        {
+            "url": "https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard-how-it-works",
+            "description": "Lich, B., Tobin, J. (2017, April 5). How Windows Defender Credential Guard works. Retrieved November 27, 2017.",
+            "source_name": "Microsoft Credential Guard April 2017"
+        },
+        {
+            "source_name": "Microsoft DLL Security",
+            "description": "Microsoft. (n.d.). Dynamic-Link Library Security. Retrieved November 27, 2017.",
+            "url": "https://msdn.microsoft.com/library/windows/desktop/ff919712.aspx"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

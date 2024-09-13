@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--551bc91a-1de2-400e-b8f1-0a4cd715bd30",
+    "created": "2024-08-14T07:36:40.758959Z",
+    "modified": "2024-08-14T07:36:40.758959Z",
+    "name": "Reference - CAR-2021-05-009: CertUtil With Decode Argument - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "CertUtil.exe may be used to encode and decode a file, including PE and script code. Encoding will convert a file to base64 with -----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- tags. Malicious usage will include decoding a encoded file that was downloaded. Once decoded, it will be loaded by a parallel process. Note that there are two additional command switches that may be used - encodehex and decodehex. Similarly, the file will be encoded in HEX and later decoded for further execution. During triage, identify the source of the file being decoded. Review its contents or execution behavior for further analysis.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSpawnAnalysis",
+    "x_kb_reference_title": "CAR-2021-05-009: CertUtil With Decode Argument"
+}

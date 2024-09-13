@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--970fea50-a932-411b-89dc-df5842342684",
+    "created": "2024-08-14T07:36:38.285912Z",
+    "modified": "2024-08-14T07:36:38.285912Z",
+    "name": "Inbound Traffic Filtering",
+    "description": "Restricting network traffic originating from untrusted networks destined towards a private host or enclave.",
+    "x_d3fend_id": "D3-ITF",
+    "x_kb_article": "## How it works\nInbound Traffic, in this context, is network traffic originating from an untrusted network towards a private host or enclave.\nFor example:\n\n* An untrusted network host connecting to a internal commercial portal, shopping.example.com\n* An external mail server connecting to an internal mail server, mail.example.com\n\nFiltering policies are developed by administrators to meet business requirements and limit connectivity. These policies are implemented on edge devices such as firewalls, routers, and intrusion prevention systems. Examples of filters:\n\n* Blocking incoming traffic from spoofed internally facing IP addresses\n* Blocking specific ports and services from establishing connections\n* Limiting specific IP ranges from connecting to the network\n* Dynamic inbound filtering (Hole punching, STUN, NAT-T)\n\n## Considerations\n* Business requirements typically drive the development of filtering rulesets\n* Protocols using non-standard ports may circumvent filtering technology, which does not detect application protocol based on traffic content\n\n## Implementations\n* OpenWRT (Embedded)\n* Netfilter (Linux)\n* Windows Firewall\n* pf(BSD)"
+}

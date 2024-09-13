@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--ef73c584-5d98-47cb-8a50-da489965db16",
+    "created": "2024-08-14T07:36:40.593888Z",
+    "modified": "2024-08-14T07:36:40.593888Z",
+    "name": "Reference - Firewall for processing connection-oriented and connectionless datagrams over a connection-oriented network - National Security Agency",
+    "description": "No description available",
+    "x_kb_abstract": "The present invention is a device for and method of accessing an information network by initializing a database, an ATM approved list, an IP approved list, and an IP disapproved list; receiving a datagram; discarding the datagram if it is not on the ATM approved list; determining the datagram's type; allowing access to the network and comparing the connection request, if any, to the database if the datagram is ATM signaling; discarding the datagram if the datagram is ATM signaling and the database denies the request; adding the request to the ATM approved list if the datagram is ATM signaling and the database allows the request; allowing access to the network if the datagram is ATM data that excludes IP data and the request is on the ATM approved list; computing a flow tag if the datagram is ATM data that includes IP data; discarding the datagram if the flow tag is on the IP disapproved list; allowing access to the network if the flow tag is on the IP approved list; comparing the flow tag to the database if the flow tag is neither on the IP approved list nor on the IP disapproved list; discarding the datagram and adding the flow tag to the IP disapproved list if the database rejects the flow tag; and allowing access to the network and adding the flow tag to the corresponding approved list if the database accepts the flow tag; and performing these steps on the next datagram",
+    "x_kb_author": "Patrick W. Dowd, John T. McHenry",
+    "x_kb_organization": "National Security Agency",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#InboundTrafficFiltering",
+    "x_kb_reference_title": "Firewall for processing connection-oriented and connectionless datagrams over a connection-oriented network"
+}

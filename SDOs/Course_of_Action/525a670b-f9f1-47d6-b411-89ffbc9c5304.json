@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--525a670b-f9f1-47d6-b411-89ffbc9c5304",
+    "created": "2024-08-14T07:36:41.069836Z",
+    "modified": "2024-08-14T07:36:41.069836Z",
+    "name": "IPC Traffic Analysis",
+    "description": "Analyzing standard inter process communication (IPC) protocols to detect deviations from normal protocol activity.",
+    "x_d3fend_id": "D3-IPCTA",
+    "x_kb_article": "## How it works\nInter process communication enables applications or threads to share data. This can involve one or more computers. Monitoring IPC in your environment can reveal abnormal or malicious activity.\nIPC can occur within a single computer or between multiple computers remotely through network protocols. Thus there are multiple ways to collect and monitor these exchanges between processes. A network protocol analyzer may monitor and parse SMB network traffic to record system activity. A host based monitoring agent may monitor IPC activity contained within a single host to look for deviations from standard usages.\n\n### Examples\n * SMB\n * Zeromq\n * Java RMI API\n\n## Considerations\n* IPC can generate substantial amounts of data, and it may not be feasible to collect all of it.\n* IPC may occur over loopback interfaces or direct memory access granted by the operating system.",
+    "x_synonym": "IPC Analysis"
+}

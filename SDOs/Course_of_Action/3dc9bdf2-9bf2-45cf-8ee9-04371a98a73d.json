@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--3dc9bdf2-9bf2-45cf-8ee9-04371a98a73d",
+    "created": "2024-08-14T07:36:41.363952Z",
+    "modified": "2024-08-14T07:36:41.363952Z",
+    "name": "Authentication Event Thresholding",
+    "description": "Collecting authentication events, creating a baseline user profile, and determining whether authentication events are consistent with the baseline profile.",
+    "x_d3fend_id": "D3-ANET",
+    "x_kb_article": "## How it works\nAuthentication event data is collected (logon information such as device id, time of day, day of week, geo-location, etc.) to create an activity baseline. Then, a threshold is determined either through a manually specified configuration, or a statistical analysis of deviations in historical data. New authentication events are evaluated to determine if a threshold is exceeded. Thresholds can be static or dynamic.\n\n### Actions\nAs a result of the analysis, actions taken could include:\n\n* [Account Locking](/technique/d3f:AccountLocking)\n* Raising an alert\n\n### Example data sources\n * Directory server logs\n * VPN Server logs\n * IDAM Capability logs\n * NAC logs\n * Authentication client logs\n * Kerberos network traffic\n * LDAP network traffic\n\n## Considerations\n\nThis technique covers statistical outliers. Though depending on the complexity or dimensionality of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If the malicious activity is not statistically different from benign activity, an alert threshold will not be met."
+}

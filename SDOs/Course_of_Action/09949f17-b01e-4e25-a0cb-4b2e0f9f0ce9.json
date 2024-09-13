@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--09949f17-b01e-4e25-a0cb-4b2e0f9f0ce9",
+    "created": "2024-08-14T07:36:40.578258Z",
+    "modified": "2024-08-14T07:36:40.578258Z",
+    "name": "Reference - System and method for detecting homoglyph attacks with a siamese convolutional neural network - Endgame Inc",
+    "description": "No description available",
+    "x_kb_abstract": "The present invention utilizes computer vision technologies to identify potentially malicious URLs and executable files in a computing device. In one embodiment, a Siamese convolutional neural network is trained to identify the relative similarity between image versions of two strings of text. After the training process, a list of strings that are likely to be utilized in malicious attacks are provided (e.g., legitimate URLs for popular websites). When a new string is received, it is converted to an image and then compared against the image of list of strings. The relative similarity is determined, and if the similarity rating falls below a predetermined threshold, an alert is generated indicating that the string is potentially malicious.",
+    "x_kb_author": "Jonathan Woodbridge; Anjum Ahuja; Daniel Grant",
+    "x_kb_mitre_analysis": "This patent describes a mechanism to detect homoglyph strings that involves training a Siamese convolutional neural network to compare images of strings. Strings of legitimate URLs for websites along with known suspicious stings are converted to images during the training process to create an index. New strings are converted to images and then compared to the index for similarity, if the string deviates beyond a threshold an alert is triggered.",
+    "x_kb_organization": "Endgame Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#HomoglyphDetection",
+    "x_kb_reference_title": "System and method for detecting homoglyph attacks with a siamese convolutional neural network"
+}

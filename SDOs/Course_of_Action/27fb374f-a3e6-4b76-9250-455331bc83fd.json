@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--27fb374f-a3e6-4b76-9250-455331bc83fd",
+    "created": "2024-08-14T07:36:41.400441Z",
+    "modified": "2024-08-14T07:36:41.400441Z",
+    "name": "File Encryption",
+    "description": "Encrypting a file using a cryptographic key.",
+    "x_d3fend_id": "D3-FE",
+    "x_kb_article": "## How it Works\nFiles are encrypted using either a single key for both encryption and decryption or separate keys. Single key encryption is symmetric encryption and using two key distinct keys is asymmetric encryption.\n\n### Symmetric Cryptography\nSymmetric encryption uses the same cryptographic key for both the encryption and decryption a file. Managing keys at scale sometimes uses asymmetric key exchange protocols such as Diffie-Hellman can be used to share the symmetric cryptographic key with the others.\n\n### Asymmetric Cryptography\nAsymmetric encryption is typically accomplished using public and private key certificates based on the X.509 standard. Files are encrypted using the public key and decrypted using their private key. Asymmetric encryption is typically slower than symmetric encryption and not widely used for large file encryption, but is popular for key wrapping, key exchanges, and digital signatures.\n\n## Considerations\n- Continuous monitoring to ensure private keys are not compromised and the certificate authority (CA) is trusted.\n- Secure transfer of private keys between multiple devices."
+}

@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--42a43f66-f114-4ad0-8a9b-70353e4cfaf0",
+    "created": "2024-08-14T07:36:35.338952Z",
+    "modified": "2024-08-14T07:36:35.338952Z",
+    "name": "DNS Traffic Analysis",
+    "description": "Analysis of domain name metadata, including name and DNS records, to determine whether the domain is likely to resolve to an undesirable host.",
+    "x_d3fend_id": "D3-DNSTA",
+    "x_kb_article": "## How it works\nThis technique can be accomplished in a number of ways.\n\n* One example analytic determines whether or not a domain name was generated with an algorithm. Domain generation algorithms (DGAs) are sometimes used to create a domain name automatically  that will resolve to C2 infrastructure, without directly coding the domains in question into the malicious code.\n* Another method analyzes information about domains that have been visited, including whether a domain name is longer than a common length,  if a dynamic DNS domain was visited, if a fast-flux domain was visited, and if a recently created domain was visited. These factors are used to develop a score and if that score is over a certain threshold, an alert is generated.\n* Collected malware samples can be executed in a virtual environment to identify network domains that are connected to during execution. The network domains are then generated into signatures to identity bad domains for other hosts.\n\nThis technique does not check for content hosted at the domain.\n\n## Considerations\n\n* DNS produces a large amount of traffic which can be resource-intensive to analyze in real time.\n* If a server is compromised, for example, as part of a watering hole attack, but the DNS information pointing to that server is not altered, this technique would not catch such an incident.",
+    "x_synonym": "Domain Name Analysis"
+}

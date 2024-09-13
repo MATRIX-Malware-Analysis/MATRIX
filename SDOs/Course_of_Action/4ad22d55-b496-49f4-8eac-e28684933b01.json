@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--4ad22d55-b496-49f4-8eac-e28684933b01",
+    "created": "2024-08-14T07:36:36.879495Z",
+    "modified": "2024-08-14T07:36:36.879495Z",
+    "name": "Reference - Intrusion detection using a heartbeat - Sophos Ltd",
+    "description": "No description available",
+    "x_kb_abstract": "A variety of techniques are disclosed for detection of advanced persistent threats and similar malware. In one aspect, the detection of certain network traffic at a gateway is used to trigger a query of an originating endpoint, which can use internal logs to identify a local process that is sourcing the network traffic. In another aspect, an endpoint is configured to periodically generate and transmit a secure heartbeat, so that an interruption of the heartbeat can be used to signal the possible presence of malware. In another aspect, other information such as local and global reputation information is used to provide context for more accurate malware detection.",
+    "x_kb_author": "Kenneth D. Ray",
+    "x_kb_mitre_analysis": "This patent describes a health monitor deployed on an endpoint that uses a heartbeat to periodically communicate status to a gateway's remote health monitor. The endpoint health monitor issues a heartbeat for satisfactory status of the endpoint using factors such as:\n\n* checking the status of individual software items executing on the endpoint\n* checking that antivirus and other security software is up to date (e. g., with current virus definition files) and running correctly\n* checking the integrity of cryptographic key stores\n* checking other hardware or software components of the endpoint as necessary or helpful for health monitoring\n\nA disappearance of the heartbeat from the endpoint may indicate that the endpoint has been compromised.",
+    "x_kb_organization": "Sophos Ltd",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#EndpointHealthBeacon",
+    "x_kb_reference_title": "Intrusion detection using a heartbeat"
+}

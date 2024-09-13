@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--9abb9cbe-94d7-4b8e-a68d-75cd81ea9235",
+    "created": "2024-08-14T07:36:37.227836Z",
+    "modified": "2024-08-14T07:36:37.227836Z",
+    "name": "Reference - Method and system for detecting external control of compromised hosts - VECTRA NETWORKS Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A detection engine may be implemented by receiving network traffic and processing the traffic into one or more session datasets. Sessions not initiated by an internal host may be discarded. The frequency between the communication packets from the internal host to external host may be grouped or processed into rapid-exchange instances. The number of rapid-exchange instances, the time intervals between them, and/or the rhythm and directions of the initiation of the instances may be analyzed to determine that a human actor is manually controlling the external host. In some embodiments, when it is determined that only one human actor is involved, alarm data may be generated that indicates that a network intrusion involving manual remote control has occurred or is underway.",
+    "x_kb_author": "Nicolas BEAUCHESNE; Ryan James PRENGER",
+    "x_kb_mitre_analysis": "This patent describes detecting an external attacker taking remote control of an internal host. Detection includes identifying sessions where the external host controls the internal host in the opposite direction the session was initiated. The number of rapid-exchange communication instances (i.e, communications that occur between the two hosts with little silence gap), the time intervals between them, and/or the rhythm and direction of the instances, are analyzed to determine if an external human actor is manually controlling the internal host.",
+    "x_kb_organization": "VECTRA NETWORKS Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#RemoteTerminalSessionDetection",
+    "x_kb_reference_title": "Method and system for detecting external control of compromised hosts"
+}

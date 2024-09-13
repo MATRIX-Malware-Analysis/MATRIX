@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--9bd64cd0-6cd3-4a80-a9cf-ba3df06fdf91",
+    "created": "2024-08-13T14:49:16.486331Z",
+    "modified": "2024-08-13T14:49:16.486334Z",
+    "name": "HISTCONTROL Mitigation",
+    "description": "Prevent users from changing the <code>HISTCONTROL</code> environment variable (Citation: Securing bash history). Also, make sure that the <code>HISTCONTROL</code> environment variable is set to \u201cignoredup\u201d instead of \u201cignoreboth\u201d or \u201cignorespace\u201d.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1148",
+            "external_id": "T1148"
+        },
+        {
+            "url": "http://www.akyl.net/securing-bashhistory-file-make-sure-your-linux-system-users-won%E2%80%99t-hide-or-delete-their-bashhistory",
+            "description": "Mathew Branwell. (2012, March 21). Securing .bash_history file. Retrieved July 8, 2017.",
+            "source_name": "Securing bash history"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

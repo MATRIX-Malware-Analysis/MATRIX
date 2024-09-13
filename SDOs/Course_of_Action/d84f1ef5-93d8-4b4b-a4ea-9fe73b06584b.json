@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--d84f1ef5-93d8-4b4b-a4ea-9fe73b06584b",
+    "created": "2024-08-14T07:36:36.353664Z",
+    "modified": "2024-08-14T07:36:36.353664Z",
+    "name": "Certificate Analysis",
+    "description": "Analyzing Public Key Infrastructure certificates to detect if they have been misconfigured or spoofed using both network traffic, certificate fields and third-party logs.",
+    "x_d3fend_id": "D3-CA",
+    "x_kb_article": "## How it works\nCertificate Analysis ensures that the data elements of the certificate are current and anchored in a known trust model. Certificate authorities, revocation lists, and third-party secure logs are used in the analysis. Analysis includes detection of server impersonation, phishing domains, and forged certificates.\n\nTLS certificates are designed to expire to ensure that the cryptographic keys are forced to be changed on a regular basis. The certificates in the trust path also expire and can cause a break in the trust chain. This means that even if a server certificate is updated correctly, intermediate certificates can expire and the trust chain is not maintained. This can cause services to become unavailable."
+}

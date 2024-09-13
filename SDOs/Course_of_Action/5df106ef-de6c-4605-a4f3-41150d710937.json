@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--5df106ef-de6c-4605-a4f3-41150d710937",
+    "created": "2024-08-14T07:36:37.692992Z",
+    "modified": "2024-08-14T07:36:37.692992Z",
+    "name": "Reference - Security System with Methodology for Interprocess Communication Control - Check Point Software Tech Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A security system with methodology for interprocess communication control is described. In one embodiment, a method for controlling interprocess communication is provided that includes steps of: defining rules indicating which system services a given application can invoke; trapping an attempt by a particular application to invoke a particular system service; identifying the particular application that is attempting to invoke the particular system service; and based on identity of the particular application and on the rules indicating which system services a given application can invoke, blocking the attempt when the rules indicate that the particular application cannot invoke the particular system service.",
+    "x_kb_author": "Gregor Freund",
+    "x_kb_mitre_analysis": "This patent describes a technique for monitoring interprocess communications to prevent malicious applications from requesting system services. API calls are monitored to detect malicious applications attempting to open a communication channel (port) to access system services or sending messages to other applications using user32 API functions. These requests are examined against an external rules engine or whitelist, matches deny or block access and produce an error message such as connection refused or service not available.",
+    "x_kb_organization": "Check Point Software Tech Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#IPCTrafficAnalysis",
+    "x_kb_reference_title": "Security System with Methodology for Interprocess Communication Control"
+}

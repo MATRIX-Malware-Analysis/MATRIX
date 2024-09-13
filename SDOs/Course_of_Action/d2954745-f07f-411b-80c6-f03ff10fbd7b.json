@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--d2954745-f07f-411b-80c6-f03ff10fbd7b",
+    "created": "2024-08-14T07:36:40.677471Z",
+    "modified": "2024-08-14T07:36:40.677471Z",
+    "name": "Reference - CAR-2020-11-004: Processes Started From Irregular Parent - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Adversaries may start legitimate processes and then use their memory space to run malicious code. This analytic looks for common Windows processes that have been abused this way in the past; when the processes are started for this purpose they may not have the standard parent that we would expect. This list is not exhaustive, and it is possible for cyber actors to avoid this discepency. These signatures only work if Sysmon reports the parent process, which may not always be the case if the parent dies before sysmon processes the event.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "CAR-2020-11-004: Processes Started From Irregular Parent"
+}

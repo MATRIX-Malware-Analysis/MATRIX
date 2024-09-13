@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--811c1740-413f-4d1e-840b-bc74a6f499e8",
+    "created": "2024-08-14T07:36:40.720808Z",
+    "modified": "2024-08-14T07:36:40.720808Z",
+    "name": "Reference - CAR-2013-01-002: Autorun Differences - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "The Sysinternals tool Autoruns checks the registry and file system for known identify persistence mechanisms. It will output any tools identified, including built-in or added-on Microsoft functionality and third party software. Many of these locations are known by adversaries and used to obtain Persistence. Running Autoruns periodically in an environment makes it possible to collect and monitor its output for differences, which may include the removal or addition of persistent tools. Depending on the persistence mechanism and location, legitimate software may be more likely to make changes than an adversary tool. Thus, this analytic may result in significant noise in a highly dynamic environment. While Autoruns is a convenient method to scan for programs using persistence mechanisms its scanning nature does not conform well to streaming based analytics. This analytic could be replaced with one that draws from sensors that collect registry and file information if streaming analytics are desired.\n\nUtilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). Primarily not a detection analytic by itself but through analysis of results by an analyst can be used for such. Building another analytic on top of this one identifying unusual entries would likely be a beneficial alternative.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFileAnalysis",
+    "x_kb_reference_title": "CAR-2013-01-002: Autorun Differences"
+}

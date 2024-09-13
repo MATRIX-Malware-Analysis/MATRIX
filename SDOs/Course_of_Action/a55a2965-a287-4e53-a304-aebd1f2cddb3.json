@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--a55a2965-a287-4e53-a304-aebd1f2cddb3",
+    "created": "2024-08-14T07:36:40.626702Z",
+    "modified": "2024-08-14T07:36:40.626702Z",
+    "name": "Reference - Malicious relay detection on networks - VECTRA NETWORKS Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A system and method for detecting malicious relay communications is disclosed. Network communications can be received and analyzed using such network components as a network switch. The received traffic can be parsed into sessions. Relay metadata can be extracted from the sessions and further be used to categorize the sessions into one or more types of relay metadata behaviors. Once a significant amount of sessions are detected an alarm may be triggered and/or alarm data may be generated for analysis by network security administrators.",
+    "x_kb_author": "Ryan James PRENGER; Nicolas BEAUCHESNE; Karl Matthew LYNN",
+    "x_kb_mitre_analysis": "This patent describes a technique for detecting relay networks, i.e. an attacker outside of the organization's network takes control of an internal host to be used as a source of attacks against other internal targets or exfiltrate data out of the organization. In this defensive technique, metadata from collected network packet captures is extracted to categorize network sessions using known relay behaviors. Information such as the number of bytes sent to and from a potential internal relay host, time of session initiation, packet contents, packet size, flow direction, and packet arrival time statistics are used to categorize the sessions and identify relay behavior. This technique assumes that relay network connections' inter-packet arrival times exhibit a high degree of variance in comparison to standard client-to-server connections. If enough evidence of relay behavior is gathered about a given internal host, the host is identified as suspicious and an alert is generated.",
+    "x_kb_organization": "VECTRA NETWORKS Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#RelayPatternAnalysis",
+    "x_kb_reference_title": "Malicious relay detection on networks"
+}

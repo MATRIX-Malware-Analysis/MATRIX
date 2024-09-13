@@ -1,0 +1,13 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c44d9a42-3845-4ba6-9efe-e0e2f38ea5e8",
+    "created": "2024-08-14T07:36:36.731724Z",
+    "modified": "2024-08-14T07:36:36.731724Z",
+    "name": "Reference - Near-Memory & In-Memory Detection of Fileless Malware",
+    "description": "No description available",
+    "x_kb_abstract": "Fileless malware are recent threats to computer systems that load directly into memory, and whose aim is to prevent anti-viruses (AVs) from successfully matching byte patterns against suspicious files written on disk. Their detection requires that software-based AVs continuously scan memory, which is expensive due to repeated locks and polls. However, research advances introduced near-memory and in-memory processing, which allow memory controllers to trigger basic computations without moving data to the CPU. In this paper, we address AVs performance overhead by moving them to the hardware, i.e., we propose instrumenting processors\u2019 memory controller or smart memories (near- and in-memory malware detection, respectively) to accelerate memory scanning procedures. To do so, we present MINI-ME, the Malware Identification based on Near- and In-Memory Evaluation mechanism, a hardware-based AV accelerator that interrupts the program\u2019s execution if malicious patterns are discovered in their memory. We prototyped MINI-ME in a simulator and tested it with a set of 21 thousand in-the-wild malware samples, which resulted in multiple signatures matching with less than 1% of performance overhead and rates of 100% detection, and zero false-positives and false-negatives.",
+    "x_kb_author": "Marcus Botacin, Andr\u00e9 Gr\u00e9gio, Marco Antonio Zanata Alves",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#HostShutdown",
+    "x_kb_reference_title": "Near-Memory & In-Memory Detection of Fileless Malware"
+}

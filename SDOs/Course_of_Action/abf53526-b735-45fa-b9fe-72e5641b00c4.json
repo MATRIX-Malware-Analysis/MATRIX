@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--abf53526-b735-45fa-b9fe-72e5641b00c4",
+    "created": "2024-08-14T07:36:40.634573Z",
+    "modified": "2024-08-14T07:36:40.634573Z",
+    "name": "Reference - Method and Apparatus for Network Fraud Detection and Remediation Through Analytics - Idaptive LLC",
+    "description": "No description available",
+    "x_kb_abstract": "A system and method for assessing the identity fraud risk of an entity's (a user's, computer process's, or device's) behavior within a computer network and then to take appropriate action. The system uses real-time machine learning for its assessment. It records the entity's log-in behavior (conditions at log-in) and behavior once logged in to create an entity profile that helps identify behavior patterns. The system compares new entity behavior with the entity profile to determine a risk score and a confidence level for the behavior. If the risk score and confidence level indicate a credible identity fraud risk at log-in, the system can require more factors of authentication before log-in succeeds. If the system detects risky behavior after log-in, it can take remedial action such as ending the entity's session, curtailing the entity's privileges, or notifying a human administrator.",
+    "x_kb_author": "Yanlin Wang; Weizhi Li",
+    "x_kb_mitre_analysis": "This patent describes determining a confidence score to detect anomalies in user activity based on comparing a user's behavior profile with current user activity events.  The following types of events are used to develop a user entity profile:\n\n* logon and logoff times and locations\n* starting or ending applications\n* reading or writing files\n* changing an entity 's authorization\n* monitoring network traffic\n\nUser events that deviate from the entity profile over a certain threshold trigger a remedial action.",
+    "x_kb_organization": "Idaptive LLC",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#SessionDurationAnalysis",
+    "x_kb_reference_title": "Method and Apparatus for Network Fraud Detection and Remediation Through Analytics"
+}

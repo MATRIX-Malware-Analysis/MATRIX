@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--6ad42003-bbef-4740-a7d3-c187d0bd1410",
+    "created": "2024-08-14T07:36:40.70847Z",
+    "modified": "2024-08-14T07:36:40.70847Z",
+    "name": "Reference - CAR-2020-05-003: Rare LolBAS Command Lines - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "LoLBAS are binaries and scripts that are built in to Windows, frequently are signed by Microsoft, and may be used by an attacker. Some LoLBAS are used very rarely and it might be possible to alert every time they\u2019re used (this would depend on your environment), but many others are very common and can\u2019t be simply alerted on.\n\nThis analytic takes all instances of LoLBAS execution and then looks for instances of command lines that are not normal in the environment. This can detect attackers (which will tend to need the binaries for something different than normal usage) but will also tend to have false positives.\n\nThe analytic needs to be tuned. The 1.5 in the query is the number of standard deviations away to look. It can be tuned up to filter out more noise and tuned down to get more results. This means it is probably best as a hunting analytic when you have analysts looking at the screen and able to tune the analytic up and down, because the threshold may not be stable for very long.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSpawnAnalysis",
+    "x_kb_reference_title": "CAR-2020-05-003: Rare LolBAS Command Lines"
+}

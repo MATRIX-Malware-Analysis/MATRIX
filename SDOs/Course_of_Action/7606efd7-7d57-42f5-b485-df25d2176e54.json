@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7606efd7-7d57-42f5-b485-df25d2176e54",
+    "created": "2024-08-14T07:36:34.152336Z",
+    "modified": "2024-08-14T07:36:34.152336Z",
+    "name": "Dynamic Analysis",
+    "description": "Executing or opening a file in a synthetic \"sandbox\" environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.",
+    "x_d3fend_id": "D3-DA",
+    "x_kb_article": "## How it works\nAnalyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.\n\n## Considerations\n * Malware often detects a fake environment, then changes its behavior accordingly. For example, it could detect that the system clock is being sped up in an effort to get it to execute commands that it would normally only execute at a later time, or that the hardware manufacturer of the machine is a virtualization provider.\n * Malware can attempt to determine if it is being debugged, and change its behavior accordingly.\n * For maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.\n * Sometimes the malware behavior is triggered only under certain conditions (on a specific system date, after a certain time, or after it is sent a specific command) and can't be detected through a short execution in a virtual environment.\n\n## Implementations\n* [Cuckoo Sandbox](https://cuckoosandbox.org)",
+    "x_synonym": "Malware Sandbox"
+}

@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--b03a28b5-c78a-4d7f-a086-31555f973ae9",
+    "created": "2024-08-14T07:36:40.537433Z",
+    "modified": "2024-08-14T07:36:40.537433Z",
+    "name": "Reference - Method and system for detecting algorithm-generated domains - VECTRA NETWORKS Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A method and system for detecting algorithm-generated domains (AGDs) is disclosed wherein domain names requested by an internal host are categorized or classified using curated data sets, active services (e.g. Internet services), and certainty scores to match domain names to domain names or IP addresses used by command and control servers.",
+    "x_kb_author": "James Patrick HARLACHER; Aditya Sood; Oskar Ibatullin",
+    "x_kb_mitre_analysis": "This patent describes detecting algorithm generated domains (AGD). DNS requests and responses are analyzed by first checking whether the domain matches existing data sets that specify different types of AGDs with known characteristics, such as Evil Twin Domains, Sinkholed domains, sleeper cells, ghost domains, parked domains, and/or bulk-registered domains. In addition to comparing domains against known data sets, the following information is collected to perform analysis:\n\n* IP Information: checks for information known about the IP addresses returned in the DNS response, including the number of IP addresses returned, the registered owners of the IP addresses, or different IP addresses returned for the same domain (IP fluxing)\n* Domain Registration: examines the domain registration date, domain update date, domain expiration date, registrant identity, and authorized name servers associated with a specific domain name.\n* Domain Popularity: provides information on the popularity of a domain name.\n\nBased on analysis of these factors a score is developed; if the score is above a certain threshold, an alert is generated.",
+    "x_kb_organization": "VECTRA NETWORKS Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis",
+    "x_kb_reference_title": "Method and system for detecting algorithm-generated domains"
+}

@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--90535f5f-c503-48cd-b73f-e3f819ce28cd",
+    "created": "2024-08-14T07:36:36.20664Z",
+    "modified": "2024-08-14T07:36:36.20664Z",
+    "name": "Firmware Behavior Analysis",
+    "description": "Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.",
+    "x_d3fend_id": "D3-FBA",
+    "x_kb_article": "## How it works\nFirmware behavior analysis provides protections by ensuring that installed firmware has not been tampered with or modified. Firmware analysis applies to mutable firmware and immutable read-only memory (ROMs).\n\nFirmware in deployed network devices is typically not analyzed and monitored for vulnerabilities and thus is subject to potential attacks. This technique makes use of known and measured behavioral attributes, including timing attributes, of analyzed firmware on deployed devices.\n\nA behavioral method that employs known timing measurements may use the timing results from a challenge and response protocol to detect the presence of malware in embedded firmware. Firmware device timing measurements are made, specific to the installed device, and are used in the verifying function.\n\nThe original firmware image is modified by injecting a monitoring software component into the embedded firmware code. The injected software components will allow for a software root of trust, the challenge and response protocol, to be implement in the firmware.\n\nA challenge-response is issued and includes a nonce so that replays are not allowed. The firmware will calculate a checksum over all of memory, including the nonce, and return the result. The verification system will compare the computed checksum and the time it took for the computation of the checksum to determine if the firmware has been modified.\n\n## Considerations\n* The firmware code will need to be modified to include the behavioral monitoring functionality.\n* This technique is sensitive to the device the embedded firmware is hosted on and it is expected that the devices and firmware will need to be profiled and analyzed to determine timing estimation.\n* This technique is not expected to be one hundred percent correct as you would expect in a hardware root of trust solution and may require some tuning.",
+    "x_synonym": "Firmware Timing Analysis"
+}

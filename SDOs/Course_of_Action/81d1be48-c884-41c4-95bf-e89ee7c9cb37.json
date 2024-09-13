@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--81d1be48-c884-41c4-95bf-e89ee7c9cb37",
+    "created": "2024-08-14T07:36:40.674153Z",
+    "modified": "2024-08-14T07:36:40.674153Z",
+    "name": "Reference - Host intrusion prevention system using software and user behavior analysis - Sophos Ltd",
+    "description": "No description available",
+    "x_kb_abstract": "In embodiments of the present invention improved capabilities are described for threat detection using a behavioral-based host-intrusion prevention method and system for monitoring a user interaction with a computer, software application, operating system, graphic user interface, or some other component or client of a computer network, and performing an action to protect the computer network based at least in part on the user interaction and a computer code process executing during or in association with a computer usage session.",
+    "x_kb_author": "Clifford C. Wright",
+    "x_kb_mitre_analysis": "The patent describes a technique for performing behavior based threat detection. User and code behavior data is collected and stored to create baseline user and code behavior profiles. User behavior data collected over a user session or over multiple sessions can include a user:\n\n* clicking on a link\n* scrolling down a page\n* opening or closing a window\n* downloading a file\n* saving a file\n* running a file\n* typing a keyword\n\nCode behavior monitored includes code:\n\n* copying itself to a system folder\n* setting a run key to itself in the registry\n* setting a second runkey to itself in the registry in\na different location\n* disabling OS tools in the registry\n* opening a hidden file\n\nThe user interaction and the code process executed during the user session are monitored and compared with predetermined malicious behavior profiles that are typically present in a malicious user session.  The predetermined collection of malicious behaviors are created based on analysis of families of malware in run time in a threat research facility. If a match is made an action is taken that can include isolating the computer on which the user interaction occurs and limiting network access to or from the computer.",
+    "x_kb_organization": "Sophos Ltd",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#WebSessionActivityAnalysis",
+    "x_kb_reference_title": "Host intrusion prevention system using software and user behavior analysis"
+}

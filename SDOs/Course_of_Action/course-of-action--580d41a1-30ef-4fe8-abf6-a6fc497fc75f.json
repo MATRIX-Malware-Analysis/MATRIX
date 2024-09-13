@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--580d41a1-30ef-4fe8-abf6-a6fc497fc75f",
+    "created": "2024-08-13T14:49:16.521263Z",
+    "modified": "2024-08-13T14:49:16.521266Z",
+    "name": "Network Denial of Service Mitigation",
+    "description": "When flood volumes exceed the capacity of the network connection being targeted, it is typically necessary to intercept the incoming traffic upstream to filter out the attack traffic from the legitimate traffic. Such defenses can be provided by the hosting Internet Service Provider (ISP) or by a 3rd party such as a Content Delivery Network (CDN) or providers specializing in DoS mitigations.(Citation: CERT-EU DDoS March 2017)\n\nDepending on flood volume, on-premises filtering may be possible by blocking source addresses sourcing the attack, blocking ports that are being targeted, or blocking protocols being used for transport.(Citation: CERT-EU DDoS March 2017)\n\nAs immediate response may require rapid engagement of 3rd parties, analyze the risk associated to critical resources being affected by Network DoS attacks and create a disaster recovery plan/business continuity plan to respond to incidents.(Citation: CERT-EU DDoS March 2017)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "external_id": "T1498",
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1498"
+        },
+        {
+            "description": "Meintanis, S., Revuelto, V., Socha, K.. (2017, March 10). DDoS Overview and Response Guide. Retrieved April 24, 2019.",
+            "url": "http://cert.europa.eu/static/WhitePapers/CERT-EU_Security_Whitepaper_DDoS_17-003.pdf",
+            "source_name": "CERT-EU DDoS March 2017"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--60a47cfc-4171-49c9-af45-400f4e76b909",
+    "created": "2024-08-14T07:36:34.40991Z",
+    "modified": "2024-08-14T07:36:34.40991Z",
+    "name": "Decoy User Credential",
+    "description": "A Credential created for the purpose of deceiving an adversary.",
+    "x_d3fend_id": "D3-DUC",
+    "x_kb_article": "## How it works\nA detection analytic is developed to determine when a user uses decoy credentials. Subsequent actions by that user may be monitored or controlled by the defender.\n\nA credential may be:\n * Domain username and password\n * Local system username and password\n\n## Considerations\n* Decoy credentials should be integrated with a larger decoy environment to ensure that when decoy credentials are compromised, the credentials are used to interact with a decoy asset that is being monitored.\n* Continuous maintenance and updates are needed to ensure the legitimacy of the larger decoy environment and specifically the assets that utilize the decoy credentials."
+}

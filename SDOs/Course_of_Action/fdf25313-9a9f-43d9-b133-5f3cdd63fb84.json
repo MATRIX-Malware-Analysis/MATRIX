@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--fdf25313-9a9f-43d9-b133-5f3cdd63fb84",
+    "created": "2024-08-14T07:36:37.299665Z",
+    "modified": "2024-08-14T07:36:37.299665Z",
+    "name": "Reference - File-modifying malware detection - Crowdstrike Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A security agent implemented on a computing device is described herein. The security agent is configured to detect file-modifying malware by detecting that a process is traversing a directory of the memory of the computing device and detecting that the process is accessing files in the memory according to specified file access patterns. The security agent can also be configured to correlate actions of multiple processes that correspond to a specified file access pattern and detect that one or more of the multiple processes are malware by correlating their behavior.",
+    "x_kb_author": "Daniel W. Brown",
+    "x_kb_mitre_analysis": "This patent describes a technique for detecting file modifying malware such as wipers and ransomware that overwrite portions of files and encrypt portions of a computer's memory, respectively. Processes that are traversing a directory are identified along with file access patterns. Processes executing on a computing device that are traversing a directory include:\n\n* changing a directory of a process (e.g., iteratively, systematically, repeatedly)\n* detecting that a process is conducting an \"open directory\" operation repeatedly\n* the same process traversing through a directory and recording the locations of data files encountered in each sub - directory\n\nIn addition to identifying processes traversing a directory, particular file access patterns are also detected that may be indicative of malicious behavior including:\n* multiple file types being accessed\n* accessing a large number of files\n* files located in multiple locations in the directory being accessed\n\nIf a process is conducting a traversal of the directory and accessing files according to a defined access pattern associated with malicious behavior, a preventative action is performed.",
+    "x_kb_organization": "Crowdstrike Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAccessPatternAnalysis",
+    "x_kb_reference_title": "File-modifying malware detection"
+}

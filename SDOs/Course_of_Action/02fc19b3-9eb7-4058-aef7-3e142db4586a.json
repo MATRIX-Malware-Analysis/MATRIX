@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--02fc19b3-9eb7-4058-aef7-3e142db4586a",
+    "created": "2024-08-14T07:36:34.708768Z",
+    "modified": "2024-08-14T07:36:34.708768Z",
+    "name": "File Removal",
+    "description": "The file removal technique deletes malicious artifacts or programs from a computer system.",
+    "x_d3fend_id": "D3-FR",
+    "x_kb_article": "## How it works\n\nAdversaries may place files or programs into a computer's file system to perform malicious actions. As part of the eviction process, these files and programs should be removed to prevent further compromise or reinfection. Examples of malicious types of files are malware which is directly harmful and content files with the intent to deceive users (e.g., phishing.)\n\nOn Windows systems, antivirus (AV) software should be used to safely and permanently remove malicious files. AV software may first quarantine a suspected malicious file, which is the process of moving a file from its original location to a new location and makes changes so that it cannot be executed. Users can then verify that the file is not benign and then permanently delete it.\n\n## Considerations\n\nWhen it is determined that a file should be removed for security purposes, the organization--or systems implementing an organization's policies--may determine that the file should not simply be deleted from the enterprise's mission systems, but be quarantined to a secure system by an approved mechanism, so as to allow follow-up investigation by security staff.\n\nOn Windows systems, deleting a file in File Explorer does not permanently delete a file - it sends it to the Recycle Bin instead. The Recycle Bin must be emptied, or alternative steps must be performed to remove files completely. Even then, in some cases the data may persist in disk, so data shredder tools may be needed to completely wipe a file. Thus, AV tools are recommended.",
+    "x_synonym": "File Deletion"
+}

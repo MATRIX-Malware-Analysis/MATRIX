@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--67493b33-5f80-4260-a3f7-5533ce3b0a1a",
+    "created": "2024-08-14T07:36:40.730611Z",
+    "modified": "2024-08-14T07:36:40.730611Z",
+    "name": "Reference - CAR-2014-12-001: Remotely Launched Executables via WMI - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Adversaries can use Windows Management Instrumentation (WMI) to move laterally by launching executables remotely. For adversaries to achieve this, they must open a WMI connection to a remote host. This RPC activity is currently detected by CAR-2014-11-007. After the WMI connection has been initialized, a process can be remotely launched using the command: wmic /node:\"<hostname>\" process call create \"<command line>\", which is detected via CAR-2016-03-002.\n\nThis leaves artifacts at both a network (RPC) and process (command line) level. When wmic.exe (or the schtasks API) is used to remotely create processes, Windows uses RPC (135/tcp) to communicate with the the remote machine.\n\nAfter RPC authenticates, the RPC endpoint mapper opens a high port connection, through which the schtasks Remote Procedure Call is actually implemented. With the right packet decoders, or by looking for certain byte streams in raw data, these functions can be identified.\n\nWhen the command line is executed, it has the parent process of C:\\windows\\system32\\wbem\\WmiPrvSE.exe. This analytic looks for these two events happening in sequence, so that the network connection and target process are output.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "CAR-2014-12-001: Remotely Launched Executables via WMI"
+}

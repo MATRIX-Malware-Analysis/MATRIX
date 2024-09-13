@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--4710bf3b-9b8e-49e1-a1a7-35e555a54663",
+    "created": "2024-08-14T07:36:40.705113Z",
+    "modified": "2024-08-14T07:36:40.705113Z",
+    "name": "Reference - CAR-2014-11-008: Command Launched from WinLogon - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "An adversary can use accessibility features (Ease of Access), such as StickyKeys or Utilman, to launch a command shell from the logon screen and gain SYSTEM access. Since an adversary does not have physical access to the machine, this technique must be run within Remote Desktop. To prevent an adversary from getting to the login screen without first authenticating, Network-Level Authentication (NLA) must be enabled. If a debugger is set up for one of the accessibility features, then it will intercept the process launch of the feature and instead execute a new command line. This analytic looks for instances of cmd.exe or powershell.exe launched directly from the logon process, winlogon.exe. It should be used in tandem with CAR-2014-11-003, which detects the accessibility programs in the command line.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "CAR-2014-11-008: Command Launched from WinLogon"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--feb968f2-7802-497a-ad9c-acb00898c39f",
+    "created": "2024-08-13T14:49:16.491814Z",
+    "modified": "2024-08-13T14:49:16.491817Z",
+    "name": "LC_LOAD_DYLIB Addition Mitigation",
+    "description": "Enforce that all binaries be signed by the correct Apple Developer IDs, and whitelist applications via known hashes. Binaries can also be baselined for what dynamic libraries they require, and if an app requires a new dynamic library that wasn\u2019t included as part of an update, it should be investigated.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1161",
+            "external_id": "T1161"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--f66da65c-6a5c-4fdf-8744-1f0f3aea2de9",
+    "created": "2024-08-14T07:36:37.16822Z",
+    "modified": "2024-08-14T07:36:37.16822Z",
+    "name": "File Content Rules",
+    "description": "Employing a pattern matching rule language to analyze the content of files.",
+    "x_d3fend_id": "D3-FCR",
+    "x_kb_article": "## How it works\nRules, often called signatures, are used for both generic and targeted malware detection. The rules are usually expressed in a domain specific language (DSL), then deployed to software that scans files for matches. The rules are developed and broadly distributed by commercial vendors, or they are developed and deployed by enterprise security teams to address highly targeted or custom malware. Conceptually, there are public and private rule sets. Both leverage the same technology, but they are intended to detect different types of cyber adversaries.\n\n## Considerations\n* Patterns expressed in the DSLs range in their complexity. Some scanning engines support file parsing and normalization for high fidelity matching, others support only simple regular expression matching against raw file data. Engineers must make a trade-off in terms of:\n     * The fidelity of the matching capabilities in order to balance high recall with avoiding false positives,\n     * The computational load for scanning, and\n     * The resilience of the engine to deal with adversarial content presented in different forms-- content which in some cases is designed to exploit or defeat the scanning engines.\n * Signature libraries can become large over time and impact scanning performance.\n * Some vendors who sell signatures have to delete old signatures over time.\n * Simple signatures against raw content cannot match against encoded, encrypted, or sufficiently obfuscated content.\n\n## Implementations\n * YARA\n * ClamAV",
+    "x_synonym": "File Content Signatures"
+}

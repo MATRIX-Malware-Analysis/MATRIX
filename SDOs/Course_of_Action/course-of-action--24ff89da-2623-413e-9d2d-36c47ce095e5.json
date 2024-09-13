@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--24ff89da-2623-413e-9d2d-36c47ce095e5",
+    "created": "2024-08-13T14:49:16.526321Z",
+    "modified": "2024-08-13T14:49:16.526324Z",
+    "name": "Browser Extensions Mitigation",
+    "description": "Only install browser extensions from trusted sources that can be verified. Ensure extensions that are installed are the intended ones as many malicious extensions will masquerade as legitimate ones.\n\nBrowser extensions for some browsers can be controlled through Group Policy. Set a browser extension white or black list as appropriate for your security policy. (Citation: Technospot Chrome Extensions GP)\n\nChange settings to prevent the browser from installing extensions without sufficient permissions.\n\nClose out all browser sessions when finished using them.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1176",
+            "external_id": "T1176"
+        },
+        {
+            "source_name": "Technospot Chrome Extensions GP",
+            "description": "Mohta, A. (n.d.). Block Chrome Extensions using Google Chrome Group Policy Settings. Retrieved January 10, 2018.",
+            "url": "http://www.technospot.net/blogs/block-chrome-extensions-using-google-chrome-group-policy-settings/"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

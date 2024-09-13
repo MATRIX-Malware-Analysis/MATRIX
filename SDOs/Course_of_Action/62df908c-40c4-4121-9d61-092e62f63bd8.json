@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--62df908c-40c4-4121-9d61-092e62f63bd8",
+    "created": "2024-08-14T07:36:41.399356Z",
+    "modified": "2024-08-14T07:36:41.399356Z",
+    "name": "Authentication Cache Invalidation",
+    "description": "Removing tokens or credentials from an authentication cache to prevent further user associated account accesses.",
+    "x_d3fend_id": "D3-ANCI",
+    "x_kb_article": "## How it works\nApplications can locally cache user authentication credentials for certain server connections. An application may attempt to use the cached credential for a connection. If the cached credentials exist then the user will not be typically prompted for new credentials.\n\n\n## Considerations\nAre these cached credentials only on the local host? Can they be persisted to the remote server?\n\n## Examples\nWindows Credential Management API"
+}

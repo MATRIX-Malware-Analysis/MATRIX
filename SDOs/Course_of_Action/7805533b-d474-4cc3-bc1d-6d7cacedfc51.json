@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7805533b-d474-4cc3-bc1d-6d7cacedfc51",
+    "created": "2024-08-14T07:36:38.730636Z",
+    "modified": "2024-08-14T07:36:38.730636Z",
+    "name": "Reference - Integrity assurance through early loading in the boot phase - Crowdstrike Inc",
+    "description": "No description available",
+    "x_kb_abstract": "Techniques utilizing library and pre-boot components to ensure that a driver associated with a kernel-mode component is initialized before other drivers during a boot phase are described herein. The library component is processed during a boot phase; the pre-boot component, which may be an alternative to the library component, is processed during a pre-boot phase. By ensuring that the driver is the first driver initialized, the components enable the driver to launch the kernel-mode component before other drivers are initialized. The library component may also determine whether another driver is to be initialized before the kernel-mode component driver, may ensure that kernel-mode component driver is initialized first, and may alert the kernel-mode component. Also, the library component may retrieve information that is to be deleted by the operating system before initialization of drivers and may provide that information to the kernel-mode component.",
+    "x_kb_author": "Ion-Alexandru Ionescu",
+    "x_kb_mitre_analysis": "To compromise software or to gain control of a host device, a security exploit can modify driver initialization order used by an operating system and place a driver associated with the security exploit first in a list of drivers initialized by the operating system.\n\nThis patent describes ensuring that a driver associated with the agent is initialized first. To ensure the driver is initialized first, a dependent DLL associated with the driver is configured to be processed before other dependent DLLs. The dependent DLL can be configured to be processed first by various methods, for example if processing is done in alphabetical order, changing its name to be processed first. The dependent DLL, once processed, executes a number of operations to ensure the driver associated with the agent is initialized first. Furthermore, if the initialization order is modified, an alert is provided to the kernel-mode component that notifies the kernel-mode component it was not first and the order had to be altered. It can then take additional actions such as additional monitoring or remediation.",
+    "x_kb_organization": "Crowdstrike Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#DriverLoadIntegrityChecking",
+    "x_kb_reference_title": "Integrity assurance through early loading in the boot phase"
+}

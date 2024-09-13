@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7ece98c0-a693-4833-ae64-5118a35421dc",
+    "created": "2024-08-13T14:49:16.471524Z",
+    "modified": "2024-08-13T14:49:16.471527Z",
+    "name": "SIP and Trust Provider Hijacking Mitigation",
+    "description": "Ensure proper permissions are set for Registry hives to prevent users from modifying keys related to SIP and trust provider components. Also ensure that these values contain their full path to prevent [DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1038). (Citation: SpectorOps Subverting Trust Sept 2017)\n\nConsider removing unnecessary and/or stale SIPs. (Citation: SpectorOps Subverting Trust Sept 2017)\n\nRestrict storage and execution of SIP DLLs to protected directories, such as C:\\Windows, rather than user directories.\n\nEnable whitelisting solutions such as AppLocker and/or Device Guard to block the loading of malicious SIP DLLs. Components may still be able to be hijacked to suitable functions already present on disk if malicious modifications to Registry keys are not prevented.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1198",
+            "external_id": "T1198"
+        },
+        {
+            "source_name": "SpectorOps Subverting Trust Sept 2017",
+            "description": "Graeber, M. (2017, September). Subverting Trust in Windows. Retrieved January 31, 2018.",
+            "url": "https://specterops.io/assets/resources/SpecterOps_Subverting_Trust_in_Windows.pdf"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

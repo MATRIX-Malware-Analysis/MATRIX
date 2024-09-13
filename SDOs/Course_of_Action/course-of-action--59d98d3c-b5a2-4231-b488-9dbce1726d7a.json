@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--59d98d3c-b5a2-4231-b488-9dbce1726d7a",
+    "created": "2024-08-13T14:49:16.511537Z",
+    "modified": "2024-08-13T14:49:16.511545Z",
+    "name": "AppleScript Mitigation",
+    "description": "Require that all AppleScript be signed by a trusted developer ID before being executed - this will prevent random AppleScript code from executing  (Citation: applescript signing). This subjects AppleScript code to the same scrutiny as other .app files passing through Gatekeeper.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1155",
+            "external_id": "T1155"
+        },
+        {
+            "source_name": "applescript signing",
+            "description": "Steven Sande. (2013, December 23). AppleScript and Automator gain new features in OS X Mavericks. Retrieved September 21, 2018.",
+            "url": "https://www.engadget.com/2013/10/23/applescript-and-automator-gain-new-features-in-os-x-mavericks/"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

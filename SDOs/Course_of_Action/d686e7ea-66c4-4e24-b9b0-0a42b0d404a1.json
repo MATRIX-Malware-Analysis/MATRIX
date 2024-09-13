@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--d686e7ea-66c4-4e24-b9b0-0a42b0d404a1",
+    "created": "2024-08-14T07:36:34.940289Z",
+    "modified": "2024-08-14T07:36:34.940289Z",
+    "name": "Service Binary Verification",
+    "description": "Analyzing changes in service binary files by comparing to a source of truth.",
+    "x_d3fend_id": "D3-SBV",
+    "x_kb_article": "## How it works\nSystem service applications may originate from the operating system installation or third-party applications installed with administrative privileges. These services have an entry point of some executable file-- a binary or a script. Attackers sometimes modify these executables to launch their own code. Analyzing changes in these files may uncover unauthorized activity.\n\n## Considerations\n* These files change for legitimate reasons when the system or software updates.\n* The source of truth must not be corrupted in order for this method to work."
+}

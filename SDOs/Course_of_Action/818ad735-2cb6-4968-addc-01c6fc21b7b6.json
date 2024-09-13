@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--818ad735-2cb6-4968-addc-01c6fc21b7b6",
+    "created": "2024-08-14T07:36:34.415383Z",
+    "modified": "2024-08-14T07:36:34.415383Z",
+    "name": "Authorization Event Thresholding",
+    "description": "Collecting authorization events, creating a baseline user profile, and determining whether authorization events are consistent with the baseline profile.",
+    "x_d3fend_id": "D3-AZET",
+    "x_kb_article": "## How it works\n\nAuthorization event data is collected to create a baseline user profile. Authorization events that deviate from the baseline and exceed a static or dynamic threshold are identified for further action. Authorization events can include successful and failed authorization attempts as well as events related to permissions including viewing, editing, deleting, creating files, databases etc.\n\n## Considerations\n\nDepending on the complexity of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If malicious activity is not statistically different from benign activity, an alert threshold will not be met."
+}

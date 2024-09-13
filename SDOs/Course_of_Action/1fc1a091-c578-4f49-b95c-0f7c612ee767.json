@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--1fc1a091-c578-4f49-b95c-0f7c612ee767",
+    "created": "2024-08-14T07:36:41.34535Z",
+    "modified": "2024-08-14T07:36:41.34535Z",
+    "name": "Shadow Stack Comparisons",
+    "description": "Comparing a call stack in system memory with a shadow call stack maintained by the processor to determine unauthorized shellcode activity.",
+    "x_d3fend_id": "D3-SSC",
+    "x_kb_article": "## How it works\nThis technique compares the call stack stored in system memory with the shadow call stack maintained in the cache memory of the processor.  Mismatches between the two are compared since a return oriented programming attack may only be able to control or spoof the call stack and not the shadow call stack. Mismatches are counted and if the number of mismatches exceeds a certain threshold it is an indication of unauthorized activity and a security response action is performed.\n\n## Considerations\nIf the threshold for detecting a stack anomaly is low, it may not detect a return-oriented attack with just one gadget, such as a return-to-libc or return-to-plt attack.  Additionally, this technique may not detect JOP (Jump-oriented programming), as the return instruction is not executed."
+}

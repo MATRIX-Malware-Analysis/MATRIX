@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--18f66111-e338-44f6-9690-f4b183aad4e2",
+    "created": "2024-08-14T07:36:40.701626Z",
+    "modified": "2024-08-14T07:36:40.701626Z",
+    "name": "Reference - CAR-2021-05-005: BITSAdmin Download File - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "The following query identifies Microsoft Background Intelligent Transfer Service utility bitsadmin.exe using the transfer parameter to download a remote object. In addition, look for download or upload on the command-line, the switches are not required to perform a transfer. Capture any files downloaded. Review the reputation of the IP or domain used. Typically once executed, a follow on command will be used to execute the dropped file. Note that the network connection or file modification events related will not spawn or create from bitsadmin.exe, but the artifacts will appear in a parallel process of svchost.exe with a command-line similar to svchost.exe -k netsvcs -s BITS. It\u2019s important to review all parallel and child processes to capture any behaviors and artifacts. In some suspicious and malicious instances, BITS jobs will be created. You can use bitsadmin /list /verbose to list out the jobs during investigation.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSpawnAnalysis",
+    "x_kb_reference_title": "CAR-2021-05-005: BITSAdmin Download File"
+}

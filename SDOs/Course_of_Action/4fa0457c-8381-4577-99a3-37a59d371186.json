@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--4fa0457c-8381-4577-99a3-37a59d371186",
+    "created": "2024-08-14T07:36:38.194351Z",
+    "modified": "2024-08-14T07:36:38.194351Z",
+    "name": "One-time Password",
+    "description": "A one-time password is valid for only one user authentication.",
+    "x_d3fend_id": "D3-OTP",
+    "x_kb_article": "## How it works\n\nWhen a user initiates authentication, they are asked for a one-time password, often in addition to other credentials such as a traditional password or smart card. The one-time password may be from a list provided in advance, sent via a channel such as SMS or HTTPS to an app, or a generated token.\n\nIn the case of a physical token which generates one-time passwords incrementally based on time elapsed, that token device need not be connected to the internet. In different implementations, an administrator of the system, or a user with additional verification, can adjust for clock skew between the token and the verification system as needed.\n\n## Considerations\n\n### Compromise of delivery channel\n- SIM Swapping\n- Secure token visual compromise\n- Insecure delivery channel\n\n### Compromise of delivery device\nPhysical loss of One-time Password device.\n\n### Compromise of long-term backup codes\nThese are often provided in the form of a downloadable document with a regular name, which can be searched for in the case that the user forgets where they put them.  This digital file or printed document could be stolen.\nAdditionally, after the code file is printed, it could be recovered from the system printer spool unless the spooler cache is cleared.",
+    "x_synonym": "OTP"
+}

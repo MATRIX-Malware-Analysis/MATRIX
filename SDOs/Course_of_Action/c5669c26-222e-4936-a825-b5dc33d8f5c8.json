@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c5669c26-222e-4936-a825-b5dc33d8f5c8",
+    "created": "2024-08-14T07:36:41.380426Z",
+    "modified": "2024-08-14T07:36:41.380426Z",
+    "name": "Database Query String Analysis",
+    "description": "Analyzing database queries to detect [SQL Injection](https://capec.mitre.org/data/definitions/66.html).",
+    "x_d3fend_id": "D3-DQSA",
+    "x_kb_article": "## How it works\n\nSome implementations use software hooks to intercept function calls related to database query operations. Other implementations might intercept or collect network traffic. The database query string is then extracted and analyzed with various methods, for example:\n* Detecting specific administrative SQL commands\n* Anomalous sequences of commands when compared to a statistical baseline.\n* Anomalous commands for a given user role.\n\n## Considerations\n\nSome capabilities sanitize queries before permitting them to be transmitted to the database. This incurs risks such altering data in an undesired way or breaking application functionality."
+}

@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c1136543-eddd-46c2-a427-d98fca4c6e44",
+    "created": "2024-08-14T07:36:41.124589Z",
+    "modified": "2024-08-14T07:36:41.124589Z",
+    "name": "RPC Traffic Analysis",
+    "description": "Monitoring the activity of remote procedure calls in communication traffic to establish standard protocol operations and potential attacker activities.",
+    "x_d3fend_id": "D3-RTA",
+    "x_kb_article": "## How it works\nA remote procedure call (RPC) enables one computer to execute a specific function on another computer, as if it were a local application process. There are numerous RPC specifications and implementations. RPC capabilities can be abused by attackers in order to achieve a variety of tactical objectives including execution, persistence, initial access, and more. RPC proxies may be used to collect and store RPC traffic. RPCs can occur over network sockets or named pipes.\n\nAnalytics look for unauthorized behavior such as:\n\n* Processes being launched or scheduled remotely\n* System configurations being changed remotely\n* Unauthorized file read activity\n\nExample RPC Protocols:\n\n* DCE/RPC\n* CORBA\n* Open Network Computing Remote Procedure Call\n* D-Bus\n* XML-RPC\n* JSON-RPC\n* SOAP\n* Apache Thrift\n\n## Considerations\n* RPC is widely used in enterprise environments, and significant data filtering may be required in large environments to enable analytic processing.\n* RPC traffic may occur over a pipe, or within a host over loopback interface, thus making network collection difficult.",
+    "x_synonym": "RPC Protocol Analysis"
+}

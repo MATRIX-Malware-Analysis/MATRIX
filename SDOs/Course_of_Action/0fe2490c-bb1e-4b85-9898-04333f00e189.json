@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--0fe2490c-bb1e-4b85-9898-04333f00e189",
+    "created": "2024-08-14T07:36:40.753252Z",
+    "modified": "2024-08-14T07:36:40.753252Z",
+    "name": "Reference - CAR-2014-11-002: Outlier Parents of Cmd - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Many programs create command prompts as part of their normal operation including malware used by attackers. This analytic attempts to identify suspicious programs spawning cmd.exe by looking for programs that do not normally create cmd.exe.\n\nWhile this analytic does not take the user into account, doing so could generate further interesting results. It is very common for some programs to spawn cmd.exe as a subprocess, for example to run batch files or windows commands. However many process don't routinely launch a command prompt - for example Microsoft Outlook. A command prompt being launched from a process that normally doesn't launch command prompts could be the result of malicious code being injected into that process, or of an attacker replacing a legitimate program with a malicious one.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis",
+    "x_kb_reference_title": "CAR-2014-11-002: Outlier Parents of Cmd"
+}

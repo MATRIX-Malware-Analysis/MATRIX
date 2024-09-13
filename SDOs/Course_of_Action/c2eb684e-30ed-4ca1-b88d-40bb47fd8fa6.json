@@ -1,0 +1,9 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c2eb684e-30ed-4ca1-b88d-40bb47fd8fa6",
+    "created": "2024-08-14T07:36:38.441409Z",
+    "modified": "2024-08-14T07:36:38.441409Z",
+    "name": "Shadow Stack",
+    "description": "A shadow stack is a mechanism for protecting a procedure's stored return address, such as from a stack buffer overflow. The shadow stack itself is a second, separate stack that \"shadows\" the program call stack. In the function prologue, a function stores its return address to both the call stack and the shadow stack. In the function epilogue, a function loads the return address from both the call stack and the shadow stack, and then compares them. If the two records of the return address differ, then an attack is detected."
+}

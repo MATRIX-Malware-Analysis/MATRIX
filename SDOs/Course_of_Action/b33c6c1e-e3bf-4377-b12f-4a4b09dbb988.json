@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--b33c6c1e-e3bf-4377-b12f-4a4b09dbb988",
+    "created": "2024-08-14T07:36:40.774264Z",
+    "modified": "2024-08-14T07:36:40.774264Z",
+    "name": "Reference - CAR-2013-10-002: DLL Injection via Load Library - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Microsoft Windows allows for processes to remotely create threads within other processes of the same privilege level. This functionality is provided via the Windows API CreateRemoteThread. Both Windows and third-party software use this ability for legitimate purposes. For example, the Windows process csrss.exe creates threads in programs to send signals to registered callback routines. Both adversaries and host-based security software use this functionality to inject DLLs, but for very different purposes. An adversary is likely to inject into a program to evade defenses or bypass User Account Control, but a security program might do this to gain increased monitoring of API calls. One of the most common methods of DLL Injection is through the Windows API LoadLibrary.\n\nAllocate memory in the target program with VirtualAllocEx\nWrite the name of the DLL to inject into this program with WriteProcessMemory\nCreate a new thread and set its entry point to LoadLibrary using the API CreateRemoteThread.\nThis behavior can be detected by looking for thread creations across processes, and resolving the entry point to determine the function name. If the function is LoadLibraryA or LoadLibraryW, then the intent of the remote thread is clearly to inject a DLL. When this is the case, the source process must be examined so that it can be ignored when it is both expected and a trusted process.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis",
+    "x_kb_reference_title": "CAR-2013-10-002: DLL Injection via Load Library"
+}

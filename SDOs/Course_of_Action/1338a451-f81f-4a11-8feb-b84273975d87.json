@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--1338a451-f81f-4a11-8feb-b84273975d87",
+    "created": "2024-08-14T07:36:37.588666Z",
+    "modified": "2024-08-14T07:36:37.588666Z",
+    "name": "Dead Code Elimination",
+    "description": "Removing unreachable or \"dead code\" from compiled source code.",
+    "x_d3fend_id": "D3-DCE",
+    "x_kb_article": "## How it works\n\nDead code is code that is considered unreachable by normal program execution. Dead code can be created by adding code under a condition that never evaluates to true. Dead code should be removed since this type of code can produce unexpected results, if accidentally or maliciously forced to execute.\n\nDead code identification is typically performed by algorithms that implement program flows analysis looking for unreachable code. The dead code is eliminated by instructing compilers to remove the code through compiler flags, i.e., '-fdce' is used for Dead Code Elimination.\n\n## Considerations\n\nCode can also be deemed unreachable for certain run-time conditions. Different deployed systems and environments may contain some code that is unreachable for the given environment. This technique does not consider run-time conditions for unreachable code."
+}

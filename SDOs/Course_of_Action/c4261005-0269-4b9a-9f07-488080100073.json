@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c4261005-0269-4b9a-9f07-488080100073",
+    "created": "2024-08-14T07:36:40.652066Z",
+    "modified": "2024-08-14T07:36:40.652066Z",
+    "name": "Reference - Method and Apparatus for Detecting Malicious Websites - Endgame Inc",
+    "description": "No description available",
+    "x_kb_abstract": "A method and apparatus for detecting malicious websites is disclosed.",
+    "x_kb_author": "John Burnet MUNRO, IV; Jason Aaron Trost; Zachary Daniel HANIF",
+    "x_kb_mitre_analysis": "This patent describes a domain classification engine on the host computer that analyzes URLs clicked by a user or entered into a web browser to visit a website. URL analysis is done by using a combination of techniques:\n\n* Feature extraction: A URL is analyzed against features associated with suspicious URLs such as % of longest consecutive digits in a subdomain, % of longest repeated characters in a subdomain, % of vowels in a high level domain.\n\n* Markov analysis: The probability of a digit occurring in normal language given the preceding two digits is determined. For example, if the received URL is google.com, the probability of a 'g' occurring at the beginning of a word, the probability of an 'o' occurring after a \"g, the probability of an \"o' occurring after a 'g' and \"o, and so forth will be determined. The probability of each digit is then multiplied to get a probability for the whole domain name. Probabilities are determined based on a database of existing usage, such as a dictionary, or a list of known good domain names\n\n* Domain names are compared against an existing dataset of known unauthorized domain names.\n\nA rating is developed based on the results of these techniques, and if the rating is over a set threshold, an action is taken such as blocking access or generating an alert.",
+    "x_kb_organization": "Endgame Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#URLAnalysis",
+    "x_kb_reference_title": "Method and Apparatus for Detecting Malicious Websites"
+}

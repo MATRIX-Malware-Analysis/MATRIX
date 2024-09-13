@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--7e5a868f-55e4-4fa0-b178-b7dcde529898",
+    "created": "2024-08-14T07:36:37.298509Z",
+    "modified": "2024-08-14T07:36:37.298509Z",
+    "name": "Sender Reputation Analysis",
+    "description": "Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging).",
+    "x_d3fend_id": "D3-SRA",
+    "x_kb_article": "## How it works\n\nSender trust rating can be considered an indicator of the level of security risk and/or a trust level associated with a sender. The features considered in determining the trust rating include:\n\n* Length of time sender has sent emails to the enterprise\n* Number of recipients in the enterprise the sender interacts with\n* Sender vs. enterprise originated message ratio\n* Sender messages opened vs. not-opened ratio\n* Number of emails received from this sender\n* Number of emails replied to this sender\n* Number of emails from this sender not opened\n* Number of emails from this sender not opened that contain an attachment\n* Number of emails from this sender not opened that contain a URL\n* Number of emails sent to this sender\n* Number of email replies received from this sender.\n\nHigher values for the number of recipients the sender has interacted with or the number of emails received from the sender, for example, results in a higher trust rating. The trust rating can categorize the sender as unrated, neutral, trusted, suspicious, or malicious.\n\n## Considerations\nLegitimate emails from a sender may receive a lower trust rating over time if the sender's domain gets spoofed and is used to send unauthorized emails."
+}

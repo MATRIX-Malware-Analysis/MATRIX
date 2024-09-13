@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--604f6f85-df20-4a74-8fd3-8b29ed4e10b7",
+    "created": "2024-08-14T07:36:34.593484Z",
+    "modified": "2024-08-14T07:36:34.593484Z",
+    "name": "Homoglyph Denylisting",
+    "description": "Blocking DNS queries that are deceptively similar to legitimate domain names.",
+    "x_d3fend_id": "D3-HDL",
+    "x_kb_article": "## How it works\n\nHomoglyph domain blacklisting considers the domain and subdomain structure of a lookup and compares the named components to blacklisted named components. The blacklisted named components are typically crafted modifications of known good domains, e.g., gooogle.com versus google.com. The blacklisted domains typically resemble trusted domains, but have been altered slightly to deceive users.\n\nThe blacklisted named components also include consideration for fonts or Unicode characters that can make certain characters appear very similar (zero vs capital O and the letter l vs the number one). The blacklisted domains under certain fonts will appear to be a trusted domain.\n\n## Considerations\n* Maintaining the currency of the list can be a challenge especially with newly registered domain entries.\n* Blacklists should have identified maintenance cycles to ensure lists are not stale.",
+    "x_synonym": "Homoglyph Blacklisting"
+}

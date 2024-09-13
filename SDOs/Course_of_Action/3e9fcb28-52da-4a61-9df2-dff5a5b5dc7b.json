@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--3e9fcb28-52da-4a61-9df2-dff5a5b5dc7b",
+    "created": "2024-08-14T07:36:40.574838Z",
+    "modified": "2024-08-14T07:36:40.574838Z",
+    "name": "Reference - Sinkholing bad network domains by registering the bad network domains on the internet - Palo Alto Networks Inc",
+    "description": "No description available",
+    "x_kb_abstract": "Techniques for sinkholing bad network domains by registering the bad network domains on the Internet are provided. In some embodiments, sinkholing bad network domains by registering the bad network domains on the Internet includes determining a network domain is a bad network domain, in which the bad network domain is determined to be associated with an identified malware (e.g., malware that has been identified and has been determined to be associated with the bad domain), and the bad network domain is sinkholed by registering the bad network domain with a sinkholed IP address; and identifying a host that is infected with the identified malware based on an attempt by the host to connect to the sinkholed IP address.",
+    "x_kb_author": "Huagang Xie; Wei Xu; Nir Zuk",
+    "x_kb_mitre_analysis": "This patent describes a technique to identify bad domains that are associated with malware and sinkhole the bad domain. Bad domains are identified by receiving malware samples and executing the malware sample in a virtual execution environment to identify network domains that the malware sample attempts to connect to during execution. Network domains that are identified during malware execution are then generated into signatures to identity bad domains for other hosts. Once identified, the bad domains are sinkholed by translating the domain to a valid IP address that is associated with a device controlled by a cloud security provider.",
+    "x_kb_organization": "Palo Alto Networks Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis",
+    "x_kb_reference_title": "Sinkholing bad network domains by registering the bad network domains on the internet"
+}

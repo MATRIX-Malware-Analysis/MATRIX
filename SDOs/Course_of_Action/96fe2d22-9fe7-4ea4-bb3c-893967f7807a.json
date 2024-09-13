@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--96fe2d22-9fe7-4ea4-bb3c-893967f7807a",
+    "created": "2024-08-14T07:36:37.29643Z",
+    "modified": "2024-08-14T07:36:37.29643Z",
+    "name": "Reference - CAR-2014-05-001: RPC Activity - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Microsoft Windows uses its implementation of Distributed Computing Environment/Remote Procedure Call (DCE/RPC), which it calls Microsoft RPC, to call certain APIs remotely.\n\nA Remote Procedure Call is initiated by communicating to the RPC Endpoint Mapper, which exists as the Windows service RpcEptMapper and listens on the port 135/tcp. The endpoint mapper resolves a requested endpoint/interface and responds to the client with the port that the service is listening on. Since the RPC endpoints are assigned ports when the services start, these ports are dynamically assigned from 49152 to 65535. The connection to the endpoint mapper then terminates and the client program can communicate directly with the requested service.\n\nRPC is a legitimate functionality of Windows that allows remote interaction with a variety of services. For a Windows environment to be properly configured, several programs use RPC to communicate legitimately with servers. The background and benign RPC activity may be enormous, but must be learned, especially peer-to-peer RPC between workstations, which is often indicative of Lateral Movement.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#RPCTrafficAnalysis",
+    "x_kb_reference_title": "CAR-2014-05-001: RPC Activity"
+}

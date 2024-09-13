@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--b6b7b5cc-e6c3-42a3-8677-b877179bb709",
+    "created": "2024-08-14T07:36:40.628961Z",
+    "modified": "2024-08-14T07:36:40.628961Z",
+    "name": "Reference - System and method for providing anonymous remailing and filtering of electronic mail - Nokia",
+    "description": "No description available",
+    "x_kb_abstract": "To make anonymous a sender name present on an actual transmission source address by including an alias transmission source address substitution unit and removing the actual transmission source address from an electronic mail message. SOLUTION: A hash value of the destination address of an electronic mail message is calculated (S330). Then, (n) blank bytes are added to a compressed actual transmission source address (S340). The true length of the actual transmission source address is hidden by adding blank bytes. Further, a 2nd bit field is added to a secret key saved locally in a remailer, and an extended secret key characteristic of the destination address is generated. Then, the compressed actual transmission source address is ciphered according to the data ciphering standards using the extended secret key characteristic of the destination address as a cipher key (S350). Further, the 2nd bit field is added to the ciphered and compressed actual transmission source address (S360).",
+    "x_kb_author": "Eran Gabber, Phillip B Gibbons, David Morris Kristol, Yossi Matias, Alain J Mayer",
+    "x_kb_organization": "Nokia of America Corp",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#EmailFiltering",
+    "x_kb_reference_title": "System and method for providing anonymous remailing and filtering of electronic mail"
+}

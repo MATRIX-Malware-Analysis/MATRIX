@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--ca4e1a8f-877c-4f0e-934c-993b5bf41e36",
+    "created": "2024-08-14T07:36:38.840444Z",
+    "modified": "2024-08-14T07:36:38.840444Z",
+    "name": "DNS Denylisting",
+    "description": "Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type.",
+    "x_d3fend_id": "D3-DNSDL",
+    "x_kb_article": "## How it works\nRules are implemented that filter DNS queries using criteria such as:\n- Client subnet\n- Type of network protocol used in query\n- Fully qualified domain name (FQDN) of record in the query\n- DNS Server IP address that received the DNS request\n- Type of DNS record being queried\n- Time of day the query is received\n- Size of the response\n\nFor example, a DNS policy can be created for blocking DNS queries for FQDNs that have been identified as unauthorized.\n\n## Considerations\n- Implementation considerations for DNS filtering policies to avoid over-blocking or under-blocking domains.\n- Continuous maintenance of unauthorized domain lists is needed to keep up to date with possible site content changes.\n- File sharing or content delivery networks may require other filtering techniques that are more fine-grained (URL blocking).\n- Access to malicious websites or other network resources directly by IP instead of by DNS record, or after alteration of local DNS hosts file, may not result in DNS network traffic.",
+    "x_synonym": "DNS Blacklisting"
+}

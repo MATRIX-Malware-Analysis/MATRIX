@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--65da0920-3189-49cd-93dd-ae90876aa038",
+    "created": "2024-08-14T07:36:38.135535Z",
+    "modified": "2024-08-14T07:36:38.135535Z",
+    "name": "Logical Rules",
+    "description": "A logical rule matches event data or set of values to a conditional expression and results in the determination of a truth value, which may be used to determine the next action or step to take.",
+    "x_d3fend_id": "D3A-LR",
+    "x_kb_article": "## How it works\n\nLogic rules define a set of patterns that in some patterns must match input data. If the the conditions are met, then the rule will \"fire\" and some action will be taken, usually notifying a person or another system that the event being monitored needs further processing or attention.\n\n## Key Test Considerations\n\n- **Performance (Accuracy)** Identify instances in data where rule is expected to be triggered. Implement traceability and metrics for individual rule performance. Traceability of cases could be implemented as unit tests or as part of a fine-grained classification performance platform. For simple rule-based matching systems with many rules, individual rules may be unused or may create unusually high false positives (or false negatives relative to expectation.\n\n- **Performance (Computational)** Generate model performance measures (see Classification Performance Measures), esp. a confusion matrix for each rule and identify outliers and relative contribution of rule to overall performance.\n\n## References\n1. Event condition action. (2019, Nov 21). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Event_condition_action).\n2. Business rule. (2023, April 10). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Business_rule).\n3. YARA. (2023, June 5). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/YARA)."
+}

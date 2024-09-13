@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--15a9d3e6-587c-40af-855e-5d2264525c39",
+    "created": "2024-08-13T14:49:16.505428Z",
+    "modified": "2024-08-13T14:49:16.505436Z",
+    "name": "Stored Data Manipulation Mitigation",
+    "description": "Identify critical business and system processes that may be targeted by adversaries and work to secure the data related to those processes against tampering. Ensure least privilege principles are applied to important information resources to reduce exposure to data manipulation risk. Consider encrypting important information to reduce an adversaries ability to perform tailor data modifications. Where applicable, examine using file monitoring software to check integrity on important files and directories as well as take corrective actions when unauthorized changes are detected. \n\nConsider implementing IT disaster recovery plans that contain procedures for taking regular data backups that can be used to restore organizational data.(Citation: Ready.gov IT DRP) Ensure backups are stored off system and is protected from common methods adversaries may use to gain access and manipulate backups.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "external_id": "T1492",
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1492"
+        },
+        {
+            "description": "Ready.gov. (n.d.). IT Disaster Recovery Plan. Retrieved March 15, 2019.",
+            "url": "https://www.ready.gov/business/implementation/IT",
+            "source_name": "Ready.gov IT DRP"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

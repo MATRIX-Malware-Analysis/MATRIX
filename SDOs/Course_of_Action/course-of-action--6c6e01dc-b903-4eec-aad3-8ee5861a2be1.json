@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--6c6e01dc-b903-4eec-aad3-8ee5861a2be1",
+    "created": "2024-08-13T14:49:16.480331Z",
+    "modified": "2024-08-13T14:49:16.480335Z",
+    "name": "Password Policy Discovery Mitigation",
+    "description": "Mitigating discovery of password policies is not advised since the information is required to be known by systems and users of a network. Ensure password policies are such that they mitigate brute force attacks yet will not give an adversary an information advantage because the policies are too light. Active Directory is a common way to set and enforce password policies throughout an enterprise network. (Citation: Microsoft Password Complexity)",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1201",
+            "external_id": "T1201"
+        },
+        {
+            "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements",
+            "description": "Hall, J., Lich, B. (2017, September 9). Password must meet complexity requirements. Retrieved April 5, 2018.",
+            "source_name": "Microsoft Password Complexity"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

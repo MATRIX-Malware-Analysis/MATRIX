@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--18dfba2d-e3f7-4647-bda8-810a5452b430",
+    "created": "2024-08-14T07:36:37.406798Z",
+    "modified": "2024-08-14T07:36:37.406798Z",
+    "name": "Reference - System for detecting threats using scenario-based tracking of internal and external network traffic - VECTRA NETWORKS Inc",
+    "description": "No description available",
+    "x_kb_abstract": "Disclosed is an improved approach to implement a system and method for detecting insider threats, where models are constructed that is capable of defining what constitutes the normal behavior for any given hosts and quickly find anomalous behaviors that could constitute a potential threat to an organization. The disclosed approach provides a way to identify abnormal data transfers within and external to an organization without the need for individual monitoring software on each host, by leveraging metadata that describe the data exchange patterns observed in the network.",
+    "x_kb_author": "Nicolas BEAUCHESNE; David Lopes Pegna",
+    "x_kb_mitre_analysis": "Determination of anomalous data transfers is performed over a given time period. For example, a check of a pull vs. push data ratio can be established over a specific time period, e.g., over a three-hour period, over a one day period, over a one week period, etc.\n\nThe system can also establish a baseline behavior for data exchange for each host in terms of pull vs. push data ratio for each resource contacted by the host.\n\nNetwork packet capture data is collected and metadata is extracted. Aggregate data push/pull information from the metadata is then analyzed for a given host versus specific client to server relationships. This technique can potentially catch lateral data transfers, and may have filtering on alerting logic to only raise alarms when external hosts receive large data transfers.",
+    "x_kb_organization": "VECTRA NETWORKS Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#PerHostDownload-UploadRatioAnalysis",
+    "x_kb_reference_title": "System for detecting threats using scenario-based tracking of internal and external network traffic"
+}

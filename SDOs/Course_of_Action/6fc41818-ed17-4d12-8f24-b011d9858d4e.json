@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--6fc41818-ed17-4d12-8f24-b011d9858d4e",
+    "created": "2024-08-14T07:36:36.052942Z",
+    "modified": "2024-08-14T07:36:36.052942Z",
+    "name": "Protocol Metadata Anomaly Detection",
+    "description": "Collecting network communication protocol metadata and identifying statistical outliers.",
+    "x_d3fend_id": "D3-PMAD",
+    "x_kb_article": "## How it works\nNetwork protocol metadata is first collected and processed in real-time or post-facto. Metadata may include packet header information or information about a session (ex. time between requests/responses). Metadata is then grouped based on shared characteristics and those groups are compared to each other. If particular metadata differs significantly from other data, an alert is generated, identifying the network event as anomalous. Anomalous activity may indicate unauthorized activity.\n\n## Considerations\nMetadata collection on enterprises can yield large data sets. Storage, indexing, querying, and aging should be considered prior to implementation."
+}

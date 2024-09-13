@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--4dc648e1-81f1-4628-8bf5-8dbd542b8caf",
+    "created": "2024-08-14T07:36:40.526935Z",
+    "modified": "2024-08-14T07:36:40.526935Z",
+    "name": "Reference - Identification and extraction of key forensics indicators of compromise using subject-specific filesystem views",
+    "description": "No description available",
+    "x_kb_abstract": "A stackable filesystem that transparently tracks process file writes for forensic analysis. The filesystem comprises a base filesystem, and an overlay filesystem. Processes see the union of the upper and lower filesystems, but process writes are only reflected in the overlay. By providing per-process views of the filesystem using this stackable approach, a forensic analyzer can record a process's file-based activity-i.e., file creation, deletion, modification. These activities are then analyzed to identify indicators of compromise (IoCs). These indicators are then fed into a forensics analysis engine, which then quickly decides whether a subject (e.g., process, user) is malicious. If so, the system takes some proactive action to alert a proper authority, to quarantine the potential attack, or to provide other remediation. The approach enables forensic analysis without requiring file access mediation, or conducting system event-level collection and analysis, making it a lightweight, and non-intrusive solution.",
+    "x_kb_author": "Frederico Araujo; Anne E. Kohlbrenner; Marc Philippe Stoecklin; Teryl Paul Taylor",
+    "x_kb_reference_title": "Identification and extraction of key forensics indicators of compromise using subject-specific filesystem views"
+}

@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--247a84ec-e1c8-46fa-a386-ad0f6ce8e967",
+    "created": "2024-08-14T07:36:41.238757Z",
+    "modified": "2024-08-14T07:36:41.238757Z",
+    "name": "Process Self-Modification Detection",
+    "description": "Detects processes that modify, change, or replace their own code at runtime.",
+    "x_d3fend_id": "D3-PSMD",
+    "x_kb_article": "## How it Works\nA security agent installed on the host machine intercepts API calls between a process and operating system. Intercepted API calls are then compared against attack signatures/patterns to identify API calls that modify executable memory or modify the entry point address of a suspended child process. Attack patterns include:\n\n* Executable code of a suspended child process removed from memory by one or more API calls.\n* New executable code injected and / or loaded into memory of a suspended child process by one or more API calls.\n* Executable code modified by one or more API calls.\n* Next instruction pointer value in memory modified by one or more API calls.\n\n## Considerations\nComparing loaded code segments of processes with what is expected to have been loaded from a file can result in false positives, due to legitimate uses of self-modification for decrypting or uncompressing code segments."
+}

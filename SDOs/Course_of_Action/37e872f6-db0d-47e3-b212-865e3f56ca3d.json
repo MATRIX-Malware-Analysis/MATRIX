@@ -1,0 +1,12 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--37e872f6-db0d-47e3-b212-865e3f56ca3d",
+    "created": "2024-08-14T07:36:35.559431Z",
+    "modified": "2024-08-14T07:36:35.559431Z",
+    "name": "Regex Matching",
+    "description": "Regular expression matching is type of partial string matching using a regular expression, which is a sequence of characters that specifies a match pattern in text.",
+    "x_d3fend_id": "D3A-RM",
+    "x_kb_article": "## How it works\n\nA regular expression (shortened as regex or regexp) is a sequence of characters that specifies a match pattern in text. Usually such patterns are used by string-searching algorithms for \"find\" or \"find and replace\" operations on strings, or for input validation.\n\n## Key Test Considerations\n\n- **External review of regular expressions**: Regular expressions used in rules should be reviewed by a independent developer SME.  Regex testing and visualization tools may be used to aid this review.  Back-tests for failure modes identified during the review shoud be developed.  Regular expressions are easy to get wrong and may appear to work on limited tests; small mistakes can lead to unintended misses and matches.]\n\n- **Processing Performance Review**: Review of resource-intensive rules may be necessary if system performance degraded.  Look for cases of \u201cexponential backtracking\u201d  Some regexes are computationally expensive.\n\n## References\n1. Regular expression. (2023, June 1). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Regular_expression).\n2. String-searching algorithm. (2023, April 8). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/String-searching_algorithm).",
+    "x_synonym": "Regex"
+}

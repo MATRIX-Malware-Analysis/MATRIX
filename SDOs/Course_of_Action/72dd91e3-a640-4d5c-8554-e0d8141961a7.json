@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--72dd91e3-a640-4d5c-8554-e0d8141961a7",
+    "created": "2024-08-14T07:36:34.400464Z",
+    "modified": "2024-08-14T07:36:34.400464Z",
+    "name": "Inbound Session Volume Analysis",
+    "description": "Analyzing inbound network session or connection attempt volume.",
+    "x_d3fend_id": "D3-ISVA",
+    "x_kb_article": "## How it works\nNetwork appliances are configured to alert on certain packets that typically are involved in DoS attacks. Typical packets include ICMP packets and SYN requests that are commonly used to flood networks. A sampling period is used to define a time window in which collected counts of the identified packets can be measured. If the collected number of packets exceeds a predefined limit then an alert is generated.\n\n## Considerations\nScalability as volume of attacks increase; single servers may not have the memory and storage resources to handle high volumes of network traffic."
+}

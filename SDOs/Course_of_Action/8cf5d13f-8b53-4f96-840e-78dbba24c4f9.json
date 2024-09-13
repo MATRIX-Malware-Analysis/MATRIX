@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--8cf5d13f-8b53-4f96-840e-78dbba24c4f9",
+    "created": "2024-08-14T07:36:41.356628Z",
+    "modified": "2024-08-14T07:36:41.356628Z",
+    "name": "Active Certificate Analysis",
+    "description": "Actively collecting PKI certificates by connecting to the server and downloading its server certificates for analysis.",
+    "x_d3fend_id": "D3-ACA",
+    "x_kb_article": "## How it works\nAnalysis of server certificates using active methods to detect if certificates have been misconfigured or spoofed by using elements of the certificate, certificate authorities and signatures.\n\n### Certificate validity analysis\nThis can be accomplished by verifying the digital signature on certificate.\n\n### Certificate path analysis\nThe client's browser can perform path verification to ensure that the server's certificate contains a valid trust anchor.\n\n### Certificate configuration analysis\nSome browsers can be configured to implement the key-usage extensions contained certificates. This can help to prevent a certificate from being misused.\n\n### Certificate revocation status analysis\nUsing either Certificate Revocation Lists (CRLs) or Online Certificate Status Protocol (OCSP) to determine the revocation status. OCSP Stapling, binding the status with the certificate, helps to mitigate potential delay in status verifications.\n\n## Considerations\n* Management of the PKI across the enterprise typically requires automation to maintain scalability and flexibility\n* If the certificate authority, issuing the certificate, is compromised then all of the certificates issued by the CA are suspect\n* There may be delays associated with updates to certificates\n* Revoked certificates give the appearance of valid certificates until they are published to a trusted revocation service (OCSP or CRL)\n* The revocation service (OCSP or CRL) may be down during our connection and a browser will need to make a decision will need to be made about trusting the connection"
+}

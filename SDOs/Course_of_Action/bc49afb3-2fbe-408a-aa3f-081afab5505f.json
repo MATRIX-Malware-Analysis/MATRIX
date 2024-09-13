@@ -1,0 +1,11 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--bc49afb3-2fbe-408a-aa3f-081afab5505f",
+    "created": "2024-08-14T07:36:37.348656Z",
+    "modified": "2024-08-14T07:36:37.348656Z",
+    "name": "Active Logical Link Mapping",
+    "description": "Active logical link mapping sends and receives network traffic as a means to map the whole data link layer, where the links represent logical data flows rather than physical connection",
+    "x_d3fend_id": "D3-ALLM",
+    "x_kb_article": "## How it works\n\nActive logical link mapping establishes awareness of logical links in the network by sending data over the network to gather information about logical connections in the network.\n\nTypically this will be achieved through network telemetry coordinated for network management and monitoring and will use a link layer discovery protocol such as LLDP and the information gathered and aggregated a higher levels using an application protocol such as SNMP.  The information may be polled by network management softare or configured once and then pushed from network sensors (or agents.)\n\nAnother means of establishing network connectivity is by means of sendingn traffic through the use of a tool such as traceroute, to determine the logical paths through the network architecture.\n\n## Considerations\n\n* Best practice is to encrypte network monitoring data and require authentication for queries or admin/management functions.\n* Push notifications reduce bandwidth necessary to capture and maintain information if reliable transport is used.\n* Special consideration should be made before using of active scanning in OT networks and OT-safe options chosen where available."
+}

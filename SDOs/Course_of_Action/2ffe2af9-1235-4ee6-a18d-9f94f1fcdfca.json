@@ -1,0 +1,15 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--2ffe2af9-1235-4ee6-a18d-9f94f1fcdfca",
+    "created": "2024-08-14T07:36:37.664451Z",
+    "modified": "2024-08-14T07:36:37.664451Z",
+    "name": "Reference - Anomaly Detection Using Adaptive Behavioral Profiles - Securonix Inc",
+    "description": "No description available",
+    "x_kb_abstract": "The invention provides a system and method for automatic creation of adaptive behavioral profiles for observables associated with resource states and events in a computer network (IT) infrastructure of an enterprise and for detecting anomalies that represent potential malicious activity and threats as deviations from normal behavior. Separate profiles may be created for each behavioral indicator, as well as for each time series of measurements, and aggregated to create an overall behavioral profile. An anomaly probability is determined from the behavioral profile and used to evaluate the data values of observables. Outlier data values which deviate from normal behavior by more than a predetermined probability threshold are identified for risk analysis as possible threats while inliers within the range of normal behavior are used to update the behavioral profile. Behavioral profiles are created for behavioral indicators based upon observables measured over predetermined time periods using algorithms employing statistical analysis approaches that work for any type of data distribution, and profiles are adapted over time using data aging to more closely represent current behavior. Algorithm parameters for creating profiles are based on the type of data, i.e., its metadata.",
+    "x_kb_author": "Igor A. Baikalov; Tanuj Gulati; Sachin Nayyar; Anjaneya Shenoy; Ganpatrao H. Patwardhan",
+    "x_kb_mitre_analysis": "The patent describes a technique for detecting anomalous activity within an organization's IT infrastructure to identify threats. Behavioral profiles can be grouped by peer groups that identify functionally similar groups of actors (users or resources) based on their attributes and pre-defined grouping rules. For example, users can be grouped by their job title, organizational hierarchy, or location and can be observed for similarities in access patterns, based on granted access entitlements or actual logged resource access.\n\nBehavioral profiles are created from measurements of events over a time period for example:\n\n* Transaction counts\n* Concurrent users per hour\n* Daily volume of data\n\nOutlier data values which deviate from behavioral profile by more than a predetermined probability threshold are identified for risk analysis as possible threats.",
+    "x_kb_organization": "Securonix Inc",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#JobFunctionAccessPatternAnalysis",
+    "x_kb_reference_title": "Anomaly Detection Using Adaptive Behavioral Profiles"
+}

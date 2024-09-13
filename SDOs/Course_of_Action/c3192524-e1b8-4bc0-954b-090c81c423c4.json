@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--c3192524-e1b8-4bc0-954b-090c81c423c4",
+    "created": "2024-08-14T07:36:40.716328Z",
+    "modified": "2024-08-14T07:36:40.716328Z",
+    "name": "Reference - CAR-2016-03-002: Create Remote Process via WMIC - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "Adversaries may use Windows Management Instrumentation (WMI) to move laterally, by launching executables remotely.The analytic CAR-2014-12-001 describes how to detect these processes with network traffic monitoring and process monitoring on the target host. However, if the command line utility wmic.exe is used on the source host, then it can additionally be detected on an analytic. The command line on the source host is constructed into something like wmic.exe /node:\"\\<hostname\\>\" process call create \"\\<command line\\>\". It is possible to also connect via IP address, in which case the string \"\\<hostname\\>\" would instead look like IP Address.\n\nAlthough this analytic was created after CAR-2014-12-001, it is a much simpler (although more limited) approach. Processes can be created remotely via WMI in a few other ways, such as more direct API access or the built-in utility PowerShell.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#RPCTrafficAnalysis",
+    "x_kb_reference_title": "CAR-2016-03-002: Create Remote Process via WMIC"
+}

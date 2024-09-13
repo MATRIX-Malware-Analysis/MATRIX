@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--9d814835-29ea-423f-8f30-7e65470099a3",
+    "created": "2024-08-14T07:36:40.694314Z",
+    "modified": "2024-08-14T07:36:40.694314Z",
+    "name": "Reference - CAR-2014-11-005: Remote Registry - MITRE",
+    "description": "No description available",
+    "x_kb_abstract": "An adversary can remotely manipulate the registry of another machine if the RemoteRegistry service is enabled and valid credentials are obtained. While the registry is remotely accessed, it can be used to prepare a Lateral Movement technique, discover the configuration of a host, achieve Persistence, or anything that aids an adversary in achieving the mission. Like most ATT&CK techniques, this behavior can be used legitimately, and the reliability of an analytic depends on the proper identification of the pre-existing legitimate behaviors. Although this behavior is disabled in many Windows configurations, it is possible to remotely enable the RemoteRegistry service, which can be detected with CAR-2014-03-005.\n\nRemote access to the registry can be achieved via\n\n* Windows API function RegConnectRegistry\n* command line via reg.exe\n* graphically via regedit.exe\n\nAll of these behaviors call into the Windows API, which uses the NamedPipe WINREG over SMB to handle the protocol information. This network can be decoded with wireshark or a similar sensor, and can also be detected by hooking the API function.",
+    "x_kb_author": "MITRE",
+    "x_kb_organization": "MITRE",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#AdministrativeNetworkActivityAnalysis",
+    "x_kb_reference_title": "CAR-2014-11-005: Remote Registry"
+}

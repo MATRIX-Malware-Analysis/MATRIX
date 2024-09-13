@@ -1,0 +1,33 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--6b298f17-bc40-4e67-a5f7-73ae86bceaa3",
+    "created": "2024-08-13T14:49:16.483540Z",
+    "modified": "2024-08-13T14:49:16.483543Z",
+    "name": "Compiled HTML File Mitigation",
+    "description": "Consider blocking download/transfer and execution of potentially uncommon file types known to be used in adversary campaigns, such as CHM files. (Citation: PaloAlto Preventing Opportunistic Attacks Apr 2016) Also consider using application whitelisting to prevent execution of hh.exe if it is not required for a given system or network to prevent potential misuse by adversaries.",
+    "labels": [
+        "course-of-action"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/mitigations/T1223",
+            "external_id": "T1223"
+        },
+        {
+            "url": "https://live.paloaltonetworks.com/t5/Ignite-2016-Blog/Breakout-Recap-Cybersecurity-Best-Practices-Part-1-Preventing/ba-p/75913",
+            "description": "Kiwi. (2016, April 6). Breakout Recap: Cybersecurity Best Practices Part 1 - Preventing Opportunistic Attacks. Retrieved October 3, 2018.",
+            "source_name": "PaloAlto Preventing Opportunistic Attacks Apr 2016"
+        }
+    ],
+    "x_mitre_deprecated": true,
+    "x_mitre_contributors": []
+}

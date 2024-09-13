@@ -1,0 +1,14 @@
+{
+    "type": "course-of-action",
+    "spec_version": "2.1",
+    "id": "course-of-action--a8bf41a5-2b6b-473a-9804-c884458fc246",
+    "created": "2024-08-14T07:36:40.657866Z",
+    "modified": "2024-08-14T07:36:40.657866Z",
+    "name": "Reference - Embedding contexts for on-line threats into response policy zones - Verisign Inc",
+    "description": "No description available",
+    "x_kb_abstract": "Hierarchical threat intelligence embedded in subdomain CNAMEs of a DNS denylist.\n\nIn one embodiment, a response policy zone (RPZ) application generates an RPZ that includes contexts for the on-line threats that are associated with domain names. For a domain name that is associated with an on-line threat, the RPZ application determines a threat specification that describes a characteristic of the on-line threat. The RPZ application then generates an alias based on the domain name and the threat specification. Subsequently, the RPZ application generates a domain name system (DNS) resource record that maps the domain name to the alias, includes the resource record in the RPZ, and transmits the RPZ to a DNS name server that implements the RPZ. Upon receiving a DNS query associated with the domain name, the DNS name server generates a DNS response based on the alias. Because the domain name and the threat specification is reflected in the alias, the DNS response automatically provides a relevant context.",
+    "x_kb_author": "Ben McCarty",
+    "x_kb_mitre_analysis": "MITRE Analysis was not found.",
+    "x_kb_reference_of": "http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalDomainDenylisting",
+    "x_kb_reference_title": "Embedding contexts for on-line threats into response policy zones"
+}
