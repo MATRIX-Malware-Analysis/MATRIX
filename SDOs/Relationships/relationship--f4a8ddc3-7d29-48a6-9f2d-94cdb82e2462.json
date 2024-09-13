@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f4a8ddc3-7d29-48a6-9f2d-94cdb82e2462",
+    "created": "2024-08-13T14:51:22.051364Z",
+    "modified": "2024-08-13T14:51:22.051367Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--efb47328-020d-4049-b6e8-042bde5247c4",
+    "target_ref": "malware-behavior--ed7135aa-c94a-404d-9f3b-4274b4bd9546",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpecterOps Certified Pre Owned",
+            "description": "Schroeder, W. & Christensen, L. (2021, June 22). Certified Pre-Owned - Abusing Active Directory Certificate Services. Retrieved August 2, 2022.",
+            "url": "https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf"
+        }
+    ],
+    "description": "Monitor AD CS certificate requests (ex: EID 4886) as well as issued certificates (ex: EID 4887) for abnormal activity, including unexpected certificate enrollments and signs of abuse within certificate attributes (such as abusable EKUs).(Citation: SpecterOps Certified Pre Owned)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

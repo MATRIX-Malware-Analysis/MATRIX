@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ce19de0e-c327-4796-a9a7-08d5d887da54",
+    "created": "2024-08-13T14:51:22.138539Z",
+    "modified": "2024-08-13T14:51:22.138541Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--8c5b6355-8c56-4723-8628-bab0e67ea9cc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Kubernetes RBAC",
+            "description": "Kubernetes. (n.d.). Role Based Access Control Good Practices. Retrieved March 8, 2023.",
+            "url": "https://kubernetes.io/docs/concepts/security/rbac-good-practices/"
+        }
+    ],
+    "description": "Enforce the principle of least privilege by limiting dashboard visibility to only the required users. When using Kubernetes, avoid giving users wildcard permissions or adding users to the `system:masters` group, and use `RoleBindings` rather than `ClusterRoleBindings` to limit user privileges to specific namespaces.(Citation: Kubernetes RBAC)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ce3889c3-356b-4636-ae52-da25248da970",
+    "created": "2024-08-13T14:51:23.556208Z",
+    "modified": "2024-08-13T14:51:23.556211Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--39a5c132-49b4-4507-a24f-39c512cb93f7",
+    "target_ref": "malware-behavior--c2e147a9-d1a8-4074-811a-d8789202d916",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESET Operation Spalax Jan 2021",
+            "description": "M. Porolli. (2021, January 21). Operation Spalax: Targeted malware attacks in Colombia. Retrieved September 16, 2022.",
+            "url": "https://www.welivesecurity.com/2021/01/12/operation-spalax-targeted-malware-attacks-colombia/"
+        }
+    ],
+    "description": "For [Operation Spalax](https://attack.mitre.org/campaigns/C0005), the threat actors used packers that read pixel data from images contained in PE files' resource sections and build the next layer of execution from the data.(Citation: ESET Operation Spalax Jan 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2c7d3333-7fb1-4521-bee9-bcd96e524951",
+    "created": "2024-08-13T14:51:22.564989Z",
+    "modified": "2024-08-13T14:51:22.564991Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--e0033c16-a07e-48aa-8204-7c3ca669998c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor network data for uncommon data flows. Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. RDP sessions may be split up into multiple flows and would therefore need to be aggregated.\n\nAnomaly detection using machine learning or other methods based on baselined RDP network flows may be a viable approach to alerting on potential RDP session hijacking.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

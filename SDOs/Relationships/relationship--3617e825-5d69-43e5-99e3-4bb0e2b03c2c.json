@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3617e825-5d69-43e5-99e3-4bb0e2b03c2c",
+    "created": "2024-08-13T14:51:23.496251Z",
+    "modified": "2024-08-13T14:51:23.496253Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--457c7820-d331-465a-915e-42f85500ccc4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor processes and command-line parameters for signed binaries that may be used to proxy execution of malicious files. Compare recent invocations of signed binaries that may be used to proxy execution with prior history of known good arguments and loaded files to determine anomalous and potentially adversarial activity. Legitimate programs used in suspicious ways, like msiexec.exe downloading an MSI file from the Internet, may be indicative of an intrusion. Correlate activity with other suspicious behavior to reduce false positives that may be due to normal benign use by users and administrators.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

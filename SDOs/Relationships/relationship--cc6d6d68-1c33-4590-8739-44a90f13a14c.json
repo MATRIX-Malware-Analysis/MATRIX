@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cc6d6d68-1c33-4590-8739-44a90f13a14c",
+    "created": "2024-08-13T14:51:22.454132Z",
+    "modified": "2024-08-13T14:51:22.454134Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9cd5b7d4-369e-4db8-b28f-f98c93a04bf9",
+    "target_ref": "malware-behavior--561ae9aa-c28a-4144-9eec-e7027a14c8c3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Electron Security 3",
+            "description": "CertiK. (2020, June 30). Vulnerability in Electron-based Application: Unintentionally Giving Malicious Code Room to Run. Retrieved March 7, 2024.",
+            "url": "https://medium.com/certik/vulnerability-in-electron-based-application-unintentionally-giving-malicious-code-room-to-run-e2e1447d01b8"
+        }
+    ],
+    "description": "Where possible, enforce binary and application integrity with digital signature verification to prevent untrusted code from executing. For example, do not use `shell.openExternal` with untrusted content.\n\nWhere possible, set `nodeIntegration` to false, which disables access to the Node.js function.(Citation: Electron Security 3) By disabling access to the Node.js function, this may limit the ability to execute malicious commands by injecting JavaScript code.\n\nDo not disable `webSecurity`, which may allow for users of the application to invoke malicious content from online sources.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

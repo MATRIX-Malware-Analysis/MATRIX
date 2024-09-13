@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ebcbb64b-06ad-4f34-92bd-ddb21255e5f7",
+    "created": "2024-08-13T14:48:38.898628Z",
+    "modified": "2024-08-13T14:48:38.898632Z",
+    "relationship_type": "uses",
+    "description": "RotaJakiro can monitor the /proc/[PID] directory of known RotaJakiro processes as a part of its persistence when executing with non-root permissions. If the process is found dead, it resurrects the process. RotaJakiro processes can be matched to an associated Advisory Lock, in the /proc/locks folder, to ensure it doesn't spawn more than one process.[1]",
+    "source_ref": "malware--54adbf94-0b1d-4c5b-8178-b377397b09d1",
+    "target_ref": "malware-behavior--3a6ff13e-042b-40d4-95c2-89b170d4daa4",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

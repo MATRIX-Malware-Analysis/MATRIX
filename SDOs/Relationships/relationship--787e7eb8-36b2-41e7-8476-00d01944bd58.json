@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--787e7eb8-36b2-41e7-8476-00d01944bd58",
+    "created": "2024-08-13T14:51:23.462338Z",
+    "modified": "2024-08-13T14:51:23.462340Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--813d3176-99f4-4e78-8a9a-c041bd71cffd",
+    "target_ref": "malware-behavior--00f90846-cbd1-4fc5-9233-df5c2bf2a662",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor newly constructed files being written with extensions and/or headers associated with compressed or encrypted file types. Detection efforts may focus on follow-on exfiltration activity, where compressed or encrypted files can be detected in transit with a network intrusion detection or data loss prevention system analyzing file headers.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

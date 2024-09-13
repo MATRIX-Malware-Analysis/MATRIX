@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--538fafa2-f7c9-443b-bac4-4148fab19a0e",
+    "created": "2024-08-13T14:51:23.013395Z",
+    "modified": "2024-08-13T14:51:23.013398Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--08ea902d-ecb5-47ed-a453-2798057bb2d3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor the file system for files that have the setuid or setgid bits set. On Linux, auditd can alert every time a user's actual ID and effective ID are different (this is what happens when you sudo).",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

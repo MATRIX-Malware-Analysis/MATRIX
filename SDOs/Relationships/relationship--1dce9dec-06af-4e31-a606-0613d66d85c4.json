@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1dce9dec-06af-4e31-a606-0613d66d85c4",
+    "created": "2024-08-13T14:51:23.937293Z",
+    "modified": "2024-08-13T14:51:23.937295Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--1524f9c7-beb1-4a68-af16-2d11b9917e61",
+    "target_ref": "malware-behavior--53a26eee-1080-4d17-9762-2027d5a1b805",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye TRITON Dec 2017",
+            "description": "Blake Johnson, Dan Caban, Marina Krotofil, Dan Scali, Nathan Brubaker, Christopher Glyer. (2017, December 14). Attackers Deploy New ICS Attack Framework \u201cTRITON\u201d and Cause Operational Disruption to Critical Infrastructure. Retrieved January 12, 2018.",
+            "url": "https://www.fireeye.com/blog/threat-research/2017/12/attackers-deploy-new-ics-attack-framework-triton.html"
+        }
+    ],
+    "description": "In the [Triton Safety Instrumented System Attack](https://attack.mitre.org/campaigns/C0030), [TEMP.Veles](https://attack.mitre.org/groups/G0088) would programmatically return the controller to a normal running state if the [Triton](https://attack.mitre.org/software/S1009) malware failed. If the controller could not recover in a defined time window, [TEMP.Veles](https://attack.mitre.org/groups/G0088) programmatically overwrote their malicious program with invalid data.(Citation: FireEye TRITON Dec 2017)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--149c90ba-0232-420a-8540-a664742b307a",
+    "created": "2024-08-13T14:51:21.861072Z",
+    "modified": "2024-08-13T14:51:21.861074Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4d859fb6-3d39-4176-9dac-bd62ecae7132",
+    "target_ref": "malware-behavior--27960489-4e7f-461d-a62a-f5c0cb521e4a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Azure AD Admin Consent",
+            "url": "https://docs.microsoft.com/en-us/azure/security/fundamentals/steps-secure-identity#block-end-user-consent",
+            "description": "Baldwin, M., Flores, J., Kess, B.. (2018, June 17). Five steps to securing your identity infrastructure. Retrieved October 4, 2019."
+        }
+    ],
+    "description": "Update corporate policies to restrict what types of third-party applications may be added to any online service or tool that is linked to the company's information, accounts or network (e.g., Google, Microsoft, Dropbox, Basecamp, GitHub). However, rather than providing high-level guidance on this, be extremely specific\u2014include a list of per-approved applications and deny all others not on the list. Administrators may also block end-user consent through administrative portals, such as the Azure Portal, disabling users from authorizing third-party apps through OAuth and forcing administrative consent.(Citation: Microsoft Azure AD Admin Consent)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

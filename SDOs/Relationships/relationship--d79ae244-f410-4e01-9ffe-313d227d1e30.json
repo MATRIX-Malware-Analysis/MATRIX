@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d79ae244-f410-4e01-9ffe-313d227d1e30",
+    "created": "2024-08-13T14:51:23.426244Z",
+    "modified": "2024-08-13T14:51:23.426246Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--eef0b7f7-67e5-481e-a2b8-6cda9d0aa233",
+    "target_ref": "malware-behavior--94cb00a4-b295-4d06-aa2b-5653b9c1be9c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Crowdstrike AWS User Federation Persistence",
+            "description": " Vaishnav Murthy and Joel Eng. (2023, January 30). How Adversaries Can Persist with AWS User Federation. Retrieved March 10, 2023.",
+            "url": "https://www.crowdstrike.com/blog/how-adversaries-persist-with-aws-user-federation/"
+        },
+        {
+            "source_name": "Sygnia Golden SAML",
+            "description": "Sygnia. (2020, December). Detection and Hunting of Golden SAML Attack. Retrieved January 6, 2021.",
+            "url": "https://www.sygnia.co/golden-saml-advisory"
+        }
+    ],
+    "description": "Monitor for creation of access tokens using SAML tokens which do not have corresponding 4769 and 1200 events in the domain.(Citation: Sygnia Golden SAML) Additionally, detect on unusual API calls to generate access tokens, such as `sts:GetFederationToken` in AWS.(Citation: Crowdstrike AWS User Federation Persistence)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

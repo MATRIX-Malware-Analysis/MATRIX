@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d47fa09a-0925-4096-a856-8ab397798132",
+    "created": "2024-08-13T14:51:22.152496Z",
+    "modified": "2024-08-13T14:51:22.152499Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft PS JEA",
+            "description": "Microsoft. (2022, November 17). Just Enough Administration. Retrieved March 27, 2023.",
+            "url": "https://learn.microsoft.com/powershell/scripting/learn/remoting/jea/overview?view=powershell-7.3"
+        },
+        {
+            "source_name": "Netspi PowerShell Execution Policy Bypass",
+            "description": "Sutherland, S. (2014, September 9). 15 Ways to Bypass the PowerShell Execution Policy. Retrieved July 23, 2015.",
+            "url": "https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/"
+        }
+    ],
+    "description": "When PowerShell is necessary, consider restricting PowerShell execution policy to administrators. Be aware that there are methods of bypassing the PowerShell execution policy, depending on environment configuration.(Citation: Netspi PowerShell Execution Policy Bypass)\n\nPowerShell JEA (Just Enough Administration) may also be used to sandbox administration and limit what commands admins/users can execute through remote PowerShell sessions.(Citation: Microsoft PS JEA)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

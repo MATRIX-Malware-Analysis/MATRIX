@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--23027205-893b-49d5-a6c8-9657bbf03c57",
+    "created": "2024-08-13T14:51:21.753860Z",
+    "modified": "2024-08-13T14:51:21.753863Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--54ca26f3-c172-4231-93e5-ccebcac2161f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MagicWeb",
+            "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+            "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+        },
+        {
+            "source_name": "Mandiant Azure AD Backdoors",
+            "description": "Mike Burns. (2020, September 30). Detecting Microsoft 365 and Azure Active Directory Backdoors. Retrieved September 28, 2022.",
+            "url": "https://www.mandiant.com/resources/detecting-microsoft-365-azure-active-directory-backdoors"
+        }
+    ],
+    "description": "Monitor the hybrid identity solution in use for the loading of unauthorized DLLs. For example, monitor all PTA agent servers for the creation of DLLs as well as the loading of DLLs into the `AzureADConnectAuthenticationAgentService` process.(Citation: Mandiant Azure AD Backdoors) If AD FS is in use, monitor the AD FS server for the creation of DLLs as well as the loading of unrecognized or unsigned DLLs into the `Microsoft.IdentityServer.Servicehost` application.(Citation: MagicWeb)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

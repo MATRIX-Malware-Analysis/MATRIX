@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--aecdb921-7891-4f98-a811-1bcbcdcf6fc0",
+    "created": "2024-08-13T14:51:23.906456Z",
+    "modified": "2024-08-13T14:51:23.906458Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--3b4915de-b271-468d-afb8-06a85396a455",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that depend on user interaction, especially for applications that can embed programmatic capabilities (e.g., Microsoft Office products with scripts, installers, zip files). This includes compression applications, such as those for zip files, that can be used to [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140) in payloads. For added context on adversary procedures and background see [User Execution](https://attack.mitre.org/techniques/T1204) and applicable sub-techniques.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

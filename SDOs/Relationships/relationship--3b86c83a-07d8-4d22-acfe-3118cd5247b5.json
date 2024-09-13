@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3b86c83a-07d8-4d22-acfe-3118cd5247b5",
+    "created": "2024-08-13T14:51:21.694829Z",
+    "modified": "2024-08-13T14:51:21.694831Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--c23b740b-a42b-47a1-aec2-9d48ddd547ff",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor newly created logons and credentials used in events and review for discrepancies. Unusual remote logins that correlate with other suspicious activity (such as writing and executing binaries) may indicate malicious activity.\n\nNote: Analytic Event ID is for Windows Security Log (Event ID 4624 - An account was successfully logged on). The successful use of Pass the Hash for lateral movement between workstations would trigger Event ID 4624, with an event level of Information, from the Windows Security log. This event would show an account logon with a LogonType of 3 using NTLM authentication, a logon that is not a domain logon, and the user account not being the ANONYMOUS LOGON account.\n\nAnalytic 1 - Successful Local Account Login\n\n<code>(source=\"*WinEventLog:Security\" EventCode=\"4624\") TargetUser= \"ANONYMOUS LOGON\" AND AuthenticationPackageName=\"NTLM\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

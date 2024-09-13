@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--09a346cc-0b0b-421d-855c-adaae4980b5f",
+    "created": "2024-08-13T14:51:22.509284Z",
+    "modified": "2024-08-13T14:51:22.509287Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--877b4a1a-a4c3-4095-acde-7ec52a31bbc3",
+    "target_ref": "malware-behavior--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant APT29 Microsoft 365 2022",
+            "description": "Douglas Bienstock. (2022, August 18). You Can\u2019t Audit Me: APT29 Continues Targeting Microsoft 365. Retrieved February 23, 2023.",
+            "url": "https://www.mandiant.com/resources/blog/apt29-continues-targeting-microsoft"
+        },
+        {
+            "source_name": "SentinelOne NobleBaron June 2021",
+            "description": "Guerrero-Saade, J. (2021, June 1). NobleBaron | New Poisoned Installers Could Be Used In Supply Chain Attacks. Retrieved August 4, 2021.",
+            "url": "https://labs.sentinelone.com/noblebaron-new-poisoned-installers-could-be-used-in-supply-chain-attacks/"
+        }
+    ],
+    "description": "[APT29](https://attack.mitre.org/groups/G0016) has renamed malicious DLLs with legitimate names to appear benign; they have also created an Azure AD certificate with a Common Name that matched the display name of the compromised service principal.(Citation: SentinelOne NobleBaron June 2021)(Citation: Mandiant APT29 Microsoft 365 2022)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

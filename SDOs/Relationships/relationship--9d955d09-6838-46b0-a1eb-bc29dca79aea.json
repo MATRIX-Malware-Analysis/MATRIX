@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9d955d09-6838-46b0-a1eb-bc29dca79aea",
+    "created": "2024-08-13T14:51:22.402990Z",
+    "modified": "2024-08-13T14:51:22.402993Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--877b4a1a-a4c3-4095-acde-7ec52a31bbc3",
+    "target_ref": "malware-behavior--8861073d-d1b8-4941-82ce-dce621d398f0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Remediation and Hardening Strategies for Microsoft 365",
+            "description": "Mandiant. (2022, August). Remediation and Hardening Strategies for  Microsoft 365 to Defend Against APT29. Retrieved February 21, 2023.",
+            "url": "https://www.mandiant.com/sites/default/files/2022-08/remediation-hardening-strategies-for-m365-defend-against-apt29-white-paper.pdf"
+        }
+    ],
+    "description": "[APT29](https://attack.mitre.org/groups/G0016) has leveraged compromised high-privileged on-premises accounts synced to Office 365 to move laterally into a cloud environment, including through the use of Azure AD PowerShell.(Citation: Mandiant Remediation and Hardening Strategies for Microsoft 365)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

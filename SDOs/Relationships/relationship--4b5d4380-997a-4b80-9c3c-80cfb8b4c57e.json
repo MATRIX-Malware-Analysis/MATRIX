@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4b5d4380-997a-4b80-9c3c-80cfb8b4c57e",
+    "created": "2024-08-13T14:51:22.405399Z",
+    "modified": "2024-08-13T14:51:22.405401Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--836fe490-84e0-4e27-83b4-130d8d0ca60c",
+    "target_ref": "malware-behavior--1644e709-12d2-41e5-a60f-3470991f5011",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for hash dumpers opening the Security Accounts Manager (SAM) on the local file system (<code>%SystemRoot%/system32/config/SAM</code>). Some hash dumpers will open the local file system as a device and parse to the SAM table to avoid file access defenses. Others will make an in-memory copy of the SAM table before reading hashes. Detection of compromised [Valid Accounts](https://attack.mitre.org/techniques/T1078) in-use by adversaries may help as well.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4eada241-6277-4cac-83a0-948f0e0ca51b",
+    "created": "2024-08-13T14:51:22.859765Z",
+    "modified": "2024-08-13T14:51:22.859767Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--836fe490-84e0-4e27-83b4-130d8d0ca60c",
+    "target_ref": "malware-behavior--642e7358-9c32-4a22-8d0b-76eaff73fb7d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor access to file resources that contain local accounts and groups information such as <code>/etc/passwd</code>, <code>/Users</code> directories, and the SAM database. \n\nIf access requires high privileges, look for non-admin objects (such as users or processes) attempting to access restricted file resources.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

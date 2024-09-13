@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--81e122aa-f634-4d2b-ad3b-0c5347d03de0",
+    "created": "2024-08-13T14:51:21.859412Z",
+    "modified": "2024-08-13T14:51:21.859414Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--5998db4d-c243-4aef-9560-5a15e8989d21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unusual processes with internal network connections creating files on-system may be suspicious \n\nNote: Analytic Event Type is for Zeek but can also be implemented in other Network Analysis Frameworks by parsing & decoding captured SMB2 network traffic. From a network traffic capture standpoint, it\u2019s important to capture the right traffic for this type of detection to function (e.g., all endpoint to endpoint if possible or workstation to server and workstation to workstation). As such, it is helpful to have a centralized server area where it is possible to monitor communications between servers and endpoints.\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

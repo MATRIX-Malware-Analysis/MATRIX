@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fd5c93b0-93a3-4652-a09b-b5d16b29ed9c",
+    "created": "2024-08-13T14:51:23.078043Z",
+    "modified": "2024-08-13T14:51:23.078046Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--28abec6c-4443-4b03-8206-07f2e264a6b4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco IOS Software Integrity Assurance - AAA",
+            "url": "https://tools.cisco.com/security/center/resources/integrity_assurance.html#38",
+            "description": "Cisco. (n.d.). Cisco IOS Software Integrity Assurance - AAA. Retrieved October 19, 2020."
+        },
+        {
+            "source_name": "Cisco IOS Software Integrity Assurance - TACACS",
+            "url": "https://tools.cisco.com/security/center/resources/integrity_assurance.html#39",
+            "description": "Cisco. (n.d.). Cisco IOS Software Integrity Assurance - TACACS. Retrieved October 19, 2020."
+        }
+    ],
+    "description": "Use of Authentication, Authorization, and Accounting (AAA) systems will limit actions administrators can perform and provide a history of user actions to detect unauthorized use and abuse. TACACS+ can keep control over which commands administrators are permitted to use through the configuration of authentication and command authorization. (Citation: Cisco IOS Software Integrity Assurance - AAA) (Citation: Cisco IOS Software Integrity Assurance - TACACS)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

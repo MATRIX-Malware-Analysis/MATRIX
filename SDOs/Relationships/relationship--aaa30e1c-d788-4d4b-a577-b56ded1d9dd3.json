@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--aaa30e1c-d788-4d4b-a577-b56ded1d9dd3",
+    "created": "2024-08-13T14:51:23.675051Z",
+    "modified": "2024-08-13T14:51:23.675054Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--01327cde-66c4-4123-bf34-5f258d59457b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Apple Unified Log Analysis Remote Login and Screen Sharing",
+            "url": "https://sarah-edwards-xzkc.squarespace.com/blog/2020/4/30/analysis-of-apple-unified-logs-quarantine-edition-entry-6-working-from-home-remote-logins",
+            "description": "Sarah Edwards. (2020, April 30). Analysis of Apple Unified Logs: Quarantine Edition [Entry 6] \u2013 Working From Home? Remote Logins. Retrieved August 19, 2021."
+        }
+    ],
+    "description": "Monitor for newly executed processes that may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to remotely control machines using Virtual Network Computing (VNC). For example, on macOS systems the <code>screensharingd</code> process may be related to VNC connection activity.(Citation: Apple Unified Log Analysis Remote Login and Screen Sharing)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

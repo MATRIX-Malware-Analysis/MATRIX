@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--8f5ed4b9-f6ef-48c9-9b20-1615daedbbf6",
+    "created": "2024-08-13T14:51:22.006106Z",
+    "modified": "2024-08-13T14:51:22.006108Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--a8bc2369-a68e-43c5-ac1a-a2a939215ef9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Novetta Blockbuster Loaders",
+            "url": "https://operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Loaders-Installers-and-Uninstallers-Report.pdf",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Loaders, Installers and Uninstallers Report. Retrieved March 2, 2016."
+        },
+        {
+            "source_name": "Novetta Blockbuster",
+            "url": "https://web.archive.org/web/20160226161828/https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Report.pdf",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Unraveling the Long Thread of the Sony Attack. Retrieved February 25, 2016."
+        },
+        {
+            "source_name": "McAfee Lazarus Resurfaces Feb 2018",
+            "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/lazarus-resurfaces-targets-global-banks-bitcoin-users/",
+            "description": "Sherstobitoff, R. (2018, February 12). Lazarus Resurfaces, Targets Global Banks and Bitcoin Users. Retrieved February 19, 2018."
+        }
+    ],
+    "description": "[Lazarus Group](https://attack.mitre.org/groups/G0032) malware IndiaIndia checks Registry keys within HKCU and HKLM to determine if certain applications are present, including SecureCRT, Terminal Services, RealVNC, TightVNC, UltraVNC, Radmin, mRemote, TeamViewer, FileZilla, pcAnyware, and Remote Desktop. Another [Lazarus Group](https://attack.mitre.org/groups/G0032) malware sample checks for the presence of the following Registry key:<code>HKEY_CURRENT_USER\\Software\\Bitcoin\\Bitcoin-Qt</code>.(Citation: Novetta Blockbuster)(Citation: Novetta Blockbuster Loaders)(Citation: McAfee Lazarus Resurfaces Feb 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

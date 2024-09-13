@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a696751e-b5df-497e-8b22-ad6c780d3e22",
+    "created": "2024-08-13T14:51:22.791471Z",
+    "modified": "2024-08-13T14:51:22.791473Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--f0c1a021-65ab-466d-82d8-83c3336618c2",
+    "target_ref": "malware-behavior--28a8f7c4-21fb-4ec7-b892-82436c0feb5f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CISA Scattered Spider Advisory November 2023",
+            "description": "CISA. (2023, November 16). Cybersecurity Advisory: Scattered Spider (AA23-320A). Retrieved March 18, 2024.",
+            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a"
+        },
+        {
+            "source_name": "Crowdstrike TELCO BPO Campaign December 2022",
+            "description": "Parisi, T. (2022, December 2). Not a SIMulation: CrowdStrike Investigations Reveal Intrusion Campaign Targeting Telco and BPO Companies. Retrieved June 30, 2023.",
+            "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/"
+        },
+        {
+            "source_name": "Trellix Scattered Spider MO August 2023",
+            "description": "Trellix et. al.. (2023, August 17). Scattered Spider: The Modus Operandi. Retrieved March 18, 2024.",
+            "url": "https://www.trellix.com/blogs/research/scattered-spider-the-modus-operandi/"
+        }
+    ],
+    "description": "During [C0027](https://attack.mitre.org/campaigns/C0027), [Scattered Spider](https://attack.mitre.org/groups/G1015) directed victims to run remote monitoring and management (RMM) tools.(Citation: Crowdstrike TELCO BPO Campaign December 2022)\n\nIn addition to directing victims to run remote software, Scattered Spider members themselves also deploy RMM software including AnyDesk, LogMeIn, and ConnectWise Control to establish persistence on the compromised network.(Citation: CISA Scattered Spider Advisory November 2023)(Citation: Trellix Scattered Spider MO August 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

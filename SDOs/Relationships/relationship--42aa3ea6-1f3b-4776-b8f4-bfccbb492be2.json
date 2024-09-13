@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--42aa3ea6-1f3b-4776-b8f4-bfccbb492be2",
+    "created": "2024-08-13T14:51:22.256349Z",
+    "modified": "2024-08-13T14:51:22.256351Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--7d8dd42e-c447-4fc1-87ed-e33ef300542f",
+    "target_ref": "malware-behavior--f244b8dd-af6c-4391-a497-fc03627ce995",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "[Environmental Keying](https://attack.mitre.org/techniques/T1480/001) likely should not be mitigated with preventative controls because it may protect unintended targets from being compromised via confusion of keys by the adversary. Mitigation of this technique is also unlikely to be feasible within most contexts because there are no standard attributes from which an adversary may derive keys. If targeted, efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior if compromised.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

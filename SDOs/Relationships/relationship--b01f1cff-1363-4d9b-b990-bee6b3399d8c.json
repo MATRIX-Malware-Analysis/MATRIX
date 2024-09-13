@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b01f1cff-1363-4d9b-b990-bee6b3399d8c",
+    "created": "2024-08-13T14:51:22.325169Z",
+    "modified": "2024-08-13T14:51:22.325171Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f17f3cef-842b-4e2d-aed0-9e4a75ca08c0",
+    "target_ref": "malware-behavior--4eb28bed-d11a-4641-9863-c2ac017d910a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "win_xml_evt_log",
+            "url": "https://forensicswiki.xyz/wiki/index.php?title=Windows_XML_Event_Log_(EVTX)",
+            "description": "Forensics Wiki. (2021, June 19). Windows XML Event Log (EVTX). Retrieved September 13, 2021."
+        }
+    ],
+    "description": "Ensure proper process and file permissions are in place to prevent adversaries from disabling or interfering with logging or deleting or modifying .evtx logging files. Ensure .evtx files, which are located at <code>C:\\Windows\\system32\\Winevt\\Logs</code>(Citation: win_xml_evt_log), have the proper file permissions for limited, legitimate access and audit policies for detection. ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

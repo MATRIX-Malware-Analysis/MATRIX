@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9a91d29e-d8fb-412e-98e6-e3eae06db154",
+    "created": "2024-08-13T14:51:22.626349Z",
+    "modified": "2024-08-13T14:51:22.626351Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--090d7388-8245-4653-8195-c49eab0c3036",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for suspicious use of <code>gpresult</code>. Monitor for the use of PowerShell functions such as <code>Get-DomainGPO</code> and <code>Get-DomainGPOLocalGroup</code> and processes spawning with command-line arguments containing <code>GPOLocalGroup</code>.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

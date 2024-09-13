@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4243f375-866b-4bec-88f4-cfbf84b0c092",
+    "created": "2024-08-13T14:51:23.169003Z",
+    "modified": "2024-08-13T14:51:23.169006Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--d336b553-5da9-46ca-98a8-0b23f49fb447",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft CredEnumerate",
+            "description": "Microsoft. (2018, December 5). CredEnumarateA function (wincred.h). Retrieved November 24, 2020.",
+            "url": "https://docs.microsoft.com/en-us/windows/win32/api/wincred/nf-wincred-credenumeratea"
+        },
+        {
+            "source_name": "Delpy Mimikatz Crendential Manager",
+            "description": "Delpy, B. (2017, December 12). howto ~ credential manager saved credentials. Retrieved November 23, 2020.",
+            "url": "https://github.com/gentilkiwi/mimikatz/wiki/howto-~-credential-manager-saved-credentials"
+        }
+    ],
+    "description": "Consider monitoring API calls such as <code>CredEnumerateA</code> that may list credentials from the Windows Credential Manager.(Citation: Microsoft CredEnumerate)(Citation: Delpy Mimikatz Crendential Manager)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

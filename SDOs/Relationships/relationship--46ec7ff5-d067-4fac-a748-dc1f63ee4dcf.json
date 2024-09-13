@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--46ec7ff5-d067-4fac-a748-dc1f63ee4dcf",
+    "created": "2024-08-13T14:51:22.760815Z",
+    "modified": "2024-08-13T14:51:22.760817Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--208884f1-7b83-4473-ac22-4e1cf6c41471",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "file_sig_table",
+            "description": "Kessler, G. (2022, December 9). GCK'S FILE SIGNATURES TABLE. Retrieved August 23, 2022.",
+            "url": "https://www.garykessler.net/library/file_sigs.html"
+        },
+        {
+            "source_name": "Polyglot Files: a Hacker\u2019s best friend",
+            "description": "Li, V. (2019, October 2). Polyglot Files: a Hacker\u2019s best friend. Retrieved September 27, 2022.",
+            "url": "https://medium.com/swlh/polyglot-files-a-hackers-best-friend-850bf812dd8a"
+        }
+    ],
+    "description": "Check and ensure that file headers/signature and extensions match using magic bytes detection and/or file signature validation.(Citation: Polyglot Files: a Hacker\u2019s best friend) In Linux, the <code>file</code> command may be used to check the file signature.(Citation: file_sig_table)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

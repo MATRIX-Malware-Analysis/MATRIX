@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0c7fb418-544d-4fb6-9a60-a1d8d4ad228e",
+    "created": "2024-08-13T14:51:23.593784Z",
+    "modified": "2024-08-13T14:51:23.593790Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43fa6c3e-3139-43da-9bd2-32a4bfe9da4b",
+    "target_ref": "malware-behavior--27960489-4e7f-461d-a62a-f5c0cb521e4a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022",
+            "description": "Dror Alon. (2022, December 8). Compromised Cloud Compute Credentials: Case Studies From the Wild. Retrieved March 9, 2023.",
+            "url": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/"
+        }
+    ],
+    "description": "Monitor the use of application access tokens to interact with resources or services that do not fit the organization baseline. For example, an application that is not meant to read emails accessing users\u2019 mail boxes and potentially exfiltrating sensitive data, or a token associated with a cloud service account being used to make API calls from an IP address outside of the cloud environment.(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--93a2af47-6274-460e-9876-f59d7aeddc0b",
+    "created": "2024-08-13T14:51:22.869617Z",
+    "modified": "2024-08-13T14:51:22.869619Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1745383d-45fb-44cc-88e6-f067e0e5527d",
+    "target_ref": "malware-behavior--19401639-28d0-4c3c-adcc-bc2ba22f6421",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Splunk Kovar Certificates 2017",
+            "url": "https://www.splunk.com/en_us/blog/security/tall-tales-of-hunting-with-tls-ssl-certificates.html",
+            "description": "Kovar, R. (2017, December 11). Tall Tales of Hunting with TLS/SSL Certificates. Retrieved October 16, 2020."
+        }
+    ],
+    "description": "Consider use of services that may aid in the tracking of certificates in use on sites across the Internet. In some cases it may be possible to pivot on known pieces of certificate information to uncover other adversary infrastructure.(Citation: Splunk Kovar Certificates 2017)\nDetection efforts may be focused on related behaviors, such as [Web Protocols](https://attack.mitre.org/techniques/T1071/001) , [Asymmetric Cryptography](https://attack.mitre.org/techniques/T1573/002) , and/or [Install Root Certificate](https://attack.mitre.org/techniques/T1553/004) .",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

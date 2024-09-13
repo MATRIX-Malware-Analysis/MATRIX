@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6d2fc7e5-08f4-4f65-834a-02ab5bd12655",
+    "created": "2024-08-13T14:51:21.944871Z",
+    "modified": "2024-08-13T14:51:21.944874Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9810d467-1323-4f36-a113-c3c24166c3c0",
+    "target_ref": "malware-behavior--2fee9321-3e71-4cf4-af24-d4d40d355b34",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://github.com/mattifestation/PowerSploit",
+            "description": "PowerSploit. (n.d.). Retrieved December 4, 2014.",
+            "source_name": "Powersploit"
+        },
+        {
+            "source_name": "Microsoft Sxstrace",
+            "url": "https://docs.microsoft.com/windows-server/administration/windows-commands/sxstrace",
+            "description": "Gerend, J. et al.. (2017, October 16). sxstrace. Retrieved April 26, 2021."
+        }
+    ],
+    "description": "Use auditing tools capable of detecting DLL search order hijacking opportunities on systems within an enterprise and correct them. Toolkits like the PowerSploit framework contain PowerUp modules that can be used to explore systems for DLL hijacking weaknesses.(Citation: Powersploit)\n\nUse the program sxstrace.exe that is included with Windows along with manual inspection to check manifest files for side-by-side problems in software.(Citation: Microsoft Sxstrace)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

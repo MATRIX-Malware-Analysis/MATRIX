@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--866610ea-80dc-4e49-b5cb-35fda7061ade",
+    "created": "2024-08-13T14:51:23.169252Z",
+    "modified": "2024-08-13T14:51:23.169254Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--68f7e3a1-f09f-4164-9a62-16b648a0dd5a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor DLL/PE file events, specifically creation of these binary files as well as the loading of DLLs into processes. Look for DLLs that are not recognized or not normally loaded into a process.\n\nNote: This looks for unsigned images that may be loaded by regsvr32, while attempting to eliminate false positives stemming from Windows/Program Files binaries.\n\nAnalytic 5 - Loading Unsigned Images \n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"7\") (Image=\"C:\\\\Windows\\\\System32\\\\regsvr32.exe\" OR Image=\"C:\\\\Windows\\\\SysWOW64\\\\regsvr32.exe\") Signed=false ImageLoaded!=\"C:\\\\Program Files*\" ImageLoaded!=\"C:\\\\Windows\\\\*\"|stats values(ComputerName) as \"Computer Name\" count(ImageLoaded) as ImageLoadedCount by ImageLoaded</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

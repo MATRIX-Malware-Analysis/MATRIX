@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7500c96e-cb2e-45ff-b4d2-3f2546e60401",
+    "created": "2024-08-13T14:51:22.840616Z",
+    "modified": "2024-08-13T14:51:22.840618Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--d4bdbdea-eaec-4071-b4f9-5105e12ea4b6",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Google Drive Log Events",
+            "description": "Google. (n.d.). Drive log events. Retrieved March 4, 2024.",
+            "url": "https://support.google.com/a/answer/4579696"
+        },
+        {
+            "source_name": "Microsoft 365 Sharing Auditing",
+            "description": "Microsoft. (2023, October 1). Use sharing auditing in the audit log. Retrieved March 4, 2024.",
+            "url": "https://learn.microsoft.com/en-us/purview/audit-log-sharing"
+        }
+    ],
+    "description": "Monitor logs for SaaS applications to detect instances of data being shared inappropriately. For example, in Microsoft 365, file sharing events will appear in Audit logs under the event names `SharingInvitationCreated`, `AnonymousLinkCreated`, `SecureLinkCreated`, or `AddedToSecureLink`, with `TargetUserOrGroupType` being `Guest.`(Citation: Microsoft 365 Sharing Auditing)  In Google Workspace, externally shared files will have a `Visibility` property of `Shared externally` in the Drive audit logs.(Citation: Google Drive Log Events)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

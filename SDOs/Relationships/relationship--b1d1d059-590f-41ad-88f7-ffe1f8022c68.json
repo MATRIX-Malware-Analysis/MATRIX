@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b1d1d059-590f-41ad-88f7-ffe1f8022c68",
+    "created": "2024-08-13T14:51:22.753758Z",
+    "modified": "2024-08-13T14:51:22.753760Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Powersploit",
+            "description": "PowerSploit. (n.d.). Retrieved December 4, 2014.",
+            "url": "https://github.com/mattifestation/PowerSploit"
+        }
+    ],
+    "description": "Monitor executed commands and arguments that may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). Remote access tools may contain built-in features or incorporate existing tools like Mimikatz. PowerShell scripts also exist that contain credential dumping functionality, such as PowerSploit's Invoke-Mimikatz module,(Citation: Powersploit) which may require additional logging features to be configured in the operating system to collect necessary information for analysis.\n\nNote: Event ID 4104 from the \u201cMicrosoft-Windows-PowerShell/Operational\u201d log captures Powershell script blocks, whose contents can be further analyzed to determine if they\u2019re performing LSASS dumping.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--19f7da98-1b3e-487f-a72a-c4a16286e738",
+    "created": "2024-08-13T14:51:23.154005Z",
+    "modified": "2024-08-13T14:51:23.154007Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--d9374627-39d1-41a3-8318-30c018a50b31",
+    "target_ref": "malware-behavior--59ff91cd-1430-4075-8563-e6f15f4f9ff5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ntlm_relaying_kerberos_del",
+            "description": "Mollema, D. (2019, March 4). The worst of both worlds: Combining NTLM Relaying and Kerberos delegation . Retrieved August 15, 2022.",
+            "url": "https://dirkjanm.io/worst-of-both-worlds-ntlm-relaying-and-kerberos-delegation/"
+        }
+    ],
+    "description": "Consider filtering DHCP traffic on ports 67 and 68 to/from unknown or untrusted DHCP servers. Additionally, port security may also be enabled on layer switches. Furthermore, consider enabling DHCP snooping on layer 2 switches as it will prevent DHCP spoofing attacks and starvation attacks. Consider tracking available IP addresses through a script or a tool. \n\nAdditionally, block DHCPv6 traffic and incoming router advertisements, especially if IPv6 is not commonly used in the network.(Citation: ntlm_relaying_kerberos_del)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

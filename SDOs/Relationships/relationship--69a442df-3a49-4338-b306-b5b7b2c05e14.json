@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--69a442df-3a49-4338-b306-b5b7b2c05e14",
+    "created": "2024-08-13T14:51:22.061026Z",
+    "modified": "2024-08-13T14:51:22.061028Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--449bde62-de97-4aa6-95e8-a4ac34d398c4",
+    "target_ref": "malware-behavior--bdd65f5f-1408-4ae2-a9cc-a0474bb097af",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Conditional Access Policy Changes",
+            "description": "Microsoft. (2023, October 23). Troubleshooting Conditional Access policy changes. Retrieved January 2, 2024.",
+            "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-policy-changes-audit-log"
+        }
+    ],
+    "description": "Monitor for changes made to AD security settings related to MFA logon requirements, such as changes to Azure AD Conditional Access Policies or the registration of new MFA applications.\n\nMonitor for changes made to security settings related to Azure AD Conditional Access Policies. These can be found in the Azure AD audit log under the operation name `Update Conditional Access policy.`(Citation: Microsoft Conditional Access Policy Changes)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

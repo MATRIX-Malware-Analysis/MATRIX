@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2faa699d-20f4-4fcc-a832-5cde13423a4e",
+    "created": "2024-08-13T14:51:22.749878Z",
+    "modified": "2024-08-13T14:51:22.749881Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--180aea01-9f45-4181-9540-94bef316a086",
+    "target_ref": "malware-behavior--7bdca9d5-d500-4d7d-8c52-5fd47baf4c0c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CrowdStrike Grim Spider May 2019",
+            "url": "https://www.crowdstrike.com/blog/timelining-grim-spiders-big-game-hunting-tactics/",
+            "description": "John, E. and Carvey, H. (2019, May 30). Unraveling the Spiderweb: Timelining ATT&CK Artifacts Used by GRIM SPIDER. Retrieved May 12, 2020."
+        },
+        {
+            "source_name": "FireEye KEGTAP SINGLEMALT October 2020",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html",
+            "description": "Kimberly Goody, Jeremy Kennelly, Joshua Shilko, Steve Elovitz, Douglas Bienstock. (2020, October 28). Unhappy Hour Special: KEGTAP and SINGLEMALT With a Ransomware Chaser. Retrieved October 28, 2020."
+        }
+    ],
+    "description": "[Wizard Spider](https://attack.mitre.org/groups/G0102) has used scheduled tasks to install [TrickBot](https://attack.mitre.org/software/S0266), using task names to appear legitimate such as WinDotNet, GoogleTask, or Sysnetsf.(Citation: CrowdStrike Grim Spider May 2019) It has also used common document file names for other malware binaries.(Citation: FireEye KEGTAP SINGLEMALT October 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

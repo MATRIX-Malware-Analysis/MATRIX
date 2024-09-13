@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e19e2271-4f12-4656-bb5e-34f25aec260f",
+    "created": "2024-08-13T14:51:23.253119Z",
+    "modified": "2024-08-13T14:51:23.253121Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--6d4a7fb3-5a24-42be-ae61-6728a2b581f6",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Dev Blog IFEO Mar 2010",
+            "description": "Shanbhag, M. (2010, March 24). Image File Execution Options (IFEO). Retrieved December 18, 2017.",
+            "url": "https://blogs.msdn.microsoft.com/mithuns/2010/03/24/image-file-execution-options-ifeo/"
+        }
+    ],
+    "description": "Monitor for abnormal usage of the GFlags tool as well as common processes spawned under abnormal parents and/or with creation flags indicative of debugging such as <code>DEBUG_PROCESS</code> and <code>DEBUG_ONLY_THIS_PROCESS</code>. (Citation: Microsoft Dev Blog IFEO Mar 2010)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

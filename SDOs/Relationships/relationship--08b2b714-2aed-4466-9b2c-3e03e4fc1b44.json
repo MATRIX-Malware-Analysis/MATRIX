@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--08b2b714-2aed-4466-9b2c-3e03e4fc1b44",
+    "created": "2024-08-13T14:51:23.986660Z",
+    "modified": "2024-08-13T14:51:23.986663Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--adf634bd-c4c3-4a56-862e-452637ef5853",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Collect file hashes. Monitor for file names that do not match their expected hash. Perform file monitoring. Files with known names but in unusual locations are suspect.  Look for indications of common characters that may indicate an attempt to trick users into misidentifying the file type, such as a space as the last character of a file name or the right-to-left override characters\"\\u202E\", \"[U+202E]\", and \"%E2%80%AE\". For added context on adversary procedures and background see [Masquerading](https://attack.mitre.org/techniques/T1036) and applicable sub-techniques.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

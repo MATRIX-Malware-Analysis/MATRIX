@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--61bf88ed-2060-4a54-a081-ae0b37d1d5df",
+    "created": "2024-08-13T14:51:23.374079Z",
+    "modified": "2024-08-13T14:51:23.374081Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--877b4a1a-a4c3-4095-acde-7ec52a31bbc3",
+    "target_ref": "malware-behavior--a009cb25-4801-4116-9105-80a91cf15c1b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MSTIC Nobelium Oct 2021",
+            "url": "https://www.microsoft.com/security/blog/2021/10/25/nobelium-targeting-delegated-administrative-privileges-to-facilitate-broader-attacks/",
+            "description": "Microsoft Threat Intelligence Center. (2021, October 25). NOBELIUM targeting delegated administrative privileges to facilitate broader attacks. Retrieved March 25, 2022."
+        }
+    ],
+    "description": "[APT29](https://attack.mitre.org/groups/G0016) can create new users through Azure AD.(Citation: MSTIC Nobelium Oct 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

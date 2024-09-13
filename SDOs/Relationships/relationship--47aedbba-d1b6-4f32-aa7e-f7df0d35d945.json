@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--47aedbba-d1b6-4f32-aa7e-f7df0d35d945",
+    "created": "2024-08-13T14:51:22.901059Z",
+    "modified": "2024-08-13T14:51:22.901061Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--5093f0e0-d8a0-4f3d-8a35-f0392940f15e",
+    "target_ref": "malware-behavior--b7dc639b-24cd-482d-a7f1-8897eda21023",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "AdSecurity Kerberos GT Aug 2015",
+            "description": "Metcalf, S. (2015, August 7). Kerberos Golden Tickets are Now More Golden. Retrieved December 1, 2017.",
+            "url": "https://adsecurity.org/?p=1640"
+        },
+        {
+            "source_name": "Adsecurity Mimikatz Guide",
+            "description": "Metcalf, S. (2015, November 13). Unofficial Guide to Mimikatz & Command Reference. Retrieved December 23, 2015.",
+            "url": "https://adsecurity.org/?page_id=1821"
+        }
+    ],
+    "description": "[Mimikatz](https://attack.mitre.org/software/S0002)'s <code>MISC::AddSid</code> module can append any SID or user/group account to a user's SID-History. [Mimikatz](https://attack.mitre.org/software/S0002) also utilizes [SID-History Injection](https://attack.mitre.org/techniques/T1134/005) to expand the scope of other components such as generated Kerberos Golden Tickets and DCSync beyond a single domain.(Citation: Adsecurity Mimikatz Guide)(Citation: AdSecurity Kerberos GT Aug 2015)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

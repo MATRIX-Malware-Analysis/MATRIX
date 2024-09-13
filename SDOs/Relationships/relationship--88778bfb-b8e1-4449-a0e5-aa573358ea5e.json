@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--88778bfb-b8e1-4449-a0e5-aa573358ea5e",
+    "created": "2024-08-13T14:51:23.218144Z",
+    "modified": "2024-08-13T14:51:23.218147Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--946ced3f-2618-464c-8aaf-a6923b37d17b",
+    "target_ref": "malware-behavior--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CISA AA20-259A Iran-Based Actor September 2020",
+            "url": "https://us-cert.cisa.gov/ncas/alerts/aa20-259a",
+            "description": "CISA. (2020, September 15). Iran-Based Threat Actor Exploits VPN Vulnerabilities. Retrieved December 21, 2020."
+        },
+        {
+            "source_name": "ClearSky Pay2Kitten December 2020",
+            "url": "https://www.clearskysec.com/wp-content/uploads/2020/12/Pay2Kitten.pdf",
+            "description": "ClearSky. (2020, December 17). Pay2Key Ransomware \u2013 A New Campaign by Fox Kitten. Retrieved December 21, 2020."
+        }
+    ],
+    "description": "[Fox Kitten](https://attack.mitre.org/groups/G0117) has used Scheduled Tasks for persistence and to load and execute a reverse proxy binary.(Citation: CISA AA20-259A Iran-Based Actor September 2020)(Citation: ClearSky Pay2Kitten December 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

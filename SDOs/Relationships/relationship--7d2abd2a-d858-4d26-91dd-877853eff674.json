@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7d2abd2a-d858-4d26-91dd-877853eff674",
+    "created": "2024-08-13T14:51:23.311104Z",
+    "modified": "2024-08-13T14:51:23.311107Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b06bbeb3-09bf-4434-a18d-77cedaaf2cee",
+    "target_ref": "malware-behavior--7e7c2fba-7cca-486c-9582-4c1bb2851961",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "GitHub MOTW",
+            "url": "https://gist.github.com/wdormann/fca29e0dcda8b5c0472e73e10c78c3e7",
+            "description": "wdormann. (2019, August 29). Disable Windows Explorer file associations for Disc Image Mount. Retrieved April 16, 2022."
+        }
+    ],
+    "description": "Consider disabling auto-mounting of disk image files (i.e., .iso, .img, .vhd, and .vhdx). This can be achieved by modifying the Registry values related to the Windows Explorer file associations in order to disable the automatic Explorer \"Mount and Burn\" dialog for these file extensions. Note: this will not deactivate the mount functionality itself.(Citation: GitHub MOTW)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

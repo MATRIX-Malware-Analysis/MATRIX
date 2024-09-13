@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--60cb2650-7633-4def-af74-355c2f7cdc45",
+    "created": "2024-08-13T14:51:22.263236Z",
+    "modified": "2024-08-13T14:51:22.263238Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1d5b3b74-1c67-4c50-8642-6f354efb039c",
+    "target_ref": "malware-behavior--4eb28bed-d11a-4641-9863-c2ac017d910a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "def_ev_win_event_logging",
+            "description": "Chandel, R. (2021, April 22). Defense Evasion: Windows Event Logging (T1562.002). Retrieved September 14, 2021.",
+            "url": "https://www.hackingarticles.in/defense-evasion-windows-event-logging-t1562-002/"
+        },
+        {
+            "source_name": "disable_win_evt_logging",
+            "description": "Heiligenstein, L. (n.d.). REP-25: Disable Windows Event Logging. Retrieved April 7, 2022.",
+            "url": "https://ptylu.github.io/content/report/report.html?report=25"
+        }
+    ],
+    "description": "Monitor the addition of the MiniNT registry key in HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Control, which may disable Event Viewer.(Citation: def_ev_win_event_logging)(Citation: disable_win_evt_logging) ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

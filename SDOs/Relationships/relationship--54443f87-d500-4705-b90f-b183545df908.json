@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--54443f87-d500-4705-b90f-b183545df908",
+    "created": "2024-08-13T14:51:21.855858Z",
+    "modified": "2024-08-13T14:51:21.855860Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--a13454f0-b05e-44a8-92f0-66dfe685bd10",
+    "target_ref": "malware-behavior--88b24b2b-7862-472c-89f0-07e863f5b534",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Token tactics",
+            "description": "Microsoft Incident Response. (2022, November 16). Token tactics: How to prevent, detect, and respond to cloud token theft. Retrieved December 26, 2023.",
+            "url": "https://www.microsoft.com/en-us/security/blog/2022/11/16/token-tactics-how-to-prevent-detect-and-respond-to-cloud-token-theft/"
+        },
+        {
+            "source_name": "Session Management Cheat Sheet",
+            "description": "OWASP CheatSheets Series Team. (n.d.). Session Management Cheat Sheet. Retrieved December 26, 2023.",
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+        }
+    ],
+    "description": "Configure browsers or tasks to regularly delete persistent cookies.\n\nAdditionally, minimize the length of time a web cookie is viable to potentially reduce the impact of stolen cookies while also increasing the needed frequency of cookie theft attempts \u2013 providing defenders with additional chances at detection.(Citation: Token tactics) For example, use non-persistent cookies to limit the duration a session ID will remain on the web client cache where an attacker could obtain it.(Citation: Session Management Cheat Sheet)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

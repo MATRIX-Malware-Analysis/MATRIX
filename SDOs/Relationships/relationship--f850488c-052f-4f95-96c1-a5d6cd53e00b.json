@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f850488c-052f-4f95-96c1-a5d6cd53e00b",
+    "created": "2024-08-13T14:51:23.319401Z",
+    "modified": "2024-08-13T14:51:23.319403Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--66ddb01f-4302-4e71-a5a4-1423434ac197",
+    "target_ref": "malware-behavior--8a2f40cf-8325-47f9-96e4-b1ca4c7389bd",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Expel IO Evil in AWS",
+            "url": "https://expel.io/blog/finding-evil-in-aws/",
+            "description": "A. Randazzo, B. Manahan and S. Lipton. (2020, April 28). Finding Evil in AWS. Retrieved June 25, 2020."
+        }
+    ],
+    "description": "Use multi-factor authentication for user and privileged accounts. Consider enforcing multi-factor authentication for the <code>CreateKeyPair</code> and <code>ImportKeyPair</code> API calls through IAM policies.(Citation: Expel IO Evil in AWS)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

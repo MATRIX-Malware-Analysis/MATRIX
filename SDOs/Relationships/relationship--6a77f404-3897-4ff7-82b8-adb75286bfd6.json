@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6a77f404-3897-4ff7-82b8-adb75286bfd6",
+    "created": "2024-08-13T14:51:22.775180Z",
+    "modified": "2024-08-13T14:51:22.775182Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--5093f0e0-d8a0-4f3d-8a35-f0392940f15e",
+    "target_ref": "malware-behavior--c23b740b-a42b-47a1-aec2-9d48ddd547ff",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://adsecurity.org/?page_id=1821",
+            "description": "Metcalf, S. (2015, November 13). Unofficial Guide to Mimikatz & Command Reference. Retrieved December 23, 2015.",
+            "source_name": "Adsecurity Mimikatz Guide"
+        },
+        {
+            "description": "The Australian Cyber Security Centre (ACSC), the Canadian Centre for Cyber Security (CCCS), the New Zealand National Cyber Security Centre (NZ NCSC), CERT New Zealand, the UK National Cyber Security Centre (UK NCSC) and the US National Cybersecurity and Communications Integration Center (NCCIC). (2018, October 11). Joint report on publicly available hacking tools. Retrieved March 11, 2019.",
+            "url": "https://www.ncsc.gov.uk/report/joint-report-on-publicly-available-hacking-tools",
+            "source_name": "NCSC Joint Report Public Tools"
+        },
+        {
+            "source_name": "Cobalt Strike Manual 4.3 November 2020",
+            "url": "https://web.archive.org/web/20210708035426/https://www.cobaltstrike.com/downloads/csmanual43.pdf",
+            "description": "Strategic Cyber LLC. (2020, November 5). Cobalt Strike: Advanced Threat Tactics for Penetration Testers. Retrieved April 13, 2021."
+        }
+    ],
+    "description": "[Mimikatz](https://attack.mitre.org/software/S0002)'s <code>SEKURLSA::Pth</code> module can impersonate a user, with only a password hash, to execute arbitrary commands.(Citation: Adsecurity Mimikatz Guide)(Citation: NCSC Joint Report Public Tools)(Citation: Cobalt Strike Manual 4.3 November 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

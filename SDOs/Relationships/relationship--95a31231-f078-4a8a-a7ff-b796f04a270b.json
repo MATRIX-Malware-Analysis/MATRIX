@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--95a31231-f078-4a8a-a7ff-b796f04a270b",
+    "created": "2024-08-13T14:51:22.305125Z",
+    "modified": "2024-08-13T14:51:22.305127Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--1479026c-0377-41c9-83ef-997b264395db",
+    "target_ref": "malware-behavior--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "AWS - IAM Console Best Practices",
+            "url": "https://aws.amazon.com/blogs/security/newly-updated-features-in-the-aws-iam-console-help-you-adhere-to-iam-best-practices/",
+            "description": "Moncur, Rob. (2020, July 5). New Information in the AWS IAM Console Helps You Follow IAM Best Practices. Retrieved August 4, 2020."
+        }
+    ],
+    "description": "Ensure that cloud accounts, particularly privileged accounts, have complex, unique passwords across all systems on the network. Passwords and access keys should be rotated regularly. This limits the amount of time credentials can be used to access resources if a credential is compromised without your knowledge. Cloud service providers may track access key age to help audit and identify keys that may need to be rotated.(Citation: AWS - IAM Console Best Practices)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

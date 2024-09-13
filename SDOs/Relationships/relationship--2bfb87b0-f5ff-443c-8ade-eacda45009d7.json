@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2bfb87b0-f5ff-443c-8ade-eacda45009d7",
+    "created": "2024-08-13T14:51:23.505052Z",
+    "modified": "2024-08-13T14:51:23.505055Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--0af0ca99-357d-4ba1-805f-674fdfb7bef9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Novetta Blockbuster",
+            "url": "https://web.archive.org/web/20160226161828/https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Report.pdf",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Unraveling the Long Thread of the Sony Attack. Retrieved February 25, 2016."
+        },
+        {
+            "source_name": "US-CERT SHARPKNOT June 2018",
+            "url": "https://www.us-cert.gov/sites/default/files/publications/MAR-10135536.11.WHITE.pdf",
+            "description": "US-CERT. (2018, March 09). Malware Analysis Report (MAR) - 10135536.11.WHITE. Retrieved June 13, 2018."
+        }
+    ],
+    "description": "[Lazarus Group](https://attack.mitre.org/groups/G0032) malware SHARPKNOT overwrites and deletes the Master Boot Record (MBR) on the victim's machine and has possessed MBR wiper malware since at least 2009.(Citation: US-CERT SHARPKNOT June 2018)(Citation: Novetta Blockbuster)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

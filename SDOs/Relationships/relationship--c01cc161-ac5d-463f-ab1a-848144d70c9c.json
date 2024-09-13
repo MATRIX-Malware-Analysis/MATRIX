@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c01cc161-ac5d-463f-ab1a-848144d70c9c",
+    "created": "2024-08-13T14:51:23.065495Z",
+    "modified": "2024-08-13T14:51:23.065497Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--836fe490-84e0-4e27-83b4-130d8d0ca60c",
+    "target_ref": "malware-behavior--c59801f3-3c5d-4803-b95b-09b99df10799",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for suspicious file access activity, specifically indications that a process is reading multiple files in a short amount of time and/or using command-line arguments indicative of searching for credential material (ex: regex patterns). These may be indicators of automated/scripted credential access behavior. Monitoring when the user's <code>.bash_history</code> is read can help alert to suspicious activity. While users do typically rely on their history of commands, they often access this history through other utilities like \"history\" instead of commands like <code>cat ~/.bash_history</code>.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

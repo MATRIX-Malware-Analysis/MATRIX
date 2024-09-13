@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cfa6e1fc-caa9-40ec-b07b-b419b538dfa3",
+    "created": "2024-08-13T14:51:22.108531Z",
+    "modified": "2024-08-13T14:51:22.108535Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--a4e8e06d-7ed5-496b-b947-5c30317db077",
+    "target_ref": "malware-behavior--1b51f5bc-b97a-498a-8dbd-bc6b1901bf19",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Unit 42 Playbook Dec 2017",
+            "description": "Unit 42. (2017, December 15). Unit 42 Playbook Viewer. Retrieved December 20, 2017.",
+            "url": "https://pan-unit42.github.io/playbook_viewer/"
+        }
+    ],
+    "description": "An [APT28](https://attack.mitre.org/groups/G0007) loader Trojan will enumerate the victim's processes searching for explorer.exe if its current process does not have necessary permissions.(Citation: Unit 42 Playbook Dec 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5900fde9-5f0b-41e3-9c83-924f39fd1809",
+    "created": "2024-08-13T14:51:22.717452Z",
+    "modified": "2024-08-13T14:51:22.717454Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b89299c3-4d86-470c-b361-4b42146821ea",
+    "target_ref": "malware-behavior--6add2ab5-2711-4e9d-87c8-7a0be8531530",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Protected Users Security Group",
+            "url": "https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/protected-users-security-group",
+            "description": "Microsoft. (2016, October 12). Protected Users Security Group. Retrieved May 29, 2020."
+        }
+    ],
+    "description": "Consider adding users to the \"Protected Users\" Active Directory security group. This can help limit the caching of users' plaintext credentials.(Citation: Microsoft Protected Users Security Group)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ca5ba729-b836-48d1-8c9c-cc7e03da0f72",
+    "created": "2024-08-13T14:51:22.688840Z",
+    "modified": "2024-08-13T14:51:22.688842Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--08ea902d-ecb5-47ed-a453-2798057bb2d3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "On Linux, auditd can alert every time a user's actual ID and effective ID are different (this is what happens when you sudo). This technique is abusing normal functionality in macOS and Linux systems, but sudo has the ability to log all input and output based on the <code>LOG_INPUT</code> and <code>LOG_OUTPUT</code> directives in the <code>/etc/sudoers</code> file. Consider monitoring for <code>/usr/libexec/security_authtrampoline</code> executions which may indicate that AuthorizationExecuteWithPrivileges is being executed. MacOS system logs may also indicate when AuthorizationExecuteWithPrivileges is being called.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

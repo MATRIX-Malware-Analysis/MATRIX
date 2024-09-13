@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--72d6a73f-2d76-478b-a913-0e81ed496793",
+    "created": "2024-08-13T14:51:22.979980Z",
+    "modified": "2024-08-13T14:51:22.979982Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor network data for uncommon data flows. Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. Look for RPC traffic after being mapped, which implies a destination port of at least 49152. If network inspection is available via packet captures or a NIDS, then traffic through the\u00a0<code>ITaskSchedulerService</code>\u00a0interface can be detected. Microsoft has a list of the possible methods that are implemented for the\u00a0<code>ITaskSchedulerService</code>\u00a0interface, which may be useful in differentiating read and query operations from creations and modifications.\n\nWhen scheduled tasks are created remotely, Windows uses RPC (135/tcp) to communicate with the Task Scheduler on the remote machine. Once an RPC connection is established, the client communicates with the Scheduled Tasks endpoint, which runs within the service group netsvcs. With packet capture and the right packet decoders or byte-stream based signatures, remote invocations of these functions can be identified.\nCertain strings can be identifiers of the schtasks, by looking up the interface UUID of ITaskSchedulerService in different formats\n\n- UUID\u00a0<code>86d35949-83c9-4044-b424-db363231fd0c</code>\u00a0(decoded)\n- Hex\u00a0<code>49 59 d3 86 c9 83 44 40 b4 24 db 36 32 31 fd 0c</code>\u00a0(raw)\n- ASCII\u00a0<code>IYD@$621</code>\u00a0(printable bytes only)\n\nThis identifier is present three times during the RPC request phase. Any sensor that has access to the byte code as raw, decoded, or ASCII could implement an analytic.\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3c770f06-42a8-4ea3-aa04-8e48cca3b1dd",
+    "created": "2024-08-13T14:51:22.037483Z",
+    "modified": "2024-08-13T14:51:22.037485Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--6ae93912-785d-4980-b555-5292bdbaace0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Azure Storage Security, 2019",
+            "url": "https://docs.microsoft.com/en-us/azure/storage/common/storage-security-guide",
+            "description": "Amlekar, M., Brooks, C., Claman, L., et. al.. (2019, March 20). Azure Storage security guide. Retrieved October 4, 2019."
+        },
+        {
+            "source_name": "Amazon S3 Security, 2019",
+            "url": "https://aws.amazon.com/premiumsupport/knowledge-center/secure-s3-resources/",
+            "description": "Amazon. (2019, May 17). How can I secure the files in my Amazon S3 bucket?. Retrieved October 4, 2019."
+        },
+        {
+            "source_name": "Amazon  AWS Temporary Security Credentials",
+            "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html",
+            "description": "Amazon. (n.d.). Temporary Security Credentials. Retrieved October 18, 2019."
+        }
+    ],
+    "description": "Configure user permissions groups and roles for access to cloud storage.(Citation: Microsoft Azure Storage Security, 2019) Implement strict Identity and Access Management (IAM) controls to prevent access to storage solutions except for the applications, users, and services that require access.(Citation: Amazon S3 Security, 2019) Ensure that temporary access tokens are issued rather than permanent credentials, especially when access is being granted to entities outside of the internal security boundary.(Citation: Amazon  AWS Temporary Security Credentials)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

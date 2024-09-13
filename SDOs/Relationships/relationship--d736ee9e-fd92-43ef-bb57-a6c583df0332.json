@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d736ee9e-fd92-43ef-bb57-a6c583df0332",
+    "created": "2024-08-13T14:51:22.330172Z",
+    "modified": "2024-08-13T14:51:22.330174Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--3269bc2e-8fe6-44cc-82a9-6d5fe7b7dd9f",
+    "target_ref": "malware-behavior--00f90846-cbd1-4fc5-9233-df5c2bf2a662",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Operation Ke3chang November 2014",
+            "description": "Villeneuve, N., Bennett, J. T., Moran, N., Haq, T., Scott, M., & Geers, K. (2014). OPERATION \u201cKE3CHANG\u201d: Targeted Attacks Against Ministries of Foreign Affairs. Retrieved November 12, 2014.",
+            "url": "https://www.mandiant.com/resources/operation-ke3chang-targeted-attacks-against-ministries-of-foreign-affairs"
+        },
+        {
+            "source_name": "Microsoft NICKEL December 2021",
+            "url": "https://www.microsoft.com/security/blog/2021/12/06/nickel-targeting-government-organizations-across-latin-america-and-europe",
+            "description": "MSTIC. (2021, December 6). NICKEL targeting government organizations across Latin America and Europe. Retrieved March 18, 2022."
+        }
+    ],
+    "description": "[Ke3chang](https://attack.mitre.org/groups/G0004) is known to use 7Zip and RAR with passwords to encrypt data prior to exfiltration.(Citation: Mandiant Operation Ke3chang November 2014)(Citation: Microsoft NICKEL December 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

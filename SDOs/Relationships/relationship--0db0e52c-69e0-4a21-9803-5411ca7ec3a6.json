@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0db0e52c-69e0-4a21-9803-5411ca7ec3a6",
+    "created": "2024-08-13T14:51:21.757901Z",
+    "modified": "2024-08-13T14:51:21.757904Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--2892b9ee-ca9f-4723-b332-0dc6e843a8ae",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to files that may establish persistence by executing malicious content triggered by user inactivity.\n\nNote: Although there are no standard events for file modification, Windows Event ID 4663 (An Attempt Was Made to Access An Object) can be used to alert on attempted accesses of screensaver files (typically ending in a file extension of .scr). ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

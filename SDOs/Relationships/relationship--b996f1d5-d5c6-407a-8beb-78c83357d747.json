@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b996f1d5-d5c6-407a-8beb-78c83357d747",
+    "created": "2024-08-13T14:51:21.916533Z",
+    "modified": "2024-08-13T14:51:21.916535Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--12ee5534-43c8-4419-bdda-c24fecef5595",
+    "target_ref": "malware-behavior--9422fc14-1c43-410d-ab0f-a709b76c72dc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye CARBANAK June 2017",
+            "description": "Bennett, J., Vengerik, B. (2017, June 12). Behind the CARBANAK Backdoor. Retrieved June 11, 2018.",
+            "url": "https://www.fireeye.com/blog/threat-research/2017/06/behind-the-carbanak-backdoor.html"
+        }
+    ],
+    "description": "[Carbanak](https://attack.mitre.org/software/S0030) stores a configuration files in the startup directory to automatically execute commands in order to persist across reboots.(Citation: FireEye CARBANAK June 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

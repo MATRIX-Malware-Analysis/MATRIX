@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--76ee8efc-42c4-49c8-932e-87bb3e87fcc0",
+    "created": "2024-08-13T14:51:23.413899Z",
+    "modified": "2024-08-13T14:51:23.413901Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--c03000e5-1b7e-4105-a78a-cdf09c5aafd0",
+    "target_ref": "malware-behavior--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Docker Images",
+            "url": "https://docs.docker.com/engine/reference/commandline/images/",
+            "description": "Docker. (n.d.). Docker Images. Retrieved April 6, 2021."
+        }
+    ],
+    "description": "In containerized environments, use image IDs and layer hashes to compare images instead of relying only on their names.(Citation: Docker Images) Monitor for the unexpected creation of new resources within your cluster in Kubernetes, especially those created by atypical users.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

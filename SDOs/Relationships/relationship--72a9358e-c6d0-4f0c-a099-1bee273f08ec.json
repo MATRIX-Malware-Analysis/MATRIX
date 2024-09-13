@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--72a9358e-c6d0-4f0c-a099-1bee273f08ec",
+    "created": "2024-08-13T14:51:22.635946Z",
+    "modified": "2024-08-13T14:51:22.635948Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--35a8c4d6-1aeb-43d7-ac3a-b87705fa6567",
+    "target_ref": "malware-behavior--2959d63f-73fd-46a1-abd2-109d7dcede32",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Windows Event Forwarding FEB 2018",
+            "description": "Hardy, T. & Hall, J. (2018, February 15). Use Windows Event Forwarding to help with intrusion detection. Retrieved August 7, 2018.",
+            "url": "https://docs.microsoft.com/windows/security/threat-protection/use-windows-event-forwarding-to-assist-in-intrusion-detection"
+        },
+        {
+            "source_name": "Microsoft 4697 APR 2017",
+            "description": "Miroshnikov, A. & Hall, J. (2017, April 18). 4697(S): A service was installed in the system. Retrieved August 7, 2018.",
+            "url": "https://docs.microsoft.com/windows/security/threat-protection/auditing/event-4697"
+        }
+    ],
+    "description": "Creation of new services may generate an alterable event (ex: Event ID 4697 and/or 7045 (Citation: Microsoft 4697 APR 2017)(Citation: Microsoft Windows Event Forwarding FEB 2018)), especially those associated with unknown/abnormal drivers. New, benign services may be created during installation of new software.\n\nAnalytic 1 - Creation of new services with unusual directory paths such as temporal files in APPDATA\n\n<code> (source=\"*WinEventLog:Security\" EventCode=\"4697\") OR (source=\"*WinEventLog:System\" EventCode=\"7045\") | where ServiceFilePath LIKE \"%APPDATA%\" OR ServiceImage LIKE \"%PUBLIC%\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

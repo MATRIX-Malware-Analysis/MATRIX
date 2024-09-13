@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--24ec1827-89cf-4755-acf2-2f6c7fe8bfa3",
+    "created": "2024-08-13T14:51:21.899635Z",
+    "modified": "2024-08-13T14:51:21.899638Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--e58fd48c-e765-4504-853a-5fa5dcbb2b4f",
+    "target_ref": "malware-behavior--c59801f3-3c5d-4803-b95b-09b99df10799",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ADSecurity Finding Passwords in SYSVOL",
+            "url": "https://adsecurity.org/?p=2288",
+            "description": "Sean Metcalf. (2015, December 28). Finding Passwords in SYSVOL & Exploiting Group Policy Preferences. Retrieved February 17, 2020."
+        },
+        {
+            "source_name": "MS14-025",
+            "url": "https://support.microsoft.com/en-us/help/2962486/ms14-025-vulnerability-in-group-policy-preferences-could-allow-elevati",
+            "description": "Microsoft. (2014, May 13). MS14-025: Vulnerability in Group Policy Preferences could allow elevation of privilege. Retrieved February 17, 2020."
+        }
+    ],
+    "description": "Apply patch KB2962486 which prevents credentials from being stored in GPPs.(Citation: ADSecurity Finding Passwords in SYSVOL)(Citation: MS14-025)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

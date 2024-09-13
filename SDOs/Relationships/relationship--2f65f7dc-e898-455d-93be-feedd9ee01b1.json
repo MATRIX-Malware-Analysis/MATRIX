@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2f65f7dc-e898-455d-93be-feedd9ee01b1",
+    "created": "2024-08-13T14:51:21.952355Z",
+    "modified": "2024-08-13T14:51:21.952357Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--c03000e5-1b7e-4105-a78a-cdf09c5aafd0",
+    "target_ref": "malware-behavior--b5327dd1-6bf9-4785-a199-25bcbd1f4a9d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Shadowbunny VM Defense Evasion",
+            "url": "https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/",
+            "description": "Johann Rehberger. (2020, September 23). Beware of the Shadowbunny - Using virtual machines to persist and evade detections. Retrieved September 22, 2021."
+        }
+    ],
+    "description": "Consider monitoring the size of virtual machines running on the system. Adversaries may create virtual images which are smaller than those of typical virtual machines.(Citation: Shadowbunny VM Defense Evasion) Network adapter information may also be helpful in detecting the use of virtual instances.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

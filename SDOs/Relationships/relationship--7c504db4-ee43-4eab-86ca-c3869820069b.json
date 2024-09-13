@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7c504db4-ee43-4eab-86ca-c3869820069b",
+    "created": "2024-08-13T14:51:22.985917Z",
+    "modified": "2024-08-13T14:51:22.985920Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--543fceb5-cb92-40cb-aacf-6913d4db58bc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Registry Auditing Aug 2016",
+            "description": "Microsoft. (2016, August 31). Registry (Global Object Access Auditing). Retrieved January 31, 2018.",
+            "url": "https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn311461(v=ws.11)"
+        },
+        {
+            "source_name": "Microsoft Audit Registry July 2012",
+            "description": "Microsoft. (2012, July 2). Audit Registry. Retrieved January 31, 2018.",
+            "url": "https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941614(v=ws.10)"
+        },
+        {
+            "source_name": "SpectorOps Subverting Trust Sept 2017",
+            "description": "Graeber, M. (2017, September). Subverting Trust in Windows. Retrieved January 31, 2018.",
+            "url": "https://specterops.io/assets/resources/SpecterOps_Subverting_Trust_in_Windows.pdf"
+        },
+        {
+            "source_name": "SpectorOps Subverting Trust Sept 2017",
+            "description": "Graeber, M. (2017, September). Subverting Trust in Windows. Retrieved January 31, 2018.",
+            "url": "https://specterops.io/assets/resources/SpecterOps_Subverting_Trust_in_Windows.pdf"
+        }
+    ],
+    "description": "Enable the Registry Global Object Access Auditing (Citation: Microsoft Registry Auditing Aug 2016)\u00a0setting in the Advanced Security Audit policy to apply a global system access control list (SACL) and event auditing on modifications to Registry values (sub)keys related to SIPs and trust providers:(Citation: Microsoft Audit Registry July 2012)\n* <code>HKLM\\SOFTWARE\\Microsoft\\Cryptography\\OID</code>\n* <code>HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\OID</code>\n* <code>HKLM\\SOFTWARE\\Microsoft\\Cryptography\\Providers\\Trust</code>\n* <code>HKLM\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\Providers\\Trust</code>\n\n**Note:** As part of this technique, adversaries may attempt to manually edit these Registry keys (ex: Regedit) or utilize the legitimate registration process using\u00a0[Regsvr32](https://attack.mitre.org/techniques/T1218/010).(Citation: SpectorOps Subverting Trust Sept 2017)\n\nPeriodically baseline registered SIPs and trust providers (Registry entries and files on disk), specifically looking for new, modified, or non-Microsoft entries.(Citation: SpectorOps Subverting Trust Sept 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

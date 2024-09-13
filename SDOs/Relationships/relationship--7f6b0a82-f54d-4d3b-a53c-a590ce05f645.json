@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7f6b0a82-f54d-4d3b-a53c-a590ce05f645",
+    "created": "2024-08-13T14:51:23.201353Z",
+    "modified": "2024-08-13T14:51:23.201356Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--a9d4b653-6915-42af-98b2-5758c4ceee56",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may abuse Unix shell commands and scripts for execution. Unix shell usage may be common on administrator, developer, or power user systems, depending on job function. If scripting is restricted for normal users, then any attempt to enable scripts running on a system would be considered suspicious. If scripts are not commonly used on a system, but enabled, scripts running out of cycle from patching or other administrator functions are suspicious. Scripts should be captured from the file system when possible to determine their actions and intent.\n\nNote: this analytic does not include an exhaustive list of potentially suspicious commands that could be executed through a shell interpreter. Instead, it is meant to serve as an example of types of commands that can warrant further investigation.\n\nAnalytic 1 - Unusual command execution \n\n<code> source=\"*Linux:*\" CommandLine=\u201c*sh -c*\u201d AND (CommandLine=\u201c*wget*\u201d OR CommandLine=\u201c*curl*\u201d OR CommandLine=\u201c*nc*\u201d OR CommandLine=\u201c*perl*\u201d)</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

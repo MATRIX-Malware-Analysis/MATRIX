@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ae5af8b1-1a08-45a9-8a4f-3981f40537fe",
+    "created": "2024-08-13T14:51:22.150879Z",
+    "modified": "2024-08-13T14:51:22.150881Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--acc72c70-92b0-4734-9e23-bbc15d792123",
+    "target_ref": "malware-behavior--241814ae-de3f-4656-b49e-f9a80764d4b7",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/07205555/TheNaikonAPT-MsnMM1.pdf",
+            "description": "Baumgartner, K., Golovkin, M.. (2015, May). The MsnMM Campaigns: The Earliest Naikon APT Campaigns. Retrieved April 10, 2019.",
+            "source_name": "Baumgartner Naikon 2015"
+        }
+    ],
+    "description": "[Naikon](https://attack.mitre.org/groups/G0019) uses commands such as <code>netsh advfirewall firewall</code> to discover local firewall settings.(Citation: Baumgartner Naikon 2015)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

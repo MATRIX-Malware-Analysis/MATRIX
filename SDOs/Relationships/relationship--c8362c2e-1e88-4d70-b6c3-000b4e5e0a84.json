@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c8362c2e-1e88-4d70-b6c3-000b4e5e0a84",
+    "created": "2024-08-13T14:51:22.398224Z",
+    "modified": "2024-08-13T14:51:22.398226Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--a4e8e06d-7ed5-496b-b947-5c30317db077",
+    "target_ref": "malware-behavior--54b4c251-1f0e-4eba-ba6b-dbc7a6f6f06b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye APT28",
+            "description": "FireEye. (2015). APT28: A WINDOW INTO RUSSIA\u2019S CYBER ESPIONAGE OPERATIONS?. Retrieved August 19, 2015.",
+            "url": "https://web.archive.org/web/20151022204649/https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/rpt-apt28.pdf"
+        },
+        {
+            "source_name": "Cybersecurity Advisory GRU Brute Force Campaign July 2021",
+            "description": "NSA, CISA, FBI, NCSC. (2021, July). Russian GRU Conducting Global Brute Force Campaign to Compromise Enterprise and Cloud Environments. Retrieved July 26, 2021.",
+            "url": "https://media.defense.gov/2021/Jul/01/2002753896/-1/-1/1/CSA_GRU_GLOBAL_BRUTE_FORCE_CAMPAIGN_UOO158036-21.PDF"
+        }
+    ],
+    "description": "[APT28](https://attack.mitre.org/groups/G0007) has used IMAP, POP3, and SMTP for a communication channel in various implants, including using self-registered Google Mail accounts and later compromised email servers of its victims.(Citation: FireEye APT28)(Citation: Cybersecurity Advisory GRU Brute Force Campaign July 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

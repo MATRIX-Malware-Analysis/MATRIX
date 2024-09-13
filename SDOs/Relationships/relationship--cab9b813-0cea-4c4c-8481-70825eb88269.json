@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cab9b813-0cea-4c4c-8481-70825eb88269",
+    "created": "2024-08-13T14:51:22.817859Z",
+    "modified": "2024-08-13T14:51:22.817861Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--808e6329-ca91-4b87-ac2d-8eadc5f8f327",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Use process monitoring to monitor the execution and arguments of verclsid.exe. Compare recent invocations of verclsid.exe with prior history of known good arguments and loaded files to determine anomalous and potentially adversarial activity. Depending on the environment, it may be unusual for verclsid.exe to have a parent process of a Microsoft Office product. It may also be unusual for verclsid.exe to have any child processes or to make network connections or file modifications.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

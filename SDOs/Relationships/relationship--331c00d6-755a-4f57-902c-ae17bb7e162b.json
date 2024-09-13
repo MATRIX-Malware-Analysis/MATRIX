@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--331c00d6-755a-4f57-902c-ae17bb7e162b",
+    "created": "2024-08-13T14:51:23.580706Z",
+    "modified": "2024-08-13T14:51:23.580708Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--877b4a1a-a4c3-4095-acde-7ec52a31bbc3",
+    "target_ref": "malware-behavior--ae797531-3219-49a4-bccf-324ad7a4c7b2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye APT29",
+            "description": "FireEye Labs. (2015, July). HAMMERTOSS: Stealthy Tactics Define a Russian Cyber Threat Group. Retrieved September 17, 2015.",
+            "url": "https://www2.fireeye.com/rs/848-DID-242/images/rpt-apt29-hammertoss.pdf"
+        },
+        {
+            "source_name": "MSTIC NOBELIUM May 2021",
+            "description": "Microsoft Threat Intelligence Center (MSTIC). (2021, May 27). New sophisticated email-based attack from NOBELIUM. Retrieved May 28, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based-attack-from-nobelium/"
+        }
+    ],
+    "description": "[APT29](https://attack.mitre.org/groups/G0016) has registered algorithmically generated Twitter handles that are used for C2 by malware, such as [HAMMERTOSS](https://attack.mitre.org/software/S0037). [APT29](https://attack.mitre.org/groups/G0016) has also used legitimate web services such as Dropbox and Constant Contact in their operations.(Citation: FireEye APT29)(Citation: MSTIC NOBELIUM May 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

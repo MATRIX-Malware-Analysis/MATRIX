@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--46d76cdb-58fe-4d9d-942e-60cf2f8a36ce",
+    "created": "2024-08-13T14:51:22.571451Z",
+    "modified": "2024-08-13T14:51:22.571454Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43fa6c3e-3139-43da-9bd2-32a4bfe9da4b",
+    "target_ref": "malware-behavior--94cb00a4-b295-4d06-aa2b-5653b9c1be9c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Sygnia Golden SAML",
+            "description": "Sygnia. (2020, December). Detection and Hunting of Golden SAML Attack. Retrieved January 6, 2021.",
+            "url": "https://www.sygnia.co/golden-saml-advisory"
+        }
+    ],
+    "description": "Monitor for the use of Access Tokens to access services such as Email that were created using SAML tokens which do not have corresponding 1202 events in the domain.(Citation: Sygnia Golden SAML)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

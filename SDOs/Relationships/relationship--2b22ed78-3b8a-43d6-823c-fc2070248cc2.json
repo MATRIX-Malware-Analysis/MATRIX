@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2b22ed78-3b8a-43d6-823c-fc2070248cc2",
+    "created": "2024-08-13T14:51:22.202984Z",
+    "modified": "2024-08-13T14:51:22.202987Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--1f9c2bae-b441-4f66-a8af-b65946ee72f2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "This search looks for arguments to certutil.exe indicating the manipulation or extraction of Certificate. This certificate can then be used to sign new authentication tokens specially inside Federated environments such as Windows ADFS.\n\nAnalytic 1 - Certutil.exe Certificate Extraction\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") AND Image= \"C:\\Windows\\System32\\certutil.exe\" AND CommandLine= \"* -exportPFX *\") </code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--591c9fb7-188a-4b03-b9b1-959191d11e3c",
+    "created": "2024-08-13T14:51:23.632904Z",
+    "modified": "2024-08-13T14:51:23.632906Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--4f9ca633-15c5-463c-9724-bdcd54fde541",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Windows Event Forwarding Payne",
+            "url": "https://docs.microsoft.com/en-us/archive/blogs/jepayne/monitoring-what-matters-windows-event-forwarding-for-everyone-even-if-you-already-have-a-siem",
+            "description": "Payne, J. (2015, November 23). Monitoring what matters - Windows Event Forwarding for everyone (even if you already have a SIEM.). Retrieved February 1, 2016."
+        },
+        {
+            "source_name": "Lateral Movement Payne",
+            "url": "https://docs.microsoft.com/en-us/archive/blogs/jepayne/tracking-lateral-movement-part-one-special-groups-and-specific-service-accounts",
+            "description": "Payne, J. (2015, November 26). Tracking Lateral Movement Part One - Special Groups and Specific Service Accounts. Retrieved February 1, 2016."
+        }
+    ],
+    "description": "Monitor for logon behavior (ex: EID 4624 Logon Type 3) using [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user. Ensure that proper logging of accounts used to log into systems is turned on and centrally collected. Windows logging is able to collect success/failure for accounts that may be used to move laterally and can be collected using tools such as Windows Event Forwarding. (Citation: Lateral Movement Payne)(Citation: Windows Event Forwarding Payne)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

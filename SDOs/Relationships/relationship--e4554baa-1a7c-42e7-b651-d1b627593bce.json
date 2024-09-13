@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e4554baa-1a7c-42e7-b651-d1b627593bce",
+    "created": "2024-08-13T14:51:21.860345Z",
+    "modified": "2024-08-13T14:51:21.860348Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--8861073d-d1b8-4941-82ce-dce621d398f0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Protecting Microsoft 365 From On-Premises Attacks",
+            "description": "Microsoft. (2022, August 26). Protecting Microsoft 365 from on-premises attacks. Retrieved February 21, 2023.",
+            "url": "https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/protect-m365-from-on-premises-attacks"
+        }
+    ],
+    "description": "Limit the number of high-privileged domain and cloud accounts, and ensure that these are not used for day-to-day operations. Ensure that on-premises accounts do not have privileged cloud permissions and that isolated, cloud-only accounts are used for managing cloud environments.(Citation: Protecting Microsoft 365 From On-Premises Attacks)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

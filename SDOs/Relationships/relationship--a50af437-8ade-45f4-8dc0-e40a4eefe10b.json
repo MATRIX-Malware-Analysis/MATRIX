@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a50af437-8ade-45f4-8dc0-e40a4eefe10b",
+    "created": "2024-08-13T14:51:22.221447Z",
+    "modified": "2024-08-13T14:51:22.221449Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--101c3a64-9ba5-46c9-b573-5c501053cbca",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Consider monitoring for <code>/usr/libexec/security_authtrampoline</code> executions which may indicate that <code>AuthorizationExecuteWithPrivileges</code> is being executed. MacOS system logs may also indicate when <code>AuthorizationExecuteWithPrivileges</code> is being called.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

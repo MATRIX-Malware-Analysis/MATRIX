@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b6f25098-83a1-48ed-ac63-3e418614b655",
+    "created": "2024-08-13T14:51:23.032346Z",
+    "modified": "2024-08-13T14:51:23.032349Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4c208605-b18d-46fd-ba63-0ea7342cd78d",
+    "target_ref": "malware-behavior--6e6845c2-347a-4a6f-a2d1-b74a18ebd352",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://msdn.microsoft.com/library/windows/desktop/ff919712.aspx",
+            "description": "Microsoft. (n.d.). Dynamic-Link Library Security. Retrieved November 27, 2017.",
+            "source_name": "Microsoft DLL Security"
+        }
+    ],
+    "description": "Ensure safe DLL search mode is enabled <code>HKEY_LOCAL_MACHINE\\\\System\\\\CurrentControlSet\\\\Control\\\\Session Manager\\\\SafeDllSearchMode</code> to mitigate risk that lsass.exe loads a malicious code library. (Citation: Microsoft DLL Security)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

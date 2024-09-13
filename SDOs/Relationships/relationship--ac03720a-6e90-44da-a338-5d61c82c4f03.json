@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ac03720a-6e90-44da-a338-5d61c82c4f03",
+    "created": "2024-08-13T14:51:22.453572Z",
+    "modified": "2024-08-13T14:51:22.453575Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--2c59f067-e6d7-4b90-a3aa-3983e1995a8e",
+    "target_ref": "malware-behavior--4384a47b-0b73-42f4-a4c6-47c9ea9e6235",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unusual queries to the cloud provider's storage service. Activity originating from unexpected sources may indicate improper permissions are set that is allowing access to data. Additionally, detecting failed attempts by a user for a certain object, followed by escalation of privileges by the same user, and access to the same object may be an indication of suspicious activity.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

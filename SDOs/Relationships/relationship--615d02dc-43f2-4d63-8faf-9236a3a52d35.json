@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--615d02dc-43f2-4d63-8faf-9236a3a52d35",
+    "created": "2024-08-13T14:51:23.387220Z",
+    "modified": "2024-08-13T14:51:23.387223Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--c92e3d68-2349-49e4-a341-7edca2deff96",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes of MSBuild.exe. Compare recent invocations of those binaries with prior history of known good arguments and executed binaries to determine anomalous and potentially adversarial activity.\n\nTrusted developer utilities such as MSBuild may be leveraged to run malicious code with elevated privileges. This analytic looks for any instances of msbuild.exe, which will execute any C# code placed within a given XML document; and msxsl.exe, which processes xsl transformation specifications for XML files and will execute a variaty of scripting languages contained within the XSL file. Both of these executables are rarely used outside of Visual Studio.\n\nAnalytic 1 - MSBuild and msxsl\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\")(Image=\"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\*\\\\bin\\\\MSBuild.exe\" OR Image=\"C:\\\\Windows\\\\Microsoft.NET\\\\Framework*\\\\msbuild.exe\" OR Image=\"C:\\\\users\\\\*\\\\appdata\\\\roaming\\\\microsoft\\\\msxsl.exe\") ParentImage!=\"*\\\\Microsoft Visual Studio*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

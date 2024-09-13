@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f4b997e1-b2ba-4140-8e3d-0cccf2f87abe",
+    "created": "2024-08-13T14:51:22.181628Z",
+    "modified": "2024-08-13T14:51:22.181630Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--a13454f0-b05e-44a8-92f0-66dfe685bd10",
+    "target_ref": "malware-behavior--ed7efd4d-ce28-4a19-a8e6-c58011eb2c7a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://researchcenter.paloaltonetworks.com/2016/07/unit42-technical-walkthrough-office-test-persistence-method-used-in-recent-sofacy-attacks/",
+            "description": "Falcone, R. (2016, July 20). Technical Walkthrough: Office Test Persistence Method Used In Recent Sofacy Attacks. Retrieved July 3, 2017.",
+            "source_name": "Palo Alto Office Test Sofacy"
+        }
+    ],
+    "description": "Create the Registry key used to execute it and set the permissions to \"Read Control\" to prevent easy access to the key without administrator permissions or requiring Privilege Escalation.(Citation: Palo Alto Office Test Sofacy)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

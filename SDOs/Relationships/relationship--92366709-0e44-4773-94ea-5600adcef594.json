@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--92366709-0e44-4773-94ea-5600adcef594",
+    "created": "2024-08-13T14:51:22.701262Z",
+    "modified": "2024-08-13T14:51:22.701264Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--910906dd-8c0a-475a-9cc1-5e029e2fad58",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Register-WmiEvent",
+            "url": "https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/register-wmievent?view=powershell-5.1",
+            "description": "Microsoft. (n.d.). Retrieved January 24, 2020."
+        }
+    ],
+    "description": "Monitor executed commands and arguments that can be used to register WMI persistence, such as the <code> Register-WmiEvent</code> [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlet (Citation: Microsoft Register-WmiEvent)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

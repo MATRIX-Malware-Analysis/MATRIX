@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--67d29346-fdb7-4e0c-b84c-684360b222b3",
+    "created": "2024-08-13T14:51:23.317213Z",
+    "modified": "2024-08-13T14:51:23.317215Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SilentBreak Offensive PS Dec 2015",
+            "description": "Christensen, L.. (2015, December 28). The Evolution of Offensive PowerShell Invocation. Retrieved December 8, 2018.",
+            "url": "https://web.archive.org/web/20190508170150/https://silentbreaksecurity.com/powershell-jobs-without-powershell-exe/"
+        },
+        {
+            "source_name": "Sixdub PowerPick Jan 2016",
+            "description": "Warner, J.. (2015, January 6). Inexorable PowerShell \u2013 A Red Teamer\u2019s Tale of Overcoming Simple AppLocker Policies. Retrieved December 8, 2018.",
+            "url": "https://web.archive.org/web/20160327101330/http://www.sixdub.net/?p=367"
+        }
+    ],
+    "description": "Monitor for loading and/or execution of artifacts associated with PowerShell specific assemblies, such as System.Management.Automation.dll (especially to unusual process names/locations).(Citation: Sixdub PowerPick Jan 2016)(Citation: SilentBreak Offensive PS Dec 2015)\n\nAnalytic 1 - Processes loading PowerShell assemblies\n\n<code>source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"7\" | where ModulePath LIKE \"%system.management.automation%\" OR\n   FileDescription LIKE \"%system.management.automation%\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--354f4efe-a617-43ee-b137-88a3d5b1c6d8",
+    "created": "2024-08-13T14:51:23.072175Z",
+    "modified": "2024-08-13T14:51:23.072177Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--e7c10dcf-7905-4f46-8660-d469a9f7ea5f",
+    "target_ref": "malware-behavior--70d81154-b187-45f9-8ec5-295d01255979",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Executable Installers are Vulnerable",
+            "url": "https://seclists.org/fulldisclosure/2015/Dec/34",
+            "description": "Stefan Kanthak. (2015, December 8). Executable installers are vulnerable^WEVIL (case 7): 7z*.exe allows remote code execution with escalation of privilege. Retrieved December 4, 2014."
+        }
+    ],
+    "description": "Turn off UAC's privilege elevation for standard users <code>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]</code> to automatically deny elevation requests, add: <code>\"ConsentPromptBehaviorUser\"=dword:00000000</code>. Consider enabling installer detection for all users by adding: <code>\"EnableInstallerDetection\"=dword:00000001</code>. This will prompt for a password for installation and also log the attempt. To disable installer detection, instead add: <code>\"EnableInstallerDetection\"=dword:00000000</code>. This may prevent potential elevation of privileges through exploitation during the process of UAC detecting the installer, but will allow the installation process to continue without being logged.  (Citation: Executable Installers are Vulnerable)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7ba2e7aa-1e33-4964-8024-e79e622ec952",
+    "created": "2024-08-13T14:51:22.461601Z",
+    "modified": "2024-08-13T14:51:22.461604Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--77eae145-55db-4519-8ae5-77b0c7215d69",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for common formats of RTLO characters within filenames such as \\u202E, [U+202E], and %E2%80%AE. Defenders should also check their analysis tools to ensure they do not interpret the RTLO character and instead print the true name of the file containing it.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

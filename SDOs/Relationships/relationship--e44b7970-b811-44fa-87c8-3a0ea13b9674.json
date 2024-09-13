@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e44b7970-b811-44fa-87c8-3a0ea13b9674",
+    "created": "2024-08-13T14:53:08.881723Z",
+    "modified": "2024-08-13T14:53:08.881725Z",
+    "relationship_type": "uses",
+    "source_ref": "malware--56a380e3-4ebb-4a9f-a80c-a99f5614766d",
+    "target_ref": "malware-behavior--93c4abef-b6f2-439d-a89e-d874e98c76b8",
+    "object_marking_refs": [
+        "marking-definition--093b6375-cd45-4aa3-8f91-6a03ddd7a3d3"
+    ],
+    "external_references": [],
+    "description": "Memory::Change Memory Protection (C0008) -- The malware changes the PE header of the child process to enable write access to that page and writes 18 bytes of buffer at offset 0x40 from the start of svchost.exe in the target child process. The region protection is changed back to \"read only\" to avoid suspicion. [3]",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": ""
+}

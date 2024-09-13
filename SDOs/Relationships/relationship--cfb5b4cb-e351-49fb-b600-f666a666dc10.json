@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cfb5b4cb-e351-49fb-b600-f666a666dc10",
+    "created": "2024-08-13T14:51:22.647798Z",
+    "modified": "2024-08-13T14:51:22.647800Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--69716b06-430b-4749-bced-4a47314da89e",
+    "target_ref": "malware-behavior--1644e709-12d2-41e5-a60f-3470991f5011",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "PWC Cloud Hopper Technical Annex April 2017",
+            "description": "PwC and BAE Systems. (2017, April). Operation Cloud Hopper: Technical Annex. Retrieved April 13, 2017.",
+            "url": "https://www.pwc.co.uk/cyber-security/pdf/pwc-uk-operation-cloud-hopper-technical-annex-april-2017.pdf"
+        },
+        {
+            "source_name": "Github AD-Pentest-Script",
+            "description": "Twi1ight. (2015, July 11). AD-Pentest-Script - wmiexec.vbs. Retrieved June 29, 2017.",
+            "url": "https://github.com/Twi1ight/AD-Pentest-Script/blob/master/wmiexec.vbs"
+        }
+    ],
+    "description": "[menuPass](https://attack.mitre.org/groups/G0045) has used a modified version of pentesting tools wmiexec.vbs and secretsdump.py to dump credentials.(Citation: PWC Cloud Hopper Technical Annex April 2017)(Citation: Github AD-Pentest-Script)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

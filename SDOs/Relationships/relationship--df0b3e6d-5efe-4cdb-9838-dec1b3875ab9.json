@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--df0b3e6d-5efe-4cdb-9838-dec1b3875ab9",
+    "created": "2024-08-13T14:51:21.807729Z",
+    "modified": "2024-08-13T14:51:21.807731Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--f680a1f1-6d91-4cb5-9d83-caaba092a3e5",
+    "target_ref": "malware-behavior--f4599aa0-4f85-4a32-80ea-fc39dc965945",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESET Turla Mosquito May 2018",
+            "description": "ESET Research. (2018, May 22). Turla Mosquito: A shift towards more generic tools. Retrieved July 3, 2018.",
+            "url": "https://www.welivesecurity.com/2018/05/22/turla-mosquito-shift-towards-generic-tools/"
+        },
+        {
+            "url": "https://github.com/rapid7/meterpreter/tree/master/source/extensions/priv/server/elevate",
+            "description": "Rapid7. (2013, November 26). meterpreter/source/extensions/priv/server/elevate/. Retrieved July 8, 2018.",
+            "source_name": "Github Rapid7 Meterpreter Elevate"
+        }
+    ],
+    "description": "[Turla](https://attack.mitre.org/groups/G0010) has used Metasploit to perform reflective DLL injection in order to escalate privileges.(Citation: ESET Turla Mosquito May 2018)(Citation: Github Rapid7 Meterpreter Elevate)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

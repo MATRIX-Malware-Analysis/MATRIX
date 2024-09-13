@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a6d38d93-409e-4323-a190-469b06e0ce66",
+    "created": "2024-08-13T14:48:38.029836Z",
+    "modified": "2024-08-13T14:48:38.02984Z",
+    "relationship_type": "uses",
+    "description": "SynAck lists all the keyboard layouts installed on the victim\u2019s system using GetKeyboardLayoutList API and checks against a hardcoded language code list. If a match if found, SynAck sleeps for 300 seconds and then exits without encrypting files.[1]",
+    "source_ref": "malware--82c92f79-e933-419b-b59d-292d3888c1c1",
+    "target_ref": "malware-behavior--4a76cc42-0594-422e-a4ef-a32caa03b668",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

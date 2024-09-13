@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b183d026-d3d9-4f1e-96c0-0633b2181a88",
+    "created": "2024-08-13T14:51:23.336070Z",
+    "modified": "2024-08-13T14:51:23.336073Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1745383d-45fb-44cc-88e6-f067e0e5527d",
+    "target_ref": "malware-behavior--24286c33-d4a4-4419-85c2-1d094a896c26",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ThreatConnect Infrastructure Dec 2020",
+            "description": "ThreatConnect. (2020, December 15). Infrastructure Research and Hunting: Boiling the Domain Ocean. Retrieved October 12, 2021.",
+            "url": "https://threatconnect.com/blog/infrastructure-research-hunting/"
+        },
+        {
+            "source_name": "ATT ScanBox",
+            "description": "Blasco, J. (2014, August 28). Scanbox: A Reconnaissance Framework Used with Watering Hole Attacks. Retrieved October 19, 2020.",
+            "url": "https://cybersecurity.att.com/blogs/labs-research/scanbox-a-reconnaissance-framework-used-on-watering-hole-attacks"
+        }
+    ],
+    "description": "Internet scanners may be used to look for patterns associated with malicious content designed to collect host hardware information from visitors.(Citation: ThreatConnect Infrastructure Dec 2020)(Citation: ATT ScanBox)\nMuch of this activity may have a very high occurrence and associated false positive rate, as well as potentially taking place outside the visibility of the target organization, making detection difficult for defenders. Detection efforts may be focused on related stages of the adversary lifecycle, such as during Initial Access.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6c886ed7-6a6b-41ff-a7f6-cdcbd157e742",
+    "created": "2024-08-13T14:51:21.795613Z",
+    "modified": "2024-08-13T14:51:21.795615Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--565275d5-fcc3-4b66-b4e7-928e4cac6b8c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Consider monitoring for modifications made to Registry keys associated with code signing policies, such as <code>HKCU\\Software\\Policies\\Microsoft\\Windows NT\\Driver Signing</code>. Modifications to the code signing policy of a system are likely to be rare.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

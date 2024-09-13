@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--320ddeb6-7234-4cb2-b317-b50f6029baad",
+    "created": "2024-08-13T14:51:23.575148Z",
+    "modified": "2024-08-13T14:51:23.575150Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--ed7135aa-c94a-404d-9f3b-4274b4bd9546",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpecterOps Certified Pre Owned",
+            "description": "Schroeder, W. & Christensen, L. (2021, June 22). Certified Pre-Owned - Abusing Active Directory Certificate Services. Retrieved August 2, 2022.",
+            "url": "https://web.archive.org/web/20220818094600/https://specterops.io/assets/resources/Certified_Pre-Owned.pdf"
+        }
+    ],
+    "description": "Monitor certificate-based authentication events, such as EID 4768 when an AD CS certificate is used for Kerberos authentication (especially those that don\u2019t correspond to legitimately issued certificates) or when Secure Channel (`Schannel`, associated with SSL/TLS) is highlighted as the `Logon Process` associated with an EID 4624 logon event.(Citation: SpecterOps Certified Pre Owned)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

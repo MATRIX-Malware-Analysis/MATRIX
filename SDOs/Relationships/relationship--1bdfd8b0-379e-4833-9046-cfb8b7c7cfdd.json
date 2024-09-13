@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1bdfd8b0-379e-4833-9046-cfb8b7c7cfdd",
+    "created": "2024-08-13T14:51:23.168154Z",
+    "modified": "2024-08-13T14:51:23.168157Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--81deca52-bf4a-4c61-95e1-a8bd4de07103",
+    "target_ref": "malware-behavior--ba20ddf3-5194-4a06-87f4-3f29740e02a2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ATT TeamTNT Chimaera September 2020",
+            "description": "AT&T Alien Labs. (2021, September 8). TeamTNT with new campaign aka Chimaera. Retrieved September 22, 2021.",
+            "url": "https://cybersecurity.att.com/blogs/labs-research/teamtnt-with-new-campaign-aka-chimaera"
+        },
+        {
+            "source_name": "Trend Micro TeamTNT",
+            "description": "Fiser, D. Oliveira, A. (n.d.). Tracking the Activities of TeamTNT A Closer Look at a Cloud-Focused Malicious Actor Group. Retrieved September 22, 2021.",
+            "url": "https://documents.trendmicro.com/assets/white_papers/wp-tracking-the-activities-of-teamTNT.pdf"
+        }
+    ],
+    "description": "[TeamTNT](https://attack.mitre.org/groups/G0139) has run <code>netstat -anp</code> to search for rival malware connections.(Citation: Trend Micro TeamTNT) [TeamTNT](https://attack.mitre.org/groups/G0139) has also used `libprocesshider` to modify <code>/etc/ld.so.preload</code>.(Citation: ATT TeamTNT Chimaera September 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

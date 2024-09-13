@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a504c4ec-8ade-468a-9d10-b0854fa26a6e",
+    "created": "2024-08-13T14:51:23.858613Z",
+    "modified": "2024-08-13T14:51:23.858616Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--740c2329-1c22-4060-b575-47e1ed390b8c",
+    "target_ref": "malware-behavior--c8aae1bb-cfdd-4021-93fc-e7c70256bbf0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "iOS Universal Links",
+            "url": "https://developer.apple.com/ios/universal-links/",
+            "description": "Apple. (n.d.). Universal Links for Developers. Retrieved September 11, 2020."
+        },
+        {
+            "source_name": "Android App Links",
+            "url": "https://developer.android.com/training/app-links/verify-site-associations",
+            "description": "Google. (n.d.). Verify Android App Links. Retrieved September 11, 2020."
+        },
+        {
+            "source_name": "IETF-PKCE",
+            "url": "https://tools.ietf.org/html/rfc7636",
+            "description": "N. Sakimura, J. Bradley, and N. Agarwal. (2015, September). IETF RFC 7636: Proof Key for Code Exchange by OAuth Public Clients. Retrieved December 21, 2016."
+        }
+    ],
+    "description": "Developers should use Android App Links(Citation: Android App Links) and iOS Universal Links(Citation: iOS Universal Links) to provide a secure binding between URIs and applications, preventing malicious applications from intercepting redirections. Additionally, for OAuth use cases, PKCE(Citation: IETF-PKCE) should be used to prevent use of stolen authorization codes. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

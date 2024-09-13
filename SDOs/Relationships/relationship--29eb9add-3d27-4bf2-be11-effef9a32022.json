@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--29eb9add-3d27-4bf2-be11-effef9a32022",
+    "created": "2024-08-13T14:51:22.734480Z",
+    "modified": "2024-08-13T14:51:22.734482Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--84633bbb-21df-498a-beb3-b7c224b0f3a8",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitoring module loads may generate a significant amount of data and may not be directly useful for defense unless collected under specific circumstances, since benign use of shared modules load functions are common and may be difficult to distinguish from malicious behavior. Legitimate software will likely only need to load routine, bundled, or system modules such that deviation from known module loads may be suspicious\n\n Limiting module loads to trusted directories, such as <code>%SystemRoot%</code> and <code>%ProgramFiles%</code> on Windows, may protect against module loads from unsafe paths.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

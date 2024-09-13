@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--44565c44-d582-4e53-89a9-afe974810a43",
+    "created": "2024-08-13T14:51:23.495488Z",
+    "modified": "2024-08-13T14:51:23.495490Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--04ee0cb7-dac3-4c6c-9387-4c6aa096f4cf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to files that may use hidden windows to conceal malicious activity from the plain sight of users. In MacOS, plist files are ASCII text files with a specific format, so they're relatively easy to parse. File monitoring can check for the <code>apple.awt.UIElement</code> or any other suspicious plist tag in plist files and flag them.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

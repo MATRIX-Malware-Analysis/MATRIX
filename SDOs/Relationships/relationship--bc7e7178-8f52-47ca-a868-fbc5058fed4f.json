@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bc7e7178-8f52-47ca-a868-fbc5058fed4f",
+    "created": "2024-08-13T14:51:23.164713Z",
+    "modified": "2024-08-13T14:51:23.164715Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--f2857333-11d4-45bf-b064-2c28d8525be5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft ADS Mar 2014",
+            "description": "Marlin, J. (2013, March 24). Alternate Data Streams in NTFS. Retrieved March 21, 2018.",
+            "url": "https://blogs.technet.microsoft.com/askcore/2013/03/24/alternate-data-streams-in-ntfs/"
+        },
+        {
+            "source_name": "Oddvar Moe ADS1 Jan 2018",
+            "description": "Moe, O. (2018, January 14). Putting Data in Alternate Data Streams and How to Execute It. Retrieved June 30, 2018.",
+            "url": "https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/"
+        },
+        {
+            "source_name": "Oddvar Moe ADS2 Apr 2018",
+            "description": "Moe, O. (2018, April 11). Putting Data in Alternate Data Streams and How to Execute It - Part 2. Retrieved June 30, 2018.",
+            "url": "https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/"
+        }
+    ],
+    "description": "There are many ways to create and interact with ADSs using Windows utilities. Monitor for operations (execution, copies, etc.) with file names that contain colons. This syntax (ex: <code>file.ext:ads[.ext]</code>) is commonly associated with ADSs. (Citation: Microsoft ADS Mar 2014) (Citation: Oddvar Moe ADS1 Jan 2018) (Citation: Oddvar Moe ADS2 Apr 2018) For a more exhaustive list of utilities that can be used to execute and create ADSs, see https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

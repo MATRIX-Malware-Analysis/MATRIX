@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--026c0707-937b-4d5a-9d1c-4dd5f1e5d9bc",
+    "created": "2024-08-13T14:51:23.241744Z",
+    "modified": "2024-08-13T14:51:23.241746Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--cfa50fba-e49f-4105-b96a-aca82e4b659c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments for actions that could be taken to gather system and network information. Information may also be acquired through Windows system management tools such as Windows Management Instrumentation and PowerShell.\n\nNote: Commands can also be obtained from Payload event field for PowerShell event id 4103. For PowerShell Module logging event id 4103, enable logging for module Microsoft.PowerShell.Management.\n\nAnalytic 1 - Suspicious Commands\n\n<code>source=WinEventLog:\"*Microsoft-Windows-PowerShell/Operational\" EventCode=\"4103\" | where CommandLine LIKE \"%Get-Process%\" AND CommandLine LIKE \"%mainWindowTitle%\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

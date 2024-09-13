@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--22defe7b-159b-4ce9-87ac-5b939a0e6c2d",
+    "created": "2024-08-13T14:51:23.400900Z",
+    "modified": "2024-08-13T14:51:23.400902Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--2892b9ee-ca9f-4723-b332-0dc6e843a8ae",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor newly executed processes that may establish persistence by executing malicious content triggered by user inactivity.\n\nAnalytic 1 - HKCU\\Control Panel\\Desktop registry key\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") | where CommandLine LIKE \"%reg%\" AND CommandLine LIKE \"%add%\" AND CommandLine LIKE \"%HKCU\\Control Panel\\Desktop\\%\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--74d51f54-82de-4111-b90a-76b769364d1b",
+    "created": "2024-08-13T14:48:38.867219Z",
+    "modified": "2024-08-13T14:48:38.867223Z",
+    "relationship_type": "uses",
+    "description": "COATHANGER copies the malicious file /data2/.bd.key/preload.so to /lib/preload.so, then launches a child process that executes the malicious file /data2/.bd.key/authd as /bin/authd with the arguments /lib/preload.so reboot newreboot 1.[1] This injects the malicious preload.so file into the process with PID 1, and replaces its reboot function with the malicious newreboot function for persistence.",
+    "source_ref": "malware--27399235-2566-412c-bd49-4de2ffe3b7cb",
+    "target_ref": "malware-behavior--2c82aca7-2f32-41e5-9332-aa750c792100",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

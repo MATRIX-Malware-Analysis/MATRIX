@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e37c09cf-b376-401b-9702-faf0cac309f2",
+    "created": "2024-08-13T14:51:22.960560Z",
+    "modified": "2024-08-13T14:51:22.960562Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--7decb26c-715c-40cf-b7e0-026f7d7cc215",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "AADInternals - BPRT",
+            "url": "https://o365blog.com/post/bprt/",
+            "description": "Dr. Nestori Syynimaa. (2021, January 31). BPRT unleashed: Joining multiple devices to Azure AD and Intune. Retrieved March 4, 2022."
+        },
+        {
+            "source_name": "Microsoft Manage Device Identities",
+            "url": "https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal",
+            "description": "Microsoft. (2022, February 18). Manage device identities by using the Azure portal. Retrieved April 13, 2022."
+        }
+    ],
+    "description": "\nAzure AD creates several log entries when new devices are enrolled, which can be monitored for unexpected device registrations.(Citation: AADInternals - BPRT) Additionally, joined devices can be viewed via the Azure AD portal.(Citation: Microsoft Manage Device Identities)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5bcbb023-e486-4b09-8817-568984253cfa",
+    "created": "2024-08-13T14:48:36.704109Z",
+    "modified": "2024-08-13T14:48:36.704113Z",
+    "relationship_type": "uses",
+    "description": "DarkGate overrides the %windir% environment variable by setting a Registry key, HKEY_CURRENT_User\\Environment\\windir, to an alternate command to execute a malicious AutoIt script. This allows DarkGate to run every time the scheduled task DiskCleanup is executed as this uses the path value %windir%\\system32\\cleanmgr.exe for execution.[1]",
+    "source_ref": "malware--59657abd-5642-488d-99b6-f83cc439d9d7",
+    "target_ref": "malware-behavior--0f11c0e2-7f09-4124-bfe4-d32b799aaa44",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--714eb13e-8939-442b-a760-4949b9e9c681",
+    "created": "2024-08-13T14:51:21.956399Z",
+    "modified": "2024-08-13T14:51:21.956401Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--494fba0c-e07f-43cd-a5b4-9c8eb83df72e",
+    "target_ref": "malware-behavior--f98e4e6e-5cc4-477a-8c4f-047e41c43eba",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CISA MAR-10292089-1.v2 TAIDOOR August 2021",
+            "url": "https://us-cert.cisa.gov/ncas/analysis-reports/ar20-216a",
+            "description": "CISA, FBI, DOD. (2021, August). MAR-10292089-1.v2 \u2013 Chinese Remote Access Trojan: TAIDOOR. Retrieved August 24, 2021."
+        }
+    ],
+    "description": "[Taidoor](https://attack.mitre.org/software/S0011) can use <code>GetLocalTime</code> and <code>GetSystemTime</code> to collect system time.(Citation: CISA MAR-10292089-1.v2 TAIDOOR August 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1f2a2dde-9f8d-4b5a-982f-65005c96a55e",
+    "created": "2024-08-13T14:51:23.115497Z",
+    "modified": "2024-08-13T14:51:23.115499Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b06bbeb3-09bf-4434-a18d-77cedaaf2cee",
+    "target_ref": "malware-behavior--e6415f09-df0e-48de-9aba-928c902b7549",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://support.microsoft.com/en-us/kb/967715",
+            "description": "Microsoft. (n.d.). How to disable the Autorun functionality in Windows. Retrieved April 20, 2016.",
+            "source_name": "Microsoft Disable Autorun"
+        },
+        {
+            "url": "https://technet.microsoft.com/en-us/library/cc772540(v=ws.10).aspx",
+            "description": "Microsoft. (2007, August 31). https://technet.microsoft.com/en-us/library/cc771759(v=ws.10).aspx. Retrieved April 20, 2016.",
+            "source_name": "TechNet Removable Media Control"
+        }
+    ],
+    "description": "Disable Autorun if it is unnecessary. (Citation: Microsoft Disable Autorun) Disallow or restrict removable media at an organizational policy level if they are not required for business operations. (Citation: TechNet Removable Media Control)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

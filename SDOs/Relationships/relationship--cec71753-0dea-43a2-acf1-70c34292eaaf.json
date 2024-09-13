@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cec71753-0dea-43a2-acf1-70c34292eaaf",
+    "created": "2024-08-13T14:51:22.177765Z",
+    "modified": "2024-08-13T14:51:22.177768Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--57de7736-b66c-4bc1-bc83-f3d3ac4b6c14",
+    "target_ref": "malware-behavior--50e9e8c2-1a9b-4544-9839-f5b1e5b13644",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://researchcenter.paloaltonetworks.com/2018/08/unit42-darkhydrus-uses-phishery-harvest-credentials-middle-east/",
+            "description": "Falcone, R. (2018, August 07). DarkHydrus Uses Phishery to Harvest Credentials in the Middle East. Retrieved August 10, 2018.",
+            "source_name": "Unit 42 Phishery Aug 2018"
+        }
+    ],
+    "description": "[DarkHydrus](https://attack.mitre.org/groups/G0079) used an open-source tool, Phishery, to inject malicious remote template URLs into Microsoft Word documents and then sent them to victims to enable [Forced Authentication](https://attack.mitre.org/techniques/T1187).(Citation: Unit 42 Phishery Aug 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

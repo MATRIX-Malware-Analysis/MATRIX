@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--93f51e36-0cde-45ae-b53a-432416b8f9c0",
+    "created": "2024-08-13T14:51:22.970523Z",
+    "modified": "2024-08-13T14:51:22.970525Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--b7fe1ca9-439b-4542-bfbb-c35b6c7335fd",
+    "target_ref": "malware-behavior--04ee0cb7-dac3-4c6c-9387-4c6aa096f4cf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MalwareBytes LazyScripter Feb 2021",
+            "url": "https://www.malwarebytes.com/resources/files/2021/02/lazyscripter.pdf",
+            "description": "Jazi, H. (2021, February). LazyScripter: From Empire to double RAT. Retrieved November 24, 2021."
+        }
+    ],
+    "description": "[Koadic](https://attack.mitre.org/software/S0250) has used the command <code>Powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden</code> to hide its window.(Citation: MalwareBytes LazyScripter Feb 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

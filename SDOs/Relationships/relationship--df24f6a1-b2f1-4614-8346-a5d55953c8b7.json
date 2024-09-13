@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--df24f6a1-b2f1-4614-8346-a5d55953c8b7",
+    "created": "2024-08-13T14:51:22.357136Z",
+    "modified": "2024-08-13T14:51:22.357139Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--a4e8e06d-7ed5-496b-b947-5c30317db077",
+    "target_ref": "malware-behavior--bc0f5e80-91c0-4e04-9fbb-e4e332c85dae",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESET Sednit Part 1",
+            "description": "ESET. (2016, October). En Route with Sednit - Part 1: Approaching the Target. Retrieved November 8, 2016.",
+            "url": "http://www.welivesecurity.com/wp-content/uploads/2016/10/eset-sednit-part1.pdf"
+        },
+        {
+            "source_name": "ESET Zebrocy May 2019",
+            "url": "https://www.welivesecurity.com/2019/05/22/journey-zebrocy-land/",
+            "description": "ESET Research. (2019, May 22). A journey to Zebrocy land. Retrieved June 20, 2019."
+        }
+    ],
+    "description": "[APT28](https://attack.mitre.org/groups/G0007) has used COM hijacking for persistence by replacing the legitimate <code>MMDeviceEnumerator</code> object with a payload.(Citation: ESET Sednit Part 1)(Citation: ESET Zebrocy May 2019)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

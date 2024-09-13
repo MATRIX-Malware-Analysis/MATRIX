@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2beaf736-4589-43ab-984c-9d8515c3e222",
+    "created": "2024-08-13T14:51:22.883358Z",
+    "modified": "2024-08-13T14:51:22.883360Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--8a62000f-021f-4220-9716-2e76d9627b69",
+    "target_ref": "malware-behavior--75edafa6-d7b9-4919-9bce-2fbd51a232bf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft 365 Defender Solorigate",
+            "description": "Microsoft 365 Defender Team. (2020, December 28). Using Microsoft 365 Defender to protect against Solorigate. Retrieved January 7, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2020/12/28/using-microsoft-365-defender-to-coordinate-protection-against-solorigate/"
+        },
+        {
+            "source_name": "Secureworks IRON RITUAL Profile",
+            "description": "Secureworks CTU. (n.d.). IRON RITUAL. Retrieved February 24, 2022.",
+            "url": "https://www.secureworks.com/research/threat-profiles/iron-ritual"
+        }
+    ],
+    "description": "During the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024), [APT29](https://attack.mitre.org/groups/G0016) used forged SAML tokens that allowed the actors to impersonate users and bypass MFA, enabling [APT29](https://attack.mitre.org/groups/G0016) to access enterprise cloud applications and services.(Citation: Microsoft 365 Defender Solorigate)(Citation: Secureworks IRON RITUAL Profile)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

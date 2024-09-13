@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--88207471-d8b5-4422-80b3-62e544ec323d",
+    "created": "2024-08-13T14:51:23.341356Z",
+    "modified": "2024-08-13T14:51:23.341359Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--e8a0a025-3601-4755-abfb-8d08283329fb",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may circumvent TCC mechanisms designed to control access to elevated privileges. macOS system logs may also indicate when `AuthorizationExecuteWithPrivileges` is being called.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d28eb6d9-6579-46c7-804f-c0a33eadc9f1",
+    "created": "2024-08-13T14:51:22.481613Z",
+    "modified": "2024-08-13T14:51:22.481615Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--1b51f5bc-b97a-498a-8dbd-bc6b1901bf19",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may attempt to get information about running processes on a system. To be effective in deciphering malicious and benign activity, the full command line is essential. Similarly, having information about the parent process can help with making decisions and tuning to an environment.\n\nBecause these commands are built in, they may be run frequently by power users or even by normal users. Thus, an analytic looking at this information should have well-defined white- or blacklists, and should consider looking at an anomaly detection approach, so that this information can be learned dynamically.\nWithin the built-in Windows Commands:\n\n- hostname\n- ipconfig\n- net\n- quser\n- qwinsta\n- sc\u00a0with flags\u00a0query,\u00a0queryex,\u00a0qc\n- systeminfo\n- tasklist\n- dsquery\n- whoami\nNote: To be effective in deciphering malicious and benign activity, the full command line is essential. Similarly, having information about the parent process can help with making decisions and tuning to an environment.\n\nAnalytic 1 - Host Discovery Commands\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") (Image=\"C:\\\\Windows\\\\*\\\\hostname.exe\" OR Image=\"C:\\\\Windows\\\\*\\\\ipconfig.exe\" OR Image=\"C:\\\\Windows\\\\*\\\\net.exe\" OR Image=\"C:\\\\Windows\\\\*\\\\quser.exe\" OR Image=\"C:\\\\Windows\\\\*\\\\qwinsta.exe\" OR (Image=\"C:\\\\Windows\\\\*\\\\sc.exe\" AND (CommandLine=\"* query *\" OR CommandLine=\"* qc *\")) OR Image=\"C:\\\\Windows\\\\*\\\\systeminfo.exe\" OR Image=\"C:\\\\Windows\\\\*\\\\tasklist.exe\" OR Image=\"C:\\\\Windows\\\\*\\\\whoami.exe\")|stats values(Image) as \"Images\" values(CommandLine) as \"Command Lines\" by ComputerName</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

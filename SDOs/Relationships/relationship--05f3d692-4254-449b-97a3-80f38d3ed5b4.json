@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--05f3d692-4254-449b-97a3-80f38d3ed5b4",
+    "created": "2024-08-13T14:51:22.217479Z",
+    "modified": "2024-08-13T14:51:22.217481Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--ec7ff2cb-9ce8-4e9b-9b5c-8134ec00e784",
+    "target_ref": "malware-behavior--5666e9a6-d2be-43ed-823f-b46ebc26dd21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Unit 42 Palo Alto Ransomware in Public Clouds 2022",
+            "description": "Jay Chen. (2022, May 16). A Look Into Public Clouds From the Ransomware Actor's Perspective. Retrieved March 21, 2023.",
+            "url": "https://unit42.paloaltonetworks.com/ransomware-in-public-clouds/"
+        },
+        {
+            "source_name": "Ready.gov IT DRP",
+            "description": "Ready.gov. (n.d.). IT Disaster Recovery Plan. Retrieved March 15, 2019.",
+            "url": "https://www.ready.gov/business/implementation/IT"
+        }
+    ],
+    "description": "Consider implementing IT disaster recovery plans that contain procedures for taking regular data backups that can be used to restore organizational data.(Citation: Ready.gov IT DRP) Ensure backups are stored off system and is protected from common methods adversaries may use to gain access and destroy the backups to prevent recovery. In cloud environments, enable versioning on storage objects where possible, and copy backups to other accounts or regions to isolate them from the original copies.(Citation: Unit 42 Palo Alto Ransomware in Public Clouds 2022)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

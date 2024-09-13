@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c47909df-c2d1-4565-9794-b7a76ff8d07f",
+    "created": "2024-08-13T14:51:22.243249Z",
+    "modified": "2024-08-13T14:51:22.243251Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b89299c3-4d86-470c-b361-4b42146821ea",
+    "target_ref": "malware-behavior--ed7135aa-c94a-404d-9f3b-4274b4bd9546",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpecterOps Certified Pre Owned",
+            "description": "Schroeder, W. & Christensen, L. (2021, June 22). Certified Pre-Owned - Abusing Active Directory Certificate Services. Retrieved August 2, 2022.",
+            "url": "https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf"
+        }
+    ],
+    "description": "Ensure certificate authorities (CA) are properly secured, including treating CA servers (and other resources hosting CA certificates) as tier 0 assets. Harden abusable CA settings and attributes.\n\nFor example, consider disabling the usage of AD CS certificate SANs within relevant authentication protocol settings to enforce strict user mappings and prevent certificates from authenticating as other identifies.(Citation: SpecterOps Certified Pre Owned) Also consider enforcing CA Certificate Manager approval for the templates that include SAN as an issuance requirement.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

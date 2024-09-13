@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--717a0419-81db-4f65-91f2-2516aeb4d7ca",
+    "created": "2024-08-13T14:51:21.890529Z",
+    "modified": "2024-08-13T14:51:21.890531Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--17b8e63d-6ac1-45f3-8cb3-7ad7411cef56",
+    "target_ref": "malware-behavior--36c21715-0662-4b7c-bc5a-500d3eb151f9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MITRE Trustworthy Firmware Measurement",
+            "url": "http://www.mitre.org/publications/project-stories/going-deep-into-the-bios-with-mitre-firmware-security-research",
+            "description": "Upham, K. (2014, March). Going Deep into the BIOS with MITRE Firmware Security Research. Retrieved January 5, 2016."
+        }
+    ],
+    "description": "Monitor for changes made to the firmware for unexpected modifications to settings and/or data. (Citation: MITRE Trustworthy Firmware Measurement)\u00a0Log attempts to read/write to BIOS and compare against known patching behavior.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--229f73d7-4684-43c0-9218-7819b11de576",
+    "created": "2024-08-13T14:51:22.637462Z",
+    "modified": "2024-08-13T14:51:22.637464Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--0cf55441-b176-4332-89e7-2c4c7799d0ff",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft BEC Campaign",
+            "description": "Carr, N., Sellmer, S. (2021, June 14). Behind the scenes of business email compromise: Using cross-domain threat data to disrupt a large BEC campaign. Retrieved June 15, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2021/06/14/behind-the-scenes-of-business-email-compromise-using-cross-domain-threat-data-to-disrupt-a-large-bec-infrastructure/"
+        },
+        {
+            "source_name": "Microsoft Manage Mail Flow Rules 2023",
+            "description": "Microsoft. (2023, February 22). Manage mail flow rules in Exchange Online. Retrieved March 13, 2023.",
+            "url": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules"
+        },
+        {
+            "source_name": "Mandiant Cloudy Logs 2023",
+            "description": "Pany, D. & Hanley, C. (2023, May 3). Cloudy with a Chance of Bad Logs: Cloud Platform Log Configurations to Consider in Investigations. Retrieved October 16, 2023.",
+            "url": "https://www.mandiant.com/resources/blog/cloud-bad-log-configurations"
+        }
+    ],
+    "description": "On Windows and Exchange systems, monitor for creation or modification of suspicious inbox rules through the use of the `New-InboxRule`, `Set-InboxRule`, `New-TransportRule`, and `Set-TransportRule` PowerShell cmdlets.(Citation: Microsoft BEC Campaign)(Citation: Microsoft Manage Mail Flow Rules 2023)(Citation: Mandiant Cloudy Logs 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

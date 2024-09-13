@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3b07dfea-567c-49b3-85a0-e3cfe0a78952",
+    "created": "2024-08-13T14:51:22.975832Z",
+    "modified": "2024-08-13T14:51:22.975834Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--2db31dcd-54da-405d-acef-b9129b816ed6",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed network connections (typically port 22) that may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into remote machines using Secure Shell (SSH). Use of SSH may be legitimate depending on the environment and how it\u2019s used. Other factors, such as access patterns and activity that occurs after a remote login, may indicate suspicious or malicious behavior with SSH.\n\nNetwork Analysis Frameworks such as Zeek can be used to capture, decode, and alert on network traffic. Accordingly, they can be used to look for the creation of SSH network connections.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

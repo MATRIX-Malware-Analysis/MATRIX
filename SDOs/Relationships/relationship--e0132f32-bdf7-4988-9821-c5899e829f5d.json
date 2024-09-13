@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e0132f32-bdf7-4988-9821-c5899e829f5d",
+    "created": "2024-08-13T14:48:39.690539Z",
+    "modified": "2024-08-13T14:48:39.690542Z",
+    "relationship_type": "uses",
+    "description": "Dvmap replaces /system/bin/ip with a malicious version. Dvmap can inject code by patching libdmv.so or libandroid_runtime.so, depending on the Android OS version. Both libraries are related to the Dalvik and ART runtime environments. The patched functions can only call /system/bin/ip, which was replaced with the malicious version.[1]",
+    "source_ref": "malware--de4439b4-bb4a-4f34-8412-820efdf241bc",
+    "target_ref": "malware-behavior--6a4b2be8-ba69-47f2-921d-5e0bc4a38f57",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

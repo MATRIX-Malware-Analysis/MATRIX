@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c539ad7d-c336-427b-8da2-3da48c440e4e",
+    "created": "2024-08-13T14:51:22.850700Z",
+    "modified": "2024-08-13T14:51:22.850703Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--670a4d75-103b-4b14-8a9e-4652fa795edd",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Limit privileges of user accounts and groups so that only authorized administrators can interact with service changes and service binary target path locations. Deny execution from user directories such as file download directories and temp directories where able.\n\nEnsure that proper permissions and directory access control are set to deny users the ability to write files to the top-level directory <code>C:</code> and system directories, such as <code>C:\\Windows\\</code>, to reduce places where malicious files could be placed for execution.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

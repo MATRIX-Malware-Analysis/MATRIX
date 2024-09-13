@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--72ce172a-7a3d-490e-bddc-55ad5b5e62f4",
+    "created": "2024-08-13T14:51:21.726986Z",
+    "modified": "2024-08-13T14:51:21.726989Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--84a7e21a-bbd9-47f3-87b3-4b08248bd820",
+    "target_ref": "malware-behavior--73171c75-cbc0-476c-a56b-5db90299b3e1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "DBAPPSecurity BITTER zero-day Feb 2021",
+            "url": "https://ti.dbappsecurity.com.cn/blog/articles/2021/02/10/windows-kernel-zero-day-exploit-is-used-by-bitter-apt-in-targeted-attack/",
+            "description": "JinQuan, MaDongZe, TuXiaoYi, and LiHao. (2021, February 10). Windows kernel zero-day exploit (CVE-2021-1732) is used by BITTER APT in targeted attack. Retrieved June 1, 2022."
+        },
+        {
+            "source_name": "Microsoft CVE-2021-1732 Feb 2021",
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1732",
+            "description": "Microsoft. (2018, February 9). Windows Win32k Elevation of Privilege Vulnerability CVE-2021-1732. Retrieved June 1, 2022."
+        }
+    ],
+    "description": "[BITTER](https://attack.mitre.org/groups/G1002) has exploited CVE-2021-1732 for privilege escalation.(Citation: DBAPPSecurity BITTER zero-day Feb 2021)(Citation: Microsoft CVE-2021-1732 Feb 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

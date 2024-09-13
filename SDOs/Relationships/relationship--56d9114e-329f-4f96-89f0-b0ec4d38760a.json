@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--56d9114e-329f-4f96-89f0-b0ec4d38760a",
+    "created": "2024-08-13T14:51:22.771442Z",
+    "modified": "2024-08-13T14:51:22.771445Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--51dea151-0898-4a45-967c-3ebee0420484",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed network connections (typically over port 3389) that may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a computer using the Remote Desktop Protocol (RDP). The adversary may then perform actions as the logged-on user. Other factors, such as access patterns and activity that occurs after a remote login, may indicate suspicious or malicious behavior with RDP.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

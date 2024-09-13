@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--262dc108-20b7-40a8-ba52-421675dc1b7a",
+    "created": "2024-08-13T14:51:22.162252Z",
+    "modified": "2024-08-13T14:51:22.162254Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--bfbd32ac-a63f-4c57-b92b-43e4746fc1e5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may use scripts automatically executed at boot or logon initialization to establish persistence. Adversaries may schedule software to run whenever a user logs into the system; this is done to establish persistence and sometimes for lateral movement. This trigger is established through the registry key <code>HKEY_CURRENT_USER\\EnvironmentUserInitMprLogonScript</code>. This signature looks edits to existing keys or creation of new keys in that path. Users purposefully adding benign scripts to this path will result in false positives; that case is rare, however. There are other ways of running a script at startup or login that are not covered in this signature. Note that this signature overlaps with the Windows Sysinternals Autoruns tool, which would also show changes to this registry path.\n\nAnalytic 1 - Boot or Logon Initialization Scripts\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") AND CommandLine=\"*reg*add*\\Environment*UserInitMprLogonScript\" </code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

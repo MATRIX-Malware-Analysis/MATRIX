@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1c88be5a-b457-4b7c-b6bd-403116a99dbd",
+    "created": "2024-08-13T14:48:38.574845Z",
+    "modified": "2024-08-13T14:48:38.574849Z",
+    "relationship_type": "uses",
+    "description": "RAPIDPULSE listens for specific HTTP query parameters in received communications. If specific parameters match, a hard-coded RC4 key is used to decrypt the HTTP query paremter hmacTime. This decrypts to a filename that is then open, read, encrypted with the same RC4 key, base64-encoded, written to standard out, then passed as a response to the HTTP request.[1]",
+    "source_ref": "malware--efef7ed8-8a66-4adc-b317-b8186862c65b",
+    "target_ref": "malware-behavior--6dec538a-ed02-4b1f-85de-3bee8396ff83",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

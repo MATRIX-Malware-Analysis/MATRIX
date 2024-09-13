@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5ee583aa-2d4d-4ff2-8ba7-55cc58d6525b",
+    "created": "2024-08-13T14:51:22.819722Z",
+    "modified": "2024-08-13T14:51:22.819724Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--dcd063a6-49cb-4ead-ba7e-66d21109f859",
+    "target_ref": "malware-behavior--d5a69cfb-fc2a-46cb-99eb-74b236db5061",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESET Telebots Dec 2016",
+            "url": "https://www.welivesecurity.com/2016/12/13/rise-telebots-analyzing-disruptive-killdisk-attacks/",
+            "description": "Cherepanov, A.. (2016, December 13). The rise of TeleBots: Analyzing disruptive KillDisk attacks. Retrieved June 10, 2020."
+        },
+        {
+            "source_name": "Dragos Crashoverride 2018",
+            "url": "https://www.dragos.com/wp-content/uploads/CRASHOVERRIDE2018.pdf",
+            "description": "Joe Slowik. (2018, October 12). Anatomy of an Attack: Detecting and Defeating CRASHOVERRIDE. Retrieved December 18, 2020."
+        }
+    ],
+    "description": "[Sandworm Team](https://attack.mitre.org/groups/G0034) has used a tool to query Active Directory using LDAP, discovering information about computers listed in AD.(Citation: ESET Telebots Dec 2016)(Citation: Dragos Crashoverride 2018) ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

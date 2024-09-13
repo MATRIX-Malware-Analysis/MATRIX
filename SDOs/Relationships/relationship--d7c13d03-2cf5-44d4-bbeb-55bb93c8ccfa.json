@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d7c13d03-2cf5-44d4-bbeb-55bb93c8ccfa",
+    "created": "2024-08-13T14:51:22.247917Z",
+    "modified": "2024-08-13T14:51:22.247919Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--6ee74857-9ba1-4998-a18b-198e314f1ce6",
+    "target_ref": "malware-behavior--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Unit42 Emissary Panda May 2019",
+            "description": "Falcone, R. and Lancaster, T. (2019, May 28). Emissary Panda Attacks Middle East Government Sharepoint Servers. Retrieved July 9, 2019.",
+            "url": "https://unit42.paloaltonetworks.com/emissary-panda-attacks-middle-east-government-sharepoint-servers/"
+        },
+        {
+            "source_name": "Securelist LuckyMouse June 2018",
+            "description": "Legezo, D. (2018, June 13). LuckyMouse hits national data center to organize country-level waterholing campaign. Retrieved August 18, 2018.",
+            "url": "https://securelist.com/luckymouse-hits-national-data-center/86083/"
+        },
+        {
+            "source_name": "Nccgroup Emissary Panda May 2018",
+            "description": "Pantazopoulos, N., Henry T. (2018, May 18). Emissary Panda \u2013 A potential new malicious tool. Retrieved June 25, 2018.",
+            "url": "https://research.nccgroup.com/2018/05/18/emissary-panda-a-potential-new-malicious-tool/"
+        }
+    ],
+    "description": "A [Threat Group-3390](https://attack.mitre.org/groups/G0027) tool can encrypt payloads using XOR. [Threat Group-3390](https://attack.mitre.org/groups/G0027) malware is also obfuscated using Metasploit\u2019s shikata_ga_nai encoder as well as compressed with LZNT1 compression.(Citation: Nccgroup Emissary Panda May 2018)(Citation: Securelist LuckyMouse June 2018)(Citation: Unit42 Emissary Panda May 2019)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

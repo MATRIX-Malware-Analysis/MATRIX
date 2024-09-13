@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--32a93d1c-5bac-4822-b2a0-be9b143f6cac",
+    "created": "2024-08-13T14:51:22.806511Z",
+    "modified": "2024-08-13T14:51:22.806513Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--29867d3f-afc4-4f3a-8eaa-351403187805",
+    "target_ref": "malware-behavior--800f9819-7007-4540-a520-40e655876800",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Docker Daemon Socket Protect",
+            "url": "https://docs.docker.com/engine/security/protect-access/",
+            "description": "Docker. (n.d.). Protect the Docker Daemon Socket. Retrieved March 29, 2021."
+        }
+    ],
+    "description": "Limit communications with the container service to local Unix sockets or remote access via SSH. Require secure port access to communicate with the APIs over TLS by disabling unauthenticated access to the Docker API on port 2375. Instead, communicate with the Docker API over TLS on port 2376.(Citation: Docker Daemon Socket Protect)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

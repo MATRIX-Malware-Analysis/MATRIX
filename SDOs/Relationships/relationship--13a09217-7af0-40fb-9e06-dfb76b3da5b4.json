@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--13a09217-7af0-40fb-9e06-dfb76b3da5b4",
+    "created": "2024-08-13T14:51:22.173411Z",
+    "modified": "2024-08-13T14:51:22.173414Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--a4e8e06d-7ed5-496b-b947-5c30317db077",
+    "target_ref": "malware-behavior--2282a98b-5049-4f61-9381-55baca7c1add",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye APT28",
+            "description": "FireEye. (2015). APT28: A WINDOW INTO RUSSIA\u2019S CYBER ESPIONAGE OPERATIONS?. Retrieved August 19, 2015.",
+            "url": "https://web.archive.org/web/20151022204649/https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/rpt-apt28.pdf"
+        },
+        {
+            "source_name": "Cybersecurity Advisory GRU Brute Force Campaign July 2021",
+            "description": "NSA, CISA, FBI, NCSC. (2021, July). Russian GRU Conducting Global Brute Force Campaign to Compromise Enterprise and Cloud Environments. Retrieved July 26, 2021.",
+            "url": "https://media.defense.gov/2021/Jul/01/2002753896/-1/-1/1/CSA_GRU_GLOBAL_BRUTE_FORCE_CAMPAIGN_UOO158036-21.PDF"
+        }
+    ],
+    "description": "Later implants used by [APT28](https://attack.mitre.org/groups/G0007), such as [CHOPSTICK](https://attack.mitre.org/software/S0023), use a blend of HTTP, HTTPS, and other legitimate channels for C2, depending on module configuration.(Citation: FireEye APT28)(Citation: Cybersecurity Advisory GRU Brute Force Campaign July 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

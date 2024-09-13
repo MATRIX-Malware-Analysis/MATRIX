@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--955aba7b-bf05-4db3-9f43-51ad056111a7",
+    "created": "2024-08-13T14:51:23.349070Z",
+    "modified": "2024-08-13T14:51:23.349073Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--6d1b4fdb-329c-4c88-8160-3c3aec5b7497",
+    "target_ref": "malware-behavior--2bb20118-e6c0-41dc-a07c-283ea4dd0fb8",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Crowdstrike GTR2020 Mar 2020",
+            "description": "Crowdstrike. (2020, March 2). 2020 Global Threat Report. Retrieved December 11, 2020.",
+            "url": "https://go.crowdstrike.com/rs/281-OBQ-266/images/Report2020CrowdStrikeGlobalThreatReport.pdf"
+        },
+        {
+            "source_name": "FireEye APT41 March 2020",
+            "description": "Glyer, C, et al. (2020, March). This Is Not a Test: APT41 Initiates Global Intrusion Campaign Using Multiple Exploits. Retrieved April 28, 2020.",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/03/apt41-initiates-global-intrusion-campaign-using-multiple-exploits.html"
+        },
+        {
+            "source_name": "Rostovcev APT41 2021",
+            "description": "Nikita Rostovcev. (2022, August 18). APT41 World Tour 2021 on a tight schedule. Retrieved February 22, 2024.",
+            "url": "https://www.group-ib.com/blog/apt41-world-tour-2021/"
+        },
+        {
+            "source_name": "Group IB APT 41 June 2021",
+            "description": "Rostovcev, N. (2021, June 10). Big airline heist APT41 likely behind a third-party attack on Air India. Retrieved August 26, 2021.",
+            "url": "https://www.group-ib.com/blog/colunmtk-apt41/"
+        }
+    ],
+    "description": "[APT41](https://attack.mitre.org/groups/G0096) used [certutil](https://attack.mitre.org/software/S0160) to download additional files.(Citation: FireEye APT41 March 2020)(Citation: Crowdstrike GTR2020 Mar 2020)(Citation: Group IB APT 41 June 2021) [APT41](https://attack.mitre.org/groups/G0096) downloaded post-exploitation tools such as [Cobalt Strike](https://attack.mitre.org/software/S0154) via command shell following initial access.(Citation: Rostovcev APT41 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

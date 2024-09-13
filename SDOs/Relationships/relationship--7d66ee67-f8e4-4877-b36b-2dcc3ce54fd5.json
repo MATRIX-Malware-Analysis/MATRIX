@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7d66ee67-f8e4-4877-b36b-2dcc3ce54fd5",
+    "created": "2024-08-13T14:51:23.308207Z",
+    "modified": "2024-08-13T14:51:23.308209Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--7c36dffe-e41a-4cf8-b2e0-b1ee758f370a",
+    "target_ref": "malware-behavior--1644e709-12d2-41e5-a60f-3470991f5011",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cybereason OperationCuckooBees May 2022",
+            "description": "Cybereason Nocturnus. (2022, May 4). Operation CuckooBees: Deep-Dive into Stealthy Winnti Techniques. Retrieved September 22, 2022.",
+            "url": "https://www.cybereason.com/blog/operation-cuckoobees-deep-dive-into-stealthy-winnti-techniques"
+        }
+    ],
+    "description": "During [Operation CuckooBees](https://attack.mitre.org/campaigns/C0012), the threat actors leveraged a custom tool to dump OS credentials and used following commands: `reg save HKLM\\\\SYSTEM system.hiv`, `reg save HKLM\\\\SAM sam.hiv`, and `reg save HKLM\\\\SECURITY security.hiv`, to dump SAM, SYSTEM and SECURITY hives.(Citation: Cybereason OperationCuckooBees May 2022)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

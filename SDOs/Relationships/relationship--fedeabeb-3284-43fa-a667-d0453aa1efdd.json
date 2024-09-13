@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fedeabeb-3284-43fa-a667-d0453aa1efdd",
+    "created": "2024-08-13T14:51:22.384591Z",
+    "modified": "2024-08-13T14:51:22.384593Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--90c4a591-d02d-490b-92aa-619d9701ac04",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes to Registry entries for network providers (e.g., `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\NetworkProvider\\Order`) and correlate then investigate the DLL files these values reference.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

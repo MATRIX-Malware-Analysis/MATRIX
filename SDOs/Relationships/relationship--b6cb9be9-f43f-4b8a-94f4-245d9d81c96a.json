@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b6cb9be9-f43f-4b8a-94f4-245d9d81c96a",
+    "created": "2024-08-13T14:51:22.109524Z",
+    "modified": "2024-08-13T14:51:22.109527Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e53669da-6830-4650-af6b-bc3d273c8eca",
+    "target_ref": "malware-behavior--957e4e0e-4716-4bf1-839e-6f8bef906a57",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ADDSecurity DCShadow Feb 2018",
+            "description": "Lucand,G. (2018, February 18). Detect DCShadow, impossible?. Retrieved March 30, 2018.",
+            "url": "https://adds-security.blogspot.fr/2018/02/detecter-dcshadow-impossible.html"
+        }
+    ],
+    "description": "Investigate usage of Kerberos Service Principal Names (SPNs), especially those associated with services (beginning with \u201cGC/\u201d) by computers not present in the DC organizational unit (OU). The SPN associated with the Directory Replication Service (DRS) Remote Protocol interface (GUID E3514235\u20134B06\u201311D1-AB04\u201300C04FC2DCD2) can be set without logging.(Citation: ADDSecurity DCShadow Feb 2018)\u00a0A rogue DC must authenticate as a service using these two SPNs for the replication process to successfully complete.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

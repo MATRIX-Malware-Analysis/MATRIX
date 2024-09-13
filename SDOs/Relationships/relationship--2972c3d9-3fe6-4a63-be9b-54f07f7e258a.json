@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2972c3d9-3fe6-4a63-be9b-54f07f7e258a",
+    "created": "2024-08-13T14:51:23.229422Z",
+    "modified": "2024-08-13T14:51:23.229425Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--813d3176-99f4-4e78-8a9a-c041bd71cffd",
+    "target_ref": "malware-behavior--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor Windows Task Scheduler stores in %systemroot%\\System32\\Tasks for change entries related to scheduled tasks that do not correlate with known software, patch cycles, etc. In order to gain persistence, privilege escalation, or remote execution, an adversary may use the Windows Task Scheduler to schedule a command to be run at a specified time, date, and even host. Task Scheduler stores tasks as files in two locations - C:\\Windows\\Tasks (legacy) or C:\\Windows\\System32\\Tasks. Accordingly, this analytic looks for the creation of task files in these two locations.\n\nAnalytic 1 - Scheduled Task - File Creation\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"11\") (TargetFilename= \"C:\\\\Windows\\\\System32\\\\Tasks\\\\*\" OR TargetFilename  \"C:\\\\Windows\\\\Tasks\\\\*\")  AND\n Image!= \"C:\\\\WINDOWS\\\\system32\\\\svchost.exe\"</code>\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

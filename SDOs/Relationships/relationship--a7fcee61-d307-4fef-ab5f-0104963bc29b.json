@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a7fcee61-d307-4fef-ab5f-0104963bc29b",
+    "created": "2024-08-13T14:51:22.709182Z",
+    "modified": "2024-08-13T14:51:22.709184Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--69716b06-430b-4749-bced-4a47314da89e",
+    "target_ref": "malware-behavior--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Accenture Hogfish April 2018",
+            "description": "Accenture Security. (2018, April 23). Hogfish Redleaves Campaign. Retrieved July 2, 2018.",
+            "url": "http://web.archive.org/web/20220810112638/https:/www.accenture.com/t20180423T055005Z_w_/se-en/_acnmedia/PDF-76/Accenture-Hogfish-Threat-Analysis.pdf"
+        },
+        {
+            "source_name": "FireEye APT10 Sept 2018",
+            "description": "Matsuda, A., Muhammad I. (2018, September 13). APT10 Targeting Japanese Corporations Using Updated TTPs. Retrieved September 17, 2018.",
+            "url": "https://www.fireeye.com/blog/threat-research/2018/09/apt10-targeting-japanese-corporations-using-updated-ttps.html"
+        },
+        {
+            "source_name": "Symantec Cicada November 2020",
+            "description": "Symantec. (2020, November 17). Japan-Linked Organizations Targeted in Long-Running and Sophisticated Attack Campaign. Retrieved December 17, 2020.",
+            "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/cicada-apt10-japan-espionage"
+        }
+    ],
+    "description": "[menuPass](https://attack.mitre.org/groups/G0045) has encoded strings in its malware with base64 as well as with a simple, single-byte XOR obfuscation using key 0x40.(Citation: Accenture Hogfish April 2018)(Citation: FireEye APT10 Sept 2018)(Citation: Symantec Cicada November 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

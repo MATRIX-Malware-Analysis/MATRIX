@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6e696b0f-fe00-4cb9-8b26-26af27e3403b",
+    "created": "2024-08-13T14:51:22.628415Z",
+    "modified": "2024-08-13T14:51:22.628417Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--49deae61-5c33-4162-b4fe-87b5df1143af",
+    "target_ref": "malware-behavior--9b99b83a-1aac-4e29-b975-b374950551a3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://technet.microsoft.com/en-us/library/cc732713.aspx",
+            "description": "Microsoft. (n.d.). Configure Network Level Authentication for Remote Desktop Services Connections. Retrieved June 6, 2016.",
+            "source_name": "TechNet RDP NLA"
+        }
+    ],
+    "description": "To use this technique remotely, an adversary must use it in conjunction with RDP. Ensure that Network Level Authentication is enabled to force the remote desktop session to authenticate before the session is created and the login screen displayed. It is enabled by default on Windows Vista and later.(Citation: TechNet RDP NLA)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

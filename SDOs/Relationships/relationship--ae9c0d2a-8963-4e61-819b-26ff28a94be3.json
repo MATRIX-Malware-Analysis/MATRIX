@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ae9c0d2a-8963-4e61-819b-26ff28a94be3",
+    "created": "2024-08-13T14:51:23.587407Z",
+    "modified": "2024-08-13T14:51:23.587410Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--3abcd1d2-23e8-4577-8022-147f7c95edbb",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed processes and/or command-lines of \"wmic\u201d. If the command line utility\u00a0<code>wmic.exe</code>\u00a0is used on the source host, then it can additionally be detected on an analytic. The command line on the source host is constructed into something like\u00a0<code>wmic.exe /node:\"\\<hostname\\>\" process call create \"\\<command line\\>\"</code>. It is possible to also connect via IP address, in which case the string\u00a0<code>\"\\<hostname\\>\"</code> would instead look like\u00a0IP Address. Processes can be created remotely via WMI in a few other ways, such as more direct API access or the built-in utility\u00a0PowerShell.\n\nNote: Event IDs are for Sysmon (Event ID 10 - process access) and Windows Security Log (Event ID 4688 - a new process has been created). \n\nBesides executing arbitrary processes, wmic.exe can also be used to executed data stored in NTFS alternate data streams [NTFS File Attributes](https://attack.mitre.org/techniques/T1564/004).\nLooks for instances of wmic.exe as well as the substrings in the command line:\n- process call create\n- /node:\n\nAnalytic 1 : Create Remote Process via WMIC\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") AND Image=\"*wmic.exe\" AND CommandLine=\"* process call create *\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

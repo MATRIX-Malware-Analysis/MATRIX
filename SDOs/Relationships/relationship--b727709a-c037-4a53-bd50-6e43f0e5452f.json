@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b727709a-c037-4a53-bd50-6e43f0e5452f",
+    "created": "2024-08-13T14:51:22.134931Z",
+    "modified": "2024-08-13T14:51:22.134933Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--b8670dd5-cc0e-4af3-ba32-78c325edff61",
+    "target_ref": "malware-behavior--8da49f79-a281-4ef9-a27f-2b929d98d2fa",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "DFIR Conti Bazar Nov 2021",
+            "description": "DFIR Report. (2021, November 29). CONTInuing the Bazar Ransomware Story. Retrieved September 29, 2022.",
+            "url": "https://thedfirreport.com/2021/11/29/continuing-the-bazar-ransomware-story/"
+        },
+        {
+            "source_name": "Rclone",
+            "description": "Nick Craig-Wood. (n.d.). Rclone syncs your files to cloud storage. Retrieved August 30, 2022.",
+            "url": "https://rclone.org"
+        }
+    ],
+    "description": "The [Rclone](https://attack.mitre.org/software/S1040) \"chunker\" overlay supports splitting large files in smaller chunks during upload to circumvent size limits.(Citation: Rclone)(Citation: DFIR Conti Bazar Nov 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

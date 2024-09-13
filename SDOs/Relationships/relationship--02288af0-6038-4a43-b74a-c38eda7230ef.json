@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--02288af0-6038-4a43-b74a-c38eda7230ef",
+    "created": "2024-08-13T14:51:23.032710Z",
+    "modified": "2024-08-13T14:51:23.032712Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--813d3176-99f4-4e78-8a9a-c041bd71cffd",
+    "target_ref": "malware-behavior--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed files that are downloaded and executed on the user's computer. Endpoint sensing or network sensing can potentially detect malicious events once the file is opened (such as a Microsoft Word document or PDF reaching out to the internet or spawning powershell.exe).\n\nWhile batch files are not inherently malicious, it is uncommon to see them created after OS installation, especially in the Windows directory. This analytic looks for the suspicious activity of a batch file being created within the C:\\Windows\\System32 directory tree. There will be only occasional false positives due to administrator actions.\n\nFor Windows, Sysmon Event ID 11 (File create) can be used to track file creation events. This event also provides the Process ID of the process that created the file, which can be correlated with process creation events (e.g., Sysmon Event ID 1) to determine if the file was downloaded from an external network.\n\nFor MacOS, utilities that work in concert with Apple\u2019s Endpoint Security Framework such as File Monitor can be used to track file creation events.\n\nAnalytic 1 - Batch File Write to System32\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"11\") file_path=\"*system32*\" AND file_extension=\".bat\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

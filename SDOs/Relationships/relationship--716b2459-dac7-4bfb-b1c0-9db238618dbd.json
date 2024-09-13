@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--716b2459-dac7-4bfb-b1c0-9db238618dbd",
+    "created": "2024-08-13T14:51:21.698355Z",
+    "modified": "2024-08-13T14:51:21.698358Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--6d1b4fdb-329c-4c88-8160-3c3aec5b7497",
+    "target_ref": "malware-behavior--f44731de-ea9f-406d-9b83-30ecbb9b4392",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye APT41 March 2020",
+            "description": "Glyer, C, et al. (2020, March). This Is Not a Test: APT41 Initiates Global Intrusion Campaign Using Multiple Exploits. Retrieved April 28, 2020.",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/03/apt41-initiates-global-intrusion-campaign-using-multiple-exploits.html"
+        },
+        {
+            "source_name": "Group IB APT 41 June 2021",
+            "description": "Rostovcev, N. (2021, June 10). Big airline heist APT41 likely behind a third-party attack on Air India. Retrieved August 26, 2021.",
+            "url": "https://www.group-ib.com/blog/colunmtk-apt41/"
+        }
+    ],
+    "description": "[APT41](https://attack.mitre.org/groups/G0096) used  svchost.exe and [Net](https://attack.mitre.org/software/S0039) to execute a system service installed to launch a [Cobalt Strike](https://attack.mitre.org/software/S0154) BEACON loader.(Citation: FireEye APT41 March 2020)(Citation: Group IB APT 41 June 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

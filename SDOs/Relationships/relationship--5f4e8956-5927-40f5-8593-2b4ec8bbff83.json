@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5f4e8956-5927-40f5-8593-2b4ec8bbff83",
+    "created": "2024-08-13T14:51:22.713502Z",
+    "modified": "2024-08-13T14:51:22.713504Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--877b4a1a-a4c3-4095-acde-7ec52a31bbc3",
+    "target_ref": "malware-behavior--54ca26f3-c172-4231-93e5-ccebcac2161f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MagicWeb",
+            "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+            "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+        }
+    ],
+    "description": "[APT29](https://attack.mitre.org/groups/G0016) has edited the `Microsoft.IdentityServer.Servicehost.exe.config` file to load a malicious DLL into the AD FS process, thereby enabling persistent access to any service federated with AD FS for a user with a specified User Principal Name.(Citation: MagicWeb)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

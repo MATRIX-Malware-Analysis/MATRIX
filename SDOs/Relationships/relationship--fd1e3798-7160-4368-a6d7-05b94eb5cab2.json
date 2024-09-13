@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fd1e3798-7160-4368-a6d7-05b94eb5cab2",
+    "created": "2024-08-13T14:51:21.843552Z",
+    "modified": "2024-08-13T14:51:21.843554Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9810d467-1323-4f36-a113-c3c24166c3c0",
+    "target_ref": "malware-behavior--4b591031-e1ab-4051-8449-0b2146179f50",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Kubernetes Hardening Guide",
+            "description": "National Security Agency, Cybersecurity and Infrastructure Security Agency. (2022, March). Kubernetes Hardening Guide. Retrieved April 1, 2022.",
+            "url": "https://media.defense.gov/2022/Aug/29/2003066362/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF"
+        }
+    ],
+    "description": "Scan images before deployment, and block those that are not in compliance with security policies. In Kubernetes environments, the admission controller can be used to validate images after a container deployment request is authenticated but before the container is deployed.(Citation: Kubernetes Hardening Guide)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

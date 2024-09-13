@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--10502da5-73c5-43d5-bbba-eee8131ea519",
+    "created": "2024-08-13T14:51:21.818767Z",
+    "modified": "2024-08-13T14:51:21.818769Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1e7f8d2-f32f-40f4-9327-333c99b91269",
+    "target_ref": "malware-behavior--7807d3a4-a885-4639-a786-c1ed41484970",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEyeSupplyChain",
+            "description": "FireEye. (2014). SUPPLY CHAIN ANALYSIS: From Quartermaster to SunshopFireEye. Retrieved March 6, 2017.",
+            "url": "https://www.mandiant.com/resources/supply-chain-analysis-from-quartermaster-to-sunshop"
+        }
+    ],
+    "description": "Consider analyzing malware for features that may be associated with malware providers, such as compiler used, debugging artifacts, code similarities, or even group identifiers associated with specific MaaS offerings. Malware repositories can also be used to identify additional samples associated with the developers and the adversary utilizing their services. Identifying overlaps in malware use by different adversaries may indicate malware was obtained by the adversary rather than developed by them. In some cases, identifying overlapping characteristics in malware used by different adversaries may point to a shared quartermaster.(Citation: FireEyeSupplyChain)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

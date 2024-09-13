@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e56de2d1-e22e-4b4b-81f0-3dd8d49ff1ca",
+    "created": "2024-08-13T14:51:23.502367Z",
+    "modified": "2024-08-13T14:51:23.502369Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--d75e04a6-8ceb-4d6d-88f3-036c34e55aef",
+    "target_ref": "malware-behavior--f4599aa0-4f85-4a32-80ea-fc39dc965945",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to processes that may inject dynamic-link libraries (DLLs) into processes in order to evade process-based defenses as well as possibly elevate privileges. Injecting a malicious DLL into a process is a common adversary TTP. Although the ways of doing this are numerous, mavinject.exe is a commonly used tool for doing so because it roles up many of the necessary steps into one, and is available within Windows. Attackers may rename the executable, so we also use the common argument \u201cINJECTRUNNING\u201d as a related signature here. Whitelisting certain applications may be necessary to reduce noise for this analytic.\n\nAnalytic 1 - DLL Injection with Mavinject\n\n<code>(source=\"WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"WinEventLog:Security\" EventCode=\"4688\") Image=\"C:\\Windows\\SysWOW64\\mavinject.exe\" OR Image=\"C:\\Windows\\System32\\mavinject.exe\" OR CommandLine=\"*/INJECTRUNNING*\"\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

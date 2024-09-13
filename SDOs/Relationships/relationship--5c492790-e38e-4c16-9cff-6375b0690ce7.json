@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5c492790-e38e-4c16-9cff-6375b0690ce7",
+    "created": "2024-08-13T14:51:23.185735Z",
+    "modified": "2024-08-13T14:51:23.185737Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--b6ae8a0d-305a-4426-8e9a-b80e12d4d823",
+    "target_ref": "malware-behavior--2bb20118-e6c0-41dc-a07c-283ea4dd0fb8",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://www.ptsecurity.com/upload/corporate/ww-en/analytics/Cobalt-2017-eng.pdf",
+            "description": "Positive Technologies. (2017, August 16). Cobalt Strikes Back: An Evolving Multinational Threat to Finance. Retrieved September 5, 2018.",
+            "source_name": "PTSecurity Cobalt Group Aug 2017"
+        },
+        {
+            "url": "https://www.ptsecurity.com/upload/corporate/ww-en/analytics/Cobalt-Snatch-eng.pdf",
+            "description": "Positive Technologies. (2016, December 16). Cobalt Snatch. Retrieved October 9, 2018.",
+            "source_name": "PTSecurity Cobalt Dec 2016"
+        },
+        {
+            "source_name": "Morphisec Cobalt Gang Oct 2018",
+            "url": "https://blog.morphisec.com/cobalt-gang-2.0",
+            "description": "Gorelik, M. (2018, October 08). Cobalt Group 2.0. Retrieved November 5, 2018."
+        }
+    ],
+    "description": "[Cobalt Group](https://attack.mitre.org/groups/G0080) has used public sites such as github.com and sendspace.com to upload files and then download them to victim computers.(Citation: PTSecurity Cobalt Group Aug 2017)(Citation: PTSecurity Cobalt Dec 2016) The group's JavaScript backdoor is also capable of downloading files.(Citation: Morphisec Cobalt Gang Oct 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

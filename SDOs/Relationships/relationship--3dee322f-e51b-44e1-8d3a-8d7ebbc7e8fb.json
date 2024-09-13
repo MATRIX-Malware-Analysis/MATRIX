@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3dee322f-e51b-44e1-8d3a-8d7ebbc7e8fb",
+    "created": "2024-08-13T14:51:21.917783Z",
+    "modified": "2024-08-13T14:51:21.917785Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--9b99b83a-1aac-4e29-b975-b374950551a3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may establish persistence and/or elevate privileges by executing malicious content triggered by accessibility features. Command line invocation of tools capable of modifying the Registry for associated keys are also suspicious. Utility arguments and the binaries themselves should be monitored for changes.\n\nNote: Event ID 4104 (from the Microsoft-Windows-Powershell/Operational log) captures Powershell script blocks, which can be analyzed and used to detect on abuse of Accessibility Features. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

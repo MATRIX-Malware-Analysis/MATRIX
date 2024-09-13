@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2f3f1484-8edc-47d5-96d2-50d2f93f0599",
+    "created": "2024-08-13T14:51:21.875060Z",
+    "modified": "2024-08-13T14:51:21.875063Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--ae3d1db6-a114-474f-8e69-e12f304297af",
+    "target_ref": "malware-behavior--dcded5cc-a1ce-4206-97a7-2123cbdecc1e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unexpected deletions of user accounts. Windows event logs may designate activity associated with an adversary's attempt to remove an account (ex: Event ID 4726 - A user account was deleted).\r\n\r\nAlerting on these Event IDs may generate a high degree of false positives, so compare against baseline knowledge for how systems are typically used and correlate modification events with other indications of malicious activity where possible.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--45f6c0c2-4571-405b-a218-3a1ad69eb1ee",
+    "created": "2024-08-13T14:51:21.910819Z",
+    "modified": "2024-08-13T14:51:21.910822Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--4f9ca633-15c5-463c-9724-bdcd54fde541",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed network connections (typically over ports 139 or 445), especially those that are sent or received by abnormal or untrusted hosts. Correlate these network connections with remote login events and associated SMB-related activity such as file transfers and remote process execution.\n\nNote: Event ID is for Zeek but can also be implemented in other Network Analysis Frameworks by parsing & decoding captured SMB2 network traffic. Preference would be to detect smb2_write_response event (instead of smb2_write_request), because it would confirm the file was actually written to the remote destination. Unfortunately, Bro/Zeek does not have an event for that SMB message-type yet. From a network traffic capture standpoint, it\u2019s important to capture the right traffic for this type of detection to function (e.g., all endpoint to endpoint if possible or workstation to server and workstation to workstation). As such, it is helpful to have a centralized server area where it is possible to monitor communications between servers and endpoints.\n\nAnalytic 1 and 2 are very similar, with the key difference being that Implementation 2 is intended to capture multiple attempts at lateral movement originating from the same host within a short time period (5 minutes).\n\n- smb2_write_request, smb1_write_andx_response is indication of an SMB file write to a Windows Admin File Share: ADMIN$ or C$\n\n- smb2_tree_connect_request, smb1_tree_connect_andx_request is observed originating from the same host, regardless of write-attempts and regardless of whether or not any connection is successful \u2014just connection attempts\u2014 within a specified period of time (REPEATS 5 TIMES WITHIN 5 MINUTES FROM SAME src_ip).\n\nFrom a network traffic capture standpoint, it\u2019s important to capture the right traffic for this type of detection to function (e.g., all endpoint to endpoint if possible or workstation to server and workstation to workstation). As such, it is helpful to have a centralized server area where it is possible to monitor communications between servers and endpoints.The Service Control Manager (SCM) can be used to copy a file to the ADMIN$ share and execute it as a service. This can be detected by looking for incoming RPC network connections to the Service Control Manager, followed by services.exe spawning a child process.\n\nAnalytic 1 - Basic\n<code>source=\"*Zeek:SMB_Files\" EventCode IN (\"smb2_write_request\", \"smb1_write_andx_response\", \"smb2_tree_connect_request\", \"smb1_tree_connect_andx_request\") AND (Path=\"ADMIN$\" OR Path=\"C$\")</code>\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

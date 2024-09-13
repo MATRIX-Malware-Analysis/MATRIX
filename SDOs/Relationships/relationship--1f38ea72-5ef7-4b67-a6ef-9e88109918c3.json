@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1f38ea72-5ef7-4b67-a6ef-9e88109918c3",
+    "created": "2024-08-13T14:48:37.558947Z",
+    "modified": "2024-08-13T14:48:37.55895Z",
+    "relationship_type": "uses",
+    "description": "RogueRobin uses a command prompt to run a PowerShell script from Excel.[1] To assist in establishing persistence, RogueRobin creates %APPDATA%\\OneDrive.bat and saves the following string to it:powershell.exe -WindowStyle Hidden -exec bypass -File \"%APPDATA%\\OneDrive.ps1\".[2][1]",
+    "source_ref": "malware--a308b1b6-9dbd-48b0-bae8-cfd0993738d6",
+    "target_ref": "malware-behavior--05cd385b-cf96-4293-bcb1-509e49dafddc",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7f6e1a98-85df-4965-80e6-fc105b10f404",
+    "created": "2024-08-13T14:51:23.341730Z",
+    "modified": "2024-08-13T14:51:23.341733Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--a4e8e06d-7ed5-496b-b947-5c30317db077",
+    "target_ref": "malware-behavior--86850eff-2729-40c3-b85e-c4af26da4a2d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://www.fireeye.com/blog/threat-research/2015/04/probable_apt28_useo.html",
+            "description": "FireEye Labs. (2015, April 18). Operation RussianDoll: Adobe & Windows Zero-Day Exploits Likely Leveraged by Russia\u2019s APT28 in Highly-Targeted Attack. Retrieved April 24, 2017.",
+            "source_name": "FireEye Op RussianDoll"
+        }
+    ],
+    "description": "[APT28](https://attack.mitre.org/groups/G0007) has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalation.(Citation: FireEye Op RussianDoll)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

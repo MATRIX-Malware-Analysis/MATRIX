@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--22996e70-1b56-4525-90a5-26c9456a9245",
+    "created": "2024-08-13T14:51:23.595425Z",
+    "modified": "2024-08-13T14:51:23.595426Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--52335bae-28dd-4f20-a543-7d6afac9e543",
+    "target_ref": "malware-behavior--86850eff-2729-40c3-b85e-c4af26da4a2d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Bitdefender FIN8 July 2021",
+            "description": "Martin Zugec. (2021, July 27). Deep Dive Into a FIN8 Attack - A Forensic Investigation. Retrieved September 1, 2021.",
+            "url": "https://businessinsights.bitdefender.com/deep-dive-into-a-fin8-attack-a-forensic-investigation"
+        },
+        {
+            "source_name": "Symantec FIN8 Jul 2023",
+            "description": "Symantec Threat Hunter Team. (2023, July 18). FIN8 Uses Revamped Sardonic Backdoor to Deliver Noberus Ransomware. Retrieved August 9, 2023.",
+            "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        }
+    ],
+    "description": "[FIN8](https://attack.mitre.org/groups/G0061) has used a malicious framework designed to impersonate the lsass.exe/vmtoolsd.exe token.(Citation: Bitdefender FIN8 July 2021)(Citation: Symantec FIN8 Jul 2023)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

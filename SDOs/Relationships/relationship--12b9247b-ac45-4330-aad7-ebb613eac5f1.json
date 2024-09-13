@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--12b9247b-ac45-4330-aad7-ebb613eac5f1",
+    "created": "2024-08-13T14:51:23.265947Z",
+    "modified": "2024-08-13T14:51:23.265948Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--cf1c2504-433f-4c4e-a1f8-91de45a0318c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant M-Trends 2020",
+            "url": "https://content.fireeye.com/m-trends/rpt-m-trends-2020",
+            "description": "Mandiant. (2020, February). M-Trends 2020. Retrieved April 24, 2020."
+        }
+    ],
+    "description": "Limit permissions for creating new instances in accordance with least privilege. Organizations should limit the number of users within the organization with an IAM role that has administrative privileges, strive to reduce all permanent privileged role assignments, and conduct periodic entitlement reviews on IAM users, roles and policies.(Citation: Mandiant M-Trends 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

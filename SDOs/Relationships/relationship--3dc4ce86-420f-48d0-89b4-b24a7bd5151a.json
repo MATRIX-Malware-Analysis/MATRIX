@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3dc4ce86-420f-48d0-89b4-b24a7bd5151a",
+    "created": "2024-08-13T14:51:23.587856Z",
+    "modified": "2024-08-13T14:51:23.587858Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--449bde62-de97-4aa6-95e8-a4ac34d398c4",
+    "target_ref": "malware-behavior--c8aae1bb-cfdd-4021-93fc-e7c70256bbf0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor M365 Audit logs for the Operations Add app role assignment grant to user and/or Consent to application occurring against AzureActiveDirectory Workloads.\n\nNOTE: Similar events are generated in Azure AD (Entra ID) audit logs.\n\nAnalytic 1 - Stolen Access Token\n\n<code> source=\"*Azure:m365\" workload == \u201cAzureActiveDirectory\u201d AND (operation == \u201cAdd app role assignment grant to user\u201d OR operation == \u201cConsent to application\u201d)</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

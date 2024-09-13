@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bba3c47d-455b-499f-86d5-52a2737b6d36",
+    "created": "2024-08-13T14:51:22.490348Z",
+    "modified": "2024-08-13T14:51:22.490350Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--b3dd5a9e-3124-47ef-9978-2c10f3d0c7cb",
+    "target_ref": "malware-behavior--f6e0ab41-1bf0-4bcc-9ea1-798678b2704e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESET Gamaredon June 2020",
+            "url": "https://www.welivesecurity.com/2020/06/11/gamaredon-group-grows-its-game/",
+            "description": "Boutin, J. (2020, June 11). Gamaredon group grows its game. Retrieved June 16, 2020."
+        },
+        {
+            "source_name": "CERT-EE Gamaredon January 2021",
+            "url": "https://www.ria.ee/sites/default/files/content-editors/kuberturve/tale_of_gamaredon_infection.pdf",
+            "description": "CERT-EE. (2021, January 27). Gamaredon Infection: From Dropper to Entry. Retrieved February 17, 2022."
+        }
+    ],
+    "description": "[Gamaredon Group](https://attack.mitre.org/groups/G0047) has removed security settings for VBA macro execution by changing registry values <code>HKCU\\Software\\Microsoft\\Office\\&lt;version&gt;\\&lt;product&gt;\\Security\\VBAWarnings</code> and <code>HKCU\\Software\\Microsoft\\Office\\&lt;version&gt;\\&lt;product&gt;\\Security\\AccessVBOM</code>.(Citation: ESET Gamaredon June 2020)(Citation: CERT-EE Gamaredon January 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

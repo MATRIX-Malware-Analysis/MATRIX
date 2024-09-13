@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f8774f8b-4470-45a6-9f00-16a198951060",
+    "created": "2024-08-13T14:51:22.302094Z",
+    "modified": "2024-08-13T14:51:22.302097Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--aa8bfbc9-78dc-41a4-a03b-7453e0fdccda",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Apple Developer Doco Archive Run-Path",
+            "description": "Apple Inc.. (2012, July 7). Run-Path Dependent Libraries. Retrieved March 31, 2021.",
+            "url": "https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/RunpathDependentLibraries.html"
+        }
+    ],
+    "description": "Monitor for dynamic libraries being loaded. Run path dependent libraries can include LC_LOAD_DYLIB, LC_LOAD_WEAK_DYLIB, and LC_RPATH. Other special keywords are recognized by the macOS loader are @rpath, @loader_path, and @executable_path.(Citation: Apple Developer Doco Archive Run-Path) These loader instructions can be examined for individual binaries or frameworks using the otool -l command. Objective-See's Dylib Hijacking Scanner can be used to identify applications vulnerable to dylib hijacking",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

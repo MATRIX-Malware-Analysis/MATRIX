@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fdefbba4-693a-4562-af7a-71241a8ed887",
+    "created": "2024-08-13T14:51:23.090170Z",
+    "modified": "2024-08-13T14:51:23.090172Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9cd5b7d4-369e-4db8-b28f-f98c93a04bf9",
+    "target_ref": "malware-behavior--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Default VBS macros Blocking ",
+            "url": "https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805",
+            "description": "Kellie Eickmeyer. (2022, February 7). Helping users stay safe: Blocking internet macros by default in Office. Retrieved February 7, 2022."
+        }
+    ],
+    "description": "Use application control where appropriate. VBA macros obtained from the Internet, based on the file's Mark of the Web (MOTW) attribute, may be blocked from executing in Office applications (ex: Access, Excel, PowerPoint, Visio, and Word) by default starting in Windows Version 2203.(Citation: Default VBS macros Blocking )",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

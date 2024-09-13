@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a4ac33da-bdcc-47de-9fd1-f1d01de42fd8",
+    "created": "2024-08-13T14:51:22.840396Z",
+    "modified": "2024-08-13T14:51:22.840398Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--d9374627-39d1-41a3-8318-30c018a50b31",
+    "target_ref": "malware-behavior--1982cc84-c098-449e-85e5-0181e2748ed1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://www.us-cert.gov/ncas/current-activity/2017/01/16/SMB-Security-Best-Practices",
+            "description": "US-CERT. (2017, March 16). SMB Security Best Practices. Retrieved December 21, 2017.",
+            "source_name": "US-CERT SMB Security"
+        },
+        {
+            "url": "https://www.us-cert.gov/ncas/alerts/TA17-293A",
+            "description": "US-CERT. (2017, October 20). Alert (TA17-293A): Advanced Persistent Threat Activity Targeting Energy and Other Critical Infrastructure Sectors. Retrieved November 2, 2017.",
+            "source_name": "US-CERT APT Energy Oct 2017"
+        }
+    ],
+    "description": "\nBlock SMB traffic from exiting an enterprise network with egress filtering or by blocking TCP ports 139, 445 and UDP port 137. Filter or block WebDAV protocol traffic from exiting the network. If access to external resources over SMB and WebDAV is necessary, then traffic should be tightly limited with allowlisting. (Citation: US-CERT SMB Security) (Citation: US-CERT APT Energy Oct 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

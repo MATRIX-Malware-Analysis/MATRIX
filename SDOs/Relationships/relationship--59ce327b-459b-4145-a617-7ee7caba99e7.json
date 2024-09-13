@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--59ce327b-459b-4145-a617-7ee7caba99e7",
+    "created": "2024-08-13T14:51:22.971982Z",
+    "modified": "2024-08-13T14:51:22.971984Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9cd5b7d4-369e-4db8-b28f-f98c93a04bf9",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft PowerShell CLM",
+            "description": "PowerShell Team. (2017, November 2). PowerShell Constrained Language Mode. Retrieved March 27, 2023.",
+            "url": "https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/"
+        }
+    ],
+    "description": "Use application control where appropriate. PowerShell Constrained Language mode can be used to restrict access to sensitive or otherwise dangerous language elements such as those used to execute arbitrary Windows APIs or files (e.g., `Add-Type`).(Citation: Microsoft PowerShell CLM)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

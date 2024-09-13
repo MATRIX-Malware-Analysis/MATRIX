@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--52ef2cc4-534c-413e-be3f-097f8e51137b",
+    "created": "2024-08-13T14:51:23.014471Z",
+    "modified": "2024-08-13T14:51:23.014474Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--045d0922-2310-4e60-b5e4-3302302cb3c5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Command arguments used with the rundll32.exe invocation may also be useful in determining the origin and purpose of the DLL being loaded. Typical command-line usage of rundll32.exe is <code>\"rundll32.exe DllFile,EntryPoint\"</code> where <code>DllFile</code> is the name of the DLL file being called and EntryPoint the name of the entry point in the DLL file. \n\nDLLs stored on SMB shares can similarly be called using the syntax of <code>\"rundll32.exe \\\\<ip_address>\\DllFile,EntryPoint\"</code> where <ip_address> is the IPv4 address of the host of the SMB share. \n\nRundll32 can also be used to execute arbitrary Javascript using the syntax <code>\"rundll32.exe javascript:<*code_block*>\"</code>where <*code_block*> is a string defining the Javascript code to be executed.  \n\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

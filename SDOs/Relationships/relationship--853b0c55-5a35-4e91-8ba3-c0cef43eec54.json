@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--853b0c55-5a35-4e91-8ba3-c0cef43eec54",
+    "created": "2024-08-13T14:51:22.539979Z",
+    "modified": "2024-08-13T14:51:22.539981Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--c4130f8a-feba-48d4-ae89-313e2401af79",
+    "target_ref": "malware-behavior--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "description": "Security Response attack Investigation Team. (2019, March 27). Elfin: Relentless Espionage Group Targets Multiple Organizations in Saudi Arabia and U.S.. Retrieved April 10, 2019.",
+            "url": "https://www.symantec.com/blogs/threat-intelligence/elfin-apt33-espionage",
+            "source_name": "Symantec Elfin Mar 2019"
+        },
+        {
+            "source_name": "FireEye APT33 Guardrail",
+            "url": "https://www.fireeye.com/blog/threat-research/2018/12/overruled-containing-a-potentially-destructive-adversary.html",
+            "description": "Ackerman, G., et al. (2018, December 21). OVERRULED: Containing a Potentially Destructive Adversary. Retrieved January 17, 2019."
+        }
+    ],
+    "description": "[APT33](https://attack.mitre.org/groups/G0064) has used a variety of publicly available tools like [LaZagne](https://attack.mitre.org/software/S0349), [Mimikatz](https://attack.mitre.org/software/S0002), and ProcDump to dump credentials.(Citation: Symantec Elfin Mar 2019)(Citation: FireEye APT33 Guardrail)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

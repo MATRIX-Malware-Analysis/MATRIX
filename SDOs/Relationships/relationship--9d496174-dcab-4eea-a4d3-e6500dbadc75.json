@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9d496174-dcab-4eea-a4d3-e6500dbadc75",
+    "created": "2024-08-13T14:51:23.348508Z",
+    "modified": "2024-08-13T14:51:23.348510Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--4b2bcb7b-f893-4a42-97bc-7d0580617c65",
+    "target_ref": "malware-behavior--01b7b973-bbc0-42bd-bd59-0bcb40da958a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Registry Drivers",
+            "description": "Microsoft. (2021, December 14). Registry Trees for Devices and Drivers. Retrieved March 28, 2023.",
+            "url": "https://learn.microsoft.com/windows-hardware/drivers/install/overview-of-registry-trees-and-keys"
+        }
+    ],
+    "description": "Monitor for attempts to access information stored in the Registry about devices and their associated drivers, such as values under `HKLM\\SYSTEM\\CurrentControlSet\\Services` and `HKLM\\SYSTEM\\CurrentControlSet\\HardwareProfiles`.(Citation: Microsoft Registry Drivers)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

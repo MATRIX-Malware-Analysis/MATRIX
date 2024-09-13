@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--67ef29a8-c8c0-43ad-bc3f-b13ea4d5aeed",
+    "created": "2024-08-13T14:51:23.226581Z",
+    "modified": "2024-08-13T14:51:23.226584Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9810d467-1323-4f36-a113-c3c24166c3c0",
+    "target_ref": "malware-behavior--54ca26f3-c172-4231-93e5-ccebcac2161f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MagicWeb",
+            "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+            "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+        },
+        {
+            "source_name": "Mandiant Azure AD Backdoors",
+            "description": "Mike Burns. (2020, September 30). Detecting Microsoft 365 and Azure Active Directory Backdoors. Retrieved September 28, 2022.",
+            "url": "https://www.mandiant.com/resources/detecting-microsoft-365-azure-active-directory-backdoors"
+        }
+    ],
+    "description": "Periodically review the hybrid identity solution in use for any discrepancies. For example, review all PTA agents in the Azure Management Portal to identify any unwanted or unapproved ones.(Citation: Mandiant Azure AD Backdoors) If ADFS is in use, review DLLs and executable files in the AD FS and Global Assembly Cache directories to ensure that they are signed by Microsoft. Note that in some cases binaries may be catalog-signed, which may cause the file to appear unsigned when viewing file properties.(Citation: MagicWeb)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

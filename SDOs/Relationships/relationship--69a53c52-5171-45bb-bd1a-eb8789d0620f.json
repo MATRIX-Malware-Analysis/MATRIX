@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--69a53c52-5171-45bb-bd1a-eb8789d0620f",
+    "created": "2024-08-13T14:51:21.885613Z",
+    "modified": "2024-08-13T14:51:21.885615Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9cd5b7d4-369e-4db8-b28f-f98c93a04bf9",
+    "target_ref": "malware-behavior--c87df954-6cb6-44ee-ad1f-d76336d371fc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Kubernetes Security Context",
+            "description": "Kubernetes. (n.d.). Configure a Security Context for a Pod or Container. Retrieved March 8, 2023.",
+            "url": "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+        },
+        {
+            "source_name": "Kubernetes Hardening Guide",
+            "description": "National Security Agency, Cybersecurity and Infrastructure Security Agency. (2022, March). Kubernetes Hardening Guide. Retrieved April 1, 2022.",
+            "url": "https://media.defense.gov/2022/Aug/29/2003066362/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF"
+        }
+    ],
+    "description": "Use read-only containers, read-only file systems, and minimal images when possible to prevent the running of commands.(Citation: Kubernetes Hardening Guide) Where possible, also consider using application control and software restriction tools (such as those provided by SELinux) to restrict access to files, processes, and system calls in containers.(Citation: Kubernetes Security Context)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

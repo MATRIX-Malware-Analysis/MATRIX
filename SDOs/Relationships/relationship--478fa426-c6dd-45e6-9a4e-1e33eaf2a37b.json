@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--478fa426-c6dd-45e6-9a4e-1e33eaf2a37b",
+    "created": "2024-08-13T14:51:21.843902Z",
+    "modified": "2024-08-13T14:51:21.843903Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f17f3cef-842b-4e2d-aed0-9e4a75ca08c0",
+    "target_ref": "malware-behavior--bf96a5a3-3bce-43b7-8597-88545984c07b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Ensure that proper permissions and directory access control are set to deny users the ability to write files to the top-level directory <code>C:</code> and system directories, such as <code>C:\\Windows\\</code>, to reduce places where malicious files could be placed for execution. Require that all executables be placed in write-protected directories.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

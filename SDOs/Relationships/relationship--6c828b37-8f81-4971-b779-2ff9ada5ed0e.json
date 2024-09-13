@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6c828b37-8f81-4971-b779-2ff9ada5ed0e",
+    "created": "2024-08-13T14:51:22.862000Z",
+    "modified": "2024-08-13T14:51:22.862002Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--8da49f79-a281-4ef9-a27f-2b929d98d2fa",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed network connections that are sent or received by untrusted hosts or uncommon data flows (e.g. unusual network communications or suspicious communications sending fixed size data packets at regular intervals as well as unusually long connection patterns). Consider analyzing packet contents to detect application layer protocols, leveraging SSL/TLS inspection for encrypted traffic, that do not follow the expected protocol standards and traffic flows (e.g extraneous packets that do not belong to established flows, protocol port mismatch, anomalous syntax, or structure). Consider correlation with process monitoring and command line to detect anomalous processes execution and command line arguments (e.g. monitor anomalies in use of files that do not normally initiate network connections or unusual connections initiated",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

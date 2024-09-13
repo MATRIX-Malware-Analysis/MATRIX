@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--80859b20-db53-4e63-beac-fd3d25cb5b1e",
+    "created": "2024-08-13T14:51:22.740920Z",
+    "modified": "2024-08-13T14:51:22.740922Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "TechNet Credential Theft",
+            "description": "Microsoft. (2016, April 15). Attractive Accounts for Credential Theft. Retrieved June 3, 2016.",
+            "url": "https://technet.microsoft.com/en-us/library/dn535501.aspx"
+        },
+        {
+            "source_name": "TechNet Least Privilege",
+            "description": "Microsoft. (2016, April 16). Implementing Least-Privilege Administrative Models. Retrieved June 3, 2016.",
+            "url": "https://technet.microsoft.com/en-us/library/dn487450.aspx"
+        },
+        {
+            "source_name": "Microsoft Azure security baseline for Azure Active Directory",
+            "description": "Microsoft. (2022, November 14). Azure security baseline for Azure Active Directory. Retrieved February 21, 2023.",
+            "url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/aad-security-baseline"
+        },
+        {
+            "source_name": "Microsoft Security Alerts for Azure AD Roles",
+            "description": "Microsoft. (2022, November 14). Configure security alerts for Azure AD roles in Privileged Identity Management. Retrieved February 21, 2023.",
+            "url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/aad-security-baseline"
+        }
+    ],
+    "description": "Review privileged cloud account permission levels routinely to look for those that could allow an adversary to gain wide access, such as Global Administrator and Privileged Role Administrator in Azure AD.(Citation: TechNet Credential Theft)(Citation: TechNet Least Privilege)(Citation: Microsoft Azure security baseline for Azure Active Directory) These reviews should also check if new privileged cloud accounts have been created that were not authorized. For example, in Azure AD environments configure alerts to notify when accounts have gone many days without using privileged roles, as these roles may be able to be removed.(Citation: Microsoft Security Alerts for Azure AD Roles) Consider using temporary, just-in-time (JIT) privileged access to Azure AD resources rather than permanently assigning privileged roles.(Citation: Microsoft Azure security baseline for Azure Active Directory)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

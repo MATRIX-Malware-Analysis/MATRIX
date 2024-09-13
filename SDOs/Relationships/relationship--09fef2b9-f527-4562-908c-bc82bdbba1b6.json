@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--09fef2b9-f527-4562-908c-bc82bdbba1b6",
+    "created": "2024-08-13T14:51:22.463036Z",
+    "modified": "2024-08-13T14:51:22.463039Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--02d459aa-b700-4129-802a-e0ac10fe6cc9",
+    "target_ref": "malware-behavior--2aa78dfd-cb6f-4c70-9408-137cfd96be49",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for telemetry that provides context of security software services being disabled or modified. In cloud environments, monitor virtual machine logs for the status of cloud security agents. Spyware and malware remain a serious problem and Microsoft developed security services, Windows Defender and Windows Firewall, to combat this threat. In the event Windows Defender or Windows Firewall is turned off, administrators should correct the issue immediately to prevent the possibility of infection or further infection and investigate to determine if caused by crash or user manipulation.\nNote: Windows Event code 7036 from the System log identifies if a service has stopped or started. This analytic looks for \u201cWindows Defender\u201d or \u201cWindows Firewall\u201d that has stopped.\n\nAnalytic 1 - User Activity from Stopping Windows Defensive Services\n\n<code>(source=\"*WinEventLog:System\" EventCode=\"7036\") ServiceName=\"*Windows Defender*\" OR ServiceName=\"*Windows Firewall*\" AND ServiceName=\"*stopped*\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

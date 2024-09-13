@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0217c214-4606-4c66-8961-9a0436405411",
+    "created": "2024-08-13T14:51:21.972429Z",
+    "modified": "2024-08-13T14:51:21.972431Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--76c1047d-1237-4e83-b785-6eb973415881",
+    "target_ref": "malware-behavior--52759bf1-fe12-4052-ace6-c5b0cf7dd7fd",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "US-CERT TA18-106A Network Infrastructure Devices 2018",
+            "description": "US-CERT. (2018, April 20). Russian State-Sponsored Cyber Actors Targeting Network Infrastructure Devices. Retrieved October 19, 2020.",
+            "url": "https://us-cert.cisa.gov/ncas/alerts/TA18-106A"
+        }
+    ],
+    "description": "Configure intrusion prevention devices to detect SNMP queries and commands from unauthorized sources. Create signatures to detect Smart Install (SMI) usage from sources other than trusted director.(Citation: US-CERT TA18-106A Network Infrastructure Devices 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

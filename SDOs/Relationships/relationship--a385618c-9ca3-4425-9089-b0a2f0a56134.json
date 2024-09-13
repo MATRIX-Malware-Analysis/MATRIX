@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a385618c-9ca3-4425-9089-b0a2f0a56134",
+    "created": "2024-08-13T14:51:23.084577Z",
+    "modified": "2024-08-13T14:51:23.084579Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9810d467-1323-4f36-a113-c3c24166c3c0",
+    "target_ref": "malware-behavior--2acf44aa-542f-4366-b4eb-55ef5747759c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Review changes to the <code>cron</code> schedule. <code>cron</code> execution can be reviewed within the <code>/var/log</code> directory. To validate the location of the <code>cron</code> log file, check the syslog config at <code>/etc/rsyslog.conf</code> or <code>/etc/syslog.conf</code> ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

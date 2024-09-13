@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2c29f129-5a4f-4d55-8d5c-5a8f34182bbb",
+    "created": "2024-08-13T14:51:23.488983Z",
+    "modified": "2024-08-13T14:51:23.488986Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--7ad38ef1-381a-406d-872a-38b136eb5ecc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Atlassian Confluence Logging",
+            "description": "Atlassian. (2018, January 9). How to Enable User Access Logging. Retrieved April 4, 2018.",
+            "url": "https://confluence.atlassian.com/confkb/how-to-enable-user-access-logging-182943.html"
+        }
+    ],
+    "description": "Monitor for newly constructed logon behavior across Atlassian's Confluence which can be configured to report access to certain pages and documents through AccessLogFilter. (Citation: Atlassian Confluence Logging) Additional log storage and analysis infrastructure will likely be required for more robust detection capabilities.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

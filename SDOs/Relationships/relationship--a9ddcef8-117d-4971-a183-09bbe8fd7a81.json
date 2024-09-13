@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a9ddcef8-117d-4971-a183-09bbe8fd7a81",
+    "created": "2024-08-13T14:51:22.915096Z",
+    "modified": "2024-08-13T14:51:22.915098Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--0dde3cc4-1b2b-4cdf-ac09-17435abbdb95",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms687317(v=vs.85).aspx",
+            "description": "Microsoft. (n.d.). Setting Process-Wide Security Through the Registry. Retrieved November 21, 2017.",
+            "source_name": "Microsoft Process Wide Com Keys"
+        },
+        {
+            "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms694331(v=vs.85).aspx",
+            "description": "Microsoft. (n.d.). Registry Values for System-Wide Security. Retrieved November 21, 2017.",
+            "source_name": "Microsoft System Wide Com Keys"
+        },
+        {
+            "url": "https://docs.microsoft.com/en-us/windows/desktop/com/dcom-security-enhancements-in-windows-xp-service-pack-2-and-windows-server-2003-service-pack-1",
+            "description": "Microsoft. (n.d.). DCOM Security Enhancements in Windows XP Service Pack 2 and Windows Server 2003 Service Pack 1. Retrieved November 22, 2017.",
+            "source_name": "Microsoft COM ACL"
+        }
+    ],
+    "description": "Modify Registry settings (directly or using Dcomcnfg.exe) in `HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Classes\\\\AppID\\\\{AppID_GUID}` associated with the process-wide security of individual COM applications.(Citation: Microsoft Process Wide Com Keys)\n\nModify Registry settings (directly or using Dcomcnfg.exe) in `HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Microsoft\\\\Ole` associated with system-wide security defaults for all COM applications that do no set their own process-wide security.(Citation: Microsoft System Wide Com Keys) (Citation: Microsoft COM ACL)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

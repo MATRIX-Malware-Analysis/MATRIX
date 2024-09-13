@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a58adfb6-cd17-4a27-9b60-3982ecfc5273",
+    "created": "2024-08-13T14:51:23.605370Z",
+    "modified": "2024-08-13T14:51:23.605372Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--573ad264-1371-4ae0-8482-d2673b719dba",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "launchd Keywords for plists",
+            "url": "https://www.real-world-systems.com/docs/launchdPlist.1.html",
+            "description": "Dennis German. (2020, November 20). launchd Keywords for plists. Retrieved October 7, 2021."
+        }
+    ],
+    "description": "Some legitimate LaunchDaemons point to unsigned code that could be exploited. For Launch Daemons with the <code>RunAtLoad</code> parameter set to true, ensure the <code>Program</code> parameter points to signed code or executables are in alignment with enterprise policy. Some parameters are interchangeable with others, such as <code>Program</code> and <code>ProgramArguments</code> parameters but one must be present. (Citation: launchd Keywords for plists)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

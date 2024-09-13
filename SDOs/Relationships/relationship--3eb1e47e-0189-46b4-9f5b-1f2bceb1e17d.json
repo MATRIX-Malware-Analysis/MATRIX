@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3eb1e47e-0189-46b4-9f5b-1f2bceb1e17d",
+    "created": "2024-08-13T14:51:23.040491Z",
+    "modified": "2024-08-13T14:51:23.040494Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--b1c95426-2550-4621-8028-ceebf28b3a47",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Adventures of a Keystroke",
+            "url": "http://opensecuritytraining.info/Keylogging_files/The%20Adventures%20of%20a%20Keystroke.pdf",
+            "description": "Tinaztepe,  E. (n.d.). The Adventures of a Keystroke:  An in-depth look into keyloggers on Windows. Retrieved April 27, 2016."
+        }
+    ],
+    "description": "Monitor for API calls to the SetWindowsHook, GetKeyState, and GetAsyncKeyState.(Citation: Adventures of a Keystroke) and look for common keylogging API calls. API calls alone are not an indicator of keylogging, but may provide behavioral data that is useful when combined with other information such as new files written to disk and unusual processes.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5be8b0f4-10c3-47db-ad1e-2e71a62e3fbc",
+    "created": "2024-08-13T14:51:22.626239Z",
+    "modified": "2024-08-13T14:51:22.626241Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--24bfaeba-cb0d-4525-b3dc-507c77ecec41",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Novetta Blockbuster Destructive Malware",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Destructive Malware Report. Retrieved March 2, 2016.",
+            "url": "https://web.archive.org/web/20160303200515/https://operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Destructive-Malware-Report.pdf"
+        },
+        {
+            "source_name": "Novetta Blockbuster",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Unraveling the Long Thread of the Sony Attack. Retrieved February 25, 2016.",
+            "url": "https://web.archive.org/web/20160226161828/https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Report.pdf"
+        },
+        {
+            "source_name": "McAfee Lazarus Resurfaces Feb 2018",
+            "description": "Sherstobitoff, R. (2018, February 12). Lazarus Resurfaces, Targets Global Banks and Bitcoin Users. Retrieved February 19, 2018.",
+            "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/lazarus-resurfaces-targets-global-banks-bitcoin-users/"
+        },
+        {
+            "source_name": "McAfee GhostSecret",
+            "description": "Sherstobitoff, R., Malhotra, A. (2018, April 24). Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide. Retrieved May 16, 2018.",
+            "url": "https://securingtomorrow.mcafee.com/mcafee-labs/analyzing-operation-ghostsecret-attack-seeks-to-steal-data-worldwide/"
+        }
+    ],
+    "description": "Several [Lazarus Group](https://attack.mitre.org/groups/G0032) malware families encrypt C2 traffic using custom code that uses XOR with an ADD operation and XOR with a SUB operation. Another [Lazarus Group](https://attack.mitre.org/groups/G0032) malware sample XORs C2 traffic. Other [Lazarus Group](https://attack.mitre.org/groups/G0032) malware uses Caracachs encryption to encrypt C2 payloads. [Lazarus Group](https://attack.mitre.org/groups/G0032) has also used AES to encrypt C2 traffic.(Citation: Novetta Blockbuster)(Citation: Novetta Blockbuster Destructive Malware)(Citation: McAfee Lazarus Resurfaces Feb 2018)(Citation: McAfee GhostSecret)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

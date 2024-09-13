@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b95e7214-51a6-49c2-b396-c0eb18ac826f",
+    "created": "2024-08-13T14:51:23.339836Z",
+    "modified": "2024-08-13T14:51:23.339839Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--08ea902d-ecb5-47ed-a453-2798057bb2d3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Also look for any process API calls for behavior that may be indicative of [Process Injection](https://attack.mitre.org/techniques/T1055). Monitoring OS API callbacks for the execution can also be a way to detect this behavior but requires specialized security tooling.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

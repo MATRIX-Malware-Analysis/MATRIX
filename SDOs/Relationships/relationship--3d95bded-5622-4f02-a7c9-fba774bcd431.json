@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3d95bded-5622-4f02-a7c9-fba774bcd431",
+    "created": "2024-08-13T14:51:23.164169Z",
+    "modified": "2024-08-13T14:51:23.164171Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--d9374627-39d1-41a3-8318-30c018a50b31",
+    "target_ref": "malware-behavior--be869803-3420-4e85-9d07-2507443f6152",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "description": "Meintanis, S., Revuelto, V., Socha, K.. (2017, March 10). DDoS Overview and Response Guide. Retrieved April 24, 2019.",
+            "url": "http://cert.europa.eu/static/WhitePapers/CERT-EU_Security_Whitepaper_DDoS_17-003.pdf",
+            "source_name": "CERT-EU DDoS March 2017"
+        }
+    ],
+    "description": "When flood volumes exceed the capacity of the network connection being targeted, it is typically necessary to intercept the incoming traffic upstream to filter out the attack traffic from the legitimate traffic. Such defenses can be provided by the hosting Internet Service Provider (ISP) or by a 3rd party such as a Content Delivery Network (CDN) or providers specializing in DoS mitigations.(Citation: CERT-EU DDoS March 2017)\n\nDepending on flood volume, on-premises filtering may be possible by blocking source addresses sourcing the attack, blocking ports that are being targeted, or blocking protocols being used for transport.(Citation: CERT-EU DDoS March 2017)\n\nAs immediate response may require rapid engagement of 3rd parties, analyze the risk associated to critical resources being affected by Network DoS attacks and create a disaster recovery plan/business continuity plan to respond to incidents.(Citation: CERT-EU DDoS March 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

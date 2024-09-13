@@ -1,0 +1,43 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1df5e993-7251-482e-a6ed-454edb4d265c",
+    "created": "2024-08-13T14:51:22.232357Z",
+    "modified": "2024-08-13T14:51:22.232360Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--180aea01-9f45-4181-9540-94bef316a086",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Red Canary Hospital Thwarted Ryuk October 2020",
+            "description": "Brian Donohue, Katie Nickels, Paul Michaud, Adina Bodkins, Taylor Chapman, Tony Lambert, Jeff Felling, Kyle Rainey, Mike Haag, Matt Graeber, Aaron Didier.. (2020, October 29). A Bazar start: How one hospital thwarted a Ryuk ransomware outbreak. Retrieved October 30, 2020.",
+            "url": "https://redcanary.com/blog/how-one-hospital-thwarted-a-ryuk-ransomware-outbreak/"
+        },
+        {
+            "source_name": "DHS/CISA Ransomware Targeting Healthcare October 2020",
+            "description": "DHS/CISA. (2020, October 28). Ransomware Activity Targeting the Healthcare and Public Health Sector. Retrieved October 28, 2020.",
+            "url": "https://us-cert.cisa.gov/ncas/alerts/aa20-302a"
+        },
+        {
+            "source_name": "CrowdStrike Grim Spider May 2019",
+            "description": "John, E. and Carvey, H. (2019, May 30). Unraveling the Spiderweb: Timelining ATT&CK Artifacts Used by GRIM SPIDER. Retrieved May 12, 2020.",
+            "url": "https://www.crowdstrike.com/blog/timelining-grim-spiders-big-game-hunting-tactics/"
+        },
+        {
+            "source_name": "FireEye KEGTAP SINGLEMALT October 2020",
+            "description": "Kimberly Goody, Jeremy Kennelly, Joshua Shilko, Steve Elovitz, Douglas Bienstock. (2020, October 28). Unhappy Hour Special: KEGTAP and SINGLEMALT With a Ransomware Chaser. Retrieved October 28, 2020.",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html"
+        },
+        {
+            "source_name": "Mandiant FIN12 Oct 2021",
+            "description": "Shilko, J., et al. (2021, October 7). FIN12: The Prolific Ransomware Intrusion Threat Actor That Has Aggressively Pursued Healthcare Targets. Retrieved June 15, 2023.",
+            "url": "https://www.mandiant.com/sites/default/files/2021-10/fin12-group-profile.pdf"
+        }
+    ],
+    "description": "[Wizard Spider](https://attack.mitre.org/groups/G0102) has used macros to execute PowerShell scripts to download malware on victim's machines.(Citation: CrowdStrike Grim Spider May 2019) It has also used PowerShell to execute commands and move laterally through a victim network.(Citation: DHS/CISA Ransomware Targeting Healthcare October 2020)(Citation: FireEye KEGTAP SINGLEMALT October 2020)(Citation: Red Canary Hospital Thwarted Ryuk October 2020)(Citation: Mandiant FIN12 Oct 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

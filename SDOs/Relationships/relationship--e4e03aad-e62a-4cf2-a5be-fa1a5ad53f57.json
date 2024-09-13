@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e4e03aad-e62a-4cf2-a5be-fa1a5ad53f57",
+    "created": "2024-08-13T14:51:23.633688Z",
+    "modified": "2024-08-13T14:51:23.633690Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--f2857333-11d4-45bf-b064-2c28d8525be5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for process execution that may use NTFS file attributes to hide their malicious data in order to evade detection. \n\nAnalytic 1 - NTFS Alternate Data Stream Execution : System Utilities (Powershell)\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") Image= \"C:\\\\Windows\\\\*\\\\powershell.exe\" | regex CommandLine= \"Invoke-CimMethod\\s+-ClassName\\s+Win32_Process\\s+-MethodName\\s+Create.*\\b(\\w+(\\.\\w+)?):(\\w+(\\.\\w+)?)|-ep bypass\\s+-\\s+<.*\\b(\\w+(\\.\\w+)?):(\\w+(\\.\\w+)?)|-command.*Get-Content.*-Stream.*Set-Content.*start-process .*(\\w+(\\.\\w+)?)\"</code>\n\nAnalytic 2 - NTFS Alternate Data Stream Execution : System Utilities (WMIC)\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") Image= \"C:\\\\Windows\\\\*\\\\wmic.exe\" | regex CommandLine= \"process call create.*\\\"(\\w+(\\.\\w+)?):(\\w+(\\.\\w+)?)\"</code>\n\nAnalytic 3 - NTFS Alternate Data Stream Execution : System Utilities (rundll32)\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") Image= \"C:\\\\Windows\\\\*\\\\rundll32.exe\" | regex CommandLine= \"\\\"?(\\w+(\\.\\w+)?):(\\w+(\\.\\w+)?)?\\\"?,\\w+\\|(advpack\\.dll\\|ieadvpack\\.dll),RegisterOCX\\s+(\\w+\\.\\w+):(\\w+(\\.\\w+)?)\\|(shdocvw\\.dll\\|ieframe\\.dll),OpenURL.*(\\w+\\.\\w+):(\\w+(\\.\\w+)?)\"</code>\n\nAnalytic 4 - NTFS Alternate Data Stream Execution : System Utilities (wscript/cscript)\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") Image= \"C:\\\\Windows\\\\*\\\\wscript.exe\" OR Image= \"C:\\\\Windows\\\\*\\\\cscript.exe)\" | regex CommandLine= \"(?<!\\/)\\b\\w+(\\.\\w+)?:\\w+(\\.\\w+)?$\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

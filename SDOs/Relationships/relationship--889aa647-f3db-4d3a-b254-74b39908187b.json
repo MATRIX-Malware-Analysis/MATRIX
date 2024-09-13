@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--889aa647-f3db-4d3a-b254-74b39908187b",
+    "created": "2024-08-13T14:51:22.407662Z",
+    "modified": "2024-08-13T14:51:22.407664Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--6a5848a8-6201-4a2c-8a6a-ca5af8c6f3df",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "To detect changes in ETW you can also monitor the registry key which contains configurations for all ETW event providers: <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Autologger\\AUTOLOGGER_NAME\\{PROVIDER_GUID}</code>",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

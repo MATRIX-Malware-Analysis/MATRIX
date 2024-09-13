@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b5a3b13a-e6f4-4b75-9ada-a74d5ed3146e",
+    "created": "2024-08-13T14:51:23.021733Z",
+    "modified": "2024-08-13T14:51:23.021735Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--93591901-3172-4e94-abf8-6034ab26f44a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Process Creation Flags May 2018",
+            "description": "Schofield, M. & Satran, M. (2018, May 30). Process Creation Flags. Retrieved June 4, 2019.",
+            "url": "https://docs.microsoft.com/windows/desktop/ProcThread/process-creation-flags"
+        },
+        {
+            "source_name": "Secuirtyinbits Ataware3 May 2019",
+            "description": "Secuirtyinbits . (2019, May 14). Parent PID Spoofing (Stage 2) Ataware Ransomware Part 3. Retrieved June 6, 2019.",
+            "url": "https://www.securityinbits.com/malware-analysis/parent-pid-spoofing-stage-2-ataware-ransomware-part-3"
+        }
+    ],
+    "description": "Monitor for API calls to CreateProcess/CreateProcessA, specifically those from user/potentially malicious processes and with parameters explicitly assigning PPIDs (ex: the Process Creation Flags of 0x8XXX, indicating that the process is being created with extended startup information(Citation: Microsoft Process Creation Flags May 2018)). Malicious use of CreateProcess/CreateProcessA may also be proceeded by a call to UpdateProcThreadAttribute, which may be necessary to update process creation attributes.(Citation: Secuirtyinbits Ataware3 May 2019)This may generate false positives from normal UAC elevation behavior, so compare to a system baseline/understanding of normal system activity if possible.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--454efc51-9c41-45d4-bcc2-06be3239e6d4",
+    "created": "2024-08-13T14:51:21.802075Z",
+    "modified": "2024-08-13T14:51:21.802077Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--dce31a00-1e90-4655-b0f9-e2e71a748a87",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft W32Time May 2017",
+            "description": "Mathers, B. (2017, May 31). Windows Time Service Tools and Settings. Retrieved March 26, 2018.",
+            "url": "https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings"
+        },
+        {
+            "source_name": "TechNet Autoruns",
+            "description": "Russinovich, M. (2016, January 4). Autoruns for Windows v13.51. Retrieved June 6, 2016.",
+            "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902"
+        }
+    ],
+    "description": "Monitor newly executed processes, such as the W32tm.exe utility. (Citation: Microsoft W32Time May 2017) The Sysinternals Autoruns tool may also be used to analyze auto-starting locations, including DLLs listed as time providers. (Citation: TechNet Autoruns)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

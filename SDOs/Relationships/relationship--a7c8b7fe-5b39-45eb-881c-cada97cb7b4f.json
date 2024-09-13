@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a7c8b7fe-5b39-45eb-881c-cada97cb7b4f",
+    "created": "2024-08-13T14:51:21.865646Z",
+    "modified": "2024-08-13T14:51:21.865648Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--5540f38a-106f-474c-b469-5c54de65a394",
+    "target_ref": "malware-behavior--543fceb5-cb92-40cb-aacf-6913d4db58bc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Ensure proper permissions are set for Registry hives to prevent users from modifying keys related to SIP and trust provider components. Components may still be able to be hijacked to suitable functions already present on disk if malicious modifications to Registry keys are not prevented. ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

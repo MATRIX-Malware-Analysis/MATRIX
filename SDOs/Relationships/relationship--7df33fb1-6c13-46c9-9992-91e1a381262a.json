@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7df33fb1-6c13-46c9-9992-91e1a381262a",
+    "created": "2024-08-13T14:51:22.104106Z",
+    "modified": "2024-08-13T14:51:22.104108Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--f3d95a1f-bba2-44ce-9af7-37866cd63fd0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "rowland linux at 2019",
+            "url": "https://www.linkedin.com/pulse/getting-attacker-ip-address-from-malicious-linux-job-craig-rowland/",
+            "description": "Craig Rowland. (2019, July 25). Getting an Attacker IP Address from a Malicious Linux At Job. Retrieved October 15, 2021."
+        }
+    ],
+    "description": "On Windows, monitor Windows Task Scheduler stores in `%systemroot%\\System32\\Tasks` for change entries related to scheduled tasks, especially those that do not correlate with known software, patch cycles, etc. On Linux and macOS, all [at](https://attack.mitre.org/software/S0110) jobs are stored in <code>/var/spool/cron/atjobs/</code>.(Citation: rowland linux at 2019)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9a912eb3-2c66-42b8-a06f-76f94514a326",
+    "created": "2024-08-13T14:51:23.586524Z",
+    "modified": "2024-08-13T14:51:23.586526Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--b2d03cea-aec1-45ca-9744-9ee583c1e1cc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Cloudy Logs 2023",
+            "description": "Pany, D. & Hanley, C. (2023, May 3). Cloudy with a Chance of Bad Logs: Cloud Platform Log Configurations to Consider in Investigations. Retrieved October 16, 2023.",
+            "url": "https://www.mandiant.com/resources/blog/cloud-bad-log-configurations"
+        }
+    ],
+    "description": "Monitor authentication logs for system and application login failures of [Valid Accounts](https://attack.mitre.org/techniques/T1078). If authentication failures are high, then there may be a brute force attempt to gain access to a system using legitimate credentials.(Citation: Mandiant Cloudy Logs 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

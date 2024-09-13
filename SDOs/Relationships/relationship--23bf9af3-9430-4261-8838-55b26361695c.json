@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--23bf9af3-9430-4261-8838-55b26361695c",
+    "created": "2024-08-13T14:51:23.964006Z",
+    "modified": "2024-08-13T14:51:23.964009Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--3911658a-6506-4deb-9ab4-595a51ae71ad",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "University of Birmingham C2",
+            "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+            "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+        }
+    ],
+    "description": "Monitor for mismatches between protocols and their expected ports (e.g., non-HTTP traffic on tcp:80). Analyze packet contents to detect communications that do not follow the expected protocol behavior for the port that is being used.(Citation: University of Birmingham C2)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

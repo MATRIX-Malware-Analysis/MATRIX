@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2516a9f5-2888-4eed-83f7-2d3b6e5a2a24",
+    "created": "2024-08-13T14:51:22.636335Z",
+    "modified": "2024-08-13T14:51:22.636337Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--6495ae23-3ab4-43c5-a94f-5638a2c31fd2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments for actions that would delete Windows event logs (via PowerShell) such as <code>Remove-EventLog -LogName Security</code>.\n\nNote: Event ID 4104 (from the Microsoft-Windows-Powershell/Operational log) captures Powershell script blocks, which can be analyzed and used to detect on attempts to Clear Windows Event Logs. In particular, Powershell has a built-in Clear-EventLog cmdlet that allows for a specified log to be cleared. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

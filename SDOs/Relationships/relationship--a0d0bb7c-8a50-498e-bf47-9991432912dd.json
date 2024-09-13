@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a0d0bb7c-8a50-498e-bf47-9991432912dd",
+    "created": "2024-08-13T14:51:21.990141Z",
+    "modified": "2024-08-13T14:51:21.990143Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--2c4d4e92-0ccf-4a97-b54c-86d662988a53",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SensePost NotRuler",
+            "url": "https://github.com/sensepost/notruler",
+            "description": "SensePost. (2017, September 21). NotRuler - The opposite of Ruler, provides blue teams with the ability to detect Ruler usage against Exchange. Retrieved February 4, 2019."
+        }
+    ],
+    "description": "Monitor for third-party application logging, messaging, and/or other artifacts that may leverage Microsoft Office-based applications for persistence between startups. SensePost, whose tool [Ruler](https://attack.mitre.org/software/S0358) can be used to carry out malicious rules, forms, and Home Page attacks, has released a tool to detect Ruler usage.(Citation: SensePost NotRuler)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

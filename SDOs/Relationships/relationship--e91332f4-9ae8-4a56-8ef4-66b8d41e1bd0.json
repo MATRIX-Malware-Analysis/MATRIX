@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e91332f4-9ae8-4a56-8ef4-66b8d41e1bd0",
+    "created": "2024-08-13T14:51:22.743241Z",
+    "modified": "2024-08-13T14:51:22.743244Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--b5c6a467-2796-48f5-8faf-9304fc774fff",
+    "target_ref": "malware-behavior--045d0922-2310-4e60-b5e4-3302302cb3c5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://www.welivesecurity.com/wp-content/uploads/2017/02/Read-The-Manual.pdf",
+            "description": "Faou, M. and Boutin, J. (2017, February). Read The Manual: A Guide to the RTM Banking Trojan. Retrieved March 9, 2017.",
+            "source_name": "ESET RTM Feb 2017"
+        },
+        {
+            "source_name": "Unit42 Redaman January 2019",
+            "url": "https://unit42.paloaltonetworks.com/russian-language-malspam-pushing-redaman-banking-malware/",
+            "description": "Duncan, B., Harbison, M. (2019, January 23). Russian Language Malspam Pushing Redaman Banking Malware. Retrieved June 16, 2020."
+        }
+    ],
+    "description": "[RTM](https://attack.mitre.org/software/S0148) runs its core DLL file using rundll32.exe.(Citation: ESET RTM Feb 2017)(Citation: Unit42 Redaman January 2019)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

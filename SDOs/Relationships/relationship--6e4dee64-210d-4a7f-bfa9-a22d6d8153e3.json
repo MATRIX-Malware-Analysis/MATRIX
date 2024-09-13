@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6e4dee64-210d-4a7f-bfa9-a22d6d8153e3",
+    "created": "2024-08-13T14:51:22.325394Z",
+    "modified": "2024-08-13T14:51:22.325396Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--75edafa6-d7b9-4919-9bce-2fbd51a232bf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Look for suspicious account behavior across systems that share accounts, either user, admin, or service accounts. Examples: one account logged into multiple systems simultaneously; multiple accounts logged into the same machine simultaneously; accounts logged in at odd times or outside of business hours. Activity may be from interactive login sessions or process ownership from accounts being used to execute binaries on a remote system as a particular account.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

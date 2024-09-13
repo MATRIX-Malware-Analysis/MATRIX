@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bc2b0210-72d3-41d0-9f2e-9a0b5d9b11f9",
+    "created": "2024-08-13T14:51:23.025523Z",
+    "modified": "2024-08-13T14:51:23.025525Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--5c40a58c-2fb9-4f06-b5a7-287c3f168b45",
+    "target_ref": "malware-behavior--2cefb636-2506-4fc1-be67-26b40c529980",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor newly constructed scheduled jobs that may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.\n\nOn Windows systems, security event ID 4698 (A scheduled task was created) provides information on newly created scheduled tasks. It includes the TaskContent field, which contains an XML blob that captures key information on the scheduled task including the command to be executed.\n\nAnalytic 1 - Scheduled Task Execution\n\n<code> source=\"*WinEventLog:Security\" EventCode=\u201c4698\u201d | WHERE UserName LIKE \"*\\SYSTEM*\" AND (TaskContent LIKE suspicious_parameter OR TaskContent LIKE \"*powershell.exe*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

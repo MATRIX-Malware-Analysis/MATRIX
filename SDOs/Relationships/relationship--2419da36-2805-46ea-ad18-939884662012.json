@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2419da36-2805-46ea-ad18-939884662012",
+    "created": "2024-08-13T14:51:22.870834Z",
+    "modified": "2024-08-13T14:51:22.870836Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--4c936cef-797d-4c52-b0e0-46b3bbee5189",
+    "target_ref": "malware-behavior--6a5848a8-6201-4a2c-8a6a-ca5af8c6f3df",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Medium Event Tracing Tampering 2018",
+            "description": "Palantir. (2018, December 24). Tampering with Windows Event Tracing: Background, Offense, and Defense. Retrieved June 7, 2019.",
+            "url": "https://medium.com/palantir/tampering-with-windows-event-tracing-background-offense-and-defense-4be7ac62ac63"
+        }
+    ],
+    "description": "Detect lack of reported activity from a host sensor. Different methods of blocking may cause different disruptions in reporting. Systems may suddenly stop reporting all data or only certain kinds of data. Depending on the types of host information collected, an analyst may be able to detect the event that triggered a process to stop or connection to be blocked. For example, Sysmon will log when its configuration state has changed (Event ID 16) and Windows Management Instrumentation (WMI) may be used to subscribe ETW providers that log any provider removal from a specific trace session. (Citation: Medium Event Tracing Tampering 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

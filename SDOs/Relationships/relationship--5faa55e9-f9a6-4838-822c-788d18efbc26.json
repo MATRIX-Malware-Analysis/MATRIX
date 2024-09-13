@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5faa55e9-f9a6-4838-822c-788d18efbc26",
+    "created": "2024-08-13T14:51:21.901384Z",
+    "modified": "2024-08-13T14:51:21.901386Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--25659dd6-ea12-45c4-97e6-381e3e4b593e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Elastic - Koadiac Detection with EQL",
+            "description": "Stepanic, D.. (2020, January 13). Embracing offensive tooling: Building detections against Koadic using EQL. Retrieved November 30, 2020.",
+            "url": "https://www.elastic.co/blog/embracing-offensive-tooling-building-detections-against-koadic-using-eql"
+        }
+    ],
+    "description": "Monitor for processes that can be used to enumerate user accounts and groups such as <code>net.exe</code> and <code>net1.exe</code>, especially when executed in quick succession.(Citation: Elastic - Koadiac Detection with EQL)\n\u00a0\nInformation may also be acquired through Windows system management tools such as [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) and [PowerShell](https://attack.mitre.org/techniques/T1059/001).\n\nNote: Event IDs are for Sysmon (Event ID 1 - process creation) and Windows Security Log (Event ID 4688 - a new process has been created). \n- For Linux, auditing frameworks such as the Linux Auditing System (auditd) can be used to alert on the enumeration/reading of files that store local users, including <code>/etc/passwd</code>. \n- For MacOS, utilities that work in concert with Apple\u2019s Endpoint Security Framework such as Process Monitor can be used to track usage of commands such as <code>id</code> and <code>groups</code>.\n\nAnalytic 1 - Net Discovery Commands\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") Image=\"net.exe\" OR Image=\"net1.exe\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

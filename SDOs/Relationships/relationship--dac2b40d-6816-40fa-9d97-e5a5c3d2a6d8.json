@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--dac2b40d-6816-40fa-9d97-e5a5c3d2a6d8",
+    "created": "2024-08-13T14:51:21.686145Z",
+    "modified": "2024-08-13T14:51:21.686148Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--836fe490-84e0-4e27-83b4-130d8d0ca60c",
+    "target_ref": "malware-behavior--4579d9c9-d5b9-45e0-9848-0104637b579f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Identify web browser files that contain credentials such as Google Chrome\u2019s Login Data database file: <code>AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data</code>. Monitor file read events of web browser files that contain credentials, especially when the reading process is unrelated to the subject web browser.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

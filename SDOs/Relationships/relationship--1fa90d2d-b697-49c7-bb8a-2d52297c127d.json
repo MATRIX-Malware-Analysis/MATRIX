@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1fa90d2d-b697-49c7-bb8a-2d52297c127d",
+    "created": "2024-08-13T14:51:22.300559Z",
+    "modified": "2024-08-13T14:51:22.300561Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--97e165d6-70c5-400b-b16b-8b18455c6d54",
+    "target_ref": "malware-behavior--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Pulse Secure Update May 2021",
+            "description": "Perez, D. et al. (2021, May 27). Re-Checking Your Pulse: Updates on Chinese APT Actors Compromising Pulse Secure VPN Devices. Retrieved February 5, 2024.",
+            "url": "https://www.mandiant.com/resources/blog/updates-on-chinese-apt-compromising-pulse-secure-vpn-devices"
+        }
+    ],
+    "description": "[APT5](https://attack.mitre.org/groups/G1023) has named exfiltration archives to mimic Windows Updates at times using filenames with a `KB<digits>.zip` pattern.(Citation: Mandiant Pulse Secure Update May 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

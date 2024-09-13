@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--42f32093-80ce-427c-8df7-82939bfc4306",
+    "created": "2024-08-13T14:51:22.356968Z",
+    "modified": "2024-08-13T14:51:22.356971Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--3120b9fa-23b8-4500-ae73-09494f607b7d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "atomic-red proc file system",
+            "description": "Atomic Red Team. (2023, November). T1003.007 - OS Credential Dumping: Proc Filesystem. Retrieved March 28, 2024.",
+            "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.md"
+        },
+        {
+            "source_name": "mimipenguin proc file",
+            "description": "Gregal, Hunter. (2019, September 17). MimiPenguin 2.0. Retrieved March 28, 2024.",
+            "url": "https://github.com/huntergregal/mimipenguin/blob/master/mimipenguin.sh"
+        }
+    ],
+    "description": "Monitor executed commands and arguments that may gather credentials from information stored in the Proc filesystem or <code>/proc</code>. For instance, adversaries may use regex patterns to search for process memory that may be exfiltrated or searched for credentials.(Citation: atomic-red proc file system)(Citation: mimipenguin proc file)\n\n<code>grep -E \"^[0-9a-f-]* r\" /proc/\"$pid\"/maps | grep -E 'heap|stack' | cut -d' ' -f 1</code>\n\n<code>grep -E \"^[0-9a-f-]* r\" /proc/\"$PID\"/maps | grep heap | cut -d' ' -f 1</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

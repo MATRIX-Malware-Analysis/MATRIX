@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--87f8a210-b571-45cd-8d9a-4d09c7d17960",
+    "created": "2024-08-13T14:51:22.601622Z",
+    "modified": "2024-08-13T14:51:22.601625Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--2f6b4ed7-fef1-44ba-bcb8-1b4beb610b64",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Enigma MMC20 COM Jan 2017",
+            "url": "https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/",
+            "description": "Nelson, M. (2017, January 5). Lateral Movement using the MMC20 Application COM Object. Retrieved November 21, 2017."
+        }
+    ],
+    "description": "Monitor for COM objects loading DLLs and other modules not typically associated with the application.(Citation: Enigma MMC20 COM Jan 2017)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

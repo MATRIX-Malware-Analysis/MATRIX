@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--190a9a05-a34d-4d91-89c1-98eb0502ce94",
+    "created": "2024-08-13T14:51:22.650625Z",
+    "modified": "2024-08-13T14:51:22.650627Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--79b1bf8f-cd29-4d09-8ba0-2ae021b2e4de",
+    "target_ref": "malware-behavior--6dec538a-ed02-4b1f-85de-3bee8396ff83",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Malwarebytes Higaisa 2020",
+            "url": "https://blog.malwarebytes.com/threat-analysis/2020/06/higaisa/",
+            "description": "Malwarebytes Threat Intelligence Team. (2020, June 4). New LNK attack tied to Higaisa APT discovered. Retrieved March 2, 2021."
+        },
+        {
+            "source_name": "Zscaler Higaisa 2020",
+            "url": "https://www.zscaler.com/blogs/security-research/return-higaisa-apt",
+            "description": "Singh, S. Singh, A. (2020, June 11). The Return on the Higaisa APT. Retrieved March 2, 2021."
+        }
+    ],
+    "description": "[Higaisa](https://attack.mitre.org/groups/G0126) used certutil to decode Base64 binaries at runtime and a 16-byte XOR key to decrypt data.(Citation: Malwarebytes Higaisa 2020)(Citation: Zscaler Higaisa 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--64347afb-812e-444d-bc4f-02876f716aa9",
+    "created": "2024-08-13T14:51:22.127792Z",
+    "modified": "2024-08-13T14:51:22.127795Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--e1f9cdd2-9511-4fca-90d7-f3e92cfdd0bf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor network data for uncommon data flows that may be related to abuse of [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a service specifically designed to accept remote connections, such as RDP, telnet, SSH, and VNC.\n\nNote: Network Analysis frameworks such as Zeek can be used to capture, decode, and alert on network service protocols such as SSH and RDP. #Protocol 6 = TCP #Protocol 17 = UDP\n\nAnalytic 1 - Suspicious Protocols\n<code>source=\"*Zeek:*\" AND (port=\"636\" AND protocol=\"6\") OR (port=\"389\" AND protocol=\"17\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

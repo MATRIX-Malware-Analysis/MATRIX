@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0f772f72-04f2-4035-bff4-67bba36b6a6a",
+    "created": "2024-08-13T14:51:22.039115Z",
+    "modified": "2024-08-13T14:51:22.039117Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--3d1b9d7e-3921-4d25-845a-7d9f15c0da44",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Pfammatter - Hidden Inbox Rules",
+            "url": "https://blog.compass-security.com/2018/09/hidden-inbox-rules-in-microsoft-exchange/",
+            "description": "Damian Pfammatter. (2018, September 17). Hidden Inbox Rules in Microsoft Exchange. Retrieved October 12, 2021."
+        },
+        {
+            "source_name": "Microsoft Detect Outlook Forms",
+            "url": "https://docs.microsoft.com/en-us/office365/securitycompliance/detect-and-remediate-outlook-rules-forms-attack",
+            "description": "Fox, C., Vangel, D. (2018, April 22). Detect and Remediate Outlook Rules and Custom Forms Injections Attacks in Office 365. Retrieved February 4, 2019."
+        }
+    ],
+    "description": "Monitor executed commands and arguments that may abuse Microsoft Outlook rules to obtain persistence on a compromised system. Microsoft has released a PowerShell script to safely gather mail forwarding rules and custom forms in your mail environment as well as steps to interpret the output.(Citation: Microsoft Detect Outlook Forms) This PowerShell script is ineffective in gathering rules with modified PR_RULE_MSG_NAME and PR_RULE_MSG_PROVIDER properties caused by adversaries using a Microsoft Exchange Server Messaging API Editor (MAPI Editor), so only examination with the Exchange Administration tool MFCMapi can reveal these mail forwarding rules.(Citation: Pfammatter - Hidden Inbox Rules)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

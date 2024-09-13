@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--02e5352d-777c-4aac-b5a5-713695d9cee3",
+    "created": "2024-08-13T14:51:23.542619Z",
+    "modified": "2024-08-13T14:51:23.542622Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f119ee6e-d69d-4f55-9ffa-502eafeeb53a",
+    "target_ref": "malware-behavior--8252f135-ed26-4ce1-ae61-f26e94429a19",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "versprite xpc vpn",
+            "url": "https://versprite.com/blog/exploiting-vyprvpn-for-macos/",
+            "description": "VerSprite. (2018, January 24). Exploiting VyprVPN for MacOS. Retrieved April 20, 2022."
+        }
+    ],
+    "description": "Monitor for processes making abnormal calls to higher privileged processes, such as a user application connecting to a VPN service.(Citation: versprite xpc vpn)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

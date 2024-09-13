@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bdf914c9-e0ae-4e0f-913f-e27236b4b505",
+    "created": "2024-08-13T14:51:23.545504Z",
+    "modified": "2024-08-13T14:51:23.545507Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--4ff5d6a8-c062-4c68-a778-36fc5edd564f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "TrendMicro CPL Malware Jan 2014",
+            "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp-cpl-malware.pdf",
+            "description": "Merc\u00eas, F. (2014, January 27). CPL Malware - Malicious Control Panel Items. Retrieved January 18, 2018."
+        }
+    ],
+    "description": "When executed from the command line or clicked, control.exe will execute the CPL file (ex: <code>control.exe file.cpl</code>) before [Rundll32](https://attack.mitre.org/techniques/T1218/011) is used to call the CPL's API functions (ex: <code>rundll32.exe shell32.dll,Control_RunDLL file.cpl</code>). CPL files can be executed directly via the CPL API function with just the latter [Rundll32](https://attack.mitre.org/techniques/T1218/011) command, which may bypass detections and/or execution filters for control.exe.(Citation: TrendMicro CPL Malware Jan 2014)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

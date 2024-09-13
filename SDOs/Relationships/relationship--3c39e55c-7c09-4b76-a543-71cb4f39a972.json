@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3c39e55c-7c09-4b76-a543-71cb4f39a972",
+    "created": "2024-08-13T14:51:21.878932Z",
+    "modified": "2024-08-13T14:51:21.878934Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9cd5b7d4-369e-4db8-b28f-f98c93a04bf9",
+    "target_ref": "malware-behavior--c92e3d68-2349-49e4-a341-7edca2deff96",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft WDAC",
+            "url": "https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules",
+            "description": "Coulter, D. et al.. (2019, April 9). Microsoft recommended block rules. Retrieved August 12, 2021."
+        }
+    ],
+    "description": "Use application control configured to block execution of <code>msbuild.exe</code> if it is not required for a given system or network to prevent potential misuse by adversaries. For example, in Windows 10 and Windows Server 2016 and above, Windows Defender Application Control (WDAC) policy rules may be applied to block the <code>msbuild.exe</code> application and to prevent abuse.(Citation: Microsoft WDAC)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

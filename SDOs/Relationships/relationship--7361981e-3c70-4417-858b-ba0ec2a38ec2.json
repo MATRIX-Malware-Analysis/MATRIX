@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7361981e-3c70-4417-858b-ba0ec2a38ec2",
+    "created": "2024-08-13T14:48:38.083351Z",
+    "modified": "2024-08-13T14:48:38.083355Z",
+    "relationship_type": "uses",
+    "description": "ThiefQuest uses a function named is_debugging to perform anti-debugging logic. The function invokes sysctl checking the returned value of P_TRACED. ThiefQuest also calls ptrace with the PTRACE_DENY_ATTACH flag to prevent debugging.[2]",
+    "source_ref": "malware--1e704baf-bb48-4984-8a3c-7c59fcf52e87",
+    "target_ref": "malware-behavior--7e24cb95-ffd6-4a52-9d35-ed8dea47824c",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

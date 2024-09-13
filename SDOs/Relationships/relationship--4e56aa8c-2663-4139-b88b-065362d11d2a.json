@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4e56aa8c-2663-4139-b88b-065362d11d2a",
+    "created": "2024-08-13T14:51:22.060802Z",
+    "modified": "2024-08-13T14:51:22.060804Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--0f232d60-8bb1-4668-ba53-ab8738608161",
+    "target_ref": "malware-behavior--d5a69cfb-fc2a-46cb-99eb-74b236db5061",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "TechNet Arp",
+            "description": "Microsoft. (n.d.). Arp. Retrieved April 17, 2016.",
+            "url": "https://technet.microsoft.com/en-us/library/bb490864.aspx"
+        },
+        {
+            "source_name": "Palo Alto ARP",
+            "url": "https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-analytics-alert-reference/cortex-xdr-analytics-alert-reference/uncommon-arp-cache-listing-via-arp-exe.html",
+            "description": "Palo Alto Networks. (2021, November 24). Cortex XDR Analytics Alert Reference: Uncommon ARP cache listing via arp.exe. Retrieved December 7, 2021."
+        }
+    ],
+    "description": "[Arp](https://attack.mitre.org/software/S0099) can be used to display a host's ARP cache, which may include address resolutions for remote systems.(Citation: TechNet Arp)(Citation: Palo Alto ARP)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

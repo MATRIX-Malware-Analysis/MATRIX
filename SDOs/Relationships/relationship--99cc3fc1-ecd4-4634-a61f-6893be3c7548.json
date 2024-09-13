@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--99cc3fc1-ecd4-4634-a61f-6893be3c7548",
+    "created": "2024-08-13T14:51:23.465537Z",
+    "modified": "2024-08-13T14:51:23.465540Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--911de105-de08-4de0-b4ac-b90cd65b2775",
+    "target_ref": "malware-behavior--144e007b-e638-431d-a894-45d90c54ab90",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Establish centralized logging for the activity of cloud compute infrastructure components. Monitor for suspicious sequences of events, such as the creation of multiple snapshots within a short period of time. To reduce false positives, valid change management procedures could introduce a known identifier that is logged with the change (e.g., tag or header) if supported by the cloud provider, to help distinguish valid, expected actions from malicious ones.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

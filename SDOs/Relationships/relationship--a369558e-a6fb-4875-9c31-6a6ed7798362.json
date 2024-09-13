@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a369558e-a6fb-4875-9c31-6a6ed7798362",
+    "created": "2024-08-13T14:51:23.901770Z",
+    "modified": "2024-08-13T14:51:23.901772Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--f640ea48-2638-4bdb-98ec-f3aa5eb1f174",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unexpected ICS protocol command functions to controllers from existing master devices (including from new processes) or from new devices. The latter is like detection for [Rogue Master](https://attack.mitre.org/techniques/T0848) but requires ICS function level insight to determine if an unauthorized device is issuing commands (e.g., a historian).\n\nMonitoring for unexpected or problematic values below the function level will provide better insights into potentially malicious activity but at the cost of additional false positives depending on the underlying operational process.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

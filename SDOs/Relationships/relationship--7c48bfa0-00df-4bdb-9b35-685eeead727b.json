@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7c48bfa0-00df-4bdb-9b35-685eeead727b",
+    "created": "2024-08-13T14:51:23.493169Z",
+    "modified": "2024-08-13T14:51:23.493172Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--84c205fa-8bd2-492f-b392-44521e3e0e98",
+    "target_ref": "malware-behavior--2aa78dfd-cb6f-4c70-9408-137cfd96be49",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Symantec WastedLocker June 2020",
+            "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/wastedlocker-ransomware-us",
+            "description": "Symantec Threat Intelligence. (2020, June 25). WastedLocker: Symantec Identifies Wave of Attacks Against U.S. Organizations. Retrieved May 20, 2021."
+        }
+    ],
+    "description": "[Indrik Spider](https://attack.mitre.org/groups/G0119) used [PsExec](https://attack.mitre.org/software/S0029) to leverage Windows Defender to disable scanning of all downloaded files and to restrict real-time monitoring.(Citation: Symantec WastedLocker June 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

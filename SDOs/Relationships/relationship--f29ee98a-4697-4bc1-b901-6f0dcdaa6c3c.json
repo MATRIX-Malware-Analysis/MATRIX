@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f29ee98a-4697-4bc1-b901-6f0dcdaa6c3c",
+    "created": "2024-08-13T14:51:23.354138Z",
+    "modified": "2024-08-13T14:51:23.354140Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--8a62000f-021f-4220-9716-2e76d9627b69",
+    "target_ref": "malware-behavior--9fa07bef-9c81-421e-a8e5-ad4366c5a925",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CrowdStrike StellarParticle January 2022",
+            "description": "CrowdStrike. (2022, January 27). Early Bird Catches the Wormhole: Observations from the StellarParticle Campaign. Retrieved February 7, 2022.",
+            "url": "https://www.crowdstrike.com/blog/observations-from-the-stellarparticle-campaign/"
+        },
+        {
+            "source_name": "Cybersecurity Advisory SVR TTP May 2021",
+            "description": "NCSC, CISA, FBI, NSA. (2021, May 7). Further TTPs associated with SVR cyber actors. Retrieved July 29, 2021.",
+            "url": "https://www.ncsc.gov.uk/files/Advisory-further-TTPs-associated-with-SVR-cyber-actors.pdf"
+        }
+    ],
+    "description": "During the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024), [APT29](https://attack.mitre.org/groups/G0016) gained access through compromised accounts at cloud solution partners, and used compromised certificates issued by Mimecast to authenticate to Mimecast customer systems.(Citation: Cybersecurity Advisory SVR TTP May 2021)(Citation: CrowdStrike StellarParticle January 2022)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

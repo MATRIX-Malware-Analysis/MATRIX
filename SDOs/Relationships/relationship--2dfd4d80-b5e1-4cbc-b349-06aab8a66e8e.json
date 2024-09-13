@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2dfd4d80-b5e1-4cbc-b349-06aab8a66e8e",
+    "created": "2024-08-13T14:51:23.161443Z",
+    "modified": "2024-08-13T14:51:23.161445Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--5093f0e0-d8a0-4f3d-8a35-f0392940f15e",
+    "target_ref": "malware-behavior--36a90949-60e6-4fa9-ab5c-63ca480d68da",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://adsecurity.org/?page_id=1821",
+            "description": "Metcalf, S. (2015, November 13). Unofficial Guide to Mimikatz & Command Reference. Retrieved December 23, 2015.",
+            "source_name": "Adsecurity Mimikatz Guide"
+        },
+        {
+            "source_name": "Metcalf 2015",
+            "description": "Metcalf, S. (2015, January 19). Attackers Can Now Use Mimikatz to Implant Skeleton Key on Domain Controllers & BackDoor Your Active Directory Forest. Retrieved February 3, 2015.",
+            "url": "http://adsecurity.org/?p=1275"
+        }
+    ],
+    "description": "The [Mimikatz](https://attack.mitre.org/software/S0002) credential dumper has been extended to include Skeleton Key domain controller authentication bypass functionality. The <code>LSADUMP::ChangeNTLM</code> and <code>LSADUMP::SetNTLM</code> modules can also manipulate the password hash of an account without knowing the clear text value.(Citation: Adsecurity Mimikatz Guide)(Citation: Metcalf 2015)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

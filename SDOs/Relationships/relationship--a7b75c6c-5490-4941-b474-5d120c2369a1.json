@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a7b75c6c-5490-4941-b474-5d120c2369a1",
+    "created": "2024-08-13T14:51:22.762197Z",
+    "modified": "2024-08-13T14:51:22.762199Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--0c2d00da-7742-49e7-9928-4514e5075d32",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for modifications of PATH environment variable Registry keys such as <code>HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment\\Path</code>. An adversary can add a new directory or list of directories before other locations where programs can be executed from.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

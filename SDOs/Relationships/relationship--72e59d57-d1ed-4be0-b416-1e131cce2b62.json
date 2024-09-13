@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--72e59d57-d1ed-4be0-b416-1e131cce2b62",
+    "created": "2024-08-13T14:51:22.435366Z",
+    "modified": "2024-08-13T14:51:22.435368Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--68a0c5ed-bee2-4513-830d-5b0d650139bd",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Enigma Outlook DCOM Lateral Movement Nov 2017",
+            "description": "Nelson, M. (2017, November 16). Lateral Movement using Outlook's CreateObject Method and DotNetToJScript. Retrieved November 21, 2017.",
+            "url": "https://enigma0x3.net/2017/11/16/lateral-movement-using-outlooks-createobject-method-and-dotnettojscript/"
+        }
+    ],
+    "description": "Monitor for COM objects loading DLLs and other modules not typically associated with the application.(Citation: Enigma Outlook DCOM Lateral Movement Nov 2017)\n\nNote: Sysmon Event ID 7 (Image loaded) can be used to monitor for suspicious DLLs loaded by the DCOM Server Process Launcher which runs inside of svchost.exe. This is a particularly noisy event and can generate a large volume of data, so we recommend baselining and filtering out any known benign svchost.exe module loads that occur as part of its typical operation.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

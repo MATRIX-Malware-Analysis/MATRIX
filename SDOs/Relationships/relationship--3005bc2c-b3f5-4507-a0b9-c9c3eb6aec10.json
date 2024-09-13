@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3005bc2c-b3f5-4507-a0b9-c9c3eb6aec10",
+    "created": "2024-08-13T14:51:22.059825Z",
+    "modified": "2024-08-13T14:51:22.059828Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--2aa78dfd-cb6f-4c70-9408-137cfd96be49",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for the execution of commands and arguments associated with disabling or modification of security software processes or services such as <code>Set-MpPreference-DisableScriptScanning 1</code> in Windows,<code>sudo spctl --master-disable</code> in macOS, and <code>setenforce 0</code> in Linux. Furthermore, on Windows monitor for the execution of taskkill.exe or Net Stop commands which may deactivate antivirus software and other security systems. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

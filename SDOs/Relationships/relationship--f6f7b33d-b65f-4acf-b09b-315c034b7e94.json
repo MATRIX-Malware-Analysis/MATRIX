@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f6f7b33d-b65f-4acf-b09b-315c034b7e94",
+    "created": "2024-08-13T14:51:22.831265Z",
+    "modified": "2024-08-13T14:51:22.831267Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--8f504411-cb96-4dac-a537-8d2bb7679c59",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Correlating a user session with a distinct lack of new commands in their <code>.bash_history</code> can be a clue to suspicious behavior. Monitor for modification of PowerShell command history settings through processes being created with <code>-HistorySaveStyle SaveNothing</code> command-line arguments and use of the PowerShell commands <code>Set-PSReadlineOption -HistorySaveStyle SaveNothing</code> and <code>Set-PSReadLineOption -HistorySavePath {File Path}</code>. For network devices, monitor for missing or inconsistencies in Network Device CLI logging present in AAA logs as well as in specific RADIUS and TACAS+ logs.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--aea17067-c97c-453a-b1ed-2772e5b7f576",
+    "created": "2024-08-13T14:51:22.574303Z",
+    "modified": "2024-08-13T14:51:22.574306Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--22522668-ddf6-470b-a027-9d6866679f67",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "TechNet Autoruns",
+            "description": "Russinovich, M. (2016, January 4). Autoruns for Windows v13.51. Retrieved June 6, 2016.",
+            "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902"
+        }
+    ],
+    "description": "Monitor Registry key modifications to <code>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Active Setup\\Installed Components\\</code>.\nTools such as Sysinternals Autoruns may also be used to detect system changes that could be attempts at persistence, including listing the Active Setup Registry locations and startup folders.(Citation: TechNet Autoruns) Suspicious program execution as startup programs may show up as outlier processes that have not been seen before when compared against historical data.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

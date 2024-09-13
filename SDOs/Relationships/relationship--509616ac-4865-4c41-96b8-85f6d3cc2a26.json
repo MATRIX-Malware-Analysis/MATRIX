@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--509616ac-4865-4c41-96b8-85f6d3cc2a26",
+    "created": "2024-08-13T14:51:23.530586Z",
+    "modified": "2024-08-13T14:51:23.530588Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--bdb40ed6-8e54-4248-98fa-aecedbd8c2c3",
+    "target_ref": "malware-behavior--565275d5-fcc3-4b66-b4e7-928e4cac6b8c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FBI FLASH APT39 September 2020",
+            "url": "https://www.iranwatch.org/sites/default/files/public-intelligence-alert.pdf",
+            "description": "FBI. (2020, September 17). Indicators of Compromise Associated with Rana Intelligence Computing, also known as Advanced Persistent Threat 39, Chafer, Cadelspy, Remexi, and ITG07. Retrieved December 10, 2020."
+        }
+    ],
+    "description": "[APT39](https://attack.mitre.org/groups/G0087) has used malware to turn off the <code>RequireSigned</code> feature which ensures only signed DLLs can be run on Windows.(Citation: FBI FLASH APT39 September 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

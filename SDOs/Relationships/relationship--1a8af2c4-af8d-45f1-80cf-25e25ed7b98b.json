@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1a8af2c4-af8d-45f1-80cf-25e25ed7b98b",
+    "created": "2024-08-13T14:51:22.932393Z",
+    "modified": "2024-08-13T14:51:22.932395Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--4b2bcb7b-f893-4a42-97bc-7d0580617c65",
+    "target_ref": "malware-behavior--1644e709-12d2-41e5-a60f-3470991f5011",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for the SAM registry key dump being created to access stored account password hashes. Some hash dumpers will open the local file system as a device and parse to the SAM table to avoid file access defenses. Others will make an in-memory copy of the SAM table before reading hashes. Detection of compromised [Valid Accounts](https://attack.mitre.org/techniques/T1078) in-use by adversaries may help as well.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

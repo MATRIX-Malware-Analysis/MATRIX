@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1953d7f7-0e7c-4893-ad26-d4476b32e01d",
+    "created": "2024-08-13T14:51:23.246398Z",
+    "modified": "2024-08-13T14:51:23.246400Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--85689b4c-0907-4ab8-8c04-7f81ecb5a322",
+    "target_ref": "malware-behavior--232a7e42-cd6e-4902-8fe9-2960f529dd4d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/enable-attack-surface-reduction",
+            "description": "Brower, N. & D'Souza-Wiltshire, I. (2017, November 9). Enable Attack surface reduction. Retrieved February 3, 2018.",
+            "source_name": "Microsoft ASR Nov 2017"
+        },
+        {
+            "url": "https://posts.specterops.io/reviving-dde-using-onenote-and-excel-for-code-execution-d7226864caee",
+            "description": "Nelson, M. (2018, January 29). Reviving DDE: Using OneNote and Excel for Code Execution. Retrieved February 3, 2018.",
+            "source_name": "Enigma Reviving DDE Jan 2018"
+        }
+    ],
+    "description": "On Windows 10, enable Attack Surface Reduction (ASR) rules to prevent DDE attacks and spawning of child processes from Office programs.(Citation: Microsoft ASR Nov 2017)(Citation: Enigma Reviving DDE Jan 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

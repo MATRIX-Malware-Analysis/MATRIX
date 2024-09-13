@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b69bd5d3-b0e5-492d-b30e-5cbb08b44136",
+    "created": "2024-08-13T14:51:21.872340Z",
+    "modified": "2024-08-13T14:51:21.872343Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--a8bc2369-a68e-43c5-ac1a-a2a939215ef9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments for actions that may interact with the Windows Registry to gather information about the system, configuration, and installed software.\n\nNote: For PowerShell Module logging event id 4103, enable logging for module Microsoft.PowerShell.Management. The New-PSDrive PowerShell cmdlet creates temporary and persistent drives that are mapped to or associated with a location in a data store, such a registry key (PSProvider \u201cRegistry\u201d). The the Get-ChildItem gets the items in one or more specified locations. By using both, you can enumerate COM objects in one or more specified locations.\n\nAnalytic 1 - Suspicious Commands\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Powershell/Operational\" EventCode=\"4103\") | WHERE CommandLine LIKE \"%New-PSDrive%\" AND (CommandLine LIKE \"%Registry%\" OR CommandLine LIKE \"%HKEY_CLASSES_ROOT%\" OR CommandLine LIKE \"%HKCR%\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

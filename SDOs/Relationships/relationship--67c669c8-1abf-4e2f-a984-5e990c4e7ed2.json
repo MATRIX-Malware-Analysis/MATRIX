@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--67c669c8-1abf-4e2f-a984-5e990c4e7ed2",
+    "created": "2024-08-13T14:51:22.670092Z",
+    "modified": "2024-08-13T14:51:22.670094Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--836fe490-84e0-4e27-83b4-130d8d0ca60c",
+    "target_ref": "malware-behavior--006b5263-0d4a-4f3d-af68-df0b44e8bbac",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Chrome Roaming Profiles",
+            "description": "Chrome Enterprise and Education Help. (n.d.). Use Chrome Browser with Roaming User Profiles. Retrieved March 28, 2023.",
+            "url": "https://support.google.com/chrome/a/answer/7349337"
+        }
+    ],
+    "description": "Monitor for unusual access to stored browser data, such as local files and databases (e.g., `%APPDATA%/Google/Chrome`).(Citation: Chrome Roaming Profiles) Rather than viewing these events in isolation, this activity may highlight a chain of behavior that could lead to other activities, such as Collection and Exfiltration.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--93760e5c-e9cd-41cf-a9f5-e45371eb4075",
+    "created": "2024-08-13T14:51:22.493877Z",
+    "modified": "2024-08-13T14:51:22.493879Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--5093f0e0-d8a0-4f3d-8a35-f0392940f15e",
+    "target_ref": "malware-behavior--957e4e0e-4716-4bf1-839e-6f8bef906a57",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Deply Mimikatz",
+            "description": "Deply, B. (n.d.). Mimikatz. Retrieved September 29, 2015.",
+            "url": "https://github.com/gentilkiwi/mimikatz"
+        },
+        {
+            "url": "https://adsecurity.org/?page_id=1821",
+            "description": "Metcalf, S. (2015, November 13). Unofficial Guide to Mimikatz & Command Reference. Retrieved December 23, 2015.",
+            "source_name": "Adsecurity Mimikatz Guide"
+        }
+    ],
+    "description": "[Mimikatz](https://attack.mitre.org/software/S0002)\u2019s <code>LSADUMP::DCShadow</code> module can be used to make AD updates by temporarily setting a computer to be a DC.(Citation: Deply Mimikatz)(Citation: Adsecurity Mimikatz Guide)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

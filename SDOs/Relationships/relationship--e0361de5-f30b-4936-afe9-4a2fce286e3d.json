@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e0361de5-f30b-4936-afe9-4a2fce286e3d",
+    "created": "2024-08-13T14:51:23.550565Z",
+    "modified": "2024-08-13T14:51:23.550567Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--f2877f7f-9a4c-4251-879f-1224e3006bee",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://adsecurity.org/?p=2293",
+            "description": "Metcalf, S. (2015, December 31). Cracking Kerberos TGS Tickets Using Kerberoast \u2013 Exploiting Kerberos to Compromise the Active Directory Domain. Retrieved March 22, 2018.",
+            "source_name": "AdSecurity Cracking Kerberos Dec 2015"
+        }
+    ],
+    "description": "Limit service accounts to minimal required privileges, including membership in privileged groups such as Domain Administrators.(Citation: AdSecurity Cracking Kerberos Dec 2015)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

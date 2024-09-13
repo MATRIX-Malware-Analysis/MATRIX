@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e4b5b25e-a462-4dc4-9f10-f1c9c7fd94e3",
+    "created": "2024-08-13T14:51:23.964961Z",
+    "modified": "2024-08-13T14:51:23.964964Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--05e65b50-ae0c-4f44-a3fd-69c07ec955c2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Devices that provide user access to the underlying operating system may allow the installation of custom software to monitor OS API execution. Monitoring API calls may generate a significant amount of data and may not be useful for defense unless collected under specific circumstances, since benign use of API functions are common and may be difficult to distinguish from malicious behavior. Correlation of other events with behavior surrounding API function calls using API monitoring will provide additional context to an event that may assist in determining if it is due to malicious behavior.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b5483c25-2e32-416b-a27d-796193442e59",
+    "created": "2024-08-13T14:51:21.848208Z",
+    "modified": "2024-08-13T14:51:21.848210Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--d3046a90-580c-4004-8208-66915bc29830",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for the suspicious execution of processes that may clear the command history of a compromised account to conceal the actions undertaken during an intrusion.\n\nAnalytic 1 - Clear Powershell Console Command History \n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") AND\n  (CommandLine=\"*rm (Get-PSReadlineOption).HistorySavePath*\" OR\n   CommandLine=\"*del (Get-PSReadlineOption).HistorySavePath*\" OR \n   CommandLine=\"*Set-PSReadlineOption \u2013HistorySaveStyle SaveNothing*\" OR\n   CommandLine=\"*Remove-Item (Get-PSReadlineOption).HistorySavePath*\" OR\n   (CommandLine=\"*del*\" AND CommandLine=\"*Microsoft\\Windows\\Powershell\\PSReadline\\ConsoleHost_history.txt*\"))</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

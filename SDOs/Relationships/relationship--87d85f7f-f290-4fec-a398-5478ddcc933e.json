@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--87d85f7f-f290-4fec-a398-5478ddcc933e",
+    "created": "2024-08-13T14:51:22.217145Z",
+    "modified": "2024-08-13T14:51:22.217147Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--dcd063a6-49cb-4ead-ba7e-66d21109f859",
+    "target_ref": "malware-behavior--5998db4d-c243-4aef-9560-5a15e8989d21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Dragos Crashoverride 2018",
+            "description": "Joe Slowik. (2018, October 12). Anatomy of an Attack: Detecting and Defeating CRASHOVERRIDE. Retrieved December 18, 2020.",
+            "url": "https://www.dragos.com/wp-content/uploads/CRASHOVERRIDE2018.pdf"
+        },
+        {
+            "source_name": "Microsoft Prestige ransomware October 2022",
+            "description": "MSTIC. (2022, October 14). New \u201cPrestige\u201d ransomware impacts organizations in Ukraine and Poland. Retrieved January 19, 2023.",
+            "url": "https://www.microsoft.com/en-us/security/blog/2022/10/14/new-prestige-ransomware-impacts-organizations-in-ukraine-and-poland/"
+        }
+    ],
+    "description": "[Sandworm Team](https://attack.mitre.org/groups/G0034) has used `move` to transfer files to a network share and has copied payloads--such as [Prestige](https://attack.mitre.org/software/S1058) ransomware--to an Active Directory Domain Controller and distributed via the Default Domain Group Policy Object.(Citation: Dragos Crashoverride 2018)(Citation: Microsoft Prestige ransomware October 2022) ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

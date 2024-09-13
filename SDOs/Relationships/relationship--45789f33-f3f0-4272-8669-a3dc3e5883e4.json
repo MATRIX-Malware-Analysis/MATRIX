@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--45789f33-f3f0-4272-8669-a3dc3e5883e4",
+    "created": "2024-08-13T14:51:23.397412Z",
+    "modified": "2024-08-13T14:51:23.397414Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--97c2639a-5b2d-47ca-aa1d-dd23c38ffb15",
+    "target_ref": "malware-behavior--d3046a90-580c-4004-8208-66915bc29830",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unexpected deletion of a command history file, such as ConsoleHost_history.txt, ~/.zsh_history, or ~/.bash_history.\n\nAnalytic 1 - Deletion of command history files\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"23\") OR (source=\"*WinEventLog:Security\" EventCode=\"4663\") FilePath LIKE '%ConsoleHost_history.txt%' AND\n   ObjectType == \"File\" AND\n   (UserAccessList LIKE '%1537%' OR \n    UserAccessList LIKE '%DELETE%'))</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

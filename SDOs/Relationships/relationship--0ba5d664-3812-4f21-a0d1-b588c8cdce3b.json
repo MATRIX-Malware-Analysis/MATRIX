@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0ba5d664-3812-4f21-a0d1-b588c8cdce3b",
+    "created": "2024-08-13T14:51:23.060038Z",
+    "modified": "2024-08-13T14:51:23.060040Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--039a7589-281e-4ce7-91b6-2ec9abfed8c7",
+    "target_ref": "malware-behavior--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MalwareBytes SideCopy Dec 2021",
+            "description": "Threat Intelligence Team. (2021, December 2). SideCopy APT: Connecting lures victims, payloads to infrastructure. Retrieved June 13, 2022.",
+            "url": "https://www.malwarebytes.com/blog/news/2021/12/sidecopy-apt-connecting-lures-to-victims-payloads-to-infrastructure"
+        }
+    ],
+    "description": "[SideCopy](https://attack.mitre.org/groups/G1008) has sent Microsoft Office Publisher documents to victims that have embedded malicious macros that execute an hta file via calling `mshta.exe`.(Citation: MalwareBytes SideCopy Dec 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

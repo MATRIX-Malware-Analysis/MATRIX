@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--85a2edfb-c3a0-4ca6-a43c-015ac371d19b",
+    "created": "2024-08-13T14:51:22.184633Z",
+    "modified": "2024-08-13T14:51:22.184635Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--4eb28bed-d11a-4641-9863-c2ac017d910a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor newly executed processes that may disable Windows event logging to limit data that can be leveraged for detections and audits.\n\nAnalytic 1 - Disable Windows Event Logging\n\n<code> (source=\"WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"WinEventLog:Security\" EventCode=\"4688\") \n\t((CommandLine=\"*New-Item*\" OR CommandLine=\"*reg add*\") CommandLine=\"*MiniNt*\")\n\tOR \n\t(CommandLine=\"*Stop-Service*\" CommandLine=\"*EventLog*\")\n\tOR \n\t(CommandLine=\"*EventLog*\" (CommandLine=\"*Set-Service*\" OR CommandLine=\"*reg add*\" OR CommandLine=\"*Set-ItemProperty*\" OR CommandLine=\"*New-ItemProperty*\" OR CommandLine=\"*sc config*\")) \n\tOR \n\t(CommandLine=\"*auditpol*\" (CommandLine=\"*/set*\" OR CommandLine=\"*/clear*\" OR CommandLine=\"*/revove*\")) \n\tOR \n\t(CommandLine=\"*wevtutil*\" (CommandLine=\"*sl*\" OR CommandLine=\"*set-log*\"))</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

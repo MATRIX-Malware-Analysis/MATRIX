@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--96e97f8c-118c-474b-9b11-828d9861c452",
+    "created": "2024-08-13T14:51:22.961007Z",
+    "modified": "2024-08-13T14:51:22.961009Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--f2857333-11d4-45bf-b064-2c28d8525be5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Oddvar Moe ADS1 Jan 2018",
+            "description": "Moe, O. (2018, January 14). Putting Data in Alternate Data Streams and How to Execute It. Retrieved June 30, 2018.",
+            "url": "https://oddvar.moe/2018/01/14/putting-data-in-alternate-data-streams-and-how-to-execute-it/"
+        },
+        {
+            "source_name": "Oddvar Moe ADS2 Apr 2018",
+            "description": "Moe, O. (2018, April 11). Putting Data in Alternate Data Streams and How to Execute It - Part 2. Retrieved June 30, 2018.",
+            "url": "https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/"
+        },
+        {
+            "source_name": "SpectorOps Host-Based Jul 2017",
+            "description": "Atkinson, J. (2017, July 18). Host-based Threat Modeling & Indicator Design. Retrieved March 21, 2018.",
+            "url": "https://posts.specterops.io/host-based-threat-modeling-indicator-design-a9dbbb53d5ea"
+        }
+    ],
+    "description": "Monitor calls to the <code>ZwSetEaFile</code> and <code>ZwQueryEaFile</code> Windows API functions as well as binaries used to interact with EA, (Citation: Oddvar Moe ADS1 Jan 2018) (Citation: Oddvar Moe ADS2 Apr 2018) and consider regularly scanning for the presence of modified information. (Citation: SpectorOps Host-Based Jul 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

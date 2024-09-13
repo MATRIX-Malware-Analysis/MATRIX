@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a7f26ab5-be1d-4c35-938d-9a956efc93b7",
+    "created": "2024-08-13T14:51:22.170317Z",
+    "modified": "2024-08-13T14:51:22.170319Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--d6140adc-e5f2-4db6-ae4f-608e77bf634d",
+    "target_ref": "malware-behavior--e64c62cf-9cd7-4a14-94ec-cdaac43ab44b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Bitdefender LuminousMoth July 2021",
+            "description": "Botezatu, B and etl. (2021, July 21). LuminousMoth - PlugX, File Exfiltration and Persistence Revisited. Retrieved October 20, 2022.",
+            "url": "https://www.bitdefender.com/blog/labs/luminousmoth-plugx-file-exfiltration-and-persistence-revisited"
+        },
+        {
+            "source_name": "Kaspersky LuminousMoth July 2021",
+            "description": "Lechtik, M, and etl. (2021, July 14). LuminousMoth APT: Sweeping attacks for the chosen few. Retrieved October 20, 2022.",
+            "url": "https://securelist.com/apt-luminousmoth/103332/"
+        }
+    ],
+    "description": "[LuminousMoth](https://attack.mitre.org/groups/G1014) has used legitimate executables such as `winword.exe` and `igfxem.exe` to side-load their malware.(Citation: Kaspersky LuminousMoth July 2021)(Citation: Bitdefender LuminousMoth July 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

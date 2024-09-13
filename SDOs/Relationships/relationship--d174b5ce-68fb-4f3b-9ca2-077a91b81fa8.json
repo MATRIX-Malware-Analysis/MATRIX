@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d174b5ce-68fb-4f3b-9ca2-077a91b81fa8",
+    "created": "2024-08-13T14:51:22.782479Z",
+    "modified": "2024-08-13T14:51:22.782482Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--5d2be8b9-d24c-4e98-83bf-2f5f79477163",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "description": "Robbins, A. (2018, April 2). A Red Teamer\u2019s Guide to GPOs and OUs. Retrieved March 5, 2019.",
+            "url": "https://wald0.com/?p=179",
+            "source_name": "Wald0 Guide to GPOs"
+        },
+        {
+            "description": "Microsoft. (2008, September 11). Fun with WMI Filters in Group Policy. Retrieved March 13, 2019.",
+            "url": "https://blogs.technet.microsoft.com/askds/2008/09/11/fun-with-wmi-filters-in-group-policy/",
+            "source_name": "Microsoft WMI Filters"
+        },
+        {
+            "description": "Microsoft. (2018, May 30). Filtering the Scope of a GPO. Retrieved March 13, 2019.",
+            "url": "https://docs.microsoft.com/en-us/previous-versions/windows/desktop/Policy/filtering-the-scope-of-a-gpo",
+            "source_name": "Microsoft GPO Security Filtering"
+        }
+    ],
+    "description": "Consider implementing WMI and security filtering to further tailor which users and computers a GPO will apply to.(Citation: Wald0 Guide to GPOs)(Citation: Microsoft WMI Filters)(Citation: Microsoft GPO Security Filtering)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

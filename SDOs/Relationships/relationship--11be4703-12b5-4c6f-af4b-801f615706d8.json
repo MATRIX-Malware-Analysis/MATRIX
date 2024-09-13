@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--11be4703-12b5-4c6f-af4b-801f615706d8",
+    "created": "2024-08-13T14:51:23.583177Z",
+    "modified": "2024-08-13T14:51:23.583179Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--d245808a-7086-4310-984a-a84aaaa43f8f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Compare the checksum of the operating system file with the checksum of a known good copy from a trusted source. Some embedded network device platforms may have the capability to calculate the checksum of the file, while others may not. Even for those platforms that have the capability, it is recommended to download a copy of the file to a trusted computer to calculate the checksum with software that is not compromised.https://tools.cisco.com/security/center/resources/integrity_assurance.html#7\r\n\r\nMany vendors of embedded network devices can provide advanced debugging support that will allow them to work with device owners to validate the integrity of the operating system running in memory. If a compromise of the operating system is suspected, contact the vendor technical support and seek such services for a more thorough inspection of the current running system.\u00a0https://tools.cisco.com/security/center/resources/integrity_assurance.html#13",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

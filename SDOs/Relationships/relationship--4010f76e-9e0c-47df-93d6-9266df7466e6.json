@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4010f76e-9e0c-47df-93d6-9266df7466e6",
+    "created": "2024-08-13T14:51:23.901255Z",
+    "modified": "2024-08-13T14:51:23.901257Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--997a1505-f8d0-4a0e-beae-78ed05a09e7b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft May 2017",
+            "description": "Microsoft 2017, May Attractive Accounts for Credential Theft Retrieved. 2020/09/25 ",
+            "url": "https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/attractive-accounts-for-credential-theft"
+        },
+        {
+            "source_name": "Microsoft August 2018",
+            "description": "Microsoft 2018, August Implementing Least-Privilege Administrative Models Retrieved. 2020/09/25 ",
+            "url": "https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models"
+        },
+        {
+            "source_name": "Microsoft February 2019",
+            "description": "Microsoft 2019, February Active Directory administrative tier model Retrieved. 2020/09/25 ",
+            "url": "https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material#a-nameesaebmaesae-administrative-forest-design-approach"
+        }
+    ],
+    "description": "Audit domain and local accounts and their permission levels routinely to look for situations that could allow an adversary to gain system wide access with stolen privileged account credentials. (Citation: Microsoft May 2017) (Citation: Microsoft August 2018)These audits should also identify if default accounts have been enabled, or if new local accounts are created that have not be authorized. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. (Citation: Microsoft February 2019)\n",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

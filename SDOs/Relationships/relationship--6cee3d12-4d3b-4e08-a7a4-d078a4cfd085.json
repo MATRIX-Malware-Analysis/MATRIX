@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6cee3d12-4d3b-4e08-a7a4-d078a4cfd085",
+    "created": "2024-08-13T14:51:23.916335Z",
+    "modified": "2024-08-13T14:51:23.916337Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--d194debb-92f8-44cd-86cb-27844b2d0f6d",
+    "target_ref": "malware-behavior--c4f7f4fa-537e-441d-b6f4-720b5751e90c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for any suspicious attempts to enable script execution on a system. If scripts are not commonly used on a system, but enabled, scripts running out of cycle from patching or other administrator functions are suspicious. Scripts should be captured from the file system when possible to determine their actions and intent.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

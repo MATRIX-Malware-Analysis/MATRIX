@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b395f9b6-ed4f-4d1c-a214-b02354620157",
+    "created": "2024-08-13T14:51:23.391400Z",
+    "modified": "2024-08-13T14:51:23.391402Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--28abec6c-4443-4b03-8206-07f2e264a6b4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco IOS Software Integrity Assurance - Secure Boot",
+            "description": "Cisco. (n.d.). Cisco IOS Software Integrity Assurance - Secure Boot. Retrieved October 19, 2020.",
+            "url": "https://tools.cisco.com/security/center/resources/integrity_assurance.html#35"
+        },
+        {
+            "source_name": "Cisco IOS Software Integrity Assurance - Image File Verification",
+            "description": "Cisco. (n.d.). Cisco IOS Software Integrity Assurance - Cisco IOS Image File Verification. Retrieved October 19, 2020.",
+            "url": "https://tools.cisco.com/security/center/resources/integrity_assurance.html#7"
+        }
+    ],
+    "description": "Monitor for newly constructed network device configuration and system image against a known-good version to discover unauthorized changes to system boot, startup configuration, or the running OS. (Citation: Cisco IOS Software Integrity Assurance - Secure Boot) (Citation: Cisco IOS Software Integrity Assurance - Image File Verification) The same process can be accomplished through a comparison of the run-time memory, though this is non-trivial and may require assistance from the vendor.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

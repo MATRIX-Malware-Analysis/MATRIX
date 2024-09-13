@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--73e2d446-6d5e-4bcc-8ec0-724d08813fcb",
+    "created": "2024-08-13T14:51:22.012431Z",
+    "modified": "2024-08-13T14:51:22.012433Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--d9374627-39d1-41a3-8318-30c018a50b31",
+    "target_ref": "malware-behavior--4f9ca633-15c5-463c-9724-bdcd54fde541",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Preventing SMB",
+            "url": "https://support.microsoft.com/en-us/help/3185535/preventing-smb-traffic-from-lateral-connections",
+            "description": "Microsoft. (2020, March 10). Preventing SMB traffic from lateral connections and entering or leaving the network. Retrieved June 1, 2020."
+        }
+    ],
+    "description": "Consider using the host firewall to restrict file sharing communications such as SMB. (Citation: Microsoft Preventing SMB)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

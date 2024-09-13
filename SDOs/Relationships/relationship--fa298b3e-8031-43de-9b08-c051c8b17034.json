@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fa298b3e-8031-43de-9b08-c051c8b17034",
+    "created": "2024-08-13T14:51:23.450958Z",
+    "modified": "2024-08-13T14:51:23.450960Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1d5b3b74-1c67-4c50-8642-6f354efb039c",
+    "target_ref": "malware-behavior--2959d63f-73fd-46a1-abd2-109d7dcede32",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for new constructed windows registry keys that may create or modify Windows services to repeatedly execute malicious payloads as part of persistence.\n\nAnalytic 1 - Creation of the HKLM\\System\\CurrentControlSet\\Services Registry key\n\n<code> source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"12\" TargetObject=\"HKLM\\System\\CurrentControlSet\\Services\\*\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

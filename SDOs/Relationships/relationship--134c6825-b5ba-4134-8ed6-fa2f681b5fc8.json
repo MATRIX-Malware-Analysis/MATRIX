@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--134c6825-b5ba-4134-8ed6-fa2f681b5fc8",
+    "created": "2024-08-13T14:51:23.653467Z",
+    "modified": "2024-08-13T14:51:23.653470Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--81deca52-bf4a-4c61-95e1-a8bd4de07103",
+    "target_ref": "malware-behavior--c87df954-6cb6-44ee-ad1f-d76336d371fc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Intezer TeamTNT September 2020",
+            "url": "https://www.intezer.com/blog/cloud-security/attackers-abusing-legitimate-cloud-monitoring-tools-to-conduct-cyber-attacks/",
+            "description": "Fishbein, N. (2020, September 8). Attackers Abusing Legitimate Cloud Monitoring Tools to Conduct Cyber Attacks. Retrieved September 22, 2021."
+        },
+        {
+            "source_name": "Aqua TeamTNT August 2020",
+            "url": "https://blog.aquasec.com/container-security-tnt-container-attack",
+            "description": "Kol, Roi. Morag, A. (2020, August 25). Deep Analysis of TeamTNT Techniques Using Container Images to Attack. Retrieved September 22, 2021."
+        }
+    ],
+    "description": "[TeamTNT](https://attack.mitre.org/groups/G0139) has deployed privileged containers that mount the filesystem of victim machine.(Citation: Intezer TeamTNT September 2020)(Citation: Aqua TeamTNT August 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

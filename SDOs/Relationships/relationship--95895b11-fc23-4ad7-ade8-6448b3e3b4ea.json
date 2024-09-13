@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--95895b11-fc23-4ad7-ade8-6448b3e3b4ea",
+    "created": "2024-08-13T14:51:22.477890Z",
+    "modified": "2024-08-13T14:51:22.477892Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--5b1d1de1-52f6-4202-a13f-1c5d491e2058",
+    "target_ref": "malware-behavior--20b0931a-8952-42ca-975f-775bad295f1a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Stopping CloudTrail from Sending Events to CloudWatch Logs",
+            "url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/stop-cloudtrail-from-sending-events-to-cloudwatch-logs.html",
+            "description": "Amazon Web Services. (n.d.). Stopping CloudTrail from Sending Events to CloudWatch Logs. Retrieved October 16, 2020."
+        },
+        {
+            "source_name": "Configuring Data Access audit logs",
+            "url": "https://cloud.google.com/logging/docs/audit/configure-data-access",
+            "description": "Google. (n.d.). Configuring Data Access audit logs. Retrieved October 16, 2020."
+        },
+        {
+            "source_name": "az monitor diagnostic-settings",
+            "url": "https://docs.microsoft.com/en-us/cli/azure/monitor/diagnostic-settings?view=azure-cli-latest#az_monitor_diagnostic_settings_delete",
+            "description": "Microsoft. (n.d.). az monitor diagnostic-settings. Retrieved October 16, 2020."
+        }
+    ],
+    "description": "Monitor logs for API calls to disable logging. In AWS, monitor for: <code>StopLogging</code> and <code>DeleteTrail</code>.(Citation: Stopping CloudTrail from Sending Events to CloudWatch Logs) In GCP, monitor for: <code>google.logging.v2.ConfigServiceV2.UpdateSink</code>.(Citation: Configuring Data Access audit logs) In Azure, monitor for <code>az monitor diagnostic-settings delete</code>.(Citation: az monitor diagnostic-settings) Additionally, a sudden loss of a log source may indicate that it has been disabled.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

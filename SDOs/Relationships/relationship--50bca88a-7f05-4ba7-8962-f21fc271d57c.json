@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--50bca88a-7f05-4ba7-8962-f21fc271d57c",
+    "created": "2024-08-13T14:51:21.696181Z",
+    "modified": "2024-08-13T14:51:21.696184Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--73171c75-cbc0-476c-a56b-5db90299b3e1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may exploit software vulnerabilities in an attempt to elevate privileges. After gaining initial access to a system, threat actors attempt to escalate privileges as they may be operating within a lower privileged process which does not allow them to access protected information or carry out tasks which require higher permissions. A common way of escalating privileges in a system is by externally invoking and exploiting spoolsv or connhost executables, both of which are legitimate Windows applications. This query searches for an invocation of either of these executables by a user, thus alerting us of any potentially malicious activity.\n\nNote: Event IDs are for Sysmon (Event ID 1 - process create) and Windows Security Log (Event ID 4688 - a new process has been created). The Analytic is oriented around looking for an invocation of either spoolsv.exe or conhost.exe by a user, thus alerting us of any potentially malicious activity. A common way of escalating privileges in a system is by externally invoking and exploiting these executables, both of which are legitimate Windows applications. \n\nAnalytic 1 - Unusual Child Process for spoolsv.exe or connhost.exe\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") (Image=\"C:\\Windows\\System32\\spoolsv.exe\" OR Image=\"C:\\Windows\\System32\\conhost.exe\") AND ParentImage= \"C:\\Windows\\System32\\cmd.exe\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

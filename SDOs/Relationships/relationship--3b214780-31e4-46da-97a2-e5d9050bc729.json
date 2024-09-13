@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3b214780-31e4-46da-97a2-e5d9050bc729",
+    "created": "2024-08-13T14:51:23.644440Z",
+    "modified": "2024-08-13T14:51:23.644443Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--d6a05c9c-aa60-459e-ad94-46048ace1c64",
+    "target_ref": "malware-behavior--0708ae90-d0eb-4938-9a76-d0fc94f6eec1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Establish centralized logging of instance activity, which can be used to monitor and review system events even after reverting to a snapshot, rolling back changes, or changing persistence/type of storage. Monitor specifically for events related to deactivation of instances that are occurring outside of planned operations. To reduce false positives, valid change management procedures could introduce a known identifier that is logged with the change (e.g., tag or header) if supported by the cloud provider, to help distinguish valid, expected actions from malicious ones.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

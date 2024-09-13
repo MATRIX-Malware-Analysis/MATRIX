@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6b1be974-792d-45de-8eb3-184f4ba3350b",
+    "created": "2024-08-13T14:51:23.171407Z",
+    "modified": "2024-08-13T14:51:23.171409Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--767f7240-4428-46f3-bbaf-bb38047af6f8",
+    "target_ref": "malware-behavior--a009cb25-4801-4116-9105-80a91cf15c1b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Azure Active Directory security operations guide",
+            "description": "Microsoft . (2022, September 16). Azure Active Directory security operations guide. Retrieved February 21, 2023.",
+            "url": "https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/security-operations-introduction"
+        }
+    ],
+    "description": "Monitor for newly constructed user accounts through the collection of usage logs from cloud user and administrator accounts to identify unusual activity in the creation of new accounts, such as accounts that do not follow specified naming conventions or accounts created by unapproved users or sources.(Citation: Microsoft Azure Active Directory security operations guide) Monitor for newly created admin accounts that go over a certain threshold of known admins.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

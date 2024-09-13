@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--62c45228-0ba8-4e57-8031-456f50c8d1e8",
+    "created": "2024-08-13T14:51:22.609600Z",
+    "modified": "2024-08-13T14:51:22.609602Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--b7dc639b-24cd-482d-a7f1-8897eda21023",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for API calls, such as PowerShell's Get-ADUser cmdlet or Windows API DsAddSidHistory function,  to examine data in user\u2019s SID-History attributes, especially users who have SID-History values from the same domain.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

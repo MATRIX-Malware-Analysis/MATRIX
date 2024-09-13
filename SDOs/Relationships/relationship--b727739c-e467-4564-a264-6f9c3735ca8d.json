@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b727739c-e467-4564-a264-6f9c3735ca8d",
+    "created": "2024-08-13T14:48:38.237043Z",
+    "modified": "2024-08-13T14:48:38.237047Z",
+    "relationship_type": "uses",
+    "description": "One of Stuxnet's rootkits is contained entirely in the fake s7otbxdx.dll. In order to continue existing undetected on the PLC it needs to account for at least the following situations: read requests for its own malicious code blocks, read requests for infected blocks (OB1, OB35, DP_RECV), and write requests that could overwrite Stuxnets own code. Stuxnet contains code to monitor and intercept these types of requests. The rootkit modifies these requests so that Stuxnets PLC code is not discovered or damaged. [4]",
+    "source_ref": "malware--762260c9-8d3d-4eaa-b22e-b5326f18f2ff",
+    "target_ref": "malware-behavior--701ba9ce-a170-411c-8a20-888a4e62f038",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

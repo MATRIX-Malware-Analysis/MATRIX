@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--69e5662f-aa83-42ab-baed-6a8a9c0ce845",
+    "created": "2024-08-13T14:51:23.061579Z",
+    "modified": "2024-08-13T14:51:23.061581Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--f3dd7773-a919-47a5-b52b-5bc20850a06d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/create-a-token-object",
+            "description": "Brower, N., Lich, B. (2017, April 19). Create a token object. Retrieved December 19, 2017.",
+            "source_name": "Microsoft Create Token"
+        },
+        {
+            "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/replace-a-process-level-token",
+            "description": "Brower, N., Lich, B. (2017, April 19). Replace a process level token. Retrieved December 19, 2017.",
+            "source_name": "Microsoft Replace Process Token"
+        },
+        {
+            "url": "https://technet.microsoft.com/en-us/library/bb490994.aspx",
+            "description": "Microsoft TechNet. (n.d.). Runas. Retrieved April 21, 2017.",
+            "source_name": "Microsoft runas"
+        }
+    ],
+    "description": "Limit permissions so that users and user groups cannot create tokens. This setting should be defined for the local system account only. GPO: Computer Configuration > [Policies] > Windows Settings > Security Settings > Local Policies > User Rights Assignment: Create a token object. (Citation: Microsoft Create Token) Also define who can create a process level token to only the local and network service through GPO: Computer Configuration > [Policies] > Windows Settings > Security Settings > Local Policies > User Rights Assignment: Replace a process level token.(Citation: Microsoft Replace Process Token)\n\nAdministrators should log in as a standard user but run their tools with administrator privileges using the built-in access token manipulation command <code>runas</code>.(Citation: Microsoft runas)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

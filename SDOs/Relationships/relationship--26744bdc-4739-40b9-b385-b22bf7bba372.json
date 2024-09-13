@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--26744bdc-4739-40b9-b385-b22bf7bba372",
+    "created": "2024-08-13T14:51:21.786273Z",
+    "modified": "2024-08-13T14:51:21.786275Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--97e165d6-70c5-400b-b16b-8b18455c6d54",
+    "target_ref": "malware-behavior--c16e5409-ee53-4d79-afdc-4099dc9292df",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Pulse Secure Zero-Day April 2021",
+            "description": "Perez, D. et al. (2021, April 20). Check Your Pulse: Suspected APT Actors Leverage Authentication Bypass Techniques and Pulse Secure Zero-Day. Retrieved February 5, 2024.",
+            "url": "https://www.mandiant.com/resources/blog/suspected-apt-actors-leverage-bypass-techniques-pulse-secure-zero-day"
+        },
+        {
+            "source_name": "Mandiant Pulse Secure Update May 2021",
+            "description": "Perez, D. et al. (2021, May 27). Re-Checking Your Pulse: Updates on Chinese APT Actors Compromising Pulse Secure VPN Devices. Retrieved February 5, 2024.",
+            "url": "https://www.mandiant.com/resources/blog/updates-on-chinese-apt-compromising-pulse-secure-vpn-devices"
+        }
+    ],
+    "description": "[APT5](https://attack.mitre.org/groups/G1023) has installed multiple web shells on compromised servers including on Pulse Secure VPN appliances.(Citation: Mandiant Pulse Secure Zero-Day April 2021)(Citation: Mandiant Pulse Secure Update May 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

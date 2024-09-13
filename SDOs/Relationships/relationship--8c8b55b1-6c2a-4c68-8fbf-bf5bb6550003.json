@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--8c8b55b1-6c2a-4c68-8fbf-bf5bb6550003",
+    "created": "2024-08-13T14:51:22.118965Z",
+    "modified": "2024-08-13T14:51:22.118967Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--4f9ca633-15c5-463c-9724-bdcd54fde541",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Novetta Blockbuster RATs",
+            "url": "https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-RAT-and-Staging-Report.pdf",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Remote Administration Tools & Content Staging Malware Report. Retrieved March 16, 2016."
+        },
+        {
+            "source_name": "Novetta Blockbuster",
+            "url": "https://web.archive.org/web/20160226161828/https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Report.pdf",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Unraveling the Long Thread of the Sony Attack. Retrieved February 25, 2016."
+        }
+    ],
+    "description": "[Lazarus Group](https://attack.mitre.org/groups/G0032) malware SierraAlfa accesses the <code>ADMIN$</code> share via SMB to conduct lateral movement.(Citation: Novetta Blockbuster)(Citation: Novetta Blockbuster RATs)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

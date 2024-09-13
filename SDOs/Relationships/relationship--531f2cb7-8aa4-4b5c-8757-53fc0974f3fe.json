@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--531f2cb7-8aa4-4b5c-8757-53fc0974f3fe",
+    "created": "2024-08-13T14:51:23.157053Z",
+    "modified": "2024-08-13T14:51:23.157056Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--6dec538a-ed02-4b1f-85de-3bee8396ff83",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to files for unexpected modifications that attempt to hide artifacts. On Windows, Event ID 4663 (Security Log - An attempt was made to access an object) can be used to alert on suspicious file accesses (e.g., attempting to write to a file which shouldn\u2019t be further modified) that may coincide with attempts to hide artifacts. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

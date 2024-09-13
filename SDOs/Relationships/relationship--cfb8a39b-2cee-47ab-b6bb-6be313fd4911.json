@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cfb8a39b-2cee-47ab-b6bb-6be313fd4911",
+    "created": "2024-08-13T14:51:22.328322Z",
+    "modified": "2024-08-13T14:51:22.328326Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--7d77a07d-02fe-4e88-8bd9-e9c008c01bf0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft BEC Campaign",
+            "description": "Carr, N., Sellmer, S. (2021, June 14). Behind the scenes of business email compromise: Using cross-domain threat data to disrupt a large BEC campaign. Retrieved June 15, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2021/06/14/behind-the-scenes-of-business-email-compromise-using-cross-domain-threat-data-to-disrupt-a-large-bec-infrastructure/"
+        },
+        {
+            "source_name": "Microsoft Manage Mail Flow Rules 2023",
+            "description": "Microsoft. (2023, February 22). Manage mail flow rules in Exchange Online. Retrieved March 13, 2023.",
+            "url": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules"
+        }
+    ],
+    "description": "On Windows systems, monitor for creation of suspicious inbox rules through the use of the `New-InboxRule`, `Set-InboxRule`, `New-TransportRule`, and `Set-TransportRule` PowerShell cmdlets.(Citation: Microsoft BEC Campaign)(Citation: Microsoft Manage Mail Flow Rules 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

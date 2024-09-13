@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--42c11dc2-83bb-42a4-970d-9527540e5d2b",
+    "created": "2024-08-13T14:51:23.468348Z",
+    "modified": "2024-08-13T14:51:23.468350Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--1391d1d0-8a18-43c8-ab03-4db36784beb4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "LOLBAS Wmic",
+            "description": "LOLBAS. (n.d.). Wmic.exe. Retrieved July 31, 2019.",
+            "url": "https://lolbas-project.github.io/lolbas/Binaries/Wmic/"
+        },
+        {
+            "source_name": "Twitter SquiblyTwo Detection APR 2018",
+            "description": "Desimone, J. (2018, April 18). Status Update. Retrieved July 3, 2018.",
+            "url": "https://twitter.com/dez_/status/986614411711442944"
+        }
+    ],
+    "description": "Use process monitoring to monitor the execution and arguments of msxsl.exe and wmic.exe. (Citation: LOLBAS Wmic) (Citation: Twitter SquiblyTwo Detection APR 2018) Command arguments used before and after the script invocation may also be useful in determining the origin and purpose of the payload being loaded. The presence of msxsl.exe or other utilities that enable proxy execution that are typically used for development, debugging, and reverse engineering on a system that is not used for these purposes may be suspicious.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

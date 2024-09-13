@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--37cde1d9-323a-4c53-8d2e-571489c839a1",
+    "created": "2024-08-13T14:51:22.122990Z",
+    "modified": "2024-08-13T14:51:22.122993Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--52335bae-28dd-4f20-a543-7d6afac9e543",
+    "target_ref": "x-mitre-data-component--97c2639a-5b2d-47ca-aa1d-dd23c38ffb15",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye Know Your Enemy FIN8 Aug 2016",
+            "description": "Elovitz, S. & Ahl, I. (2016, August 18). Know Your Enemy:  New Financially-Motivated & Spear-Phishing Group. Retrieved February 26, 2018.",
+            "url": "https://www2.fireeye.com/WBNR-Know-Your-Enemy-UNC622-Spear-Phishing.html"
+        },
+        {
+            "source_name": "Symantec FIN8 Jul 2023",
+            "description": "Symantec Threat Hunter Team. (2023, July 18). FIN8 Uses Revamped Sardonic Backdoor to Deliver Noberus Ransomware. Retrieved August 9, 2023.",
+            "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+        }
+    ],
+    "description": "[FIN8](https://attack.mitre.org/groups/G0061) has deleted tmp and prefetch files during post compromise cleanup activities. [FIN8](https://attack.mitre.org/groups/G0061) has also deleted PowerShell scripts to evade detection on compromised machines.(Citation: FireEye Know Your Enemy FIN8 Aug 2016)(Citation: Symantec FIN8 Jul 2023)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

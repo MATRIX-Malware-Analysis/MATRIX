@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--dd87129d-172e-487d-b7be-ee086b2de868",
+    "created": "2024-08-13T14:51:23.683074Z",
+    "modified": "2024-08-13T14:51:23.683076Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--97e165d6-70c5-400b-b16b-8b18455c6d54",
+    "target_ref": "malware-behavior--2acf44aa-542f-4366-b4eb-55ef5747759c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "NSA APT5 Citrix Threat Hunting December 2022",
+            "description": "National Security Agency. (2022, December). APT5: Citrix ADC Threat Hunting Guidance. Retrieved February 5, 2024.",
+            "url": "https://media.defense.gov/2022/Dec/13/2003131586/-1/-1/0/CSA-APT5-CITRIXADC-V1.PDF"
+        }
+    ],
+    "description": "[APT5](https://attack.mitre.org/groups/G1023) has made modifications to the crontab file including in `/var/cron/tabs/`.(Citation: NSA APT5 Citrix Threat Hunting December 2022)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

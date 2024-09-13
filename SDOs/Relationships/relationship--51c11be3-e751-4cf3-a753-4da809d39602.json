@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--51c11be3-e751-4cf3-a753-4da809d39602",
+    "created": "2024-08-13T14:51:23.868640Z",
+    "modified": "2024-08-13T14:51:23.868643Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--63d197e2-f7fd-4077-8f41-95d40b27286a",
+    "target_ref": "malware-behavior--5998db4d-c243-4aef-9560-5a15e8989d21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Dragos Crashoverride 2018",
+            "description": "Joe Slowik. (2018, October 12). Anatomy of an Attack: Detecting and Defeating CRASHOVERRIDE. Retrieved December 18, 2020.",
+            "url": "https://www.dragos.com/wp-content/uploads/CRASHOVERRIDE2018.pdf"
+        }
+    ],
+    "description": "During the [2016 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0025), [Sandworm Team](https://attack.mitre.org/groups/G0034) used a VBS script to facilitate lateral tool transfer. The VBS script was used to copy ICS-specific payloads with the following command: `cscript C:\\Backinfo\\ufn.vbs C:\\Backinfo\\101.dll C:\\Delta\\101.dll`(Citation: Dragos Crashoverride 2018)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

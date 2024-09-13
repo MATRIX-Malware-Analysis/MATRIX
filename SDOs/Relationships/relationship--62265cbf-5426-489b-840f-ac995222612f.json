@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--62265cbf-5426-489b-840f-ac995222612f",
+    "created": "2024-08-13T14:51:22.309245Z",
+    "modified": "2024-08-13T14:51:22.309248Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--f98e4e6e-5cc4-477a-8c4f-047e41c43eba",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "McAfee GhostSecret",
+            "description": "Sherstobitoff, R., Malhotra, A. (2018, April 24). Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide. Retrieved May 16, 2018.",
+            "url": "https://securingtomorrow.mcafee.com/mcafee-labs/analyzing-operation-ghostsecret-attack-seeks-to-steal-data-worldwide/"
+        }
+    ],
+    "description": "A Destover-like implant used by [Lazarus Group](https://attack.mitre.org/groups/G0032) can obtain the current system time and send it to the C2 server.(Citation: McAfee GhostSecret)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

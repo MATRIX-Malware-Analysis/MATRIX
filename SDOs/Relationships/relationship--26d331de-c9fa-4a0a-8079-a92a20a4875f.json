@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--26d331de-c9fa-4a0a-8079-a92a20a4875f",
+    "created": "2024-08-13T14:51:22.981264Z",
+    "modified": "2024-08-13T14:51:22.981266Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--d3046a90-580c-4004-8208-66915bc29830",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to command history files, such as ConsoleHost_history.txt, ~/.zsh_history, or ~/.bash_history, for unexpected modifications to contents, access permissions, and attributes.\n\nAnalytic 1 : Modification of access rights to command history files\n\n<code> (source=\"*WinEventLog:Security\" EventCode IN (4663, 4670) AND Path=\"*ConsoleHost_history.txt*\" AND ObjectType=\"File\")\n\t AND (UserAccessList=\"*1539*\" OR UserAccessList=\"*WRITE_DAC*\") OR (ObjectNewSd=\"*;FA*\" OR ObjectNewSd=\"*;FW*\" OR ObjectNewSd=\"*;BU*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

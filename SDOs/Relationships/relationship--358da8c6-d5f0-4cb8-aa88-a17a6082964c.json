@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--358da8c6-d5f0-4cb8-aa88-a17a6082964c",
+    "created": "2024-08-13T14:51:23.696061Z",
+    "modified": "2024-08-13T14:51:23.696063Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--f111afc6-227e-429c-b286-d87a1d9eff38",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://github.com/PowerShellEmpire/Empire",
+            "description": "Schroeder, W., Warner, J., Nelson, M. (n.d.). Github PowerShellEmpire. Retrieved April 28, 2016.",
+            "source_name": "Github PowerShell Empire"
+        },
+        {
+            "description": "The Australian Cyber Security Centre (ACSC), the Canadian Centre for Cyber Security (CCCS), the New Zealand National Cyber Security Centre (NZ NCSC), CERT New Zealand, the UK National Cyber Security Centre (UK NCSC) and the US National Cybersecurity and Communications Integration Center (NCCIC). (2018, October 11). Joint report on publicly available hacking tools. Retrieved March 11, 2019.",
+            "url": "https://www.ncsc.gov.uk/report/joint-report-on-publicly-available-hacking-tools",
+            "source_name": "NCSC Joint Report Public Tools"
+        }
+    ],
+    "description": "[Empire](https://attack.mitre.org/software/S0363) leverages PowerShell for the majority of its client-side agent tasks. [Empire](https://attack.mitre.org/software/S0363) also contains the ability to conduct PowerShell remoting with the <code>Invoke-PSRemoting</code> module.(Citation: Github PowerShell Empire)(Citation: NCSC Joint Report Public Tools)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

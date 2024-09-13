@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b45f5341-5766-4c5f-a60a-87ece365c462",
+    "created": "2024-08-13T14:51:22.825292Z",
+    "modified": "2024-08-13T14:51:22.825294Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--d9374627-39d1-41a3-8318-30c018a50b31",
+    "target_ref": "malware-behavior--1c2fd73a-e634-44ed-b1b5-9e7cf7404e9f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "RedLock Instance Metadata API 2018",
+            "description": "Higashi, Michael. (2018, May 15). Instance Metadata API: A Modern Day Trojan Horse. Retrieved July 16, 2019.",
+            "url": "https://redlock.io/blog/instance-metadata-api-a-modern-day-trojan-horse"
+        }
+    ],
+    "description": "Limit access to the Instance Metadata API. A properly configured Web Application Firewall (WAF) may help prevent external adversaries from exploiting Server-side Request Forgery (SSRF) attacks that allow access to the Cloud Instance Metadata API.(Citation: RedLock Instance Metadata API 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

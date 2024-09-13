@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--48e7c54f-c8b9-445c-b1d3-bb7d3e36aed2",
+    "created": "2024-08-13T14:51:21.820240Z",
+    "modified": "2024-08-13T14:51:21.820242Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--379809f6-2fac-42c1-bd2e-e9dee70b27f8",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor module loads by the Terminal Services process (ex: <code>svchost.exe -k termsvcs</code>) for unexpected DLLs (the default is <code>%SystemRoot%\\System32\\termsrv.dll</code>, though an adversary could also use [Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005) to potentially conceal a malicious payload).",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

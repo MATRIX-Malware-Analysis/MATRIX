@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2d5a371d-9e9d-415c-b556-2d6b4ed49f12",
+    "created": "2024-08-13T14:51:23.572244Z",
+    "modified": "2024-08-13T14:51:23.572247Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--81deca52-bf4a-4c61-95e1-a8bd4de07103",
+    "target_ref": "malware-behavior--09b130a2-a77e-4af0-a361-f46f9aad1345",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco Talos Intelligence Group",
+            "description": "Darin Smith. (2022, April 21). TeamTNT targeting AWS, Alibaba. Retrieved August 4, 2022.",
+            "url": "https://blog.talosintelligence.com/teamtnt-targeting-aws-alibaba-2/"
+        },
+        {
+            "source_name": "Trend Micro TeamTNT",
+            "description": "Fiser, D. Oliveira, A. (n.d.). Tracking the Activities of TeamTNT A Closer Look at a Cloud-Focused Malicious Actor Group. Retrieved September 22, 2021.",
+            "url": "https://documents.trendmicro.com/assets/white_papers/wp-tracking-the-activities-of-teamTNT.pdf"
+        }
+    ],
+    "description": "[TeamTNT](https://attack.mitre.org/groups/G0139) has modified the permissions on binaries with <code>chattr</code>.(Citation: Trend Micro TeamTNT)(Citation: Cisco Talos Intelligence Group)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e8a0b415-ecb0-4745-afd7-54043046b58e",
+    "created": "2024-08-13T14:51:23.252892Z",
+    "modified": "2024-08-13T14:51:23.252895Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--8a62000f-021f-4220-9716-2e76d9627b69",
+    "target_ref": "malware-behavior--45a5fe76-eda3-4d40-8f22-c186efd6278d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MSTIC NOBELIUM Mar 2021",
+            "description": "Nafisi, R., Lelli, A. (2021, March 4). GoldMax, GoldFinder, and Sibot: Analyzing NOBELIUM\u2019s layered persistence. Retrieved March 8, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/"
+        }
+    ],
+    "description": "During the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024), [APT29](https://attack.mitre.org/groups/G0016) used [GoldFinder](https://attack.mitre.org/software/S0597) to perform HTTP GET requests to check internet connectivity and identify HTTP proxy servers and other redirectors that an HTTP request travels through.(Citation: MSTIC NOBELIUM Mar 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

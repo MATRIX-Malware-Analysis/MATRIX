@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b869fcac-3a35-4675-9f90-9b3dc91e9c4e",
+    "created": "2024-08-13T14:51:22.538872Z",
+    "modified": "2024-08-13T14:51:22.538874Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--1fa17d97-34fb-406d-9d4e-b7213164b57b",
+    "target_ref": "malware-behavior--f4599aa0-4f85-4a32-80ea-fc39dc965945",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "http://cdn0.vox-cdn.com/assets/4589853/crowdstrike-intelligence-report-putter-panda.original.pdf",
+            "description": "Crowdstrike Global Intelligence Team. (2014, June 9). CrowdStrike Intelligence Report: Putter Panda. Retrieved January 22, 2016.",
+            "source_name": "CrowdStrike Putter Panda"
+        }
+    ],
+    "description": "An executable dropped onto victims by [Putter Panda](https://attack.mitre.org/groups/G0024) aims to inject the specified DLL into a process that would normally be accessing the network, including Outlook Express (msinm.exe), Outlook (outlook.exe), Internet Explorer (iexplore.exe), and Firefox (firefox.exe).(Citation: CrowdStrike Putter Panda)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

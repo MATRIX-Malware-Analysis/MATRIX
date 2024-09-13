@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0bbaafc4-dcc3-4b5d-ad72-655f4ebd7f9a",
+    "created": "2024-08-13T14:51:22.543323Z",
+    "modified": "2024-08-13T14:51:22.543325Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--c27f3f11-1946-4082-81b6-83da4a5da765",
+    "target_ref": "malware-behavior--70857657-bd0b-4695-ad3e-b13f92cac1b4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "AWS CloudTrail Search",
+            "description": "Amazon. (n.d.). Search CloudTrail logs for API calls to EC2 Instances. Retrieved June 17, 2020.",
+            "url": "https://aws.amazon.com/premiumsupport/knowledge-center/cloudtrail-search-api-calls/"
+        },
+        {
+            "source_name": "Cloud Audit Logs",
+            "description": "Google. (n.d.). Audit Logs. Retrieved June 1, 2020.",
+            "url": "https://cloud.google.com/logging/docs/audit#admin-activity"
+        }
+    ],
+    "description": "The deletion of a new instance or virtual machine is a common part of operations within many cloud environments. Events should then not be viewed in isolation, but as part of a chain of behavior that could lead to other activities. For example, detecting a sequence of events such as the creation of an instance, mounting of a snapshot to that instance, and deletion of that instance by a new user account may indicate suspicious activity.\n\nIn AWS, CloudTrail logs capture the deletion of an instance in the\u00a0TerminateInstances\u00a0event, and in Azure the deletion of a VM may be captured in Azure activity logs.(Citation: AWS CloudTrail Search) (Citation: Azure Activity Logs) Google's Admin Activity audit logs within their Cloud Audit logs can be used to detect the usage of\u00a0gcloud compute instances delete\u00a0to delete a VM.(Citation: Cloud Audit Logs)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

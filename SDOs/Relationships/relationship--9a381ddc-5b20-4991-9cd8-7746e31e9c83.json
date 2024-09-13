@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9a381ddc-5b20-4991-9cd8-7746e31e9c83",
+    "created": "2024-08-13T14:51:22.326390Z",
+    "modified": "2024-08-13T14:51:22.326392Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1dc8952c-1227-4693-bf10-5fd0e6b46003",
+    "target_ref": "malware-behavior--a2fdce72-04b2-409a-ac10-cc1695f4fce0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Analyzing CS Dec 2020",
+            "url": "https://www.randhome.io/blog/2020/12/20/analyzing-cobalt-strike-for-fun-and-profit/",
+            "description": "Maynier, E. (2020, December 20). Analyzing Cobalt Strike for Fun and Profit. Retrieved October 12, 2021."
+        }
+    ],
+    "description": "Monitor for contextual data about a malicious payload, such as compilation times, file hashes, as well as watermarks or other identifiable configuration information. In some cases, malware repositories can also be used to identify features of tool use associated with an adversary, such as watermarks in [Cobalt Strike](https://attack.mitre.org/software/S0154) payloads.(Citation: Analyzing CS Dec 2020)\nMuch of this activity will take place outside the visibility of the target organization, making detection of this behavior difficult. Detection efforts may be focused on post-compromise phases of the adversary lifecycle.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

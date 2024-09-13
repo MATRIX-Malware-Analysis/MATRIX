@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--45ff740b-d93e-4fdc-9564-dddbcbf4c8aa",
+    "created": "2024-08-13T14:51:22.187779Z",
+    "modified": "2024-08-13T14:51:22.187781Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--877b4a1a-a4c3-4095-acde-7ec52a31bbc3",
+    "target_ref": "malware-behavior--19401639-28d0-4c3c-adcc-bc2ba22f6421",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "PWC WellMess July 2020",
+            "url": "https://www.pwc.co.uk/issues/cyber-security-services/insights/cleaning-up-after-wellmess.html",
+            "description": "PWC. (2020, July 16). How WellMess malware has been used to target COVID-19 vaccines. Retrieved September 24, 2020."
+        },
+        {
+            "source_name": "PWC WellMess C2 August 2020",
+            "url": "https://www.pwc.co.uk/issues/cyber-security-services/insights/wellmess-analysis-command-control.html",
+            "description": "PWC. (2020, August 17). WellMess malware: analysis of its Command and Control (C2) server. Retrieved September 29, 2020."
+        }
+    ],
+    "description": "[APT29](https://attack.mitre.org/groups/G0016) has created self-signed digital certificates to enable mutual TLS authentication for malware.(Citation: PWC WellMess July 2020)(Citation: PWC WellMess C2 August 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

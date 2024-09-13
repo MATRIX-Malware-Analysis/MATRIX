@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--00979c3d-4f5b-4e60-bb05-d3482f031ce7",
+    "created": "2024-08-13T14:51:22.932886Z",
+    "modified": "2024-08-13T14:51:22.932888Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--3ede3b27-273e-471f-b486-c2bb642984ca",
+    "target_ref": "malware-behavior--8c4aef43-48d5-49aa-b2af-c0cd58d30c3d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "KISA Operation Muzabi",
+            "url": "https://www.boho.or.kr/krcert/publicationView.do?bulletin_writing_sequence=35936",
+            "description": "KISA. (n.d.). Phishing Target Reconnaissance and Attack Resource Analysis Operation Muzabi. Retrieved March 7, 2022."
+        }
+    ],
+    "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has run <code>reg add \u2018HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\u2019 /v</code> to hide a newly created user.(Citation: KISA Operation Muzabi)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

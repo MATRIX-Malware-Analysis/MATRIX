@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e7c94e45-d280-4e72-9212-7b5efdc69cd6",
+    "created": "2024-08-13T14:51:22.823633Z",
+    "modified": "2024-08-13T14:51:22.823635Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--2db31dcd-54da-405d-acef-b9129b816ed6",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Apple Unified Log Analysis Remote Login and Screen Sharing",
+            "description": "Sarah Edwards. (2020, April 30). Analysis of Apple Unified Logs: Quarantine Edition [Entry 6] \u2013 Working From Home? Remote Logins. Retrieved August 19, 2021.",
+            "url": "https://sarah-edwards-xzkc.squarespace.com/blog/2020/4/30/analysis-of-apple-unified-logs-quarantine-edition-entry-6-working-from-home-remote-logins"
+        }
+    ],
+    "description": "Monitor for newly executed processes that may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into remote machines using Secure Shell (SSH). For example, on macOS systems <code>log show --predicate 'process = \"sshd\"'</code> can be used to review incoming SSH connection attempts for suspicious activity. The command <code>log show --info --predicate 'process = \"ssh\" or eventMessage contains \"ssh\"'</code> can be used to review outgoing SSH connection activity.(Citation: Apple Unified Log Analysis Remote Login and Screen Sharing)\n\nFor Linux systems, the Audit framework (auditd) can be used to monitor for the creation of SSH related processes such as ssh. \n\nFor macOS systems (10.12+), the above command can be used to look through the Unified Logs for SSH connection activity, though we also recommend including the \u201c\u2014debug\u201d parameter to ensure that all relevant data is returned: <code>log show --info --debug --predicate 'process = \"ssh\" or eventMessage contains \"ssh\"'</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

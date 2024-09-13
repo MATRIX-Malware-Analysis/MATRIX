@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--12fddc8a-17bd-4e63-bee1-c0c9234c1578",
+    "created": "2024-08-13T14:51:22.660975Z",
+    "modified": "2024-08-13T14:51:22.660978Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--d8275d69-c205-43fc-be6a-46267133e0fd",
+    "target_ref": "malware-behavior--9422fc14-1c43-410d-ab0f-a709b76c72dc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye FIN10 June 2017",
+            "description": "FireEye iSIGHT Intelligence. (2017, June 16). FIN10: Anatomy of a Cyber Extortion Operation. Retrieved June 25, 2017.",
+            "url": "https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin10.pdf"
+        },
+        {
+            "url": "https://github.com/PowerShellEmpire/Empire",
+            "description": "Schroeder, W., Warner, J., Nelson, M. (n.d.). Github PowerShellEmpire. Retrieved April 28, 2016.",
+            "source_name": "Github PowerShell Empire"
+        }
+    ],
+    "description": "[FIN10](https://attack.mitre.org/groups/G0051) has established persistence by using the Registry option in PowerShell Empire to add a Run key.(Citation: FireEye FIN10 June 2017)(Citation: Github PowerShell Empire)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

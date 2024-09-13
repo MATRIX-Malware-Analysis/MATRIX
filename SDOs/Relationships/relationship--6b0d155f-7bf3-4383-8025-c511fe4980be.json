@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6b0d155f-7bf3-4383-8025-c511fe4980be",
+    "created": "2024-08-13T14:51:22.910156Z",
+    "modified": "2024-08-13T14:51:22.910158Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--1479026c-0377-41c9-83ef-997b264395db",
+    "target_ref": "malware-behavior--997a1505-f8d0-4a0e-beae-78ed05a09e7b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "US-CERT Alert TA13-175A Risks of Default Passwords on the Internet",
+            "description": "US-CERT. (n.d.). Risks of Default Passwords on the Internet. Retrieved April 12, 2019.",
+            "url": "https://www.us-cert.gov/ncas/alerts/TA13-175A"
+        }
+    ],
+    "description": "Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment.(Citation: US-CERT Alert TA13-175A Risks of Default Passwords on the Internet) When possible, applications that use SSH keys should be updated periodically and properly secured.\n\nPolicies should minimize (if not eliminate) reuse of passwords between different user accounts, especially employees using the same credentials for personal accounts that may not be defended by enterprise security resources.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

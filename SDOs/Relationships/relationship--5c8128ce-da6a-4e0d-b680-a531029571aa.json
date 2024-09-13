@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5c8128ce-da6a-4e0d-b680-a531029571aa",
+    "created": "2024-08-13T14:51:23.154326Z",
+    "modified": "2024-08-13T14:51:23.154328Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--f6e0ab41-1bf0-4bcc-9ea1-798678b2704e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Remote access to the registry can be achieved via\n\n- Windows API function\u00a0RegConnectRegistry\n- command line via\u00a0reg.exe\n- graphically via\u00a0regedit.exe\n\nAll of these behaviors call into the Windows API, which uses the NamedPipe\u00a0WINREG\u00a0over SMB to handle the protocol information. This network can be decoded with wireshark or a similar sensor, and can also be detected by hooking the API function.\n\nAnalytic 1 - Remote Registry\n\n<code>source=\"*Zeek:*\" (dest_port=\"445\" AND proto_info.pipe=\"WINREG\") OR (proto_info.function=\"Create*\" OR proto_info.function=\"SetValue*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

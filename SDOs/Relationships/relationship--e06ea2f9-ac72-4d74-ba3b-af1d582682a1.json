@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e06ea2f9-ac72-4d74-ba3b-af1d582682a1",
+    "created": "2024-08-13T14:48:38.083851Z",
+    "modified": "2024-08-13T14:48:38.083855Z",
+    "relationship_type": "uses",
+    "description": "ThiefQuest searches through the /Users/ folder looking for executable files. For each executable, ThiefQuest prepends a copy of itself to the beginning of the file. When the file is executed, the ThiefQuest code is executed first. ThiefQuest creates a hidden file, copies the original target executable to the file, then executes the new hidden file to maintain the appearance of normal behavior. [2][3]",
+    "source_ref": "malware--1e704baf-bb48-4984-8a3c-7c59fcf52e87",
+    "target_ref": "malware-behavior--1a072ab7-aaca-4eb1-88f7-9f91a8199b68",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

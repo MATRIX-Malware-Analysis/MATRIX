@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--646278eb-b2f9-46be-afb2-8c64b9ba7400",
+    "created": "2024-08-13T14:51:23.272287Z",
+    "modified": "2024-08-13T14:51:23.272289Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--6495ae23-3ab4-43c5-a94f-5638a2c31fd2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may clear Windows Event Logs to hide the activity of an intrusion. In an attempt to clear traces after compromising a machine, threat actors often try to clear Windows Event logs. This is often done using \u201cwevtutil\u201d, a legitimate tool provided by Microsoft. This action interferes with event collection and notification, and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.\n\nNote: This search query looks for wevtutil, Clear-EventLog, Limit-EventLog, Remove-Item or Remove-EventLog inside a command that may cause the system to remove Windows Event logs.\n\nAnalytic 1 - Clearing Windows Logs with Wevtutil\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") (Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*) OR Clear-EventLog OR Limit-EventLog OR (Remove-Item AND .evtx) OR Remove-EventLog) </code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

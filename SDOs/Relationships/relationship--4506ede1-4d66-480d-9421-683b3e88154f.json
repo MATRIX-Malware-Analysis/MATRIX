@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4506ede1-4d66-480d-9421-683b3e88154f",
+    "created": "2024-08-13T14:51:22.299785Z",
+    "modified": "2024-08-13T14:51:22.299788Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--d336b553-5da9-46ca-98a8-0b23f49fb447",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Malwarebytes The Windows Vault",
+            "description": "Arntz, P. (2016, March 30). The Windows Vault . Retrieved November 23, 2020.",
+            "url": "https://blog.malwarebytes.com/101/2016/01/the-windows-vaults/"
+        }
+    ],
+    "description": "Monitor executed commands and arguments for suspicious activity listing credentials from the Windows Credentials locker (e.g. <code>vaultcmd /listcreds:\u201cWindows Credentials\u201d</code>).(Citation: Malwarebytes The Windows Vault)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

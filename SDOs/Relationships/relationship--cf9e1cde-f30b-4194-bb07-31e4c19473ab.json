@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cf9e1cde-f30b-4194-bb07-31e4c19473ab",
+    "created": "2024-08-13T14:51:23.272395Z",
+    "modified": "2024-08-13T14:51:23.272397Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--3a32740a-11b0-4bcf-b0a9-3abd0f6d3cd5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments for abnormal usage of utilities and command-line arguments that may be used in support of malicious execution. Compare recent invocations of  `AutoIt3.exe` and `AutoHotkey.exe` with prior history of known good arguments to determine anomalous and potentially adversarial activity (ex: obfuscated and/or malicious commands).",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

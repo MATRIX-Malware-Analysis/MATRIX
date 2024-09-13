@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--53836ae7-01bd-48f0-9c65-3c0cbc3ed04c",
+    "created": "2024-08-13T14:51:22.598668Z",
+    "modified": "2024-08-13T14:51:22.598671Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--79cb02f4-ac4e-4335-8b51-425c9573cce1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Tripwire AppUNBlocker",
+            "description": "Smith, T. (2016, October 27). AppUNBlocker: Bypassing AppLocker. Retrieved December 19, 2017.",
+            "url": "https://www.tripwire.com/state-of-security/off-topic/appunblocker-bypassing-applocker/"
+        },
+        {
+            "source_name": "Microsoft Registry Auditing Aug 2016",
+            "description": "Microsoft. (2016, August 31). Registry (Global Object Access Auditing). Retrieved January 31, 2018.",
+            "url": "https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn311461(v=ws.11)"
+        },
+        {
+            "source_name": "Microsoft Audit Registry July 2012",
+            "description": "Microsoft. (2012, July 2). Audit Registry. Retrieved January 31, 2018.",
+            "url": "https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941614(v=ws.10)"
+        }
+    ],
+    "description": "Monitoring changes to the Windows Registry may reveal malicious attempts to modify trust settings, such as the installation of root certificates. Installed root certificates are located in the Registry under\u00a0<code>HKLM\\SOFTWARE\\Microsoft\\EnterpriseCertificates\\Root\\Certificates\\</code>\u00a0and\u00a0</code>[HKLM or HKCU]\\Software[\\Policies\\]\\Microsoft\\SystemCertificates\\Root\\Certificates\\</code>. There are a subset of root certificates that are consistent across Windows systems and can be used for comparison:\u00a0(Citation: Tripwire AppUNBlocker) Also consider enabling the Registry Global Object Access Auditing (Citation: Microsoft Registry Auditing Aug 2016)\u00a0setting in the Advanced Security Audit policy to apply a global system access control list (SACL) and event auditing on modifications to Registry values (sub)keys related to SIPs and trust providers:(Citation: Microsoft Audit Registry July 2012) ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

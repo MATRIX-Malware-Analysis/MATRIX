@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--8f4b5a63-fd4f-4069-9827-a182147386c9",
+    "created": "2024-08-13T14:51:23.397088Z",
+    "modified": "2024-08-13T14:51:23.397090Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--2715c335-1bf2-4efe-9f18-0691317ff83b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may obtain root access (allowing them to read securityd\u2019s memory), then they can scan through memory to find the correct sequence of keys in relatively few tries to decrypt the user\u2019s logon keychain.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

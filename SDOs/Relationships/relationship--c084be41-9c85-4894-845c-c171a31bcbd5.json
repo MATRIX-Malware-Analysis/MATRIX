@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c084be41-9c85-4894-845c-c171a31bcbd5",
+    "created": "2024-08-13T14:51:22.734140Z",
+    "modified": "2024-08-13T14:51:22.734142Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1b8b81be-cb6e-48df-8b1b-85c242bb9085",
+    "target_ref": "malware-behavior--73622725-4edf-48e2-9aaa-af004fcdd6c3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "inv_ps_attacks",
+            "url": "https://powershellmagazine.com/2014/07/16/investigating-powershell-attacks/",
+            "description": "Hastings, M. (2014, July 16). Investigating PowerShell Attacks. Retrieved December 1, 2021."
+        }
+    ],
+    "description": "Monitor contextual data about a running process, which may include information such as environment variables, image name, user/owner, or other information that may reveal abuse of system features. For example, consider monitoring for Windows Event ID (EID) 400, which shows the version of PowerShell executing in the <code>EngineVersion</code> field (which may also be relevant to detecting a potential [Downgrade Attack](https://attack.mitre.org/techniques/T1562/010)) as well as if PowerShell is running locally or remotely in the <code>HostName</code> field. Furthermore, EID 400 may indicate the start time and EID 403 indicates the end time of a PowerShell session.(Citation: inv_ps_attacks)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

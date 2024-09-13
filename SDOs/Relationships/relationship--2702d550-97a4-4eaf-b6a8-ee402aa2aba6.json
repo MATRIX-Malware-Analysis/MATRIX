@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2702d550-97a4-4eaf-b6a8-ee402aa2aba6",
+    "created": "2024-08-13T14:51:21.883040Z",
+    "modified": "2024-08-13T14:51:21.883044Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--bdd65f5f-1408-4ae2-a9cc-a0474bb097af",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MagicWeb",
+            "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+            "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+        },
+        {
+            "source_name": "TechNet Credential Theft",
+            "description": "Microsoft. (2016, April 15). Attractive Accounts for Credential Theft. Retrieved June 3, 2016.",
+            "url": "https://technet.microsoft.com/en-us/library/dn535501.aspx"
+        },
+        {
+            "source_name": "TechNet Least Privilege",
+            "description": "Microsoft. (2016, April 16). Implementing Least-Privilege Administrative Models. Retrieved June 3, 2016.",
+            "url": "https://technet.microsoft.com/en-us/library/dn487450.aspx"
+        },
+        {
+            "source_name": "Microsoft Securing Privileged Access",
+            "description": "Plett, C., Poggemeyer, L. (12, October 26). Securing Privileged Access Reference Material. Retrieved April 25, 2017.",
+            "url": "https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material#a-nameesaebmaesae-administrative-forest-design-approach"
+        }
+    ],
+    "description": "Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. (Citation: TechNet Credential Theft) (Citation: TechNet Least Privilege) These audits should also include if default accounts have been enabled, or if new local accounts are created that have not be authorized. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. (Citation: Microsoft Securing Privileged Access)\n\nLimit access to the root account and prevent users from modifying protected components through proper privilege separation (ex SELinux, grsecurity, AppArmor, etc.) and limiting Privilege Escalation opportunities.\n\nLimit on-premises accounts with access to the hybrid identity solution in place. For example, limit Azure AD Global Administrator accounts to only those required, and ensure that these are dedicated cloud-only accounts rather than hybrid ones.(Citation: MagicWeb)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

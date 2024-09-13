@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e9b556ed-9788-49ed-b9a8-aadc1f155b84",
+    "created": "2024-08-13T14:51:22.197704Z",
+    "modified": "2024-08-13T14:51:22.197706Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--eb2cb5cb-ae87-4de0-8c35-da2a17aafb99",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Consider monitoring for excessive use of <code>SendMessage</code> and/or <code>PostMessage</code> API functions with <code>LVM_SETITEMPOSITION</code> and/or <code>LVM_GETITEMPOSITION</code> arguments.\n\nMonitoring Windows API calls indicative of the various types of code injection may generate a significant amount of data and may not be directly useful for defense unless collected under specific circumstances for known bad sequences of calls, since benign use of API functions may be common and difficult to distinguish from malicious behavior. Windows API calls such as <code>FindWindow</code>, <code>FindWindowEx</code>, <code>EnumWindows</code>, <code>EnumChildWindows</code>, and those that can be used to modify memory within another process, such as <code>VirtualAllocEx</code>/<code>WriteProcessMemory</code>, may be abused for this technique. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

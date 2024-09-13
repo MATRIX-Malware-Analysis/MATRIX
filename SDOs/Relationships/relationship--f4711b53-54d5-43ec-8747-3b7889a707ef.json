@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f4711b53-54d5-43ec-8747-3b7889a707ef",
+    "created": "2024-08-13T14:51:23.665191Z",
+    "modified": "2024-08-13T14:51:23.665193Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--04fd5427-79c7-44ea-ae13-11b24778ff1c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for network data for uncommon data flows (e.g., a client sending significantly more data than it receives from a server). Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. Analyze packet contents to detect communications that do not follow the expected protocol behavior for the port that is being used.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

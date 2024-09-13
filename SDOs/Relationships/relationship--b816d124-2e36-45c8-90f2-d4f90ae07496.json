@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b816d124-2e36-45c8-90f2-d4f90ae07496",
+    "created": "2024-08-13T14:51:23.231392Z",
+    "modified": "2024-08-13T14:51:23.231394Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e53669da-6830-4650-af6b-bc3d273c8eca",
+    "target_ref": "malware-behavior--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022",
+            "description": "Dror Alon. (2022, December 8). Compromised Cloud Compute Credentials: Case Studies From the Wild. Retrieved March 9, 2023.",
+            "url": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/"
+        },
+        {
+            "source_name": "Okta Cross-Tenant Impersonation",
+            "description": "Okta Defensive Cyber Operations. (2023, August 31). Cross-Tenant Impersonation: Prevention and Detection. Retrieved March 4, 2024.",
+            "url": "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection"
+        }
+    ],
+    "description": "Monitor the activity of cloud accounts to detect abnormal or malicious behavior, such as accessing information outside of the normal function of the account, account usage at atypical hours, or account authentication from unexpected locations or IP addresses. Service accounts should only be accessible from IP addresses from within the cloud environment.(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022) For example, in Azure AD environments, consider using Identity Protection to flag risky sign-ins based on location, device compliance, and other factors. In Okta environments, configure Suspicious Activity Reporting to allow users to report suspicious logins and other behavior they do not recognize.(Citation: Okta Cross-Tenant Impersonation)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

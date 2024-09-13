@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--740dc967-9e4e-4614-8b6c-dad5a428afe2",
+    "created": "2024-08-13T14:51:22.411801Z",
+    "modified": "2024-08-13T14:51:22.411803Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--6ee74857-9ba1-4998-a18b-198e314f1ce6",
+    "target_ref": "malware-behavior--9422fc14-1c43-410d-ab0f-a709b76c72dc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Lunghi Iron Tiger Linux",
+            "description": "Daniel Lunghi. (2023, March 1). Iron Tiger\u2019s SysUpdate Reappears, Adds Linux Targeting. Retrieved March 20, 2023.",
+            "url": "https://www.trendmicro.com/en_us/research/23/c/iron-tiger-sysupdate-adds-linux-targeting.html"
+        },
+        {
+            "source_name": "Nccgroup Emissary Panda May 2018",
+            "description": "Pantazopoulos, N., Henry T. (2018, May 18). Emissary Panda \u2013 A potential new malicious tool. Retrieved June 25, 2018.",
+            "url": "https://research.nccgroup.com/2018/05/18/emissary-panda-a-potential-new-malicious-tool/"
+        }
+    ],
+    "description": "[Threat Group-3390](https://attack.mitre.org/groups/G0027)'s malware can add a Registry key to `Software\\Microsoft\\Windows\\CurrentVersion\\Run` for persistence.(Citation: Nccgroup Emissary Panda May 2018)(Citation: Lunghi Iron Tiger Linux)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

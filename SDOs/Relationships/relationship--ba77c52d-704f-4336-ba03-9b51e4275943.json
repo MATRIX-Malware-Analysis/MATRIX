@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ba77c52d-704f-4336-ba03-9b51e4275943",
+    "created": "2024-08-13T14:51:22.857484Z",
+    "modified": "2024-08-13T14:51:22.857486Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--d9374627-39d1-41a3-8318-30c018a50b31",
+    "target_ref": "malware-behavior--cabe189c-a0e3-4965-a473-dcff00f17213",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco ARP Poisoning Mitigation 2016",
+            "url": "https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-6500-series-switches/white_paper_c11_603839.html",
+            "description": "King, J., Lauerman, K. (2016, January 22). ARP Poisoning (Man-in-the-Middle) Attack and Mitigation Technique. Retrieved October 15, 2020."
+        },
+        {
+            "source_name": "Juniper DAI 2020",
+            "url": "https://www.juniper.net/documentation/en_US/junos/topics/task/configuration/understanding-and-using-dai.html",
+            "description": "Juniper. (2020, September 23). Understanding and Using Dynamic ARP Inspection (DAI). Retrieved October 15, 2020."
+        }
+    ],
+    "description": "Consider enabling DHCP Snooping and Dynamic ARP Inspection on switches to create mappings between IP addresses requested via DHCP and ARP tables and tie the values to a port on the switch that may block bogus traffic.(Citation: Cisco ARP Poisoning Mitigation 2016)(Citation: Juniper DAI 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

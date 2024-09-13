@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6f3cc1a0-38a8-4981-81ec-f043c223951e",
+    "created": "2024-08-13T14:51:23.612290Z",
+    "modified": "2024-08-13T14:51:23.612292Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--9ee8de23-9cae-4911-8cf8-5183f478644d",
+    "target_ref": "malware-behavior--339af766-8195-4f99-a07f-965007a59d21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for API calls and CLI commands that attempt to enumerate and fetch credential material from cloud secrets managers, such as `get-secret-value` in AWS, `gcloud secrets describe` in GCP, and `az key vault secret show` in Azure. Alert on any suspicious usages of these commands, such as an account or service generating an unusually high number of secret requests.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

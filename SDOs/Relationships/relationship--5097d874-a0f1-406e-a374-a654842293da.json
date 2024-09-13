@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5097d874-a0f1-406e-a374-a654842293da",
+    "created": "2024-08-13T14:51:21.756425Z",
+    "modified": "2024-08-13T14:51:21.756427Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--04ee0cb7-dac3-4c6c-9387-4c6aa096f4cf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Who Hid My Desktop",
+            "description": "Safran, Or. Asinovsky, Pavel. (2017, November). Who Hid My Desktop: Deep Dive Into HVNC. Retrieved November 28, 2023.",
+            "url": "https://deepsec.net/docs/Slides/2017/Who_Hid_My_Desktop_Or_Safran_Pavel_Asinovsky.pdf"
+        }
+    ],
+    "description": "Monitor newly executed processes that may use hidden windows to conceal malicious activity from the plain sight of users. For example, monitor suspicious windows explorer execution \u2013 such as an additional <code>explorer.exe</code> holding a handle to an unknown desktop \u2013 that may be used for hidden malicious activity via hVNC.(Citation: Who Hid My Desktop) ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

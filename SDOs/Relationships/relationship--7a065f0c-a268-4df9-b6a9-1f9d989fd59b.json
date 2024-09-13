@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7a065f0c-a268-4df9-b6a9-1f9d989fd59b",
+    "created": "2024-08-13T14:51:23.164842Z",
+    "modified": "2024-08-13T14:51:23.164844Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--e1f9cdd2-9511-4fca-90d7-f3e92cfdd0bf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Lockboxx ARD 2019",
+            "description": "Dan Borges. (2019, July 21). MacOS Red Teaming 206: ARD (Apple Remote Desktop Protocol). Retrieved September 10, 2021.",
+            "url": "http://lockboxx.blogspot.com/2019/07/macos-red-teaming-206-ard-apple-remote.html"
+        },
+        {
+            "source_name": "Apple Unified Log Analysis Remote Login and Screen Sharing",
+            "description": "Sarah Edwards. (2020, April 30). Analysis of Apple Unified Logs: Quarantine Edition [Entry 6] \u2013 Working From Home? Remote Logins. Retrieved August 19, 2021.",
+            "url": "https://sarah-edwards-xzkc.squarespace.com/blog/2020/4/30/analysis-of-apple-unified-logs-quarantine-edition-entry-6-working-from-home-remote-logins"
+        }
+    ],
+    "description": "Monitor for user accounts logged into systems they would not normally access or abnormal access patterns, such as multiple systems over a relatively short period of time. Correlate use of login activity related to remote services with unusual behavior or other malicious or suspicious activity. Adversaries will likely need to learn about an environment and the relationships between systems through Discovery techniques prior to attempting Lateral Movement. For example, in macOS you can review logs for \"screensharingd\" and \"Authentication\" event messages. (Citation: Lockboxx ARD 2019)(Citation: Apple Unified Log Analysis Remote Login and Screen Sharing)\n\nNote: When using Security event id 4624, %$ means user names that do not end with $ character. Usually, computer accounts or local system accounts names end with the $ character. When using Security event 4624, UserName and UserLogonId correspond to TargetUserName and TargetLogonId respectively. When using Security event 4624, LogonType 3 corresponds to a Network Logon\n\nAnalytic 1 - New services being created under network logon sessions by non-system users\n<code>(source=\"*WinEventLog:Security\" EventCode=\"4624\") AND LogonType=\"3\" AND UserName NOT '*$' \n| rename UserLogonId AS LogonID\n| join type=inner LogonID\n[| search (source=\"*WinEventLog:Security\" EventCode=\"4697\") \n| rename UserLogonId as LogonID]</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

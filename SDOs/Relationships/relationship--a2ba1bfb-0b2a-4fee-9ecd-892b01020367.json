@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a2ba1bfb-0b2a-4fee-9ecd-892b01020367",
+    "created": "2024-08-13T14:51:22.861779Z",
+    "modified": "2024-08-13T14:51:22.861781Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--42fe883a-21ea-4cfb-b94a-78b6476dcc83",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Black Hat 2015 App Shim",
+            "description": "Pierce, Sean. (2015, November). Defending Against Malicious Application Compatibility Shims. Retrieved June 22, 2017.",
+            "url": "https://www.blackhat.com/docs/eu-15/materials/eu-15-Pierce-Defending-Against-Malicious-Application-Compatibility-Shims-wp.pdf"
+        }
+    ],
+    "description": "Monitor newly executed processs for sdbinst.exe for potential indications of application shim abuse. \nThere are several public tools available that will detect shims that are currently available (Citation: Black Hat 2015 App Shim):\n* Shim-Process-Scanner - checks memory of every running process for any shim flags\n* Shim-Detector-Lite - detects installation of custom shim databases\n* Shim-Guard - monitors registry for any shim installations\n* ShimScanner - forensic tool to find active shims in memory\n* ShimCacheMem - Volatility plug-in that pulls shim cache from memory (note: shims are only cached after reboot)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3c23463d-c9b9-490c-bbb9-966a055e1539",
+    "created": "2024-08-13T14:51:22.284599Z",
+    "modified": "2024-08-13T14:51:22.284601Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--bc0f5e80-91c0-4e04-9fbb-e4e332c85dae",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may establish persistence by executing malicious content triggered by hijacked references to Component Object Model (COM) objects.\n\nNote: Event ID 4104 (from the Microsoft-Windows-Powershell/Operational log) captures Powershell script blocks, which can be analyzed and used to detect on changes to COM registry keys, including HKCU\\Software\\Classes\\CLSID\\*.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ec8dbb1a-c08a-4335-9b8f-4ee41471cb23",
+    "created": "2024-08-13T14:51:23.177565Z",
+    "modified": "2024-08-13T14:51:23.177567Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--09b130a2-a77e-4af0-a361-f46f9aad1345",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor and investigate attempts to modify ACLs and file/directory ownership. Consider enabling file/directory permission change auditing on folders containing key binary/configuration files.\n\nThis looks for any invocations of chmod. Note that this is likely to be more noisy than the Windows-specific implementation, although Linux does not generate logs for system triggered activities like in Windows. In addition, it may be necessary to whitelist cron jobs that regularly run and execute chmod.\n\nLinux environment logs can be more noisy than the Windows-specific implementation, although Linux does not generate logs for system triggered activities like in Windows. In addition, it may be necessary to whitelist cron jobs that regularly run and execute chmod.\n\nAnalytic 1 - Access Permission Modification for Linux\n\n<code>source=\"*linux:*\" CommandLine=\"chmod*\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

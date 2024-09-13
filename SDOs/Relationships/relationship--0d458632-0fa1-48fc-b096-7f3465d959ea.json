@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0d458632-0fa1-48fc-b096-7f3465d959ea",
+    "created": "2024-08-13T14:51:21.823446Z",
+    "modified": "2024-08-13T14:51:21.823448Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--30a89f6e-5b82-4d50-b157-44358c2d6e34",
+    "target_ref": "malware-behavior--f9cc4d06-775f-4ee1-b401-4e2cc0da30ba",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Palo Alto Unit 42 Domain Shadowing 2022",
+            "description": "Janos Szurdi, Rebekah Houser and Daiping Liu. (2022, September 21). Domain Shadowing: A Stealthy Use of DNS Compromise for Cybercrime. Retrieved March 7, 2023.",
+            "url": "https://unit42.paloaltonetworks.com/domain-shadowing/"
+        }
+    ],
+    "description": "Monitor for logged domain name system (DNS) registry data that may hijack domains and/or subdomains that can be used during targeting.  In some cases, abnormal subdomain IP addresses (such as those originating in a different country from the root domain) may indicate a malicious subdomain.(Citation: Palo Alto Unit 42 Domain Shadowing 2022) Much of this activity will take place outside the visibility of the target organization, making detection of this behavior difficult. Detection efforts may be focused on related stages of the adversary lifecycle, such as during Command and Control.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

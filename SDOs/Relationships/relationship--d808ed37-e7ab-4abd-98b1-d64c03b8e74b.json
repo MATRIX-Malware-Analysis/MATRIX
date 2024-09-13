@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d808ed37-e7ab-4abd-98b1-d64c03b8e74b",
+    "created": "2024-08-13T14:51:22.218405Z",
+    "modified": "2024-08-13T14:51:22.218408Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--76c1047d-1237-4e83-b785-6eb973415881",
+    "target_ref": "malware-behavior--1d4e6a60-1484-4e67-a4d5-1bc32cde7b25",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+            "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+            "source_name": "University of Birmingham C2"
+        }
+    ],
+    "description": "Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary command and control infrastructure and malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool command and control signatures over time or construct protocols in such a way to avoid detection by common defensive tools. (Citation: University of Birmingham C2)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d5b50d9d-2560-4760-9ead-c316fc7a9f23",
+    "created": "2024-08-13T14:51:23.429794Z",
+    "modified": "2024-08-13T14:51:23.429796Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--f6e0ab41-1bf0-4bcc-9ea1-798678b2704e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpectorOps Hiding Reg Jul 2017",
+            "description": "Reitz, B. (2017, July 14). Hiding Registry keys with PSReflect. Retrieved August 9, 2018.",
+            "url": "https://posts.specterops.io/hiding-registry-keys-with-psreflect-b18ec5ac8353"
+        },
+        {
+            "source_name": "Microsoft Reghide NOV 2006",
+            "description": "Russinovich, M. & Sharkey, K. (2006, January 10). Reghide. Retrieved August 9, 2018.",
+            "url": "https://docs.microsoft.com/sysinternals/downloads/reghide"
+        },
+        {
+            "source_name": "Microsoft RegDelNull July 2016",
+            "description": "Russinovich, M. & Sharkey, K. (2016, July 4). RegDelNull v1.11. Retrieved August 10, 2018.",
+            "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/regdelnull"
+        }
+    ],
+    "description": "Monitor for API calls associated with concealing Registry keys, such as Reghide. (Citation: Microsoft Reghide NOV 2006) Inspect and cleanup malicious hidden Registry entries using Native Windows API calls and/or tools such as Autoruns (Citation: SpectorOps Hiding Reg Jul 2017) and RegDelNull (Citation: Microsoft RegDelNull July 2016). Other API calls relevant to Registry Modification include <code>RegOpenKeyExA</code>,<code> RegCreateKeyExA</code>,<code> RegDeleteKeyExA</code>,<code> RegDeleteValueExA</code>,<code> RegEnumKeyExA</code>,<code> RegEnumValueExA</code>, among others.\n\nNote: Most EDR tools do not support direct monitoring of API calls due to the sheer volume of calls produced by an endpoint but may have alerts or events that are based on abstractions of OS API calls. Dynamic malware analysis tools (i.e., sandboxes) can be used to trace the execution, including OS API calls, for a single PE binary. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a8ae63af-b50e-4545-a63b-338de791e191",
+    "created": "2024-08-13T14:51:22.271564Z",
+    "modified": "2024-08-13T14:51:22.271566Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--d5a69cfb-fc2a-46cb-99eb-74b236db5061",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for Lateral Movement from the current system. For network devices, monitor executed commands in AAA logs, especially those run by unexpected or unauthorized users.\n\nWindows PowerShell log Event ID 4104 (PS script execution) can be used to capture PowerShell script block contents which may contain commands used as a precursor to [RDP Hijacking](https://attack.mitre.org/techniques/T1563/002). For example, the following command in a PowerShell script block may be used to enumerate the systems on a network which have RDP access: <code>Find-DomainLocalGroupMember -GroupName \"Remote Desktop Users\" | select -expand ComputerName</code>. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

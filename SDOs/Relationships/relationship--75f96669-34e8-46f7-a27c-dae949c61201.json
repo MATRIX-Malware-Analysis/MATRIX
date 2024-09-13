@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--75f96669-34e8-46f7-a27c-dae949c61201",
+    "created": "2024-08-13T14:51:22.222070Z",
+    "modified": "2024-08-13T14:51:22.222073Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--76c1047d-1237-4e83-b785-6eb973415881",
+    "target_ref": "malware-behavior--5998db4d-c243-4aef-9560-5a15e8989d21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+            "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+            "source_name": "University of Birmingham C2"
+        }
+    ],
+    "description": "Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware or unusual data transfer over known tools and protocols like FTP can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. (Citation: University of Birmingham C2)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

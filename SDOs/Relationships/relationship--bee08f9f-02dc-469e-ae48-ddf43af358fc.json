@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bee08f9f-02dc-469e-ae48-ddf43af358fc",
+    "created": "2024-08-13T14:48:38.301512Z",
+    "modified": "2024-08-13T14:48:38.301516Z",
+    "relationship_type": "uses",
+    "description": "The Industroyer IEC 61850 component sends the domain-specific MMSgetNameList request to determine what logical nodes the device supports. It then searches the logical nodes for the CSW value, which indicates the device performs a circuit breaker or switch control function.[1]Industroyer's OPC DA module also uses IOPCBrowseServerAddressSpace to look for items with the following strings: ctlSelOn, ctlOperOn, ctlSelOff, ctlOperOff, Pos and stVal.[1]Industroyer IEC 60870-5-104 module includes a range mode to discover Information Object Addresses (IOAs) by enumerating through each.[1]",
+    "source_ref": "malware--555dac37-9e1e-4384-9221-53d83e7e191a",
+    "target_ref": "malware-behavior--d97bbbb5-03bc-4008-8eec-98f6ad983f65",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

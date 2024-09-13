@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--82a404af-fed8-4427-842f-b001fdb9df3d",
+    "created": "2024-08-13T14:51:23.062471Z",
+    "modified": "2024-08-13T14:51:23.062473Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--85689b4c-0907-4ab8-8c04-7f81ecb5a322",
+    "target_ref": "malware-behavior--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Obfuscated scripts",
+            "description": "Microsoft. (2024, March 4). Attack surface reduction rules reference. Retrieved March 29, 2024.",
+            "url": "https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#block-execution-of-potentially-obfuscated-scripts"
+        }
+    ],
+    "description": "On Windows 10+, enable Attack Surface Reduction (ASR) rules to block execution of potentially obfuscated scripts.(Citation: Obfuscated scripts)\n\nSecurity tools should be configured to analyze the encoding properties of files and detect anomalies that deviate from standard encoding practices.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

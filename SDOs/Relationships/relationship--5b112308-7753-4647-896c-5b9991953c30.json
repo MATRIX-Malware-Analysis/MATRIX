@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5b112308-7753-4647-896c-5b9991953c30",
+    "created": "2024-08-13T14:51:22.903374Z",
+    "modified": "2024-08-13T14:51:22.903376Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--ba20ddf3-5194-4a06-87f4-3f29740e02a2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network. Information may also be acquired through Windows system management tools such as [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) and [PowerShell](https://attack.mitre.org/techniques/T1059/001).\n\nFor network devices, monitor executed commands in AAA logs, especially those run by unexpected or unauthorized users.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

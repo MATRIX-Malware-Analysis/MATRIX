@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c32ff30f-1cf2-4af7-989d-3879cf53605b",
+    "created": "2024-08-13T14:51:22.350025Z",
+    "modified": "2024-08-13T14:51:22.350027Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b06bbeb3-09bf-4434-a18d-77cedaaf2cee",
+    "target_ref": "malware-behavior--ed7135aa-c94a-404d-9f3b-4274b4bd9546",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpecterOps Certified Pre Owned",
+            "description": "Schroeder, W. & Christensen, L. (2021, June 22). Certified Pre-Owned - Abusing Active Directory Certificate Services. Retrieved August 2, 2022.",
+            "url": "https://web.archive.org/web/20220818094600/https://specterops.io/assets/resources/Certified_Pre-Owned.pdf"
+        }
+    ],
+    "description": "Consider disabling old/dangerous authentication protocols (e.g. NTLM), as well as unnecessary certificate features, such as potentially vulnerable AD CS web and other enrollment server roles.(Citation: SpecterOps Certified Pre Owned)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

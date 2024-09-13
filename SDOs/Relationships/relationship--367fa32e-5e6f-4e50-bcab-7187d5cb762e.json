@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--367fa32e-5e6f-4e50-bcab-7187d5cb762e",
+    "created": "2024-08-13T14:51:21.814270Z",
+    "modified": "2024-08-13T14:51:21.814273Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--ab5376a6-2a6f-4bce-b0fc-cafb95713837",
+    "target_ref": "malware-behavior--6856ddd6-2df3-4379-8b87-284603c189c3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "http://www.trustedcomputinggroup.org/wp-content/uploads/Trusted-Platform-Module-Summary_04292008.pdf",
+            "description": "Trusted Computing Group. (2008, April 29). Trusted Platform Module (TPM) Summary. Retrieved June 8, 2016.",
+            "source_name": "TCG Trusted Platform Module"
+        },
+        {
+            "source_name": "ESET LoJax Sept 2018",
+            "url": "https://www.welivesecurity.com/wp-content/uploads/2018/09/ESET-LoJax.pdf",
+            "description": "ESET. (2018, September). LOJAX First UEFI rootkit found in the wild, courtesy of the Sednit group. Retrieved July 2, 2019."
+        },
+        {
+            "source_name": "Intel Hardware-based Security Technologies",
+            "url": "https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/security-technologies-4th-gen-core-retail-paper.pdf",
+            "description": "Intel. (2013). Intel Hardware-based Security Technologies for Intelligent Retail Devices. Retrieved May 19, 2020."
+        }
+    ],
+    "description": "Check the integrity of the existing BIOS or EFI to determine if it is vulnerable to modification. Use Trusted Platform Module technology. (Citation: TCG Trusted Platform Module) Move system's root of trust to hardware to prevent tampering with the SPI flash memory.(Citation: ESET LoJax Sept 2018) Technologies such as Intel Boot Guard can assist with this. (Citation: Intel Hardware-based Security Technologies)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

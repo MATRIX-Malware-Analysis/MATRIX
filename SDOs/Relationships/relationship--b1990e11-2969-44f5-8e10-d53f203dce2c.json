@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b1990e11-2969-44f5-8e10-d53f203dce2c",
+    "created": "2024-08-13T14:48:38.736757Z",
+    "modified": "2024-08-13T14:48:38.73676Z",
+    "relationship_type": "uses",
+    "description": "Action RAT can identify AV products on an infected host using the following command: cmd.exe WMIC /Node:localhost /Namespace:\\\\root\\SecurityCenter2 Path AntiVirusProduct Get displayName /Format:List.[1]",
+    "source_ref": "malware--977badb7-9784-4ad8-bc10-69472523c487",
+    "target_ref": "malware-behavior--ebaca03c-b055-412d-8e2b-569dd83759a0",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

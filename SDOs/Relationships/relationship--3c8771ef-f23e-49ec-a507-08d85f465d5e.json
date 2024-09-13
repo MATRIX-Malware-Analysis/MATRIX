@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3c8771ef-f23e-49ec-a507-08d85f465d5e",
+    "created": "2024-08-13T14:51:22.895272Z",
+    "modified": "2024-08-13T14:51:22.895276Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--25659dd6-ea12-45c4-97e6-381e3e4b593e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor newly executed processes associated with account creation, such as net.exe\n\nAnalytic 1 - Create local admin accounts using net.exe\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") (Image= C:\\Windows\\System32\\net.exe OR Image= C:\\Windows\\System32\\net1.exe ) AND CommandLine = * -exportPFX * )</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

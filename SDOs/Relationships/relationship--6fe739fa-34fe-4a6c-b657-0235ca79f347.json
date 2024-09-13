@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6fe739fa-34fe-4a6c-b657-0235ca79f347",
+    "created": "2024-08-13T14:51:22.769867Z",
+    "modified": "2024-08-13T14:51:22.769869Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--5e0686f4-0504-46ed-adb6-1baa9f69a55d",
+    "target_ref": "malware-behavior--f7f62a1f-9cd9-44eb-8e69-ec0f297ecc79",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "VectorSec ForFiles Aug 2017",
+            "description": "vector_sec. (2017, August 11). Defenders watching launches of cmd? What about forfiles?. Retrieved January 22, 2018.",
+            "url": "https://twitter.com/vector_sec/status/896049052642533376"
+        },
+        {
+            "source_name": "Evi1cg Forfiles Nov 2017",
+            "description": "Evi1cg. (2017, November 26). block cmd.exe ? try this :. Retrieved January 22, 2018.",
+            "url": "https://twitter.com/Evi1cg/status/935027922397573120"
+        }
+    ],
+    "description": "[Forfiles](https://attack.mitre.org/software/S0193) can be used to subvert controls and possibly conceal command execution by not directly invoking [cmd](https://attack.mitre.org/software/S0106).(Citation: VectorSec ForFiles Aug 2017)(Citation: Evi1cg Forfiles Nov 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

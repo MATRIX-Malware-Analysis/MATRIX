@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--99be769d-c9f7-45a1-9b2f-0cf8baee9bd8",
+    "created": "2024-08-13T14:51:21.911271Z",
+    "modified": "2024-08-13T14:51:21.911273Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--f0c1a021-65ab-466d-82d8-83c3336618c2",
+    "target_ref": "malware-behavior--bb5e59c4-abe7-40c7-8196-e373cb1e5974",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MSTIC Octo Tempest Operations October 2023",
+            "description": "Microsoft. (2023, October 25). Octo Tempest crosses boundaries to facilitate extortion, encryption, and destruction. Retrieved March 18, 2024.",
+            "url": "https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/"
+        },
+        {
+            "source_name": "Crowdstrike TELCO BPO Campaign December 2022",
+            "description": "Parisi, T. (2022, December 2). Not a SIMulation: CrowdStrike Investigations Reveal Intrusion Campaign Targeting Telco and BPO Companies. Retrieved June 30, 2023.",
+            "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/"
+        }
+    ],
+    "description": "During [C0027](https://attack.mitre.org/campaigns/C0027), [Scattered Spider](https://attack.mitre.org/groups/G1015) used phone calls to instruct victims to navigate to credential-harvesting websites.(Citation: Crowdstrike TELCO BPO Campaign December 2022)\n\n[Scattered Spider](https://attack.mitre.org/groups/G1015) has also called employees at target organizations and compelled them to navigate to fake login portals using adversary-in-the-middle toolkits.(Citation: MSTIC Octo Tempest Operations October 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

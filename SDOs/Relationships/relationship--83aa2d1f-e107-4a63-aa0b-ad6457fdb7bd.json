@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--83aa2d1f-e107-4a63-aa0b-ad6457fdb7bd",
+    "created": "2024-08-13T14:51:22.065280Z",
+    "modified": "2024-08-13T14:51:22.065283Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--d194debb-92f8-44cd-86cb-27844b2d0f6d",
+    "target_ref": "malware-behavior--d0114e8c-d8f5-4c3e-b268-982551baf044",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Azure Run Command 2021",
+            "description": "Adrien Bataille, Anders Vejlby, Jared Scott Wilson, and Nader Zaveri. (2021, December 14). Azure Run Command for Dummies. Retrieved March 13, 2023.",
+            "url": "https://www.mandiant.com/resources/blog/azure-run-command-dummies"
+        }
+    ],
+    "description": "Monitor commands and scripts executed on virtual machines. In Azure, usage of Azure RunCommand can be identified via the Azure Activity Logs, and additional details on the result of  executed jobs are available in the `C:\\Packages\\Plugins\\Microsoft.CPlat.Core.RunCommandWindows` directory on Windows virtual machines.(Citation: Mandiant Azure Run Command 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4b014789-de6f-4fc5-9b0b-160dab8f02f4",
+    "created": "2024-08-13T14:51:23.587045Z",
+    "modified": "2024-08-13T14:51:23.587047Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--8a62000f-021f-4220-9716-2e76d9627b69",
+    "target_ref": "malware-behavior--997a1505-f8d0-4a0e-beae-78ed05a09e7b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye SUNBURST Backdoor December 2020",
+            "description": "FireEye. (2020, December 13). Highly Evasive Attacker Leverages SolarWinds Supply Chain to Compromise Multiple Global Victims With SUNBURST Backdoor. Retrieved January 4, 2021.",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html"
+        },
+        {
+            "source_name": "MSTIC NOBELIUM Mar 2021",
+            "description": "Nafisi, R., Lelli, A. (2021, March 4). GoldMax, GoldFinder, and Sibot: Analyzing NOBELIUM\u2019s layered persistence. Retrieved March 8, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/"
+        },
+        {
+            "source_name": "Cybersecurity Advisory SVR TTP May 2021",
+            "description": "NCSC, CISA, FBI, NSA. (2021, May 7). Further TTPs associated with SVR cyber actors. Retrieved July 29, 2021.",
+            "url": "https://www.ncsc.gov.uk/files/Advisory-further-TTPs-associated-with-SVR-cyber-actors.pdf"
+        }
+    ],
+    "description": "During the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024), [APT29](https://attack.mitre.org/groups/G0016) used different compromised credentials for remote access and to move laterally.(Citation: FireEye SUNBURST Backdoor December 2020)(Citation: MSTIC NOBELIUM Mar 2021)(Citation: Cybersecurity Advisory SVR TTP May 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--987efce4-0487-4b76-a7a5-413e94d39171",
+    "created": "2024-08-13T14:51:23.629085Z",
+    "modified": "2024-08-13T14:51:23.629087Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--ed999555-b2cd-4f75-89c5-1b59668f5563",
+    "target_ref": "malware-behavior--3c4a2599-71ee-4405-ba1e-0e28414b4bc5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "DFIR Phosphorus November 2021",
+            "description": "DFIR Report. (2021, November 15). Exchange Exploit Leads to Domain Wide Ransomware. Retrieved January 5, 2023.",
+            "url": "https://thedfirreport.com/2021/11/15/exchange-exploit-leads-to-domain-wide-ransomware/"
+        },
+        {
+            "source_name": "DFIR Report APT35 ProxyShell March 2022",
+            "description": "DFIR Report. (2022, March 21). APT35 Automates Initial Access Using ProxyShell. Retrieved May 25, 2022.",
+            "url": "https://thedfirreport.com/2022/03/21/apt35-automates-initial-access-using-proxyshell"
+        }
+    ],
+    "description": "[Magic Hound](https://attack.mitre.org/groups/G0059) has used a web shell to exfiltrate a ZIP file containing a dump of LSASS memory on a compromised machine.(Citation: DFIR Report APT35 ProxyShell March 2022)(Citation: DFIR Phosphorus November 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--91f75c13-ab6a-4431-a0d7-8d8f884078ea",
+    "created": "2024-08-13T14:51:22.937335Z",
+    "modified": "2024-08-13T14:51:22.937337Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--810aa4ad-61c9-49cb-993f-daa06199421d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Every Launch Agent and Launch Daemon must have a corresponding plist file on disk which can be monitored. Plist files are located in the root, system, and users <code>/Library/LaunchAgents</code> or <code>/Library/LaunchDaemons</code> folders. [Launch Agent](https://attack.mitre.org/techniques/T1543/001) or [Launch Daemon](https://attack.mitre.org/techniques/T1543/004) with executable paths pointing to /tmp and /Shared folders locations are potentially suspicious.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

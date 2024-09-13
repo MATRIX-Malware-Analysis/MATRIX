@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--48f4fea4-f785-4e18-96d9-cc11f7911a6a",
+    "created": "2024-08-13T14:51:21.894124Z",
+    "modified": "2024-08-13T14:51:21.894126Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--55bb4471-ff1f-43b4-88c1-c9384ec47abf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Consider reviewing command history in either host machines or cloud audit logs to determine if unauthorized or suspicious commands were executed.\n\nCloud API activity logging is typically enabled by default and may be reviewed in sources like the Microsoft Unified Audit Log, AWS CloudTrail, and GCP Admin Acitivty logs. Review these sources for history of executed API commands. Host logs may also be reviewed to capture CLI commands or PowerShell module usage to invoke Cloud API functions.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

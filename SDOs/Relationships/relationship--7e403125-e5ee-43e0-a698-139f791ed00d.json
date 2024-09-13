@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7e403125-e5ee-43e0-a698-139f791ed00d",
+    "created": "2024-08-13T14:51:21.951776Z",
+    "modified": "2024-08-13T14:51:21.951778Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--49deae61-5c33-4162-b4fe-87b5df1143af",
+    "target_ref": "malware-behavior--c615231b-f253-4f58-9d47-d5b4cbdb6839",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://posts.specterops.io/code-signing-certificate-cloning-attacks-and-defenses-6f98657fc6ec",
+            "description": "Graeber, M. (2017, December 22). Code Signing Certificate Cloning Attacks and Defenses. Retrieved April 3, 2018.",
+            "source_name": "SpectorOps Code Signing Dec 2017"
+        }
+    ],
+    "description": "Windows Group Policy can be used to manage root certificates and the <code>Flags</code> value of <code>HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\SystemCertificates\\\\Root\\\\ProtectedRoots</code> can be set to 1 to prevent non-administrator users from making further root installations into their own HKCU certificate store. (Citation: SpectorOps Code Signing Dec 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

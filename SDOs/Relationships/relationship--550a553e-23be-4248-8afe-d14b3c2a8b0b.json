@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--550a553e-23be-4248-8afe-d14b3c2a8b0b",
+    "created": "2024-08-13T14:51:21.927123Z",
+    "modified": "2024-08-13T14:51:21.927125Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--f4599aa0-4f85-4a32-80ea-fc39dc965945",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor DLL/PE file events, specifically creation of these binary files as well as the loading of DLLs into processes. Look for DLLs that are not recognized or not normally loaded into a process. Sysmon Event ID 7 (Image loaded) can be used to monitor the loading of DLLs into processes. This is a particularly noisy event and can generate a large volume of data, so we recommend baselining and filtering out any known benign processes and module loads to help reduce the number of events that are produced.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

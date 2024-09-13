@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f4a21def-c659-4e6c-b5b6-8d596b3e8df5",
+    "created": "2024-08-13T14:51:23.793653Z",
+    "modified": "2024-08-13T14:51:23.793655Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--4c936cef-797d-4c52-b0e0-46b3bbee5189",
+    "target_ref": "malware-behavior--bfbd32ac-a63f-4c57-b92b-43e4746fc1e5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Android-VerifiedBoot",
+            "description": "Android. (n.d.). Verified Boot. Retrieved December 21, 2016.",
+            "url": "https://source.android.com/security/verifiedboot/"
+        }
+    ],
+    "description": "On Android, Verified Boot can detect unauthorized modifications to the system partition.(Citation: Android-VerifiedBoot) Android's SafetyNet API provides remote attestation capabilities, which could potentially be used to identify and respond to compromise devices. Samsung Knox provides a similar remote attestation capability on supported Samsung devices. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

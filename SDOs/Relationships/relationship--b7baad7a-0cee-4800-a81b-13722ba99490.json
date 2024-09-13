@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b7baad7a-0cee-4800-a81b-13722ba99490",
+    "created": "2024-08-13T14:51:21.974313Z",
+    "modified": "2024-08-13T14:51:21.974316Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--35a8c4d6-1aeb-43d7-ac3a-b87705fa6567",
+    "target_ref": "malware-behavior--810aa4ad-61c9-49cb-993f-daa06199421d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed services/daemons to execute commands or programs.\n\nNotes: This detection is to identify a creation of \u201cuser mode service\u201d where the service file path is located in non-common service folder in windows.\n\nAnalytic 1 - Create Service In Suspicious File Path\n\n<code>(source=\"WinEventLog:Security\" EventCode=\"4697\") OR (source=\"WinEventLog:System\" EventCode=\"7045\")  Service_File_Name = \"*\\.exe\" NOT (Service_File_Name IN (\"C:\\\\Windows\\\\*\", \"%windir%\\\\*\", \"C:\\\\Program File*\", \"C:\\\\Programdata\\\\*\", \"%systemroot%\\\\*\")) Service_Type = \"user mode service\" </code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

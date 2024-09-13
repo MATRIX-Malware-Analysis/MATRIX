@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b001e938-be3f-4da8-817d-11773c14b117",
+    "created": "2024-08-13T14:51:21.684638Z",
+    "modified": "2024-08-13T14:51:21.684640Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--b5c6a467-2796-48f5-8faf-9304fc774fff",
+    "target_ref": "malware-behavior--2c8c35bb-48dc-45db-a061-e193c26ccd82",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CheckPoint Redaman October 2019",
+            "url": "https://research.checkpoint.com/2019/ponys-cc-servers-hidden-inside-the-bitcoin-blockchain/",
+            "description": "Eisenkraft, K., Olshtein, A. (2019, October 17). Pony\u2019s C&C servers hidden inside the Bitcoin blockchain. Retrieved June 15, 2020."
+        },
+        {
+            "source_name": "Unit42 Redaman January 2019",
+            "url": "https://unit42.paloaltonetworks.com/russian-language-malspam-pushing-redaman-banking-malware/",
+            "description": "Duncan, B., Harbison, M. (2019, January 23). Russian Language Malspam Pushing Redaman Banking Malware. Retrieved June 16, 2020."
+        }
+    ],
+    "description": "[RTM](https://attack.mitre.org/software/S0148) has resolved [Pony](https://attack.mitre.org/software/S0453) C2 server IP addresses by either converting Bitcoin blockchain transaction data to specific octets, or accessing IP addresses directly within the Namecoin blockchain.(Citation: CheckPoint Redaman October 2019)(Citation: Unit42 Redaman January 2019)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

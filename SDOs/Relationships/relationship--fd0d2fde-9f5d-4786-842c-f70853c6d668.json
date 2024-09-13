@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fd0d2fde-9f5d-4786-842c-f70853c6d668",
+    "created": "2024-08-13T14:51:23.388297Z",
+    "modified": "2024-08-13T14:51:23.388300Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--d0114e8c-d8f5-4c3e-b268-982551baf044",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Mandiant Azure Run Command 2021",
+            "description": "Adrien Bataille, Anders Vejlby, Jared Scott Wilson, and Nader Zaveri. (2021, December 14). Azure Run Command for Dummies. Retrieved March 13, 2023.",
+            "url": "https://www.mandiant.com/resources/blog/azure-run-command-dummies"
+        }
+    ],
+    "description": "Limit the number of cloud accounts with permissions to remotely execute commands on virtual machines, and ensure that these are not used for day-to-day operations. In Azure, limit the number of accounts with the roles Azure Virtual Machine Contributer and above, and consider using temporary Just-in-Time (JIT) roles to avoid permanently assigning privileged access to virtual machines.(Citation: Mandiant Azure Run Command 2021) ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

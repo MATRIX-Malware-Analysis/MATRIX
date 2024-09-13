@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fc0c051a-6d27-4b27-96e5-1b66d7518347",
+    "created": "2024-08-13T14:51:22.888199Z",
+    "modified": "2024-08-13T14:51:22.888202Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--c898c4b5-bf36-4e6e-a4ad-5b8c4c13e35b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye VBA stomp Feb 2020",
+            "description": "Cole, R., Moore, A., Stark, G., Stancill, B. (2020, February 5). STOMP 2 DIS: Brilliance in the (Visual) Basics. Retrieved September 17, 2020.",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/01/stomp-2-dis-brilliance-in-the-visual-basics.html"
+        }
+    ],
+    "description": "If the document is opened with a Graphical User Interface (GUI) the malicious p-code is decompiled and may be viewed. However, if the <code>PROJECT</code> stream, which specifies the project properties, is modified in a specific way the decompiled VBA code will not be displayed. For example, adding a module name that is undefined to the <code>PROJECT</code> stream will inhibit attempts of reading the VBA source code through the GUI.(Citation: FireEye VBA stomp Feb 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4f5dd9c1-3b43-46da-b530-a567de69a797",
+    "created": "2024-08-13T14:51:21.715167Z",
+    "modified": "2024-08-13T14:51:21.715169Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--7c36dffe-e41a-4cf8-b2e0-b1ee758f370a",
+    "target_ref": "malware-behavior--3a0f56a8-ca35-4eba-973e-374435ab6ab5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cybereason OperationCuckooBees May 2022",
+            "description": "Cybereason Nocturnus. (2022, May 4). Operation CuckooBees: Deep-Dive into Stealthy Winnti Techniques. Retrieved September 22, 2022.",
+            "url": "https://www.cybereason.com/blog/operation-cuckoobees-deep-dive-into-stealthy-winnti-techniques"
+        }
+    ],
+    "description": "During [Operation CuckooBees](https://attack.mitre.org/campaigns/C0012), the threat actors enabled WinRM over HTTP/HTTPS as a backup persistence mechanism using the following command: `cscript //nologo \"C:\\Windows\\System32\\winrm.vbs\" set winrm/config/service@{EnableCompatibilityHttpsListener=\"true\"}`.(Citation: Cybereason OperationCuckooBees May 2022)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

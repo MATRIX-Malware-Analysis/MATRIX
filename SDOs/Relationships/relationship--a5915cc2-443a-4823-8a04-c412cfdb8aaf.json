@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a5915cc2-443a-4823-8a04-c412cfdb8aaf",
+    "created": "2024-08-13T14:51:22.499329Z",
+    "modified": "2024-08-13T14:51:22.499331Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--32632a95-6856-47b9-9ab7-fea5cd7dce00",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Now You Serial",
+            "description": "Rahman, Alyssa. (2021, December 13). Now You Serial, Now You Don\u2019t \u2014 Systematically Hunting for Deserialization Exploits. Retrieved November 28, 2023.",
+            "url": "https://www.mandiant.com/resources/blog/hunting-deserialization-exploits"
+        }
+    ],
+    "description": "Use deep packet inspection to look for artifacts of common exploit traffic, such as SQL injection strings or known payloads. For example, monitor for successively chained functions that adversaries commonly abuse (i.e. gadget chaining) through unsafe deserialization to exploit publicly facing applications for initial access.(Citation: Now You Serial) ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

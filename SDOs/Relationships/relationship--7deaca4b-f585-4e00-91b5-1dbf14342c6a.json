@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7deaca4b-f585-4e00-91b5-1dbf14342c6a",
+    "created": "2024-08-13T14:51:22.093777Z",
+    "modified": "2024-08-13T14:51:22.093779Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--c03000e5-1b7e-4105-a78a-cdf09c5aafd0",
+    "target_ref": "malware-behavior--adf634bd-c4c3-4a56-862e-452637ef5853",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Elastic Masquerade Ball",
+            "description": "Ewing, P. (2016, October 31). How to Hunt: The Masquerade Ball. Retrieved October 31, 2016.",
+            "url": "https://www.elastic.co/blog/how-hunt-masquerade-ball"
+        }
+    ],
+    "description": "Collecting disk and resource filenames for binaries, comparing that the InternalName, OriginalFilename, and/or ProductName match what is expected, could provide useful leads but may not always be indicative of malicious activity. (Citation: Elastic Masquerade Ball)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

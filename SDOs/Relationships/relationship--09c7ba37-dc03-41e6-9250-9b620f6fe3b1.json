@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--09c7ba37-dc03-41e6-9250-9b620f6fe3b1",
+    "created": "2024-08-13T14:51:23.146804Z",
+    "modified": "2024-08-13T14:51:23.146807Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--5c40a58c-2fb9-4f06-b5a7-287c3f168b45",
+    "target_ref": "malware-behavior--a542bac9-7bc1-4da7-9a09-96f69e23cc21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Suspicious systemd timers can also be identified by comparing results against a trusted system baseline. Malicious systemd timers may be detected by using the systemctl utility to examine system wide timers: systemctl list-timers \u2013all. Analyze the contents of corresponding .service files present on the file system and ensure that they refer to legitimate, expected executables.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

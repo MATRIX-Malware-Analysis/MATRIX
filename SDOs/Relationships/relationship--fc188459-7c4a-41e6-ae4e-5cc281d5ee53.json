@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fc188459-7c4a-41e6-ae4e-5cc281d5ee53",
+    "created": "2024-08-13T14:48:36.784307Z",
+    "modified": "2024-08-13T14:48:36.784311Z",
+    "relationship_type": "uses",
+    "description": "If establishing persistence by installation as a new service fails, one variant of Elise establishes persistence for the created .exe file by setting the following Registry key: HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\svchost : %APPDATA%\\Microsoft\\Network\\svchost.exe. Other variants have set the following Registry keys for persistence: HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\imejp : [self] and HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\IAStorD.[1][2]",
+    "source_ref": "malware--6d3e8dc6-a942-4ca9-b053-6b4ee524f994",
+    "target_ref": "malware-behavior--e8c31590-424a-49a2-ba36-408f24c9ded1",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

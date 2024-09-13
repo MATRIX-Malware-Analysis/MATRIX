@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4c45abf3-9f30-4736-a816-267a7437aae9",
+    "created": "2024-08-13T14:51:22.202190Z",
+    "modified": "2024-08-13T14:51:22.202193Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--b06bbeb3-09bf-4434-a18d-77cedaaf2cee",
+    "target_ref": "malware-behavior--50e9e8c2-1a9b-4544-9839-f5b1e5b13644",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://support.office.com/article/enable-or-disable-macros-in-office-files-12b036fd-d140-4e74-b45e-16fed1a7e5c6",
+            "description": "Microsoft. (n.d.). Enable or disable macros in Office files. Retrieved September 13, 2018.",
+            "source_name": "Microsoft Disable Macros"
+        }
+    ],
+    "description": "Consider disabling Microsoft Office macros/active content to prevent the execution of malicious payloads in documents (Citation: Microsoft Disable Macros), though this setting may not mitigate the [Forced Authentication](https://attack.mitre.org/techniques/T1187) use for this technique.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

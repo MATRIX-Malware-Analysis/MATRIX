@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a4731875-72af-4dfd-9dd2-628a7f2f6df8",
+    "created": "2024-08-13T14:51:23.547513Z",
+    "modified": "2024-08-13T14:51:23.547515Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1b8b81be-cb6e-48df-8b1b-85c242bb9085",
+    "target_ref": "malware-behavior--edfda667-2b9c-496f-a28a-07044f419f30",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Hiding Malicious Code with Module Stomping",
+            "description": "Aliz Hammond. (2019, August 15). Hiding Malicious Code with \"Module Stomping\": Part 1. Retrieved July 14, 2022.",
+            "url": "https://blog.f-secure.com/hiding-malicious-code-with-module-stomping/"
+        }
+    ],
+    "description": "Monitor for process memory inconsistencies, such as checking memory ranges against a known copy of the legitimate module.(Citation: Hiding Malicious Code with Module Stomping)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

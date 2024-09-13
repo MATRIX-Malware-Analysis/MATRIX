@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--8b68a9a8-3631-42ca-8b28-47dbc9e0acad",
+    "created": "2024-08-13T14:51:23.053138Z",
+    "modified": "2024-08-13T14:51:23.053140Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--b63a34e8-0a61-4c97-a23b-bf8a2ed812e2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESF_filemonitor",
+            "description": "Patrick Wardle. (2019, September 17). Writing a File Monitor with Apple's Endpoint Security Framework. Retrieved December 17, 2020.",
+            "url": "https://objective-see.com/blog/blog_0x48.html"
+        }
+    ],
+    "description": "Monitor for changes to <code>/etc/profile</code> and <code>/etc/profile.d</code>, these files should only be modified by system administrators. MacOS users can leverage Endpoint Security Framework file events monitoring these specific files.(Citation: ESF_filemonitor)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--af10a262-4fde-4feb-bf95-b66ade6c0e70",
+    "created": "2024-08-13T14:51:23.525030Z",
+    "modified": "2024-08-13T14:51:23.525032Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--bdd65f5f-1408-4ae2-a9cc-a0474bb097af",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Dell Skeleton",
+            "description": "Dell SecureWorks. (2015, January 12). Skeleton Key Malware Analysis. Retrieved April 8, 2019.",
+            "url": "https://www.secureworks.com/research/skeleton-key-malware-analysis"
+        },
+        {
+            "source_name": "NPLogonNotify",
+            "description": "Microsoft. (2021, October 21). NPLogonNotify function (npapi.h). Retrieved March 30, 2023.",
+            "url": "https://learn.microsoft.com/en-us/windows/win32/api/npapi/nf-npapi-nplogonnotify"
+        }
+    ],
+    "description": "Monitor for calls to <code>OpenProcess</code> that can be used to manipulate lsass.exe running on a domain controller as well as for malicious modifications to functions exported from authentication-related system DLLs (such as cryptdll.dll and samsrv.dll).(Citation: Dell Skeleton)\n\nMonitor for abnormal API calls to `NPLogonNotify()` that may highlight malicious network provider DLLs.(Citation: NPLogonNotify)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

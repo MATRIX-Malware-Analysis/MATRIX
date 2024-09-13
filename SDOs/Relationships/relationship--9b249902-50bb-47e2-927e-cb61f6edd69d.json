@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9b249902-50bb-47e2-927e-cb61f6edd69d",
+    "created": "2024-08-13T14:48:37.267171Z",
+    "modified": "2024-08-13T14:48:37.267175Z",
+    "relationship_type": "uses",
+    "description": "For C2 over HTTP, Helminth encodes data with base64 and sends it via the \"Cookie\" field of HTTP requests. For C2 over DNS, Helminth converts ASCII characters into their hexadecimal values and sends the data in cleartext.[1]",
+    "source_ref": "malware--f5a5b191-349c-4def-b507-4cc63dd2ccf1",
+    "target_ref": "malware-behavior--eaecd060-7b7a-4f0e-81a5-914423ad7481",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

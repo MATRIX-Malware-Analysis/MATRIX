@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2e900afe-865c-4c64-8a4f-80fb84cef9b1",
+    "created": "2024-08-13T14:48:38.30493Z",
+    "modified": "2024-08-13T14:48:38.304933Z",
+    "relationship_type": "uses",
+    "description": "The Industroyer SIPROTEC DoS module exploits the CVE-2015-5374 vulnerability in order to render a Siemens SIPROTEC device unresponsive. Once this vulnerability is successfully exploited, the target device stops responding to any commands until it is rebooted manually. [5] Once the tool is executed it sends specifically crafted packets to port 50,000 of the target IP addresses using UDP. The UDP packet contains the following 18 byte payload: 0x11 49 00 00 00 00 00 00 00 00 00 00 00 00 00 00 28 9E. [5]",
+    "source_ref": "malware--555dac37-9e1e-4384-9221-53d83e7e191a",
+    "target_ref": "malware-behavior--427dd19a-8d39-4dd8-84f5-b74e4f37429d",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

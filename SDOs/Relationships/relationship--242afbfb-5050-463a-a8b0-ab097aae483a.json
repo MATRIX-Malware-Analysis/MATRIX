@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--242afbfb-5050-463a-a8b0-ab097aae483a",
+    "created": "2024-08-13T14:51:22.958125Z",
+    "modified": "2024-08-13T14:51:22.958129Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--6d1b4fdb-329c-4c88-8160-3c3aec5b7497",
+    "target_ref": "malware-behavior--32632a95-6856-47b9-9ab7-fea5cd7dce00",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "FireEye APT41 March 2020",
+            "description": "Glyer, C, et al. (2020, March). This Is Not a Test: APT41 Initiates Global Intrusion Campaign Using Multiple Exploits. Retrieved April 28, 2020.",
+            "url": "https://www.fireeye.com/blog/threat-research/2020/03/apt41-initiates-global-intrusion-campaign-using-multiple-exploits.html"
+        },
+        {
+            "source_name": "Rostovcev APT41 2021",
+            "description": "Nikita Rostovcev. (2022, August 18). APT41 World Tour 2021 on a tight schedule. Retrieved February 22, 2024.",
+            "url": "https://www.group-ib.com/blog/apt41-world-tour-2021/"
+        }
+    ],
+    "description": "[APT41](https://attack.mitre.org/groups/G0096) exploited CVE-2020-10189 against Zoho ManageEngine Desktop Central through unsafe deserialization, and CVE-2019-19781 to compromise Citrix Application Delivery Controllers (ADC) and gateway devices.(Citation: FireEye APT41 March 2020) [APT41](https://attack.mitre.org/groups/G0096) leveraged vulnerabilities such as ProxyLogon exploitation or SQL injection for initial access.(Citation: Rostovcev APT41 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

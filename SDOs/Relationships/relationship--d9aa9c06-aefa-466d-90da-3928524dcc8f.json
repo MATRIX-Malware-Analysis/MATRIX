@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d9aa9c06-aefa-466d-90da-3928524dcc8f",
+    "created": "2024-08-13T14:51:23.660321Z",
+    "modified": "2024-08-13T14:51:23.660323Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--2892b9ee-ca9f-4723-b332-0dc6e843a8ae",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor changes to screensaver configuration changes in the Registry that may not correlate with typical user behavior. Tools such as Sysinternals Autoruns can be used to detect changes to the screensaver binary path in the Registry. Default screen saver files are stored in C:\\Windows\\System32. Use these files as a reference when defining list of not suspicious screen saver files.\n\nAnalytic 1 - Registry Edit from Screensaver\n\n<code>source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode IN (13, 14) TargetObject=\"*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

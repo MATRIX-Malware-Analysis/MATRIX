@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fb3c0e4c-51bc-42cb-afd9-cc7aef6d6616",
+    "created": "2024-08-13T14:51:23.462113Z",
+    "modified": "2024-08-13T14:51:23.462116Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--36a90949-60e6-4fa9-ab5c-63ca480d68da",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments for suspicious commands to modify accounts or account settings (including files such as the `authorized_keys` or `/etc/ssh/sshd_config`).\n\nMonitor executed commands and arguments of suspicious commands (such as `Add-MailboxPermission`) that may be indicative of modifying the permissions of Exchange and other related service settings.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

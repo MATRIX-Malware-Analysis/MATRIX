@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f2d34706-0fa9-4f2d-b786-f2efcf9148ec",
+    "created": "2024-08-13T14:51:22.843753Z",
+    "modified": "2024-08-13T14:51:22.843756Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--d9b434ee-826b-4357-986a-989e7cc7fdb0",
+    "target_ref": "malware-behavior--8219d84e-087e-4770-bd54-b658911c2cf5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "GitHub Pacu",
+            "description": "Rhino Security Labs. (2019, August 22). Pacu. Retrieved October 17, 2019.",
+            "url": "https://github.com/RhinoSecurityLabs/pacu"
+        }
+    ],
+    "description": "[Pacu](https://attack.mitre.org/software/S1091) can set up S3 bucket notifications to trigger a malicious Lambda function when a CloudFormation template is uploaded to the bucket. It can also create Lambda functions that trigger upon the creation of users, roles, and groups.(Citation: GitHub Pacu)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

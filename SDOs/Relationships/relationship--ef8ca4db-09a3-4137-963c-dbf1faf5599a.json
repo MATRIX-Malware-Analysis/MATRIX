@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ef8ca4db-09a3-4137-963c-dbf1faf5599a",
+    "created": "2024-08-13T14:51:21.796374Z",
+    "modified": "2024-08-13T14:51:21.796376Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--241814ae-de3f-4656-b49e-f9a80764d4b7",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed commands and arguments that may attempt to get a listing of security software, configurations, defensive tools, and sensors that are installed on a system or in a cloud environment.\n\nNote: For Windows, Event ID 4104 (from the Microsoft-Windows-Powershell/Operational log) captures Powershell script blocks, which can be analyzed and used to detect on potential Security Software Discovery. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

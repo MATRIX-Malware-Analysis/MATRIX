@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--402c7fee-80e5-40e3-bf69-0b6ddbc600ec",
+    "created": "2024-08-13T14:51:23.029545Z",
+    "modified": "2024-08-13T14:51:23.029548Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--2959d63f-73fd-46a1-abd2-109d7dcede32",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for several ways that code can execute\u00a0on a remote host. One of the most common methods is via the Windows\u00a0Service Control Manager\u00a0(SCM), which allows authorized users to remotely create and modify services. Several tools, such as\u00a0[PsExec](https://attack.mitre.org/software/S0029), use this functionality.\n\nWhen a client remotely communicates with the Service Control Manager, there are two observable behaviors. First, the client connects to the\u00a0RPC Endpoint Mapper\u00a0over 135/tcp. This handles authentication, and tells the client what port the endpoint\u2014in this case the SCM\u2014is listening on. Then, the client connects directly to the listening port on\u00a0services.exe. If the request is to start an existing service with a known command line, the the SCM process will run the corresponding command.\n\nThis compound behavior can be detected by looking for\u00a0services.exe\u00a0receiving a network connection and immediately spawning a child process.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

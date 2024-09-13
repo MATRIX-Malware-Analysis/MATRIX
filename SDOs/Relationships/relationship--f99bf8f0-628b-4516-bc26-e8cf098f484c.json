@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f99bf8f0-628b-4516-bc26-e8cf098f484c",
+    "created": "2024-08-13T14:51:22.371328Z",
+    "modified": "2024-08-13T14:51:22.371330Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--4f9ca633-15c5-463c-9724-bdcd54fde541",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for the creation of WMI Win32_Process class and method Create to interact with a remote network share using Server Message Block (SMB). Relevant indicators detected by Bro/Zeek is IWbemServices::ExecMethod or IWbemServices::ExecMethodAsync. One thing to notice is that when the Create method is used on a remote system, the method is run under a host process named \u201cWmiprvse.exe\u201d.\n\nThe process WmiprvSE.exe is what spawns the process defined in the CommandLine parameter of the Create method. Therefore, the new process created remotely will have Wmiprvse.exe as a parent. WmiprvSE.exe is a DCOM server and it is spawned underneath the DCOM service host svchost.exe with the following parameters C:\\WINDOWS\\system32\\svchost.exe -k DcomLaunch -p. From a logon session perspective, on the target, WmiprvSE.exe is spawned in a different logon session by the DCOM service host. However, whatever is executed by WmiprvSE.exe occurs on the new network type (3) logon session created by the user that authenticated from the network.\n\nAnalytic 1 - Basic\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") AND ParentImage=\"*wmiprvse.exe\" AND TargetLogonID=\"0x3e7\"</code>\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

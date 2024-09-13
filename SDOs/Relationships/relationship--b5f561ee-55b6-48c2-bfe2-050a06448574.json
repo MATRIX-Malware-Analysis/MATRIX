@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b5f561ee-55b6-48c2-bfe2-050a06448574",
+    "created": "2024-08-13T14:51:21.982208Z",
+    "modified": "2024-08-13T14:51:21.982211Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--5373721b-2243-4a66-86ad-89a2408f5a58",
+    "target_ref": "malware-behavior--d1fcf083-a721-4223-aedf-bf8960798d62",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://web.archive.org/web/20180825085952/https://s3-us-west-2.amazonaws.com/cymmetria-blog/public/Unveiling_Patchwork.pdf",
+            "description": "Cymmetria. (2016). Unveiling Patchwork - The Copy-Paste APT. Retrieved August 3, 2016.",
+            "source_name": "Cymmetria Patchwork"
+        },
+        {
+            "source_name": "TrendMicro Patchwork Dec 2017",
+            "description": "Lunghi, D., et al. (2017, December). Untangling the Patchwork Cyberespionage Group. Retrieved July 10, 2018.",
+            "url": "https://documents.trendmicro.com/assets/tech-brief-untangling-the-patchwork-cyberespionage-group.pdf"
+        },
+        {
+            "source_name": "Volexity Patchwork June 2018",
+            "description": "Meltzer, M, et al. (2018, June 07). Patchwork APT Group Targets US Think Tanks. Retrieved July 16, 2018.",
+            "url": "https://www.volexity.com/blog/2018/06/07/patchwork-apt-group-targets-us-think-tanks/"
+        }
+    ],
+    "description": "[Patchwork](https://attack.mitre.org/groups/G0040) ran a reverse shell with Meterpreter.(Citation: Cymmetria Patchwork) [Patchwork](https://attack.mitre.org/groups/G0040) used JavaScript code and .SCT files on victim machines.(Citation: TrendMicro Patchwork Dec 2017)(Citation: Volexity Patchwork June 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

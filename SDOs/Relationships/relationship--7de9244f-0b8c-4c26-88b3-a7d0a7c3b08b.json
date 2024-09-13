@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7de9244f-0b8c-4c26-88b3-a7d0a7c3b08b",
+    "created": "2024-08-13T14:51:23.364656Z",
+    "modified": "2024-08-13T14:51:23.364659Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--5c40a58c-2fb9-4f06-b5a7-287c3f168b45",
+    "target_ref": "malware-behavior--2acf44aa-542f-4366-b4eb-55ef5747759c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed scheduled jobs. Legitimate scheduled tasks may be created during installation of new software or through system administration functions. Look for changes to tasks that do not correlate with known software, patch cycles, etc.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--da06c225-c05c-422b-89cb-0b83008624b0",
+    "created": "2024-08-13T14:51:23.174804Z",
+    "modified": "2024-08-13T14:51:23.174806Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f17f3cef-842b-4e2d-aed0-9e4a75ca08c0",
+    "target_ref": "malware-behavior--6a5848a8-6201-4a2c-8a6a-ca5af8c6f3df",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://docs.microsoft.com/windows/desktop/etw/event-tracing-portal",
+            "description": "Microsoft. (2018, May 30). Event Tracing. Retrieved September 6, 2018.",
+            "source_name": "Microsoft ETW May 2018"
+        }
+    ],
+    "description": "Ensure event tracers/forwarders (Citation: Microsoft ETW May 2018), firewall policies, and other associated mechanisms are secured with appropriate permissions and access controls.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

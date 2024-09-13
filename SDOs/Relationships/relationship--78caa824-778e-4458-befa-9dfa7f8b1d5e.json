@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--78caa824-778e-4458-befa-9dfa7f8b1d5e",
+    "created": "2024-08-13T14:51:22.263637Z",
+    "modified": "2024-08-13T14:51:22.263640Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--81deca52-bf4a-4c61-95e1-a8bd4de07103",
+    "target_ref": "malware-behavior--2db31dcd-54da-405d-acef-b9129b816ed6",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco Talos Intelligence Group",
+            "description": "Darin Smith. (2022, April 21). TeamTNT targeting AWS, Alibaba. Retrieved August 4, 2022.",
+            "url": "https://blog.talosintelligence.com/teamtnt-targeting-aws-alibaba-2/"
+        },
+        {
+            "source_name": "Intezer TeamTNT September 2020",
+            "description": "Fishbein, N. (2020, September 8). Attackers Abusing Legitimate Cloud Monitoring Tools to Conduct Cyber Attacks. Retrieved September 22, 2021.",
+            "url": "https://www.intezer.com/blog/cloud-security/attackers-abusing-legitimate-cloud-monitoring-tools-to-conduct-cyber-attacks/"
+        }
+    ],
+    "description": "[TeamTNT](https://attack.mitre.org/groups/G0139) has used SSH to connect back to victim machines.(Citation: Intezer TeamTNT September 2020) [TeamTNT](https://attack.mitre.org/groups/G0139) has also used SSH to transfer tools and payloads onto victim hosts and execute them.(Citation: Cisco Talos Intelligence Group)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

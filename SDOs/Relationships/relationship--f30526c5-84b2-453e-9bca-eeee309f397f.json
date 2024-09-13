@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f30526c5-84b2-453e-9bca-eeee309f397f",
+    "created": "2024-08-13T14:48:38.396Z",
+    "modified": "2024-08-13T14:48:38.396003Z",
+    "relationship_type": "uses",
+    "description": "MESSAGETAP uses the libpcap library to listen to all traffic and parses network protocols starting with Ethernet and IP layers. It continues parsing protocol layers including SCTP, SCCP, and TCAP and finally extracts SMS message data and routing metadata.  [1]",
+    "source_ref": "malware--0e357a4c-2b29-4fc7-8bb4-18f6c9b5e749",
+    "target_ref": "malware-behavior--27d5bcf2-4a3b-4dee-8ff7-03a11738ffa7",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

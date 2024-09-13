@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b5041da1-71fe-4dee-a713-7793f8cb8acf",
+    "created": "2024-08-13T14:51:23.953087Z",
+    "modified": "2024-08-13T14:51:23.953090Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--d97bbbb5-03bc-4008-8eec-98f6ad983f65",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for anomalies related to discovery related ICS functions, including devices that have not previously used these functions or for functions being sent to many outstations. Note that some ICS protocols use broadcast or multicast functionality, which may produce false positives. Also monitor for hosts enumerating network connected resources using non-ICS enterprise protocols.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

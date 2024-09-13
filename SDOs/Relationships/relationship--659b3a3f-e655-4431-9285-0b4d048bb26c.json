@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--659b3a3f-e655-4431-9285-0b4d048bb26c",
+    "created": "2024-08-13T14:51:23.379771Z",
+    "modified": "2024-08-13T14:51:23.379773Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--ebfdda4c-1849-432e-aa27-68a38382abf9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "GitLab WakeOnLAN",
+            "description": "Perry, David. (2020, August 11). WakeOnLAN (WOL). Retrieved February 17, 2021.",
+            "url": "https://gitlab.com/wireshark/wireshark/-/wikis/WakeOnLAN"
+        }
+    ],
+    "description": "Monitor and analyze network packet contents to detect application layer protocols, leveraging SSL/TLS inspection for encrypted traffic, that do not follow the expected protocol standards and traffic flows (e.g extraneous packets that do not belong to established flows, protocol port mismatch, anomalous syntax, or structure). Consider packet inspection for Wake-on-LAN magic packet consists of 6 bytes of <code>FF</code> followed by sixteen repetitions of the target system's IEEE address. Seeing this string anywhere in a packet's payload may be indicative of a Wake-on-LAN attempt.(Citation: GitLab WakeOnLAN)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

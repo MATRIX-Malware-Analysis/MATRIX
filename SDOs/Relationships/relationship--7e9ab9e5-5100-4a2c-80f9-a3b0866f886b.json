@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7e9ab9e5-5100-4a2c-80f9-a3b0866f886b",
+    "created": "2024-08-13T14:51:23.700465Z",
+    "modified": "2024-08-13T14:51:23.700468Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--7830cfcf-b268-4ac0-a69e-73c6affbae9a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "RATANKBA",
+            "description": "Trend Micro. (2017, February 27). RATANKBA: Delving into Large-scale Watering Holes against Enterprises. Retrieved May 22, 2018.",
+            "url": "https://www.trendmicro.com/en_us/research/17/b/ratankba-watering-holes-against-enterprises.html"
+        },
+        {
+            "source_name": "Google TAG Lazarus Jan 2021",
+            "url": "https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/",
+            "description": "Weidemann, A. (2021, January 25). New campaign targeting security researchers. Retrieved December 20, 2021."
+        }
+    ],
+    "description": "[Lazarus Group](https://attack.mitre.org/groups/G0032) delivered [RATANKBA](https://attack.mitre.org/software/S0241) and other malicious code to victims via a compromised legitimate website.(Citation: RATANKBA)(Citation: Google TAG Lazarus Jan 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

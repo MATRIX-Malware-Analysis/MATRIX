@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--95327801-3e63-4db2-9c03-5c8c5610f40c",
+    "created": "2024-08-13T14:51:22.603117Z",
+    "modified": "2024-08-13T14:51:22.603120Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--5540f38a-106f-474c-b469-5c54de65a394",
+    "target_ref": "malware-behavior--4eb28bed-d11a-4641-9863-c2ac017d910a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "def_ev_win_event_logging",
+            "url": "https://www.hackingarticles.in/defense-evasion-windows-event-logging-t1562-002/",
+            "description": "Chandel, R. (2021, April 22). Defense Evasion: Windows Event Logging (T1562.002). Retrieved September 14, 2021."
+        }
+    ],
+    "description": "Ensure proper Registry permissions are in place to prevent adversaries from disabling or interfering logging. The addition of the MiniNT registry key disables Event Viewer.(Citation: def_ev_win_event_logging)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

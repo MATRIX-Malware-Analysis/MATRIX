@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d6184166-0a5d-4611-9e6c-cddbd3bcee25",
+    "created": "2024-08-13T14:51:22.285945Z",
+    "modified": "2024-08-13T14:51:22.285948Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--005cc321-08ce-4d17-b1ea-cb5275926520",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "crowdstrike bpf socket filters",
+            "description": "Jamie Harries. (2022, May 25). Hunting a Global Telecommunications Threat: DecisiveArchitect and Its Custom Implant JustForFun. Retrieved October 18, 2022.",
+            "url": "https://www.crowdstrike.com/blog/how-to-hunt-for-decisivearchitect-and-justforfun-implant/"
+        }
+    ],
+    "description": "Identify running processes with raw sockets. Ensure processes listed have a need for an open raw socket and are in accordance with enterprise policy.(Citation: crowdstrike bpf socket filters)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

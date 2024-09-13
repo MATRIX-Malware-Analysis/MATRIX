@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cc5e600b-2e85-4a3f-a222-5c9c911fe49b",
+    "created": "2024-08-13T14:51:22.397731Z",
+    "modified": "2024-08-13T14:51:22.397733Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--cf272bc8-9baa-4bda-8901-037f35863567",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor network data for uncommon data flows. Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services.\n\nAfter compromising an initial machine, adversaries commonly attempt to laterally move across the network. The first step to attempt the [Lateral Movement](https://attack.mitre.org/tactics/TA0008) often involves conducting host identification, port and service scans on the internal network via the compromised machine using tools such as Nmap, Cobalt Strike, etc.\n\nNote: It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services. This can be detected using the following query\n\nAnalytic 1 - Identifying Port Scanning Activity\n\n<code>sourcetype='firewall_logs' dest_ip='internal_subnet' | stats dc(dest_port) as pcount by src_ip | where pcount >5</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

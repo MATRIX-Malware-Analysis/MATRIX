@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6c315531-ab78-4d6f-9463-f56d747cea97",
+    "created": "2024-08-13T14:48:40.725214Z",
+    "modified": "2024-08-13T14:48:40.725219Z",
+    "relationship_type": "uses",
+    "description": "The VPNFilter packet sniffer looks for basic authentication as well as monitors ICS traffic, and is specific to the TP-LINK R600-VPN. The malware uses a raw socket to look for connections to a pre-specified IP address, only looking at TCP packets that are 150 bytes or larger. Packets that are not on port 502, are scanned for BasicAuth, and that information is logged. This may have allowed credential harvesting from communications between devices accessing a modbus-enabled HMI. [1] [2]",
+    "source_ref": "malware--1fbb6062-b646-4250-8714-54517a21394c",
+    "target_ref": "malware-behavior--27d5bcf2-4a3b-4dee-8ff7-03a11738ffa7",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

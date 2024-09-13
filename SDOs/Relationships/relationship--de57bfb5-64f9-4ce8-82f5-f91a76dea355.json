@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--de57bfb5-64f9-4ce8-82f5-f91a76dea355",
+    "created": "2024-08-13T14:51:23.433196Z",
+    "modified": "2024-08-13T14:51:23.433198Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--efd9a4f2-14d8-4996-ab8c-338f11d99975",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for plist file modification, especially if immediately followed by other suspicious events such as code execution from <code>\\~/Library/Scripts</code> or <code>\\~/Library/Preferences</code>. Also, monitor for significant changes to any path pointers in a modified plist.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

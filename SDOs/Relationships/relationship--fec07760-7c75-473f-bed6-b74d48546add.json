@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--fec07760-7c75-473f-bed6-b74d48546add",
+    "created": "2024-08-13T14:51:21.901951Z",
+    "modified": "2024-08-13T14:51:21.901953Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--813d3176-99f4-4e78-8a9a-c041bd71cffd",
+    "target_ref": "malware-behavior--723e3a2b-ca0d-4daa-ada8-82ea35d3733a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Malware Archaeology PowerShell Cheat Sheet",
+            "description": "Malware Archaeology. (2016, June). WINDOWS POWERSHELL LOGGING CHEAT SHEET - Win 7/Win 2008 or later. Retrieved June 24, 2016.",
+            "url": "http://www.malwarearchaeology.com/s/Windows-PowerShell-Logging-Cheat-Sheet-ver-June-2016-v2.pdf"
+        }
+    ],
+    "description": "Locations where <code>profile.ps1</code> can be stored should be monitored for new profiles. (Citation: Malware Archaeology PowerShell Cheat Sheet) Example profile locations include:\n* <code>$PsHome\\Profile.ps1</code>\n* <code>$PsHome\\Microsoft.{HostProgram}_profile.ps1</code>\n* <code>$Home\\My Documents\\PowerShell\\Profile.ps1</code>\n* <code>$Home\\My Documents\\PowerShell\\Microsoft.{HostProgram}_profile.ps1</code>",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

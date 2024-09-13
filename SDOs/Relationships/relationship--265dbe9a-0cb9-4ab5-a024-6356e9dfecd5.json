@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--265dbe9a-0cb9-4ab5-a024-6356e9dfecd5",
+    "created": "2024-08-13T14:51:22.474331Z",
+    "modified": "2024-08-13T14:51:22.474334Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--c1a452f3-6499-4c12-b7e9-a6a0a102af76",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "BlackHat Process Doppelg\u00e4nging Dec 2017",
+            "description": "Liberman, T. & Kogan, E. (2017, December 7). Lost in Transaction: Process Doppelg\u00e4nging. Retrieved December 20, 2017.",
+            "url": "https://www.blackhat.com/docs/eu-17/materials/eu-17-Liberman-Lost-In-Transaction-Process-Doppelganging.pdf"
+        },
+        {
+            "source_name": "hasherezade Process Doppelg\u00e4nging Dec 2017",
+            "description": "hasherezade. (2017, December 18). Process Doppelg\u00e4nging \u2013 a new way to impersonate a process. Retrieved December 20, 2017.",
+            "url": "https://hshrzd.wordpress.com/2017/12/18/process-doppelganging-a-new-way-to-impersonate-a-process/"
+        }
+    ],
+    "description": "Monitor and analyze calls to <code>CreateTransaction</code>, <code>CreateFileTransacted</code>, <code>RollbackTransaction</code>, and other rarely used functions indicative of TxF activity. Process Doppelg\u00e4nging also invokes an outdated and undocumented implementation of the Windows process loader via calls to <code>NtCreateProcessEx</code> and <code>NtCreateThreadEx</code> as well as API calls used to modify memory within another process, such as <code>WriteProcessMemory</code>. (Citation: BlackHat Process Doppelg\u00e4nging Dec 2017) (Citation: hasherezade Process Doppelg\u00e4nging Dec 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

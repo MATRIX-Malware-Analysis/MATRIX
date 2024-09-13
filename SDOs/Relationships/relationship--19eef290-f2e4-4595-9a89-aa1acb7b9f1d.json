@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--19eef290-f2e4-4595-9a89-aa1acb7b9f1d",
+    "created": "2024-08-13T14:51:21.862960Z",
+    "modified": "2024-08-13T14:51:21.862962Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--9266c742-f60a-4b34-b9e4-e163397823e0",
+    "target_ref": "malware-behavior--69b8fd78-40e8-4600-ae4d-662c9d7afdb3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "description": "Symantec DeepSight Adversary Intelligence Team. (2018, December 10). Seedworm: Group Compromises Government Agencies, Oil & Gas, NGOs, Telecoms, and IT Firms. Retrieved December 14, 2018.",
+            "url": "https://www.symantec.com/blogs/threat-intelligence/seedworm-espionage-group",
+            "source_name": "Symantec MuddyWater Dec 2018"
+        },
+        {
+            "source_name": "Reaqta MuddyWater November 2017",
+            "url": "https://reaqta.com/2017/11/muddywater-apt-targeting-middle-east/",
+            "description": "Reaqta. (2017, November 22). A dive into MuddyWater APT targeting Middle-East. Retrieved May 18, 2020."
+        },
+        {
+            "source_name": "Trend Micro Muddy Water March 2021",
+            "url": "https://www.trendmicro.com/en_us/research/21/c/earth-vetala---muddywater-continues-to-target-organizations-in-t.html",
+            "description": "Peretz, A. and Theck, E. (2021, March 5). Earth Vetala \u2013 MuddyWater Continues to Target Organizations in the Middle East. Retrieved March 18, 2021."
+        }
+    ],
+    "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has controlled [POWERSTATS](https://attack.mitre.org/software/S0223) from behind a proxy network to obfuscate the C2 location.(Citation: Symantec MuddyWater Dec 2018) [MuddyWater](https://attack.mitre.org/groups/G0069) has used a series of compromised websites that victims connected to randomly to relay information to command and control (C2).(Citation: Reaqta MuddyWater November 2017)(Citation: Trend Micro Muddy Water March 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

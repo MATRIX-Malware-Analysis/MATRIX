@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f2069905-275d-4147-a405-f81c4df339ee",
+    "created": "2024-08-13T14:51:23.446338Z",
+    "modified": "2024-08-13T14:51:23.446340Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--f44731de-ea9f-406d-9b83-30ecbb9b4392",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may abuse the Windows service control manager to execute malicious commands or payloads.\n\nEvents 4688 (Microsoft Windows Security Auditing) and 1 (Microsoft Windows Sysmon) provide context of Windows processes creation that can be used to implement this detection.\n\nThis detection is based on uncommon process and parent process relationships. Service Control Manager spawning command shell is a good starting point. Add more suspicious relationships based on the reality of your network environment.\n\nIn order to reduce false positives, you can also filter the CommandLine event field using parameters such as /c which carries out the command specified by the parent process.\n\nAnalytic 1 - Service Execution\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") | WHERE Image LIKE \"*services.exe\" AND Image LIKE \"*cmd.exe\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

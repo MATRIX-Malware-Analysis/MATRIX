@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--de24d51c-b4ec-4945-bdd4-c06c787f2de8",
+    "created": "2024-08-13T14:51:22.783868Z",
+    "modified": "2024-08-13T14:51:22.783870Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--e74de37c-a829-446c-937d-56a44f0e9306",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Enable the UpdateFolderPermissions action for all logon types. The mailbox audit log will forward folder permission modification events to the Unified Audit Log. Create rules to alert on ModifyFolderPermissions operations where the Anonymous or Default user is assigned permissions other than None.\r\n\r\nA larger than normal volume of emails sent from an account and similar phishing emails sent from\u202freal accounts within a network may be a sign that an account was compromised and attempts to leverage access with modified email permissions is occurring.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--329bd0f3-8777-4b50-a260-428329e9378c",
+    "created": "2024-08-13T14:51:23.347858Z",
+    "modified": "2024-08-13T14:51:23.347861Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43fa6c3e-3139-43da-9bd2-32a4bfe9da4b",
+    "target_ref": "malware-behavior--1f9c2bae-b441-4f66-a8af-b65946ee72f2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Sygnia Golden SAML",
+            "url": "https://www.sygnia.co/golden-saml-advisory",
+            "description": "Sygnia. (2020, December). Detection and Hunting of Golden SAML Attack. Retrieved January 6, 2021."
+        }
+    ],
+    "description": "Monitor for the use of access tokens to access services such as email that were created using SAML tokens which do not have corresponding 1202 events (i.e. \u201cThe Federation Service validated a new credential\u201d) in the domain.(Citation: Sygnia Golden SAML)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

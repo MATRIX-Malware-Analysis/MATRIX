@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1dbfdddb-6492-45ba-b159-5eaa2dd66b13",
+    "created": "2024-08-13T14:51:21.966977Z",
+    "modified": "2024-08-13T14:51:21.966979Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9810d467-1323-4f36-a113-c3c24166c3c0",
+    "target_ref": "malware-behavior--ed7135aa-c94a-404d-9f3b-4274b4bd9546",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "GitHub PSPKIAudit",
+            "description": "HarmJ0y et al. (2021, June 16). PSPKIAudit. Retrieved August 2, 2022.",
+            "url": "https://github.com/GhostPack/PSPKIAudit"
+        },
+        {
+            "source_name": "GitHub Certify",
+            "description": "HarmJ0y et al. (2021, June 9). Certify. Retrieved August 4, 2022.",
+            "url": "https://github.com/GhostPack/Certify/"
+        },
+        {
+            "source_name": "SpecterOps Certified Pre Owned",
+            "description": "Schroeder, W. & Christensen, L. (2021, June 22). Certified Pre-Owned - Abusing Active Directory Certificate Services. Retrieved August 2, 2022.",
+            "url": "https://web.archive.org/web/20220818094600/https://specterops.io/assets/resources/Certified_Pre-Owned.pdf"
+        }
+    ],
+    "description": "Check and remediate unneeded existing authentication certificates as well as common abusable misconfigurations of CA settings and permissions, such as AD CS certificate enrollment permissions and published overly permissive certificate templates (which define available settings for created certificates). For example, available AD CS certificate templates can be checked via the Certificate Authority MMC snap-in (`certsrv.msc`). `certutil.exe` can also be used to examine various information within an AD CS CA database.(Citation: SpecterOps Certified Pre Owned)(Citation: GitHub PSPKIAudit)(Citation: GitHub Certify)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

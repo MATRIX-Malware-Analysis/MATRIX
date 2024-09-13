@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7428d2c8-dede-46ab-8238-64ef3049f975",
+    "created": "2024-08-13T14:51:21.995350Z",
+    "modified": "2024-08-13T14:51:21.995352Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--b8cfed42-6a8a-4989-ad72-541af74475ec",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Graeber 2014",
+            "description": "Graeber, M. (2014, October). Analysis of Malicious Security Support Provider DLLs. Retrieved March 1, 2017.",
+            "url": "http://docplayer.net/20839173-Analysis-of-malicious-security-support-provider-dlls.html"
+        },
+        {
+            "source_name": "Microsoft Configure LSA",
+            "description": "Microsoft. (2013, July 31). Configuring Additional LSA Protection. Retrieved June 24, 2015.",
+            "url": "https://technet.microsoft.com/en-us/library/dn408187.aspx"
+        }
+    ],
+    "description": "Monitor the LSA process for DLL loads. Windows 8.1 and Windows Server 2012 R2 may generate events when unsigned DLLs try to load into the LSA by setting the Registry key <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\LSASS.exe</code> with AuditLevel = 8. (Citation: Graeber 2014) (Citation: Microsoft Configure LSA)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

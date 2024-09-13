@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ab7b2e83-cf2e-4f18-a822-487d935ad776",
+    "created": "2024-08-13T14:51:23.515003Z",
+    "modified": "2024-08-13T14:51:23.515006Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--d1fcf083-a721-4223-aedf-bf8960798d62",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly executed processes that may abuse the Windows command shell for execution.\n\nNote: Try an Analytic by creating a baseline of parent processes of [cmd](https://attack.mitre.org/software/S0106) seen over the last 30 days and a list of parent processes of [cmd](https://attack.mitre.org/software/S0106) seen today. Parent processes in the baseline are removed from the set of parent processes seen today, leaving a list of new parent processes. This analytic attempts to identify suspicious programs spawning [cmd](https://attack.mitre.org/software/S0106) by looking for programs that do not normally create [cmd](https://attack.mitre.org/software/S0106).\u00a0 It is very common for some programs to spawn [cmd](https://attack.mitre.org/software/S0106) as a subprocess, for example to run batch files or Windows commands. However, many processes don\u2019t routinely launch a command prompt - e.g., Microsoft Outlook. A command prompt being launched from a process that normally doesn\u2019t launch command prompts could be the result of malicious code being injected into that process, or of an attacker replacing a legitimate program with a malicious one.\n\nAnalytic 1 - Unusual Command Execution\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") AND CommandLine=\u201c*cmd.exe*\u201d AND (CommandLine REGEXP \"./c.*\" OR CommandLine REGEXP \".*._ \\/k.*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

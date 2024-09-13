@@ -1,0 +1,37 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b07886b1-21cf-461d-9f02-531b4360afb4",
+    "created": "2024-08-13T14:51:22.657618Z",
+    "modified": "2024-08-13T14:51:22.657620Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--ea016b56-ae0e-47fe-967a-cc0ad51af67f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "GNU Acct",
+            "url": "https://www.gnu.org/software/acct/",
+            "description": "GNU. (2010, February 5). The GNU Accounting Utilities. Retrieved December 20, 2017."
+        },
+        {
+            "source_name": "RHEL auditd",
+            "url": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/chap-system_auditing",
+            "description": "Jahoda, M. et al.. (2017, March 14). redhat Security Guide - Chapter 7 - System Auditing. Retrieved December 20, 2017."
+        },
+        {
+            "source_name": "ArtOfMemoryForensics",
+            "description": "Ligh, M.H. et al.. (2014, July). The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory. Retrieved December 20, 2017."
+        },
+        {
+            "source_name": "Chokepoint preload rootkits",
+            "url": "http://www.chokepoint.net/2014/02/detecting-userland-preload-rootkits.html",
+            "description": "stderr. (2014, February 14). Detecting Userland Preload Rootkits. Retrieved December 20, 2017."
+        }
+    ],
+    "description": "Monitoring for Linux specific calls such as the ptrace system call should not generate large amounts of data due to their specialized nature, and can be a very effective method to detect some of the common process injection methods.(Citation: ArtOfMemoryForensics) (Citation: GNU Acct) (Citation: RHEL auditd) (Citation: Chokepoint preload rootkits)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

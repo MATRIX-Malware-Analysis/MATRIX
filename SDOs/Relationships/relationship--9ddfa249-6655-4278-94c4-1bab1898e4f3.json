@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9ddfa249-6655-4278-94c4-1bab1898e4f3",
+    "created": "2024-08-13T14:51:22.134116Z",
+    "modified": "2024-08-13T14:51:22.134118Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--52335bae-28dd-4f20-a543-7d6afac9e543",
+    "target_ref": "malware-behavior--ad179030-4c07-4e57-b204-a7e8ad70c6d7",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Bitdefender FIN8 July 2021",
+            "description": "Martin Zugec. (2021, July 27). Deep Dive Into a FIN8 Attack - A Forensic Investigation. Retrieved September 1, 2021.",
+            "url": "https://businessinsights.bitdefender.com/deep-dive-into-a-fin8-attack-a-forensic-investigation"
+        }
+    ],
+    "description": "[FIN8](https://attack.mitre.org/groups/G0061) has retrieved a list of trusted domains by using <code>nltest.exe /domain_trusts</code>.(Citation: Bitdefender FIN8 July 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

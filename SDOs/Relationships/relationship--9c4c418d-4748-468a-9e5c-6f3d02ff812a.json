@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9c4c418d-4748-468a-9e5c-6f3d02ff812a",
+    "created": "2024-08-13T14:51:21.801368Z",
+    "modified": "2024-08-13T14:51:21.801370Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--24769ab5-14bd-4f4e-a752-cfb185da53ee",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Okta Cross-Tenant Impersonation",
+            "description": "Okta Defensive Cyber Operations. (2023, August 31). Cross-Tenant Impersonation: Prevention and Detection. Retrieved March 4, 2024.",
+            "url": "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection"
+        }
+    ],
+    "description": "Monitor changes to cloud-based directory services and identity tenants, especially regarding the addition of new federated identity providers. In Okta environments, the event `system.idp.lifecycle.create` will trigger on the creation of an identity provider, while sign-ins from a third-party identity provider will create the event `user.authentication.auth_via_IDP.`(Citation: Okta Cross-Tenant Impersonation)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e5fadc1f-58ce-4c21-9964-3807594b277d",
+    "created": "2024-08-13T14:51:23.639889Z",
+    "modified": "2024-08-13T14:51:23.639891Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--8a62000f-021f-4220-9716-2e76d9627b69",
+    "target_ref": "malware-behavior--f9cc4d06-775f-4ee1-b401-4e2cc0da30ba",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MSTIC NOBELIUM Mar 2021",
+            "description": "Nafisi, R., Lelli, A. (2021, March 4). GoldMax, GoldFinder, and Sibot: Analyzing NOBELIUM\u2019s layered persistence. Retrieved March 8, 2021.",
+            "url": "https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/"
+        },
+        {
+            "source_name": "FireEye SUNSHUTTLE Mar 2021",
+            "description": "Smith, L., Leathery, J., Read, B. (2021, March 4). New SUNSHUTTLE Second-Stage Backdoor Uncovered Targeting U.S.-Based Entity; Possible Connection to UNC2452. Retrieved March 12, 2021.",
+            "url": "https://www.fireeye.com/blog/threat-research/2021/03/sunshuttle-second-stage-backdoor-targeting-us-based-entity.html"
+        }
+    ],
+    "description": "For the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024), [APT29](https://attack.mitre.org/groups/G0016) acquired C2 domains, sometimes through resellers.(Citation: MSTIC NOBELIUM Mar 2021)(Citation: FireEye SUNSHUTTLE Mar 2021)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

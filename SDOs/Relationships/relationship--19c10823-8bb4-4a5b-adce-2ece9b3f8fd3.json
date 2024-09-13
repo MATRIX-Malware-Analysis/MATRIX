@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--19c10823-8bb4-4a5b-adce-2ece9b3f8fd3",
+    "created": "2024-08-13T14:51:22.943750Z",
+    "modified": "2024-08-13T14:51:22.943752Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--f9e9365a-9ca2-4d9c-8e7c-050d73d1101a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "NetSPI Startup Stored Procedures",
+            "description": "Sutherland, S. (2016, March 7). Maintaining Persistence via SQL Server \u2013 Part 1: Startup Stored Procedures. Retrieved July 8, 2019.",
+            "url": "https://blog.netspi.com/sql-server-persistence-part-1-startup-stored-procedures/"
+        }
+    ],
+    "description": "Monitor for third-party application logging, messaging, and/or other artifacts that may abuse SQL stored procedures to establish persistent access to systems. On a MSSQL Server, consider monitoring for xp_cmdshell usage.(Citation: NetSPI Startup Stored Procedures) Consider enabling audit features that can log malicious startup activities.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

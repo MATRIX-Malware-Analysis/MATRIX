@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bf9cdd95-0e6d-42ac-86af-08ef4ccdf67b",
+    "created": "2024-08-13T14:51:23.331710Z",
+    "modified": "2024-08-13T14:51:23.331712Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--c9609995-3391-411c-be02-ac5f1c463f2b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft BITS",
+            "description": "Microsoft. (n.d.). Background Intelligent Transfer Service. Retrieved January 12, 2018.",
+            "url": "https://msdn.microsoft.com/library/windows/desktop/bb968799.aspx"
+        },
+        {
+            "source_name": "Elastic - Hunting for Persistence Part 1",
+            "description": "French, D., Murphy, B. (2020, March 24). Adversary tradecraft 101: Hunting for persistence using Elastic Security (Part 1). Retrieved December 21, 2020.",
+            "url": "https://www.elastic.co/blog/hunting-for-persistence-using-elastic-security-part-1"
+        },
+        {
+            "source_name": "CTU BITS Malware June 2016",
+            "description": "Counter Threat Unit Research Team. (2016, June 6). Malware Lingers with BITS. Retrieved January 12, 2018.",
+            "url": "https://www.secureworks.com/blog/malware-lingers-with-bits"
+        }
+    ],
+    "description": "Monitor executed commands and arguments from the BITSAdmin tool (especially the \u2018Transfer\u2019, 'Create', 'AddFile', 'SetNotifyFlags', 'SetNotifyCmdLine', 'SetMinRetryDelay', 'SetCustomHeaders', and 'Resume' command options)(Citation: Microsoft BITS) Admin logs, PowerShell logs, and the Windows Event log for BITS activity.(Citation: Elastic - Hunting for Persistence Part 1) Also consider investigating more detailed information about jobs by parsing the BITS job database.(Citation: CTU BITS Malware June 2016)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

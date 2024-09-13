@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--8aae0ad8-5908-4159-a2d0-e6feca27d1e4",
+    "created": "2024-08-13T14:51:22.169662Z",
+    "modified": "2024-08-13T14:51:22.169665Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--f680a1f1-6d91-4cb5-9d83-caaba092a3e5",
+    "target_ref": "malware-behavior--bf1b6176-597c-4600-bfcd-ac989670f96b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Symantec Waterbug Jun 2019",
+            "url": "https://www.symantec.com/blogs/threat-intelligence/waterbug-espionage-governments",
+            "description": "Symantec DeepSight Adversary Intelligence Team. (2019, June 20). Waterbug: Espionage Group Rolls Out Brand-New Toolset in Attacks Against Governments. Retrieved July 8, 2019."
+        },
+        {
+            "source_name": "ESET ComRAT May 2020",
+            "url": "https://www.welivesecurity.com/wp-content/uploads/2020/05/ESET_Turla_ComRAT.pdf",
+            "description": "Faou, M. (2020, May). From Agent.btz to ComRAT v4: A ten-year journey. Retrieved June 15, 2020."
+        }
+    ],
+    "description": "[Turla](https://attack.mitre.org/groups/G0010) has used WebDAV to upload stolen USB files to a cloud drive.(Citation: Symantec Waterbug Jun 2019) [Turla](https://attack.mitre.org/groups/G0010) has also exfiltrated stolen files to OneDrive and 4shared.(Citation: ESET ComRAT May 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

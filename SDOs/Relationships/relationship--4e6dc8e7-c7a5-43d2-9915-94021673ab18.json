@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4e6dc8e7-c7a5-43d2-9915-94021673ab18",
+    "created": "2024-08-13T14:51:23.632030Z",
+    "modified": "2024-08-13T14:51:23.632033Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6100cd17-68bb-4586-b169-475fa3f2bffc",
+    "target_ref": "malware-behavior--01c15da3-9f86-4d0a-aab5-fcee81a9c282",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Github PowerSploit Ninjacopy",
+            "url": "https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-NinjaCopy.ps1",
+            "description": "Bialek, J. (2015, December 16). Invoke-NinjaCopy.ps1. Retrieved June 2, 2016."
+        }
+    ],
+    "description": "Monitor handle opens on volumes that are made by processes to determine when they may be directly collecting data from logical drives. (Citation: Github PowerSploit Ninjacopy)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

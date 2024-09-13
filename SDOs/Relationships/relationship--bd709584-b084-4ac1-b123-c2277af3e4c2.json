@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bd709584-b084-4ac1-b123-c2277af3e4c2",
+    "created": "2024-08-13T14:51:23.011740Z",
+    "modified": "2024-08-13T14:51:23.011742Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--efb47328-020d-4049-b6e8-042bde5247c4",
+    "target_ref": "malware-behavior--768dce68-8d0d-477a-b01d-0eea98b963a1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for anomalous Kerberos activity, such as malformed or blank fields in Windows logon/logoff events (Event ID 4769, 4768), RC4 encryption within TGTs, and TGS requests without preceding TGT requests. Monitor the lifetime of TGT tickets for values that differ from the default domain duration. Monitor for indications of Pass the Ticket being used to move laterally.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

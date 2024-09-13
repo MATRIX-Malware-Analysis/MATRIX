@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1db87064-9782-44fe-8dbd-c0bd41673e39",
+    "created": "2024-08-13T14:51:23.386210Z",
+    "modified": "2024-08-13T14:51:23.386212Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1c3659fd-9f63-406b-9694-579fc1ca1c42",
+    "target_ref": "malware-behavior--59ff91cd-1430-4075-8563-e6f15f4f9ff5",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "dhcp_serv_op_events",
+            "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800668(v=ws.11)",
+            "description": "Microsoft. (2006, August 31).  DHCP Server Operational Events. Retrieved March 7, 2022."
+        },
+        {
+            "source_name": "solution_monitor_dhcp_scopes",
+            "url": "https://lockstepgroup.com/blog/monitor-dhcp-scopes-and-detect-man-in-the-middle-attacks/",
+            "description": "Shoemaker, E. (2015, December 31). Solution: Monitor DHCP Scopes and Detect Man-in-the-Middle Attacks with PRTG and PowerShell. Retrieved March 7, 2022."
+        }
+    ],
+    "description": "Monitor Windows logs (ex: EIDs 1341, 1342, 1020, and 1063) for changes to DHCP settings. These may also highlight DHCP issues such as when IP allocations are low or have run out.(Citation: dhcp_serv_op_events)(Citation: solution_monitor_dhcp_scopes)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

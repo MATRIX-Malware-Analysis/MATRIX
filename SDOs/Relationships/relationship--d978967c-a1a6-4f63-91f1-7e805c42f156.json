@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d978967c-a1a6-4f63-91f1-7e805c42f156",
+    "created": "2024-08-13T14:51:22.768061Z",
+    "modified": "2024-08-13T14:51:22.768063Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--b3c2e5de-0941-4b57-ba61-af029eb5517a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed network connections that may attempt to exfiltrate data over a different network medium than the command and control channel. Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious.\n\nNote: Network Analysis frameworks such as Zeek can be used to capture, decode, and alert on TCP network connection creation. The below analytic is using an event ID from OSQuery. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

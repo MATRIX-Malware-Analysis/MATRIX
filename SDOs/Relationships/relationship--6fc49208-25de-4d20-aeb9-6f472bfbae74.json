@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6fc49208-25de-4d20-aeb9-6f472bfbae74",
+    "created": "2024-08-13T14:51:22.852596Z",
+    "modified": "2024-08-13T14:51:22.852598Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--f6e0ab41-1bf0-4bcc-9ea1-798678b2704e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor processes and command-line arguments for actions that could be taken to change, conceal, and/or delete information in the Registry. (i.e. reg.exe, regedit.exe). The analytic is oriented around detecting invocations of [Reg](https://attack.mitre.org/software/S0075) where the parent executable is an instance of cmd.exe that wasn\u2019t spawned by explorer.exe. The built-in utility\u00a0reg.exe provides a\u00a0command-line interface to the registry, so that queries and modifications can be performed from a shell, such as\u00a0cmd.exe. When a user is responsible for these actions, the parent of\u00a0cmd.exewill typically be\u00a0explorer.exe. Occasionally, power users and administrators write scripts that do this behavior as well, but likely from a different process tree. These background scripts must be baselined so they can be tuned out accordingly. Analytic Event IDs are for Sysmon (Event ID 1 - process create) and Windows Security Log (Event ID 4688 - a new process has been created). \n\nAnalytic 1 - Registry Edit with Modification of Userinit, Shell or Notify\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") \n((CommandLine=\"*reg*\" CommandLine=\"*add*\" CommandLine=\"*/d*\") OR ((CommandLine=\"*Set-ItemProperty*\" OR CommandLine=\"*New-ItemProperty*\") AND CommandLine=\"*-value*\")) \nCommandLine=\"*\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Winlogon*\" \n(CommandLine=\"*Userinit*\" OR CommandLine=\"*Shell*\" OR CommandLine=\"*Notify*\")</code>\n\nAnalytic 2 - Modification of Default Startup Folder in the Registry Key 'Common Startup'\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") \n(CommandLine=\"*reg*\" AND CommandLine=\"*add*\" AND CommandLine=\"*/d*\") OR \n(CommandLine=\"*Set-ItemProperty*\" AND CommandLine=\"*-value*\") \nCommandLine=\"*Common Startup*\"</code>\n\nAnalytic 3 - Registry Edit with Creation of SafeDllSearchMode Key Set to 0\n\n<code>(source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\")((CommandLine=\"*reg*\" CommandLine=\"*add*\" CommandLine=\"*/d*\") OR (CommandLine=\"*Set-ItemProperty*\" CommandLine=\"*-value*\")) (CommandLine=\"*00000000*\" OR CommandLine=\"*0*\") CommandLine=\"*SafeDllSearchMode*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

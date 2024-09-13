@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ba6e591e-f9ee-4c66-801e-ab8d10960de5",
+    "created": "2024-08-13T14:51:22.013800Z",
+    "modified": "2024-08-13T14:51:22.013802Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--c615231b-f253-4f58-9d47-d5b4cbdb6839",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Tripwire AppUNBlocker",
+            "description": "Smith, T. (2016, October 27). AppUNBlocker: Bypassing AppLocker. Retrieved December 19, 2017.",
+            "url": "https://www.tripwire.com/state-of-security/off-topic/appunblocker-bypassing-applocker/"
+        }
+    ],
+    "description": "Monitoring changes to the Windows Registry may reveal malicious root certificate installation. Installed root certificates are located in the Registry under\u00a0<code>HKLM\\SOFTWARE\\Microsoft\\EnterpriseCertificates\\Root\\Certificates\\</code>\u00a0and\u00a0</code>[HKLM or HKCU]\\Software[\\Policies\\]\\Microsoft\\SystemCertificates\\Root\\Certificates\\</code>. There are a subset of root certificates that are consistent across Windows systems and can be used for comparison:\u00a0(Citation: Tripwire AppUNBlocker)\n* 18F7C1FCC3090203FD5BAA2F861A754976C8DD25\n* 245C97DF7514E7CF2DF8BE72AE957B9E04741E85\n* 3B1EFD3A66EA28B16697394703A72CA340A05BD5\n* 7F88CD7223F3C813818C994614A89C99FA3B5247\n* 8F43288AD272F3103B6FB1428485EA3014C0BCFE\n* A43489159A520F0D93D032CCAF37E7FE20A8B419\n* BE36A4562FB2EE05DBB3D32323ADF445084ED656\n* CDD4EEAE6000AC7F40C3802C171E30148030C072",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

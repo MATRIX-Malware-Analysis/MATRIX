@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--06c49bb0-1727-461a-857a-1083d6f79ea9",
+    "created": "2024-08-13T14:51:23.649468Z",
+    "modified": "2024-08-13T14:51:23.649471Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--8a2f40cf-8325-47f9-96e4-b1ca4c7389bd",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Crowdstrike AWS User Federation Persistence",
+            "description": " Vaishnav Murthy and Joel Eng. (2023, January 30). How Adversaries Can Persist with AWS User Federation. Retrieved March 10, 2023.",
+            "url": "https://www.crowdstrike.com/blog/how-adversaries-persist-with-aws-user-federation/"
+        }
+    ],
+    "description": "Ensure that low-privileged user accounts do not have permission to add access keys to accounts. In AWS environments, prohibit users from calling the `sts:GetFederationToken` API unless explicitly required.(Citation: Crowdstrike AWS User Federation Persistence)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

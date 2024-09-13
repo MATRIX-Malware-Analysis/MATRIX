@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--aa19bbcc-41f7-4fe2-85c8-35dd1a12175e",
+    "created": "2024-08-13T14:51:23.460680Z",
+    "modified": "2024-08-13T14:51:23.460683Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "BlackHat API Packers",
+            "url": "https://www.blackhat.com/docs/us-15/materials/us-15-Choi-API-Deobfuscator-Resolving-Obfuscated-API-Functions-In-Modern-Packers.pdf",
+            "description": "Choi, S. (2015, August 6). Obfuscated API Functions in Modern Packers. Retrieved August 22, 2022."
+        }
+    ],
+    "description": "Monitoring module loads, especially those not explicitly included in import tables, may highlight obfuscated code functionality. Dynamic malware analysis may also expose signs of code obfuscation.(Citation: BlackHat API Packers)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

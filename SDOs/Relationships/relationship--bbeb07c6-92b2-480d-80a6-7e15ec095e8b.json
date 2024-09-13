@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bbeb07c6-92b2-480d-80a6-7e15ec095e8b",
+    "created": "2024-08-13T14:51:21.793286Z",
+    "modified": "2024-08-13T14:51:21.793289Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--f3dd7773-a919-47a5-b52b-5bc20850a06d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft LogonUser",
+            "description": "Microsoft TechNet. (n.d.). Retrieved April 25, 2017.",
+            "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa378184(v=vs.85).aspx"
+        },
+        {
+            "source_name": "Microsoft DuplicateTokenEx",
+            "description": "Microsoft TechNet. (n.d.). Retrieved April 25, 2017.",
+            "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa446617(v=vs.85).aspx"
+        },
+        {
+            "source_name": "Microsoft ImpersonateLoggedOnUser",
+            "description": "Microsoft TechNet. (n.d.). Retrieved April 25, 2017.",
+            "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa378612(v=vs.85).aspx"
+        }
+    ],
+    "description": "Monitor for API calls, loaded by a payload, for token manipulation only through careful analysis of user network activity, examination of running processes, and correlation with other endpoint and network behavior. There are many Windows API calls a payload can take advantage of to manipulate access tokens (e.g., <code>LogonUser</code> (Citation: Microsoft LogonUser), <code>DuplicateTokenEx</code>(Citation: Microsoft DuplicateTokenEx), and <code>ImpersonateLoggedOnUser</code>(Citation: Microsoft ImpersonateLoggedOnUser)). Please see the referenced Windows API pages for more information.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

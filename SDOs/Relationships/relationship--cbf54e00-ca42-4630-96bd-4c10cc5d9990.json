@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cbf54e00-ca42-4630-96bd-4c10cc5d9990",
+    "created": "2024-08-13T14:48:38.753772Z",
+    "modified": "2024-08-13T14:48:38.753776Z",
+    "relationship_type": "uses",
+    "description": "If running with elevated privileges, OSX/Shlayer has used the spctl command to disable Gatekeeper protection for a downloaded file. OSX/Shlayer can also leverage system links pointing to bash scripts in the downloaded DMG file to bypass Gatekeeper, a flaw patched in macOS 11.3 and later versions. OSX/Shlayer has been Notarized by Apple, resulting in successful passing of additional Gatekeeper checks.[1][8][7]",
+    "source_ref": "malware--b25bf17f-6930-49e0-bef1-14d122a99b37",
+    "target_ref": "malware-behavior--1b4aa352-9998-4de8-b0df-579731476ac4",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

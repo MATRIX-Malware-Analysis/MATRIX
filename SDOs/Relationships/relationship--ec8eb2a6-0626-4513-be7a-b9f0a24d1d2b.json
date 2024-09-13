@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ec8eb2a6-0626-4513-be7a-b9f0a24d1d2b",
+    "created": "2024-08-13T14:51:21.795497Z",
+    "modified": "2024-08-13T14:51:21.795499Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for the loading of modules associated with VB languages (ex: vbscript.dll).\n\nNote: For Windows, Sysmon Event ID 7 (Image loaded) can be used to alert on the loading of DLL modules (e.g., vbscript.dll) associated with Visual Basic into processes. Due to the high frequency of image load operations, Event ID 7 can generate a large volume of events. Therefore, we recommend tuning the Sysmon configuration file to exclude common, benign image loads that may result in false positives. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

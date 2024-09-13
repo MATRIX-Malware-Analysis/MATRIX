@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--216dc68b-4b62-4904-bbee-21df704d9ccf",
+    "created": "2024-08-13T14:51:23.584726Z",
+    "modified": "2024-08-13T14:51:23.584728Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--2e1ccad2-4f4d-4410-a0bd-9d799ad43874",
+    "target_ref": "malware-behavior--3120b9fa-23b8-4500-ae73-09494f607b7d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Picus Labs Proc cump 2022",
+            "description": "Huseyin Can YUCEEL & Picus Labs. (2022, March 22). Retrieved March 31, 2023.",
+            "url": "https://www.picussecurity.com/resource/the-mitre-attck-t1003-os-credential-dumping-technique-and-its-adversary-use"
+        },
+        {
+            "source_name": "GitHub LaZagne Dec 2018",
+            "description": "Zanni, A. (n.d.). The LaZagne Project !!!. Retrieved December 14, 2018.",
+            "url": "https://github.com/AlessandroZ/LaZagne"
+        }
+    ],
+    "description": "[LaZagne](https://attack.mitre.org/software/S0349) can use the `<PID>/maps` and `<PID>/mem` files to identify regex patterns to dump cleartext passwords from the browser's process memory.(Citation: GitHub LaZagne Dec 2018)(Citation: Picus Labs Proc cump 2022)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

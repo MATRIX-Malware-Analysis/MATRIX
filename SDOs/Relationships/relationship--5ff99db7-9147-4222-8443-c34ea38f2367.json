@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5ff99db7-9147-4222-8443-c34ea38f2367",
+    "created": "2024-08-13T14:51:23.400790Z",
+    "modified": "2024-08-13T14:51:23.400792Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--f0c1a021-65ab-466d-82d8-83c3336618c2",
+    "target_ref": "malware-behavior--01c15da3-9f86-4d0a-aab5-fcee81a9c282",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MSTIC Octo Tempest Operations October 2023",
+            "description": "Microsoft. (2023, October 25). Octo Tempest crosses boundaries to facilitate extortion, encryption, and destruction. Retrieved March 18, 2024.",
+            "url": "https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/"
+        }
+    ],
+    "description": "[Scattered Spider](https://attack.mitre.org/groups/G1015) has created volume shadow copies of virtual domain controller disks to extract the `NTDS.dit` file.(Citation: MSTIC Octo Tempest Operations October 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

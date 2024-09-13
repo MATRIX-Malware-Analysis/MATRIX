@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--12bbc0a5-ef17-497b-bfea-26894e65d076",
+    "created": "2024-08-13T14:51:23.939434Z",
+    "modified": "2024-08-13T14:51:23.939436Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--1524f9c7-beb1-4a68-af16-2d11b9917e61",
+    "target_ref": "malware-behavior--e1f9cdd2-9511-4fca-90d7-f3e92cfdd0bf",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Triton-EENews-2017",
+            "description": "Blake Sobczak. (2019, March 7). The inside story of the world\u2019s most dangerous malware. Retrieved March 25, 2024.",
+            "url": "https://www.eenews.net/articles/the-inside-story-of-the-worlds-most-dangerous-malware/"
+        },
+        {
+            "source_name": "FireEye TRITON 2018",
+            "description": "Miller, S. Reese, E. (2018, June 7). A Totally Tubular Treatise on TRITON and TriStation. Retrieved January 6, 2021.",
+            "url": "https://www.fireeye.com/blog/threat-research/2018/06/totally-tubular-treatise-on-TRITON-and-tristation.html"
+        }
+    ],
+    "description": "In the [Triton Safety Instrumented System Attack](https://attack.mitre.org/campaigns/C0030), [TEMP.Veles](https://attack.mitre.org/groups/G0088) utilized remote desktop protocol (RDP) jump boxes, poorly configured OT firewalls (Citation: Triton-EENews-2017), along with other traditional malware backdoors, to move into the ICS environment.(Citation: FireEye TRITON 2018)(Citation: Triton-EENews-2017)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

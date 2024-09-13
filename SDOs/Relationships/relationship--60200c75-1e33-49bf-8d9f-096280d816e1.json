@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--60200c75-1e33-49bf-8d9f-096280d816e1",
+    "created": "2024-08-13T14:51:22.667494Z",
+    "modified": "2024-08-13T14:51:22.667496Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--3b90d9f7-70fe-4e90-91a2-617f1b78d991",
+    "target_ref": "malware-behavior--24769ab5-14bd-4f4e-a752-cfb185da53ee",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "AADInternals Documentation",
+            "description": "Dr. Nestori Syynimaa. (2018, October 25). AADInternals. Retrieved February 18, 2022.",
+            "url": "https://o365blog.com/aadinternals"
+        },
+        {
+            "source_name": "Azure AD Federation Vulnerability",
+            "description": "Dr. Nestori Syynimaa.. (2017, November 16). Security vulnerability in Azure AD & Office 365 identity federation. Retrieved February 1, 2022.",
+            "url": "https://o365blog.com/post/federation-vulnerability/"
+        }
+    ],
+    "description": "[AADInternals](https://attack.mitre.org/software/S0677) can create a backdoor by converting a domain to a federated domain which will be able to authenticate any user across the tenant. [AADInternals](https://attack.mitre.org/software/S0677) can also modify DesktopSSO information.(Citation: AADInternals Documentation)(Citation: Azure AD Federation Vulnerability)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

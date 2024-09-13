@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--aab62dab-9127-403a-b842-b4cede33c2de",
+    "created": "2024-08-13T14:51:22.019024Z",
+    "modified": "2024-08-13T14:51:22.019027Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9810d467-1323-4f36-a113-c3c24166c3c0",
+    "target_ref": "malware-behavior--438c967d-3996-4870-bfc2-3954752a1927",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Manage Mail Flow Rules 2023",
+            "description": "Microsoft. (2023, February 22). Manage mail flow rules in Exchange Online. Retrieved March 13, 2023.",
+            "url": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules"
+        }
+    ],
+    "description": "In an Exchange environment, Administrators can use `Get-TransportRule` / `Remove-TransportRule` to discover and remove potentially malicious transport rules.(Citation: Microsoft Manage Mail Flow Rules 2023)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

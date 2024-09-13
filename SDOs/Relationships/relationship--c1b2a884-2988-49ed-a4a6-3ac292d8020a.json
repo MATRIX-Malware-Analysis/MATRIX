@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c1b2a884-2988-49ed-a4a6-3ac292d8020a",
+    "created": "2024-08-13T14:51:22.779352Z",
+    "modified": "2024-08-13T14:51:22.779354Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--adf634bd-c4c3-4a56-862e-452637ef5853",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "file_sig_table",
+            "description": "Kessler, G. (2022, December 9). GCK'S FILE SIGNATURES TABLE. Retrieved August 23, 2022.",
+            "url": "https://www.garykessler.net/library/file_sigs.html"
+        },
+        {
+            "source_name": "Polyglot Files: a Hacker\u2019s best friend",
+            "description": "Li, V. (2019, October 2). Polyglot Files: a Hacker\u2019s best friend. Retrieved September 27, 2022.",
+            "url": "https://medium.com/swlh/polyglot-files-a-hackers-best-friend-850bf812dd8a"
+        }
+    ],
+    "description": "Collect file hashes; file names that do not match their expected hash are suspect. Perform file monitoring; files with known names but in unusual locations are suspect. Look for indications of common characters that may indicate an attempt to trick users into misidentifying the file type, such as a space as the last character of a file name or the right-to-left override characters\"\\u202E\", \"[U+202E]\", and \"%E2%80%AE\u201d.\n\nCheck and ensure that file headers/signature and extensions match using magic bytes detection and/or file signature validation.(Citation: Polyglot Files: a Hacker\u2019s best friend) In Linux, the <code>file</code> command may be used to check the file signature.(Citation: file_sig_table)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

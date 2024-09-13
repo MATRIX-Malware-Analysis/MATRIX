@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c9f176cc-930e-4f48-9b04-655859a4b919",
+    "created": "2024-08-13T14:51:23.958576Z",
+    "modified": "2024-08-13T14:51:23.958578Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--f205d66f-a7f1-453e-a61a-d35614291ca0",
+    "target_ref": "malware-behavior--8535b71e-3c12-4258-a4ab-40257a1becc4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Spoofed reporting messages may be detected by reviewing the content of automation protocols, either through detecting based on expected values or comparing to other out of band process data sources. Spoofed messages may not precisely match legitimate messages which may lead to malformed traffic, although traffic may be malformed for many benign reasons. Monitor reporting messages for changes in how they are constructed.\n\nVarious techniques enable spoofing a reporting message. Consider monitoring for [Rogue Master](https://attack.mitre.org/techniques/T0848) and [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T0830) activity.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

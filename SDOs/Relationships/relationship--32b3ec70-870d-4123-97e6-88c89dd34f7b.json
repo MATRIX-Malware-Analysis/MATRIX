@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--32b3ec70-870d-4123-97e6-88c89dd34f7b",
+    "created": "2024-08-13T14:51:23.685081Z",
+    "modified": "2024-08-13T14:51:23.685084Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--49deae61-5c33-4162-b4fe-87b5df1143af",
+    "target_ref": "malware-behavior--51dea151-0898-4a45-967c-3ebee0420484",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://technet.microsoft.com/en-us/library/cc754272(v=ws.11).aspx",
+            "description": "Microsoft. (n.d.). Configure Timeout and Reconnection Settings for Remote Desktop Services Sessions. Retrieved December 11, 2017.",
+            "source_name": "Windows RDP Sessions"
+        }
+    ],
+    "description": "Change GPOs to define shorter timeouts sessions and maximum amount of time any single session can be active. Change GPOs to specify the maximum amount of time that a disconnected session stays active on the RD session host server.(Citation: Windows RDP Sessions)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

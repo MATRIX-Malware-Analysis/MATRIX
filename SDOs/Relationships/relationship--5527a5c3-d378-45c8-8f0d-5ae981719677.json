@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5527a5c3-d378-45c8-8f0d-5ae981719677",
+    "created": "2024-08-13T14:51:22.724898Z",
+    "modified": "2024-08-13T14:51:22.724900Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--49deae61-5c33-4162-b4fe-87b5df1143af",
+    "target_ref": "malware-behavior--633a100c-b2c9-41bf-9be5-905c1b16c825",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Apple Developer Doco Hardened Runtime",
+            "url": "https://developer.apple.com/documentation/security/hardened_runtime",
+            "description": "Apple Inc.. (2021, January 1). Hardened Runtime: Manage security protections and resource access for your macOS apps.. Retrieved March 24, 2021."
+        }
+    ],
+    "description": "When System Integrity Protection (SIP) is enabled in macOS, the aforementioned environment variables are ignored when executing protected binaries. Third-party applications can also leverage Apple\u2019s Hardened Runtime, ensuring these environment variables are subject to imposed restrictions.(Citation: Apple Developer Doco Hardened Runtime) Admins can add restrictions to applications by setting the setuid and/or setgid bits, use entitlements, or have a __RESTRICT segment in the Mach-O binary.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

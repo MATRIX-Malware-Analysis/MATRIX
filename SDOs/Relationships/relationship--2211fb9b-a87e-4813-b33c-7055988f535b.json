@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2211fb9b-a87e-4813-b33c-7055988f535b",
+    "created": "2024-08-13T14:51:23.672911Z",
+    "modified": "2024-08-13T14:51:23.672913Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--4b2bcb7b-f893-4a42-97bc-7d0580617c65",
+    "target_ref": "malware-behavior--ed7135aa-c94a-404d-9f3b-4274b4bd9546",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpecterOps Certified Pre Owned",
+            "description": "Schroeder, W. & Christensen, L. (2021, June 22). Certified Pre-Owned - Abusing Active Directory Certificate Services. Retrieved August 2, 2022.",
+            "url": "https://web.archive.org/web/20220818094600/https://specterops.io/assets/resources/Certified_Pre-Owned.pdf"
+        },
+        {
+            "source_name": "O365 Blog Azure AD Device IDs",
+            "description": "Syynimaa, N. (2022, February 15). Stealing and faking Azure AD device identities. Retrieved August 3, 2022.",
+            "url": "https://o365blog.com/post/deviceidentity/"
+        }
+    ],
+    "description": "Monitor for attempts to access information stored in the Registry about certificates and their associated private keys. For example, user certificates are commonly stored under `HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\SystemCertificates`.(Citation: SpecterOps Certified Pre Owned)(Citation: O365 Blog Azure AD Device IDs)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

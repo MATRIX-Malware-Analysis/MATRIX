@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6ca4dbd9-7d4b-4cbe-83e2-e539ff76e57a",
+    "created": "2024-08-13T14:51:21.744275Z",
+    "modified": "2024-08-13T14:51:21.744277Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--bdd65f5f-1408-4ae2-a9cc-a0474bb097af",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Clymb3r Function Hook Passwords Sept 2013",
+            "description": "Bialek, J. (2013, September 15). Intercepting Password Changes With Function Hooking. Retrieved November 21, 2017.",
+            "url": "https://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/"
+        },
+        {
+            "source_name": "MagicWeb",
+            "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+            "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+        }
+    ],
+    "description": "Monitor for new, unfamiliar DLL files written to a domain controller and/or local computer. Password filters will also show up as an autorun and loaded DLL in lsass.exe.(Citation: Clymb3r Function Hook Passwords Sept 2013) If AD FS is in use, monitor the AD FS server for the creation of DLLs as well as the loading of unrecognized or unsigned DLLs into the `Microsoft.IdentityServer.Servicehost` application.(Citation: MagicWeb)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

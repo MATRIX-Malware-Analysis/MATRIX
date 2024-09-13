@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2c266cc3-4a1e-4087-803c-19ae4cb1741c",
+    "created": "2024-08-13T14:48:36.690976Z",
+    "modified": "2024-08-13T14:48:36.69098Z",
+    "relationship_type": "uses",
+    "description": "DarkGate looks for various security products by process name using hard-coded values in the malware. DarkGate will not execute its keylogging thread if a process name associated with Trend Micro anti-virus is identified, or if runtime checks identify the presence of Kaspersky anti-virus. DarkGate will initiate a new thread if certain security products are identified on the victim, and recreate any malicious files associated with it if it determines they were removed by security software in a new system location.[1]",
+    "source_ref": "malware--59657abd-5642-488d-99b6-f83cc439d9d7",
+    "target_ref": "malware-behavior--ebaca03c-b055-412d-8e2b-569dd83759a0",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

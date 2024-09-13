@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--bb0e6ecc-1403-4ec8-9931-87f650b1ac68",
+    "created": "2024-08-13T14:51:21.756008Z",
+    "modified": "2024-08-13T14:51:21.756010Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--51dea151-0898-4a45-967c-3ebee0420484",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor network traffic for uncommon data flows that may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a computer using the Remote Desktop Protocol (RDP).\n\nThe\u00a0Remote Desktop Protocol\u00a0(RDP), built in to Microsoft operating systems, allows a user to remotely log in to the desktop of another host. It allows for interactive access of the running windows, and forwards key presses, mouse clicks, etc. Network administrators, power users, and end-users may use RDP for day-to-day operations. From an adversary\u2019s perspective, RDP provides a means to\u00a0laterally move\u00a0to a new host. Determining which RDP connections correspond to adversary activity can be a difficult problem in highly dynamic environments, but will be useful in identifying the scope of a compromise.\nRemote Desktop can be detected in several ways\n\n- Network connections to port 3389/tcp (assuming use of the default port)\n- Packet capture analysis\n- Detecting network connections from\u00a0<code>mstsc.exe</code>\n- Execution of the process\u00a0<code>rdpclip.exe</code>\n- Runs as the clipboard manager on the RDP target if clipboard sharing is enabled\n\nAnalytic 1\n\n<code>source=\"*Zeek:*\" AND (port=\"3389\") AND LogonType=\"10\" </code>\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

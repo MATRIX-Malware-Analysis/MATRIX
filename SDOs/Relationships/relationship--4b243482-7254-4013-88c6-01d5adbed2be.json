@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4b243482-7254-4013-88c6-01d5adbed2be",
+    "created": "2024-08-13T14:51:22.029707Z",
+    "modified": "2024-08-13T14:51:22.029710Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b0e96b3b-61d6-489d-b336-c6616d1d4eeb",
+    "target_ref": "malware-behavior--65bdc9e6-708b-44b4-a612-2f95b4dd7012",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor network data for uncommon data flows. Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. Network Analysis frameworks such as Zeek can be used to capture, decode, and alert on network protocols such as SMB that revolve around network shares. Although there may be more native ways to detect detailed SMB events on the host, they can be extracted out of network traffic. With the right protocol decoders, port 445 traffic can be filtered and even the file path (relative to the share) can be retrieved.\n\nLooking at this activity more closely to obtain an adequate sense of situational awareness may make it possible to detect adversaries moving between hosts in a way that deviates from normal activity. Because SMB traffic is heavy in many environments, this analytic may be difficult to turn into something that can be used to quickly detect an APT. In some cases, it may make more sense to run this analytic in a forensic fashion. Looking through and filtering its output after an intrusion has been discovered may be helpful in identifying the scope of compromise.\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

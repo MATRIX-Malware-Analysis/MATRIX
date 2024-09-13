@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1838bcc5-088b-4aaa-8f39-5195d67831e5",
+    "created": "2024-08-13T14:51:23.467632Z",
+    "modified": "2024-08-13T14:51:23.467635Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--28a8f7c4-21fb-4ec7-b892-82436c0feb5f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for applications and processes related to remote admin software. Correlate activity with other suspicious behavior that may reduce false positives if this type of software is used by legitimate users and administrators. [Domain Fronting](https://attack.mitre.org/techniques/T1090/004) may be used in conjunction to avoid defenses. Adversaries will likely need to deploy and/or install these remote software to compromised systems. It may be possible to detect or prevent the installation of this type of software with host-based solutions.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

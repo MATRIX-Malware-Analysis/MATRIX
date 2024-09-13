@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--8359db60-52ef-4076-8a6c-40de27d71d5e",
+    "created": "2024-08-13T14:51:23.655423Z",
+    "modified": "2024-08-13T14:51:23.655425Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--4bf5845d-a814-4490-bc5c-ccdee6043025",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Elastic Process Injection July 2017",
+            "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
+            "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017."
+        }
+    ],
+    "description": "Monitor and analyze application programming interface (API) calls that are indicative of Registry edits, such as <code>RegCreateKeyEx</code> and <code>RegSetValueEx</code>. (Citation: Elastic Process Injection July 2017)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

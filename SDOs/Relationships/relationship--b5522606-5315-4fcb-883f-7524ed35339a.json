@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b5522606-5315-4fcb-883f-7524ed35339a",
+    "created": "2024-08-13T14:51:23.970087Z",
+    "modified": "2024-08-13T14:51:23.970089Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--15237766-3581-4389-bfed-4844a0893296",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CopyFromScreen .NET",
+            "description": "Microsoft. (n.d.). Graphics.CopyFromScreen Method. Retrieved March 24, 2020.",
+            "url": "https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.copyfromscreen?view=netframework-4.8"
+        },
+        {
+            "source_name": "Antiquated Mac Malware",
+            "description": "Thomas Reed. (2017, January 18). New Mac backdoor using antiquated code. Retrieved July 5, 2017.",
+            "url": "https://blog.malwarebytes.com/threat-analysis/2017/01/new-mac-backdoor-using-antiquated-code/"
+        }
+    ],
+    "description": "Monitoring for screen capture behavior will depend on the method used to obtain data from the operating system and write output files. Detection methods could include collecting information from unusual processes using API calls used to obtain image data, and monitoring for image files written to disk, such as CopyFromScreen, xwd, or screencapture.(Citation: CopyFromScreen .NET)(Citation: Antiquated Mac Malware) The data may need to be correlated with other events to identify malicious activity, depending on the legitimacy of this behavior within a given network environment.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

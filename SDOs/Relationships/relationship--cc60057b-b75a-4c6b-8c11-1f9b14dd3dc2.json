@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--cc60057b-b75a-4c6b-8c11-1f9b14dd3dc2",
+    "created": "2024-08-13T14:51:21.702136Z",
+    "modified": "2024-08-13T14:51:21.702138Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--6a81060d-3847-4b03-9b38-7273c3c2a2a2",
+    "target_ref": "malware-behavior--a8bc2369-a68e-43c5-ac1a-a2a939215ef9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for API calls (such as <code>RegOpenKeyExA</code>) that may interact with the Windows Registry to gather information about the system, configuration, and installed software. OS API calls associated with querying the Windows Registry are RegOpenKeyEx , RegOpenUserClassesRoot, RegQueryValueExA, and RegQueryValueExW. Execution of these functions might trigger security log ids such as 4663 (Microsoft Security Auditing). Also monitor for RegOpenUserClassesRoot api to retrieve a handle to the\u00a0HKEY_CLASSES_ROOT key for a specified user. The returned key has a view of the registry that merges the contents of the\u00a0HKEY_LOCAL_MACHINE\\Software\\Classes key with the contents of the Software\\Classes keys in the user's registry hive.\n\nNote: Most EDR tools do not support direct monitoring of API calls due to the sheer volume of calls produced by an endpoint but may have alerts or events that are based on abstractions of OS API calls.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

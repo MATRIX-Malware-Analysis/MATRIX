@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0f9cdb6d-6fb7-4ea2-9204-49815875d21c",
+    "created": "2024-08-13T14:51:22.016414Z",
+    "modified": "2024-08-13T14:51:22.016416Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--3abcd1d2-23e8-4577-8022-147f7c95edbb",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Novetta Blockbuster RATs",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Remote Administration Tools & Content Staging Malware Report. Retrieved March 16, 2016.",
+            "url": "https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-RAT-and-Staging-Report.pdf"
+        },
+        {
+            "source_name": "Novetta Blockbuster",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Unraveling the Long Thread of the Sony Attack. Retrieved February 25, 2016.",
+            "url": "https://web.archive.org/web/20160226161828/https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Report.pdf"
+        },
+        {
+            "source_name": "Qualys LolZarus",
+            "description": "Pradhan, A. (2022, February 8). LolZarus: Lazarus Group Incorporating Lolbins into Campaigns. Retrieved March 22, 2022.",
+            "url": "https://blog.qualys.com/vulnerabilities-threat-research/2022/02/08/lolzarus-lazarus-group-incorporating-lolbins-into-campaigns"
+        },
+        {
+            "source_name": "Kaspersky ThreatNeedle Feb 2021",
+            "description": "Vyacheslav Kopeytsev and Seongsu Park. (2021, February 25). Lazarus targets defense industry with ThreatNeedle. Retrieved October 27, 2021.",
+            "url": "https://securelist.com/lazarus-threatneedle/100803/"
+        }
+    ],
+    "description": "[Lazarus Group](https://attack.mitre.org/groups/G0032) has used WMIC for discovery as well as to execute payloads for persistence and lateral movement.(Citation: Novetta Blockbuster)(Citation: Novetta Blockbuster RATs)(Citation: Kaspersky ThreatNeedle Feb 2021)(Citation: Qualys LolZarus)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

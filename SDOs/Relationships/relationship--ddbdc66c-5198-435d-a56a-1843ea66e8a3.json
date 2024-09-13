@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--ddbdc66c-5198-435d-a56a-1843ea66e8a3",
+    "created": "2024-08-13T14:51:23.031800Z",
+    "modified": "2024-08-13T14:51:23.031802Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--17b8e63d-6ac1-45f3-8cb3-7ad7411cef56",
+    "target_ref": "malware-behavior--28abec6c-4443-4b03-8206-07f2e264a6b4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco IOS Software Integrity Assurance - Boot Information",
+            "url": "https://tools.cisco.com/security/center/resources/integrity_assurance.html#26",
+            "description": "Cisco. (n.d.). Cisco IOS Software Integrity Assurance - Boot Information. Retrieved October 21, 2020."
+        }
+    ],
+    "description": "Monitor for changes to boot information including system uptime, image booted, and startup configuration to determine if results are consistent with expected behavior in the environment.  (Citation: Cisco IOS Software Integrity Assurance - Boot Information) Monitor unusual connections or connection attempts to the device that may specifically target TFTP or other file-sharing protocols.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7a547f99-8fce-49e0-ab71-78651ddb766d",
+    "created": "2024-08-13T14:51:23.107045Z",
+    "modified": "2024-08-13T14:51:23.107047Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--b46a801b-fd98-491c-a25a-bca25d6e3001",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft IIS Modules Overview 2007",
+            "description": "Microsoft. (2007, November 24). IIS Modules Overview. Retrieved June 17, 2021.",
+            "url": "https://docs.microsoft.com/en-us/iis/get-started/introduction-to-iis/iis-modules-overview"
+        },
+        {
+            "source_name": "Unit 42 RGDoor Jan 2018",
+            "description": "Falcone, R. (2018, January 25). OilRig uses RGDoor IIS Backdoor on Targets in the Middle East. Retrieved July 6, 2018.",
+            "url": "https://researchcenter.paloaltonetworks.com/2018/01/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/"
+        },
+        {
+            "source_name": "ESET IIS Malware 2021",
+            "description": "Hromcov\u00e1, Z., Cherepanov, A. (2021). Anatomy of Native IIS Malware. Retrieved September 9, 2021.",
+            "url": "https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-Anatomy-Of-Native-Iis-Malware-wp.pdf"
+        }
+    ],
+    "description": "Monitor execution and command-line arguments of <code>AppCmd.exe</code>, which may be abused to install malicious IIS modules.(Citation: Microsoft IIS Modules Overview 2007)(Citation: Unit 42 RGDoor Jan 2018)(Citation: ESET IIS Malware 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

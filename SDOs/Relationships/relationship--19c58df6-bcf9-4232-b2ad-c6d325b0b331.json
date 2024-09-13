@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--19c58df6-bcf9-4232-b2ad-c6d325b0b331",
+    "created": "2024-08-13T14:51:22.896561Z",
+    "modified": "2024-08-13T14:51:22.896563Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--4b2bcb7b-f893-4a42-97bc-7d0580617c65",
+    "target_ref": "malware-behavior--a8bc2369-a68e-43c5-ac1a-a2a939215ef9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unexpected process interactions with the Windows Registry (i.e. reads) that may be related to gathering information.\n\nNote: For Security Auditing event ids 4656 and 4663, a System Access Control List (SACL) that controls the use of specific access rights such as Enumerate sub-keys and Query key value is required for event generation. Depending on the Registry key you are monitoring, the implementation of a new System Access Control List (SACL) might be required. Depending of Registry key used for the creation of a System Access Control List (SACL), the generation of event ids 4656 and 4663 might be noisy.\n\nAnalytic 1 - Suspicious Registry\n\n<code>(source=\"*WinEventLog:Security\" EventCode IN (4663, 4656)) AND ObjectType=\"Key\" | WHERE ObjectName LIKE \"%SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall%\" AND (UserAccessList LIKE \"%4435%\" OR UserAccessList LIKE \"%Enumerate sub-keys%\" OR UserAccessList LIKE \"%4432%\" OR UserAccessList LIKE \"%Query key value%\") AND Image NOT IN ('FilePathToExpectedProcess01.exe','FilePathToExpectedProcess02.exe')</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

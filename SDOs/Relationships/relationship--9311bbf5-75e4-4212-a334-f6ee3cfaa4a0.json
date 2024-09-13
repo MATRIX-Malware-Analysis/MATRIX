@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9311bbf5-75e4-4212-a334-f6ee3cfaa4a0",
+    "created": "2024-08-13T14:51:22.816721Z",
+    "modified": "2024-08-13T14:51:22.816723Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--a750a9f6-0bde-4bb3-9aae-1e2786e9780c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed processes and/or command line execution that can be used to remove network share connections via the net.exe process. \n\nNote: Event IDs are for Sysmon (Event ID 1 - process create) and Windows Security Log (Event ID 4688 - a new process has been created). The Analytic is oriented around looking for various methods of removing network shares via the command line, which is otherwise a rare event. \n\nAnalytic 1- Network Share Connection Removal\n\n<code> (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"*WinEventLog:Security\" EventCode=\"4688\") (Image= \"C:\\Windows\\System32\\net.exe\" AND CommandLine= \"*delete*\") OR CommandLine=\"*Remove-SmbShare*\" OR CommandLine=\"*Remove-FileShare*\" )</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

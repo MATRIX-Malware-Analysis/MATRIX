@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7b19477d-d30c-4c39-8d94-2b0696432167",
+    "created": "2024-08-13T14:51:22.886919Z",
+    "modified": "2024-08-13T14:51:22.886921Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--4d859fb6-3d39-4176-9dac-bd62ecae7132",
+    "target_ref": "malware-behavior--c8aae1bb-cfdd-4021-93fc-e7c70256bbf0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Administrators can block end-user consent to OAuth applications, disabling users from authorizing third-party apps through OAuth 2.0 and forcing administrative consent for all requests. They can also block end-user registration of applications by their users, to reduce risk. A Cloud Access Security Broker can also be used to ban applications.\n\nAzure offers a couple of enterprise policy settings in the Azure Management Portal that may help:\n\n\"Users -> User settings -> App registrations: Users can register applications\" can be set to \"no\" to prevent users from registering new applications. \n\"Enterprise applications -> User settings -> Enterprise applications: Users can consent to apps accessing company data on their behalf\" can be set to \"no\" to prevent users from consenting to allow third-party multi-tenant applications",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

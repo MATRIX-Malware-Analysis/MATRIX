@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--108ff4a9-f58f-4b4d-8be0-9e120e858047",
+    "created": "2024-08-13T14:51:23.245691Z",
+    "modified": "2024-08-13T14:51:23.245693Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--9cd5b7d4-369e-4db8-b28f-f98c93a04bf9",
+    "target_ref": "malware-behavior--208884f1-7b83-4473-ac22-4e1cf6c41471",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "file_upload_attacks_pt2",
+            "description": "YesWeRHackers. (2021, June 16). File Upload Attacks (Part 2). Retrieved August 23, 2022.",
+            "url": "https://blog.yeswehack.com/yeswerhackers/file-upload-attacks-part-2/"
+        }
+    ],
+    "description": "Ensure that input sanitization is performed and that files are validated properly before execution; furthermore, implement a strict allow list to ensure that only authorized file types are processed.(Citation: file_upload_attacks_pt2) Restrict and/or block execution of files where headers and extensions do not match. \n\n",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

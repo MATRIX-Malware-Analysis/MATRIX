@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--553787ef-e81e-4fbc-b3ea-5dea05f0729e",
+    "created": "2024-08-13T14:51:23.618850Z",
+    "modified": "2024-08-13T14:51:23.618853Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--35a8c4d6-1aeb-43d7-ac3a-b87705fa6567",
+    "target_ref": "malware-behavior--650c784b-7504-4df7-ab2c-4ea882384d1e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Secure Ideas SMB Relay",
+            "description": "Kuehn, E. (2018, April 11). Ever Run a Relay? Why SMB Relays Should Be On Your Mind. Retrieved February 7, 2019.",
+            "url": "https://blog.secureideas.com/2018/04/ever-run-a-relay-why-smb-relays-should-be-on-your-mind.html"
+        },
+        {
+            "source_name": "GitHub Conveigh",
+            "description": "Robertson, K. (2016, August 28). Conveigh. Retrieved November 17, 2017.",
+            "url": "https://github.com/Kevin-Robertson/Conveigh"
+        }
+    ],
+    "description": "Monitor for newly constructed services/daemons through Windows event logs for event IDs 4697 and 7045. (Citation: Secure Ideas SMB Relay) Deploy an LLMNR/NBT-NS spoofing detection tool.(Citation: GitHub Conveigh)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

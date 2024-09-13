@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5ba4586e-d256-48cf-b37f-3b7c3442001c",
+    "created": "2024-08-13T14:51:21.924898Z",
+    "modified": "2024-08-13T14:51:21.924900Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--006b5263-0d4a-4f3d-af68-df0b44e8bbac",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Chrome Roaming Profiles",
+            "description": "Chrome Enterprise and Education Help. (n.d.). Use Chrome Browser with Roaming User Profiles. Retrieved March 28, 2023.",
+            "url": "https://support.google.com/chrome/a/answer/7349337"
+        }
+    ],
+    "description": "Monitor executed commands and arguments for actions that could be taken to gather browser information, such as local files and databases (e.g., `%APPDATA%/Google/Chrome`).(Citation: Chrome Roaming Profiles) Remote access tools with built-in features may interact directly using APIs to gather information. Information may also be acquired through system management tools such as Windows Management Instrumentation and PowerShell.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

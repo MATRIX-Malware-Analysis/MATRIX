@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--163cd074-e26d-4b12-a408-f3412323ac96",
+    "created": "2024-08-13T14:51:23.463463Z",
+    "modified": "2024-08-13T14:51:23.463465Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--2acf44aa-542f-4366-b4eb-55ef5747759c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to files for unexpected modifications to access permissions and attributes.\n\nAnalytic 1 -  Modified Files in Linux Cron Directories\n\n<code> source=\"*Linux:*\"\n (Path LIKE \"/etc/cron.allow.d\"\n   OR Path LIKE \"/etc/cron.d/\"\n   OR Path LIKE \"/etc/cron.hourly\"\n   OR Path LIKE \"/etc/cron.daily\"\n   OR Path LIKE \"/etc/cron.weeky\"\n   OR Path LIKE \"/etc/cron.monthly\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

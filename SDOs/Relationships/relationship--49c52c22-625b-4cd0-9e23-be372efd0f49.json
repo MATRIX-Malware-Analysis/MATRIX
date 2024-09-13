@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--49c52c22-625b-4cd0-9e23-be372efd0f49",
+    "created": "2024-08-13T14:51:23.634821Z",
+    "modified": "2024-08-13T14:51:23.634824Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--ec7ff2cb-9ce8-4e9b-9b5c-8134ec00e784",
+    "target_ref": "malware-behavior--d9e88203-2b5d-405f-a406-2933b1e3d7e4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "description": "Ready.gov. (n.d.). IT Disaster Recovery Plan. Retrieved March 15, 2019.",
+            "url": "https://www.ready.gov/business/implementation/IT",
+            "source_name": "Ready.gov IT DRP"
+        },
+        {
+            "source_name": "Rhino S3 Ransomware Part 2",
+            "url": "https://rhinosecuritylabs.com/aws/s3-ransomware-part-2-prevention-and-defense/",
+            "description": "Gietzen, S. (n.d.). S3 Ransomware Part 2: Prevention and Defense. Retrieved April 14, 2021."
+        }
+    ],
+    "description": "Consider implementing IT disaster recovery plans that contain procedures for regularly taking and testing data backups that can be used to restore organizational data.(Citation: Ready.gov IT DRP) Ensure backups are stored off system and is protected from common methods adversaries may use to gain access and destroy the backups to prevent recovery. Consider enabling versioning in cloud environments to maintain backup copies of storage objects.(Citation: Rhino S3 Ransomware Part 2)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

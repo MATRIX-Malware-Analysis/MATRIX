@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--513827f8-21c5-4652-aed2-d7e28c02e1ae",
+    "created": "2024-08-13T14:51:22.346284Z",
+    "modified": "2024-08-13T14:51:22.346286Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--813d3176-99f4-4e78-8a9a-c041bd71cffd",
+    "target_ref": "malware-behavior--910906dd-8c0a-475a-9cc1-5e029e2fad58",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Evil WMI",
+            "description": "Chad Tilbury. (2023, May 22). Finding Evil WMI Event Consumers with Disk Forensics. Retrieved February 9, 2024.",
+            "url": "https://www.sans.org/blog/finding-evil-wmi-event-consumers-with-disk-forensics/"
+        }
+    ],
+    "description": "Monitor for MOF files outside of the <code>HKLM\\SOFTWARE\\Microsoft\\WBEM</code> folder, as almost all legitimate MOF files will be stored in the WBEM folder.(Citation: Evil WMI) Adversaries may create modified MOF files to be complied into WMI event subscriptions. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

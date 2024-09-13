@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--2c00134e-3b85-40f4-a615-dc8e7ad0e129",
+    "created": "2024-08-13T14:48:38.300692Z",
+    "modified": "2024-08-13T14:48:38.300695Z",
+    "relationship_type": "uses",
+    "description": "The Industroyer IEC 104 module has 3 modes available to perform its attack. These modes are range, shift, and sequence. The range mode operates in 2 stages. The first stage of range mode gathers Information Object Addresses (IOA) and sends select and execute packets to switch the state. The second stage of range mode has an infinite loop where it will switch the state of all of the previously discovered IOAs. Shift mode is similar to range mode, but instead of staying within the same range, it will add a shift value to the default range values. [5]",
+    "source_ref": "malware--555dac37-9e1e-4384-9221-53d83e7e191a",
+    "target_ref": "malware-behavior--ea5b5e63-fc7f-4a56-9082-4f2a53e487fa",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

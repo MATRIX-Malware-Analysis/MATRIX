@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--93cb0eb9-0bf1-49f9-a5ac-08ba0d28896b",
+    "created": "2024-08-13T14:51:21.760663Z",
+    "modified": "2024-08-13T14:51:21.760666Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--138b8457-1a74-4853-af74-86c8a081cf12",
+    "target_ref": "malware-behavior--9422fc14-1c43-410d-ab0f-a709b76c72dc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Uptycs Confucius APT Jan 2021",
+            "url": "https://www.uptycs.com/blog/confucius-apt-deploys-warzone-rat",
+            "description": "Uptycs Threat Research Team. (2021, January 12). Confucius APT deploys Warzone RAT. Retrieved December 17, 2021."
+        }
+    ],
+    "description": "[Confucius](https://attack.mitre.org/groups/G0142) has dropped malicious files into the startup folder `%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup` on a compromised host in order to maintain persistence.(Citation: Uptycs Confucius APT Jan 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

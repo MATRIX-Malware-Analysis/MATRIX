@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--63bacd5c-0bce-421f-b516-b166dc63d626",
+    "created": "2024-08-13T14:51:22.937868Z",
+    "modified": "2024-08-13T14:51:22.937871Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--b5327dd1-6bf9-4785-a199-25bcbd1f4a9d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Shadowbunny VM Defense Evasion",
+            "url": "https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/",
+            "description": "Johann Rehberger. (2020, September 23). Beware of the Shadowbunny - Using virtual machines to persist and evade detections. Retrieved September 22, 2021."
+        }
+    ],
+    "description": "Consider monitoring for commands and arguments that may be atypical for benign use of virtualization software. Usage of virtualization binaries or command-line arguments associated with running a silent installation may be especially suspect (ex. <code>-silent</code>, <code>-ignore-reboot</code>), as well as those associated with running a headless (in the background with no UI) virtual instance (ex. <code>VBoxManage startvm $VM --type headless</code>).(Citation: Shadowbunny VM Defense Evasion) Similarly, monitoring command line arguments which suppress notifications may highlight potentially malicious activity (ex. <code>VBoxManage.exe setextradata global GUI/SuppressMessages \"all\"</code>). Monitor for commands which enable hypervisors such as Hyper-V.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

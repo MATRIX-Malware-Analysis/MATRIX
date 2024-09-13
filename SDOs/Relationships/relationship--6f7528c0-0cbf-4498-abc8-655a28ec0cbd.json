@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6f7528c0-0cbf-4498-abc8-655a28ec0cbd",
+    "created": "2024-08-13T14:51:22.133553Z",
+    "modified": "2024-08-13T14:51:22.133556Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--c615231b-f253-4f58-9d47-d5b4cbdb6839",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "SpectorOps Code Signing Dec 2017",
+            "description": "Graeber, M. (2017, December 22). Code Signing Certificate Cloning Attacks and Defenses. Retrieved April 3, 2018.",
+            "url": "https://posts.specterops.io/code-signing-certificate-cloning-attacks-and-defenses-6f98657fc6ec"
+        },
+        {
+            "source_name": "Microsoft Sigcheck May 2017",
+            "description": "Russinovich, M. et al.. (2017, May 22). Sigcheck. Retrieved April 3, 2018.",
+            "url": "https://docs.microsoft.com/sysinternals/downloads/sigcheck"
+        }
+    ],
+    "description": "Monitor for processes, such as <code>certmgr.exe</code> (macOS) or <code>certutil.exe</code> (Windows), that can be used to install root certificates. A system's root certificates are unlikely to change frequently. Monitor new certificates installed on a system that could be due to malicious activity. (Citation: SpectorOps Code Signing Dec 2017) Check pre-installed certificates on new systems to ensure unnecessary or suspicious certificates are not present. Microsoft provides a list of trustworthy root certificates online and through <code>authroot.stl</code>. (Citation: SpectorOps Code Signing Dec 2017) The Sysinternals Sigcheck utility can also be used (<code>sigcheck[64].exe -tuv</code>) to dump the contents of the certificate store and list valid certificates not rooted to the Microsoft Certificate Trust List. (Citation: Microsoft Sigcheck May 2017)\n\nAnalytic 1 - Attempt to Add Certificate to Untrusted Store\n\n<code> (source=\"WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"WinEventLog:Security\" EventCode=\"4688\") AND Image=\"C:\\\\Windows\\\\System32\\\\certutil.exe\" CommandLine=\"*-addstore*\"</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

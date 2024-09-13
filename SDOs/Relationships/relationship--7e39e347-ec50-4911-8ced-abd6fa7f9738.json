@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7e39e347-ec50-4911-8ced-abd6fa7f9738",
+    "created": "2024-08-13T14:51:23.534992Z",
+    "modified": "2024-08-13T14:51:23.534995Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--28170e17-8384-415c-8486-2e6b294cb803",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "BleepingComputer REvil 2021",
+            "url": "https://www.bleepingcomputer.com/news/security/revil-ransomware-has-a-new-windows-safe-mode-encryption-mode/",
+            "description": "Abrams, L. (2021, March 19). REvil ransomware has a new \u2018Windows Safe Mode\u2019 encryption mode. Retrieved June 23, 2021."
+        },
+        {
+            "source_name": "Sophos Snatch Ransomware 2019",
+            "url": "https://news.sophos.com/en-us/2019/12/09/snatch-ransomware-reboots-pcs-into-safe-mode-to-bypass-protection/",
+            "description": "Sophos. (2019, December 9). Snatch ransomware reboots PCs into Safe Mode to bypass protection. Retrieved June 23, 2021."
+        }
+    ],
+    "description": "Monitor modifications to Registry data associated with enabling safe mode. For example, a service can be forced to start on safe mode boot by adding a <code>\\*</code> in front of the \"Startup\" value name: <code>HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\[\"\\*Startup\"=\"{Path}\"]</code> or by adding a key to <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\SafeBoot\\Minimal</code>.(Citation: BleepingComputer REvil 2021)(Citation: Sophos Snatch Ransomware 2019)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

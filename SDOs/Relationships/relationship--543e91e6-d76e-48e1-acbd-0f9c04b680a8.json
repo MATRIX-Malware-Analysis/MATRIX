@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--543e91e6-d76e-48e1-acbd-0f9c04b680a8",
+    "created": "2024-08-13T14:51:23.332057Z",
+    "modified": "2024-08-13T14:51:23.332060Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--5373721b-2243-4a66-86ad-89a2408f5a58",
+    "target_ref": "malware-behavior--519630c5-f03f-4882-825c-3af924935817",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://documents.trendmicro.com/assets/tech-brief-untangling-the-patchwork-cyberespionage-group.pdf",
+            "description": "Lunghi, D., et al. (2017, December). Untangling the Patchwork Cyberespionage Group. Retrieved July 10, 2018.",
+            "source_name": "TrendMicro Patchwork Dec 2017"
+        }
+    ],
+    "description": "[Patchwork](https://attack.mitre.org/groups/G0040) apparently altered [NDiskMonitor](https://attack.mitre.org/software/S0272) samples by adding four bytes of random letters in a likely attempt to change the file hashes.(Citation: TrendMicro Patchwork Dec 2017)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a877ee32-2970-4104-a75f-57fdba46af34",
+    "created": "2024-08-13T14:51:22.687856Z",
+    "modified": "2024-08-13T14:51:22.687859Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--ffc874a5-999f-4910-8638-47a6e5c1b458",
+    "target_ref": "malware-behavior--8a2f40cf-8325-47f9-96e4-b1ca4c7389bd",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for unexpected changes to cloud user accounts, such as Azure Activity Logs highlighting malicious Service Principal and Application modifications. \n\nMonitor for the use of API and CLI commands that add access keys or tokens to accounts, such as <code>CreateAccessKey</code> or <code>GetFederationToken</code> in AWS or <code>service-accounts keys create</code> in GCP. Also monitor for the usage of APIs that create or import SSH keys, particularly by unexpected users or accounts such as the root account. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d2761fcc-0e2c-4494-bdb5-f1fc28436fee",
+    "created": "2024-08-13T14:51:23.521833Z",
+    "modified": "2024-08-13T14:51:23.521836Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--6add2ab5-2711-4e9d-87c8-7a0be8531530",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft - Cached Creds",
+            "description": "Microsoft. (2016, August 21). Cached and Stored Credentials Technical Overview. Retrieved February 21, 2020.",
+            "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994565(v%3Dws.11)"
+        },
+        {
+            "source_name": "Powersploit",
+            "description": "PowerSploit. (n.d.). Retrieved December 4, 2014.",
+            "url": "https://github.com/mattifestation/PowerSploit"
+        }
+    ],
+    "description": "Monitor executed commands and arguments that may attempt to access cached domain credentials used to allow authentication to occur in the event a domain controller is unavailable.(Citation: Microsoft - Cached Creds). Remote access tools may contain built-in features or incorporate existing tools like Mimikatz. PowerShell scripts also exist that contain credential dumping functionality, such as PowerSploit's Invoke-Mimikatz module,(Citation: Powersploit) which may require additional logging features to be configured in the operating system to collect necessary information for analysis.\nDetection of compromised [Valid Accounts](https://attack.mitre.org/techniques/T1078) in-use by adversaries may help as well.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

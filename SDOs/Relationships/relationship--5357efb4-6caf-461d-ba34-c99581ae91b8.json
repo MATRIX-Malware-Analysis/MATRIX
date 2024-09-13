@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5357efb4-6caf-461d-ba34-c99581ae91b8",
+    "created": "2024-08-13T14:51:23.281313Z",
+    "modified": "2024-08-13T14:51:23.281315Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--494fba0c-e07f-43cd-a5b4-9c8eb83df72e",
+    "target_ref": "malware-behavior--a8bc2369-a68e-43c5-ac1a-a2a939215ef9",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CISA MAR-10292089-1.v2 TAIDOOR August 2021",
+            "url": "https://us-cert.cisa.gov/ncas/analysis-reports/ar20-216a",
+            "description": "CISA, FBI, DOD. (2021, August). MAR-10292089-1.v2 \u2013 Chinese Remote Access Trojan: TAIDOOR. Retrieved August 24, 2021."
+        }
+    ],
+    "description": "[Taidoor](https://attack.mitre.org/software/S0011) can query the Registry on compromised hosts using <code>RegQueryValueExA</code>.(Citation: CISA MAR-10292089-1.v2 TAIDOOR August 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

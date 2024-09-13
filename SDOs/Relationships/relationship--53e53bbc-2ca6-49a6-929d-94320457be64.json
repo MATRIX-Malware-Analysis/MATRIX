@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--53e53bbc-2ca6-49a6-929d-94320457be64",
+    "created": "2024-08-13T14:51:22.225051Z",
+    "modified": "2024-08-13T14:51:22.225054Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--f680a1f1-6d91-4cb5-9d83-caaba092a3e5",
+    "target_ref": "malware-behavior--25659dd6-ea12-45c4-97e6-381e3e4b593e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "ESET ComRAT May 2020",
+            "url": "https://www.welivesecurity.com/wp-content/uploads/2020/05/ESET_Turla_ComRAT.pdf",
+            "description": "Faou, M. (2020, May). From Agent.btz to ComRAT v4: A ten-year journey. Retrieved June 15, 2020."
+        },
+        {
+            "source_name": "ESET Crutch December 2020",
+            "url": "https://www.welivesecurity.com/2020/12/02/turla-crutch-keeping-back-door-open/",
+            "description": "Faou, M. (2020, December 2). Turla Crutch: Keeping the \u201cback door\u201d open. Retrieved December 4, 2020."
+        }
+    ],
+    "description": "[Turla](https://attack.mitre.org/groups/G0010) has used <code>net user</code> to enumerate local accounts on the system.(Citation: ESET ComRAT May 2020)(Citation: ESET Crutch December 2020)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9b8b0f4a-32a7-4fd8-be18-5919463629dd",
+    "created": "2024-08-13T14:51:23.181995Z",
+    "modified": "2024-08-13T14:51:23.181997Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--bdd65f5f-1408-4ae2-a9cc-a0474bb097af",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for suspicious modification of files associated with authentication processes, such as configuration files and module paths (e.g. `/etc/pam.d/`). Use system-integrity tools such as AIDE and monitoring tools such as auditd to monitor PAM files. Also monitor for access to certificates and cryptographic keys material.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

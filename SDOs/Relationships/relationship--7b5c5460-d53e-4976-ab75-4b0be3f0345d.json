@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--7b5c5460-d53e-4976-ab75-4b0be3f0345d",
+    "created": "2024-08-13T14:51:21.981594Z",
+    "modified": "2024-08-13T14:51:21.981596Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--c35413e4-0394-413e-8390-823fcf28750f",
+    "target_ref": "malware-behavior--ad179030-4c07-4e57-b204-a7e8ad70c6d7",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Harmj0y Domain Trusts",
+            "url": "https://posts.specterops.io/a-guide-to-attacking-domain-trusts-971e52cb2944",
+            "description": "Schroeder, W. (2017, October 30). A Guide to Attacking Domain Trusts. Retrieved February 14, 2019."
+        }
+    ],
+    "description": "[dsquery](https://attack.mitre.org/software/S0105) can be used to gather information on domain trusts with <code>dsquery * -filter \"(objectClass=trustedDomain)\" -attr *</code>.(Citation: Harmj0y Domain Trusts)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--244e79dd-feb3-489e-a805-e89589307489",
+    "created": "2024-08-13T14:51:22.074142Z",
+    "modified": "2024-08-13T14:51:22.074145Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--b89cf650-bebe-4fe2-a7f7-059a2fe1dcef",
+    "target_ref": "malware-behavior--51dea151-0898-4a45-967c-3ebee0420484",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor authentication logs and analyze for unusual access patterns. A remote desktop logon, through\u00a0RDP, may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.\n\nAnalytic 1\n\n<code>source=\"*WinEventLog:Security\" EventCode=\"4624\" AND LogonType=\"10\" AND AuthenticationPackageName=\"Negotiate\" AND TargetUserName=\"Admin*\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

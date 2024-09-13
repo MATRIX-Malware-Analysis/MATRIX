@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0e98e309-eada-472f-895c-650f12b4dcc9",
+    "created": "2024-08-13T14:51:23.236594Z",
+    "modified": "2024-08-13T14:51:23.236596Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e53669da-6830-4650-af6b-bc3d273c8eca",
+    "target_ref": "malware-behavior--c3d4bdd9-2cfe-4a80-9d0c-07a29ecdce8f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for an attempt by a user to gain access to a network or computing resource, often by the use of domain authentication services, such as the System Security Services Daemon (sssd) on Linux\n\nNote:\n\n- For Windows, Security Logs events, including Event ID 4624, can be monitored to track user login behavior.\n- For Linux, auditing frameworks that support File Integrity Monitoring (FIM), including the audit daemon (auditd), can be used to alert on changes to files that store login information. These files include: <code>/etc/login.defs</code>,<code> /etc/securetty</code>,<code> /var/log/faillog</code>,<code> /var/log/lastlog</code>,<code> /var/log/tallylog</code>.\n- For MacOS, auditing frameworks that support capturing information on user logins, such as OSQuery, can be used to audit user account logins and authentications. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5d595ccd-4eec-4de9-8a50-037052937193",
+    "created": "2024-08-13T14:51:22.509424Z",
+    "modified": "2024-08-13T14:51:22.509427Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--689fa20e-aeef-4c4d-9b32-352ca8e6ae89",
+    "target_ref": "malware-behavior--1d24cdee-9ea2-4189-b08e-af110bf2435d",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "US-CERT TA18-074A",
+            "description": "US-CERT. (2018, March 16). Alert (TA18-074A): Russian Government Cyber Activity Targeting Energy and Other Critical Infrastructure Sectors. Retrieved June 6, 2018.",
+            "url": "https://www.us-cert.gov/ncas/alerts/TA18-074A"
+        },
+        {
+            "source_name": "Kali Hydra",
+            "description": "Kali. (2014, February 18). THC-Hydra. Retrieved November 2, 2017.",
+            "url": "https://tools.kali.org/password-attacks/hydra"
+        }
+    ],
+    "description": "[Dragonfly](https://attack.mitre.org/groups/G0035) has dropped and executed tools used for password cracking, including Hydra and [CrackMapExec](https://attack.mitre.org/software/S0488).(Citation: US-CERT TA18-074A)(Citation: Kali Hydra)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

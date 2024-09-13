@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--53f4c98b-f8c1-4d3a-b9dd-85b2c5745be4",
+    "created": "2024-08-13T14:51:23.661018Z",
+    "modified": "2024-08-13T14:51:23.661020Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--011d3c07-3bd7-4c61-986d-95e034aa460a",
+    "target_ref": "malware-behavior--01c15da3-9f86-4d0a-aab5-fcee81a9c282",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cary Esentutl",
+            "description": "Cary, M. (2018, December 6). Locked File Access Using ESENTUTL.exe. Retrieved September 5, 2019.",
+            "url": "https://dfironthemountain.wordpress.com/2018/12/06/locked-file-access-using-esentutl-exe/"
+        },
+        {
+            "source_name": "LOLBAS Esentutl",
+            "description": "LOLBAS. (n.d.). Esentutl.exe. Retrieved September 3, 2019.",
+            "url": "https://lolbas-project.github.io/lolbas/Binaries/Esentutl/"
+        }
+    ],
+    "description": "[esentutl](https://attack.mitre.org/software/S0404) can use the Volume Shadow Copy service to copy locked files such as `ntds.dit`.(Citation: LOLBAS Esentutl)(Citation: Cary Esentutl)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

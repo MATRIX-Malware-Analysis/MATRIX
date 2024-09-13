@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--10ac4d07-1dba-43df-9db5-72595993b9ab",
+    "created": "2024-08-13T14:51:22.474888Z",
+    "modified": "2024-08-13T14:51:22.474890Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--8ee1c430-6f6b-44f7-94a2-9c2291cb3872",
+    "target_ref": "malware-behavior--ce0687a0-e692-4b77-964a-0784a8e54ff1",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Splunk Kovar Certificates 2017",
+            "description": "Kovar, R. (2017, December 11). Tall Tales of Hunting with TLS/SSL Certificates. Retrieved October 16, 2020.",
+            "url": "https://www.splunk.com/en_us/blog/security/tall-tales-of-hunting-with-tls-ssl-certificates.html"
+        },
+        {
+            "source_name": "Recorded Future Beacon Certificates",
+            "description": "Insikt Group. (2019, June 18). A Multi-Method Approach to Identifying Rogue Cobalt Strike Servers. Retrieved October 16, 2020.",
+            "url": "https://www.recordedfuture.com/cobalt-strike-servers/"
+        }
+    ],
+    "description": "Consider use of services that may aid in the tracking of newly issued certificates and/or certificates in use on sites across the Internet. In some cases it may be possible to pivot on known pieces of certificate information to uncover other adversary infrastructure.(Citation: Splunk Kovar Certificates 2017) Some server-side components of adversary tools may have default values set for SSL/TLS certificates.(Citation: Recorded Future Beacon Certificates) Much of this activity will take place outside the visibility of the target organization, making detection of this behavior difficult. Detection efforts may be focused on related stages of the adversary lifecycle, such as during Defense Evasion or Command and Control.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

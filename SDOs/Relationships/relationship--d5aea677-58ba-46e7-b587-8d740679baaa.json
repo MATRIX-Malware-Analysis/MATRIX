@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d5aea677-58ba-46e7-b587-8d740679baaa",
+    "created": "2024-08-13T14:51:21.833604Z",
+    "modified": "2024-08-13T14:51:21.833607Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f281ede9-e0a3-413a-b374-d75be647e966",
+    "target_ref": "malware-behavior--2dbbdcd5-92cf-44c0-aea2-fe24783a6bc3",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Requests for Azure AD Roles in Privileged Identity Management",
+            "description": "Microsoft. (2023, January 30). Approve or deny requests for Azure AD roles in Privileged Identity Management. Retrieved February 21, 2023.",
+            "url": "https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/azure-ad-pim-approval-workflow"
+        }
+    ],
+    "description": "Ensure that all accounts use the least privileges they require. In Azure AD environments, consider using Privileged Identity Management (PIM) to define roles that require two or more approvals before assignment to users.(Citation: Microsoft Requests for Azure AD Roles in Privileged Identity Management)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

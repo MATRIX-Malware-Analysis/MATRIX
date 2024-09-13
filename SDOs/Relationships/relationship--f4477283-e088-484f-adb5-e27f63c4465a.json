@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f4477283-e088-484f-adb5-e27f63c4465a",
+    "created": "2024-08-13T14:51:22.886540Z",
+    "modified": "2024-08-13T14:51:22.886542Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--005cc321-08ce-4d17-b1ea-cb5275926520",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "crowdstrike bpf socket filters",
+            "description": "Jamie Harries. (2022, May 25). Hunting a Global Telecommunications Threat: DecisiveArchitect and Its Custom Implant JustForFun. Retrieved October 18, 2022.",
+            "url": "https://www.crowdstrike.com/blog/how-to-hunt-for-decisivearchitect-and-justforfun-implant/"
+        }
+    ],
+    "description": "Monitor recently started applications creating raw socket connections.(Citation: crowdstrike bpf socket filters)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

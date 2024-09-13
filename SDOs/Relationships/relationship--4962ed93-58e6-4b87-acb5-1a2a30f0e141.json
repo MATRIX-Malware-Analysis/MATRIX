@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4962ed93-58e6-4b87-acb5-1a2a30f0e141",
+    "created": "2024-08-13T14:51:23.135170Z",
+    "modified": "2024-08-13T14:51:23.135172Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--6ee74857-9ba1-4998-a18b-198e314f1ce6",
+    "target_ref": "malware-behavior--1c338d0f-a65e-4073-a5c1-c06878849f21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Securelist LuckyMouse June 2018",
+            "description": "Legezo, D. (2018, June 13). LuckyMouse hits national data center to organize country-level waterholing campaign. Retrieved August 18, 2018.",
+            "url": "https://securelist.com/luckymouse-hits-national-data-center/86083/"
+        },
+        {
+            "source_name": "Nccgroup Emissary Panda May 2018",
+            "description": "Pantazopoulos, N., Henry T. (2018, May 18). Emissary Panda \u2013 A potential new malicious tool. Retrieved June 25, 2018.",
+            "url": "https://research.nccgroup.com/2018/05/18/emissary-panda-a-potential-new-malicious-tool/"
+        }
+    ],
+    "description": "A [Threat Group-3390](https://attack.mitre.org/groups/G0027) tool can spawn `svchost.exe` and inject the payload into that process.(Citation: Nccgroup Emissary Panda May 2018)(Citation: Securelist LuckyMouse June 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--13457795-a55c-4d11-b79b-8bd512313d41",
+    "created": "2024-08-13T14:48:38.238276Z",
+    "modified": "2024-08-13T14:48:38.23828Z",
+    "relationship_type": "uses",
+    "description": "Stuxnet enumerates and parses the System Data Blocks (SDB) using the s7blk_findfirst and s7blk_findnext API calls in s7otbxdx.dll. Stuxnet must find an SDB with the DWORD at offset 50h equal to 0100CB2Ch. This specifies that the system uses the Profibus communications processor module CP 342-5. In addition, specific values are searched for and counted: 7050h and 9500h. 7050h is assigned to part number KFC750V3 which appears to be a frequency converter drive (also known as variable frequency drive) manufactured by Fararo Paya in Teheran, Iran. 9500h is assigned to Vacon NX frequency converter drives manufactured by Vacon based in Finland.[1]Stuxnet was specifically targeting CPUs 6ES7-315-2 (Series 300) with special system data block characteristics for sequence A or B and 6ES7-315-2 for sequence C. The PLC type can also be checked using the s7ag_read_szl API.[1]",
+    "source_ref": "malware--762260c9-8d3d-4eaa-b22e-b5326f18f2ff",
+    "target_ref": "malware-behavior--d97bbbb5-03bc-4008-8eec-98f6ad983f65",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

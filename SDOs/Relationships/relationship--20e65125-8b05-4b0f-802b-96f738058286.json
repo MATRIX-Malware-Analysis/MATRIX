@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--20e65125-8b05-4b0f-802b-96f738058286",
+    "created": "2024-08-13T14:51:23.506028Z",
+    "modified": "2024-08-13T14:51:23.506030Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fa72aed2-8367-49d7-9769-15731cda0d75",
+    "target_ref": "malware-behavior--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Huntress API Hash",
+            "description": "Brennan, M. (2022, February 16). Hackers No Hashing: Randomizing API Hashes to Evade Cobalt Strike Shellcode Detection. Retrieved August 22, 2022.",
+            "url": "https://www.huntress.com/blog/hackers-no-hashing-randomizing-api-hashes-to-evade-cobalt-strike-shellcode-detection"
+        },
+        {
+            "source_name": "BlackHat API Packers",
+            "description": "Choi, S. (2015, August 6). Obfuscated API Functions in Modern Packers. Retrieved August 22, 2022.",
+            "url": "https://www.blackhat.com/docs/us-15/materials/us-15-Choi-API-Deobfuscator-Resolving-Obfuscated-API-Functions-In-Modern-Packers.pdf"
+        },
+        {
+            "source_name": "MITRECND FindAPIHash",
+            "description": "Jason (jxb5151). (2021, January 28). findapihash.py. Retrieved August 22, 2022.",
+            "url": "https://github.com/MITRECND/malchive/blob/main/malchive/utilities/findapihash.py"
+        }
+    ],
+    "description": "Monitor for contextual data about a file, which may include information such as name, the content (ex: signature, headers, or data/media), user/owner, permissions, etc.\n\nFile-based signatures may be capable of detecting code obfuscation depending on the methods used.(Citation: Huntress API Hash)(Citation: BlackHat API Packers)(Citation: MITRECND FindAPIHash)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

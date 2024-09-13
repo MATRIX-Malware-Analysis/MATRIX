@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--3663435b-cb43-43ce-aa8d-f18d1f6f6c9d",
+    "created": "2024-08-13T14:51:22.541888Z",
+    "modified": "2024-08-13T14:51:22.541890Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--d194debb-92f8-44cd-86cb-27844b2d0f6d",
+    "target_ref": "malware-behavior--7a79bdd9-e5eb-42f2-b9f5-9e5e101a4688",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "MDSec Detecting DOTNET",
+            "description": "MDSec Research. (n.d.). Detecting and Advancing In-Memory .NET Tradecraft. Retrieved October 4, 2021.",
+            "url": "https://www.mdsec.co.uk/2020/06/detecting-and-advancing-in-memory-net-tradecraft/"
+        },
+        {
+            "source_name": "Introducing Donut",
+            "description": "The Wover. (2019, May 9). Donut - Injecting .NET Assemblies as Shellcode. Retrieved October 4, 2021.",
+            "url": "https://thewover.github.io/Introducing-Donut/"
+        }
+    ],
+    "description": "Similarly, AMSI / ETW traces can be used to identify signs of arbitrary code execution from within the memory of potentially compromised processes.(Citation: MDSec Detecting DOTNET)(Citation: Introducing Donut)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

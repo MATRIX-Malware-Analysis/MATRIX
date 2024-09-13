@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--55629be1-f705-4efd-b267-37155ce999f4",
+    "created": "2024-08-13T14:51:22.539521Z",
+    "modified": "2024-08-13T14:51:22.539524Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--f17f3cef-842b-4e2d-aed0-9e4a75ca08c0",
+    "target_ref": "malware-behavior--56ff457d-5e39-492b-974c-dfd2b8603ffe",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "cisco_deploy_rsa_keys",
+            "description": "Cisco. (2023, February 17). Chapter: Deploying RSA Keys Within a PKI . Retrieved March 27, 2023.",
+            "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_conn_pki/configuration/xe-17/sec-pki-xe-17-book/sec-deploy-rsa-pki.html#GUID-1CB802D8-9DE3-447F-BECE-CF22F5E11436"
+        }
+    ],
+    "description": "Ensure permissions are properly set on folders containing sensitive private keys to prevent unintended access. Additionally, on Cisco devices, set the `nonexportable` flag during RSA key pair generation.(Citation: cisco_deploy_rsa_keys)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

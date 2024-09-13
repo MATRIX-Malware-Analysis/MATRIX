@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--70e0cb65-c506-4bda-8cd4-9f4932193274",
+    "created": "2024-08-13T14:51:23.607602Z",
+    "modified": "2024-08-13T14:51:23.607605Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--49deae61-5c33-4162-b4fe-87b5df1143af",
+    "target_ref": "malware-behavior--c59801f3-3c5d-4803-b95b-09b99df10799",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "There are multiple methods of preventing a user's command history from being flushed to their .bash_history file, including use of the following commands:\n<code>set +o history</code> and <code>set -o history</code> to start logging again;\n<code>unset HISTFILE</code> being added to a user's .bash_rc file; and\n<code>ln -s /dev/null ~/.bash_history</code> to write commands to <code>/dev/null</code>instead.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

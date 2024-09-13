@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--19b8e3ed-b9ce-4ed1-ad17-f584d7a1ed5a",
+    "created": "2024-08-13T14:48:38.898203Z",
+    "modified": "2024-08-13T14:48:38.898207Z",
+    "relationship_type": "uses",
+    "description": "When executing with non-root permissions, RotaJakiro uses the the shmget API to create shared memory between other known RotaJakiro processes. RotaJakiro also uses the execvp API to help its dead process \"resurrect\".[1]",
+    "source_ref": "malware--54adbf94-0b1d-4c5b-8178-b377397b09d1",
+    "target_ref": "malware-behavior--05e65b50-ae0c-4f44-a3fd-69c07ec955c2",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

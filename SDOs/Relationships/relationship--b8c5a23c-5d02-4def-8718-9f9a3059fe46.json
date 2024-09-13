@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b8c5a23c-5d02-4def-8718-9f9a3059fe46",
+    "created": "2024-08-13T14:51:23.631258Z",
+    "modified": "2024-08-13T14:51:23.631260Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--2acf44aa-542f-4366-b4eb-55ef5747759c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "<code>cron</code> permissions are controlled by <code>/etc/cron.allow and /etc/cron.deny</code>. If there is a <code>cron.allow</code> file, then the user or users that need to use <code>cron</code> will need to be listed in the file. <code>cron.deny</code> is used to explicitly disallow users from using cron. If neither files exist, then only the super user is allowed to run cron.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

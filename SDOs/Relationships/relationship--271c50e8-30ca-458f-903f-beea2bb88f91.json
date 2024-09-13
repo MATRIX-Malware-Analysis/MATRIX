@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--271c50e8-30ca-458f-903f-beea2bb88f91",
+    "created": "2024-08-13T14:51:21.687678Z",
+    "modified": "2024-08-13T14:51:21.687680Z",
+    "relationship_type": "uses",
+    "source_ref": "campaign--8a62000f-021f-4220-9716-2e76d9627b69",
+    "target_ref": "malware-behavior--1f9c2bae-b441-4f66-a8af-b65946ee72f2",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft - Customer Guidance on Recent Nation-State Cyber Attacks",
+            "description": "MSRC. (2020, December 13). Customer Guidance on Recent Nation-State Cyber Attacks. Retrieved December 30, 2020.",
+            "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+        },
+        {
+            "source_name": "Secureworks IRON RITUAL Profile",
+            "description": "Secureworks CTU. (n.d.). IRON RITUAL. Retrieved February 24, 2022.",
+            "url": "https://www.secureworks.com/research/threat-profiles/iron-ritual"
+        }
+    ],
+    "description": "During the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024), [APT29](https://attack.mitre.org/groups/G0016) created tokens using compromised SAML signing certificates.(Citation: Microsoft - Customer Guidance on Recent Nation-State Cyber Attacks)(Citation: Secureworks IRON RITUAL Profile)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

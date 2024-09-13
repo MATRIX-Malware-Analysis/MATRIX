@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--a43dbef1-fd79-4f58-85fc-df8d1b2a94e8",
+    "created": "2024-08-13T14:51:23.312154Z",
+    "modified": "2024-08-13T14:51:23.312156Z",
+    "relationship_type": "uses",
+    "source_ref": "tool--99d26007-c434-4f72-9d21-c08a2db8dbcb",
+    "target_ref": "malware-behavior--e64c62cf-9cd7-4a14-94ec-cdaac43ab44b",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Palo Alto Brute Ratel July 2022",
+            "description": "Harbison, M. and Renals, P. (2022, July 5). When Pentest Tools Go Brutal: Red-Teaming Tool Being Abused by Malicious Actors. Retrieved February 1, 2023.",
+            "url": "https://unit42.paloaltonetworks.com/brute-ratel-c4-tool/"
+        }
+    ],
+    "description": "[Brute Ratel C4](https://attack.mitre.org/software/S1063) has loaded a malicious DLL by spoofing the name of the legitimate Version.DLL  and placing it in the same folder as the digitally-signed Microsoft binary OneDriveUpdater.exe.(Citation: Palo Alto Brute Ratel July 2022)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d92a2fae-3a29-40e0-aa87-125608ab3a4c",
+    "created": "2024-08-13T14:51:23.076696Z",
+    "modified": "2024-08-13T14:51:23.076699Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--ca2fd822-8738-4d5b-b37e-fabbe56eef07",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html",
+            "description": "Sardiwal, M, et al. (2017, December 7). New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit. Retrieved December 20, 2017.",
+            "source_name": "FireEye APT34 Dec 2017"
+        },
+        {
+            "url": "https://researchcenter.paloaltonetworks.com/2017/10/unit42-oilrig-group-steps-attacks-new-delivery-documents-new-injector-trojan/",
+            "description": "Falcone, R. and Lee, B. (2017, October 9). OilRig Group Steps Up Attacks with New Delivery Documents and New Injector Trojan. Retrieved January 8, 2018.",
+            "source_name": "OilRig New Delivery Oct 2017"
+        },
+        {
+            "description": "Meyers, A. (2018, November 27). Meet CrowdStrike\u2019s Adversary of the Month for November: HELIX KITTEN. Retrieved December 18, 2018.",
+            "url": "https://www.crowdstrike.com/blog/meet-crowdstrikes-adversary-of-the-month-for-november-helix-kitten/",
+            "source_name": "Crowdstrike Helix Kitten Nov 2018"
+        }
+    ],
+    "description": "[OilRig](https://attack.mitre.org/groups/G0049) has used PowerShell scripts for execution, including use of a macro to run a PowerShell command to decode file contents.(Citation: FireEye APT34 Dec 2017)(Citation: OilRig New Delivery Oct 2017)(Citation: Crowdstrike Helix Kitten Nov 2018)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

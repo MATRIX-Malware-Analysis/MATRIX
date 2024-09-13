@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--0f2aa89f-9ae5-4ac5-99cf-4eafc9821245",
+    "created": "2024-08-13T14:51:23.161667Z",
+    "modified": "2024-08-13T14:51:23.161669Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--e0033c16-a07e-48aa-8204-7c3ca669998c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "monitor service creation that uses cmd.exe /k or cmd.exe /c in its arguments to detect RDP session hijacking. Windows PowerShell log Event ID 4104 (PS script execution) can be used to capture PowerShell script block contents which may contain commands used as a precursor to RDP hijacking. For example, the following command in a PowerShell script block may be used to enumerate the systems on a network which have RDP access: <code>Find-DomainLocalGroupMember -GroupName \"Remote Desktop Users\" | select -expand ComputerName</code>.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

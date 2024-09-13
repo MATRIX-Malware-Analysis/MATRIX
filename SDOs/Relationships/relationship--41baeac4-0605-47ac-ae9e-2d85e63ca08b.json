@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--41baeac4-0605-47ac-ae9e-2d85e63ca08b",
+    "created": "2024-08-13T14:51:23.590251Z",
+    "modified": "2024-08-13T14:51:23.590254Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--b46a801b-fd98-491c-a25a-bca25d6e3001",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft IIS Modules Overview 2007",
+            "description": "Microsoft. (2007, November 24). IIS Modules Overview. Retrieved June 17, 2021.",
+            "url": "https://docs.microsoft.com/en-us/iis/get-started/introduction-to-iis/iis-modules-overview"
+        },
+        {
+            "source_name": "ESET IIS Malware 2021",
+            "description": "Hromcov\u00e1, Z., Cherepanov, A. (2021). Anatomy of Native IIS Malware. Retrieved September 9, 2021.",
+            "url": "https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-Anatomy-Of-Native-Iis-Malware-wp.pdf"
+        }
+    ],
+    "description": "Monitor for modification of files (especially DLLs on webservers) that could be abused as malicious ISAPI extensions/filters or IIS modules. Changes to <code>%windir%\\system32\\inetsrv\\config\\applicationhost.config</code> could indicate an IIS module installation.(Citation: Microsoft IIS Modules Overview 2007)(Citation: ESET IIS Malware 2021)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

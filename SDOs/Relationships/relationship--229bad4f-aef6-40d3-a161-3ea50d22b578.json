@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--229bad4f-aef6-40d3-a161-3ea50d22b578",
+    "created": "2024-08-13T14:51:22.860926Z",
+    "modified": "2024-08-13T14:51:22.860928Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--2d67fcbb-ea38-4d49-9c42-3890db5b704a",
+    "target_ref": "malware-behavior--f3d95a1f-bba2-44ce-9af7-37866cd63fd0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Limit privileges of user accounts and remediate Privilege Escalation vectors so only authorized administrators can create scheduled tasks on remote systems. In Linux environments, users account-level access to <code>[at](https://attack.mitre.org/software/S0110)</code> can be managed using <code>at.allow</code> and <code>at.deny</code> files. Users listed in the at.allow are enabled to schedule actions using at, whereas users listed in at.deny file disabled from the utility.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

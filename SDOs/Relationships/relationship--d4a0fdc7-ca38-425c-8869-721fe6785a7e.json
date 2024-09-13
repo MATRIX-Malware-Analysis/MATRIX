@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d4a0fdc7-ca38-425c-8869-721fe6785a7e",
+    "created": "2024-08-13T14:51:23.624612Z",
+    "modified": "2024-08-13T14:51:23.624614Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--29867d3f-afc4-4f3a-8eaa-351403187805",
+    "target_ref": "malware-behavior--8c5b6355-8c56-4723-8628-bab0e67ea9cc",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Docker Daemon Socket Protect",
+            "description": "Docker. (n.d.). Protect the Docker Daemon Socket. Retrieved March 29, 2021.",
+            "url": "https://docs.docker.com/engine/security/protect-access/"
+        },
+        {
+            "source_name": "Kubernetes Cloud Native Security",
+            "description": "Kubernetes. (n.d.). Overview of Cloud Native Security. Retrieved March 8, 2023.",
+            "url": "https://kubernetes.io/docs/concepts/security/overview/"
+        },
+        {
+            "source_name": "Microsoft AKS Azure AD 2023",
+            "description": "Microsoft. (2023, February 27). AKS-managed Azure Active Directory integration. Retrieved March 8, 2023.",
+            "url": "https://learn.microsoft.com/en-us/azure/aks/managed-aad"
+        },
+        {
+            "source_name": "Kubernetes API Control Access",
+            "description": "The Kubernetes Authors. (n.d.). Controlling Access to The Kubernetes API. Retrieved March 29, 2021.",
+            "url": "https://kubernetes.io/docs/concepts/security/controlling-access/"
+        }
+    ],
+    "description": "Limit communications with the container service to managed and secured channels, such as local Unix sockets or remote access via SSH. Require secure port access to communicate with the APIs over TLS by disabling unauthenticated access to the Docker API and Kubernetes API Server.(Citation: Docker Daemon Socket Protect)(Citation: Kubernetes API Control Access) In Kubernetes clusters deployed in cloud environments, use native cloud platform features to restrict the IP ranges that are permitted to access to API server.(Citation: Kubernetes Cloud Native Security) Where possible, consider enabling just-in-time (JIT) access to the Kubernetes API to place additional restrictions on access.(Citation: Microsoft AKS Azure AD 2023)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

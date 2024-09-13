@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e6098c09-e82e-4fd3-bb5b-63e5abaa03a0",
+    "created": "2024-08-13T14:51:23.108714Z",
+    "modified": "2024-08-13T14:51:23.108716Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--43bb3aa8-8b35-4cbc-831d-79e2bacc5879",
+    "target_ref": "malware-behavior--43881e51-ac74-445b-b4c6-f9f9e9bf23fe",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor DLLs that are loaded by spoolsv.exe for DLLs that are abnormal. New DLLs written to the System32 directory that do not correlate with known good software or patching may be suspicious.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

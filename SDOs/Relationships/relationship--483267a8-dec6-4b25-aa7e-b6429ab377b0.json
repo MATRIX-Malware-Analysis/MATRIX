@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--483267a8-dec6-4b25-aa7e-b6429ab377b0",
+    "created": "2024-08-13T14:51:22.813246Z",
+    "modified": "2024-08-13T14:51:22.813248Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--c81b160c-fa1d-4889-b6af-cafc0f549a0e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Powersploit",
+            "url": "https://github.com/mattifestation/PowerSploit",
+            "description": "PowerSploit. (n.d.). Retrieved December 4, 2014."
+        }
+    ],
+    "description": "Monitor executed commands and arguments that may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password, from the operating system and software. Look for command-lines that invoke AuditD or the Security Accounts Manager (SAM). Remote access tools may contain built-in features or incorporate existing tools like [Mimikatz](https://attack.mitre.org/software/S0002). [PowerShell](https://attack.mitre.org/techniques/T1059/001) scripts also exist that contain credential dumping functionality, such as PowerSploit's Invoke-Mimikatz module, (Citation: Powersploit) which may require additional logging features to be configured in the operating system to collect necessary information for analysis.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--eb4e7410-5750-4369-a7c5-1837fb8550f5",
+    "created": "2024-08-13T14:51:22.093311Z",
+    "modified": "2024-08-13T14:51:22.093313Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--e1fd5245-0534-4c20-bd62-0bc8707b0ea9",
+    "target_ref": "malware-behavior--438c967d-3996-4870-bfc2-3954752a1927",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for changes made to generated artifacts on a host system, including logs or captured files such as quarantined emails. \n\nOn Windows 10, mail application data is stored in <code>C:\\Users\\Username\\AppData\\Local\\Comms\\Unistore\\data</code>. On Linux, mail data is stored in <code>/var/spool/mail</code> or <code>/var/mail</code>. On macOS, mail data is stored in <code>~/Library/Mail</code>.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

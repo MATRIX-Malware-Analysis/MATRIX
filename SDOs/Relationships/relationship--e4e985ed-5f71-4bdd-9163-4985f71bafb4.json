@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e4e985ed-5f71-4bdd-9163-4985f71bafb4",
+    "created": "2024-08-13T14:51:21.924136Z",
+    "modified": "2024-08-13T14:51:21.924138Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--df438fb1-fe5f-49d5-a48e-c52bbc8fd219",
+    "target_ref": "malware-behavior--818302b2-d640-477b-bf88-873120ce85c4",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Cisco IOS Software Integrity Assurance - Command History",
+            "url": "https://tools.cisco.com/security/center/resources/integrity_assurance.html#23",
+            "description": "Cisco. (n.d.). Cisco IOS Software Integrity Assurance - Command History. Retrieved October 21, 2020."
+        }
+    ],
+    "description": "Consider reviewing command history in either the console or as part of the running memory to determine if unauthorized or suspicious commands were used to modify device configuration. (Citation: Cisco IOS Software Integrity Assurance - Command History) Consider comparing a copy of the network device configuration against a known-good version to discover unauthorized changes to the command interpreter. The same process can be accomplished through a comparison of the run-time memory, though this is non-trivial and may require assistance from the vendor.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--24e411d3-defd-4bbc-a593-1dda7e613943",
+    "created": "2024-08-13T14:51:21.794102Z",
+    "modified": "2024-08-13T14:51:21.794104Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1d5b3b74-1c67-4c50-8642-6f354efb039c",
+    "target_ref": "malware-behavior--79a47ad0-fc3b-4821-9f01-a026b1ddba21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "CrowdStrike Outlook Forms",
+            "description": "Parisi, T., et al. (2017, July). Using Outlook Forms for Lateral Movement and Persistence. Retrieved February 5, 2019.",
+            "url": "https://malware.news/t/using-outlook-forms-for-lateral-movement-and-persistence/13746"
+        },
+        {
+            "source_name": "Outlook Today Home Page",
+            "description": "Soutcast. (2018, September 14). Outlook Today Homepage Persistence. Retrieved February 5, 2019.",
+            "url": "https://medium.com/@bwtech789/outlook-today-homepage-persistence-33ea9b505943"
+        }
+    ],
+    "description": "Collect events related to Registry key creation for keys that could be used for Office-based persistence.(Citation: CrowdStrike Outlook Forms)(Citation: Outlook Today Home Page)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

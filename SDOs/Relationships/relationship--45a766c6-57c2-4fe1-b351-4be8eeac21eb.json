@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--45a766c6-57c2-4fe1-b351-4be8eeac21eb",
+    "created": "2024-08-13T14:48:38.007504Z",
+    "modified": "2024-08-13T14:48:38.007508Z",
+    "relationship_type": "uses",
+    "description": "Conti can use CreateIoCompletionPort(), PostQueuedCompletionStatus(), and GetQueuedCompletionPort() to rapidly encrypt files, excluding those with the extensions of .exe, .dll, and .lnk. It has used a different AES-256 encryption key per file with a bundled RAS-4096 public encryption key that is unique for each victim. Conti can use \"Windows Restart Manager\" to ensure files are unlocked and open for encryption.[1][2][3][5][4]",
+    "source_ref": "malware--4c33d901-586a-4692-aa97-6a37f7f93472",
+    "target_ref": "malware-behavior--6d2ec166-db50-400a-a0d9-a9b0986d6277",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

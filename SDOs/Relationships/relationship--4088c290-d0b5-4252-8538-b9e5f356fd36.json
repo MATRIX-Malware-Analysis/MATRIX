@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--4088c290-d0b5-4252-8538-b9e5f356fd36",
+    "created": "2024-08-13T14:51:23.157640Z",
+    "modified": "2024-08-13T14:51:23.157642Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--39babd00-25c9-4ec7-af99-8be67c904175",
+    "target_ref": "malware-behavior--026dd879-942d-478f-b322-fac18917f0d0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for newly constructed network connections that may use fallback or alternate communication channels if the primary channel is compromised or inaccessible in order to maintain reliable command and control and to avoid data transfer thresholds. Processes utilizing the network that do not normally have network communication or have never been seen before may be suspicious.\n\nNote: Network Analysis frameworks such as Zeek can be used to capture, decode, and alert on TCP network connection creation. The below analytic is using an event ID from OSQuery. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

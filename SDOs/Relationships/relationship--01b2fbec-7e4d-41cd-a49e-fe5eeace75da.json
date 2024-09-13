@@ -1,0 +1,38 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--01b2fbec-7e4d-41cd-a49e-fe5eeace75da",
+    "created": "2024-08-13T14:51:23.032474Z",
+    "modified": "2024-08-13T14:51:23.032476Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--8566da02-b11f-46d7-9e23-f82149412d56",
+    "target_ref": "malware-behavior--cf28ca46-1fd3-46b4-b1f6-ec0b72361848",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Novetta Blockbuster",
+            "description": "Novetta Threat Research Group. (2016, February 24). Operation Blockbuster: Unraveling the Long Thread of the Sony Attack. Retrieved February 25, 2016.",
+            "url": "https://web.archive.org/web/20160226161828/https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-Report.pdf"
+        },
+        {
+            "source_name": "Qualys LolZarus",
+            "description": "Pradhan, A. (2022, February 8). LolZarus: Lazarus Group Incorporating Lolbins into Campaigns. Retrieved March 22, 2022.",
+            "url": "https://blog.qualys.com/vulnerabilities-threat-research/2022/02/08/lolzarus-lazarus-group-incorporating-lolbins-into-campaigns"
+        },
+        {
+            "source_name": "Lazarus APT January 2022",
+            "description": "Saini, A. and Hossein, J. (2022, January 27). North Korea\u2019s Lazarus APT leverages Windows Update client, GitHub in latest campaign. Retrieved January 27, 2022.",
+            "url": "https://blog.malwarebytes.com/threat-intelligence/2022/01/north-koreas-lazarus-apt-leverages-windows-update-client-github-in-latest-campaign/"
+        },
+        {
+            "source_name": "McAfee GhostSecret",
+            "description": "Sherstobitoff, R., Malhotra, A. (2018, April 24). Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide. Retrieved May 16, 2018.",
+            "url": "https://securingtomorrow.mcafee.com/mcafee-labs/analyzing-operation-ghostsecret-attack-seeks-to-steal-data-worldwide/"
+        }
+    ],
+    "description": "[Lazarus Group](https://attack.mitre.org/groups/G0032) malware can use a common function to identify target files by their extension, and some also enumerate files and directories, including a Destover-like variant that lists files and gathers information for all drives.(Citation: Novetta Blockbuster)(Citation: McAfee GhostSecret)(Citation: Lazarus APT January 2022)(Citation: Qualys LolZarus)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

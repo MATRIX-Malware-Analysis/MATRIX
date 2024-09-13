@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9d095347-ac71-4dd2-9952-6c34bbf85b8a",
+    "created": "2024-08-13T14:51:22.379129Z",
+    "modified": "2024-08-13T14:51:22.379131Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--7da5d5d1-6644-4d7f-a46f-067cb63f0bbc",
+    "target_ref": "malware-behavior--adf634bd-c4c3-4a56-862e-452637ef5853",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for contextual data about a scheduled job, which may include information such as name, timing, command(s), etc.\n\nOn Windows, Event ID 4698 (Security Log - A scheduled task was created) can be used to alert on the creation of scheduled tasks and provides metadata including the task name and task content (as XML).\n\nOn Linux, auditing frameworks such as the Linux Auditing System (auditd) can be used to alert on invocations of cron, and provides the metadata included when executing the command. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

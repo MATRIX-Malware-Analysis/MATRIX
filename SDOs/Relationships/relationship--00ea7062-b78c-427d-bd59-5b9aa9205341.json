@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--00ea7062-b78c-427d-bd59-5b9aa9205341",
+    "created": "2024-08-13T14:51:22.418769Z",
+    "modified": "2024-08-13T14:51:22.418773Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--2aa78dfd-cb6f-4c70-9408-137cfd96be49",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "In an attempt to avoid detection after compromising a machine, threat actors often try to disable Windows Defender. This is often done using \u201csc\u201d [service control], a legitimate tool provided by Microsoft for managing services. This action interferes with event detection and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.\n\nNote: Though this analytic is utilizing Event ID 1 for process creation, the arguments are specifically looking for the use of service control for querying or trying to stop Windows Defender.\n\nAnalytic 1 - Detecting Tampering of Windows Defender Command Prompt\n\n<code>(source=\"WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"1\") OR (source=\"WinEventLog:Security\" EventCode=\"4688\") Image=\"C:\\\\Windows\\\\System32\\\\sc.exe\" (CommandLine=\"sc *config*\" OR CommandLine=\"sc *stop*\" OR CommandLine=\"sc *query*\" )</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

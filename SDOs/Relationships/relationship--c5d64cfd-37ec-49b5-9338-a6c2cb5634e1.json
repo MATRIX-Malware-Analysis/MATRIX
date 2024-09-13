@@ -1,0 +1,14 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--c5d64cfd-37ec-49b5-9338-a6c2cb5634e1",
+    "created": "2024-08-13T14:48:40.321627Z",
+    "modified": "2024-08-13T14:48:40.321631Z",
+    "relationship_type": "uses",
+    "description": "If a victim meets certain criteria, T9000 uses the AppInit_DLL functionality to achieve persistence by ensuring that every user mode process that is spawned will load its malicious DLL, ResN32.dll. It does this by creating the following Registry keys: HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\AppInit_DLLs \u2013 %APPDATA%\\Intel\\ResN32.dll and HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\LoadAppInit_DLLs \u2013 0x1.[2]",
+    "source_ref": "malware--83d321f5-a541-41a7-b617-b7db21dd9932",
+    "target_ref": "malware-behavior--b6102888-16e4-42a5-a2c1-f217000b734d",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ]
+}

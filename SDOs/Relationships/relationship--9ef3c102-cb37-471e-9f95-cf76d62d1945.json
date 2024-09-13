@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--9ef3c102-cb37-471e-9f95-cf76d62d1945",
+    "created": "2024-08-13T14:51:23.634535Z",
+    "modified": "2024-08-13T14:51:23.634537Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--f6e0ab41-1bf0-4bcc-9ea1-798678b2704e",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft 4657 APR 2017",
+            "description": "Miroshnikov, A. & Hall, J. (2017, April 18). 4657(S): A registry value was modified. Retrieved August 9, 2018.",
+            "url": "https://docs.microsoft.com/windows/security/threat-protection/auditing/event-4657"
+        }
+    ],
+    "description": "Monitor for changes made to windows registry keys or values. Consider enabling Registry Auditing on specific keys to produce an alertable event (Event ID 4657) whenever a value is changed (though this may not trigger when values are created with Reghide or other evasive methods). (Citation: Microsoft 4657 APR 2017) Changes to Registry entries that load software on Windows startup that do not correlate with known software, patch cycles, etc., are suspicious, as are additions or changes to files within the startup folder. Changes could also include new services and modification of existing binary paths to point to malicious files. If a change to a service-related entry occurs, then it will likely be followed by a local or remote service start or restart to execute the file.\n\nDetection of modification of the registry key values of\u00a0Notify,\u00a0Userinit, and\u00a0Shell\u00a0located in\u00a0HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\\u00a0and\u00a0HKEY_LOCAL_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\. When a user logs on, the Registry key values of\u00a0Notify,\u00a0Userinit\u00a0and\u00a0Shell\u00a0are used to load dedicated Windows component. Attackers may insert malicious payload following the legitimate value to launch a malicious payload.\n\nDetection of the modification of the registry key\u00a0Common Startup\u00a0located in\u00a0HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\\u00a0and\u00a0HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\\. When a user logs on, any files located in the Startup Folder are launched. Attackers may modify these folders with other files in order to evade detection set on these default folders. This detection focuses on EventIDs 4688 and 1 for process creation and EventID 4657 for the modification of the Registry Keys.\n\nAnalytic 1 - Registry Edit with Modification of Userinit, Shell or Notify\n\n<code>source=\"*WinEventLog:Security\" EventCode=\"4657\" (ObjectValueName=\"Userinit\" OR ObjectValueName=\"Shell\" OR ObjectValueName=\"Notify\") OR source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"13\" (TargetObject=\"*Userinit\" OR TargetObject=\"*Shell\" OR TargetObject=\"*Notify\")</code>\n\nAnalytic 2 - Modification of Default Startup Folder in the Registry Key 'Common Startup'\n\n<code>(source=\"*WinEventLog:Security\" EventCode=\"4657\" ObjectValueName=\"Common Startup\") OR (source=\"*WinEventLog:Microsoft-Windows-Sysmon/Operational\" EventCode=\"13\" TargetObject=\"*Common Startup\")</code>",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

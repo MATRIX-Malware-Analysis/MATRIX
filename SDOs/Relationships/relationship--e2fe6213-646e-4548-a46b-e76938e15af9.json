@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e2fe6213-646e-4548-a46b-e76938e15af9",
+    "created": "2024-08-13T14:51:23.553834Z",
+    "modified": "2024-08-13T14:51:23.553836Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--a1f05fa3-21d3-42da-87a3-67231904029b",
+    "target_ref": "malware-behavior--6c174520-beea-43d9-aac6-28fb77f3e446",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "url": "http://docplayer.net/20839173-Analysis-of-malicious-security-support-provider-dlls.html",
+            "description": "Graeber, M. (2014, October). Analysis of Malicious Security Support Provider DLLs. Retrieved March 1, 2017.",
+            "source_name": "Graeber 2014"
+        },
+        {
+            "url": "https://technet.microsoft.com/en-us/library/dn408187.aspx",
+            "description": "Microsoft. (2013, July 31). Configuring Additional LSA Protection. Retrieved June 24, 2015.",
+            "source_name": "Microsoft Configure LSA"
+        }
+    ],
+    "description": "Windows 8.1, Windows Server 2012 R2, and later versions may make LSA run as a Protected Process Light (PPL) by setting the Registry key <code>HKLM\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\RunAsPPL</code>, which requires all SSP DLLs to be signed by Microsoft. (Citation: Graeber 2014) (Citation: Microsoft Configure LSA)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--5e0aee73-9794-4cbd-ad56-54b2b9f24103",
+    "created": "2024-08-13T14:51:23.877397Z",
+    "modified": "2024-08-13T14:51:23.877399Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--0935b964-b044-4905-9b60-dc5cc1712193",
+    "target_ref": "malware-behavior--c4f7f4fa-537e-441d-b6f4-720b5751e90c",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for executed processes (such as ipconfig/ifconfig and arp) with arguments that may look for details about the network configuration and settings, such as IP and/or MAC addresses. Also monitor for executed processes that may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--b27e7d7b-8248-40eb-81aa-a61acc24a339",
+    "created": "2024-08-13T14:51:22.336245Z",
+    "modified": "2024-08-13T14:51:22.336248Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--d194debb-92f8-44cd-86cb-27844b2d0f6d",
+    "target_ref": "malware-behavior--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor executed scripts for indicators of obfuscation and potentially suspicious command syntax, such as uninterpreted escape characters (e.g., `^`).\n\nAlso monitor commands within scripts for syntax-specific signs of obfuscation, such as encoded or otherwise unreadable blobs of characters.",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

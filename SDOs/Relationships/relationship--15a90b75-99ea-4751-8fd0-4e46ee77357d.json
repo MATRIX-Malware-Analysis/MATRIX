@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--15a90b75-99ea-4751-8fd0-4e46ee77357d",
+    "created": "2024-08-13T14:51:23.660110Z",
+    "modified": "2024-08-13T14:51:23.660112Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--172f171b-182a-49cb-bd99-fd1a9ad9ec65",
+    "target_ref": "malware-behavior--60d0c01d-e2bf-49dd-a453-f8a9c9fa6f65",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "NSA Spotting",
+            "description": "National Security Agency/Central Security Service Information Assurance Directorate. (2015, August 7). Spotting the Adversary with Windows Event Log Monitoring. Retrieved September 6, 2018.",
+            "url": "https://apps.nsa.gov/iaarchive/library/reports/spotting-the-adversary-with-windows-event-log-monitoring.cfm"
+        }
+    ],
+    "description": "If the service is necessary, lock down critical enclaves with separate WinRM infrastructure and follow WinRM best practices on use of host firewalls to restrict WinRM access to allow communication only to/from specific devices.(Citation: NSA Spotting)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

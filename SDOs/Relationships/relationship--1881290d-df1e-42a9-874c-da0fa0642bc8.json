@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--1881290d-df1e-42a9-874c-da0fa0642bc8",
+    "created": "2024-08-13T14:51:22.319358Z",
+    "modified": "2024-08-13T14:51:22.319360Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--81ad7b29-7c63-45e8-a7fd-344548f3a998",
+    "target_ref": "malware-behavior--8861073d-d1b8-4941-82ce-dce621d398f0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Protecting Microsoft 365 From On-Premises Attacks",
+            "description": "Microsoft. (2022, August 26). Protecting Microsoft 365 from on-premises attacks. Retrieved February 21, 2023.",
+            "url": "https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/protect-m365-from-on-premises-attacks"
+        }
+    ],
+    "description": "Monitor for newly constructed logon behavior to cloud services. For example, in Azure AD, consider using Identity Protection to monitor for suspicious login behaviors to cloud resources. (Citation: Protecting Microsoft 365 From On-Premises Attacks)",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

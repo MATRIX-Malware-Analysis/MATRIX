@@ -1,0 +1,23 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--177a23eb-5028-407e-b8c6-72cc28c18047",
+    "created": "2024-08-13T14:51:22.839445Z",
+    "modified": "2024-08-13T14:51:22.839447Z",
+    "relationship_type": "mitigates",
+    "source_ref": "course-of-action--49deae61-5c33-4162-b4fe-87b5df1143af",
+    "target_ref": "malware-behavior--5666e9a6-d2be-43ed-823f-b46ebc26dd21",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "reagentc_cmd",
+            "description": "Microsoft, EliotSeattle, et al. (2022, August 18). REAgentC command-line options. Retrieved October 19, 2022.",
+            "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/reagentc-command-line-options?view=windows-11"
+        }
+    ],
+    "description": "Consider technical controls to prevent the disabling of services or deletion of files involved in system recovery. Additionally, ensure that WinRE is enabled using the following command: <code>reagentc /enable</code>.(Citation: reagentc_cmd)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

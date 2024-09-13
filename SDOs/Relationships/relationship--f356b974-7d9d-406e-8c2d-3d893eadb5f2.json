@@ -1,0 +1,33 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f356b974-7d9d-406e-8c2d-3d893eadb5f2",
+    "created": "2024-08-13T14:51:22.899879Z",
+    "modified": "2024-08-13T14:51:22.899881Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--fd12e878-38df-46de-b978-4b799c3db51e",
+    "target_ref": "malware-behavior--4ff5d6a8-c062-4c68-a778-36fc5edd564f",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Microsoft Implementing CPL",
+            "description": "M. (n.d.). Implementing Control Panel Items. Retrieved January 18, 2018.",
+            "url": "https://msdn.microsoft.com/library/windows/desktop/cc144185.aspx"
+        },
+        {
+            "source_name": "Microsoft Implementing CPL",
+            "description": "M. (n.d.). Implementing Control Panel Items. Retrieved January 18, 2018.",
+            "url": "https://msdn.microsoft.com/library/windows/desktop/cc144185.aspx"
+        },
+        {
+            "source_name": "Microsoft Implementing CPL",
+            "description": "M. (n.d.). Implementing Control Panel Items. Retrieved January 18, 2018.",
+            "url": "https://msdn.microsoft.com/library/windows/desktop/cc144185.aspx"
+        }
+    ],
+    "description": "Inventory Control Panel items to locate unregistered and potentially malicious files present on systems:\n* Executable format registered Control Panel items will have a globally unique identifier (GUID) and registration Registry entries in <code>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ControlPanel\\NameSpace</code> and <code>HKEY_CLASSES_ROOT\\CLSID\\{GUID}</code>. These entries may contain information about the Control Panel item such as its display name, path to the local file, and the command executed when opened in the Control Panel. (Citation: Microsoft Implementing CPL)\n* CPL format registered Control Panel items stored in the System32 directory are automatically shown in the Control Panel. Other Control Panel items will have registration entries in the <code>CPLs</code> and <code>Extended Properties</code> Registry keys of <code>HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Control Panel</code>. These entries may include information such as a GUID, path to the local file, and a canonical name used to launch the file programmatically (<code> WinExec(\"c:\\windows\\system32\\control.exe {Canonical_Name}\", SW_NORMAL);</code>) or from a command line (<code>control.exe /name {Canonical_Name}</code>).(Citation: Microsoft Implementing CPL)\n* Some Control Panel items are extensible via Shell extensions registered in <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Controls Folder\\{name}\\Shellex\\PropertySheetHandlers</code> where {name} is the predefined name of the system item.(Citation: Microsoft Implementing CPL)",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

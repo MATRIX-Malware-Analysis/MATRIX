@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--992fb627-d6e2-4478-96ff-c2fa634c5eb4",
+    "created": "2024-08-13T14:51:23.927498Z",
+    "modified": "2024-08-13T14:51:23.927500Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--1b8b81be-cb6e-48df-8b1b-85c242bb9085",
+    "target_ref": "malware-behavior--adf634bd-c4c3-4a56-862e-452637ef5853",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for file names that are mismatched between the file name on disk and that of the binary's metadata. This is a likely indicator that a binary was renamed after it was compiled. For added context on adversary procedures and background see [Masquerading](https://attack.mitre.org/techniques/T1036) and applicable sub-techniques.",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

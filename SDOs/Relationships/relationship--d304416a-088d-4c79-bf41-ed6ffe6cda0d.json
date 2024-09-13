@@ -1,0 +1,28 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--d304416a-088d-4c79-bf41-ed6ffe6cda0d",
+    "created": "2024-08-13T14:51:22.443414Z",
+    "modified": "2024-08-13T14:51:22.443416Z",
+    "relationship_type": "uses",
+    "source_ref": "intrusion-set--84c205fa-8bd2-492f-b392-44521e3e0e98",
+    "target_ref": "malware-behavior--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "Crowdstrike Indrik November 2018",
+            "url": "https://www.crowdstrike.com/blog/big-game-hunting-the-evolution-of-indrik-spider-from-dridex-wire-fraud-to-bitpaymer-targeted-ransomware/",
+            "description": "Frankoff, S., Hartley, B. (2018, November 14). Big Game Hunting: The Evolution of INDRIK SPIDER From Dridex Wire Fraud to BitPaymer Targeted Ransomware. Retrieved January 6, 2021."
+        },
+        {
+            "source_name": "Symantec WastedLocker June 2020",
+            "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/wastedlocker-ransomware-us",
+            "description": "Symantec Threat Intelligence. (2020, June 25). WastedLocker: Symantec Identifies Wave of Attacks Against U.S. Organizations. Retrieved May 20, 2021."
+        }
+    ],
+    "description": "[Indrik Spider](https://attack.mitre.org/groups/G0119) has used PowerShell [Empire](https://attack.mitre.org/software/S0363) for execution of malware.(Citation: Crowdstrike Indrik November 2018)(Citation: Symantec WastedLocker June 2020) ",
+    "x_mitre_version": "1.0",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}

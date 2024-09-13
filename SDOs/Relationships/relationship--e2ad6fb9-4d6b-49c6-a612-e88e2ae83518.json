@@ -1,0 +1,17 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--e2ad6fb9-4d6b-49c6-a612-e88e2ae83518",
+    "created": "2024-08-13T14:51:23.087258Z",
+    "modified": "2024-08-13T14:51:23.087260Z",
+    "relationship_type": "detects",
+    "source_ref": "x-mitre-data-component--26d4b89e-fe92-4985-928f-98e676edc81e",
+    "target_ref": "malware-behavior--2959d63f-73fd-46a1-abd2-109d7dcede32",
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [],
+    "description": "Monitor for new service driver installations and loads (ex: Sysmon Event ID 6) that are not part of known software update/patch cycles.\n\nNote: Sysmon Event ID 6 (driver load) provides information on whether the loaded driver was signed with a valid signature (via the <code>Signature</code> and <code>SignatureStatus</code> fields). As such, one way to help reduce the volume of alerts and false positives associated with this event is to filter and exclude any driver load events signed by common and legitimate publishers like Microsoft. ",
+    "x_mitre_version": "0.1",
+    "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+}
