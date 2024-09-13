@@ -1,0 +1,109 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cf3154fd-48d7-4cc5-98b9-a0f17d42f4c3",
+    "created": "2024-08-13T14:46:48.893414Z",
+    "modified": "2024-08-13T14:46:48.893414Z",
+    "name": "Path Traversal: '...' (Triple Dot)",
+    "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize '...' (triple dot) sequences that can resolve to a location that is outside of that directory.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "32"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "\"\\...\" in web server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0467",
+            "reference": "CVE-2001-0467"
+        },
+        {
+            "description": "\"...\" or \"....\" in chat server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0615",
+            "reference": "CVE-2001-0615"
+        },
+        {
+            "description": "\"...\" in cd command in FTP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0963",
+            "reference": "CVE-2001-0963"
+        },
+        {
+            "description": "\"...\" in cd command in FTP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1193",
+            "reference": "CVE-2001-1193"
+        },
+        {
+            "description": "\"...\" in cd command in FTP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1131",
+            "reference": "CVE-2001-1131"
+        },
+        {
+            "description": "read of arbitrary files and directories using GET or CD with \"...\" in Windows-based FTP server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0480",
+            "reference": "CVE-2001-0480"
+        },
+        {
+            "description": "read files using \".\" and Unicode-encoded \"/\" or \"\\\" characters in the URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0288",
+            "reference": "CVE-2002-0288"
+        },
+        {
+            "description": "Directory listing of web server using \"...\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0313",
+            "reference": "CVE-2003-0313"
+        },
+        {
+            "description": "Triple dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1658",
+            "reference": "CVE-2005-1658"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "23",
+            "nature": "ChildOf"
+        }
+    ]
+}

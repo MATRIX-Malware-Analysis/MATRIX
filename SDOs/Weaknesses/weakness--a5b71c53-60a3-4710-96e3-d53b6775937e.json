@@ -1,0 +1,115 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a5b71c53-60a3-4710-96e3-d53b6775937e",
+    "created": "2024-08-13T14:46:49.017406Z",
+    "modified": "2024-08-13T14:46:49.017406Z",
+    "name": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+    "description": "The product contains an iteration or loop with an exit condition that cannot be reached, i.e., an infinite loop.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "835"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: an operating system does not properly process malformed Open Shortest Path First (OSPF) Type/Length/Value Identifiers (TLV) (CWE-703), which can cause the process to enter an infinite loop (CWE-835)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-22224",
+            "reference": "CVE-2022-22224"
+        },
+        {
+            "description": "A Python machine communication platform did not account for receiving a malformed packet with a null size, causing the receiving function to never update the message buffer and be caught in an infinite loop.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-25304",
+            "reference": "CVE-2022-25304"
+        },
+        {
+            "description": "Chain: off-by-one error (CWE-193) leads to infinite loop (CWE-835) using invalid hex-encoded characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1027",
+            "reference": "CVE-2011-1027"
+        },
+        {
+            "description": "Chain: self-referential values in recursive definitions lead to infinite loop.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1142",
+            "reference": "CVE-2011-1142"
+        },
+        {
+            "description": "NULL UDP packet is never cleared from a queue, leading to infinite loop.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1002",
+            "reference": "CVE-2011-1002"
+        },
+        {
+            "description": "Chain: web browser crashes due to infinite loop - \"bad\n\t      looping logic [that relies on] floating point math [CWE-1339] to exit\n\t      the loop [CWE-835]\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6499",
+            "reference": "CVE-2006-6499"
+        },
+        {
+            "description": "Floating point conversion routine cycles back and forth between two different values.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4476",
+            "reference": "CVE-2010-4476"
+        },
+        {
+            "description": "Floating point conversion routine cycles back and forth between two different values.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4645",
+            "reference": "CVE-2010-4645"
+        },
+        {
+            "description": "Chain: improperly clearing a pointer in a linked list leads to infinite loop.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2534",
+            "reference": "CVE-2010-2534"
+        },
+        {
+            "description": "Chain: an integer overflow (CWE-190) in the image size calculation causes an infinite loop (CWE-835) which sequentially allocates buffers without limits (CWE-1325) until the stack is full.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-1591",
+            "reference": "CVE-2013-1591"
+        },
+        {
+            "description": "Chain: A denial of service may be caused by an uninitialized variable (CWE-457) allowing an infinite loop (CWE-835) resulting from a connection to an unresponsive server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3688",
+            "reference": "CVE-2008-3688"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "834",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "834",
+            "nature": "ChildOf"
+        }
+    ]
+}

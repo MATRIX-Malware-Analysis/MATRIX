@@ -1,0 +1,181 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--367d36d6-5b31-43e1-afb6-5f9d5f1b47a2",
+    "created": "2024-08-13T14:46:49.013662Z",
+    "modified": "2024-08-13T14:46:49.013662Z",
+    "name": "Use of Out-of-range Pointer Offset",
+    "description": "The product performs pointer arithmetic on a valid pointer, but it uses an offset that can point outside of the intended range of valid memory locations for the resulting pointer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "823"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-09-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Invalid offset in undocumented opcode leads to memory corruption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2160",
+            "reference": "CVE-2010-2160"
+        },
+        {
+            "description": "Multimedia player uses untrusted value from a file when using file-pointer calculations.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1281",
+            "reference": "CVE-2010-1281"
+        },
+        {
+            "description": "Spreadsheet program processes a record with an invalid size field, which is later used as an offset.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3129",
+            "reference": "CVE-2009-3129"
+        },
+        {
+            "description": "Instant messaging library does not validate an offset value specified in a packet.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2694",
+            "reference": "CVE-2009-2694"
+        },
+        {
+            "description": "Language interpreter does not properly handle invalid offsets in JPEG image, leading to out-of-bounds memory access and crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2687",
+            "reference": "CVE-2009-2687"
+        },
+        {
+            "description": "negative offset leads to out-of-bounds read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0690",
+            "reference": "CVE-2009-0690"
+        },
+        {
+            "description": "untrusted offset in kernel",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4114",
+            "reference": "CVE-2008-4114"
+        },
+        {
+            "description": "\"blind trust\" of an offset value while writing heap memory allows corruption of function pointer,leading to code execution",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2873",
+            "reference": "CVE-2010-2873"
+        },
+        {
+            "description": "negative value (signed) causes pointer miscalculation",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2866",
+            "reference": "CVE-2010-2866"
+        },
+        {
+            "description": "signed values cause incorrect pointer calculation",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2872",
+            "reference": "CVE-2010-2872"
+        },
+        {
+            "description": "values used as pointer offsets",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5657",
+            "reference": "CVE-2007-5657"
+        },
+        {
+            "description": "a return value from a function is sign-extended if the value is signed, then used as an offset for pointer arithmetic",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2867",
+            "reference": "CVE-2010-2867"
+        },
+        {
+            "description": "portions of a GIF image used as offsets, causing corruption of an object pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1097",
+            "reference": "CVE-2009-1097"
+        },
+        {
+            "description": "invalid numeric field leads to a free of arbitrary memory locations, then code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1807",
+            "reference": "CVE-2008-1807"
+        },
+        {
+            "description": "large number of elements leads to a free of an arbitrary address",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2500",
+            "reference": "CVE-2007-2500"
+        },
+        {
+            "description": "array index issue (CWE-129) with negative offset, used to dereference a function pointer",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1686",
+            "reference": "CVE-2008-1686"
+        },
+        {
+            "description": "\"buffer seek\" value - basically an offset?",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2878",
+            "reference": "CVE-2010-2878"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "125",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "787",
+            "nature": "CanPrecede"
+        }
+    ]
+}

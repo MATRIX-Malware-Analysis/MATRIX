@@ -1,0 +1,84 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bdf9db22-5b89-47fe-934a-17856678ccbd",
+    "created": "2024-08-13T14:46:49.000064Z",
+    "modified": "2024-08-13T14:46:49.000064Z",
+    "name": "Critical Data Element Declared Public",
+    "description": "The product declares a critical variable, field, or member to be public when intended security policy requires it to be private.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "766"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-03-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "variables declared public allow remote read of system properties such as user name and home directory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3860",
+            "reference": "CVE-2010-3860"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Data should be private, static, and final whenever possible. This will assure that your code is protected by instantiating early, preventing access, and preventing tampering.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-960"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "732",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1061",
+            "nature": "ChildOf"
+        }
+    ]
+}

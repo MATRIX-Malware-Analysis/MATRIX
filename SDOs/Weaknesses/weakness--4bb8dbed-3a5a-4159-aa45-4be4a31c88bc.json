@@ -1,0 +1,310 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4bb8dbed-3a5a-4159-aa45-4be4a31c88bc",
+    "created": "2024-08-13T14:46:48.994577Z",
+    "modified": "2024-08-13T14:46:48.994577Z",
+    "name": "Incorrect Permission Assignment for Critical Resource",
+    "description": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "732"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-08",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "This weakness can be detected using tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "Manual static analysis may be effective in detecting the use of custom permissions models and functions. The code could then be examined to identifying usage of the related functions. Then the human analyst could evaluate permission assignments in the context of the intended security model of the software.",
+            "effectiveness": null,
+            "method": "Manual Static Analysis"
+        },
+        {
+            "description": "Manual dynamic analysis may be effective in detecting the use of custom permissions models and functions. The program could then be executed with a focus on exercising code paths that are related to the custom permissions. Then the human analyst could evaluate permission assignments in the context of the intended security model of the software.",
+            "effectiveness": null,
+            "method": "Manual Dynamic Analysis"
+        },
+        {
+            "description": "Fuzzing is not effective in detecting this weakness.",
+            "effectiveness": null,
+            "method": "Fuzzing"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Go application for cloud management creates a world-writable sudoers file that allows local attackers to inject sudo rules and escalate privileges to root by winning a race condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29527",
+            "reference": "CVE-2022-29527"
+        },
+        {
+            "description": "Anti-virus product sets insecure \"Everyone: Full Control\" permissions for files under the \"Program Files\" folder, allowing attackers to replace executables with Trojan horses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3482",
+            "reference": "CVE-2009-3482"
+        },
+        {
+            "description": "Product creates directories with 0777 permissions at installation, allowing users to gain privileges and access a socket used for authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3897",
+            "reference": "CVE-2009-3897"
+        },
+        {
+            "description": "Photo editor installs a service with an insecure security descriptor, allowing users to stop or start the service, or execute commands as SYSTEM.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3489",
+            "reference": "CVE-2009-3489"
+        },
+        {
+            "description": "socket created with insecure permissions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-15708",
+            "reference": "CVE-2020-15708"
+        },
+        {
+            "description": "Library function copies a file to a new target and uses the source file's permissions for the target, which is incorrect when the source file is a symbolic link, which typically has 0777 permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3289",
+            "reference": "CVE-2009-3289"
+        },
+        {
+            "description": "Device driver uses world-writable permissions for a socket file, allowing attackers to inject arbitrary commands.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0115",
+            "reference": "CVE-2009-0115"
+        },
+        {
+            "description": "LDAP server stores a cleartext password in a world-readable file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1073",
+            "reference": "CVE-2009-1073"
+        },
+        {
+            "description": "Terminal emulator creates TTY devices with world-writable permissions, allowing an attacker to write to the terminals of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0141",
+            "reference": "CVE-2009-0141"
+        },
+        {
+            "description": "VPN product stores user credentials in a registry key with \"Everyone: Full Control\" permissions, allowing attackers to steal the credentials.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0662",
+            "reference": "CVE-2008-0662"
+        },
+        {
+            "description": "Driver installs its device interface with \"Everyone: Write\" permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0322",
+            "reference": "CVE-2008-0322"
+        },
+        {
+            "description": "Driver installs a file with world-writable permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3939",
+            "reference": "CVE-2009-3939"
+        },
+        {
+            "description": "Product changes permissions to 0777 before deleting a backup; the permissions stay insecure for subsequent backups.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3611",
+            "reference": "CVE-2009-3611"
+        },
+        {
+            "description": "Product creates a share with \"Everyone: Full Control\" permissions, allowing arbitrary program execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6033",
+            "reference": "CVE-2007-6033"
+        },
+        {
+            "description": "Product uses \"Everyone: Full Control\" permissions for memory-mapped files (shared memory) in inter-process communication, allowing attackers to tamper with a session.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5544",
+            "reference": "CVE-2007-5544"
+        },
+        {
+            "description": "Database product uses read/write permissions for everyone for its shared memory, allowing theft of credentials.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4868",
+            "reference": "CVE-2005-4868"
+        },
+        {
+            "description": "Security product uses \"Everyone: Full Control\" permissions for its configuration files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1714",
+            "reference": "CVE-2004-1714"
+        },
+        {
+            "description": "\"Everyone: Full Control\" permissions assigned to a mutex allows users to disable network connectivity.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0006",
+            "reference": "CVE-2001-0006"
+        },
+        {
+            "description": "Chain: database product contains buffer overflow that is only reachable through a .ini configuration file - which has \"Everyone: Full Control\" permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0969",
+            "reference": "CVE-2002-0969"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When using a critical resource such as a configuration file, check to see if the resource has insecure permissions (such as being modifiable by any regular user) [REF-62], and generate an error or even exit the software if there is a possibility that the resource could have been modified by an unauthorized party.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Divide the software into anonymous, normal, privileged, and administrative areas. Reduce the attack surface by carefully defining distinct user groups, privileges, and/or roles. Map these against data, functionality, and the related resources. Then set the permissions accordingly. This will allow you to maintain more fine-grained control over your resources. [REF-207]",
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "During program startup, explicitly set the default permissions or umask to the most restrictive setting possible. Also set the appropriate permissions during program installation. This will prevent you from inheriting insecure permissions from any user who installs or runs the program.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "For all configuration files, executables, and libraries, make sure that they are only readable and writable by the software's administrator.",
+            "effectiveness": "High",
+            "phase": "System Configuration"
+        },
+        {
+            "description": "Do not suggest insecure configuration changes in documentation, especially if those configurations can extend to resources and other programs that are outside the scope of the application.",
+            "effectiveness": null,
+            "phase": "Documentation"
+        },
+        {
+            "description": "Do not assume that a system administrator will manually change the configuration to the settings that are recommended in the software's manual.",
+            "effectiveness": null,
+            "phase": "Installation"
+        },
+        {
+            "description": "Ensure that the software runs properly under the United States Government Configuration Baseline (USGCB) [REF-199] or an equivalent hardening configuration guide, which many organizations use to limit the attack surface and potential risk of deployed software.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "When storing data in the cloud (e.g., S3 buckets, Azure blobs, Google Cloud Storage, etc.), use the provider's controls to disable public access.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-207"
+        },
+        {
+            "external_reference_id": "REF-594"
+        },
+        {
+            "external_reference_id": "REF-199"
+        },
+        {
+            "external_reference_id": "REF-1287"
+        },
+        {
+            "external_reference_id": "REF-1307"
+        },
+        {
+            "external_reference_id": "REF-1327"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "285",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

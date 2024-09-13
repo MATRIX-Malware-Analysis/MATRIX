@@ -1,0 +1,80 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--60f46cd4-6d75-4d59-81e1-7881266229ea",
+    "created": "2024-08-13T14:46:48.951524Z",
+    "modified": "2024-08-13T14:46:48.951524Z",
+    "name": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+    "description": "The product uses the singleton pattern when creating a resource within a multithreaded environment.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "543"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use the Thread-Specific Storage Pattern. See References.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Do not use member fields to store information in the Servlet. In multithreading environments, storing user data in Servlet member fields introduces a data access race condition.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Avoid using the double-checked locking pattern in language versions that cannot guarantee thread safety. This pattern may be used to avoid the overhead of a synchronized call, but in certain versions of Java (for example), this has been shown to be unsafe because it still introduces a race condition (CWE-209).",
+            "effectiveness": "Limited",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-474"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "820",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        }
+    ]
+}

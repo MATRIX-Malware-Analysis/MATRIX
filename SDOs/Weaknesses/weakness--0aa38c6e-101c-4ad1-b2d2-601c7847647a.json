@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0aa38c6e-101c-4ad1-b2d2-601c7847647a",
+    "created": "2024-08-13T14:46:48.73024Z",
+    "modified": "2024-08-13T14:46:48.73024Z",
+    "name": "Use of Redundant Code",
+    "description": "The product has multiple functions, methods, procedures, macros, etc. that\n\t\t\t\t\tcontain the same code.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1041"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Merge common functionality into a single function and then call that function from across the entire code base.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-960"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

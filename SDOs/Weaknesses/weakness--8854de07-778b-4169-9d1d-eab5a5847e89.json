@@ -1,0 +1,75 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8854de07-778b-4169-9d1d-eab5a5847e89",
+    "created": "2024-08-13T14:46:48.769611Z",
+    "modified": "2024-08-13T14:46:48.769611Z",
+    "name": "Incorrect Comparison Logic Granularity",
+    "description": "The product's comparison logic is performed over a series of steps rather than across the entire string in one operation. If there is a comparison logic failure on one of these steps, the operation may be vulnerable to a timing attack that can result in the interception of the process for nefarious purposes.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1254"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Smartphone OS uses comparison functions that are not in constant time, allowing side channels",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10482",
+            "reference": "CVE-2019-10482"
+        },
+        {
+            "description": "Java-oriented framework compares HMAC signatures  using  String.equals() instead of a constant-time algorithm, causing timing discrepancies",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10071",
+            "reference": "CVE-2019-10071"
+        },
+        {
+            "description": "Password-checking function in router terminates validation of a password entry when it encounters the first incorrect character, which allows remote attackers to obtain passwords via a brute-force attack that relies on timing differences in responses to incorrect password guesses, aka a timing side-channel attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-0984",
+            "reference": "CVE-2014-0984"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                 ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1079"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "208",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "697",
+            "nature": "ChildOf"
+        }
+    ]
+}

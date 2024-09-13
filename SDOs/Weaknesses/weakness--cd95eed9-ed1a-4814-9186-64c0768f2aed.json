@@ -1,0 +1,201 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cd95eed9-ed1a-4814-9186-64c0768f2aed",
+    "created": "2024-08-13T14:46:48.983415Z",
+    "modified": "2024-08-13T14:46:48.983415Z",
+    "name": "Improper Locking",
+    "description": "The product does not properly acquire or release a lock on a resource, leading to unexpected resource state changes and behaviors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "667"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: improper locking (CWE-667) leads to race condition (CWE-362), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-1782",
+            "reference": "CVE-2021-1782"
+        },
+        {
+            "description": "Attacker provides invalid address to a memory-reading function, causing a mutex to be unlocked twice",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0935",
+            "reference": "CVE-2009-0935"
+        },
+        {
+            "description": "function in OS kernel unlocks a mutex that was not previously locked, causing a panic or overwrite of arbitrary memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4210",
+            "reference": "CVE-2010-4210"
+        },
+        {
+            "description": "Chain: OS kernel does not properly handle a failure of a function call (CWE-755), leading to an unlock of a resource that was not locked (CWE-832), with resultant crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4302",
+            "reference": "CVE-2008-4302"
+        },
+        {
+            "description": "OS kernel performs an unlock in some incorrect circumstances, leading to panic.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1243",
+            "reference": "CVE-2009-1243"
+        },
+        {
+            "description": "OS deadlock",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2857",
+            "reference": "CVE-2009-2857"
+        },
+        {
+            "description": "OS deadlock involving 3 separate functions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1961",
+            "reference": "CVE-2009-1961"
+        },
+        {
+            "description": "deadlock in library",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2699",
+            "reference": "CVE-2009-2699"
+        },
+        {
+            "description": "deadlock triggered by packets that force collisions in a routing table",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-4272",
+            "reference": "CVE-2009-4272"
+        },
+        {
+            "description": "read/write deadlock between web server and script",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1850",
+            "reference": "CVE-2002-1850"
+        },
+        {
+            "description": "web server deadlock involving multiple listening connections",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0174",
+            "reference": "CVE-2004-0174"
+        },
+        {
+            "description": "multiple simultaneous calls to the same function trigger deadlock.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1388",
+            "reference": "CVE-2009-1388"
+        },
+        {
+            "description": "chain: other weakness leads to NULL pointer dereference (CWE-476) or deadlock (CWE-833).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5158",
+            "reference": "CVE-2006-5158"
+        },
+        {
+            "description": "deadlock when an operation is performed on a resource while it is being removed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4342",
+            "reference": "CVE-2006-4342"
+        },
+        {
+            "description": "Deadlock in device driver triggered by using file handle of a related device.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2374",
+            "reference": "CVE-2006-2374"
+        },
+        {
+            "description": "Deadlock when large number of small messages cannot be processed quickly enough.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2275",
+            "reference": "CVE-2006-2275"
+        },
+        {
+            "description": "OS kernel has deadlock triggered by a signal during a core dump.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3847",
+            "reference": "CVE-2005-3847"
+        },
+        {
+            "description": "Race condition leads to deadlock.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3106",
+            "reference": "CVE-2005-3106"
+        },
+        {
+            "description": "Chain: array index error (CWE-129) leads to deadlock (CWE-833)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2456",
+            "reference": "CVE-2005-2456"
+        },
+        {
+            "description": "Program can not execute when attacker obtains a mutex.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0682",
+            "reference": "CVE-2001-0682"
+        },
+        {
+            "description": "Program can not execute when attacker obtains a lock on a critical output file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1914",
+            "reference": "CVE-2002-1914"
+        },
+        {
+            "description": "Program can not execute when attacker obtains a lock on a critical output file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1915",
+            "reference": "CVE-2002-1915"
+        },
+        {
+            "description": "Critical file can be opened with exclusive read access by user, preventing application of security policy. Possibly related to improper permissions, large-window race condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0051",
+            "reference": "CVE-2002-0051"
+        },
+        {
+            "description": "Chain: predictable file names used for locking, allowing attacker to create the lock beforehand. Resultant from permissions and randomness.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0338",
+            "reference": "CVE-2000-0338"
+        },
+        {
+            "description": "Chain: Lock files with predictable names. Resultant from randomness.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1198",
+            "reference": "CVE-2000-1198"
+        },
+        {
+            "description": "Product does not check if it can write to a log file, allowing attackers to avoid logging by accessing the file using an exclusive lock. Overlaps unchecked error condition. This is not quite CWE-412, but close.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1869",
+            "reference": "CVE-2002-1869"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use industry standard APIs to implement locking mechanism.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        }
+    ]
+}

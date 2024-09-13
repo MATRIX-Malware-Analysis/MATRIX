@@ -1,0 +1,93 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0118b0bd-968b-4301-8946-55ee8736ac41",
+    "created": "2024-08-13T14:46:48.973662Z",
+    "modified": "2024-08-13T14:46:48.973662Z",
+    "name": "Unsafe ActiveX Control Marked Safe For Scripting",
+    "description": "An ActiveX control is intended for restricted use, but it has been marked as safe-for-scripting.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "623"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "control allows attackers to add malicious email addresses to bypass spam limits",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0617",
+            "reference": "CVE-2007-0617"
+        },
+        {
+            "description": "web browser uses certain COM objects as ActiveX",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0219",
+            "reference": "CVE-2007-0219"
+        },
+        {
+            "description": "kiosk allows bypass to read files",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6510",
+            "reference": "CVE-2006-6510"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "During development, do not mark it as safe for scripting.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "After distribution, you can set the kill bit for the control so that it is not accessible from Internet Explorer.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-503"
+        },
+        {
+            "external_reference_id": "REF-510"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "267",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "618",
+            "nature": "PeerOf"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f66d19d7-56c8-48e6-be57-7ab1f36a6a18",
+    "created": "2024-08-13T14:46:48.806804Z",
+    "modified": "2024-08-13T14:46:48.806804Z",
+    "name": "Improper Neutralization of Variable Name Delimiters",
+    "description": "The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could be interpreted as variable name delimiters when they are sent to a downstream component.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "154"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "\"%\" variable is expanded by wildcard function into disallowed commands.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0129",
+            "reference": "CVE-2005-0129"
+        },
+        {
+            "description": "Server trusts client to expand macros, allows macro characters to be expanded to trigger resultant information exposure.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0770",
+            "reference": "CVE-2002-0770"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Developers should anticipate that variable name delimiters will be injected/removed/manipulated in the input vectors of their product. Use an appropriate combination of denylists and allowlists to ensure only valid, expected and appropriate input is processed by the system.",
+            "effectiveness": null,
+            "phase": null
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "While it is risky to use dynamically-generated query strings, code, or commands that mix control and data together, sometimes it may be unavoidable. Properly quote arguments and escape any special characters within those arguments. The most conservative approach is to escape or filter all characters that do not pass an extremely strict allowlist (such as everything that is not alphanumeric or white space). If some special characters are still needed, such as white space, wrap each argument in quotes after the escaping/filtering step. Be careful of argument injection (CWE-88).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "138",
+            "nature": "ChildOf"
+        }
+    ]
+}

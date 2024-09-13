@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a0c768a2-d805-4100-825b-90ad88aa2b1d",
+    "created": "2024-08-13T14:46:48.924523Z",
+    "modified": "2024-08-13T14:46:48.924523Z",
+    "name": "Incomplete Model of Endpoint Features",
+    "description": "A product acts as an intermediary or monitor between two or more endpoints, but it does not have a complete model of an endpoint's features, behaviors, or state, potentially causing the product to perform incorrect actions based on this incomplete model.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "437"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "436",
+            "nature": "ChildOf"
+        }
+    ]
+}

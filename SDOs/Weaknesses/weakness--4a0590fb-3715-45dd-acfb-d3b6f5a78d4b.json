@@ -1,0 +1,151 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4a0590fb-3715-45dd-acfb-d3b6f5a78d4b",
+    "created": "2024-08-13T14:46:48.886279Z",
+    "modified": "2024-08-13T14:46:48.886279Z",
+    "name": "Improper Following of a Certificate's Chain of Trust",
+    "description": "The product does not follow, or incorrectly follows, the chain of trust for a certificate back to a trusted root certificate, resulting in incorrect trust of any resource that is associated with that certificate.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "296"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server allows bypass of certificate pinning by sending a chain of trust that includes a trusted CA that is not pinned.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-2402",
+            "reference": "CVE-2016-2402"
+        },
+        {
+            "description": "Verification function trusts certificate chains in which the last certificate is self-signed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4989",
+            "reference": "CVE-2008-4989"
+        },
+        {
+            "description": "Chain: Web browser uses a TLS-related function incorrectly, preventing it from verifying that a server's certificate is signed by a trusted certification authority (CA).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5821",
+            "reference": "CVE-2012-5821"
+        },
+        {
+            "description": "Web browser does not check if any intermediate certificates are revoked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3046",
+            "reference": "CVE-2009-3046"
+        },
+        {
+            "description": "chain: DNS server does not correctly check return value from the OpenSSL EVP_VerifyFinal function allows bypass of validation of the certificate chain.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0265",
+            "reference": "CVE-2009-0265"
+        },
+        {
+            "description": "chain: incorrect check of return value from the OpenSSL EVP_VerifyFinal function allows bypass of validation of the certificate chain.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0124",
+            "reference": "CVE-2009-0124"
+        },
+        {
+            "description": "File-transfer software does not validate Basic Constraints of an intermediate CA-signed certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0970",
+            "reference": "CVE-2002-0970"
+        },
+        {
+            "description": "Cryptographic API, as used in web browsers, mail clients, and other software, does not properly validate Basic Constraints.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0862",
+            "reference": "CVE-2002-0862"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that proper certificate checking is included in the system design.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Understand, and properly implement all checks necessary to ensure the integrity of certificate trust integrity.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If certificate pinning is being used, ensure that all relevant properties of the certificate are fully validated before the certificate is pinned, including the full chain of trust.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-245"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "295",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--155e95f5-5a34-4e7a-a72c-f93dc650c49d",
+    "created": "2024-08-13T14:46:48.900179Z",
+    "modified": "2024-08-13T14:46:48.900179Z",
+    "name": "Predictable Exact Value from Previous Values",
+    "description": "An exact value or random number can be precisely predicted by observing previous values.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "342"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Firewall generates easily predictable initial sequence numbers (ISN), which allows remote attackers to spoof connections.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1463",
+            "reference": "CVE-2002-1463"
+        },
+        {
+            "description": "Listening TCP ports are sequentially allocated, allowing spoofing attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0074",
+            "reference": "CVE-1999-0074"
+        },
+        {
+            "description": "Predictable TCP sequence numbers allow spoofing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0077",
+            "reference": "CVE-1999-0077"
+        },
+        {
+            "description": "DNS resolver uses predictable IDs, allowing a local user to spoof DNS query results.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0335",
+            "reference": "CVE-2000-0335"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Increase the entropy used to seed a PRNG.",
+            "effectiveness": null,
+            "phase": null
+        },
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems. Consult FIPS 140-2 Annex C (\"Approved Random Number Generators\").",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a PRNG that periodically re-seeds itself using input from high-quality sources, such as hardware devices with high entropy. However, do not re-seed too frequently, or else the entropy source might block.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "340",
+            "nature": "ChildOf"
+        }
+    ]
+}

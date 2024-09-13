@@ -1,0 +1,159 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--359f5d70-f941-4234-9e3a-c3464b6ff408",
+    "created": "2024-08-13T14:46:48.906489Z",
+    "modified": "2024-08-13T14:46:48.906489Z",
+    "name": "Signal Handler Race Condition",
+    "description": "The product uses a signal handler that introduces a race condition.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "364"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Signal handler does not disable other signal handlers, allowing it to be interrupted, causing other functionality to access files/etc. with raised privileges",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0035",
+            "reference": "CVE-1999-0035"
+        },
+        {
+            "description": "Attacker can send a signal while another signal handler is already running, leading to crash or execution with root privileges",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0905",
+            "reference": "CVE-2001-0905"
+        },
+        {
+            "description": "unsafe calls to library functions from signal handler",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1349",
+            "reference": "CVE-2001-1349"
+        },
+        {
+            "description": "SIGURG can be used to remotely interrupt signal handler; other variants exist",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0794",
+            "reference": "CVE-2004-0794"
+        },
+        {
+            "description": "SIGCHLD signal to FTP server can cause crash under heavy load while executing non-reentrant functions like malloc/free.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2259",
+            "reference": "CVE-2004-2259"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Design signal handlers to only set flags, rather than perform complex functionality. These flags can then be checked and acted upon within the main program loop.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Only use reentrant functions within signal handlers. Also, use validation to ensure that state is consistent while performing asynchronous actions that affect the state of execution.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-360"
+        },
+        {
+            "external_reference_id": "REF-361"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "362",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "415",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "416",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "123",
+            "nature": "CanPrecede"
+        }
+    ]
+}

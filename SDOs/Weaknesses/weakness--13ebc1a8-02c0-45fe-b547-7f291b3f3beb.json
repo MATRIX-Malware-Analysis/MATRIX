@@ -1,0 +1,152 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--13ebc1a8-02c0-45fe-b547-7f291b3f3beb",
+    "created": "2024-08-13T14:46:48.811722Z",
+    "modified": "2024-08-13T14:46:48.811722Z",
+    "name": "Double Decoding of the Same Data",
+    "description": "The product decodes the same input twice, which can limit the effectiveness of any protection mechanism that occurs in between the decoding operations.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "174"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Forum software improperly URL decodes the highlight parameter when extracting text to highlight, which allows remote attackers to execute arbitrary PHP code by double-encoding the highlight value so that special characters are inserted into the result.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1315",
+            "reference": "CVE-2004-1315"
+        },
+        {
+            "description": "XSS protection mechanism attempts to remove \"/\" that could be used to close tags, but it can be bypassed using double encoded slashes (%252F)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1939",
+            "reference": "CVE-2004-1939"
+        },
+        {
+            "description": "Directory traversal using double encoding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0333",
+            "reference": "CVE-2001-0333"
+        },
+        {
+            "description": "\"%2527\" (double-encoded single quote) used in SQL injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1938",
+            "reference": "CVE-2004-1938"
+        },
+        {
+            "description": "Double hex-encoded data.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1945",
+            "reference": "CVE-2005-1945"
+        },
+        {
+            "description": "Browser executes HTML at higher privileges via URL with hostnames that are double hex encoded, which are decoded twice to generate a malicious hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0054",
+            "reference": "CVE-2005-0054"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid making decisions based on names of resources (e.g. files) if those resources can have alternate names.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use and specify an output encoding that can be handled by the downstream component that is reading the output. Common encodings include ISO-8859-1, UTF-7, and UTF-8. When an encoding is not specified, a downstream component may choose a different encoding, either by assuming a default encoding or automatically inferring which encoding is being used, which can be erroneous. When the encodings are inconsistent, the downstream component might treat some character or byte sequences as special, even if they are not special in the original encoding. Attackers might then be able to exploit this discrepancy and conduct injection attacks; they even might be able to bypass protection mechanisms that assume the original encoding is also being used by the downstream component.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "172",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "675",
+            "nature": "ChildOf"
+        }
+    ]
+}

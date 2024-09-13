@@ -1,0 +1,96 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b695723d-7104-4ede-a3f7-ecaaf3590d4b",
+    "created": "2024-08-13T14:46:48.797693Z",
+    "modified": "2024-08-13T14:46:48.797693Z",
+    "name": "Improper Handling of Physical or Environmental Conditions",
+    "description": "The product does not properly handle unexpected physical or environmental conditions that occur naturally or are artificially induced.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1384"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2022-04-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Lack of anti-glitch protections allows an attacker to launch a physical attack to bypass the secure boot and read protected eFuses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-17391",
+            "reference": "CVE-2019-17391"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "In requirements, be specific about expectations for how the product will perform when it exceeds physical and environmental boundary conditions, e.g., by shutting down.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Where possible, include independent components that can detect excess environmental conditions and have the capability to shut down the product.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Where possible, use shielding or other materials that can increase the adversary's workload and reduce the likelihood of being able to successfully trigger a security-related failure.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1248"
+        },
+        {
+            "external_reference_id": "REF-1255"
+        },
+        {
+            "external_reference_id": "REF-1285"
+        },
+        {
+            "external_reference_id": "REF-1286"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        }
+    ]
+}

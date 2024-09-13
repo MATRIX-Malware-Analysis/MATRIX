@@ -1,0 +1,63 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e2018a2d-5464-491a-bf32-245571f56f5c",
+    "created": "2024-08-13T14:46:48.965088Z",
+    "modified": "2024-08-13T14:46:48.965088Z",
+    "name": "Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created",
+    "description": "The product modifies the SSL context after connection creation has begun.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "593"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-12-15",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a language or a library that provides a cryptography framework at a higher level of abstraction.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Most SSL_CTX functions have SSL counterparts that act on SSL-type objects.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Applications should set up an SSL_CTX completely, before creating SSL objects from it.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "666",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--343b666a-7beb-4ce0-be80-02ee33486f96",
+    "created": "2024-08-13T14:46:48.978063Z",
+    "modified": "2024-08-13T14:46:48.978063Z",
+    "name": "Overly Restrictive Account Lockout Mechanism",
+    "description": "The product contains an account lockout protection mechanism, but the mechanism is too restrictive and can be triggered too easily, which allows attackers to deny service to legitimate users by causing their accounts to be locked out.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "645"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implement more intelligent password throttling mechanisms such as those which take IP address into account, in addition to the login name.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Implement a lockout timeout that grows as the number of incorrect login attempts goes up, eventually resulting in a complete lockout.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider alternatives to account lockout that would still be effective against password brute force attacks, such as presenting the user machine with a puzzle to solve (makes it do some computation).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        }
+    ]
+}

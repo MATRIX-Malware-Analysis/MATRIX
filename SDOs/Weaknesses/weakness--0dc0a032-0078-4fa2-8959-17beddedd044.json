@@ -1,0 +1,79 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0dc0a032-0078-4fa2-8959-17beddedd044",
+    "created": "2024-08-13T14:46:48.919618Z",
+    "modified": "2024-08-13T14:46:48.919618Z",
+    "name": "Path Equivalence: 'filename.' (Trailing Dot)",
+    "description": "The product accepts path input in the form of trailing dot ('filedir.') without appropriate validation, which can lead to ambiguous path resolution and allow an attacker to traverse the file system to unintended locations or access arbitrary files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "42"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Source code disclosure using trailing dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1114",
+            "reference": "CVE-2000-1114"
+        },
+        {
+            "description": "Source code disclosure using trailing dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1986",
+            "reference": "CVE-2002-1986"
+        },
+        {
+            "description": "Source code disclosure using trailing dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2213",
+            "reference": "CVE-2004-2213"
+        },
+        {
+            "description": "Source code disclosure using trailing dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3293",
+            "reference": "CVE-2005-3293"
+        },
+        {
+            "description": "Bypass directory access restrictions using trailing dot in URL",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0061",
+            "reference": "CVE-2004-0061"
+        },
+        {
+            "description": "Bypass directory access restrictions using trailing dot in URL",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1133",
+            "reference": "CVE-2000-1133"
+        },
+        {
+            "description": "Bypass check for \".lnk\" extension using \".lnk.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1386",
+            "reference": "CVE-2001-1386"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "41",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "162",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9ad6ede2-e716-405f-928d-520747317621",
+    "created": "2024-08-13T14:46:48.992778Z",
+    "modified": "2024-08-13T14:46:48.992778Z",
+    "name": "Use of Incorrectly-Resolved Name or Reference",
+    "description": "The product uses a name or reference to access a resource, but the name/reference resolves to a resource that is outside of the intended control sphere.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "706"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "99",
+            "nature": "PeerOf"
+        }
+    ]
+}

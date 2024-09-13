@@ -1,0 +1,135 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a66fefec-dce4-484c-8dc5-91494231d359",
+    "created": "2024-08-13T14:46:49.016849Z",
+    "modified": "2024-08-13T14:46:49.016849Z",
+    "name": "Deadlock",
+    "description": "The product contains multiple threads or executable segments that are waiting for each other to release a necessary lock, resulting in deadlock.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "833"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-12-12",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A bug in some Intel Pentium processors allow DoS (hang) via an invalid \"CMPXCHG8B\" instruction, causing a deadlock",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1476",
+            "reference": "CVE-1999-1476"
+        },
+        {
+            "description": "OS deadlock",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2857",
+            "reference": "CVE-2009-2857"
+        },
+        {
+            "description": "OS deadlock involving 3 separate functions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1961",
+            "reference": "CVE-2009-1961"
+        },
+        {
+            "description": "deadlock in library",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2699",
+            "reference": "CVE-2009-2699"
+        },
+        {
+            "description": "deadlock triggered by packets that force collisions in a routing table",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-4272",
+            "reference": "CVE-2009-4272"
+        },
+        {
+            "description": "read/write deadlock between web server and script",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1850",
+            "reference": "CVE-2002-1850"
+        },
+        {
+            "description": "web server deadlock involving multiple listening connections",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0174",
+            "reference": "CVE-2004-0174"
+        },
+        {
+            "description": "multiple simultaneous calls to the same function trigger deadlock.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1388",
+            "reference": "CVE-2009-1388"
+        },
+        {
+            "description": "chain: other weakness leads to NULL pointer dereference (CWE-476) or deadlock (CWE-833).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5158",
+            "reference": "CVE-2006-5158"
+        },
+        {
+            "description": "deadlock when an operation is performed on a resource while it is being removed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4342",
+            "reference": "CVE-2006-4342"
+        },
+        {
+            "description": "Deadlock in device driver triggered by using file handle of a related device.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2374",
+            "reference": "CVE-2006-2374"
+        },
+        {
+            "description": "Deadlock when large number of small messages cannot be processed quickly enough.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2275",
+            "reference": "CVE-2006-2275"
+        },
+        {
+            "description": "OS kernel has deadlock triggered by a signal during a core dump.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3847",
+            "reference": "CVE-2005-3847"
+        },
+        {
+            "description": "Race condition leads to deadlock.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3106",
+            "reference": "CVE-2005-3106"
+        },
+        {
+            "description": "Chain: array index error (CWE-129) leads to deadlock (CWE-833)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2456",
+            "reference": "CVE-2005-2456"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-783"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        }
+    ]
+}

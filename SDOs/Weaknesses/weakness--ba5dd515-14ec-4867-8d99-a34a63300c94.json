@@ -1,0 +1,43 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ba5dd515-14ec-4867-8d99-a34a63300c94",
+    "created": "2024-08-13T14:46:48.731982Z",
+    "modified": "2024-08-13T14:46:48.731982Z",
+    "name": "Invokable Control Element with Large Number of Outward Calls",
+    "description": "The code contains callable control elements that\n         contain an excessively large number of references to other\n         application objects external to the context of the callable,\n         i.e. a Fan-Out value that is excessively large.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1048"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-960"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

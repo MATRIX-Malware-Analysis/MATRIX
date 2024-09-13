@@ -1,0 +1,96 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6a2517e7-b7b6-4330-ae75-e941f1fda3f7",
+    "created": "2024-08-13T14:46:48.792016Z",
+    "modified": "2024-08-13T14:46:48.792016Z",
+    "name": "Missing Immutable Root of Trust in Hardware",
+    "description": "A missing immutable root of trust in the hardware results in the ability to bypass secure boot or execute untrusted or adversarial boot code.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1326"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authorization"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-04-25",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated testing can verify that RoT components are immutable.",
+            "effectiveness": "High",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Root of trust elements and memory should be part of architecture and design reviews.",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When architecting the system, the RoT should be designated for storage in a memory that does not allow further programming/writes.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "During implementation and test, the RoT memory location should be demonstrated to not allow further programming/writes. ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1152"
+        },
+        {
+            "external_reference_id": "REF-1153"
+        },
+        {
+            "external_reference_id": "REF-1348"
+        },
+        {
+            "external_reference_id": "REF-1349"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3221c533-a12d-4f58-9082-c11f2fa24544",
+    "created": "2024-08-13T14:46:48.796028Z",
+    "modified": "2024-08-13T14:46:48.796028Z",
+    "name": "Multiple Releases of Same Resource or Handle",
+    "description": "The product attempts to close or release a resource or handle more than once, without any successful open between the close operations.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1341"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-09-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "For commonly-used APIs and resource types, automated tools often have signatures that can spot this issue.",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Some compiler instrumentation tools such as AddressSanitizer (ASan) can indirectly detect some instances of this weakness.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "file descriptor double close can cause the wrong file to be associated with a file descriptor.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-13351",
+            "reference": "CVE-2019-13351"
+        },
+        {
+            "description": "Chain: Signal handler contains too much functionality (CWE-828), introducing a race condition that leads to a double free (CWE-415).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5051",
+            "reference": "CVE-2006-5051"
+        },
+        {
+            "description": "Double free resultant from certain error conditions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0772",
+            "reference": "CVE-2004-0772"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Change the code's logic so that the resource is only closed once. This might require simplifying or refactoring. This fix can be simple to do in small code blocks, but more difficult when multiple closes are buried within complex conditionals.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "It can be effective to implement a flag that is (1) set when the resource is opened, (2) cleared when it is closed, and (3) checked before closing. This approach can be useful when there are disparate cases in which closes must be performed. However, flag-tracking can increase code complexity and requires diligent compliance by the programmer.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When closing a resource, set the resource's associated variable to NULL or equivalent value for the given language. Some APIs will ignore this null value without causing errors. For other APIs, this can lead to application crashes or exceptions, which may still be preferable to corrupting an unintended resource such as memory or data.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1198"
+        },
+        {
+            "external_reference_id": "REF-1199"
+        },
+        {
+            "external_reference_id": "REF-1200"
+        },
+        {
+            "external_reference_id": "REF-1201"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "675",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "CanPrecede"
+        }
+    ]
+}

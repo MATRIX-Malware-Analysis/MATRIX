@@ -1,0 +1,105 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cd464d7e-e8c7-47a0-a104-a576d8fa9c31",
+    "created": "2024-08-13T14:46:48.798587Z",
+    "modified": "2024-08-13T14:46:48.798587Z",
+    "name": "Incorrect Parsing of Numbers with Different Radices",
+    "description": "The product parses numeric input assuming base 10 (decimal) values, but it does not account for inputs that use a different base number (radix).",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1389"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-05-28",
+            "submission_name": "Anonymous External Contributor",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Use of zero-prepended IP addresses in Perl-based IP validation module can lead to an access control bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-29662",
+            "reference": "CVE-2021-29662"
+        },
+        {
+            "description": "Chain: Use of zero-prepended IP addresses in a product that manages IP blocks can lead to an SSRF.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-28918",
+            "reference": "CVE-2021-28918"
+        },
+        {
+            "description": "Chain: Use of zero-prepended IP addresses in a Python standard library package can lead to an SSRF.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-29921",
+            "reference": "CVE-2021-29921"
+        },
+        {
+            "description": "Chain: Use of zero-prepended IP addresses in the net Golang library can lead to an access control bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-29923",
+            "reference": "CVE-2021-29923"
+        },
+        {
+            "description": "Chain: Use of zero-prepended IP addresses in Perl netmask module allows bypass of IP-based access control.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-29424",
+            "reference": "CVE-2021-29424"
+        },
+        {
+            "description": "Chain: incorrect validation of intended decimal-based IP address format (CWE-1286) enables parsing of octal or hexadecimal formats (CWE-1389), allowing bypass of an SSRF protection mechanism (CWE-918).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-4029",
+            "reference": "CVE-2016-4029"
+        },
+        {
+            "description": "Mishandling of hex-valued usernames leads to unexpected decimal conversion and privilege escalation in the systemd Linux suite.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-13776",
+            "reference": "CVE-2020-13776"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If only decimal-based values are expected in the application, conditional checks should be created in a way that prevent octal or hexadecimal strings from being checked. This can be achieved by converting any numerical string to an explicit base-10 integer prior to the conditional check, to prevent octal or hex values from ever being checked against the condition.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If various numerical bases do need to be supported, check for leading values indicating the non-decimal base you wish to support (such as 0x for hex) and convert the numeric strings to integers of the respective base. Reject any other alternative-base string that is not intentionally supported by the application.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If regular expressions are used to validate IP addresses, ensure that they are bounded using ^ and $ to prevent base-prepended IP addresses from being matched.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1284"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "704",
+            "nature": "ChildOf"
+        }
+    ]
+}

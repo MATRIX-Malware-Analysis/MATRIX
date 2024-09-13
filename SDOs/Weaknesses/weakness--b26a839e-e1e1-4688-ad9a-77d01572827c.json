@@ -1,0 +1,57 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b26a839e-e1e1-4688-ad9a-77d01572827c",
+    "created": "2024-08-13T14:46:48.754571Z",
+    "modified": "2024-08-13T14:46:48.754571Z",
+    "name": "Misinterpretation of Input",
+    "description": "The product misinterprets an input, whether from an attacker or another product, in a security-relevant fashion.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "115"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product sees dangerous file extension in free text of a group discussion, disconnects all users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2225",
+            "reference": "CVE-2005-2225"
+        },
+        {
+            "description": "Product does not correctly import and process security settings from another product.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0003",
+            "reference": "CVE-2001-0003"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "436",
+            "nature": "ChildOf"
+        }
+    ]
+}

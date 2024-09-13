@@ -1,0 +1,89 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c9a83d3e-f40e-4682-929a-bf5e9fea8f0b",
+    "created": "2024-08-13T14:46:48.957429Z",
+    "modified": "2024-08-13T14:46:48.957429Z",
+    "name": "Authorization Bypass Through User-Controlled SQL Primary Key",
+    "description": "The product uses a database table that includes records that should not be accessible to an actor, but it executes a SQL statement with a primary key that can be controlled by that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "566"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Assume all input is malicious. Use a standard input validation mechanism to validate all input for length, type, syntax, and business rules before accepting the data. Use an \"accept known good\" validation strategy.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a parameterized query AND make sure that the accepted values conform to the business rules. Construct your SQL statement accordingly.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "639",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b12f303c-76ce-4621-a2fa-34ce35fce351",
+    "created": "2024-08-13T14:46:49.014559Z",
+    "modified": "2024-08-13T14:46:49.014559Z",
+    "name": "Premature Release of Resource During Expected Lifetime",
+    "description": "The product releases a resource that is still intended to be used by itself or another actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "826"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-09-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: race condition (CWE-362) might allow resource to be released before operating on it, leading to NULL dereference (CWE-476)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3547",
+            "reference": "CVE-2009-3547"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "666",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9cf28d2b-3538-4ccc-8c6e-c77a3bfe1b38",
+    "created": "2024-08-13T14:46:48.766392Z",
+    "modified": "2024-08-13T14:46:48.766392Z",
+    "name": "Sensitive Non-Volatile Information Not Protected During Debug",
+    "description": "Access to security-sensitive information stored in fuses is not limited during debug.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1243"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1366"
+        },
+        {
+            "external_reference_id": "REF-1367"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1263",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--61e4af6b-d8fb-485f-b06e-802beee87c19",
+    "created": "2024-08-13T14:46:48.976151Z",
+    "modified": "2024-08-13T14:46:48.976151Z",
+    "name": "Authorization Bypass Through User-Controlled Key",
+    "description": "The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "639"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "An educational application does not appropriately restrict file IDs to a particular user. The attacker can brute-force guess IDs, indicating IDOR.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-36539",
+            "reference": "CVE-2021-36539"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "For each and every data access, ensure that the user has sufficient privilege to access the record that is being requested.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Make sure that the key that is used in the lookup of a specific user's record is not controllable externally by the user or that any tampering can be detected.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use encryption in order to make it more difficult to guess other legitimate values of the key or associate a digital signature with the key so that the server can verify that there has been no tampering.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "863",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "863",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

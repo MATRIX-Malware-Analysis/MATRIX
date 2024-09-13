@@ -1,0 +1,138 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5d7e944f-5573-44d0-84fe-bd12e38b03a3",
+    "created": "2024-08-13T14:46:48.889702Z",
+    "modified": "2024-08-13T14:46:48.889702Z",
+    "name": "Improper Restriction of Excessive Authentication Attempts",
+    "description": "The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "307"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "the REST API for a network OS has a high limit for number of connections, allowing brute force password guessing ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-0039",
+            "reference": "CVE-2019-0039"
+        },
+        {
+            "description": "Product does not disconnect or timeout after multiple failed logins.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1152",
+            "reference": "CVE-1999-1152"
+        },
+        {
+            "description": "Product does not disconnect or timeout after multiple failed logins.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1291",
+            "reference": "CVE-2001-1291"
+        },
+        {
+            "description": "Product does not disconnect or timeout after multiple failed logins.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0395",
+            "reference": "CVE-2001-0395"
+        },
+        {
+            "description": "Product does not disconnect or timeout after multiple failed logins.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1339",
+            "reference": "CVE-2001-1339"
+        },
+        {
+            "description": "Product does not disconnect or timeout after multiple failed logins.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0628",
+            "reference": "CVE-2002-0628"
+        },
+        {
+            "description": "User accounts not disabled when they exceed a threshold; possibly a resultant problem.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1324",
+            "reference": "CVE-1999-1324"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-236"
+        },
+        {
+            "external_reference_id": "REF-1218"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "799",
+            "nature": "ChildOf"
+        }
+    ]
+}

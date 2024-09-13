@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c5e2cf4a-96cd-48e9-8fa4-b34eecf394d4",
+    "created": "2024-08-13T14:46:48.970706Z",
+    "modified": "2024-08-13T14:46:48.970706Z",
+    "name": "Insufficient Session Expiration",
+    "description": "According to WASC, \"Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization.\"",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "613"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "WASC",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Set sessions/credentials expiration date.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,322 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--559b3807-89e8-4d0c-ac79-4a3931727832",
+    "created": "2024-08-13T14:46:48.903202Z",
+    "modified": "2024-08-13T14:46:48.903202Z",
+    "name": "Cross-Site Request Forgery (CSRF)",
+    "description": "The web application does not, or can not, sufficiently verify whether a well-formed, valid, consistent request was intentionally provided by the user who submitted the request.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "352"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "CSRF is currently difficult to detect reliably using automated techniques. This is because each application has its own implicit security policy that dictates which requests can be influenced by an outsider and automatically performed on behalf of a user, versus which requests require strong confidence that the user intends to make the request. For example, a keyword search of the public portion of a web site is typically expected to be encoded within a link that can be launched automatically when the user clicks on the link.",
+            "effectiveness": "Limited",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Add user accounts via a URL in an img tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1703",
+            "reference": "CVE-2004-1703"
+        },
+        {
+            "description": "Add user accounts via a URL in an img tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1995",
+            "reference": "CVE-2004-1995"
+        },
+        {
+            "description": "Arbitrary code execution by specifying the code in a crafted img tag or URL",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1967",
+            "reference": "CVE-2004-1967"
+        },
+        {
+            "description": "Gain administrative privileges via a URL in an img tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1842",
+            "reference": "CVE-2004-1842"
+        },
+        {
+            "description": "Delete a victim's information via a URL or an img tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1947",
+            "reference": "CVE-2005-1947"
+        },
+        {
+            "description": "Change another user's settings via a URL or an img tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2059",
+            "reference": "CVE-2005-2059"
+        },
+        {
+            "description": "Perform actions as administrator via a URL or an img tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1674",
+            "reference": "CVE-2005-1674"
+        },
+        {
+            "description": "modify password for the administrator",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3520",
+            "reference": "CVE-2009-3520"
+        },
+        {
+            "description": "CMS allows modification of configuration via CSRF attack against the administrator",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3022",
+            "reference": "CVE-2009-3022"
+        },
+        {
+            "description": "web interface allows password changes or stopping a virtual machine via CSRF",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3759",
+            "reference": "CVE-2009-3759"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that the application is free of cross-site scripting issues (CWE-79), because most CSRF defenses can be bypassed using attacker-controlled script.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330). [REF-332]",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Do not use the GET method for any request that triggers a state change.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-329"
+        },
+        {
+            "external_reference_id": "REF-330"
+        },
+        {
+            "external_reference_id": "REF-331"
+        },
+        {
+            "external_reference_id": "REF-332"
+        },
+        {
+            "external_reference_id": "REF-333"
+        },
+        {
+            "external_reference_id": "REF-334"
+        },
+        {
+            "external_reference_id": "REF-335"
+        },
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-956"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "346",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "441",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "642",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "613",
+            "nature": "Requires"
+        }
+    ]
+}

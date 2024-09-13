@@ -1,0 +1,183 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7a0c0fd7-6b79-424d-ab61-7504aa202e01",
+    "created": "2024-08-13T14:46:48.921495Z",
+    "modified": "2024-08-13T14:46:48.921495Z",
+    "name": "Untrusted Search Path",
+    "description": "The product searches for critical resources using an externally-supplied search path that can point to resources that are not under the product's direct control.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "426"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Use tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session. These may be more effective than strictly automated techniques. This is especially the case with weaknesses that are related to design and business rules.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Application relies on its PATH environment variable to find and execute program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1120",
+            "reference": "CVE-1999-1120"
+        },
+        {
+            "description": "Database application relies on its PATH environment variable to find and execute program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1810",
+            "reference": "CVE-2008-1810"
+        },
+        {
+            "description": "Chain: untrusted search path enabling resultant format string by loading malicious internationalization messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2027",
+            "reference": "CVE-2007-2027"
+        },
+        {
+            "description": "Untrusted search path using malicious .EXE in Windows environment.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3485",
+            "reference": "CVE-2008-3485"
+        },
+        {
+            "description": "setuid program allows compromise using path that finds and loads a malicious library.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2613",
+            "reference": "CVE-2008-2613"
+        },
+        {
+            "description": "Server allows client to specify the search path, which can be modified to point to a program that the client has uploaded.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1319",
+            "reference": "CVE-2008-1319"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Hard-code the search path to a set of known-safe values (such as system directories), or only allow them to be specified by the administrator in a configuration file. Do not allow these settings to be modified by an external party. Be careful to avoid related weaknesses such as CWE-426 and CWE-428.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When invoking other programs, specify those programs using fully-qualified pathnames. While this is an effective approach, code that uses fully-qualified pathnames might not be portable to other systems that do not use the same pathnames. The portability can be improved by locating the full-qualified paths in a centralized, easily-modifiable location within the source code, and having the code refer to these paths.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Remove or restrict all environment settings before invoking other programs. This includes the PATH environment variable, LD_LIBRARY_PATH, and other settings that identify the location of code libraries, and any application-specific search paths.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Check your search path before use and remove any elements that are likely to be unsafe, such as the current working directory or a temporary files directory.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use other functions that require explicit paths. Making use of any of the other readily available functions that require explicit paths is a safe way to avoid this problem. For example, system() in C does not require a full path since the shell can take care of it, while execl() and execv() require a full path.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-176"
+        },
+        {
+            "external_reference_id": "REF-207"
+        },
+        {
+            "external_reference_id": "REF-7"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "642",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "673",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "427",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "428",
+            "nature": "PeerOf"
+        }
+    ]
+}

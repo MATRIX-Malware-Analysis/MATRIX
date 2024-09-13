@@ -1,0 +1,228 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b60c9e12-7bc4-4d3d-8ad9-44eacc25344a",
+    "created": "2024-08-13T14:46:48.923649Z",
+    "modified": "2024-08-13T14:46:48.923649Z",
+    "name": "Unrestricted Upload of File with Dangerous Type",
+    "description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "434"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "PHP-based FAQ management app does not check the MIME type for uploaded images",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-5227",
+            "reference": "CVE-2023-5227"
+        },
+        {
+            "description": "Web-based mail product stores \".shtml\" attachments that could contain SSI",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0901",
+            "reference": "CVE-2001-0901"
+        },
+        {
+            "description": "PHP upload does not restrict file types",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1841",
+            "reference": "CVE-2002-1841"
+        },
+        {
+            "description": "upload and execution of .php file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1868",
+            "reference": "CVE-2005-1868"
+        },
+        {
+            "description": "upload file with dangerous extension",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1881",
+            "reference": "CVE-2005-1881"
+        },
+        {
+            "description": "program does not restrict file types",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0254",
+            "reference": "CVE-2005-0254"
+        },
+        {
+            "description": "improper type checking of uploaded files",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2262",
+            "reference": "CVE-2004-2262"
+        },
+        {
+            "description": "Double \"php\" extension leaves an active php extension in the generated filename.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4558",
+            "reference": "CVE-2006-4558"
+        },
+        {
+            "description": "ASP program allows upload of .asp files by bypassing client-side checks",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6994",
+            "reference": "CVE-2006-6994"
+        },
+        {
+            "description": "ASP file upload",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3288",
+            "reference": "CVE-2005-3288"
+        },
+        {
+            "description": "ASP file upload",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2428",
+            "reference": "CVE-2006-2428"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Generate a new, unique filename for an uploaded file instead of using the user-supplied filename, so that no external input is used at all.[REF-422] [REF-423]",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When the set of acceptable objects, such as filenames or URLs, is limited or known, create a mapping from a set of fixed input values (such as numeric IDs) to the actual filenames or URLs, and reject all other inputs.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider storing the uploaded files outside of the web document root entirely. Then, use other mechanisms to deliver the files dynamically. [REF-423]",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Define a very limited set of allowable extensions and only generate filenames that end in these extensions. Consider the possibility of XSS (CWE-79) before allowing .html or .htm file types.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that only one extension is used in the filename. Some web servers, including some versions of Apache, may process files based on inner extensions so that \"filename.php.gif\" is fed to the PHP interpreter.[REF-422] [REF-423]",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When running on a web server that supports case-insensitive filenames, perform case-insensitive evaluations of the extensions that are provided.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Do not rely exclusively on sanity checks of file contents to ensure that the file is of the expected type and size. It may be possible for an attacker to hide code in some file segments that will still be executed by the server. For example, GIF images may contain a free-form comments field.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Do not rely exclusively on the MIME content type or filename attribute when determining how to render a file. Validating the MIME content type and ensuring that it matches the extension is only a partial solution.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-422"
+        },
+        {
+            "external_reference_id": "REF-423"
+        },
+        {
+            "external_reference_id": "REF-424"
+        },
+        {
+            "external_reference_id": "REF-76"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "351",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "436",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "430",
+            "nature": "PeerOf"
+        }
+    ]
+}

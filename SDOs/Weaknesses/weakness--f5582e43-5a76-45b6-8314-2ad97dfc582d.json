@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f5582e43-5a76-45b6-8314-2ad97dfc582d",
+    "created": "2024-08-13T14:46:48.770569Z",
+    "modified": "2024-08-13T14:46:48.770569Z",
+    "name": "Improper Access Control Applied to Mirrored or Aliased Memory Regions",
+    "description": "Aliased or mirrored memory regions in hardware designs may have inconsistent read/write permissions enforced by the hardware. A possible result is that an untrusted agent is blocked from accessing a memory region but is not blocked from accessing the corresponding aliased memory region.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1257"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-04-29",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The checks should be applied for consistency access rights between primary memory regions and any mirrored or aliased memory regions. If different memory protection units (MPU) are protecting the aliased regions, their protected range definitions and policies should be synchronized.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The controls that allow enabling memory aliases or changing the size of mapped memory regions should only be programmable by trusted software components.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2cf35eac-cb6e-4a31-9d1a-5a75d3c9bfe7",
+    "created": "2024-08-13T14:46:48.884077Z",
+    "modified": "2024-08-13T14:46:48.884077Z",
+    "name": "Authentication Bypass by Alternate Name",
+    "description": "The product performs authentication based on the name of a resource being accessed, or the name of the actor performing the access, but it does not properly check all possible names for that resource or actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "289"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Protection mechanism that restricts URL access can be bypassed using URL encoding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0317",
+            "reference": "CVE-2003-0317"
+        },
+        {
+            "description": "Bypass of authentication for files using \"\\\" (backslash) or \"%5C\" (encoded backslash).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0847",
+            "reference": "CVE-2004-0847"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid making decisions based on names of resources (e.g. files) if those resources can have alternate names.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        }
+    ]
+}

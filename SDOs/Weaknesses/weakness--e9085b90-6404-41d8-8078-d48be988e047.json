@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e9085b90-6404-41d8-8078-d48be988e047",
+    "created": "2024-08-13T14:46:48.97203Z",
+    "modified": "2024-08-13T14:46:48.97203Z",
+    "name": "Exposed Unsafe ActiveX Method",
+    "description": "An ActiveX control is intended for use in a web browser, but it exposes dangerous methods that perform actions that are outside of the browser's security model (e.g. the zone or domain).",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "618"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "download a file to arbitrary folders.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1120",
+            "reference": "CVE-2007-1120"
+        },
+        {
+            "description": "control downloads and executes a url in a parameter",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6838",
+            "reference": "CVE-2006-6838"
+        },
+        {
+            "description": "resultant buffer overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0321",
+            "reference": "CVE-2007-0321"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If you must expose a method, make sure to perform input validation on all arguments, and protect against all possible vulnerabilities.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use code signing, although this does not protect against any weaknesses that are already in the control.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Where possible, avoid marking the control as safe for scripting.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-503"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "749",
+            "nature": "ChildOf"
+        }
+    ]
+}

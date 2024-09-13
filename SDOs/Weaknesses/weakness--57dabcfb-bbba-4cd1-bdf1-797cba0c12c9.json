@@ -1,0 +1,73 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--57dabcfb-bbba-4cd1-bdf1-797cba0c12c9",
+    "created": "2024-08-13T14:46:48.768861Z",
+    "modified": "2024-08-13T14:46:48.768861Z",
+    "name": "Mirrored Regions with Different Values",
+    "description": "The product's architecture mirrors regions without ensuring that their contents always stay in sync.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1251"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-10",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n\t\t\t\t\t\t",
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1250",
+            "nature": "ChildOf"
+        }
+    ]
+}

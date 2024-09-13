@@ -1,0 +1,97 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3e3ec642-0356-452a-a911-b20afa5818f9",
+    "created": "2024-08-13T14:46:48.922619Z",
+    "modified": "2024-08-13T14:46:48.922619Z",
+    "name": "Deployment of Wrong Handler",
+    "description": "The wrong \"handler\" is assigned to process an object.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "430"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Source code disclosure via manipulated file extension that causes parsing by wrong DLL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0004",
+            "reference": "CVE-2001-0004"
+        },
+        {
+            "description": "Web browser does not properly handle the Content-Type header field, causing a different application to process the document.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0025",
+            "reference": "CVE-2002-0025"
+        },
+        {
+            "description": "Source code disclosure by directly invoking a servlet.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1052",
+            "reference": "CVE-2000-1052"
+        },
+        {
+            "description": "Arbitrary Perl functions can be loaded by calling a non-existent function that activates a handler.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1742",
+            "reference": "CVE-2002-1742"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform a type check before interpreting an object.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Reject any inconsistent types, such as a file with a .GIF extension that appears to consist of PHP code.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "433",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "434",
+            "nature": "PeerOf"
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1db69d3e-a85c-4831-a5ef-4427e378822e",
+    "created": "2024-08-13T14:46:48.912546Z",
+    "modified": "2024-08-13T14:46:48.912546Z",
+    "name": "Unchecked Error Condition",
+    "description": "[PLANNED FOR DEPRECATION. SEE MAINTENANCE NOTES AND CONSIDER CWE-252, CWE-248, OR CWE-1069.] Ignoring exceptions and other error conditions may allow an attacker to induce unexpected behavior unnoticed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "391"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The choice between a language which has named or unnamed exceptions needs to be done. While unnamed exceptions exacerbate the chance of not properly dealing with an exception, named exceptions suffer from the up call version of the weak base class problem.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "A language can be used which requires, at compile time, to catch all serious exceptions. However, one must make sure to use the most current version of the API as new exceptions could be added.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Catch all relevant exceptions. This is the recommended solution. Ensure that all exceptions are handled in such a way that you can be sure of the state of your system at any given moment.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        }
+    ]
+}

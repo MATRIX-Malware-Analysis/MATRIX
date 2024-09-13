@@ -1,0 +1,53 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c57214a4-e531-4341-8b71-2db206b9e456",
+    "created": "2024-08-13T14:46:48.767206Z",
+    "modified": "2024-08-13T14:46:48.767206Z",
+    "name": "Improper Write Handling in Limited-write Non-Volatile Memories",
+    "description": "The product does not implement or incorrectly implements wear leveling operations in limited-write non-volatile memories.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1246"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-10",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        Include secure wear leveling algorithms and ensure they may not be bypassed.                     \n                    ",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1058"
+        },
+        {
+            "external_reference_id": "REF-1059"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--347ebf16-6083-4c8b-87c0-da7ba713e3ae",
+    "created": "2024-08-13T14:46:48.951787Z",
+    "modified": "2024-08-13T14:46:48.951787Z",
+    "name": "Missing Standardized Error Handling Mechanism",
+    "description": "The product does not use a standardized method for handling errors throughout the code, which might introduce inconsistent error handling and resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "544"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "define a strategy for handling errors of different severities, such as fatal errors versus basic log events. Use or create built-in language features, or an external package, that provides an easy-to-use API and define coding standards for the detection and handling of errors.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "755",
+            "nature": "ChildOf"
+        }
+    ]
+}

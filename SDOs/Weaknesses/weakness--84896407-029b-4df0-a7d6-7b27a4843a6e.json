@@ -1,0 +1,106 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--84896407-029b-4df0-a7d6-7b27a4843a6e",
+    "created": "2024-08-13T14:46:48.787632Z",
+    "modified": "2024-08-13T14:46:48.787632Z",
+    "name": "Improper Translation of Security Attributes by Fabric Bridge",
+    "description": "The bridge incorrectly translates security attributes from either trusted to untrusted or from untrusted to trusted when converting from one fabric protocol to another.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1311"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-24",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The translation must map signals in such a way that untrusted agents cannot map to trusted agents or vice-versa.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that the translation maps signals in such a way that untrusted agents cannot map to trusted agents or vice-versa.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

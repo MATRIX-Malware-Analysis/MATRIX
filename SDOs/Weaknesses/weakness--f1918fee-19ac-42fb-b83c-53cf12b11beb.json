@@ -1,0 +1,117 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f1918fee-19ac-42fb-b83c-53cf12b11beb",
+    "created": "2024-08-13T14:46:48.805734Z",
+    "modified": "2024-08-13T14:46:48.805734Z",
+    "name": "Improper Neutralization of Escape, Meta, or Control Sequences",
+    "description": "The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could be interpreted as escape, meta, or control character sequences when they are sent to a downstream component.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "150"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "The mail program processes special \"~\" escape sequence even when not in interactive mode.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0542",
+            "reference": "CVE-2002-0542"
+        },
+        {
+            "description": "Setuid program does not filter escape sequences before calling mail program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0703",
+            "reference": "CVE-2000-0703"
+        },
+        {
+            "description": "Mail function does not filter control characters from arguments, allowing mail message content to be modified.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0986",
+            "reference": "CVE-2002-0986"
+        },
+        {
+            "description": "Multi-channel issue. Terminal escape sequences not filtered from log files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0020",
+            "reference": "CVE-2003-0020"
+        },
+        {
+            "description": "Multi-channel issue. Terminal escape sequences not filtered from log files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0083",
+            "reference": "CVE-2003-0083"
+        },
+        {
+            "description": "Terminal escape sequences not filtered by terminals when displaying files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0021",
+            "reference": "CVE-2003-0021"
+        },
+        {
+            "description": "Terminal escape sequences not filtered by terminals when displaying files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0022",
+            "reference": "CVE-2003-0022"
+        },
+        {
+            "description": "Terminal escape sequences not filtered by terminals when displaying files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0023",
+            "reference": "CVE-2003-0023"
+        },
+        {
+            "description": "Terminal escape sequences not filtered by terminals when displaying files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0063",
+            "reference": "CVE-2003-0063"
+        },
+        {
+            "description": "Terminal escape sequences not filtered by terminals when displaying files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0476",
+            "reference": "CVE-2000-0476"
+        },
+        {
+            "description": "MFV. (multi-channel). Injection of control characters into log files that allow information hiding when using raw Unix programs to read the files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1556",
+            "reference": "CVE-2001-1556"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Developers should anticipate that escape, meta and control characters/sequences will be injected/removed/manipulated in the input vectors of their product. Use an appropriate combination of denylists and allowlists to ensure only valid, expected and appropriate input is processed by the system.",
+            "effectiveness": null,
+            "phase": null
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "While it is risky to use dynamically-generated query strings, code, or commands that mix control and data together, sometimes it may be unavoidable. Properly quote arguments and escape any special characters within those arguments. The most conservative approach is to escape or filter all characters that do not pass an extremely strict allowlist (such as everything that is not alphanumeric or white space). If some special characters are still needed, such as white space, wrap each argument in quotes after the escaping/filtering step. Be careful of argument injection (CWE-88).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "138",
+            "nature": "ChildOf"
+        }
+    ]
+}

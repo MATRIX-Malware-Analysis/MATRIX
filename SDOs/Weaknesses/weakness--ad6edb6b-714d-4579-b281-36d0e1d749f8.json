@@ -1,0 +1,86 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ad6edb6b-714d-4579-b281-36d0e1d749f8",
+    "created": "2024-08-13T14:46:48.938412Z",
+    "modified": "2024-08-13T14:46:48.938412Z",
+    "name": "Path Equivalence: 'filename/' (Trailing Slash)",
+    "description": "The product accepts path input in the form of trailing slash ('filedir/') without appropriate validation, which can lead to ambiguous path resolution and allow an attacker to traverse the file system to unintended locations or access arbitrary files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "49"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Overlaps infoleak",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0253",
+            "reference": "CVE-2002-0253"
+        },
+        {
+            "description": "Application server allows remote attackers to read source code for .jsp files by appending a / to the requested URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0446",
+            "reference": "CVE-2001-0446"
+        },
+        {
+            "description": "Bypass Basic Authentication for files using trailing \"/\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0334",
+            "reference": "CVE-2004-0334"
+        },
+        {
+            "description": "Read sensitive files with trailing \"/\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0893",
+            "reference": "CVE-2001-0893"
+        },
+        {
+            "description": "Web server allows remote attackers to view sensitive files under the document root (such as .htpasswd) via a GET request with a trailing /.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0892",
+            "reference": "CVE-2001-0892"
+        },
+        {
+            "description": "Directory traversal vulnerability in server allows remote attackers to read protected files via .. (dot dot) sequences in an HTTP request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1814",
+            "reference": "CVE-2004-1814"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "41",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "162",
+            "nature": "ChildOf"
+        }
+    ]
+}

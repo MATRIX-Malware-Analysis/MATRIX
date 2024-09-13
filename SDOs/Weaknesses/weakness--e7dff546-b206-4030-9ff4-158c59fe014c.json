@@ -1,0 +1,49 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e7dff546-b206-4030-9ff4-158c59fe014c",
+    "created": "2024-08-13T14:46:48.779339Z",
+    "modified": "2024-08-13T14:46:48.779339Z",
+    "name": "Assumed-Immutable Data is Stored in Writable Memory",
+    "description": "Immutable data, such as a first-stage bootloader, device identifiers, and \"write-once\" configuration settings are stored in writable memory that can be re-programmed or updated in the field.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1282"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-15",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "All immutable code or data should be programmed into ROM or write-once memory.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "471",
+            "nature": "CanPrecede"
+        }
+    ]
+}

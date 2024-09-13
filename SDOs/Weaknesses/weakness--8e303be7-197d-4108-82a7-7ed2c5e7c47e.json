@@ -1,0 +1,195 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8e303be7-197d-4108-82a7-7ed2c5e7c47e",
+    "created": "2024-08-13T14:46:48.802321Z",
+    "modified": "2024-08-13T14:46:48.802321Z",
+    "name": "Exposure of Sensitive Information in Shared Microarchitectural Structures during Transient Execution",
+    "description": "A processor event may allow transient operations to access\n\t\t\tarchitecturally restricted data (for example, in another address\n\t\t\tspace) in a shared microarchitectural structure (for example, a CPU\n\t\t\tcache), potentially exposing the data over a covert channel.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1421"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2023-09-19",
+            "submission_name": "Scott D. Constable",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Automated Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "method": "Automated Analysis"
+        },
+        {
+            "description": "Academic researchers have demonstrated that this\n\t\t\t\tweakness can be detected in hardware using software fuzzing\n\t\t\t\ttools that treat the underlying hardware as a black box\n\t\t\t\t([REF-1406], [REF-1430])\n\t\t\t\t",
+            "effectiveness": "Opportunistic",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A fault may allow transient user-mode operations to\n\t\t\t\taccess kernel data cached in the L1D, potentially exposing the data\n\t\t\t\tover a covert channel.\n\t\t\t\t",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5715",
+            "reference": "CVE-2017-5715"
+        },
+        {
+            "description": "A fault may allow transient non-enclave operations to\n\t\t\t\taccess SGX enclave data cached in the L1D, potentially exposing the\n\t\t\t\tdata over a covert channel.\n\t\t\t\t",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-3615",
+            "reference": "CVE-2018-3615"
+        },
+        {
+            "description": "A TSX Asynchronous Abort may allow transient operations\n\t\t\t\tto access architecturally restricted data, potentially exposing the\n\t\t\t\tdata over a covert channel.\n\t\t\t\t",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1135",
+            "reference": "CVE-2019-1135"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": null,
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Incidental",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Implementation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "System Configuration"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "System Configuration"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Patching and Maintenance"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Patching and Maintenance"
+        },
+        {
+            "description": null,
+            "effectiveness": "Defense in Depth",
+            "phase": "Requirements"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1404"
+        },
+        {
+            "external_reference_id": "REF-1405"
+        },
+        {
+            "external_reference_id": "REF-1406"
+        },
+        {
+            "external_reference_id": "REF-1401"
+        },
+        {
+            "external_reference_id": "REF-1408"
+        },
+        {
+            "external_reference_id": "REF-1409"
+        },
+        {
+            "external_reference_id": "REF-1410"
+        },
+        {
+            "external_reference_id": "REF-1411"
+        },
+        {
+            "external_reference_id": "REF-1400"
+        },
+        {
+            "external_reference_id": "REF-1389"
+        },
+        {
+            "external_reference_id": "REF-1430"
+        },
+        {
+            "external_reference_id": "REF-1417"
+        },
+        {
+            "external_reference_id": "REF-1418"
+        },
+        {
+            "external_reference_id": "REF-1419"
+        },
+        {
+            "external_reference_id": "REF-1420"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1420",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1420",
+            "nature": "ChildOf"
+        }
+    ]
+}

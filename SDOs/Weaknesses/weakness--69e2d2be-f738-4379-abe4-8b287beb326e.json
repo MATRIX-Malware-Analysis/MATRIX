@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--69e2d2be-f738-4379-abe4-8b287beb326e",
+    "created": "2024-08-13T14:46:48.825086Z",
+    "modified": "2024-08-13T14:46:48.825086Z",
+    "name": "Storage of File With Sensitive Data Under FTP Root",
+    "description": "The product stores sensitive data under the FTP server root with insufficient access control, which might make it accessible to untrusted parties.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "220"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid storing information under the FTP root directory.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Access control permissions should be set to prevent reading/writing of sensitive files inside/outside of the FTP directory.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "552",
+            "nature": "ChildOf"
+        }
+    ]
+}

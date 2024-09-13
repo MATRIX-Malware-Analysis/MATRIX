@@ -1,0 +1,117 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e5da8504-2c5d-403b-9e9d-ffb17a37cfc9",
+    "created": "2024-08-13T14:46:48.778786Z",
+    "modified": "2024-08-13T14:46:48.778786Z",
+    "name": "Access Control Check Implemented After Asset is Accessed",
+    "description": "A product's hardware-based access control check occurs after the asset has been accessed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1280"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implement the access control check first. Access should only be given to asset if agent is authorized. ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "696",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

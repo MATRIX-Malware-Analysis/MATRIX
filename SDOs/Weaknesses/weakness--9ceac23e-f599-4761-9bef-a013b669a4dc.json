@@ -1,0 +1,117 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9ceac23e-f599-4761-9bef-a013b669a4dc",
+    "created": "2024-08-13T14:46:48.98938Z",
+    "modified": "2024-08-13T14:46:48.98938Z",
+    "name": "Unchecked Return Value to NULL Pointer Dereference",
+    "description": "The product does not check for an error after calling a function that can return with a NULL pointer if the function fails, which leads to a resultant NULL pointer dereference.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "690"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This typically occurs in rarely-triggered error conditions, reducing the chances of detection during black box testing.",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "Code analysis can require knowledge of API behaviors for library functions that might return NULL, reducing the chances of detection when unknown libraries are used.",
+            "effectiveness": null,
+            "method": "White Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Large Content-Length value leads to NULL pointer dereference when malloc fails.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1052",
+            "reference": "CVE-2008-1052"
+        },
+        {
+            "description": "Large message length field leads to NULL pointer dereference when malloc fails.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6227",
+            "reference": "CVE-2006-6227"
+        },
+        {
+            "description": "Parsing routine encounters NULL dereference when input is missing a colon separator.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2555",
+            "reference": "CVE-2006-2555"
+        },
+        {
+            "description": "URI parsing API sets argument to NULL when a parsing failure occurs, such as when the Referer header is missing a hostname, leading to NULL dereference.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1054",
+            "reference": "CVE-2003-1054"
+        },
+        {
+            "description": "chain: unchecked return value can lead to NULL dereference",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5183",
+            "reference": "CVE-2008-5183"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "252",
+            "nature": "StartsWith"
+        },
+        {
+            "cwe_id": "252",
+            "nature": "ChildOf"
+        }
+    ]
+}

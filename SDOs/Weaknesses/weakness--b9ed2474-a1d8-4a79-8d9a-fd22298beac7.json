@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b9ed2474-a1d8-4a79-8d9a-fd22298beac7",
+    "created": "2024-08-13T14:46:48.764379Z",
+    "modified": "2024-08-13T14:46:48.764379Z",
+    "name": "Incorrect Use of Autoboxing and Unboxing for Performance Critical Operations",
+    "description": "The code uses boxed primitives, which may introduce inefficiencies into performance-critical operations.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1235"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-10-14",
+            "submission_name": "Joe Harvey",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use of boxed primitives should be limited to certain situations such as when calling methods with typed parameters.  Examine the use of boxed primitives prior to use. Use SparseArrays or ArrayMap instead of HashMap to avoid performance overhead.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1051"
+        },
+        {
+            "external_reference_id": "REF-1052"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--463140ee-fa76-469b-9cbd-7c55eb6e9f9e",
+    "created": "2024-08-13T14:46:48.764641Z",
+    "modified": "2024-08-13T14:46:48.764641Z",
+    "name": "Improper Neutralization of Formula Elements in a CSV File",
+    "description": "The product saves user-provided information into a Comma-Separated Value (CSV) file, but it does not neutralize or incorrectly neutralizes special elements that could be interpreted as a command when the file is opened by a spreadsheet product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1236"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-11-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Low privileged user can trigger CSV injection through a contact form field value",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-12134",
+            "reference": "CVE-2019-12134"
+        },
+        {
+            "description": "Cloud management product allows arbitrary command execution via CSV injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-4521",
+            "reference": "CVE-2019-4521"
+        },
+        {
+            "description": "CSV injection in content management system via formula code in a first or last name",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-17661",
+            "reference": "CVE-2019-17661"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When generating CSV output, ensure that formula-sensitive metacharacters are effectively escaped or removed from all data before storage in the resultant CSV.  Risky characters include '=' (equal), '+' (plus), '-' (minus), and '@' (at).",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        },
+        {
+            "description": "If a field starts with a formula character, prepend it with a ' (single apostrophe), which prevents Excel from executing the formula.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Certain implementations of spreadsheet software might disallow formulas from executing if the file is untrusted, or if the file is not authored by the current user.",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-21"
+        },
+        {
+            "external_reference_id": "REF-22"
+        },
+        {
+            "external_reference_id": "REF-23"
+        },
+        {
+            "external_reference_id": "REF-24"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        }
+    ]
+}

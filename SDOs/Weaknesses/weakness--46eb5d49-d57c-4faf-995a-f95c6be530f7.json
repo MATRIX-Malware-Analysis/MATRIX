@@ -1,0 +1,157 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--46eb5d49-d57c-4faf-995a-f95c6be530f7",
+    "created": "2024-08-13T14:46:48.761132Z",
+    "modified": "2024-08-13T14:46:48.761132Z",
+    "name": "Insufficient Granularity of Access Control",
+    "description": "The product implements access controls via a policy or other feature with the intention to disable or restrict accesses (reads and/or writes) to assets in a system from untrusted agents. However, implemented access controls lack required granularity, which renders the control policy too broad because it allows accesses from unauthorized agents to the security-sensitive assets.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1220"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-05",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A form hosting website only checks the session authentication status for a single form, making it possible to bypass authentication when there are multiple forms",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24985",
+            "reference": "CVE-2022-24985"
+        },
+        {
+            "description": "An operating system has an overly permission Access Control List onsome system files, including those related to user passwords",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-36934",
+            "reference": "CVE-2021-36934"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1346"
+        },
+        {
+            "external_reference_id": "REF-1347"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

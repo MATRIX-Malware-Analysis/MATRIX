@@ -1,0 +1,129 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fcca34ca-e239-436a-b84e-38a5ffaf964b",
+    "created": "2024-08-13T14:46:49.015717Z",
+    "modified": "2024-08-13T14:46:49.015717Z",
+    "name": "Improper Neutralization of Script in Attributes in a Web Page",
+    "description": "The product does not neutralize or incorrectly neutralizes \"javascript:\" or other URIs from dangerous attributes within tags, such as onmouseover, onload, onerror, or style.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "83"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Bypass filtering of SCRIPT tags using onload in BODY, href in A, BUTTON, INPUT, and others.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0520",
+            "reference": "CVE-2001-0520"
+        },
+        {
+            "description": "guestbook XSS in STYLE or IMG SRC attributes.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1493",
+            "reference": "CVE-2002-1493"
+        },
+        {
+            "description": "Javascript in onerror attribute of IMG tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1965",
+            "reference": "CVE-2002-1965"
+        },
+        {
+            "description": "XSS in web-based email product via onmouseover event.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1495",
+            "reference": "CVE-2002-1495"
+        },
+        {
+            "description": "XSS via script in <P> tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1681",
+            "reference": "CVE-2002-1681"
+        },
+        {
+            "description": "Onload, onmouseover, and other events in an e-mail attachment.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1935",
+            "reference": "CVE-2004-1935"
+        },
+        {
+            "description": "Onmouseover and onload events in img, link, and mail tags.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0945",
+            "reference": "CVE-2005-0945"
+        },
+        {
+            "description": "Javascript in onmouseover attribute in e-mail address or URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1136",
+            "reference": "CVE-2003-1136"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Carefully check each input parameter against a rigorous positive specification (allowlist) defining the specific characters and format allowed. All input should be neutralized, not just parameters that the user is supposed to specify, but all data in the request, including tag attributes, hidden fields, cookies, headers, the URL itself, and so forth. A common mistake that leads to continuing XSS vulnerabilities is to validate only fields that are expected to be redisplayed by the site. We often encounter data from the request that is reflected by the application server or the application that the development team did not anticipate. Also, a field that is not currently reflected may be used by a future developer. Therefore, validating ALL parts of the HTTP request is recommended.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "With Struts, write all data from form beans with the bean's filter attribute set to true.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "To help mitigate XSS attacks against the user's session cookie, set the session cookie to be HttpOnly. In browsers that support the HttpOnly feature (such as more recent versions of Internet Explorer and Firefox), this attribute can prevent the user's session cookie from being accessible to malicious client-side scripts that use document.cookie. This is not a complete solution, since HttpOnly is not supported by all browsers. More importantly, XMLHTTPRequest and other powerful browser technologies provide read access to HTTP headers, including the Set-Cookie header in which the HttpOnly flag is set.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "79",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--df69ba4c-c1f1-4236-9ea0-423edf4c075b",
+    "created": "2024-08-13T14:46:49.006302Z",
+    "modified": "2024-08-13T14:46:49.006302Z",
+    "name": "Access of Memory Location Before Start of Buffer",
+    "description": "The product reads or writes to a buffer using an index or pointer that references a memory location prior to the beginning of the buffer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "786"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-10-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Unchecked length of SSLv2 challenge value leads to buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2227",
+            "reference": "CVE-2002-2227"
+        },
+        {
+            "description": "Buffer underflow from a small size value with a large buffer (length parameter inconsistency, CWE-130)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4580",
+            "reference": "CVE-2007-4580"
+        },
+        {
+            "description": "Buffer underflow from an all-whitespace string, which causes a counter to be decremented before the buffer while looking for a non-whitespace character.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1584",
+            "reference": "CVE-2007-1584"
+        },
+        {
+            "description": "Buffer underflow resultant from encoded data that triggers an integer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0886",
+            "reference": "CVE-2007-0886"
+        },
+        {
+            "description": "Product sets an incorrect buffer size limit, leading to \"off-by-two\" buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6171",
+            "reference": "CVE-2006-6171"
+        },
+        {
+            "description": "Negative value is used in a memcpy() operation, leading to buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4024",
+            "reference": "CVE-2006-4024"
+        },
+        {
+            "description": "Buffer underflow due to mishandled special characters",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2620",
+            "reference": "CVE-2004-2620"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--311e855b-cf90-44bc-819f-fe2313bea706",
+    "created": "2024-08-13T14:46:48.797129Z",
+    "modified": "2024-08-13T14:46:48.797129Z",
+    "name": "Reliance on Insufficiently Trustworthy Component",
+    "description": "The product is built from multiple separate components, but it uses a component that is not sufficiently trusted to meet expectations for security, reliability, updateability, and maintainability.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1357"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2022-04-20",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: network-attached storage (NAS) device has a critical OS command injection (CWE-78) vulnerability that is actively exploited to place IoT devices into a botnet, but some products are \"end-of-support\" and cannot be patched (CWE-1277). [REF-1097]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9054",
+            "reference": "CVE-2020-9054"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "For each component, ensure that its supply chain is well-controlled with sub-tier suppliers using best practices. For third-party software components such as libraries, ensure that they are developed and actively maintained by reputable vendors.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Maintain a Bill of Materials for all components and sub-components of the product. For software, maintain a Software Bill of Materials (SBOM). According to [REF-1247], \"An SBOM is a formal, machine-readable inventory of software components and dependencies, information about those components, and their hierarchical relationships.\"",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Continue to monitor changes in each of the product's components, especially when the changes indicate new vulnerabilities, end-of-life (EOL) plans, supplier practices that affect trustworthiness, etc.",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1212"
+        },
+        {
+            "external_reference_id": "REF-1246"
+        },
+        {
+            "external_reference_id": "REF-1247"
+        },
+        {
+            "external_reference_id": "REF-1097"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

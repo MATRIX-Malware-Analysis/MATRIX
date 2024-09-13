@@ -1,0 +1,128 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c675dc74-cd08-4468-abe5-92e04bc515de",
+    "created": "2024-08-13T14:46:48.727586Z",
+    "modified": "2024-08-13T14:46:48.727586Z",
+    "name": "Improper Restriction of Rendered UI Layers or Frames",
+    "description": "The web application does not restrict or incorrectly restricts frame objects or UI layers that belong to another application or domain, which can lead to user confusion about which interface the user is interacting with.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1021"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2017-08-01",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "E-mail preview feature in a desktop application allows clickjacking attacks via a crafted e-mail message",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-7440",
+            "reference": "CVE-2017-7440"
+        },
+        {
+            "description": "Hardware/firmware product has insufficient clickjacking protection in its web user interface",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5697",
+            "reference": "CVE-2017-5697"
+        },
+        {
+            "description": "Clickjacking in data-loss prevention product via HTTP response header.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-4015",
+            "reference": "CVE-2017-4015"
+        },
+        {
+            "description": "Tapjacking in permission dialog for mobile OS allows access of private storage using a partially-overlapping window.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-2496",
+            "reference": "CVE-2016-2496"
+        },
+        {
+            "description": "Tapjacking in web browser related to page navigation and touch/gesture events.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-1241",
+            "reference": "CVE-2015-1241"
+        },
+        {
+            "description": "System UI in mobile OS allows a malicious application to create a UI overlay of the entire screen to gain privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-0492",
+            "reference": "CVE-2017-0492"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "This defense-in-depth technique can be used to prevent the improper usage of frames in web applications. It prioritizes the valid sources of data to be loaded into the application through the usage of declarative policies. Based on which implementation of Content Security Policy is in use, the developer should use the \"frame-ancestors\" directive or the \"frame-src\" directive to mitigate this weakness. Both directives allow for the placement of restrictions when it comes to allowing embedded content.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-35"
+        },
+        {
+            "external_reference_id": "REF-36"
+        },
+        {
+            "external_reference_id": "REF-37"
+        },
+        {
+            "external_reference_id": "REF-38"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "441",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "451",
+            "nature": "ChildOf"
+        }
+    ]
+}

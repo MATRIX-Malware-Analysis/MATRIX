@@ -1,0 +1,144 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2860c011-396b-463d-8937-47ed248797cb",
+    "created": "2024-08-13T14:46:48.92899Z",
+    "modified": "2024-08-13T14:46:48.92899Z",
+    "name": "Missing Initialization of a Variable",
+    "description": "The product does not initialize critical variables, which causes the execution environment to use unexpected values.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "456"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: The return value of a function returning a pointer is not checked for success (CWE-252) resulting in the later use of an uninitialized variable (CWE-456) and a null pointer dereference (CWE-476)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-6078",
+            "reference": "CVE-2020-6078"
+        },
+        {
+            "description": "Chain: Use of an unimplemented network socket operation pointing to an uninitialized handler function (CWE-456) causes a crash because of a null pointer dereference (CWE-476).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2692",
+            "reference": "CVE-2009-2692"
+        },
+        {
+            "description": "A variable that has its value set in a conditional statement is sometimes used when the conditional fails, sometimes causing data leakage",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-20739",
+            "reference": "CVE-2020-20739"
+        },
+        {
+            "description": "Product uses uninitialized variables for size and index, leading to resultant buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2978",
+            "reference": "CVE-2005-2978"
+        },
+        {
+            "description": "Internal variable in PHP application is not initialized, allowing external modification.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2109",
+            "reference": "CVE-2005-2109"
+        },
+        {
+            "description": "Array variable not initialized in PHP application, leading to resultant SQL injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2193",
+            "reference": "CVE-2005-2193"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Check that critical variables are initialized.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a static analysis tool to spot non-initialized variables.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-961"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "909",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "89",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "120",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "98",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "457",
+            "nature": "CanPrecede"
+        }
+    ]
+}

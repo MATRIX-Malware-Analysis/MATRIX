@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b73c6263-c0ca-4cae-8776-a075fb9ec7b9",
+    "created": "2024-08-13T14:46:48.963275Z",
+    "modified": "2024-08-13T14:46:48.963275Z",
+    "name": "Attempt to Access Child of a Non-structure Pointer",
+    "description": "Casting a non-structure type to a structure type and accessing a field can lead to memory access errors or data corruption.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "588"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-12-15",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "JSON decoder accesses a C union using an invalid offset to an object",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3510",
+            "reference": "CVE-2021-3510"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The choice could be made to use a language that is not susceptible to these issues.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Review of type casting operations can identify locations where incompatible types are cast.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "704",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "758",
+            "nature": "ChildOf"
+        }
+    ]
+}

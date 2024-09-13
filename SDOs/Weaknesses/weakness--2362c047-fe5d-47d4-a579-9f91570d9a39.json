@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2362c047-fe5d-47d4-a579-9f91570d9a39",
+    "created": "2024-08-13T14:46:48.931695Z",
+    "modified": "2024-08-13T14:46:48.931695Z",
+    "name": "Use of sizeof() on a Pointer Type",
+    "description": "The code calls sizeof() on a malloced pointer type, which always returns the wordsize/8. This can produce an unexpected result if the programmer intended to determine how much memory has been allocated.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "467"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use expressions such as \"sizeof(*pointer)\" instead of \"sizeof(pointer)\", unless you intend to run sizeof() on a pointer type to gain some platform independence or if you are allocating a variable on the stack.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-442"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "131",
+            "nature": "ChildOf"
+        }
+    ]
+}

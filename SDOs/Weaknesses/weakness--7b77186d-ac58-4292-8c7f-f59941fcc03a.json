@@ -1,0 +1,306 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7b77186d-ac58-4292-8c7f-f59941fcc03a",
+    "created": "2024-08-13T14:46:48.816057Z",
+    "modified": "2024-08-13T14:46:48.816057Z",
+    "name": "Integer Overflow or Wraparound",
+    "description": "The product performs a calculation that can\n         produce an integer overflow or wraparound when the logic\n         assumes that the resulting value will always be larger than\n         the original value. This occurs when an integer value is\n         incremented to a value that is too large to store in the\n         associated representation. When this occurs, the value may\n         become a very small or negative number.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "190"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Other"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This weakness can often be detected using automated static analysis tools. Many modern tools use data flow analysis or constraint-based techniques to minimize the number of false positives.",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Sometimes, evidence of this weakness can be detected using dynamic tools and techniques that interact with the product using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The product's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": "Moderate",
+            "method": "Black Box"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: in a web browser, an unsigned 64-bit integer is forcibly cast to a 32-bit integer (CWE-681) and potentially leading to an integer overflow (CWE-190). If an integer overflow occurs, this can cause heap memory corruption (CWE-122)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-43537",
+            "reference": "CVE-2021-43537"
+        },
+        {
+            "description": "Chain: Python library does not limit the resources used to process images that specify a very large number of bands (CWE-1284), leading to excessive memory consumption (CWE-789) or an integer overflow (CWE-190).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-21668",
+            "reference": "CVE-2022-21668"
+        },
+        {
+            "description": "Chain: 3D renderer has an integer overflow (CWE-190) leading to write-what-where condition (CWE-123) using a crafted image.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-0545",
+            "reference": "CVE-2022-0545"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) leads to integer overflow (CWE-190) in mobile OS, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-30860",
+            "reference": "CVE-2021-30860"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) leads to integer overflow (CWE-190) in mobile OS, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-30663",
+            "reference": "CVE-2021-30663"
+        },
+        {
+            "description": "Chain: unexpected sign extension (CWE-194) leads to integer overflow (CWE-190), causing an out-of-bounds read (CWE-125)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-10887",
+            "reference": "CVE-2018-10887"
+        },
+        {
+            "description": "Chain: compiler optimization (CWE-733) removes or modifies code used to detect integer overflow (CWE-190), allowing out-of-bounds write (CWE-787).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1010006",
+            "reference": "CVE-2019-1010006"
+        },
+        {
+            "description": "Chain: integer overflow (CWE-190) causes a negative signed value, which later bypasses a maximum-only check (CWE-839), leading to heap-based buffer overflow (CWE-122).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1866",
+            "reference": "CVE-2010-1866"
+        },
+        {
+            "description": "Chain: integer overflow leads to use-after-free",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2753",
+            "reference": "CVE-2010-2753"
+        },
+        {
+            "description": "Chain: integer overflow in securely-coded mail program leads to buffer overflow. In 2005, this was regarded as unrealistic to exploit, but in 2020, it was rediscovered to be easier to exploit due to evolutions of the technology.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1513",
+            "reference": "CVE-2005-1513"
+        },
+        {
+            "description": "Integer overflow via a large number of arguments.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0391",
+            "reference": "CVE-2002-0391"
+        },
+        {
+            "description": "Integer overflow in OpenSSH as listed in the demonstrative examples.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0639",
+            "reference": "CVE-2002-0639"
+        },
+        {
+            "description": "Image with large width and height leads to integer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1141",
+            "reference": "CVE-2005-1141"
+        },
+        {
+            "description": "Length value of -1 leads to allocation of 0 bytes and resultant heap overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0102",
+            "reference": "CVE-2005-0102"
+        },
+        {
+            "description": "Length value of -1 leads to allocation of 0 bytes and resultant heap overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2013",
+            "reference": "CVE-2004-2013"
+        },
+        {
+            "description": "chain: unchecked message size metadata allows integer overflow (CWE-190) leading to buffer overflow (CWE-119).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-1000121",
+            "reference": "CVE-2017-1000121"
+        },
+        {
+            "description": "Chain: an integer overflow (CWE-190) in the image size calculation causes an infinite loop (CWE-835) which sequentially allocates buffers without limits (CWE-1325) until the stack is full.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-1591",
+            "reference": "CVE-2013-1591"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that all protocols are strictly defined, such that all out-of-bounds behavior can be identified simply, and require strict conformance to the protocol.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Examine compiler warnings closely and eliminate problems with potential security implications, such as signed / unsigned mismatch in memory operations, or use of uninitialized variables. Even if the weakness is rarely exploitable, a single failure may lead to the compromise of the entire system.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-145"
+        },
+        {
+            "external_reference_id": "REF-146"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-106"
+        },
+        {
+            "external_reference_id": "REF-150"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1440"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

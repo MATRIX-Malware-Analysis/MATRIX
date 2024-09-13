@@ -1,0 +1,95 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--59772e51-1a29-4e54-8c1b-a999f24fed08",
+    "created": "2024-08-13T14:46:48.796313Z",
+    "modified": "2024-08-13T14:46:48.796313Z",
+    "name": "Information Exposure through Microarchitectural State after Transient Execution",
+    "description": "The processor does not properly clear microarchitectural state after incorrect microcode assists or speculative execution, resulting in transient execution.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1342"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-09-22",
+            "submission_name": "Anders Nordstrom, Alric Althoff",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Load value injection in some processors utilizing speculative execution may allow an authenticated user to enable information disclosure via a side-channel with local access.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0551",
+            "reference": "CVE-2020-0551"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Hardware ensures that no illegal data flows from faulting micro-ops exists at the microarchitectural level.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Include instructions that explicitly remove traces of unneeded computations from software interactions with microarchitectural elements e.g. lfence, sfence, mfence, clflush.",
+            "effectiveness": "High",
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1202"
+        },
+        {
+            "external_reference_id": "REF-1203"
+        },
+        {
+            "external_reference_id": "REF-1204"
+        },
+        {
+            "external_reference_id": "REF-1205"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "226",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "226",
+            "nature": "ChildOf"
+        }
+    ]
+}

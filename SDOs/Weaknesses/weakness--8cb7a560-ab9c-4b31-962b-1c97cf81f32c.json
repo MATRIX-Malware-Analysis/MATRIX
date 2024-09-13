@@ -1,0 +1,46 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8cb7a560-ab9c-4b31-962b-1c97cf81f32c",
+    "created": "2024-08-13T14:46:49.027488Z",
+    "modified": "2024-08-13T14:46:49.027488Z",
+    "name": "Improper Enforcement of Message Integrity During Transmission in a Communication Channel",
+    "description": "The product establishes a communication channel with an endpoint and receives a message from that endpoint, but it does not sufficiently ensure that the message was not modified during transmission.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "924"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-06-23",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        }
+    ]
+}

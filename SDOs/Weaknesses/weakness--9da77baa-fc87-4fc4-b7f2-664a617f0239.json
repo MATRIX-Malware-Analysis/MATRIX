@@ -1,0 +1,111 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9da77baa-fc87-4fc4-b7f2-664a617f0239",
+    "created": "2024-08-13T14:46:48.974203Z",
+    "modified": "2024-08-13T14:46:48.974203Z",
+    "name": "Permissive Regular Expression",
+    "description": "The product uses a regular expression that does not sufficiently restrict the set of allowed values.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "625"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: regex in EXIF processor code does not correctly determine where a string ends (CWE-625), enabling eval injection (CWE-95), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22204",
+            "reference": "CVE-2021-22204"
+        },
+        {
+            "description": "\".*\" regexp leads to static code injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-1895",
+            "reference": "CVE-2006-1895"
+        },
+        {
+            "description": "insertion of username into regexp results in partial comparison, causing wrong database entry to be updated when one username is a substring of another.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2175",
+            "reference": "CVE-2002-2175"
+        },
+        {
+            "description": "regexp intended to verify that all characters are legal, only checks that at least one is legal, enabling file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4527",
+            "reference": "CVE-2006-4527"
+        },
+        {
+            "description": "Regexp for IP address isn't anchored at the end, allowing appending of shell metacharacters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1949",
+            "reference": "CVE-2005-1949"
+        },
+        {
+            "description": "Regexp isn't \"anchored\" to the beginning or end, which allows spoofed values that have trusted values as substrings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2109",
+            "reference": "CVE-2002-2109"
+        },
+        {
+            "description": "regexp in .htaccess file allows access of files whose names contain certain substrings",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6511",
+            "reference": "CVE-2006-6511"
+        },
+        {
+            "description": "allow load of macro files whose names contain certain substrings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6629",
+            "reference": "CVE-2006-6629"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When applicable, ensure that the regular expression marks beginning and ending string patterns, such as \"/^string$/\" for Perl.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "185",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "187",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "184",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "183",
+            "nature": "PeerOf"
+        }
+    ]
+}

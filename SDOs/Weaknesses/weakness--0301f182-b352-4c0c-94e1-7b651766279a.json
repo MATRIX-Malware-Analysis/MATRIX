@@ -1,0 +1,114 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0301f182-b352-4c0c-94e1-7b651766279a",
+    "created": "2024-08-13T14:46:48.916008Z",
+    "modified": "2024-08-13T14:46:48.916008Z",
+    "name": "Asymmetric Resource Consumption (Amplification)",
+    "description": "The product does not properly control situations in which an adversary can cause the product to consume or produce excessive resources without requiring the adversary to invest equivalent work or otherwise prove authorization, i.e., the adversary's influence is \"asymmetric.\"",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "405"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Classic \"Smurf\" attack, using spoofed ICMP packets to broadcast addresses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0513",
+            "reference": "CVE-1999-0513"
+        },
+        {
+            "description": "Parsing library allows XML bomb",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1564",
+            "reference": "CVE-2003-1564"
+        },
+        {
+            "description": "Tool creates directories before authenticating user.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2458",
+            "reference": "CVE-2004-2458"
+        },
+        {
+            "description": "Python has \"quadratic complexity\" issue when converting string to int with many digits in unexpected bases",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-10735",
+            "reference": "CVE-2020-10735"
+        },
+        {
+            "description": "server allows ReDOS with crafted User-Agent strings, due to overlapping capture groups that cause excessive backtracking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-5243",
+            "reference": "CVE-2020-5243"
+        },
+        {
+            "description": "composite: NTP feature generates large responses (high amplification factor) with spoofed UDP source addresses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-5211",
+            "reference": "CVE-2013-5211"
+        },
+        {
+            "description": "Diffie-Hellman (DHE) Key Agreement Protocol allows attackers to send arbitrary numbers that are not public keys, which causes the server to perform expensive, unnecessary computation of modular exponentiation.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-20001",
+            "reference": "CVE-2002-20001"
+        },
+        {
+            "description": "The Diffie-Hellman Key Agreement Protocol allows use of long exponents, which are more computationally expensive than using certain \"short exponents\" with particular properties.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-40735",
+            "reference": "CVE-2022-40735"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "An application must make resources available to a client commensurate with the client's access level.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "An application must, at all times, keep track of allocated resources and meter their usage appropriately.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider disabling resource-intensive algorithms on the server side, such as Diffie-Hellman key exchange.",
+            "effectiveness": "High",
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1164"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        }
+    ]
+}

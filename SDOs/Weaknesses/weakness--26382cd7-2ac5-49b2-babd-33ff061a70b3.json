@@ -1,0 +1,98 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--26382cd7-2ac5-49b2-babd-33ff061a70b3",
+    "created": "2024-08-13T14:46:48.993256Z",
+    "modified": "2024-08-13T14:46:48.993256Z",
+    "name": "Incorrect Ownership Assignment",
+    "description": "The product assigns an owner to a resource, but the owner is outside of the intended control sphere.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "708"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "File system sets wrong ownership and group when creating a new file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5101",
+            "reference": "CVE-2007-5101"
+        },
+        {
+            "description": "OS installs program with bin owner/group, allowing modification.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4238",
+            "reference": "CVE-2007-4238"
+        },
+        {
+            "description": "Manager does not properly restore ownership of a reusable resource when a user logs out, allowing privilege escalation.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1716",
+            "reference": "CVE-2007-1716"
+        },
+        {
+            "description": "Backup software restores symbolic links with incorrect uid/gid.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3148",
+            "reference": "CVE-2005-3148"
+        },
+        {
+            "description": "Product changes the ownership of files that a symlink points to, instead of the symlink itself.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1064",
+            "reference": "CVE-2005-1064"
+        },
+        {
+            "description": "Component assigns ownership of sensitive directory tree to a user account, which can be leveraged to perform privileged operations.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1551",
+            "reference": "CVE-2011-1551"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Periodically review the privileges and their owners.",
+            "effectiveness": null,
+            "phase": "Policy"
+        },
+        {
+            "description": "Use automated tools to check for privilege settings.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "282",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--766b6abd-3476-4c8f-9d8a-e2655196b554",
+    "created": "2024-08-13T14:46:49.012854Z",
+    "modified": "2024-08-13T14:46:49.012854Z",
+    "name": "Missing Synchronization",
+    "description": "The product utilizes a shared resource in a concurrent manner but does not attempt to synchronize access to the resource.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "820"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-08-06",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--79ed93b6-5000-4ccd-bf21-35c24cadebb0",
+    "created": "2024-08-13T14:46:49.016574Z",
+    "modified": "2024-08-13T14:46:49.016574Z",
+    "name": "Unlock of a Resource that is not Locked",
+    "description": "The product attempts to unlock a resource that is not locked.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "832"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Other"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-12-12",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "function in OS kernel unlocks a mutex that was not previously locked, causing a panic or overwrite of arbitrary memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4210",
+            "reference": "CVE-2010-4210"
+        },
+        {
+            "description": "Chain: OS kernel does not properly handle a failure of a function call (CWE-755), leading to an unlock of a resource that was not locked (CWE-832), with resultant crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4302",
+            "reference": "CVE-2008-4302"
+        },
+        {
+            "description": "OS kernel performs an unlock in some incorrect circumstances, leading to panic.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1243",
+            "reference": "CVE-2009-1243"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        }
+    ]
+}

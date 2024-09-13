@@ -1,0 +1,75 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--790260d1-aad4-4a5f-bad3-e5449887cec3",
+    "created": "2024-08-13T14:46:48.984046Z",
+    "modified": "2024-08-13T14:46:48.984046Z",
+    "name": "Incorrect Resource Transfer Between Spheres",
+    "description": "The product does not properly transfer a resource/behavior to another sphere, or improperly imports a resource/behavior from another sphere, in a manner that provides unintended control over that resource.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "669"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: router's firmware update procedure uses curl with \"-k\" (insecure) option that disables certificate validation (CWE-295), allowing adversary-in-the-middle (AITM) compromise with a malicious firmware image (CWE-494).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22909",
+            "reference": "CVE-2021-22909"
+        },
+        {
+            "description": "PHP-based FAQ management app does not check the MIME type for uploaded images",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-5227",
+            "reference": "CVE-2023-5227"
+        },
+        {
+            "description": "Some image editors modify a JPEG image, but the original EXIF thumbnail image is left intact within the JPEG. (Also an interaction error).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0406",
+            "reference": "CVE-2005-0406"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

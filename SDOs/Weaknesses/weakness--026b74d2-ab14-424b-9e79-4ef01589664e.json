@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--026b74d2-ab14-424b-9e79-4ef01589664e",
+    "created": "2024-08-13T14:46:48.992279Z",
+    "modified": "2024-08-13T14:46:48.992279Z",
+    "name": "Incorrect Type Conversion or Cast",
+    "description": "The product does not correctly convert an object, resource, or structure from one type to a different type.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "704"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: in a web browser, an unsigned 64-bit integer is forcibly cast to a 32-bit integer (CWE-681) and potentially leading to an integer overflow (CWE-190). If an integer overflow occurs, this can cause heap memory corruption (CWE-122)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-43537",
+            "reference": "CVE-2021-43537"
+        },
+        {
+            "description": "Chain: data visualization program written in PHP uses the \"!=\" operator instead of the type-strict \"!==\" operator (CWE-480) when validating hash values, potentially leading to an incorrect type conversion (CWE-704)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-3979",
+            "reference": "CVE-2022-3979"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-961"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

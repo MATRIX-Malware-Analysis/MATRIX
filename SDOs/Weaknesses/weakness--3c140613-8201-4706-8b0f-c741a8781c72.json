@@ -1,0 +1,109 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3c140613-8201-4706-8b0f-c741a8781c72",
+    "created": "2024-08-13T14:46:48.770289Z",
+    "modified": "2024-08-13T14:46:48.770289Z",
+    "name": "Improper Restriction of Software Interfaces to Hardware Features",
+    "description": "The product provides software-controllable\n\t\t\tdevice functionality for capabilities such as power and\n\t\t\tclock management, but it does not properly limit\n\t\t\tfunctionality that can lead to modification of\n\t\t\thardware memory or register bits, or the ability to\n\t\t\tobserve physical side channels.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1256"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-08",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Perform a security evaluation of system-level\n\t\tarchitecture and design with software-aided physical attacks\n\t\tin scope.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n\t\t  ",
+            "effectiveness": "Moderate",
+            "method": "Automated Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Plundervolt: Improper conditions check in voltage settings for some Intel(R) Processors may allow a privileged user to potentially enable escalation of privilege and/or information disclosure via local access [REF-1081].",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-11157",
+            "reference": "CVE-2019-11157"
+        },
+        {
+            "description": "PLATYPUS Attack: Insufficient access control in the Linux kernel driver for some Intel processors allows information disclosure.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8694",
+            "reference": "CVE-2020-8694"
+        },
+        {
+            "description": "Observable discrepancy in the RAPL interface for some Intel processors allows information disclosure.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8695",
+            "reference": "CVE-2020-8695"
+        },
+        {
+            "description": "AMD extension to a Linux service does not require privileged access to the RAPL interface, allowing side-channel attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-12912",
+            "reference": "CVE-2020-12912"
+        },
+        {
+            "description": "NaCl in 2015 allowed the CLFLUSH instruction, making Rowhammer attacks possible.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-0565",
+            "reference": "CVE-2015-0565"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1081"
+        },
+        {
+            "external_reference_id": "REF-1082"
+        },
+        {
+            "external_reference_id": "REF-1083"
+        },
+        {
+            "external_reference_id": "REF-1225"
+        },
+        {
+            "external_reference_id": "REF-1217"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "285",
+            "nature": "ChildOf"
+        }
+    ]
+}

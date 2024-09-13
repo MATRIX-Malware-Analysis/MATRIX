@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--31e7936c-2d4d-4745-90f8-8f1373a8607b",
+    "created": "2024-08-13T14:46:48.774221Z",
+    "modified": "2024-08-13T14:46:48.774221Z",
+    "name": "Improper Scrubbing of Sensitive Data from Decommissioned Device",
+    "description": "The product does not properly provide a capability for the product administrator to remove sensitive data at the time the product is decommissioned.  A scrubbing capability could be missing, insufficient, or incorrect.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1266"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-28",
+            "submission_name": "Paul A. Wortman",
+            "submission_organization": "Wells Fargo"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                 ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                 ",
+            "effectiveness": null,
+            "phase": "Policy"
+        },
+        {
+            "description": "\n                 ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1080"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        }
+    ]
+}

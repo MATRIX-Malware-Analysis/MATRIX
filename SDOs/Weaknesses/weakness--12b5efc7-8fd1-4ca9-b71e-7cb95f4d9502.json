@@ -1,0 +1,89 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--12b5efc7-8fd1-4ca9-b71e-7cb95f4d9502",
+    "created": "2024-08-13T14:46:48.922135Z",
+    "modified": "2024-08-13T14:46:48.922135Z",
+    "name": "Unquoted Search Path or Element",
+    "description": "The product uses a search path that contains an unquoted element, in which the element contains whitespace or other separators. This can cause the product to access resources in a parent path.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "428"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Small handful of others. Program doesn't quote the \"C:\\Program Files\\\" path when calling a program to be executed - or any other path with a directory or file whose name contains a space - so attacker can put a malicious program.exe into C:.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1185",
+            "reference": "CVE-2005-1185"
+        },
+        {
+            "description": "CreateProcess() and CreateProcessAsUser() can be misused by applications to allow \"program.exe\" style attacks in C:",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2938",
+            "reference": "CVE-2005-2938"
+        },
+        {
+            "description": "Applies to \"Common Files\" folder, with a malicious common.exe, instead of \"Program Files\"/program.exe.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1128",
+            "reference": "CVE-2000-1128"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Properly quote the full search path before executing a program on the system.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

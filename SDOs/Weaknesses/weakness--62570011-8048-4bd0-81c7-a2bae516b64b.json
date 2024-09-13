@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--62570011-8048-4bd0-81c7-a2bae516b64b",
+    "created": "2024-08-13T14:46:48.938687Z",
+    "modified": "2024-08-13T14:46:48.938687Z",
+    "name": "Public cloneable() Method Without Final ('Object Hijack')",
+    "description": "A class has a cloneable() method that is not declared final, which allows an object to be created without calling the constructor. This can cause the object to be in an unexpected state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "491"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Make the cloneable() method final.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-453"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

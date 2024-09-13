@@ -1,0 +1,59 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--596becdc-c712-409d-b6b1-67c438066dc8",
+    "created": "2024-08-13T14:46:48.894273Z",
+    "modified": "2024-08-13T14:46:48.894273Z",
+    "name": "Reusing a Nonce, Key Pair in Encryption",
+    "description": "Nonces should be used for the present occasion and only once.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "323"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Refuse to reuse nonce values.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use techniques such as requiring incrementing, time based and/or challenge response to assure uniqueness of nonces.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "344",
+            "nature": "ChildOf"
+        }
+    ]
+}

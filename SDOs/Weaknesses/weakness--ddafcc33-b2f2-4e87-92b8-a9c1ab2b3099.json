@@ -1,0 +1,82 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ddafcc33-b2f2-4e87-92b8-a9c1ab2b3099",
+    "created": "2024-08-13T14:46:48.90107Z",
+    "modified": "2024-08-13T14:46:48.90107Z",
+    "name": "Insufficient Verification of Data Authenticity",
+    "description": "The product does not sufficiently verify the origin or authenticity of data, in a way that causes it to accept invalid data.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "345"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Distributed Control System (DCS) does not sign firmware images and only relies on insecure checksums for integrity checks",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30260",
+            "reference": "CVE-2022-30260"
+        },
+        {
+            "description": "Distributed Control System (DCS) does not sign firmware images and only relies on insecure checksums for integrity checks",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30267",
+            "reference": "CVE-2022-30267"
+        },
+        {
+            "description": "Remote Terminal Unit (RTU) does not use signatures for firmware images and relies on insecure checksums",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30272",
+            "reference": "CVE-2022-30272"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

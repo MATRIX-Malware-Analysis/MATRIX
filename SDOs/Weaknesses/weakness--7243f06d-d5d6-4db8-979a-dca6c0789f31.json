@@ -1,0 +1,91 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7243f06d-d5d6-4db8-979a-dca6c0789f31",
+    "created": "2024-08-13T14:46:48.976687Z",
+    "modified": "2024-08-13T14:46:48.976687Z",
+    "name": "Weak Password Recovery Mechanism for Forgotten Password",
+    "description": "The product contains a mechanism for users to recover or change their passwords without knowing the original password, but the mechanism is weak.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "640"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Make sure that all input supplied by the user to the password recovery mechanism is thoroughly filtered and validated.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Do not use standard weak security questions and use several security questions.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Make sure that there is throttling on the number of incorrect answers to a security question. Disable the password recovery functionality after a certain (small) number of incorrect guesses.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Require that the user properly answers the security question prior to resetting their password and sending the new password to the e-mail address of record.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Never allow the user to control what e-mail address the new password will be sent to in the password recovery mechanism.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Assign a new temporary password rather than revealing the original password.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        }
+    ]
+}

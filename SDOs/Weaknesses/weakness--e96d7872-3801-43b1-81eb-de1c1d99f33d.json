@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e96d7872-3801-43b1-81eb-de1c1d99f33d",
+    "created": "2024-08-13T14:46:48.729195Z",
+    "modified": "2024-08-13T14:46:48.729195Z",
+    "name": "Processor Optimization Removal or Modification of Security-critical Code",
+    "description": "The developer builds a security-critical protection mechanism into the software, but the processor optimizes the execution of the program such that the mechanism is removed or modified.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1037"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-03-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "In theory this weakness can be detected through the use of white box testing techniques where specifically crafted test cases are used in conjunction with debuggers to verify the order of statements being executed.",
+            "effectiveness": "Opportunistic",
+            "method": "White Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Intel, ARM, and AMD processor optimizations related to speculative execution and branch prediction cause access control checks to be bypassed when placing data into the cache. Often known as \"Spectre\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5715",
+            "reference": "CVE-2017-5715"
+        },
+        {
+            "description": "Intel, ARM, and AMD processor optimizations related to speculative execution and branch prediction cause access control checks to be bypassed when placing data into the cache. Often known as \"Spectre\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5753",
+            "reference": "CVE-2017-5753"
+        },
+        {
+            "description": "Intel processor optimizations related to speculative execution cause access control checks to be bypassed when placing data into the cache. Often known as \"Meltdown\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5754",
+            "reference": "CVE-2017-5754"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-11"
+        },
+        {
+            "external_reference_id": "REF-12"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1038",
+            "nature": "ChildOf"
+        }
+    ]
+}

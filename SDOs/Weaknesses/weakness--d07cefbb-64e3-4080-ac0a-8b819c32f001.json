@@ -1,0 +1,177 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d07cefbb-64e3-4080-ac0a-8b819c32f001",
+    "created": "2024-08-13T14:46:48.785456Z",
+    "modified": "2024-08-13T14:46:48.785456Z",
+    "name": "Improper Protection of Physical Side Channels",
+    "description": "The device does not contain sufficient protection\n\tmechanisms to prevent physical side channels from exposing\n\tsensitive information due to patterns in physically observable\n\tphenomena such as variations in power consumption,\n\telectromagnetic emissions (EME), or acoustic emissions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1300"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-29",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Perform a set of leakage detection tests such as the procedure outlined in the Test Vector Leakage Assessment (TVLA) test requirements for AES [REF-1230].  TVLA is the basis for the ISO standard 17825 [REF-1229]. A separate methodology is provided by [REF-1228]. Note that sole reliance on this method might not yield expected results [REF-1239] [REF-1240].",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n\t\t\t\t  ",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n\t\t\t\t  ",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Power side-channels leak secret information from processor",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-35888",
+            "reference": "CVE-2022-35888"
+        },
+        {
+            "description": "electromagnetic-wave side-channel in security-related microcontrollers allows extraction of private key",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3011",
+            "reference": "CVE-2021-3011"
+        },
+        {
+            "description": "Crypto hardware wallet's power consumption relates to total number of pixels illuminated, creating a side channel in the USB connection that allows attackers to determine secrets displayed such as PIN numbers and passwords",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-14353",
+            "reference": "CVE-2019-14353"
+        },
+        {
+            "description": "Chain: microcontroller system-on-chip contains uses a register value stored in flash to set product protection state on the memory bus but does not contain protection against fault injection (CWE-1319), which leads to an incorrect initialization of the memory bus (CWE-1419) leading the product to be in an unprotected state.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-27211",
+            "reference": "CVE-2020-27211"
+        },
+        {
+            "description": "message encryption software uses certain instruction sequences that allows RSA key extraction using a chosen-ciphertext attack and acoustic cryptanalysis",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-4576",
+            "reference": "CVE-2013-4576"
+        },
+        {
+            "description": "virtualization product allows recovery of AES keys from the guest OS using a side channel attack against a power/energy monitoring interface.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-28368",
+            "reference": "CVE-2020-28368"
+        },
+        {
+            "description": "power consumption varies based on number of pixels being illuminated in a display, allowing reading of secrets such as the PIN by using the USB interface to measure power consumption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-18673",
+            "reference": "CVE-2019-18673"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Apply blinding or masking techniques to implementations of cryptographic algorithms.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Add shielding or tamper-resistant protections to the device to increase the difficulty of obtaining measurements of the side-channel.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1117"
+        },
+        {
+            "external_reference_id": "REF-1118"
+        },
+        {
+            "external_reference_id": "REF-1119"
+        },
+        {
+            "external_reference_id": "REF-1120"
+        },
+        {
+            "external_reference_id": "REF-1055"
+        },
+        {
+            "external_reference_id": "REF-1218"
+        },
+        {
+            "external_reference_id": "REF-1221"
+        },
+        {
+            "external_reference_id": "REF-1228"
+        },
+        {
+            "external_reference_id": "REF-1229"
+        },
+        {
+            "external_reference_id": "REF-1230"
+        },
+        {
+            "external_reference_id": "REF-1231"
+        },
+        {
+            "external_reference_id": "REF-1232"
+        },
+        {
+            "external_reference_id": "REF-1233"
+        },
+        {
+            "external_reference_id": "REF-1234"
+        },
+        {
+            "external_reference_id": "REF-1235"
+        },
+        {
+            "external_reference_id": "REF-1239"
+        },
+        {
+            "external_reference_id": "REF-1240"
+        },
+        {
+            "external_reference_id": "REF-1285"
+        },
+        {
+            "external_reference_id": "REF-1286"
+        },
+        {
+            "external_reference_id": "REF-1368"
+        },
+        {
+            "external_reference_id": "REF-1369"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "203",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "203",
+            "nature": "ChildOf"
+        }
+    ]
+}

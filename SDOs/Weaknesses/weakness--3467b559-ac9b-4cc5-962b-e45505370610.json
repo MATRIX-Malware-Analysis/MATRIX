@@ -1,0 +1,130 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3467b559-ac9b-4cc5-962b-e45505370610",
+    "created": "2024-08-13T14:46:48.814928Z",
+    "modified": "2024-08-13T14:46:48.814928Z",
+    "name": "Incorrect Regular Expression",
+    "description": "The product specifies a regular expression in a way that causes data to be improperly matched or compared.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "185"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Regexp isn't \"anchored\" to the beginning or end, which allows spoofed values that have trusted values as substrings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2109",
+            "reference": "CVE-2002-2109"
+        },
+        {
+            "description": "Regexp for IP address isn't anchored at the end, allowing appending of shell metacharacters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1949",
+            "reference": "CVE-2005-1949"
+        },
+        {
+            "description": "Bypass access restrictions via multiple leading slash, which causes a regular expression to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1072",
+            "reference": "CVE-2001-1072"
+        },
+        {
+            "description": "Local user DoS via invalid regular expressions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0115",
+            "reference": "CVE-2000-0115"
+        },
+        {
+            "description": "chain: Malformed input generates a regular expression error that leads to information exposure.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1527",
+            "reference": "CVE-2002-1527"
+        },
+        {
+            "description": "Certain strings are later used in a regexp, leading to a resultant crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1061",
+            "reference": "CVE-2005-1061"
+        },
+        {
+            "description": "MFV. Regular expression intended to protect against directory traversal reduces \".../...//\" to \"../\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2169",
+            "reference": "CVE-2005-2169"
+        },
+        {
+            "description": "Malformed regexp syntax leads to information exposure in error message.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0603",
+            "reference": "CVE-2005-0603"
+        },
+        {
+            "description": "Code injection due to improper quoting of regular expression.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1820",
+            "reference": "CVE-2005-1820"
+        },
+        {
+            "description": "Null byte bypasses PHP regexp check.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3153",
+            "reference": "CVE-2005-3153"
+        },
+        {
+            "description": "Null byte bypasses PHP regexp check.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4155",
+            "reference": "CVE-2005-4155"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Regular expressions can become error prone when defining a complex language even for those experienced in writing grammars. Determine if several smaller regular expressions simplify one large regular expression. Also, subject the regular expression to thorough testing techniques such as equivalence partitioning, boundary value analysis, and robustness. After testing and a reasonable confidence level is achieved, a regular expression may not be foolproof. If an exploit is allowed to slip through, then record the exploit and refactor the regular expression.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "697",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "187",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "182",
+            "nature": "CanPrecede"
+        }
+    ]
+}

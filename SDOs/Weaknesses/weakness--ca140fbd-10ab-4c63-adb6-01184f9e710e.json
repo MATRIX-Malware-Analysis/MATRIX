@@ -1,0 +1,192 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ca140fbd-10ab-4c63-adb6-01184f9e710e",
+    "created": "2024-08-13T14:46:49.011966Z",
+    "modified": "2024-08-13T14:46:49.011966Z",
+    "name": "Reliance on Untrusted Inputs in a Security Decision",
+    "description": "The product uses a protection mechanism that relies on the existence or values of an input, but the input can be modified by an untrusted actor in a way that bypasses the protection mechanism.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "807"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-01-18",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Since this weakness does not typically appear frequently within a single software package, manual white box techniques may be able to provide sufficient code coverage and reduction of false positives if all potentially-vulnerable operations can be assessed within limited time constraints.",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Attacker can bypass authentication by setting a cookie to a specific value.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1549",
+            "reference": "CVE-2009-1549"
+        },
+        {
+            "description": "Attacker can bypass authentication and gain admin privileges by setting an \"admin\" cookie to 1.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1619",
+            "reference": "CVE-2009-1619"
+        },
+        {
+            "description": "Content management system allows admin privileges by setting a \"login\" cookie to \"OK.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0864",
+            "reference": "CVE-2009-0864"
+        },
+        {
+            "description": "e-dating application allows admin privileges by setting the admin cookie to 1.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5784",
+            "reference": "CVE-2008-5784"
+        },
+        {
+            "description": "Web-based email list manager allows attackers to gain admin privileges by setting a login cookie to \"admin.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6291",
+            "reference": "CVE-2008-6291"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using PHP, configure the application so that it does not use register_globals. During implementation, develop the application so that it does not rely on this feature, but be wary of implementing a register_globals emulation that is subject to weaknesses such as CWE-95, CWE-621, and similar issues.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-754"
+        },
+        {
+            "external_reference_id": "REF-529"
+        },
+        {
+            "external_reference_id": "REF-756"
+        },
+        {
+            "external_reference_id": "REF-45"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

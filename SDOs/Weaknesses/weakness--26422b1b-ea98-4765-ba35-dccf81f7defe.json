@@ -1,0 +1,53 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--26422b1b-ea98-4765-ba35-dccf81f7defe",
+    "created": "2024-08-13T14:46:48.791247Z",
+    "modified": "2024-08-13T14:46:48.791247Z",
+    "name": "Improper Management of Sensitive Trace Data",
+    "description": "Trace data collected from several sources on the\n                System-on-Chip (SoC) is stored in unprotected locations or\n                transported to untrusted agents.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1323"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-07-20",
+            "submission_name": "Hareesh Khattri, Parbati K. Manna, and Arun Kanuparthi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Tag traces to indicate owner and debugging privilege level (designer, OEM, or end user) needed to access that trace.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1150"
+        },
+        {
+            "external_reference_id": "REF-1151"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

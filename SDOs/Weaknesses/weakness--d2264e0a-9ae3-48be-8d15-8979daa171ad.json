@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d2264e0a-9ae3-48be-8d15-8979daa171ad",
+    "created": "2024-08-13T14:46:48.94405Z",
+    "modified": "2024-08-13T14:46:48.94405Z",
+    "name": "Spyware",
+    "description": "The product collects personally identifiable information about a human user or the user's activities, but the product accesses this information using other resources besides itself, and it does not require that user's explicit approval or direct input into the product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "512"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use spyware detection and removal software.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Always verify the integrity of the product that is being installed.",
+            "effectiveness": null,
+            "phase": "Installation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "506",
+            "nature": "ChildOf"
+        }
+    ]
+}

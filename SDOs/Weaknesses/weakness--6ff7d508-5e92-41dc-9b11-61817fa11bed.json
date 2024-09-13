@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6ff7d508-5e92-41dc-9b11-61817fa11bed",
+    "created": "2024-08-13T14:46:48.760128Z",
+    "modified": "2024-08-13T14:46:48.760128Z",
+    "name": "Failure to Disable Reserved Bits",
+    "description": "The reserved bits in a hardware design are not disabled prior to production. Typically, reserved bits are used for future capabilities and should not support any functional logic in the design.   However, designers might covertly use these bits to debug or further develop new capabilities in production hardware. Adversaries with access to these bits will write to them in hopes of compromising hardware state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1209"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-06",
+            "submission_name": "Brent Sherman",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                    \t",
+            "effectiveness": null,
+            "phase": "Integration"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fbcac427-d2c9-40b0-a450-1409eba81fb7",
+    "created": "2024-08-13T14:46:48.916808Z",
+    "modified": "2024-08-13T14:46:48.916808Z",
+    "name": "Incorrect Behavior Order: Early Amplification",
+    "description": "The product allows an entity to perform a legitimate but expensive operation before authentication or authorization has taken place.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "408"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Tool creates directories before authenticating user.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2458",
+            "reference": "CVE-2004-2458"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "696",
+            "nature": "ChildOf"
+        }
+    ]
+}

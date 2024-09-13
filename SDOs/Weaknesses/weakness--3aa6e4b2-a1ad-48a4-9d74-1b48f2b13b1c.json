@@ -1,0 +1,84 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3aa6e4b2-a1ad-48a4-9d74-1b48f2b13b1c",
+    "created": "2024-08-13T14:46:48.757418Z",
+    "modified": "2024-08-13T14:46:48.757418Z",
+    "name": "Improper Isolation of Shared Resources on System-on-a-Chip (SoC)",
+    "description": "The System-On-a-Chip (SoC) does not properly isolate shared resources between trusted and untrusted agents.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1189"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-10-15",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Processor has improper isolation of shared resources allowing for information disclosure.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8698",
+            "reference": "CVE-2020-8698"
+        },
+        {
+            "description": "Baseboard Management Controller (BMC) device implements Advanced High-performance Bus (AHB) bridges that do not require authentication for arbitrary read and write access to the BMC's physical address space from the host, and possibly the network [REF-1138].",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-6260",
+            "reference": "CVE-2019-6260"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                 ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1036"
+        },
+        {
+            "external_reference_id": "REF-1138"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "653",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1331",
+            "nature": "PeerOf"
+        }
+    ]
+}

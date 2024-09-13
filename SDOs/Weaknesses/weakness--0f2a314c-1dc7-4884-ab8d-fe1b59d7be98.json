@@ -1,0 +1,160 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0f2a314c-1dc7-4884-ab8d-fe1b59d7be98",
+    "created": "2024-08-13T14:46:48.814577Z",
+    "modified": "2024-08-13T14:46:48.814577Z",
+    "name": "Incomplete List of Disallowed Inputs",
+    "description": "The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other action to neutralize before additional processing takes place, but the list is incomplete, leading to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "184"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Exploitation of a vulnerability with commonly-used manipulations might fail, but minor variations might succeed.",
+            "effectiveness": null,
+            "method": "Black Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: API for text generation using Large Language Models (LLMs) does\n\t\t\t   not include the \"\\\" Windows folder separator in its denylist (CWE-184)\n\t\t\t   when attempting to prevent Local File Inclusion via path traversal\n\t\t\t   (CWE-22), allowing deletion of arbitrary files on Windows systems.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-4315",
+            "reference": "CVE-2024-4315"
+        },
+        {
+            "description": "product uses a denylist to identify potentially dangerous content, allowing attacker to bypass a warning",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2309",
+            "reference": "CVE-2008-2309"
+        },
+        {
+            "description": "PHP remote file inclusion in web application that filters \"http\" and \"https\" URLs, but not \"ftp\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2782",
+            "reference": "CVE-2005-2782"
+        },
+        {
+            "description": "Programming language does not filter certain shell metacharacters in Windows environment.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0542",
+            "reference": "CVE-2004-0542"
+        },
+        {
+            "description": "XSS filter doesn't filter null characters before looking for dangerous tags, which are ignored by web browsers. MIE and validate-before-cleanse.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0595",
+            "reference": "CVE-2004-0595"
+        },
+        {
+            "description": "Web-based mail product doesn't restrict dangerous extensions such as ASPX on a web server, even though others are prohibited.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3287",
+            "reference": "CVE-2005-3287"
+        },
+        {
+            "description": "Resultant XSS when only <script> and <style> are checked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2351",
+            "reference": "CVE-2004-2351"
+        },
+        {
+            "description": "Privileged program does not clear sensitive environment variables that are used by bash. Overlaps multiple interpretation error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2959",
+            "reference": "CVE-2005-2959"
+        },
+        {
+            "description": "SQL injection protection scheme does not quote the \"\\\" special character.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1824",
+            "reference": "CVE-2005-1824"
+        },
+        {
+            "description": "Detection of risky filename extensions prevents users from automatically executing .EXE files, but .LNK is accepted, allowing resultant Windows symbolic link.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2184",
+            "reference": "CVE-2005-2184"
+        },
+        {
+            "description": "Product uses list of protected variables, but accidentally omits one dangerous variable, allowing external modification",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1343",
+            "reference": "CVE-2007-1343"
+        },
+        {
+            "description": "Chain: product only removes SCRIPT tags (CWE-184), enabling XSS (CWE-79)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5727",
+            "reference": "CVE-2007-5727"
+        },
+        {
+            "description": "Chain: product only checks for use of \"javascript:\" tag (CWE-184), allowing XSS (CWE-79) using other tags",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4308",
+            "reference": "CVE-2006-4308"
+        },
+        {
+            "description": "Chain: OS command injection (CWE-78) enabled by using an unexpected character that is not explicitly disallowed (CWE-184)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3572",
+            "reference": "CVE-2007-3572"
+        },
+        {
+            "description": "\"\\\" not in list of disallowed values for web server, allowing path traversal attacks when the server is run on Windows and other OSes.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0661",
+            "reference": "CVE-2002-0661"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Do not rely exclusively on detecting disallowed inputs.  There are too many variants to encode a character, especially when different environments are used, so there is a high likelihood of missing some variants.  Only use detection of disallowed inputs as a mechanism for detecting suspicious activity. Ensure that you are using other protection mechanisms that only identify \"good\" input - such as lists of allowed inputs - and ensure that you are properly encoding your outputs.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-140"
+        },
+        {
+            "external_reference_id": "REF-141"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1023",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "79",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "78",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "434",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "98",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--388a1b7a-383f-4335-8961-9794cc3770a0",
+    "created": "2024-08-13T14:46:48.769108Z",
+    "modified": "2024-08-13T14:46:48.769108Z",
+    "name": "CPU Hardware Not Configured to Support Exclusivity of Write and Execute Operations",
+    "description": "The CPU is not configured to provide hardware support for exclusivity of write and execute operations on memory. This allows an attacker to execute data from all of memory.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1252"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-13",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Integration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1076"
+        },
+        {
+            "external_reference_id": "REF-1077"
+        },
+        {
+            "external_reference_id": "REF-1078"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

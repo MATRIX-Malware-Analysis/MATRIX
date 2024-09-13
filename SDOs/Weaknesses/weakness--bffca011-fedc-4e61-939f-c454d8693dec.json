@@ -1,0 +1,202 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bffca011-fedc-4e61-939f-c454d8693dec",
+    "created": "2024-08-13T14:46:48.967377Z",
+    "modified": "2024-08-13T14:46:48.967377Z",
+    "name": "URL Redirection to Untrusted Site ('Open Redirect')",
+    "description": "A web application accepts a user-controlled input that specifies a link to an external site, and uses that link in a Redirect. This simplifies phishing attacks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "601"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Since this weakness does not typically appear frequently within a single software package, manual white box techniques may be able to provide sufficient code coverage and reduction of false positives if all potentially-vulnerable operations can be assessed within limited time constraints.",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis"
+        },
+        {
+            "description": "Automated black box tools that supply URLs to every input may be able to spot Location header modifications, but test case coverage is a factor, and custom redirects may not be detected.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Automated static analysis tools may not be able to determine whether input influences the beginning of a URL, which is important for reducing false positives.",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "URL parameter loads the URL into a frame and causes it to appear to be part of a valid page.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4206",
+            "reference": "CVE-2005-4206"
+        },
+        {
+            "description": "An open redirect vulnerability in the search script in the software allows remote attackers to redirect users to arbitrary web sites and conduct phishing attacks via a URL as a parameter to the proper function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2951",
+            "reference": "CVE-2008-2951"
+        },
+        {
+            "description": "Open redirect vulnerability in the software allows remote attackers to redirect users to arbitrary web sites and conduct phishing attacks via a URL in the proper parameter.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2052",
+            "reference": "CVE-2008-2052"
+        },
+        {
+            "description": "Chain: Go-based Oauth2 reverse proxy can send the authenticated user to another site at the end of the authentication flow. A redirect URL with HTML-encoded whitespace characters can bypass the validation (CWE-1289) to redirect to a malicious site (CWE-601)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-11053",
+            "reference": "CVE-2020-11053"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use an intermediate disclaimer page that provides the user with a clear warning that they are leaving the current site. Implement a long timeout before the redirect occurs, or force the user to click on the link. Be careful to avoid XSS problems (CWE-79) when generating the disclaimer page.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that no externally-supplied requests are honored by requiring that all redirect requests include a unique nonce generated by the application [REF-483]. Be sure that the nonce is not predictable (CWE-330).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use an application firewall that can detect attacks against this weakness. It can be beneficial in cases in which the code cannot be fixed (because it is controlled by a third party), as an emergency prevention measure while more comprehensive software assurance measures are applied, or to provide defense in depth.",
+            "effectiveness": "Moderate",
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-483"
+        },
+        {
+            "external_reference_id": "REF-484"
+        },
+        {
+            "external_reference_id": "REF-485"
+        },
+        {
+            "external_reference_id": "REF-45"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        }
+    ]
+}

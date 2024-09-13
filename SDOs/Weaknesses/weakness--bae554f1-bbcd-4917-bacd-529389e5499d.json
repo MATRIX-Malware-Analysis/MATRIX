@@ -1,0 +1,67 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bae554f1-bbcd-4917-bacd-529389e5499d",
+    "created": "2024-08-13T14:46:48.773425Z",
+    "modified": "2024-08-13T14:46:48.773425Z",
+    "name": "Improper Physical Access Control",
+    "description": "The product is designed with access restricted to certain information, but it does not sufficiently protect against an unauthorized actor with physical access to these areas.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1263"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-28",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Specific protection requirements depend strongly on contextual factors including the level of acceptable risk associated with compromise to the product's protection mechanism. Designers could incorporate anti-tampering measures that protect against or detect when the product has been tampered with.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The testing phase of the lifecycle should establish a method for determining whether the protection mechanism is sufficient to prevent unauthorized access.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Ensure that all protection mechanisms are fully activated at the time of manufacturing and distribution.",
+            "effectiveness": null,
+            "phase": "Manufacturing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1191",
+            "nature": "PeerOf"
+        }
+    ]
+}

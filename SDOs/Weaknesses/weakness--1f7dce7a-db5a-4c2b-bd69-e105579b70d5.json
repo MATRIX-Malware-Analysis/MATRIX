@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1f7dce7a-db5a-4c2b-bd69-e105579b70d5",
+    "created": "2024-08-13T14:46:48.996404Z",
+    "modified": "2024-08-13T14:46:48.996404Z",
+    "name": "Improper Handling of Exceptional Conditions",
+    "description": "The product does not handle or incorrectly handles an exceptional condition.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "755"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-03-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "SDK for OPC Unified Architecture (OPC UA) server has uncaught exception when a socket is blocked for writing but the server tries to send an error",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-41151",
+            "reference": "CVE-2023-41151"
+        },
+        {
+            "description": "Chain: JavaScript-based cryptocurrency library can fall back to the insecure Math.random() function instead of reporting a failure (CWE-392), thus reducing the entropy (CWE-332) and leading to generation of non-unique cryptographic keys for Bitcoin wallets (CWE-1391)",
+            "link": "https://www.unciphered.com/blog/randstorm-you-cant-patch-a-house-of-cards",
+            "reference": "[REF-1374]"
+        },
+        {
+            "description": "virtual interrupt controller in a virtualization product allows crash of host by writing a certain invalid value to a register, which triggers a fatal error instead of returning an error code",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3011",
+            "reference": "CVE-2021-3011"
+        },
+        {
+            "description": "Chain: OS kernel does not properly handle a failure of a function call (CWE-755), leading to an unlock of a resource that was not locked (CWE-832), with resultant crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4302",
+            "reference": "CVE-2008-4302"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1374"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d1e48df8-f12e-4d67-8409-d4c3d9723db2",
+    "created": "2024-08-13T14:46:48.82104Z",
+    "modified": "2024-08-13T14:46:48.82104Z",
+    "name": "Observable Internal Behavioral Discrepancy",
+    "description": "The product performs multiple behaviors that are combined to produce a single result, but the individual behaviors are observable separately in a way that allows attackers to reveal internal state or internal decision points.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "206"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "File existence via infoleak monitoring whether \"onerror\" handler fires or not.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2031",
+            "reference": "CVE-2002-2031"
+        },
+        {
+            "description": "Valid groupname enumeration via behavioral infoleak (sends response if valid, doesn't respond if not).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2025",
+            "reference": "CVE-2005-2025"
+        },
+        {
+            "description": "Behavioral infoleak in GUI allows attackers to distinguish between alphanumeric and non-alphanumeric characters in a password, thus reducing the search space.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1497",
+            "reference": "CVE-2001-1497"
+        },
+        {
+            "description": "Product immediately sends an error message when user does not exist instead of waiting until the password is provided, allowing username enumeration.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0190",
+            "reference": "CVE-2003-0190"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Setup generic response pages for error conditions. The error page should not disclose information about the success or failure of a sensitive operation. For instance, the login page should not confirm that the login is correct and the password incorrect. The attacker who tries random account name may be able to guess some of them. Confirming that the account exists would make the login page more susceptible to brute force attack.",
+            "effectiveness": null,
+            "phase": null
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "205",
+            "nature": "ChildOf"
+        }
+    ]
+}

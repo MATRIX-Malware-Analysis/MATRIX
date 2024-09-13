@@ -1,0 +1,80 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d43925fe-c074-4027-943d-3d825c831e27",
+    "created": "2024-08-13T14:46:48.781077Z",
+    "modified": "2024-08-13T14:46:48.781077Z",
+    "name": "Improper Validation of Unsafe Equivalence in Input",
+    "description": "The product receives an input value that is used as a resource identifier or other type of reference, but it does not validate or incorrectly validates that the input is equivalent to a potentially-unsafe value.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1289"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: A microservice integration and management platform compares the hostname in the HTTP Host header in a case-sensitive way (CWE-178, CWE-1289), allowing bypass of the authorization policy (CWE-863) using a hostname with mixed case or other variations.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-39155",
+            "reference": "CVE-2021-39155"
+        },
+        {
+            "description": "Chain: Go-based Oauth2 reverse proxy can send the authenticated user to another site at the end of the authentication flow. A redirect URL with HTML-encoded whitespace characters can bypass the validation (CWE-1289) to redirect to a malicious site (CWE-601)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-11053",
+            "reference": "CVE-2020-11053"
+        },
+        {
+            "description": "File extension check in forum software only verifies extensions that contain all lowercase letters, which allows remote attackers to upload arbitrary files via file extensions that include uppercase letters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0269",
+            "reference": "CVE-2005-0269"
+        },
+        {
+            "description": "Task Manager does not allow local users to end processes with uppercase letters named (1) winlogon.exe, (2) csrss.exe, (3) smss.exe and (4) services.exe via the Process tab which could allow local users to install Trojan horses that cannot be stopped.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1238",
+            "reference": "CVE-2001-1238"
+        },
+        {
+            "description": "HTTP server allows bypass of access restrictions using URIs with mixed case.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2214",
+            "reference": "CVE-2004-2214"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "41",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "178",
+            "nature": "PeerOf"
+        }
+    ]
+}

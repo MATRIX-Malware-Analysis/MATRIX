@@ -1,0 +1,173 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6c1fbb3a-0f5a-4951-a5ef-a815396fbbd8",
+    "created": "2024-08-13T14:46:48.942048Z",
+    "modified": "2024-08-13T14:46:48.942048Z",
+    "name": "Deserialization of Untrusted Data",
+    "description": "The product deserializes untrusted data without sufficiently verifying that the resulting data will be valid.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "502"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "chain: bypass of untrusted deserialization issue (CWE-502) by using an assumed-trusted class (CWE-183)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-12799",
+            "reference": "CVE-2019-12799"
+        },
+        {
+            "description": "Deserialization issue in commonly-used Java library allows remote execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-8103",
+            "reference": "CVE-2015-8103"
+        },
+        {
+            "description": "Deserialization issue in commonly-used Java library allows remote execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-4852",
+            "reference": "CVE-2015-4852"
+        },
+        {
+            "description": "Use of PHP unserialize function on untrusted input allows attacker to modify application configuration.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-1465",
+            "reference": "CVE-2013-1465"
+        },
+        {
+            "description": "Use of PHP unserialize function on untrusted input in content management system might allow code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-3527",
+            "reference": "CVE-2012-3527"
+        },
+        {
+            "description": "Use of PHP unserialize function on untrusted input in content management system allows code execution using a crafted cookie value.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-0911",
+            "reference": "CVE-2012-0911"
+        },
+        {
+            "description": "Content management system written in PHP allows unserialize of arbitrary objects, possibly allowing code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-0911",
+            "reference": "CVE-2012-0911"
+        },
+        {
+            "description": "Python script allows local users to execute code via pickled data.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-2520",
+            "reference": "CVE-2011-2520"
+        },
+        {
+            "description": "Unsafe deserialization using pickle in a Python script.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-4406",
+            "reference": "CVE-2012-4406"
+        },
+        {
+            "description": "Web browser allows execution of native methods via a crafted string to a JavaScript function that deserializes the string.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0791",
+            "reference": "CVE-2003-0791"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If available, use the signing/sealing features of the programming language to assure that deserialized data has not been tainted. For example, a hash-based message authentication code (HMAC) could be used to ensure that data has not been modified.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When deserializing data, populate a new object rather than just deserializing. The result is that the data flows through safe input validation and that the functions are safe.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Explicitly define a final object() to prevent deserialization.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Avoid having unnecessary types or gadgets available that can be leveraged for malicious ends. This limits the potential for unintended or unauthorized types and gadgets to be leveraged by the attacker. Add only acceptable classes to an allowlist. Note: new gadgets are constantly being discovered, so this alone is not a sufficient mitigation.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-461"
+        },
+        {
+            "external_reference_id": "REF-462"
+        },
+        {
+            "external_reference_id": "REF-463"
+        },
+        {
+            "external_reference_id": "REF-464"
+        },
+        {
+            "external_reference_id": "REF-465"
+        },
+        {
+            "external_reference_id": "REF-466"
+        },
+        {
+            "external_reference_id": "REF-467"
+        },
+        {
+            "external_reference_id": "REF-468"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "913",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "913",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "915",
+            "nature": "PeerOf"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e5dd42fb-0672-47a3-a4fb-99a911795e24",
+    "created": "2024-08-13T14:46:48.822685Z",
+    "modified": "2024-08-13T14:46:48.822685Z",
+    "name": "Improper Removal of Sensitive Information Before Storage or Transfer",
+    "description": "The product stores, transfers, or shares a resource that contains sensitive information, but it does not properly remove that information before the product makes the resource available to unauthorized actors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "212"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cryptography library does not clear heap memory before release",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-3733",
+            "reference": "CVE-2019-3733"
+        },
+        {
+            "description": "Some image editors modify a JPEG image, but the original EXIF thumbnail image is left intact within the JPEG. (Also an interaction error).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0406",
+            "reference": "CVE-2005-0406"
+        },
+        {
+            "description": "NAT feature in firewall leaks internal IP addresses in ICMP error messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0704",
+            "reference": "CVE-2002-0704"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Clearly specify which information should be regarded as private or sensitive, and require that the product offers functionality that allows the user to cleanse the sensitive information from the resource before it is published or exported to other parties.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use naming conventions and strong types to make it easier to spot when sensitive data is being used. When creating structures, objects, or other complex entities, separate the sensitive and non-sensitive data as much as possible.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Avoid errors related to improper resource shutdown or release (CWE-404), which may leave the sensitive data within the resource if it is in an incomplete state.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "201",
+            "nature": "CanPrecede"
+        }
+    ]
+}

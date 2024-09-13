@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c9b4edc5-7f7f-4b24-b9fd-12a1edd340e0",
+    "created": "2024-08-13T14:46:48.892859Z",
+    "modified": "2024-08-13T14:46:48.892859Z",
+    "name": "Cleartext Storage of Sensitive Information in Executable",
+    "description": "The product stores sensitive information in cleartext in an executable.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "318"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product stores RSA private key in a DLL and uses it to sign a certificate, allowing spoofing of servers and Adversary-in-the-Middle (AITM) attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1794",
+            "reference": "CVE-2005-1794"
+        },
+        {
+            "description": "administration passwords in cleartext in executable",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1527",
+            "reference": "CVE-2001-1527"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "312",
+            "nature": "ChildOf"
+        }
+    ]
+}

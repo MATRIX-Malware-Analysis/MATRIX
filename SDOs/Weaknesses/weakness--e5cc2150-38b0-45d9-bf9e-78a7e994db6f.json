@@ -1,0 +1,116 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e5cc2150-38b0-45d9-bf9e-78a7e994db6f",
+    "created": "2024-08-13T14:46:49.025893Z",
+    "modified": "2024-08-13T14:46:49.025893Z",
+    "name": "Server-Side Request Forgery (SSRF)",
+    "description": "The web server receives a URL or similar request from an upstream component and retrieves the contents of this URL, but it does not sufficiently ensure that the request is being sent to the expected destination.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "918"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-02-17",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server Side Request Forgery (SSRF) in mail server, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-26855",
+            "reference": "CVE-2021-26855"
+        },
+        {
+            "description": "Server Side Request Forgery in cloud platform, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21973",
+            "reference": "CVE-2021-21973"
+        },
+        {
+            "description": "Chain: incorrect validation of intended decimal-based IP address format (CWE-1286) enables parsing of octal or hexadecimal formats (CWE-1389), allowing bypass of an SSRF protection mechanism (CWE-918).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-4029",
+            "reference": "CVE-2016-4029"
+        },
+        {
+            "description": "Web server allows attackers to request a URL from another server, including other ports, which allows proxied scanning.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1484",
+            "reference": "CVE-2002-1484"
+        },
+        {
+            "description": "CGI script accepts and retrieves incoming URLs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2061",
+            "reference": "CVE-2004-2061"
+        },
+        {
+            "description": "Web-based mail program allows internal network scanning using a modified POP3 port number.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1637",
+            "reference": "CVE-2010-1637"
+        },
+        {
+            "description": "URL-downloading library automatically follows redirects to file:// and scp:// URLs",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0037",
+            "reference": "CVE-2009-0037"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-913"
+        },
+        {
+            "external_reference_id": "REF-914"
+        },
+        {
+            "external_reference_id": "REF-915"
+        },
+        {
+            "external_reference_id": "REF-916"
+        },
+        {
+            "external_reference_id": "REF-917"
+        },
+        {
+            "external_reference_id": "REF-918"
+        },
+        {
+            "external_reference_id": "REF-919"
+        },
+        {
+            "external_reference_id": "REF-920"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "441",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        }
+    ]
+}

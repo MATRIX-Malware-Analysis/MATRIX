@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9a28ddc4-7155-4a01-b2dd-9514083396c1",
+    "created": "2024-08-13T14:46:48.964422Z",
+    "modified": "2024-08-13T14:46:48.964422Z",
+    "name": "Sensitive Data Storage in Improperly Locked Memory",
+    "description": "The product stores sensitive data in memory that is not locked, or that has been incorrectly locked, which might cause the memory to be written to swap files on disk by the virtual memory manager. This can make the data more accessible to external actors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "591"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-12-15",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Identify data that needs to be protected from swapping and choose platform-appropriate protection mechanisms.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Check return values to ensure locking operations are successful.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "413",
+            "nature": "ChildOf"
+        }
+    ]
+}

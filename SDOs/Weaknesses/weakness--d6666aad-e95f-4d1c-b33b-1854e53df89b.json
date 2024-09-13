@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d6666aad-e95f-4d1c-b33b-1854e53df89b",
+    "created": "2024-08-13T14:46:48.984845Z",
+    "modified": "2024-08-13T14:46:48.984845Z",
+    "name": "Lack of Administrator Control over Security",
+    "description": "The product uses security features in a way that prevents the product's administrator from tailoring security settings to reflect the environment in which the product is being used. This introduces resultant weaknesses or prevents it from operating at a level of security that is desired by the administrator.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "671"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Condition Monitor firmware has a maintenance interface with hard-coded credentials",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29953",
+            "reference": "CVE-2022-29953"
+        },
+        {
+            "description": "GUI configuration tool does not enable a security option when a checkbox is selected, although that option is honored when manually set in the configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0127",
+            "reference": "CVE-2000-0127"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "657",
+            "nature": "ChildOf"
+        }
+    ]
+}

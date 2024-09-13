@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6017ff26-468c-49df-b831-955e95d32ff0",
+    "created": "2024-08-13T14:46:48.993987Z",
+    "modified": "2024-08-13T14:46:48.993987Z",
+    "name": "Improper Handling of Apple HFS+ Alternate Data Stream Path",
+    "description": "The product does not properly handle special paths that may identify the data or resource fork of a file on the HFS+ file system.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "72"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server allows remote attackers to read files and resource fork content via HTTP requests to certain special file names related to multiple data streams in HFS+.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1084",
+            "reference": "CVE-2004-1084"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-578"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "66",
+            "nature": "ChildOf"
+        }
+    ]
+}

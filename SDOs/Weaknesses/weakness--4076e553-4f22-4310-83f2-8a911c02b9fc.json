@@ -1,0 +1,63 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4076e553-4f22-4310-83f2-8a911c02b9fc",
+    "created": "2024-08-13T14:46:48.884626Z",
+    "modified": "2024-08-13T14:46:48.884626Z",
+    "name": "Authentication Bypass by Spoofing",
+    "description": "This attack-focused weakness is caused by incorrectly implemented authentication schemes that are subject to spoofing attacks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "290"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "S-bus functionality in a home automation product performs access control using an IP allowlist, which can be bypassed by a forged IP address.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30319",
+            "reference": "CVE-2022-30319"
+        },
+        {
+            "description": "VOIP product allows authentication bypass using 127.0.0.1 in the Host header.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1048",
+            "reference": "CVE-2009-1048"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        }
+    ]
+}

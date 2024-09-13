@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e733e241-149e-45dd-8111-3b232e32f89c",
+    "created": "2024-08-13T14:46:48.819912Z",
+    "modified": "2024-08-13T14:46:48.819912Z",
+    "name": "Exposure of Sensitive Information Through Data Queries",
+    "description": "When trying to keep information confidential, an attacker can often infer some of the information by using statistics.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "202"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Wiki product allows an adversary to discover filenames via a series of queries starting with one letter and then iteratively extending the match.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-41935",
+            "reference": "CVE-2022-41935"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "This is a complex topic. See the book Translucent Databases for a good discussion of best practices.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1230",
+            "nature": "ChildOf"
+        }
+    ]
+}

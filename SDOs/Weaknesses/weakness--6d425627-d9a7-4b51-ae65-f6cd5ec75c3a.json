@@ -1,0 +1,198 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6d425627-d9a7-4b51-ae65-f6cd5ec75c3a",
+    "created": "2024-08-13T14:46:49.001323Z",
+    "modified": "2024-08-13T14:46:49.001323Z",
+    "name": "Allocation of Resources Without Limits or Throttling",
+    "description": "The product allocates a reusable resource or group of resources on behalf of an actor without imposing any restrictions on the size or number of resources that can be allocated, in violation of the intended security policy for that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "770"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-05-13",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Manual static analysis can be useful for finding this weakness, but it might not achieve desired code coverage within limited time constraints. If denial-of-service is not considered a significant risk, or if there is strong emphasis on consequences such as code execution, then manual analysis may not focus on this weakness at all.",
+            "effectiveness": null,
+            "method": "Manual Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Opportunistic",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Certain automated dynamic analysis techniques may be effective in producing side effects of uncontrolled resource allocation problems, especially with resources such as processes, memory, and connections. The technique may involve generating a large number of requests to the product within a short time frame. Manual analysis is likely required to interpret the results.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Python library does not limit the resources used to process images that specify a very large number of bands (CWE-1284), leading to excessive memory consumption (CWE-789) or an integer overflow (CWE-190).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-21668",
+            "reference": "CVE-2022-21668"
+        },
+        {
+            "description": "Language interpreter does not restrict the number of temporary files being created when handling a MIME request with a large number of parts..",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-4017",
+            "reference": "CVE-2009-4017"
+        },
+        {
+            "description": "Driver does not use a maximum width when invoking sscanf style functions, causing stack consumption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2726",
+            "reference": "CVE-2009-2726"
+        },
+        {
+            "description": "Large integer value for a length property in an object causes a large amount of memory allocation.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2540",
+            "reference": "CVE-2009-2540"
+        },
+        {
+            "description": "Product allows exhaustion of file descriptors when processing a large number of TCP packets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2054",
+            "reference": "CVE-2009-2054"
+        },
+        {
+            "description": "Communication product allows memory consumption with a large number of SIP requests, which cause many sessions to be created.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5180",
+            "reference": "CVE-2008-5180"
+        },
+        {
+            "description": "Product allows attackers to cause a denial of service via a large number of directives, each of which opens a separate window.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1700",
+            "reference": "CVE-2008-1700"
+        },
+        {
+            "description": "CMS does not restrict the number of searches that can occur simultaneously, leading to resource exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4650",
+            "reference": "CVE-2005-4650"
+        },
+        {
+            "description": "web application scanner attempts to read an excessively large file created by a user, causing process termination",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-15100",
+            "reference": "CVE-2020-15100"
+        },
+        {
+            "description": "Go-based workload orchestrator does not limit resource usage with unauthenticated connections, allowing a DoS by flooding the service",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-7218",
+            "reference": "CVE-2020-7218"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Clearly specify the minimum and maximum expectations for capabilities, and dictate which behaviors are acceptable when resource allocation reaches limits.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Limit the amount of resources that are accessible to unprivileged users. Set per-user limits for resources. Allow the system administrator to define these limits. Be careful to avoid CWE-410.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Design throttling mechanisms into the system architecture. The best protection is to limit the amount of resources that an unauthorized user can cause to be expended. A strong authentication and access control model will help prevent such attacks from occurring in the first place, and it will help the administrator to identify who is committing the abuse. The login application should be protected against DoS attacks as much as possible. Limiting the database access, perhaps by caching result sets, can help minimize the resources expended. To further limit the potential for a DoS attack, consider tracking the rate of requests received from users and blocking requests that exceed a defined rate threshold.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that protocols have specific limits of scale placed on them.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-386"
+        },
+        {
+            "external_reference_id": "REF-387"
+        },
+        {
+            "external_reference_id": "REF-388"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-667"
+        },
+        {
+            "external_reference_id": "REF-672"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        }
+    ]
+}

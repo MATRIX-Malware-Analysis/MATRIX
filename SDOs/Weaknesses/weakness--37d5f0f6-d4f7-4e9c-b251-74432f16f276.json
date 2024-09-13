@@ -1,0 +1,92 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--37d5f0f6-d4f7-4e9c-b251-74432f16f276",
+    "created": "2024-08-13T14:46:48.923387Z",
+    "modified": "2024-08-13T14:46:48.923387Z",
+    "name": "Unparsed Raw Web Content Delivery",
+    "description": "The product stores raw content or supporting code under the web document root with an extension that is not specifically handled by the server.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "433"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "\".inc\" file stored under web document root and returned unparsed by the server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1886",
+            "reference": "CVE-2002-1886"
+        },
+        {
+            "description": "\".inc\" file stored under web document root and returned unparsed by the server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2065",
+            "reference": "CVE-2002-2065"
+        },
+        {
+            "description": "\".inc\" file stored under web document root and returned unparsed by the server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2029",
+            "reference": "CVE-2005-2029"
+        },
+        {
+            "description": "direct request to .pl file leaves it unparsed",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0330",
+            "reference": "CVE-2001-0330"
+        },
+        {
+            "description": ".inc file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0614",
+            "reference": "CVE-2002-0614"
+        },
+        {
+            "description": "unparsed config.conf file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2353",
+            "reference": "CVE-2004-2353"
+        },
+        {
+            "description": "Chain: uppercase file extensions causes web server to return script source code instead of executing the script.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3365",
+            "reference": "CVE-2007-3365"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform a type check before interpreting files.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Do not store sensitive information in files which may be misinterpreted.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "219",
+            "nature": "ChildOf"
+        }
+    ]
+}

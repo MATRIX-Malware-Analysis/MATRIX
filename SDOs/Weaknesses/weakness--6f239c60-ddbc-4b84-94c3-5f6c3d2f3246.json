@@ -1,0 +1,191 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6f239c60-ddbc-4b84-94c3-5f6c3d2f3246",
+    "created": "2024-08-13T14:46:48.907293Z",
+    "modified": "2024-08-13T14:46:48.907293Z",
+    "name": "Time-of-check Time-of-use (TOCTOU) Race Condition",
+    "description": "The product checks the state of a resource before using that resource, but the resource's state can change between the check and the use in a way that invalidates the results of the check. This can cause the product to perform invalid actions when the resource is in an unexpected state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "367"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Other",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "TOCTOU in sandbox process allows installation of untrusted browser add-ons by replacing a file after it has been verified, but before it is executed",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-1743",
+            "reference": "CVE-2015-1743"
+        },
+        {
+            "description": "A multi-threaded race condition allows remote attackers to cause a denial of service (crash or reboot) by causing two threads to process the same RPC request, which causes one thread to use memory after it has been freed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0813",
+            "reference": "CVE-2003-0813"
+        },
+        {
+            "description": "PHP flaw allows remote attackers to execute arbitrary code by aborting execution before the initialization of key data structures is complete.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0594",
+            "reference": "CVE-2004-0594"
+        },
+        {
+            "description": "chain: time-of-check time-of-use (TOCTOU) race condition in program allows bypass of protection mechanism that was designed to prevent symlink attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2958",
+            "reference": "CVE-2008-2958"
+        },
+        {
+            "description": "chain: time-of-check time-of-use (TOCTOU) race condition in program allows bypass of protection mechanism that was designed to prevent symlink attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1570",
+            "reference": "CVE-2008-1570"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The most basic advice for TOCTOU vulnerabilities is to not perform a check before the use. This does not resolve the underlying issue of the execution of a function on a resource whose state and identity cannot be assured, but it does help to limit the false sense of security given by the check.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When the file being altered is owned by the current user and group, set the effective gid and uid to that of the current user and group when executing this statement.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Limit the interleaving of operations on files from multiple processes.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If you cannot perform operations atomically and you must share access to the resource between multiple processes or threads, then try to limit the amount of time (CPU cycles) between the check and use of the resource. This will not fix the problem, but it could make it more difficult for an attack to succeed.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Recheck the resource after the use call to verify that the action was taken appropriately.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that some environmental locking mechanism can be used to protect resources effectively.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that locking occurs before the check, as opposed to afterwards, such that the resource, as checked, is the same as it is when in use.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-367"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "362",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "362",
+            "nature": "ChildOf"
+        }
+    ]
+}

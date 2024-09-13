@@ -1,0 +1,69 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d4c4b602-2348-4617-8f36-d33c217fc390",
+    "created": "2024-08-13T14:46:48.888049Z",
+    "modified": "2024-08-13T14:46:48.888049Z",
+    "name": "Reflection Attack in an Authentication Protocol",
+    "description": "Simple authentication protocols are subject to reflection attacks if a malicious user can use the target machine to impersonate a trusted user.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "301"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "product authentication succeeds if user-provided MD5 hash matches the hash in its database; this can be subjected to replay attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3435",
+            "reference": "CVE-2005-3435"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use different keys for the initiator and responder or of a different type of challenge for the initiator and responder.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Let the initiator prove its identity before proceeding.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "327",
+            "nature": "PeerOf"
+        }
+    ]
+}

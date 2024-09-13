@@ -1,0 +1,69 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f20cc0f7-5a81-46d8-a822-0bc1fa4b4308",
+    "created": "2024-08-13T14:46:48.899141Z",
+    "modified": "2024-08-13T14:46:48.899141Z",
+    "name": "Small Seed Space in PRNG",
+    "description": "A Pseudo-Random Number Generator (PRNG) uses a relatively small seed space, which makes it more susceptible to brute force attacks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "339"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "product generates passwords via org.apache.commons.lang.RandomStringUtils, which uses java.util.Random internally. This PRNG has only a 48-bit seed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10908",
+            "reference": "CVE-2019-10908"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use well vetted pseudo-random number generating algorithms with adequate length seeds. Pseudo-random number generators can produce predictable numbers if the generator is known and the seed can be guessed. A 256-bit seed is a good starting point for producing a \"random enough\" number.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems, or use the more recent FIPS 140-3 [REF-1192] if possible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-1192"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "335",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "341",
+            "nature": "PeerOf"
+        }
+    ]
+}

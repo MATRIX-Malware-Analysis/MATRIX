@@ -1,0 +1,49 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4805fcb5-3773-46d0-80ee-3847b3a69243",
+    "created": "2024-08-13T14:46:48.926878Z",
+    "modified": "2024-08-13T14:46:48.926878Z",
+    "name": "Obsolete Feature in UI",
+    "description": "A UI function is obsolete and the product does not warn the user.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "448"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Remove the obsolete feature from the UI. Warn the user that the feature is no longer supported.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "446",
+            "nature": "ChildOf"
+        }
+    ]
+}

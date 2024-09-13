@@ -1,0 +1,66 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0fee3704-aaf1-4093-8a09-bec6f8a6980c",
+    "created": "2024-08-13T14:46:48.88136Z",
+    "modified": "2024-08-13T14:46:48.88136Z",
+    "name": "Improper Handling of Insufficient Permissions or Privileges ",
+    "description": "The product does not handle or incorrectly handles when it has insufficient privileges to access resources or functionality as specified by their permissions. This may cause it to follow unexpected code paths that may leave the product in an invalid state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "280"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Special file system allows attackers to prevent ownership/permission change of certain entries by opening the entries before calling a setuid program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0501",
+            "reference": "CVE-2003-0501"
+        },
+        {
+            "description": "FTP server places a user in the root directory when the user's permissions prevent access to the their own home directory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0148",
+            "reference": "CVE-2004-0148"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Always check to see if you have successfully accessed a resource or system functionality, and use proper error handling if it is unsuccessful. Do this even when you are operating in a highly privileged mode, because errors or environmental conditions might still cause a failure. For example, environments with highly granular permissions/privilege models, such as Windows or Linux capabilities, can cause unexpected failures.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "755",
+            "nature": "ChildOf"
+        }
+    ]
+}

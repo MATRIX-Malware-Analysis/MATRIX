@@ -1,0 +1,38 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--adf85c9a-3f0d-417e-a452-4218462c6649",
+    "created": "2024-08-13T14:46:48.949573Z",
+    "modified": "2024-08-13T14:46:48.949573Z",
+    "name": "Servlet Runtime Error Message Containing Sensitive Information",
+    "description": "A servlet error message indicates that there exists an unhandled exception in your web application code and may provide useful information to an attacker.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "536"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "211",
+            "nature": "ChildOf"
+        }
+    ]
+}

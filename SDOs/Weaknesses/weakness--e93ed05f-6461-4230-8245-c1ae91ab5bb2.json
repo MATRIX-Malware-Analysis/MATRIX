@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e93ed05f-6461-4230-8245-c1ae91ab5bb2",
+    "created": "2024-08-13T14:46:48.911213Z",
+    "modified": "2024-08-13T14:46:48.911213Z",
+    "name": "Session Fixation",
+    "description": "Authenticating a user, or otherwise establishing a new user session, without invalidating any existing session identifier gives an attacker the opportunity to steal authenticated sessions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "384"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Website software for game servers does not proprerly terminate user sessions, allowing for possible session fixation",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-2820",
+            "reference": "CVE-2022-2820"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Invalidate any existing session identifiers prior to authorizing a new user session.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For platforms such as ASP that do not generate new values for sessionid cookies, utilize a secondary cookie. In this approach, set a secondary cookie on the user's browser to a random value and set a session variable to the same value. If the session variable and the cookie value ever don't match, invalidate the session, and force the user to log on again.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "346",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "472",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "441",
+            "nature": "Requires"
+        }
+    ]
+}

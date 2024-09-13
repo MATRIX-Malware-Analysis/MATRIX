@@ -1,0 +1,157 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--085c64cc-4a34-466d-b41f-c5ce8c07b2ba",
+    "created": "2024-08-13T14:46:48.834398Z",
+    "modified": "2024-08-13T14:46:48.834398Z",
+    "name": "Unchecked Return Value",
+    "description": "The product does not check the return value from a method or function, which can prevent it from detecting unexpected states and conditions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "252"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: unchecked return value (CWE-252) of some functions for policy enforcement leads to authorization bypass (CWE-862)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-17533",
+            "reference": "CVE-2020-17533"
+        },
+        {
+            "description": "Chain: The return value of a function returning a pointer is not checked for success (CWE-252) resulting in the later use of an uninitialized variable (CWE-456) and a null pointer dereference (CWE-476)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-6078",
+            "reference": "CVE-2020-6078"
+        },
+        {
+            "description": "Chain: sscanf() call is used to check if a username and group exists, but the return value of sscanf() call is not checked (CWE-252), causing an uninitialized variable to be checked (CWE-457), returning success to allow authorization bypass for executing a privileged (CWE-863).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-15900",
+            "reference": "CVE-2019-15900"
+        },
+        {
+            "description": "Unchecked return value leads to resultant integer overflow and code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3798",
+            "reference": "CVE-2007-3798"
+        },
+        {
+            "description": "Program does not check return value when invoking functions to drop privileges, which could leave users with higher privileges than expected by forcing those functions to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4447",
+            "reference": "CVE-2006-4447"
+        },
+        {
+            "description": "Program does not check return value when invoking functions to drop privileges, which could leave users with higher privileges than expected by forcing those functions to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2916",
+            "reference": "CVE-2006-2916"
+        },
+        {
+            "description": "chain: unchecked return value can lead to NULL dereference",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5183",
+            "reference": "CVE-2008-5183"
+        },
+        {
+            "description": "chain: unchecked return value (CWE-252) leads to free of invalid, uninitialized pointer (CWE-824).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-0211",
+            "reference": "CVE-2010-0211"
+        },
+        {
+            "description": "Linux-based device mapper encryption program does not check the return value of setuid and setgid allowing attackers to execute code with unintended privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-6964",
+            "reference": "CVE-2017-6964"
+        },
+        {
+            "description": "Chain: Return values of file/socket operations are not checked (CWE-252), allowing resultant consumption of file descriptors (CWE-772).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1372",
+            "reference": "CVE-2002-1372"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Check the results of all functions that return a value and verify that the value is expected.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that you account for all possible return values from the function.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When designing a function, make sure you return a value or throw an exception in case of an error.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-961"
+        },
+        {
+            "external_reference_id": "REF-961"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "476",
+            "nature": "CanPrecede"
+        }
+    ]
+}

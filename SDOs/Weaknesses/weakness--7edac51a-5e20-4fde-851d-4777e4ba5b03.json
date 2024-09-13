@@ -1,0 +1,43 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7edac51a-5e20-4fde-851d-4777e4ba5b03",
+    "created": "2024-08-13T14:46:48.732736Z",
+    "modified": "2024-08-13T14:46:48.732736Z",
+    "name": "Excessive Platform Resource Consumption within a Loop",
+    "description": "The product has a loop body or loop condition that contains a control element that directly or\n\t\t\t\t\tindirectly consumes platform resources, e.g. messaging, sessions, locks, or file\n\t\t\t\t\tdescriptors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1050"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-959"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        }
+    ]
+}

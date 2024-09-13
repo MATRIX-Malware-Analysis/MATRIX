@@ -1,0 +1,44 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--500db09b-7a35-4ea7-b6c9-b6e70df6b7f9",
+    "created": "2024-08-13T14:46:48.735822Z",
+    "modified": "2024-08-13T14:46:48.735822Z",
+    "name": "Insufficient Encapsulation",
+    "description": "The product does not sufficiently hide the internal representation and implementation details of data or methods, which might allow external components or modules to modify data unexpectedly, invoke unexpected functionality, or introduce dependencies that the programmer did not intend.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1061"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-29",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "variables declared public allow remote read of system properties such as user name and home directory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3860",
+            "reference": "CVE-2010-3860"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-969"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

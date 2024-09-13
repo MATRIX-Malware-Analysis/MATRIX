@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--45a75c5b-4ad8-46f4-8d14-0f88a482ef4a",
+    "created": "2024-08-13T14:46:48.897572Z",
+    "modified": "2024-08-13T14:46:48.897572Z",
+    "name": "Improper Handling of Insufficient Entropy in TRNG",
+    "description": "True random number generators (TRNG) generally have a limited source of entropy and therefore can fail or block.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "333"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Rather than failing on a lack of random numbers, it is often preferable to wait for more numbers to be created.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "331",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "755",
+            "nature": "ChildOf"
+        }
+    ]
+}

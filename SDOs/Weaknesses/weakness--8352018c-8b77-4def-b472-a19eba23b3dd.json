@@ -1,0 +1,132 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8352018c-8b77-4def-b472-a19eba23b3dd",
+    "created": "2024-08-13T14:46:48.795367Z",
+    "modified": "2024-08-13T14:46:48.795367Z",
+    "name": "Insufficient Precision or Accuracy of a Real Number",
+    "description": "The product processes a real number with an implementation in which the number's representation does not preserve required accuracy and precision in its fractional part, causing an incorrect result.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1339"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-07-08",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: series of floating-point precision errors\n\t\t\t(CWE-1339) in a web browser rendering engine causes out-of-bounds read\n\t\t\t(CWE-125), giving access to cross-origin data",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-16069",
+            "reference": "CVE-2018-16069"
+        },
+        {
+            "description": "Chain: rounding error in floating-point calculations\n\t\t\t(CWE-1339) in image processor leads to infinite loop (CWE-835)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-7619",
+            "reference": "CVE-2017-7619"
+        },
+        {
+            "description": "Chain: machine-learning product can have a heap-based\n\t\t\tbuffer overflow (CWE-122) when some integer-oriented bounds are\n\t\t\tcalculated by using ceiling() and floor() on floating point values\n\t\t\t(CWE-1339)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-29529",
+            "reference": "CVE-2021-29529"
+        },
+        {
+            "description": "Chain: insufficient precision (CWE-1339) in\n\t\t\trandom-number generator causes some zero bits to be reliably\n\t\t\tgenerated, reducing the amount of entropy (CWE-331)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2108",
+            "reference": "CVE-2008-2108"
+        },
+        {
+            "description": "Chain: web browser crashes due to infinite loop - \"bad\n\t\t\tlooping logic [that relies on] floating point math [CWE-1339] to exit\n\t\t\tthe loop [CWE-835]\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6499",
+            "reference": "CVE-2006-6499"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The developer or maintainer can move to a more accurate representation of real numbers.  In extreme cases, the programmer can move to representations such as ratios of BigInts which can represent real numbers to extremely fine precision. The programmer can also use the concept of an Unum real. The memory and CPU tradeoffs of this change must be examined. Since floating point reals are used in many products and many locations, they are implemented in hardware and most format changes will cause the calculations to be moved into software resulting in slower products. ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1186"
+        },
+        {
+            "external_reference_id": "REF-1187"
+        },
+        {
+            "external_reference_id": "REF-1188"
+        },
+        {
+            "external_reference_id": "REF-1189"
+        },
+        {
+            "external_reference_id": "REF-1190"
+        },
+        {
+            "external_reference_id": "REF-1191"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "190",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "834",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

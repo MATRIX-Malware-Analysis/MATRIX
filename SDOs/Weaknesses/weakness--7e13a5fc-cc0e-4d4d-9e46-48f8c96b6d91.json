@@ -1,0 +1,118 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7e13a5fc-cc0e-4d4d-9e46-48f8c96b6d91",
+    "created": "2024-08-13T14:46:48.800339Z",
+    "modified": "2024-08-13T14:46:48.800339Z",
+    "name": "Dependency on Vulnerable Third-Party Component",
+    "description": "The product has a dependency on a third-party component that contains one or more known vulnerabilities.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1395"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2023-01-25",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "For software, use Software Composition Analysis (SCA) tools, which automatically analyze products to identify third-party dependencies. Often, SCA tools can be used to link with known vulnerabilities in the dependencies that they detect. There are commercial and open-source alternatives, such as OWASP Dependency-Check [REF-1312]. Many languages or frameworks have package managers with similar capabilities, such as npm audit for JavaScript, pip-audit for Python, govulncheck for Go, and many others. Dynamic methods can detect loading of third-party components.",
+            "effectiveness": "High",
+            "method": "Automated Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "In some industries such as healthcare [REF-1320] [REF-1322] or technologies such as the cloud [REF-1321], it might be unclear about who is responsible for applying patches for third-party vulnerabilities: the vendor, the operator/customer, or a separate service. Clarifying roles and responsibilities can be important to minimize confusion or unnecessary delay when third-party vulnerabilities are disclosed.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Require a Bill of Materials for all components and sub-components of the product. For software, require a Software Bill of Materials (SBOM) [REF-1247] [REF-1311].",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Maintain a Bill of Materials for all components and sub-components of the product. For software, maintain a Software Bill of Materials (SBOM). According to [REF-1247], \"An SBOM is a formal, machine-readable inventory of software components and dependencies, information about those components, and their hierarchical relationships.\"",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Actively monitor when a third-party component vendor announces vulnerability patches; fix the third-party component as soon as possible; and make it easy for operators/customers to obtain and apply the patch.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Continuously monitor changes in each of the product's components, especially when the changes indicate new vulnerabilities, end-of-life (EOL) plans, etc.",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1313"
+        },
+        {
+            "external_reference_id": "REF-1212"
+        },
+        {
+            "external_reference_id": "REF-1247"
+        },
+        {
+            "external_reference_id": "REF-1311"
+        },
+        {
+            "external_reference_id": "REF-1312"
+        },
+        {
+            "external_reference_id": "REF-1314"
+        },
+        {
+            "external_reference_id": "REF-1315"
+        },
+        {
+            "external_reference_id": "REF-1316"
+        },
+        {
+            "external_reference_id": "REF-1317"
+        },
+        {
+            "external_reference_id": "REF-1320"
+        },
+        {
+            "external_reference_id": "REF-1321"
+        },
+        {
+            "external_reference_id": "REF-1322"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "657",
+            "nature": "ChildOf"
+        }
+    ]
+}

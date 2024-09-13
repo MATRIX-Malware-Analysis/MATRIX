@@ -1,0 +1,114 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d9da76b0-c84b-4a9a-86c7-fbc99248c282",
+    "created": "2024-08-13T14:46:48.972551Z",
+    "modified": "2024-08-13T14:46:48.972551Z",
+    "name": "UNIX Hard Link",
+    "description": "The product, when opening a file or directory, does not sufficiently account for when the name is associated with a hard link to a target that is outside of the intended control sphere. This could allow an attacker to cause the product to operate on unauthorized files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "62"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Hard link attack, file overwrite; interesting because program checks against soft links",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1494",
+            "reference": "CVE-2001-1494"
+        },
+        {
+            "description": "Hard link and possibly symbolic link following vulnerabilities in embedded operating system allow local users to overwrite arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0793",
+            "reference": "CVE-2002-0793"
+        },
+        {
+            "description": "Server creates hard links and unlinks files as root, which allows local users to gain privileges by deleting and overwriting arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0578",
+            "reference": "CVE-2003-0578"
+        },
+        {
+            "description": "Operating system allows local users to conduct a denial of service by creating a hard link from a device special file to a file on an NFS file system.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0783",
+            "reference": "CVE-1999-0783"
+        },
+        {
+            "description": "Web hosting manager follows hard links, which allows local users to read or modify arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1603",
+            "reference": "CVE-2004-1603"
+        },
+        {
+            "description": "Package listing system allows local users to overwrite arbitrary files via a hard link attack on the lockfiles.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1901",
+            "reference": "CVE-2004-1901"
+        },
+        {
+            "description": "The Finder in Mac OS X and earlier allows local users to overwrite arbitrary files and gain privileges by creating a hard link from the .DS_Store file to an arbitrary file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0342",
+            "reference": "CVE-2005-0342"
+        },
+        {
+            "description": "Hard link race condition",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1111",
+            "reference": "CVE-2005-1111"
+        },
+        {
+            "description": "\"Zip Slip\" vulnerability in Go-based Open Container Initiative (OCI) registries product allows writing arbitrary files outside intended directory via symbolic links or hard links in a gzipped tarball.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21272",
+            "reference": "CVE-2021-21272"
+        },
+        {
+            "description": "setuid root tool allows attackers to read secret data by replacing a temp file with a hard link to a sensitive file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1366",
+            "reference": "CVE-2003-1366"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "59",
+            "nature": "ChildOf"
+        }
+    ]
+}

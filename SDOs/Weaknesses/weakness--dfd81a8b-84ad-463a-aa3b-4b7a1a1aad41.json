@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--dfd81a8b-84ad-463a-aa3b-4b7a1a1aad41",
+    "created": "2024-08-13T14:46:48.985101Z",
+    "modified": "2024-08-13T14:46:48.985101Z",
+    "name": "Operation on a Resource after Expiration or Release",
+    "description": "The product uses, accesses, or otherwise operates on a resource after that resource has been expired, released, or revoked.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "672"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: race condition (CWE-362) might allow resource to be released before operating on it, leading to NULL dereference (CWE-476)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3547",
+            "reference": "CVE-2009-3547"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "666",
+            "nature": "ChildOf"
+        }
+    ]
+}

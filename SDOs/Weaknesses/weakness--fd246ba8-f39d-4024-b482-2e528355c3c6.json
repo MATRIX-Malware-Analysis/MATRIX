@@ -1,0 +1,67 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fd246ba8-f39d-4024-b482-2e528355c3c6",
+    "created": "2024-08-13T14:46:48.987543Z",
+    "modified": "2024-08-13T14:46:48.987543Z",
+    "name": "Incorrect Provision of Specified Functionality",
+    "description": "The code does not function according to its published specifications, potentially leading to incorrect usage.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "684"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Error checking routine in PKCS#11 library returns \"OK\" status even when invalid signature is detected, allowing spoofed messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1446",
+            "reference": "CVE-2002-1446"
+        },
+        {
+            "description": "Chain: System call returns wrong value (CWE-393), leading to a resultant NULL dereference (CWE-476).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1559",
+            "reference": "CVE-2001-1559"
+        },
+        {
+            "description": "Program uses large timeouts on unconfirmed connections resulting from inconsistency in linked lists implementations.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0187",
+            "reference": "CVE-2003-0187"
+        },
+        {
+            "description": "UI inconsistency; visited URLs list not cleared when \"Clear History\" option is selected.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1446",
+            "reference": "CVE-1999-1446"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that your code strictly conforms to specifications.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

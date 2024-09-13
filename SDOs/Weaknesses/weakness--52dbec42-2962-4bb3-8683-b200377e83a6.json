@@ -1,0 +1,75 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--52dbec42-2962-4bb3-8683-b200377e83a6",
+    "created": "2024-08-13T14:46:48.931944Z",
+    "modified": "2024-08-13T14:46:48.931944Z",
+    "name": "Incorrect Pointer Scaling",
+    "description": "In C and C++, one may often accidentally refer to the wrong memory due to the semantics of when math operations are implicitly scaled.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "468"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a platform with high-level memory abstractions.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Always use array indexing instead of direct pointer manipulation.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use technologies for preventing buffer overflows.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        }
+    ]
+}

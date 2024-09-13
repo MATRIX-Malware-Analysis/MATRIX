@@ -1,0 +1,73 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a5bb0d35-90e9-48d2-bdba-33f36614fcca",
+    "created": "2024-08-13T14:46:48.950508Z",
+    "modified": "2024-08-13T14:46:48.950508Z",
+    "name": "Path Equivalence: 'filedir\\' (Trailing Backslash)",
+    "description": "The product accepts path input in the form of trailing backslash ('filedir\\') without appropriate validation, which can lead to ambiguous path resolution and allow an attacker to traverse the file system to unintended locations or access arbitrary files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "54"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "web framework for .NET allows remote attackers to bypass authentication for .aspx files in restricted directories via a request containing a (1) \"\\\" (backslash) or (2) \"%5C\" (encoded backslash)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0847",
+            "reference": "CVE-2004-0847"
+        },
+        {
+            "description": "Bypass directory access restrictions using trailing dot in URL",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0061",
+            "reference": "CVE-2004-0061"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "41",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "162",
+            "nature": "ChildOf"
+        }
+    ]
+}

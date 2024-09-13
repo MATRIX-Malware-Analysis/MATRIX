@@ -1,0 +1,97 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a3e8d4e1-6506-4c40-abb4-cec4da53c44e",
+    "created": "2024-08-13T14:46:48.9856Z",
+    "modified": "2024-08-13T14:46:48.9856Z",
+    "name": "Uncontrolled Recursion",
+    "description": "The product does not properly control the amount of recursion that takes place,  consuming excessive resources, such as allocated memory or the program stack.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "674"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Deeply nested arrays trigger stack exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1285",
+            "reference": "CVE-2007-1285"
+        },
+        {
+            "description": "Self-referencing pointers create infinite loop and resultant stack exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3409",
+            "reference": "CVE-2007-3409"
+        },
+        {
+            "description": "Javascript application accidentally changes input in a way that prevents a recursive call from detecting an exit condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-10707",
+            "reference": "CVE-2016-10707"
+        },
+        {
+            "description": "An attempt to recover a corrupted XML file infinite recursion protection counter was not always incremented missing the exit condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-3627",
+            "reference": "CVE-2016-3627"
+        },
+        {
+            "description": "USB-audio driver's descriptor code parsing allows unlimited recursion leading to stack exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-15118",
+            "reference": "CVE-2019-15118"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure an end condition will be reached under all logic conditions.  The end condition may include testing against the depth of recursion and exiting with an error if the recursion goes too deep. The complexity of the end condition contributes to the effectiveness of this action.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Increase the stack size.",
+            "effectiveness": "Limited",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-961"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "834",
+            "nature": "ChildOf"
+        }
+    ]
+}

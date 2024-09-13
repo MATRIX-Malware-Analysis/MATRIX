@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8aecc6e1-db01-42f3-bc0f-29ea5611497d",
+    "created": "2024-08-13T14:46:48.980159Z",
+    "modified": "2024-08-13T14:46:48.980159Z",
+    "name": "Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')",
+    "description": "The product uses external input to dynamically construct an XQuery expression used to retrieve data from an XML database, but it does not neutralize or incorrectly neutralizes that input. This allows an attacker to control the structure of the query.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "652"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use parameterized queries. This will help ensure separation between data plane and control plane.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Properly validate user input. Reject data where appropriate, filter where appropriate and escape where appropriate. Make sure input that will be used in XQL queries is safe in that context.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "943",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "91",
+            "nature": "ChildOf"
+        }
+    ]
+}

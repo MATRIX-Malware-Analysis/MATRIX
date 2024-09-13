@@ -1,0 +1,119 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9c7e24cd-e753-4acc-9997-479c00c7694b",
+    "created": "2024-08-13T14:46:48.798876Z",
+    "modified": "2024-08-13T14:46:48.798876Z",
+    "name": "Weak Authentication",
+    "description": "The product uses an authentication mechanism to restrict access to specific users or identities, but the mechanism does not sufficiently prove that the claimed identity is correct.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1390"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2022-10-05",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Web UI for a Python RPC framework does not use regex anchors to validate user login emails (CWE-777), potentially allowing bypass of OAuth (CWE-1390).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30034",
+            "reference": "CVE-2022-30034"
+        },
+        {
+            "description": "Chat application skips validation when Central Authentication Service\n\t\t  (CAS) is enabled, effectively removing the second factor from\n\t\t  two-factor authentication",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-35248",
+            "reference": "CVE-2022-35248"
+        },
+        {
+            "description": "Chain: Python-based HTTP Proxy server uses the wrong boolean operators (CWE-480) causing an  incorrect comparison (CWE-697) that identifies an authN failure if all three conditions are met instead of only one, allowing bypass of the proxy authentication (CWE-1390)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3116",
+            "reference": "CVE-2021-3116"
+        },
+        {
+            "description": "Distributed Control System (DCS) uses a deterministic algorithm to generate utility passwords",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29965",
+            "reference": "CVE-2022-29965"
+        },
+        {
+            "description": "Initialization file contains credentials that can be decoded using a \"simple string transformation\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29959",
+            "reference": "CVE-2022-29959"
+        },
+        {
+            "description": "UART interface for AI speaker uses empty password for root shell",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8994",
+            "reference": "CVE-2020-8994"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1283"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        }
+    ]
+}

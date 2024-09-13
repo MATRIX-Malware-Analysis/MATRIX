@@ -1,0 +1,84 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e821bd1a-e3c1-4b8c-9787-8ba4a2e7e098",
+    "created": "2024-08-13T14:46:48.815476Z",
+    "modified": "2024-08-13T14:46:48.815476Z",
+    "name": "Partial String Comparison",
+    "description": "The product performs a comparison that only examines a portion of a factor before determining whether there is a match, such as a substring, leading to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "187"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not prevent access to restricted directories due to partial string comparison with a public directory",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-6394",
+            "reference": "CVE-2014-6394"
+        },
+        {
+            "description": "Argument parser of an IMAP server treats a partial command \"body[p\" as if it is \"body.peek\", leading to index error and out-of-bounds corruption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1012",
+            "reference": "CVE-2004-1012"
+        },
+        {
+            "description": "Web browser only checks the hostname portion of a certificate when the hostname portion of the URI is not a fully qualified domain name (FQDN), which allows remote attackers to spoof trusted certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0765",
+            "reference": "CVE-2004-0765"
+        },
+        {
+            "description": "One-character password by attacker checks only against first character of real password.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1374",
+            "reference": "CVE-2002-1374"
+        },
+        {
+            "description": "One-character password by attacker checks only against first character of real password.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0979",
+            "reference": "CVE-2000-0979"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Thoroughly test the comparison scheme before deploying code into production. Perform positive testing as well as negative testing.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1023",
+            "nature": "ChildOf"
+        }
+    ]
+}

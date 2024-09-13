@@ -1,0 +1,71 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3ce6b60a-16e6-4c6a-8ab6-9175f58cbdbd",
+    "created": "2024-08-13T14:46:48.788818Z",
+    "modified": "2024-08-13T14:46:48.788818Z",
+    "name": "Improper Setting of Bus Controlling Capability in Fabric End-point",
+    "description": "The bus controller enables bits in the fabric end-point to allow responder devices to control transactions on the fabric.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1315"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-19",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati K. Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "For responder devices, the register bit in the fabric end-point that enables the bus controlling capability must be set to 0 by default. This bit should not be set during secure-boot flows. Also, writes to this register must be access-protected to prevent malicious modifications to obtain bus-controlling capability.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For responder devices, the register bit in the fabric end-point that enables the bus controlling capability must be set to 0 by default. This bit should not be set during secure-boot flows. Also, writes to this register must be access-protected to prevent malicious modifications to obtain bus-controlling capability.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For responder devices, the register bit in the fabric end-point that enables the bus controlling capability must be set to 0 by default. This bit should not be set during secure-boot flows. Also, writes to this register must be access-protected to prevent malicious modifications to obtain bus-controlling capability.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1135"
+        },
+        {
+            "external_reference_id": "REF-1136"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

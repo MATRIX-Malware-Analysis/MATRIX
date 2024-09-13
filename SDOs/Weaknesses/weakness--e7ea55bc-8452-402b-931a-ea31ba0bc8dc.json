@@ -1,0 +1,116 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e7ea55bc-8452-402b-931a-ea31ba0bc8dc",
+    "created": "2024-08-13T14:46:49.018214Z",
+    "modified": "2024-08-13T14:46:49.018214Z",
+    "name": "Inappropriate Encoding for Output Context",
+    "description": "The product uses or specifies an encoding when generating output to a downstream component, but the specified encoding is not the same as the encoding that is expected by the downstream component.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "838"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server does not properly handle requests that do not contain UTF-8 data; browser assumes UTF-8, allowing XSS.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2814",
+            "reference": "CVE-2009-2814"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use context-aware encoding. That is, understand which encoding is being used by the downstream component, and ensure that this encoding is used. If an encoding can be specified, do so, instead of assuming that the default encoding is the same as the default being assumed by the downstream component.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Where possible, use communications protocols or data formats that provide strict boundaries between control and data. If this is not feasible, ensure that the protocols or formats allow the communicating components to explicitly state which encoding/decoding method is being used. Some template frameworks provide built-in support.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-786"
+        },
+        {
+            "external_reference_id": "REF-787"
+        },
+        {
+            "external_reference_id": "REF-788"
+        },
+        {
+            "external_reference_id": "REF-789"
+        },
+        {
+            "external_reference_id": "REF-709"
+        },
+        {
+            "external_reference_id": "REF-725"
+        },
+        {
+            "external_reference_id": "REF-45"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "116",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "116",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--23f221a6-6031-4d7c-bee9-5942dd62e34c",
+    "created": "2024-08-13T14:46:49.017699Z",
+    "modified": "2024-08-13T14:46:49.017699Z",
+    "name": "Use of Password Hash Instead of Password for Authentication",
+    "description": "The product records password hashes in a data store, receives a hash of a password from a client, and compares the supplied hash to the hash obtained from the data store.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "836"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product performs authentication with user-supplied password hashes that can be obtained from a separate SQL injection vulnerability (CVE-2009-1282).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1283",
+            "reference": "CVE-2009-1283"
+        },
+        {
+            "description": "Product allows attackers to bypass authentication by obtaining the password hash for another user and specifying the hash in the pwd argument.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3435",
+            "reference": "CVE-2005-3435"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "602",
+            "nature": "PeerOf"
+        }
+    ]
+}

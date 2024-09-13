@@ -1,0 +1,43 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1f8a0ee9-e75f-4aa4-8bf6-c14f35cda087",
+    "created": "2024-08-13T14:46:48.737328Z",
+    "modified": "2024-08-13T14:46:48.737328Z",
+    "name": "Excessive Execution of Sequential Searches of Data Resource",
+    "description": "The product contains a data query against an SQL table or view\n\t\t\t\t\tthat is configured in a way that does not utilize an index and may cause\n\t\t\t\t\tsequential searches to be performed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1067"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-959"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1176",
+            "nature": "ChildOf"
+        }
+    ]
+}

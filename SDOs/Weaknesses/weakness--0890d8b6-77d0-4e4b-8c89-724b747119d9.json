@@ -1,0 +1,234 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0890d8b6-77d0-4e4b-8c89-724b747119d9",
+    "created": "2024-08-13T14:46:48.88936Z",
+    "modified": "2024-08-13T14:46:48.88936Z",
+    "name": "Missing Authentication for Critical Function",
+    "description": "The product does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "306"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: a digital asset management program has an undisclosed backdoor in the legacy version of a PHP script (CWE-912) that could allow an unauthenticated user to export metadata (CWE-306)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-31260",
+            "reference": "CVE-2022-31260"
+        },
+        {
+            "description": "TCP-based protocol in Programmable Logic Controller (PLC) has no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29951",
+            "reference": "CVE-2022-29951"
+        },
+        {
+            "description": "Condition Monitor firmware uses a protocol that does not require authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29952",
+            "reference": "CVE-2022-29952"
+        },
+        {
+            "description": "SCADA-based protocol for bridging WAN and LAN traffic has no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30276",
+            "reference": "CVE-2022-30276"
+        },
+        {
+            "description": "Safety Instrumented System uses proprietary TCP protocols with no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30313",
+            "reference": "CVE-2022-30313"
+        },
+        {
+            "description": "Distributed Control System (DCS) uses a protocol that has no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30317",
+            "reference": "CVE-2022-30317"
+        },
+        {
+            "description": "Chain: Cloud computing virtualization platform does not require authentication for upload of a tar format file (CWE-306), then uses .. path traversal sequences (CWE-23) in the file to access unexpected files, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21972",
+            "reference": "CVE-2021-21972"
+        },
+        {
+            "description": "Bluetooth speaker does not require authentication for the debug functionality on the UART port, allowing root shell access",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-10263",
+            "reference": "CVE-2020-10263"
+        },
+        {
+            "description": "WiFi router does not require authentication for its UART port, allowing adversaries with physical access to execute commands as root",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-23147",
+            "reference": "CVE-2021-23147"
+        },
+        {
+            "description": "IT management product does not perform authentication for some REST API requests, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-37415",
+            "reference": "CVE-2021-37415"
+        },
+        {
+            "description": "Default setting in workflow management product allows all API requests without authentication, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-13927",
+            "reference": "CVE-2020-13927"
+        },
+        {
+            "description": "MFV. Access TFTP server without authentication and obtain configuration file with sensitive plaintext information.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1810",
+            "reference": "CVE-2002-1810"
+        },
+        {
+            "description": "Agent software running at privileges does not authenticate incoming requests over an unprotected channel, allowing a Shatter\" attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6827",
+            "reference": "CVE-2008-6827"
+        },
+        {
+            "description": "Product enforces restrictions through a GUI but not through privileged APIs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0213",
+            "reference": "CVE-2004-0213"
+        },
+        {
+            "description": "monitor device allows access to physical UART debug port without authentication",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-15483",
+            "reference": "CVE-2020-15483"
+        },
+        {
+            "description": "Programmable Logic Controller (PLC) does not have an authentication feature on its communication protocols.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-9201",
+            "reference": "CVE-2019-9201"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When storing data in the cloud (e.g., S3 buckets, Azure blobs, Google Cloud Storage, etc.), use the provider's controls to require strong authentication for users who should be allowed to access the data [REF-1297] [REF-1298] [REF-1302].",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-257"
+        },
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        },
+        {
+            "external_reference_id": "REF-1295"
+        },
+        {
+            "external_reference_id": "REF-1296"
+        },
+        {
+            "external_reference_id": "REF-1297"
+        },
+        {
+            "external_reference_id": "REF-1298"
+        },
+        {
+            "external_reference_id": "REF-1302"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        }
+    ]
+}

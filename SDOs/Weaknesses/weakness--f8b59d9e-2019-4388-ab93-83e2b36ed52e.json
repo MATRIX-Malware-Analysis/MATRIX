@@ -1,0 +1,243 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f8b59d9e-2019-4388-ab93-83e2b36ed52e",
+    "created": "2024-08-13T14:46:48.788187Z",
+    "modified": "2024-08-13T14:46:48.788187Z",
+    "name": "Hardware Allows Activation of Test or Debug Logic at Runtime",
+    "description": "During runtime, the hardware allows for test or debug logic (feature) to be activated, which allows for changing the state of the hardware. This feature can alter the intended behavior of the system and allow for alteration and leakage of sensitive data by an adversary.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1313"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-08-06",
+            "submission_name": "Brent Sherman",
+            "submission_organization": "Accellera IP Security Assurance (IPSA) Working Group"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Hardware processor allows activation of test or debug logic at runtime.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-33150",
+            "reference": "CVE-2021-33150"
+        },
+        {
+            "description": "Processor allows the activation of test or debug logic at runtime, allowing escalation of privileges",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-0146",
+            "reference": "CVE-2021-0146"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Insert restrictions on when the hardware's test or debug features can be activated. For example, during normal operating modes, the hardware's privileged modes that allow access to such features cannot be activated. Configuring the hardware to only enter a test or debug mode within a window of opportunity such as during boot or configuration stage. The result is disablement of such test/debug features and associated modes during normal runtime operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Insert restrictions on when the hardware's test or debug features can be activated. For example, during normal operating modes, the hardware's privileged modes that allow access to such features cannot be activated. Configuring the hardware to only enter a test or debug mode within a window of opportunity such as during boot or configuration stage. The result is disablement of such test/debug features and associated modes during normal runtime operations.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Insert restrictions on when the hardware's test or debug features can be activated. For example, during normal operating modes, the hardware's privileged modes that allow access to such features cannot be activated. Configuring the hardware to only enter a test or debug mode within a window of opportunity such as during boot or configuration stage. The result is disablement of such test/debug features and associated modes during normal runtime operations.",
+            "effectiveness": null,
+            "phase": "Integration"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

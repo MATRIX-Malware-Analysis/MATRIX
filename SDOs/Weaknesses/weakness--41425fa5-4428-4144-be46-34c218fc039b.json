@@ -1,0 +1,152 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--41425fa5-4428-4144-be46-34c218fc039b",
+    "created": "2024-08-13T14:46:48.812548Z",
+    "modified": "2024-08-13T14:46:48.812548Z",
+    "name": "Improper Handling of URL Encoding (Hex Encoding)",
+    "description": "The product does not properly handle when all or part of an input has been URL encoded.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "177"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Hex-encoded path traversal variants - \"%2e%2e\", \"%2e%2e%2f\", \"%5c%2e%2e\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0900",
+            "reference": "CVE-2000-0900"
+        },
+        {
+            "description": "Hex-encoded path traversal variants - \"%2e%2e\", \"%2e%2e%2f\", \"%5c%2e%2e\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2256",
+            "reference": "CVE-2005-2256"
+        },
+        {
+            "description": "Hex-encoded path traversal variants - \"%2e%2e\", \"%2e%2e%2f\", \"%5c%2e%2e\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2121",
+            "reference": "CVE-2004-2121"
+        },
+        {
+            "description": "\"%20\" (encoded space)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0280",
+            "reference": "CVE-2004-0280"
+        },
+        {
+            "description": "\"%20\" (encoded space)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0424",
+            "reference": "CVE-2003-0424"
+        },
+        {
+            "description": "\"%20\" (encoded space)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0693",
+            "reference": "CVE-2001-0693"
+        },
+        {
+            "description": "\"%20\" (encoded space)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0778",
+            "reference": "CVE-2001-0778"
+        },
+        {
+            "description": "Crash via hex-encoded space \"%20\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1831",
+            "reference": "CVE-2002-1831"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0671",
+            "reference": "CVE-2000-0671"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0189",
+            "reference": "CVE-2004-0189"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1291",
+            "reference": "CVE-2002-1291"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1031",
+            "reference": "CVE-2002-1031"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1140",
+            "reference": "CVE-2001-1140"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0760",
+            "reference": "CVE-2004-0760"
+        },
+        {
+            "description": "\"%00\" (encoded null)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1025",
+            "reference": "CVE-2002-1025"
+        },
+        {
+            "description": "\"%2f\" (encoded slash)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1213",
+            "reference": "CVE-2002-1213"
+        },
+        {
+            "description": "\"%5c\" (encoded backslash) and \"%2e\" (encoded dot) sequences",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0072",
+            "reference": "CVE-2004-0072"
+        },
+        {
+            "description": "\"%5c\" (encoded backslash)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0847",
+            "reference": "CVE-2004-0847"
+        },
+        {
+            "description": "\"%0a\" (overlaps CRLF)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1575",
+            "reference": "CVE-2002-1575"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid making decisions based on names of resources (e.g. files) if those resources can have alternate names.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "172",
+            "nature": "ChildOf"
+        }
+    ]
+}

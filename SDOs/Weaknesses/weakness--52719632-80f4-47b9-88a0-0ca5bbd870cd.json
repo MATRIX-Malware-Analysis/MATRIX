@@ -1,0 +1,114 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--52719632-80f4-47b9-88a0-0ca5bbd870cd",
+    "created": "2024-08-13T14:46:48.924229Z",
+    "modified": "2024-08-13T14:46:48.924229Z",
+    "name": "Interpretation Conflict",
+    "description": "Product A handles inputs or steps differently than Product B, which causes A to perform incorrect actions based on its perception of B's state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "436"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Bypass filters or poison web cache using requests with multiple Content-Length headers, a non-standard behavior.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1215",
+            "reference": "CVE-2005-1215"
+        },
+        {
+            "description": "Anti-virus product allows bypass via Content-Type and Content-Disposition headers that are mixed case, which are still processed by some clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0485",
+            "reference": "CVE-2002-0485"
+        },
+        {
+            "description": "FTP clients sending a command with \"PASV\" in the argument can cause firewalls to misinterpret the server's error as a valid response, allowing filter bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1978",
+            "reference": "CVE-2002-1978"
+        },
+        {
+            "description": "FTP clients sending a command with \"PASV\" in the argument can cause firewalls to misinterpret the server's error as a valid response, allowing filter bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1979",
+            "reference": "CVE-2002-1979"
+        },
+        {
+            "description": "Virus product bypass with spaces between MIME header fields and the \":\" separator, a non-standard message that is accepted by some clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0637",
+            "reference": "CVE-2002-0637"
+        },
+        {
+            "description": "AV product detection bypass using inconsistency manipulation (file extension in MIME Content-Type vs. Content-Disposition field).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1777",
+            "reference": "CVE-2002-1777"
+        },
+        {
+            "description": "CMS system allows uploads of files with GIF/JPG extensions, but if they contain HTML, Internet Explorer renders them as HTML instead of images.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3310",
+            "reference": "CVE-2005-3310"
+        },
+        {
+            "description": "Interpretation conflict allows XSS via invalid \"<\" when a \">\" is expected, which is treated as \">\" by many web browsers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4260",
+            "reference": "CVE-2005-4260"
+        },
+        {
+            "description": "Interpretation conflict (non-standard behavior) enables XSS because browser ignores invalid characters in the middle of tags.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4080",
+            "reference": "CVE-2005-4080"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-427"
+        },
+        {
+            "external_reference_id": "REF-428"
+        },
+        {
+            "external_reference_id": "REF-429"
+        },
+        {
+            "external_reference_id": "REF-430"
+        },
+        {
+            "external_reference_id": "REF-431"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "435",
+            "nature": "ChildOf"
+        }
+    ]
+}

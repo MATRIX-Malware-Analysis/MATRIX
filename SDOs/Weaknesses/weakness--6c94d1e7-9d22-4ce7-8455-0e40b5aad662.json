@@ -1,0 +1,458 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6c94d1e7-9d22-4ce7-8455-0e40b5aad662",
+    "created": "2024-08-13T14:46:48.818763Z",
+    "modified": "2024-08-13T14:46:48.818763Z",
+    "name": "Improper Input Validation",
+    "description": "The product receives input or data, but it does\n        not validate or incorrectly validates that the input has the\n        properties that are required to process the data safely and\n        correctly.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "20"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "When custom input validation is required, such as when enforcing business rules, manual analysis is necessary to ensure that the validation is properly implemented.",
+            "effectiveness": null,
+            "method": "Manual Static Analysis"
+        },
+        {
+            "description": "Fuzzing techniques can be useful for detecting input validation errors. When unexpected inputs are provided to the software, the software should not crash or otherwise become unstable, and it should generate application-controlled error messages. If exceptions or interpreter-generated error messages occur, this indicates that the input was not detected and handled within the application logic itself.",
+            "effectiveness": null,
+            "method": "Fuzzing"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Large language model (LLM) management tool does not\n               validate the format of a digest value (CWE-1287) from a\n               private, untrusted model registry, enabling relative\n               path traversal (CWE-23), a.k.a. Probllama",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-37032",
+            "reference": "CVE-2024-37032"
+        },
+        {
+            "description": "Chain: a learning management tool debugger uses external input to locate previous session logs (CWE-73) and does not properly validate the given path (CWE-20), allowing for filesystem path traversal using \"../\" sequences (CWE-24)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-45918",
+            "reference": "CVE-2022-45918"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) leads to integer overflow (CWE-190) in mobile OS, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-30860",
+            "reference": "CVE-2021-30860"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) leads to integer overflow (CWE-190) in mobile OS, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-30663",
+            "reference": "CVE-2021-30663"
+        },
+        {
+            "description": "Chain: backslash followed by a newline can bypass a validation step (CWE-20), leading to eval injection (CWE-95), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22205",
+            "reference": "CVE-2021-22205"
+        },
+        {
+            "description": "Chain: insufficient input validation (CWE-20) in browser allows heap corruption (CWE-787), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21220",
+            "reference": "CVE-2021-21220"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) in username parameter, leading to OS command injection (CWE-78), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9054",
+            "reference": "CVE-2020-9054"
+        },
+        {
+            "description": "Chain: security product has improper input validation (CWE-20) leading to directory traversal (CWE-22), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-3452",
+            "reference": "CVE-2020-3452"
+        },
+        {
+            "description": "Improper input validation of HTTP requests in IP phone, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-3161",
+            "reference": "CVE-2020-3161"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) in firewall product leads to XSS (CWE-79), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-3580",
+            "reference": "CVE-2020-3580"
+        },
+        {
+            "description": "Chain: caching proxy server has improper input validation (CWE-20) of headers, allowing HTTP response smuggling (CWE-444) using an \"LF line ending\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-37147",
+            "reference": "CVE-2021-37147"
+        },
+        {
+            "description": "Eval injection in Perl program using an ID that should only contain hyphens and numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5305",
+            "reference": "CVE-2008-5305"
+        },
+        {
+            "description": "SQL injection through an ID that was supposed to be numeric.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2223",
+            "reference": "CVE-2008-2223"
+        },
+        {
+            "description": "lack of input validation in spreadsheet program leads to buffer overflows, integer overflows, array index errors, and memory corruption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3477",
+            "reference": "CVE-2008-3477"
+        },
+        {
+            "description": "insufficient validation enables XSS",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3843",
+            "reference": "CVE-2008-3843"
+        },
+        {
+            "description": "driver in security product allows code execution due to insufficient validation",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3174",
+            "reference": "CVE-2008-3174"
+        },
+        {
+            "description": "infinite loop from DNS packet with a label that points to itself",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3409",
+            "reference": "CVE-2007-3409"
+        },
+        {
+            "description": "infinite loop from DNS packet with a label that points to itself",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6870",
+            "reference": "CVE-2006-6870"
+        },
+        {
+            "description": "missing parameter leads to crash",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1303",
+            "reference": "CVE-2008-1303"
+        },
+        {
+            "description": "HTTP request with missing protocol version number leads to crash",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5893",
+            "reference": "CVE-2007-5893"
+        },
+        {
+            "description": "request with missing parameters leads to information exposure",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6658",
+            "reference": "CVE-2006-6658"
+        },
+        {
+            "description": "system crash with offset value that is inconsistent with packet size",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4114",
+            "reference": "CVE-2008-4114"
+        },
+        {
+            "description": "size field that is inconsistent with packet size leads to buffer over-read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3790",
+            "reference": "CVE-2006-3790"
+        },
+        {
+            "description": "product uses a denylist to identify potentially dangerous content, allowing attacker to bypass a warning",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2309",
+            "reference": "CVE-2008-2309"
+        },
+        {
+            "description": "security bypass via an extra header",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3494",
+            "reference": "CVE-2008-3494"
+        },
+        {
+            "description": "empty packet triggers reboot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3571",
+            "reference": "CVE-2008-3571"
+        },
+        {
+            "description": "incomplete denylist allows SQL injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5525",
+            "reference": "CVE-2006-5525"
+        },
+        {
+            "description": "NUL byte in theme name causes directory traversal impact to be worse",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1284",
+            "reference": "CVE-2008-1284"
+        },
+        {
+            "description": "kernel does not validate an incoming pointer before dereferencing it",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0600",
+            "reference": "CVE-2008-0600"
+        },
+        {
+            "description": "anti-virus product has insufficient input validation of hooked SSDT functions, allowing code execution",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1738",
+            "reference": "CVE-2008-1738"
+        },
+        {
+            "description": "anti-virus product allows DoS via zero-length field",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1737",
+            "reference": "CVE-2008-1737"
+        },
+        {
+            "description": "driver does not validate input from userland to the kernel",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3464",
+            "reference": "CVE-2008-3464"
+        },
+        {
+            "description": "kernel does not validate parameters sent in from userland, allowing code execution",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2252",
+            "reference": "CVE-2008-2252"
+        },
+        {
+            "description": "lack of validation of string length fields allows memory consumption or buffer over-read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2374",
+            "reference": "CVE-2008-2374"
+        },
+        {
+            "description": "lack of validation of length field leads to infinite loop",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1440",
+            "reference": "CVE-2008-1440"
+        },
+        {
+            "description": "lack of validation of input to an IOCTL allows code execution",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1625",
+            "reference": "CVE-2008-1625"
+        },
+        {
+            "description": "zero-length attachment causes crash",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3177",
+            "reference": "CVE-2008-3177"
+        },
+        {
+            "description": "zero-length input causes free of uninitialized pointer",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2442",
+            "reference": "CVE-2007-2442"
+        },
+        {
+            "description": "crash via a malformed frame structure",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5563",
+            "reference": "CVE-2008-5563"
+        },
+        {
+            "description": "infinite loop from a long SMTP request",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5285",
+            "reference": "CVE-2008-5285"
+        },
+        {
+            "description": "router crashes with a malformed packet",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3812",
+            "reference": "CVE-2008-3812"
+        },
+        {
+            "description": "packet with invalid version number leads to NULL pointer dereference",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3680",
+            "reference": "CVE-2008-3680"
+        },
+        {
+            "description": "crash via multiple \".\" characters in file extension",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3660",
+            "reference": "CVE-2008-3660"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Consider using language-theoretic security (LangSec) techniques that characterize inputs using a formal language and build \"recognizers\" for that language.  This effectively requires parsing to be a distinct layer that effectively enforces a boundary between raw input and internal data representations, instead of allowing parser code to be scattered throughout the program, where it could be subject to errors or inconsistencies that create weaknesses. [REF-1109] [REF-1110] [REF-1111]",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use an input validation framework such as Struts or the OWASP ESAPI Validation API. Note that using a framework does not automatically address all input validation problems; be mindful of weaknesses that could arise from misusing the framework itself (CWE-1173).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Understand all the potential areas where untrusted inputs can enter your software: parameters or arguments, cookies, anything read from the network, environment variables, reverse DNS lookups, query results, request headers, URL components, e-mail, files, filenames, databases, and any external systems that provide data to the application. Remember that such inputs may be obtained indirectly through API calls.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When your application combines data from multiple sources, perform the validation after the sources have been combined. The individual data elements may pass the validation step but violate the intended restrictions after they have been combined.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Be especially careful to validate all input when invoking code that crosses language boundaries, such as from an interpreted language to native code. This could create an unexpected interaction between the language boundaries. Ensure that you are not violating any of the expectations of the language with which you are interfacing. For example, even though Java may not be susceptible to buffer overflows, providing a large argument in a call to native code might trigger an overflow.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Directly convert your input type into the expected data type, such as using a conversion function that translates a string into a number. After converting to the expected data type, ensure that the input's values fall within the expected range of allowable values and that multi-field consistencies are maintained.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When exchanging data between components, ensure that both components are using the same character encoding. Ensure that the proper encoding is applied at each interface. Explicitly set the encoding you are using whenever the protocol allows you to do so.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-166"
+        },
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-168"
+        },
+        {
+            "external_reference_id": "REF-48"
+        },
+        {
+            "external_reference_id": "REF-170"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-1109"
+        },
+        {
+            "external_reference_id": "REF-1110"
+        },
+        {
+            "external_reference_id": "REF-1111"
+        },
+        {
+            "external_reference_id": "REF-1287"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "707",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "41",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "770",
+            "nature": "CanPrecede"
+        }
+    ]
+}

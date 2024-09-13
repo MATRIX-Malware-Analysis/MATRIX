@@ -1,0 +1,150 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a548ac39-a51c-4848-ba64-6ce64fd783c4",
+    "created": "2024-08-13T14:46:48.87775Z",
+    "modified": "2024-08-13T14:46:48.87775Z",
+    "name": "Improper Privilege Management",
+    "description": "The product does not properly assign, modify, track, or check privileges for an actor, creating an unintended sphere of control for that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "269"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Terminal privileges are not reset when a user logs out.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1555",
+            "reference": "CVE-2001-1555"
+        },
+        {
+            "description": "Does not properly pass security context to child processes in certain cases, allows privilege escalation.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1514",
+            "reference": "CVE-2001-1514"
+        },
+        {
+            "description": "Does not properly compute roles.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0128",
+            "reference": "CVE-2001-0128"
+        },
+        {
+            "description": "untrusted user placed in unix \"wheel\" group",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1193",
+            "reference": "CVE-1999-1193"
+        },
+        {
+            "description": "Product allows users to grant themselves certain rights that can be used to escalate privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2741",
+            "reference": "CVE-2005-2741"
+        },
+        {
+            "description": "Product uses group ID of a user instead of the group, causing it to run with different privileges. This is resultant from some other unknown issue.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2496",
+            "reference": "CVE-2005-2496"
+        },
+        {
+            "description": "Product mistakenly assigns a particular status to an entity, leading to increased privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0274",
+            "reference": "CVE-2004-0274"
+        },
+        {
+            "description": "FTP client program on a certain OS runs with setuid privileges and has a buffer overflow. Most clients do not need extra privileges, so an overflow is not a vulnerability for those clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4217",
+            "reference": "CVE-2007-4217"
+        },
+        {
+            "description": "OS incorrectly installs a program with setuid privileges, allowing users to gain privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5159",
+            "reference": "CVE-2007-5159"
+        },
+        {
+            "description": "Composite: application running with high privileges (CWE-250) allows user to specify a restricted file to process, which generates a parsing error that leaks the contents of the file (CWE-209).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4638",
+            "reference": "CVE-2008-4638"
+        },
+        {
+            "description": "Installation script installs some programs as setuid when they shouldn't be.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3931",
+            "reference": "CVE-2007-3931"
+        },
+        {
+            "description": "Roles have access to dangerous procedures (Accessible entities).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1981",
+            "reference": "CVE-2002-1981"
+        },
+        {
+            "description": "Untrusted object/method gets access to clipboard (Accessible entities).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1671",
+            "reference": "CVE-2002-1671"
+        },
+        {
+            "description": "Traceroute program allows unprivileged users to modify source address of packet (Accessible entities).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0315",
+            "reference": "CVE-2000-0315"
+        },
+        {
+            "description": "User with capability can prevent setuid program from dropping privileges (Unsafe privileged actions).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0506",
+            "reference": "CVE-2000-0506"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Follow the principle of least privilege when assigning access rights to entities in a software system.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider following the principle of separation of privilege. Require multiple conditions to be met before permitting access to a system resource.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1287"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

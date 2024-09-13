@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--01859bfa-05f7-43bc-b2c0-eddfac0ddf89",
+    "created": "2024-08-13T14:46:48.946656Z",
+    "modified": "2024-08-13T14:46:48.946656Z",
+    "name": "Use of Web Browser Cache Containing Sensitive Information",
+    "description": "The web application does not use an appropriate caching policy that specifies the extent to which each web page and associated form fields should be cached.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "525"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Protect information stored in cache.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a restrictive caching policy for forms and web pages that potentially contain sensitive information.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Do not store unnecessarily sensitive information in the cache.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider using encryption in the cache.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "524",
+            "nature": "ChildOf"
+        }
+    ]
+}

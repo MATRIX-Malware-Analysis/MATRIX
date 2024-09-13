@@ -1,0 +1,397 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--34d17e3e-58ab-4902-b746-d399d6c61691",
+    "created": "2024-08-13T14:46:48.769878Z",
+    "modified": "2024-08-13T14:46:48.769878Z",
+    "name": "Comparison Logic is Vulnerable to Power Side-Channel Attacks",
+    "description": "A device's real time power consumption may be monitored during security token evaluation and the information gleaned may be used to determine the value of the reference token.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1255"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-29",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "CMAC verification vulnerable to timing and power attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-12788",
+            "reference": "CVE-2020-12788"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The design phase must consider each check of a security token against a standard and the amount of power consumed during the check of a good token versus a bad token. The alternative is an all at once check where a retry counter is incremented PRIOR to the check.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Another potential mitigation is to parallelize shifting of secret data (see example 2 below). Note that the wider the bus the more effective the result.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "An additional potential mitigation is to add random data to each crypto operation then subtract it out afterwards. This is highly effective but costly in performance, area, and power consumption. It also requires a random number generator.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If the architecture is unable to prevent the attack, using filtering components may reduce the ability to implement an attack, however, consideration must be given to the physical removal of the filter elements.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "During integration, avoid use of a single secret for an extended period (e.g. frequent key updates). This limits the amount of data compromised but at the cost of complexity of use.",
+            "effectiveness": null,
+            "phase": "Integration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1184"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1300",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1259",
+            "nature": "PeerOf"
+        }
+    ]
+}

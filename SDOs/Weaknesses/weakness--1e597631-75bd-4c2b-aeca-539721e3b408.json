@@ -1,0 +1,75 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1e597631-75bd-4c2b-aeca-539721e3b408",
+    "created": "2024-08-13T14:46:48.911475Z",
+    "modified": "2024-08-13T14:46:48.911475Z",
+    "name": "Covert Timing Channel",
+    "description": "Covert timing channels convey information by modulating some aspect of system behavior over time, so that the program receiving the information can observe system behavior and infer protected information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "385"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Landwehr",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Whenever possible, specify implementation strategies that do not introduce time variances in operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Often one can artificially manipulate the time which operations take or -- when operations occur -- can remove information from the attacker.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "It is reasonable to add artificial or random delays so that the amount of CPU time consumed is independent of the action being taken by the application.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-1431"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "514",
+            "nature": "ChildOf"
+        }
+    ]
+}

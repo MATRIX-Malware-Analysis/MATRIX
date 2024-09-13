@@ -1,0 +1,131 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--07c81c9a-679b-466c-b820-52df89cd68cf",
+    "created": "2024-08-13T14:46:48.925553Z",
+    "modified": "2024-08-13T14:46:48.925553Z",
+    "name": "Unintended Proxy or Intermediary ('Confused Deputy')",
+    "description": "The product receives a request, message, or directive from an upstream component, but the product does not sufficiently preserve the original source of the request before forwarding the request to an external actor that is outside of the product's control sphere. This causes the product to appear to be the source of the request, leading it to act as a proxy or other intermediary between the upstream component and the external actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "441"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "FTP bounce attack. The design of the protocol allows an attacker to modify the PORT command to cause the FTP server to connect to other machines besides the attacker's.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0017",
+            "reference": "CVE-1999-0017"
+        },
+        {
+            "description": "RPC portmapper could redirect service requests from an attacker to another entity, which thinks the requests came from the portmapper.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0168",
+            "reference": "CVE-1999-0168"
+        },
+        {
+            "description": "FTP server does not ensure that the IP address in a PORT command is the same as the FTP user's session, allowing port scanning by proxy.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0315",
+            "reference": "CVE-2005-0315"
+        },
+        {
+            "description": "Web server allows attackers to request a URL from another server, including other ports, which allows proxied scanning.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1484",
+            "reference": "CVE-2002-1484"
+        },
+        {
+            "description": "CGI script accepts and retrieves incoming URLs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2061",
+            "reference": "CVE-2004-2061"
+        },
+        {
+            "description": "Bounce attack allows access to TFTP from trusted side.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1484",
+            "reference": "CVE-2001-1484"
+        },
+        {
+            "description": "Web-based mail program allows internal network scanning using a modified POP3 port number.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1637",
+            "reference": "CVE-2010-1637"
+        },
+        {
+            "description": "URL-downloading library automatically follows redirects to file:// and scp:// URLs",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0037",
+            "reference": "CVE-2009-0037"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Enforce the use of strong mutual authentication mechanism between the two parties.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Whenever a product is an intermediary or proxy for\n                   transactions between two other components, the proxy core\n                   should not drop the identity of the initiator of the\n                   transaction. The immutability of the identity of the\n                   initiator must be maintained and should be forwarded all the\n                   way to the target. ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-432"
+        },
+        {
+            "external_reference_id": "REF-1125"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "CanPrecede"
+        }
+    ]
+}

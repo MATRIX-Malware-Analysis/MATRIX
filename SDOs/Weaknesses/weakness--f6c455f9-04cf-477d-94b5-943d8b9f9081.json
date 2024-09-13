@@ -1,0 +1,96 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f6c455f9-04cf-477d-94b5-943d8b9f9081",
+    "created": "2024-08-13T14:46:48.800625Z",
+    "modified": "2024-08-13T14:46:48.800625Z",
+    "name": "Compiler Removal of Code to Clear Buffers",
+    "description": "Sensitive memory is cleared according to the source code, but compiler optimizations leave the memory untouched when it is not read from again, aka \"dead store removal.\"",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "14"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This specific weakness is impossible to detect using black box methods. While an analyst could examine memory to see that it has not been scrubbed, an analysis of the executable would not be successful. This is because the compiler has already removed the relevant code. Only the source code shows whether the programmer intended to clear the memory or not, so this weakness is indistinguishable from others.",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "This weakness is only detectable using white box methods (see black box detection factor). Careful analysis is required to determine if the code is likely to be removed by the compiler.",
+            "effectiveness": null,
+            "method": "White Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Store the sensitive data in a \"volatile\" memory location if available.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If possible, configure your compiler so that it does not remove dead stores.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "Where possible, encrypt sensitive data that are used by a software system.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-124"
+        },
+        {
+            "external_reference_id": "REF-125"
+        },
+        {
+            "external_reference_id": "REF-126"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "733",
+            "nature": "ChildOf"
+        }
+    ]
+}

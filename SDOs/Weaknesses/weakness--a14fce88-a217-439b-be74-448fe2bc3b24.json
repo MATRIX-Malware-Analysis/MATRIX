@@ -1,0 +1,107 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a14fce88-a217-439b-be74-448fe2bc3b24",
+    "created": "2024-08-13T14:46:48.879187Z",
+    "modified": "2024-08-13T14:46:48.879187Z",
+    "name": "Improper Check for Dropped Privileges",
+    "description": "The product attempts to drop privileges but does not check or incorrectly checks to see if the drop succeeded.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "273"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Program does not check return value when invoking functions to drop privileges, which could leave users with higher privileges than expected by forcing those functions to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4447",
+            "reference": "CVE-2006-4447"
+        },
+        {
+            "description": "Program does not check return value when invoking functions to drop privileges, which could leave users with higher privileges than expected by forcing those functions to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2916",
+            "reference": "CVE-2006-2916"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Check the results of all functions that return a value and verify that the value is expected.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "In Windows, make sure that the process token has the SeImpersonatePrivilege(Microsoft Server 2003). Code that relies on impersonation for security must ensure that the impersonation succeeded, i.e., that a proper privilege demotion happened.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "271",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "252",
+            "nature": "PeerOf"
+        }
+    ]
+}

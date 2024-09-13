@@ -1,0 +1,95 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--28fb54cf-9720-42eb-a93b-7b438308feca",
+    "created": "2024-08-13T14:46:48.798308Z",
+    "modified": "2024-08-13T14:46:48.798308Z",
+    "name": "Insecure Operation on Windows Junction / Mount Point",
+    "description": "The product opens a file or directory, but it does not properly prevent the name from being associated with a junction or mount point to a destination that is outside of the intended control sphere.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1386"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2022-06-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Privileged service allows attackers to delete unauthorized files using a directory junction, leading to arbitrary code execution as SYSTEM.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-26426",
+            "reference": "CVE-2021-26426"
+        },
+        {
+            "description": "By creating a mount point and hard links, an attacker can abuse a service to allow users arbitrary file read permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0863",
+            "reference": "CVE-2020-0863"
+        },
+        {
+            "description": "Chain: race condition (CWE-362) in anti-malware product allows deletion of files by creating a junction (CWE-1386) and using hard links during the time window in which a temporary file is created and deleted.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1161",
+            "reference": "CVE-2019-1161"
+        },
+        {
+            "description": "Escape from sandbox for document reader by using a mountpoint [REF-1264]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-0568",
+            "reference": "CVE-2014-0568"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When designing software that will have different rights than the executer, the software should check that files that it is interacting with are not improper hard links or mount points.  One way to do this in Windows is to use the functionality embedded in the following command: \"dir /al /s /b\" or, in PowerShell, use LinkType as a filter. In addition, some software uses authentication via signing to ensure that the file is the correct one to use. Make checks atomic with the file action, otherwise a TOCTOU weakness (CWE-367) can be introduced.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1262"
+        },
+        {
+            "external_reference_id": "REF-1264"
+        },
+        {
+            "external_reference_id": "REF-1265"
+        },
+        {
+            "external_reference_id": "REF-1266"
+        },
+        {
+            "external_reference_id": "REF-1267"
+        },
+        {
+            "external_reference_id": "REF-1271"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "59",
+            "nature": "ChildOf"
+        }
+    ]
+}

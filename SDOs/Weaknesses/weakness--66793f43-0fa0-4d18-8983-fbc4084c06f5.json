@@ -1,0 +1,84 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--66793f43-0fa0-4d18-8983-fbc4084c06f5",
+    "created": "2024-08-13T14:46:48.761443Z",
+    "modified": "2024-08-13T14:46:48.761443Z",
+    "name": "Incorrect Register Defaults or Module Parameters",
+    "description": "Hardware description language code incorrectly defines register defaults or hardware Intellectual Property (IP) parameters to insecure values.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1221"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-12-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "During hardware design, all the system parameters and register defaults must be reviewed to identify security sensitive settings.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The default values of these security sensitive settings need to be defined as part of the design review phase.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Testing phase should use automated tools to test that values are configured per design specifications.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1356"
+        },
+        {
+            "external_reference_id": "REF-1357"
+        },
+        {
+            "external_reference_id": "REF-1437"
+        },
+        {
+            "external_reference_id": "REF-1438"
+        },
+        {
+            "external_reference_id": "REF-1439"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1419",
+            "nature": "ChildOf"
+        }
+    ]
+}

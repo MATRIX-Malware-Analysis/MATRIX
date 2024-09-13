@@ -1,0 +1,98 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e9da02c1-cdd2-4cc5-922a-2cdd36381818",
+    "created": "2024-08-13T14:46:48.91627Z",
+    "modified": "2024-08-13T14:46:48.91627Z",
+    "name": "Insufficient Control of Network Message Volume (Network Amplification)",
+    "description": "The product does not sufficiently monitor or control transmitted network traffic volume, so that an actor can cause the product to transmit more traffic than should be allowed for that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "406"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Classic \"Smurf\" attack, using spoofed ICMP packets to broadcast addresses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0513",
+            "reference": "CVE-1999-0513"
+        },
+        {
+            "description": "DNS query with spoofed source address causes more traffic to be returned to spoofed address than was sent by the attacker.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1379",
+            "reference": "CVE-1999-1379"
+        },
+        {
+            "description": "Large datagrams are sent in response to malformed datagrams.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0041",
+            "reference": "CVE-2000-0041"
+        },
+        {
+            "description": "Game server sends a large amount.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1066",
+            "reference": "CVE-1999-1066"
+        },
+        {
+            "description": "composite: NTP feature generates large responses (high amplification factor) with spoofed UDP source addresses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-5211",
+            "reference": "CVE-2013-5211"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "An application must make network resources available to a client commensurate with the client's access level.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Define a clear policy for network resource allocation and consumption.",
+            "effectiveness": null,
+            "phase": "Policy"
+        },
+        {
+            "description": "An application must, at all times, keep track of network resources and meter their usage appropriately.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        }
+    ]
+}

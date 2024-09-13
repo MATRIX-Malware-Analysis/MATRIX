@@ -1,0 +1,86 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b33805ee-ea80-43d3-b791-1ce7e20f06e8",
+    "created": "2024-08-13T14:46:48.986424Z",
+    "modified": "2024-08-13T14:46:48.986424Z",
+    "name": "Integer Overflow to Buffer Overflow",
+    "description": "The product performs a calculation to determine how much memory to allocate, but an integer overflow can occur that causes less memory to be allocated than expected, leading to a buffer overflow.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "680"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: in a web browser, an unsigned 64-bit integer is forcibly cast to a 32-bit integer (CWE-681) and potentially leading to an integer overflow (CWE-190). If an integer overflow occurs, this can cause heap memory corruption (CWE-122)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-43537",
+            "reference": "CVE-2021-43537"
+        },
+        {
+            "description": "chain: unchecked message size metadata allows integer overflow (CWE-190) leading to buffer overflow (CWE-119).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-1000121",
+            "reference": "CVE-2017-1000121"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "190",
+            "nature": "StartsWith"
+        },
+        {
+            "cwe_id": "190",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2ea09b12-5545-4c72-82c3-3bace465ec7b",
+    "created": "2024-08-13T14:46:48.814021Z",
+    "modified": "2024-08-13T14:46:48.814021Z",
+    "name": "Collapse of Data into Unsafe Value",
+    "description": "The product filters data in a way that causes it to be reduced or \"collapsed\" into an unsafe value that violates an expected security property.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "182"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "\"/.////\" in pathname collapses to absolute path.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0815",
+            "reference": "CVE-2004-0815"
+        },
+        {
+            "description": "\"/.//..//////././\" is collapsed into \"/.././\" after \"..\" and \"//\" sequences are removed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3123",
+            "reference": "CVE-2005-3123"
+        },
+        {
+            "description": "\".../...//\" collapsed to \"...\" due to removal of \"./\" in web server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0325",
+            "reference": "CVE-2002-0325"
+        },
+        {
+            "description": "chain: HTTP server protects against \"..\" but allows \".\" variants such as \"////./../.../\". If the server removes \"/..\" sequences, the result would collapse into an unsafe value \"////../\" (CWE-182).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0784",
+            "reference": "CVE-2002-0784"
+        },
+        {
+            "description": "MFV. Regular expression intended to protect against directory traversal reduces \".../...//\" to \"../\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2169",
+            "reference": "CVE-2005-2169"
+        },
+        {
+            "description": "XSS protection mechanism strips a <script> sequence that is nested in another <script> sequence.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1157",
+            "reference": "CVE-2001-1157"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid making decisions based on names of resources (e.g. files) if those resources can have alternate names.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Canonicalize the name to match that of the file system's representation of the name. This can sometimes be achieved with an available API (e.g. in Win32 the GetFullPathName function).",
+            "effectiveness": null,
+            "phase": null
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "33",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "34",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "35",
+            "nature": "CanPrecede"
+        }
+    ]
+}

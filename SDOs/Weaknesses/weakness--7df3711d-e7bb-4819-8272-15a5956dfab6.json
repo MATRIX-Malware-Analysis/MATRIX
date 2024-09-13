@@ -1,0 +1,79 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7df3711d-e7bb-4819-8272-15a5956dfab6",
+    "created": "2024-08-13T14:46:48.995Z",
+    "modified": "2024-08-13T14:46:48.995Z",
+    "name": "Compiler Optimization Removal or Modification of Security-critical Code",
+    "description": "The developer builds a security-critical protection mechanism into the software, but the compiler optimizes the program such that the mechanism is removed or modified.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "733"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-10-01",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This specific weakness is impossible to detect using black box methods. While an analyst could examine memory to see that it has not been scrubbed, an analysis of the executable would not be successful. This is because the compiler has already removed the relevant code. Only the source code shows whether the programmer intended to clear the memory or not, so this weakness is indistinguishable from others.",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "This weakness is only detectable using white box methods (see black box detection factor). Careful analysis is required to determine if the code is likely to be removed by the compiler.",
+            "effectiveness": null,
+            "method": "White Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "C compiler optimization, as allowed by specifications, removes code that is used to perform checks to detect integer overflows.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1685",
+            "reference": "CVE-2008-1685"
+        },
+        {
+            "description": "Chain: compiler optimization (CWE-733) removes or modifies code used to detect integer overflow (CWE-190), allowing out-of-bounds write (CWE-787).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1010006",
+            "reference": "CVE-2019-1010006"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1038",
+            "nature": "ChildOf"
+        }
+    ]
+}

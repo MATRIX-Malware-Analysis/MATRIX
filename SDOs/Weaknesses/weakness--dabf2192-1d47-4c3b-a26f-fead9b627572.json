@@ -1,0 +1,73 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--dabf2192-1d47-4c3b-a26f-fead9b627572",
+    "created": "2024-08-13T14:46:48.763861Z",
+    "modified": "2024-08-13T14:46:48.763861Z",
+    "name": "Security-Sensitive Hardware Controls with Missing Lock Bit Protection",
+    "description": "The product uses a register lock bit protection mechanism, but it does not ensure that the lock bit prevents modification of system registers or controls that perform changes to important hardware system configuration.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1233"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-01-15",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Set the lock bit. Attempt to modify the\n\t     information protected by the lock bit. If the information\n\t     is changed, implement a design fix. Retest. Also, attempt\n\t     to indirectly clear the lock bit or bypass\n\t     it.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Certain servers leave a write protection lock bit\n\t\tunset after boot, potentially allowing modification of\n\t\tparts of flash memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-9085",
+            "reference": "CVE-2018-9085"
+        },
+        {
+            "description": "Chain: chipset has a race condition (CWE-362) between when an interrupt handler detects an attempt to write-enable the BIOS (in violation of the lock bit), and when the handler resets the write-enable bit back to 0, allowing attackers to issue BIOS writes during the timing window [REF-1237].",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-8273",
+            "reference": "CVE-2014-8273"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1237"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        }
+    ]
+}

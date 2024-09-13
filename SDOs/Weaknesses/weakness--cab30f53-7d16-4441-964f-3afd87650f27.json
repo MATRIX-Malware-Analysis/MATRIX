@@ -1,0 +1,184 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cab30f53-7d16-4441-964f-3afd87650f27",
+    "created": "2024-08-13T14:46:48.994227Z",
+    "modified": "2024-08-13T14:46:48.994227Z",
+    "name": "External Control of File Name or Path",
+    "description": "The product allows user input to control or influence paths or file names that are used in filesystem operations.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "73"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: a learning management tool debugger uses external input to locate previous session logs (CWE-73) and does not properly validate the given path (CWE-20), allowing for filesystem path traversal using \"../\" sequences (CWE-24)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-45918",
+            "reference": "CVE-2022-45918"
+        },
+        {
+            "description": "Chain: external control of values for user's desired language and theme enables path traversal.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5748",
+            "reference": "CVE-2008-5748"
+        },
+        {
+            "description": "Chain: external control of user's target language enables remote file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5764",
+            "reference": "CVE-2008-5764"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When the set of filenames is limited or known, create a mapping from a set of fixed input values (such as numeric IDs) to the actual filenames, and reject all other inputs. For example, ID 1 could map to \"inbox.txt\" and ID 2 could map to \"profile.txt\". Features such as the ESAPI AccessReferenceMap provide this capability.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a built-in path canonicalization function (such as realpath() in C) that produces the canonical version of the pathname, which effectively removes \"..\" sequences and symbolic links (CWE-23, CWE-59).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use OS-level permissions and run as a low-privileged user to limit the scope of any successful attack.",
+            "effectiveness": null,
+            "phase": "Installation"
+        },
+        {
+            "description": "If you are using PHP, configure your application so that it does not use register_globals. During implementation, develop your application so that it does not rely on this feature, but be wary of implementing a register_globals emulation that is subject to weaknesses such as CWE-95, CWE-621, and similar issues.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Use tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session. These may be more effective than strictly automated techniques. This is especially the case with weaknesses that are related to design and business rules.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-45"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "642",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "41",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "98",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "434",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "59",
+            "nature": "CanPrecede"
+        }
+    ]
+}

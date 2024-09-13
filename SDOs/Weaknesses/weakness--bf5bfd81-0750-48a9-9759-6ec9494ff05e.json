@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bf5bfd81-0750-48a9-9759-6ec9494ff05e",
+    "created": "2024-08-13T14:46:48.777378Z",
+    "modified": "2024-08-13T14:46:48.777378Z",
+    "name": "Hardware Child Block Incorrectly Connected to Parent System",
+    "description": "Signals between a hardware IP and the parent system design are incorrectly connected causing security risks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1276"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-22",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "System-level verification may be used to ensure that components are correctly connected and that design security requirements are not violated due to interactions between various IP blocks.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1362"
+        },
+        {
+            "external_reference_id": "REF-1363"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

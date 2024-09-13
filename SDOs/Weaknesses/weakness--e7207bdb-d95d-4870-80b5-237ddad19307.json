@@ -1,0 +1,64 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e7207bdb-d95d-4870-80b5-237ddad19307",
+    "created": "2024-08-13T14:46:48.899656Z",
+    "modified": "2024-08-13T14:46:48.899656Z",
+    "name": "Generation of Predictable Numbers or Identifiers",
+    "description": "The product uses a scheme that generates numbers or identifiers that are more predictable than required.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "340"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product for administering PBX systems uses predictable identifiers and timestamps for filenames (CWE-340) which allows attackers to access files via direct request (CWE-425).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29330",
+            "reference": "CVE-2022-29330"
+        },
+        {
+            "description": "PRNG allows attackers to use the output of small PRNG requests to determine the internal state information, which could be used by attackers to predict future pseudo-random numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1141",
+            "reference": "CVE-2001-1141"
+        },
+        {
+            "description": "Listening TCP ports are sequentially allocated, allowing spoofing attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0074",
+            "reference": "CVE-1999-0074"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "384",
+            "nature": "CanPrecede"
+        }
+    ]
+}

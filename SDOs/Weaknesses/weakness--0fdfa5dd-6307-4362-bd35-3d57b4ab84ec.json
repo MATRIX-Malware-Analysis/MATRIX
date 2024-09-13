@@ -1,0 +1,51 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0fdfa5dd-6307-4362-bd35-3d57b4ab84ec",
+    "created": "2024-08-13T14:46:48.734797Z",
+    "modified": "2024-08-13T14:46:48.734797Z",
+    "name": "Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element",
+    "description": "The code contains a function or method that\n\t\t operates in a multi-threaded environment but owns an unsafe non-final\n\t\t                     static storable or member data element.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1058"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-961"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        }
+    ]
+}

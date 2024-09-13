@@ -1,0 +1,79 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--00c4bd54-c1e7-4433-9ca1-d02c7f5fe818",
+    "created": "2024-08-13T14:46:48.910375Z",
+    "modified": "2024-08-13T14:46:48.910375Z",
+    "name": "Path Traversal: '\\absolute\\pathname\\here'",
+    "description": "The product accepts input in the form of a backslash absolute path ('\\absolute\\pathname\\here') without appropriate validation, which can allow an attacker to traverse the file system to unintended locations or access arbitrary files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "38"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Mail client allows remote attackers to overwrite arbitrary files via an e-mail message containing a uuencoded attachment that specifies the full pathname for the file to be modified.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1263",
+            "reference": "CVE-1999-1263"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files via a full pathname to the target file in config parameter.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0753",
+            "reference": "CVE-2003-0753"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files via an absolute pathname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1525",
+            "reference": "CVE-2002-1525"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "36",
+            "nature": "ChildOf"
+        }
+    ]
+}

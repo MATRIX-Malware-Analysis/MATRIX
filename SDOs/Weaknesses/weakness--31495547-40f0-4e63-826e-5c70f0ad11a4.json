@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--31495547-40f0-4e63-826e-5c70f0ad11a4",
+    "created": "2024-08-13T14:46:48.750767Z",
+    "modified": "2024-08-13T14:46:48.750767Z",
+    "name": "Inaccurate Comments",
+    "description": "The source code contains comments that do not accurately\n\t\t\t\t\tdescribe or explain aspects of the portion of the code with which the comment is\n\t\t\t\t\tassociated.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1116"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Verify that each comment accurately reflects what is intended to happen during execution of the code.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-963"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1078",
+            "nature": "ChildOf"
+        }
+    ]
+}

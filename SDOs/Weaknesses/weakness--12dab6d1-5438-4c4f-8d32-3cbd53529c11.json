@@ -1,0 +1,42 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--12dab6d1-5438-4c4f-8d32-3cbd53529c11",
+    "created": "2024-08-13T14:46:48.996657Z",
+    "modified": "2024-08-13T14:46:48.996657Z",
+    "name": "Missing Custom Error Page",
+    "description": "The product does not return custom error pages to the user, possibly exposing sensitive information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "756"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-03-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "755",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "209",
+            "nature": "CanPrecede"
+        }
+    ]
+}

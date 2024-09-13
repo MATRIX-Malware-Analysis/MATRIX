@@ -1,0 +1,96 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--76dbacca-8bef-42a3-b1ed-a8fa5ecbd4e7",
+    "created": "2024-08-13T14:46:48.888305Z",
+    "modified": "2024-08-13T14:46:48.888305Z",
+    "name": "Authentication Bypass by Assumed-Immutable Data",
+    "description": "The authentication scheme or implementation uses key data elements that are assumed to be immutable, but can be controlled or modified by the attacker.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "302"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "DebPloit",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0367",
+            "reference": "CVE-2002-0367"
+        },
+        {
+            "description": "Web auth",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0261",
+            "reference": "CVE-2004-0261"
+        },
+        {
+            "description": "Authentication bypass by setting certain cookies to \"true\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1730",
+            "reference": "CVE-2002-1730"
+        },
+        {
+            "description": "Authentication bypass by setting certain cookies to \"true\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1734",
+            "reference": "CVE-2002-1734"
+        },
+        {
+            "description": "Admin access by setting a cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2064",
+            "reference": "CVE-2002-2064"
+        },
+        {
+            "description": "Gain privileges by setting cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2054",
+            "reference": "CVE-2002-2054"
+        },
+        {
+            "description": "Product trusts authentication information in cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1611",
+            "reference": "CVE-2004-1611"
+        },
+        {
+            "description": "Authentication bypass by setting admin-testing variable to true.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1708",
+            "reference": "CVE-2005-1708"
+        },
+        {
+            "description": "Bypass auth and gain privileges by setting a variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1787",
+            "reference": "CVE-2005-1787"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implement proper protection for immutable data (e.g. environment variable, hidden form fields, etc.)",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "807",
+            "nature": "ChildOf"
+        }
+    ]
+}

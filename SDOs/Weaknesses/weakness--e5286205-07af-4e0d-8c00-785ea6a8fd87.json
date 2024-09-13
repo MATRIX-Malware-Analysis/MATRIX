@@ -1,0 +1,150 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e5286205-07af-4e0d-8c00-785ea6a8fd87",
+    "created": "2024-08-13T14:46:48.879744Z",
+    "modified": "2024-08-13T14:46:48.879744Z",
+    "name": "Incorrect Default Permissions",
+    "description": "During installation, installed file permissions are set to allow anyone to modify those files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "276"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n         ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n         ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Executables installed world-writable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1941",
+            "reference": "CVE-2005-1941"
+        },
+        {
+            "description": "Home directories installed world-readable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1713",
+            "reference": "CVE-2002-1713"
+        },
+        {
+            "description": "World-writable log files allow information loss; world-readable file has cleartext passwords.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1550",
+            "reference": "CVE-2001-1550"
+        },
+        {
+            "description": "World-readable directory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1711",
+            "reference": "CVE-2002-1711"
+        },
+        {
+            "description": "Windows product uses insecure permissions when installing on Solaris (genesis: port error).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1844",
+            "reference": "CVE-2002-1844"
+        },
+        {
+            "description": "Insecure permissions for a shared secret key file. Overlaps cryptographic problem.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0497",
+            "reference": "CVE-2001-0497"
+        },
+        {
+            "description": "Default permissions of a device allow IP spoofing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0426",
+            "reference": "CVE-1999-0426"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The architecture needs to access and modification attributes for files to only those users who actually require those actions.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n          ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "732",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "732",
+            "nature": "ChildOf"
+        }
+    ]
+}

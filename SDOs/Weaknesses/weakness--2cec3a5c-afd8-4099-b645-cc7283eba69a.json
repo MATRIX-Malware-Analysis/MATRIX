@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2cec3a5c-afd8-4099-b645-cc7283eba69a",
+    "created": "2024-08-13T14:46:48.779832Z",
+    "modified": "2024-08-13T14:46:48.779832Z",
+    "name": "Improper Validation of Specified Quantity in Input",
+    "description": "The product receives input that is expected to specify a quantity (such as size or length), but it does not validate or incorrectly validates that the quantity has the required properties.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1284"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Python library does not limit the resources used to process images that specify a very large number of bands (CWE-1284), leading to excessive memory consumption (CWE-789) or an integer overflow (CWE-190).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-21668",
+            "reference": "CVE-2022-21668"
+        },
+        {
+            "description": "lack of validation of length field leads to infinite loop",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1440",
+            "reference": "CVE-2008-1440"
+        },
+        {
+            "description": "lack of validation of string length fields allows memory consumption or buffer over-read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2374",
+            "reference": "CVE-2008-2374"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "789",
+            "nature": "CanPrecede"
+        }
+    ]
+}

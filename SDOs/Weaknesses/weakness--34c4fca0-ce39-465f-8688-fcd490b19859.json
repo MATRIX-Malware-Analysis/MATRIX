@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--34c4fca0-ce39-465f-8688-fcd490b19859",
+    "created": "2024-08-13T14:46:48.997682Z",
+    "modified": "2024-08-13T14:46:48.997682Z",
+    "name": "Improper Neutralization of Equivalent Special Elements",
+    "description": "The product correctly neutralizes certain special elements, but it improperly neutralizes equivalent special elements.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "76"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Programming languages and supporting technologies might be chosen which are not subject to these issues.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Utilize an appropriate mix of allowlist and denylist parsing to filter equivalent special element syntax from all input.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "75",
+            "nature": "ChildOf"
+        }
+    ]
+}

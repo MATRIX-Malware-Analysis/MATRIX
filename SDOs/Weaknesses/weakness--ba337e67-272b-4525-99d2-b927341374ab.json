@@ -1,0 +1,52 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ba337e67-272b-4525-99d2-b927341374ab",
+    "created": "2024-08-13T14:46:48.928208Z",
+    "modified": "2024-08-13T14:46:48.928208Z",
+    "name": "Insecure Default Variable Initialization",
+    "description": "The product, by default, initializes an internal variable with an insecure or less secure value than is possible.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "453"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "insecure default variable initialization in BIOS firmware for a hardware board allows DoS",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-36349",
+            "reference": "CVE-2022-36349"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Disable or change default settings when they can be used to abuse the system. Since those default settings are shipped with the product they are likely to be known by a potential attacker who is familiar with the product. For instance, default credentials should be changed or the associated accounts should be disabled.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1188",
+            "nature": "ChildOf"
+        }
+    ]
+}

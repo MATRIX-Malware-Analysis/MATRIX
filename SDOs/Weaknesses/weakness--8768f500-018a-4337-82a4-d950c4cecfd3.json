@@ -1,0 +1,182 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8768f500-018a-4337-82a4-d950c4cecfd3",
+    "created": "2024-08-13T14:46:48.819266Z",
+    "modified": "2024-08-13T14:46:48.819266Z",
+    "name": "Exposure of Sensitive Information to an Unauthorized Actor",
+    "description": "The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "200"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Rust library leaks Oauth client details in application debug logs",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-31162",
+            "reference": "CVE-2022-31162"
+        },
+        {
+            "description": "Digital Rights Management (DRM) capability for mobile platform leaks pointer information, simplifying ASLR bypass",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-25476",
+            "reference": "CVE-2021-25476"
+        },
+        {
+            "description": "Enumeration of valid usernames based on inconsistent responses",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1483",
+            "reference": "CVE-2001-1483"
+        },
+        {
+            "description": "Account number enumeration via inconsistent responses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1528",
+            "reference": "CVE-2001-1528"
+        },
+        {
+            "description": "User enumeration via discrepancies in error messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2150",
+            "reference": "CVE-2004-2150"
+        },
+        {
+            "description": "Telnet protocol allows servers to obtain sensitive environment information from clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1205",
+            "reference": "CVE-2005-1205"
+        },
+        {
+            "description": "Script calls phpinfo(), revealing system configuration to web user",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1725",
+            "reference": "CVE-2002-1725"
+        },
+        {
+            "description": "Product sets a different TTL when a port is being filtered than when it is not being filtered, which allows remote attackers to identify filtered ports by comparing TTLs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0515",
+            "reference": "CVE-2002-0515"
+        },
+        {
+            "description": "Version control system allows remote attackers to determine the existence of arbitrary files and directories via the -X command for an alternate history file, which causes different error messages to be returned.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0778",
+            "reference": "CVE-2004-0778"
+        },
+        {
+            "description": "Virtual machine allows malicious web site operators to determine the existence of files on the client by measuring delays in the execution of the getSystemResource method.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1117",
+            "reference": "CVE-2000-1117"
+        },
+        {
+            "description": "Product immediately sends an error message when a user does not exist, which allows remote attackers to determine valid usernames via a timing attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0190",
+            "reference": "CVE-2003-0190"
+        },
+        {
+            "description": "POP3 server reveals a password in an error message after multiple APOP commands are sent. Might be resultant from another weakness.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2049",
+            "reference": "CVE-2008-2049"
+        },
+        {
+            "description": "Program reveals password in error message if attacker can trigger certain database errors.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5172",
+            "reference": "CVE-2007-5172"
+        },
+        {
+            "description": "Composite: application running with high privileges (CWE-250) allows user to specify a restricted file to process, which generates a parsing error that leaks the contents of the file (CWE-209).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4638",
+            "reference": "CVE-2008-4638"
+        },
+        {
+            "description": "Direct request to library file in web application triggers pathname leak in error message.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1409",
+            "reference": "CVE-2007-1409"
+        },
+        {
+            "description": "Malformed regexp syntax leads to information exposure in error message.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0603",
+            "reference": "CVE-2005-0603"
+        },
+        {
+            "description": "Password exposed in debug information.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2268",
+            "reference": "CVE-2004-2268"
+        },
+        {
+            "description": "FTP client with debug option enabled shows password to the screen.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1078",
+            "reference": "CVE-2003-1078"
+        },
+        {
+            "description": "Collaboration platform does not clear team emails in a response, allowing leak of email addresses",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-0708",
+            "reference": "CVE-2022-0708"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-172"
+        },
+        {
+            "external_reference_id": "REF-1287"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

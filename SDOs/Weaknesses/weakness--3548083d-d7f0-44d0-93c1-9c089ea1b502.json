@@ -1,0 +1,166 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3548083d-d7f0-44d0-93c1-9c089ea1b502",
+    "created": "2024-08-13T14:46:49.025312Z",
+    "modified": "2024-08-13T14:46:49.025312Z",
+    "name": "Use of Password Hash With Insufficient Computational Effort",
+    "description": "The product generates a hash for a password, but it uses a scheme that does not provide a sufficient level of computational effort that would make password cracking attacks infeasible or expensive.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "916"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-01-28",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Router does not use a salt with a hash, making it easier to crack passwords.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1526",
+            "reference": "CVE-2008-1526"
+        },
+        {
+            "description": "Router does not use a salt with a hash, making it easier to crack passwords.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-1058",
+            "reference": "CVE-2006-1058"
+        },
+        {
+            "description": "Blogging software uses a hard-coded salt when calculating a password hash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4905",
+            "reference": "CVE-2008-4905"
+        },
+        {
+            "description": "Database server uses the username for a salt when encrypting passwords, simplifying brute force attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1657",
+            "reference": "CVE-2002-1657"
+        },
+        {
+            "description": "Server uses a constant salt when encrypting passwords, simplifying brute force attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0967",
+            "reference": "CVE-2001-0967"
+        },
+        {
+            "description": "chain: product generates predictable MD5 hashes using a constant value combined with username, allowing authentication bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0408",
+            "reference": "CVE-2005-0408"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using industry-approved techniques, use them correctly. Don't cut corners by skipping resource-intensive steps (CWE-325). These steps are often essential for preventing common attacks.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-291"
+        },
+        {
+            "external_reference_id": "REF-292"
+        },
+        {
+            "external_reference_id": "REF-293"
+        },
+        {
+            "external_reference_id": "REF-294"
+        },
+        {
+            "external_reference_id": "REF-295"
+        },
+        {
+            "external_reference_id": "REF-296"
+        },
+        {
+            "external_reference_id": "REF-297"
+        },
+        {
+            "external_reference_id": "REF-298"
+        },
+        {
+            "external_reference_id": "REF-636"
+        },
+        {
+            "external_reference_id": "REF-631"
+        },
+        {
+            "external_reference_id": "REF-632"
+        },
+        {
+            "external_reference_id": "REF-908"
+        },
+        {
+            "external_reference_id": "REF-909"
+        },
+        {
+            "external_reference_id": "REF-633"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "328",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "327",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,247 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1b1b376e-4689-4ddc-af0f-63ff0eeb6f84",
+    "created": "2024-08-13T14:46:49.00658Z",
+    "modified": "2024-08-13T14:46:49.00658Z",
+    "name": "Out-of-bounds Write",
+    "description": "The product writes data past the end, or before the beginning, of the intended buffer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "787"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-10-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "This weakness can be detected using dynamic tools and techniques that interact with the software using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The software's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: insufficient input validation (CWE-20) in browser allows heap corruption (CWE-787), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21220",
+            "reference": "CVE-2021-21220"
+        },
+        {
+            "description": "GPU kernel driver allows memory corruption because a user can obtain read/write access to read-only pages, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-28664",
+            "reference": "CVE-2021-28664"
+        },
+        {
+            "description": "Chain: integer truncation (CWE-197) causes small buffer allocation (CWE-131) leading to out-of-bounds write (CWE-787) in kernel pool, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-17087",
+            "reference": "CVE-2020-17087"
+        },
+        {
+            "description": "Out-of-bounds write in kernel-mode driver, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-1054",
+            "reference": "CVE-2020-1054"
+        },
+        {
+            "description": "Escape from browser sandbox using out-of-bounds write due to incorrect bounds check, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0041",
+            "reference": "CVE-2020-0041"
+        },
+        {
+            "description": "Memory corruption in web browser scripting engine, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0968",
+            "reference": "CVE-2020-0968"
+        },
+        {
+            "description": "chain: mobile phone Bluetooth implementation does not include offset when calculating packet length (CWE-682), leading to out-of-bounds write (CWE-787)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0022",
+            "reference": "CVE-2020-0022"
+        },
+        {
+            "description": "Chain: compiler optimization (CWE-733) removes or modifies code used to detect integer overflow (CWE-190), allowing out-of-bounds write (CWE-787).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1010006",
+            "reference": "CVE-2019-1010006"
+        },
+        {
+            "description": "malformed inputs cause accesses of uninitialized or previously-deleted objects, leading to memory corruption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1532",
+            "reference": "CVE-2009-1532"
+        },
+        {
+            "description": "chain: -1 value from a function call was intended to indicate an error, but is used as an array index instead.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0269",
+            "reference": "CVE-2009-0269"
+        },
+        {
+            "description": "Unchecked length of SSLv2 challenge value leads to buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2227",
+            "reference": "CVE-2002-2227"
+        },
+        {
+            "description": "Buffer underflow from a small size value with a large buffer (length parameter inconsistency, CWE-130)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4580",
+            "reference": "CVE-2007-4580"
+        },
+        {
+            "description": "Chain: integer signedness error (CWE-195) passes signed comparison, leading to heap overflow (CWE-122)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4268",
+            "reference": "CVE-2007-4268"
+        },
+        {
+            "description": "Classic stack-based buffer overflow in media player using a long entry in a playlist",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2550",
+            "reference": "CVE-2009-2550"
+        },
+        {
+            "description": "Heap-based buffer overflow in media player using a long entry in a playlist",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2403",
+            "reference": "CVE-2009-2403"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": " \n\t\t",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": " \n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "Replace unbounded copy functions with analogous functions that support length arguments, such as strcpy with strncpy. Create these if they are not available.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1029"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-90"
+        },
+        {
+            "external_reference_id": "REF-56"
+        },
+        {
+            "external_reference_id": "REF-57"
+        },
+        {
+            "external_reference_id": "REF-58"
+        },
+        {
+            "external_reference_id": "REF-60"
+        },
+        {
+            "external_reference_id": "REF-61"
+        },
+        {
+            "external_reference_id": "REF-64"
+        },
+        {
+            "external_reference_id": "REF-1332"
+        },
+        {
+            "external_reference_id": "REF-1333"
+        },
+        {
+            "external_reference_id": "REF-1334"
+        },
+        {
+            "external_reference_id": "REF-1335"
+        },
+        {
+            "external_reference_id": "REF-1336"
+        },
+        {
+            "external_reference_id": "REF-1337"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        }
+    ]
+}

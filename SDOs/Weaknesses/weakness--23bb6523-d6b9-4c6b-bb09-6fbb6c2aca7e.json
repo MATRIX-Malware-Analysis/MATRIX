@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--23bb6523-d6b9-4c6b-bb09-6fbb6c2aca7e",
+    "created": "2024-08-13T14:46:48.937636Z",
+    "modified": "2024-08-13T14:46:48.937636Z",
+    "name": "Reliance on Package-level Scope",
+    "description": "Java packages are not inherently closed; therefore, relying on them for code security is not a good practice.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "487"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Data should be private static and final whenever possible. This will assure that your code is protected by instantiating early, preventing access and tampering.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

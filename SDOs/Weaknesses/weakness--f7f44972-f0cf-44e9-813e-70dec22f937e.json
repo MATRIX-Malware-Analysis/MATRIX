@@ -1,0 +1,83 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f7f44972-f0cf-44e9-813e-70dec22f937e",
+    "created": "2024-08-13T14:46:48.909873Z",
+    "modified": "2024-08-13T14:46:48.909873Z",
+    "name": "Creation of Temporary File With Insecure Permissions",
+    "description": "Opening temporary files without appropriate measures or controls can leave the file, its contents and any function that it impacts vulnerable to attack.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "378"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A network application framework uses the Java function createTempFile(), which will create a file that is readable by other local users of the system",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24823",
+            "reference": "CVE-2022-24823"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Many contemporary languages have functions which properly handle this condition. Older C temp file functions are especially susceptible.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Ensure that you use proper file permissions. This can be achieved by using a safe temp file function. Temporary files should be writable and readable only by the process that owns the file.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Randomize temporary file names. This can also be achieved by using a safe temp-file function. This will ensure that temporary files will not be created in predictable places.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "377",
+            "nature": "ChildOf"
+        }
+    ]
+}

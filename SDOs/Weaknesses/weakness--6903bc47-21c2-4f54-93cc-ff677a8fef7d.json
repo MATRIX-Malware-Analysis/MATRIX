@@ -1,0 +1,159 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6903bc47-21c2-4f54-93cc-ff677a8fef7d",
+    "created": "2024-08-13T14:46:49.011654Z",
+    "modified": "2024-08-13T14:46:49.011654Z",
+    "name": "Buffer Access Using Size of Source Buffer",
+    "description": "The product uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "806"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-01-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use an abstraction library to abstract away risky APIs. Examples include the Safe C String Library (SafeStr) by Viega, and the Strsafe.h library from Microsoft. This is not a complete solution, since many buffer overflows are not related to strings.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": " \n\t\t",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "Programmers should adhere to the following rules when allocating and managing their applications memory: Double check that your buffer is as large as you specify. When using functions that accept a number of bytes to copy, such as strncpy(), be aware that if the destination buffer size is equal to the source buffer size, it may not NULL-terminate the string. Check buffer boundaries if calling this function in a loop and make sure there is no danger of writing past the allocated space. Truncate all input strings to a reasonable length before passing them to the copy and concatenation functions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": " \n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "Most mitigating technologies at the compiler or OS level to date address only a subset of buffer overflow problems and rarely provide complete protection against even that subset. It is good practice to implement strategies to increase the workload of an attacker, such as leaving the attacker to guess an unknown value that changes every program execution.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-56"
+        },
+        {
+            "external_reference_id": "REF-57"
+        },
+        {
+            "external_reference_id": "REF-58"
+        },
+        {
+            "external_reference_id": "REF-59"
+        },
+        {
+            "external_reference_id": "REF-60"
+        },
+        {
+            "external_reference_id": "REF-61"
+        },
+        {
+            "external_reference_id": "REF-64"
+        },
+        {
+            "external_reference_id": "REF-1332"
+        },
+        {
+            "external_reference_id": "REF-1333"
+        },
+        {
+            "external_reference_id": "REF-1334"
+        },
+        {
+            "external_reference_id": "REF-1335"
+        },
+        {
+            "external_reference_id": "REF-1336"
+        },
+        {
+            "external_reference_id": "REF-1337"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "805",
+            "nature": "ChildOf"
+        }
+    ]
+}

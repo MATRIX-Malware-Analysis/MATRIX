@@ -1,0 +1,109 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--45f7f6f4-7793-4e47-adbd-79e45ff9679f",
+    "created": "2024-08-13T14:46:48.974767Z",
+    "modified": "2024-08-13T14:46:48.974767Z",
+    "name": "Dynamic Variable Evaluation",
+    "description": "In a language where the user can influence the name of a variable at runtime, if the variable names are not controlled, an attacker can read or write to arbitrary variables, or access arbitrary functions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "627"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Dynamic variable evaluation allows resultant remote file inclusion and path traversal.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0422",
+            "reference": "CVE-2009-0422"
+        },
+        {
+            "description": "Chain: dynamic variable evaluation in PHP program used to modify critical, unexpected $_SERVER variable for resultant XSS.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2431",
+            "reference": "CVE-2007-2431"
+        },
+        {
+            "description": "Chain: dynamic variable evaluation in PHP program used to conduct remote file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4904",
+            "reference": "CVE-2006-4904"
+        },
+        {
+            "description": "Dynamic variable evaluation in mail program allows reading and modifying attachments and preferences of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4019",
+            "reference": "CVE-2006-4019"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Refactor the code to avoid dynamic variable evaluation whenever possible.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use only allowlists of acceptable variable or function names.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For function names, ensure that you are only calling functions that accept the proper number of arguments, to avoid unexpected null arguments.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-517"
+        },
+        {
+            "external_reference_id": "REF-518"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "914",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "183",
+            "nature": "PeerOf"
+        }
+    ]
+}

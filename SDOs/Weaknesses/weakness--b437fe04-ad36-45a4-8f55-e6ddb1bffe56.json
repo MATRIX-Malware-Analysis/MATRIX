@@ -1,0 +1,107 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b437fe04-ad36-45a4-8f55-e6ddb1bffe56",
+    "created": "2024-08-13T14:46:48.912033Z",
+    "modified": "2024-08-13T14:46:48.912033Z",
+    "name": "Path Traversal: 'C:dirname'",
+    "description": "The product accepts input that contains a drive letter or Windows volume letter ('C:dirname') that potentially redirects access to an unintended location or arbitrary file.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "39"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Remote attackers can read arbitrary files by specifying the drive letter in the requested URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0038",
+            "reference": "CVE-2001-0038"
+        },
+        {
+            "description": "FTP server allows remote attackers to list arbitrary directories by using the \"ls\" command and including the drive letter name (e.g. C:) in the requested pathname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0255",
+            "reference": "CVE-2001-0255"
+        },
+        {
+            "description": "FTP server allows a remote attacker to retrieve privileged system information by specifying arbitrary paths.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0687",
+            "reference": "CVE-2001-0687"
+        },
+        {
+            "description": "FTP server allows remote attackers to list the contents of arbitrary drives via a ls command that includes the drive letter as an argument.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0933",
+            "reference": "CVE-2001-0933"
+        },
+        {
+            "description": "Server allows remote attackers to browse arbitrary directories via a full pathname in the arguments to certain dynamic pages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0466",
+            "reference": "CVE-2002-0466"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files via an HTTP request whose argument is a filename of the form \"C:\" (Drive letter), \"//absolute/path\", or \"..\" .",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1483",
+            "reference": "CVE-2002-1483"
+        },
+        {
+            "description": "FTP server read/access arbitrary files using \"C:\\\" filenames",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2488",
+            "reference": "CVE-2004-2488"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "36",
+            "nature": "ChildOf"
+        }
+    ]
+}

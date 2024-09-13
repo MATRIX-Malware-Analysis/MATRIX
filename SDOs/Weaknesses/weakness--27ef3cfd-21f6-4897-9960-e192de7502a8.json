@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--27ef3cfd-21f6-4897-9960-e192de7502a8",
+    "created": "2024-08-13T14:46:48.923152Z",
+    "modified": "2024-08-13T14:46:48.923152Z",
+    "name": "Dangerous Signal Handler not Disabled During Sensitive Operations",
+    "description": "The product uses a signal handler that shares state with other signal handlers, but it does not properly mask or prevent those signal handlers from being invoked while the original signal handler is still running.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "432"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Turn off dangerous handlers when performing sensitive operations.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "364",
+            "nature": "ChildOf"
+        }
+    ]
+}

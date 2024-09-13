@@ -1,0 +1,354 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4212f349-f288-4c61-a1aa-682849292610",
+    "created": "2024-08-13T14:46:48.786947Z",
+    "modified": "2024-08-13T14:46:48.786947Z",
+    "name": "Incorrect Calculation of Buffer Size",
+    "description": "The product does not correctly calculate the size to be used when allocating a buffer, which could lead to a buffer overflow.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "131"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "This weakness can be detected using dynamic tools and techniques that interact with the software using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The software's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": "Moderate",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Manual analysis can be useful for finding this weakness, but it might not achieve desired code coverage within limited time constraints. This becomes difficult for weaknesses that must be considered for all inputs, since the attack surface can be too large.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: integer truncation (CWE-197) causes small buffer allocation (CWE-131) leading to out-of-bounds write (CWE-787) in kernel pool, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-17087",
+            "reference": "CVE-2020-17087"
+        },
+        {
+            "description": "substitution overflow: buffer overflow using environment variables that are expanded after the length check is performed",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1363",
+            "reference": "CVE-2004-1363"
+        },
+        {
+            "description": "substitution overflow: buffer overflow using expansion of environment variables",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0747",
+            "reference": "CVE-2004-0747"
+        },
+        {
+            "description": "substitution overflow: buffer overflow using a large number of substitution strings",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2103",
+            "reference": "CVE-2005-2103"
+        },
+        {
+            "description": "transformation overflow: product adds extra escape characters to incoming data, but does not account for them in the buffer length",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3120",
+            "reference": "CVE-2005-3120"
+        },
+        {
+            "description": "transformation overflow: buffer overflow when expanding \">\" to \"&gt;\", etc.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0899",
+            "reference": "CVE-2003-0899"
+        },
+        {
+            "description": "expansion overflow: buffer overflow using wildcards",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0334",
+            "reference": "CVE-2001-0334"
+        },
+        {
+            "description": "expansion overflow: long pathname + glob = overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0248",
+            "reference": "CVE-2001-0248"
+        },
+        {
+            "description": "expansion overflow: long pathname + glob = overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0249",
+            "reference": "CVE-2001-0249"
+        },
+        {
+            "description": "special characters in argument are not properly expanded",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0184",
+            "reference": "CVE-2002-0184"
+        },
+        {
+            "description": "small length value leads to heap overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0434",
+            "reference": "CVE-2004-0434"
+        },
+        {
+            "description": "multiple variants",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1347",
+            "reference": "CVE-2002-1347"
+        },
+        {
+            "description": "needs closer investigation, but probably expansion-based",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0490",
+            "reference": "CVE-2005-0490"
+        },
+        {
+            "description": "needs closer investigation, but probably expansion-based",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0940",
+            "reference": "CVE-2004-0940"
+        },
+        {
+            "description": "Chain: Language interpreter calculates wrong buffer size (CWE-131) by using \"size = ptr ? X : Y\" instead of \"size = (ptr ? X : Y)\" expression.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0599",
+            "reference": "CVE-2008-0599"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When allocating a buffer for the purpose of transforming, converting, or encoding an input, allocate enough memory to handle the largest possible encoding. For example, in a routine that converts \"&\" characters to \"&amp;\" for HTML entity encoding, the output buffer needs to be at least 5 times as large as the input buffer.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Perform input validation on any numeric input by ensuring that it is within the expected range. Enforce that the input meets both the minimum and maximum requirements for the expected range.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When processing structured incoming data containing a size field followed by raw data, identify and resolve any inconsistencies between the size field and the actual size of the data (CWE-130).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When allocating memory that uses sentinels to mark the end of a data structure - such as NUL bytes in strings - make sure you also include the sentinel in your calculation of the total amount of memory that must be allocated.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Replace unbounded copy functions with analogous functions that support length arguments, such as strcpy with strncpy. Create these if they are not available.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use sizeof() on the appropriate data type to avoid CWE-467.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use the appropriate type for the desired action. For example, in C/C++, only use unsigned types for values that could never be negative, such as height, width, or other numbers related to quantity. This will simplify validation and will reduce surprises related to unexpected casting.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": " \n\t\t",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "\n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": " \n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "Examine compiler warnings closely and eliminate problems with potential security implications, such as signed / unsigned mismatch in memory operations, or use of uninitialized variables. Even if the weakness is rarely exploitable, a single failure may lead to the compromise of the entire system.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-106"
+        },
+        {
+            "external_reference_id": "REF-107"
+        },
+        {
+            "external_reference_id": "REF-58"
+        },
+        {
+            "external_reference_id": "REF-61"
+        },
+        {
+            "external_reference_id": "REF-60"
+        },
+        {
+            "external_reference_id": "REF-76"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-64"
+        },
+        {
+            "external_reference_id": "REF-1332"
+        },
+        {
+            "external_reference_id": "REF-1333"
+        },
+        {
+            "external_reference_id": "REF-1334"
+        },
+        {
+            "external_reference_id": "REF-1335"
+        },
+        {
+            "external_reference_id": "REF-1336"
+        },
+        {
+            "external_reference_id": "REF-1337"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

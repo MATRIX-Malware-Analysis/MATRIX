@@ -1,0 +1,48 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b0e31767-07a0-4f92-ae26-17fa8797d6a2",
+    "created": "2024-08-13T14:46:48.757173Z",
+    "modified": "2024-08-13T14:46:48.757173Z",
+    "name": "Initialization of a Resource with an Insecure Default",
+    "description": "The product initializes or sets a resource with a default that is intended to be changed by the administrator, but the default is not secure.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1188"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-03-25",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "insecure default variable initialization in BIOS firmware for a hardware board allows DoS",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-36349",
+            "reference": "CVE-2022-36349"
+        },
+        {
+            "description": "A generic database browser interface has a default mode that exposes a web server to the network, allowing queries to the database.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-42467",
+            "reference": "CVE-2022-42467"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1419",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        }
+    ]
+}

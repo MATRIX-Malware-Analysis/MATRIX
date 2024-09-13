@@ -1,0 +1,127 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--83c21472-aadf-409f-a87f-0d74266fd3eb",
+    "created": "2024-08-13T14:46:48.998804Z",
+    "modified": "2024-08-13T14:46:48.998804Z",
+    "name": "Release of Invalid Pointer or Reference",
+    "description": "The product attempts to return a memory resource to the system, but it calls the wrong release function or calls the appropriate release function incorrectly.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "763"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-05-08",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "function \"internally calls 'calloc' and returns a pointer at an index... inside the allocated buffer. This led to freeing invalid memory.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-11930",
+            "reference": "CVE-2019-11930"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Only call matching memory management functions. Do not mix and match routines. For example, when you allocate a buffer with malloc(), dispose of the original pointer with free().",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When programming in C++, consider using smart pointers provided by the boost library to help correctly and consistently manage memory.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a language that provides abstractions for memory allocation and deallocation.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a tool that dynamically detects memory management problems, such as valgrind.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-657"
+        },
+        {
+            "external_reference_id": "REF-480"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        }
+    ]
+}

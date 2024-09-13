@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--62574045-45da-4b1f-b2fc-1c6da745a322",
+    "created": "2024-08-13T14:46:48.762225Z",
+    "modified": "2024-08-13T14:46:48.762225Z",
+    "name": "Improper Restriction of Write-Once Bit Fields",
+    "description": "The hardware design control register \"sticky bits\" or write-once bit fields are improperly implemented, such that they can be reprogrammed by software.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1224"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-12-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "During hardware design all register write-once or sticky fields must be evaluated for proper configuration.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The testing phase should use automated tools to test that values are not reprogrammable and that write-once fields lock on writing zeros.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

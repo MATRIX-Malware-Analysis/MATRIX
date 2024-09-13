@@ -1,0 +1,68 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a8585668-2450-470d-996b-a9326e61ba45",
+    "created": "2024-08-13T14:46:48.991744Z",
+    "modified": "2024-08-13T14:46:48.991744Z",
+    "name": "J2EE Misconfiguration: Missing Custom Error Page",
+    "description": "The default error page of a web application should not display sensitive information about the product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "7"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Handle exceptions appropriately in source code.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Always define appropriate error pages. The application configuration should specify a default error page in order to guarantee that the application will never leak error messages to an attacker. Handling standard HTTP error codes is useful and user-friendly in addition to being a good security practice, and a good configuration will also define a last-chance error handler that catches any exception that could possibly be thrown by the application.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Do not attempt to process an error or attempt to mask it.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Verify return values are correct and do not supply sensitive information about the system.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-65"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "756",
+            "nature": "ChildOf"
+        }
+    ]
+}

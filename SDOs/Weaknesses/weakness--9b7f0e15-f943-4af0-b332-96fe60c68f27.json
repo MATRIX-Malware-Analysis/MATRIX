@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9b7f0e15-f943-4af0-b332-96fe60c68f27",
+    "created": "2024-08-13T14:46:48.88168Z",
+    "modified": "2024-08-13T14:46:48.88168Z",
+    "name": "Improper Preservation of Permissions",
+    "description": "The product does not preserve permissions or incorrectly preserves permissions when copying, restoring, or sharing objects, which can cause them to have less restrictive permissions than intended.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "281"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Incorrect ACLs used when restoring backups from directories that use symbolic links.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2323",
+            "reference": "CVE-2002-2323"
+        },
+        {
+            "description": "Automatic modification of permissions inherited from another file system.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1515",
+            "reference": "CVE-2001-1515"
+        },
+        {
+            "description": "Permissions on backup file are created with defaults, possibly less secure than original file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1920",
+            "reference": "CVE-2005-1920"
+        },
+        {
+            "description": "File is made world-readable when being cloned.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0195",
+            "reference": "CVE-2001-0195"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "732",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "732",
+            "nature": "ChildOf"
+        }
+    ]
+}

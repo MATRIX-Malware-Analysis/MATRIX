@@ -1,0 +1,75 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d3b9d989-32a5-40a7-bf65-ff8b5e9de983",
+    "created": "2024-08-13T14:46:48.791732Z",
+    "modified": "2024-08-13T14:46:48.791732Z",
+    "name": "Improperly Controlled Sequential Memory Allocation",
+    "description": "The product manages a group of objects or resources and performs a separate memory allocation for each object, but it does not properly limit the total amount of memory that is consumed by all of the combined objects.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1325"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-12-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "JavaScript-based packet decoder uses concatenation of many small strings, causing out-of-memory (OOM) condition",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-36049",
+            "reference": "CVE-2020-36049"
+        },
+        {
+            "description": "Product allocates a new buffer on the stack for each file in a directory, allowing stack exhaustion",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-20176",
+            "reference": "CVE-2019-20176"
+        },
+        {
+            "description": "Chain: an integer overflow (CWE-190) in the image size calculation causes an infinite loop (CWE-835) which sequentially allocates buffers without limits (CWE-1325) until the stack is full.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-1591",
+            "reference": "CVE-2013-1591"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure multiple allocations of the same kind of object are properly tracked - possibly across multiple sessions, requests, or messages. Define an appropriate strategy for handling requests that exceed the limit, and consider supporting a configuration option so that the administrator can extend the amount of memory to be used if necessary.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run the program using system-provided resource limits for memory. This might still cause the program to crash or exit, but the impact to the rest of the system will be minimized.",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "770",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "789",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "476",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--622ab20c-5d46-485d-8d42-32975984cf92",
+    "created": "2024-08-13T14:46:48.776189Z",
+    "modified": "2024-08-13T14:46:48.776189Z",
+    "name": "Sensitive Information Uncleared Before Debug/Power State Transition",
+    "description": "The product performs a power or debug state transition, but it does not clear sensitive information that should no longer be accessible due to changes to information access restrictions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1272"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-31",
+            "submission_name": "Parbati Kumar Manna, Hareesh Khattri, Arun Kanuparthi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Write a known pattern into each sensitive location. Enter the power/debug state in question. Read data back from the sensitive locations. If the reads are successful, and the data is the same as the pattern that was originally written, the test fails and the device needs to be fixed. Note that this test can likely be automated.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product software does not set a flag as per TPM specifications, thereby preventing a failed authorization attempt from being recorded after a loss of power.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-12926",
+            "reference": "CVE-2020-12926"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "During state transitions, information not needed in the next state should be removed before the transition to the next state.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1220"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "226",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "200",
+            "nature": "CanPrecede"
+        }
+    ]
+}

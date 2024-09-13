@@ -1,0 +1,97 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a4d04518-bef4-4b20-b448-30b8f5372ab1",
+    "created": "2024-08-13T14:46:48.896079Z",
+    "modified": "2024-08-13T14:46:48.896079Z",
+    "name": "Generation of Predictable IV with CBC Mode",
+    "description": "The product generates and uses a predictable initialization Vector (IV) with Cipher Block Chaining (CBC) Mode, which causes algorithms to be susceptible to dictionary attacks when they are encrypted under the same key.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "329"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "encryption functionality in an authentication framework uses a fixed null IV with CBC mode, allowing attackers to decrypt traffic in applications that use this functionality",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-5408",
+            "reference": "CVE-2020-5408"
+        },
+        {
+            "description": "messages for a door-unlocking product use a fixed IV in CBC mode, which is the same after each restart ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-17704",
+            "reference": "CVE-2017-17704"
+        },
+        {
+            "description": "application uses AES in CBC mode, but the pseudo-random secret and IV are generated using math.random, which is not cryptographically strong.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-11133",
+            "reference": "CVE-2017-11133"
+        },
+        {
+            "description": "Blowfish-CBC implementation constructs an IV where each byte is calculated modulo 8 instead of modulo 256, resulting in less than 12 bits for the effective IV length, and less than 4096 possible IV values.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3528",
+            "reference": "CVE-2007-3528"
+        },
+        {
+            "description": "BEAST attack in SSL 3.0 / TLS 1.0. In CBC mode, chained initialization vectors are non-random, allowing decryption of HTTPS traffic using a chosen plaintext attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-3389",
+            "reference": "CVE-2011-3389"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "NIST recommends two methods of generating unpredictable IVs for CBC mode [REF-1172]. The first is to generate the IV randomly. The second method is to encrypt a nonce with the same key and cipher to be used to encrypt the plaintext. In this case the nonce must be unique but can be predictable, since the block cipher will act as a pseudo random permutation.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-1171"
+        },
+        {
+            "external_reference_id": "REF-1172"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1204",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        }
+    ]
+}

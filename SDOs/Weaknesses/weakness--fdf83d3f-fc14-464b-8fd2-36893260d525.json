@@ -1,0 +1,126 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fdf83d3f-fc14-464b-8fd2-36893260d525",
+    "created": "2024-08-13T14:46:48.916524Z",
+    "modified": "2024-08-13T14:46:48.916524Z",
+    "name": "Inefficient Algorithmic Complexity",
+    "description": "An algorithm in a product has an inefficient worst-case computational complexity that may be detrimental to system performance and can be triggered by an attacker, typically using crafted manipulations that ensure that the worst case is being reached.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "407"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "C++ library for image metadata has \"quadratic complexity\" issue with unnecessarily repetitive parsing each time an invalid character is encountered",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-32617",
+            "reference": "CVE-2021-32617"
+        },
+        {
+            "description": "Python has \"quadratic complexity\" issue when converting string to int with many digits in unexpected bases",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-10735",
+            "reference": "CVE-2020-10735"
+        },
+        {
+            "description": "server allows ReDOS with crafted User-Agent strings, due to overlapping capture groups that cause excessive backtracking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-5243",
+            "reference": "CVE-2020-5243"
+        },
+        {
+            "description": "Perl-based email address parser has \"quadratic complexity\" issue via a string that does not contain a valid address",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-1474",
+            "reference": "CVE-2014-1474"
+        },
+        {
+            "description": "CPU consumption via inputs that cause many hash table collisions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0244",
+            "reference": "CVE-2003-0244"
+        },
+        {
+            "description": "CPU consumption via inputs that cause many hash table collisions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0364",
+            "reference": "CVE-2003-0364"
+        },
+        {
+            "description": "Product performs unnecessary processing before dropping an invalid packet.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1203",
+            "reference": "CVE-2002-1203"
+        },
+        {
+            "description": "CPU and memory consumption using many wildcards.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1501",
+            "reference": "CVE-2001-1501"
+        },
+        {
+            "description": "Product allows attackers to cause multiple copies of a program to be loaded more quickly than the program can detect that other copies are running, then exit. This type of error should probably have its own category, where teardown takes more time than initialization.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2527",
+            "reference": "CVE-2004-2527"
+        },
+        {
+            "description": "Network monitoring system allows remote attackers to cause a denial of service (CPU consumption and detection outage) via crafted network traffic, aka a \"backtracking attack.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6931",
+            "reference": "CVE-2006-6931"
+        },
+        {
+            "description": "Wiki allows remote attackers to cause a denial of service (CPU consumption) by performing a diff between large, crafted pages that trigger the worst case algorithmic complexity.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3380",
+            "reference": "CVE-2006-3380"
+        },
+        {
+            "description": "Wiki allows remote attackers to cause a denial of service (CPU consumption) by performing a diff between large, crafted pages that trigger the worst case algorithmic complexity.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3379",
+            "reference": "CVE-2006-3379"
+        },
+        {
+            "description": "OS allows attackers to cause a denial of service (CPU consumption) via crafted Gregorian dates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2506",
+            "reference": "CVE-2005-2506"
+        },
+        {
+            "description": "Memory leak by performing actions faster than the software can clear them.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1792",
+            "reference": "CVE-2005-1792"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-395"
+        },
+        {
+            "external_reference_id": "REF-1164"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        }
+    ]
+}

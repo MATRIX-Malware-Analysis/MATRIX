@@ -1,0 +1,80 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c59f23c2-4c3e-44de-a5d5-1f641b39c60c",
+    "created": "2024-08-13T14:46:48.822942Z",
+    "modified": "2024-08-13T14:46:48.822942Z",
+    "name": "Exposure of Sensitive Information Due to Incompatible Policies",
+    "description": "The product's intended functionality exposes information to certain actors in accordance with the developer's security policy, but this information is regarded as sensitive according to the intended security policies of other stakeholders such as the product's administrator, users, or others whose information is being processed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "213"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Script calls phpinfo()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1725",
+            "reference": "CVE-2002-1725"
+        },
+        {
+            "description": "Script calls phpinfo()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0033",
+            "reference": "CVE-2004-0033"
+        },
+        {
+            "description": "Script calls phpinfo()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1181",
+            "reference": "CVE-2003-1181"
+        },
+        {
+            "description": "Script calls phpinfo()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1422",
+            "reference": "CVE-2004-1422"
+        },
+        {
+            "description": "Script calls phpinfo()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1590",
+            "reference": "CVE-2004-1590"
+        },
+        {
+            "description": "Product lists DLLs and full pathnames.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1038",
+            "reference": "CVE-2003-1038"
+        },
+        {
+            "description": "Telnet protocol allows servers to obtain sensitive environment information from clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1205",
+            "reference": "CVE-2005-1205"
+        },
+        {
+            "description": "Telnet protocol allows servers to obtain sensitive environment information from clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0488",
+            "reference": "CVE-2005-0488"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "200",
+            "nature": "ChildOf"
+        }
+    ]
+}

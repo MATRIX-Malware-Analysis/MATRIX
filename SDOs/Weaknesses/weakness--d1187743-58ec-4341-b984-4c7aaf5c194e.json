@@ -1,0 +1,156 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d1187743-58ec-4341-b984-4c7aaf5c194e",
+    "created": "2024-08-13T14:46:49.027992Z",
+    "modified": "2024-08-13T14:46:49.027992Z",
+    "name": "Improper Export of Android Application Components",
+    "description": "The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "926"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If they do not need to be shared by other applications, explicitly mark components with android:exported=\"false\" in the application manifest.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "If you only intend to use exported components between related apps under your control, use android:protectionLevel=\"signature\" in the xml manifest to restrict access to applications signed by you.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "Limit Content Provider permissions (read/write) as appropriate.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "Limit Content Provider permissions (read/write) as appropriate.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-923"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "285",
+            "nature": "ChildOf"
+        }
+    ]
+}

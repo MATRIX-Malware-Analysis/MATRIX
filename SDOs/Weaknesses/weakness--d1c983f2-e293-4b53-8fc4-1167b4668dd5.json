@@ -1,0 +1,236 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d1c983f2-e293-4b53-8fc4-1167b4668dd5",
+    "created": "2024-08-13T14:46:49.011302Z",
+    "modified": "2024-08-13T14:46:49.011302Z",
+    "name": "Buffer Access with Incorrect Length Value",
+    "description": "The product uses a sequential operation to read or write a buffer, but it uses an incorrect length value that causes it to access memory that is outside of the bounds of the buffer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "805"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-01-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "This weakness can be detected using dynamic tools and techniques that interact with the product using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The product's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": "Moderate",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Manual analysis can be useful for finding this weakness, but it might not achieve desired code coverage within limited time constraints. This becomes difficult for weaknesses that must be considered for all inputs, since the attack surface can be too large.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: large length value causes buffer over-read (CWE-126)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1959",
+            "reference": "CVE-2011-1959"
+        },
+        {
+            "description": "Use of packet length field to make a calculation, then copy into a fixed-size buffer",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1848",
+            "reference": "CVE-2011-1848"
+        },
+        {
+            "description": "Chain: retrieval of length value from an uninitialized memory location",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0105",
+            "reference": "CVE-2011-0105"
+        },
+        {
+            "description": "Crafted length value in document reader leads to buffer overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0606",
+            "reference": "CVE-2011-0606"
+        },
+        {
+            "description": "SSL server overflow when the sum of multiple length fields exceeds a given value",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0651",
+            "reference": "CVE-2011-0651"
+        },
+        {
+            "description": "Language interpreter API function doesn't validate length argument, leading to information exposure",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4156",
+            "reference": "CVE-2010-4156"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": " \n\t\t",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": " \n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the product or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-58"
+        },
+        {
+            "external_reference_id": "REF-59"
+        },
+        {
+            "external_reference_id": "REF-60"
+        },
+        {
+            "external_reference_id": "REF-741"
+        },
+        {
+            "external_reference_id": "REF-57"
+        },
+        {
+            "external_reference_id": "REF-56"
+        },
+        {
+            "external_reference_id": "REF-61"
+        },
+        {
+            "external_reference_id": "REF-76"
+        },
+        {
+            "external_reference_id": "REF-64"
+        },
+        {
+            "external_reference_id": "REF-1332"
+        },
+        {
+            "external_reference_id": "REF-1333"
+        },
+        {
+            "external_reference_id": "REF-1334"
+        },
+        {
+            "external_reference_id": "REF-1335"
+        },
+        {
+            "external_reference_id": "REF-1336"
+        },
+        {
+            "external_reference_id": "REF-1337"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        }
+    ]
+}

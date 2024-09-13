@@ -1,0 +1,132 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--573b81df-04b4-4e22-b7a9-981311518a5a",
+    "created": "2024-08-13T14:46:48.984317Z",
+    "modified": "2024-08-13T14:46:48.984317Z",
+    "name": "Improper Handling of Windows Device Names",
+    "description": "The product constructs pathnames from user input, but it does not handle or incorrectly handles a pathname containing a Windows device name such as AUX or CON. This typically leads to denial of service or an information exposure when the application attempts to process the pathname as a regular file.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "67"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server allows remote attackers to cause a denial of service via a series of requests to .JSP files that contain an MS-DOS device name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0106",
+            "reference": "CVE-2002-0106"
+        },
+        {
+            "description": "Server allows remote attackers to cause a denial of service via an HTTP request for an MS-DOS device name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0200",
+            "reference": "CVE-2002-0200"
+        },
+        {
+            "description": "Product allows remote attackers to use MS-DOS device names in HTTP requests to cause a denial of service or obtain the physical path of the server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1052",
+            "reference": "CVE-2002-1052"
+        },
+        {
+            "description": "Server allows remote attackers to cause a denial of service via a URL that contains an MS-DOS device name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0493",
+            "reference": "CVE-2001-0493"
+        },
+        {
+            "description": "Server allows a remote attacker to create a denial of service via a URL request which includes a MS-DOS device name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0558",
+            "reference": "CVE-2001-0558"
+        },
+        {
+            "description": "Microsoft Windows 9x operating systems allow an attacker to cause a denial of service via a pathname that includes file device names, aka the \"DOS Device in Path Name\" vulnerability.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0168",
+            "reference": "CVE-2000-0168"
+        },
+        {
+            "description": "Server allows remote attackers to determine the physical path of the server via a URL containing MS-DOS device names.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0492",
+            "reference": "CVE-2001-0492"
+        },
+        {
+            "description": "Product does not properly handle files whose names contain reserved MS-DOS device names, which can allow malicious code to bypass detection when it is installed, copied, or executed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0552",
+            "reference": "CVE-2004-0552"
+        },
+        {
+            "description": "Server allows remote attackers to cause a denial of service (application crash) via a URL with a filename containing a .cgi extension and an MS-DOS device name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2195",
+            "reference": "CVE-2005-2195"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Be familiar with the device names in the operating system where your system is deployed. Check input for these device names.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "66",
+            "nature": "ChildOf"
+        }
+    ]
+}

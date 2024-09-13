@@ -1,0 +1,82 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b6e81067-bb87-443b-8948-72863eee393e",
+    "created": "2024-08-13T14:46:49.010227Z",
+    "modified": "2024-08-13T14:46:49.010227Z",
+    "name": "Improper Control of Interaction Frequency",
+    "description": "The product does not properly limit the number or frequency of interactions that it has with an actor, such as the number of incoming requests.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "799"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-01-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Mail server allows attackers to prevent other users from accessing mail by sending large number of rapid requests.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1876",
+            "reference": "CVE-2002-1876"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-731"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        }
+    ]
+}

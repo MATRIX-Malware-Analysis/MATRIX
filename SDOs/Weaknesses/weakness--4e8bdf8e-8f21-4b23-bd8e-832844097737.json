@@ -1,0 +1,104 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4e8bdf8e-8f21-4b23-bd8e-832844097737",
+    "created": "2024-08-13T14:46:49.005124Z",
+    "modified": "2024-08-13T14:46:49.005124Z",
+    "name": "Exposed IOCTL with Insufficient Access Control",
+    "description": "The product implements an IOCTL with functionality that should be restricted, but it does not properly enforce access control for the IOCTL.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "782"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-07-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Operating system does not enforce permissions on an IOCTL that can be used to modify network settings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2208",
+            "reference": "CVE-2009-2208"
+        },
+        {
+            "description": "Device driver does not restrict ioctl calls to its direct rendering manager.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3831",
+            "reference": "CVE-2008-3831"
+        },
+        {
+            "description": "ioctl does not check for a required capability before processing certain requests.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3525",
+            "reference": "CVE-2008-3525"
+        },
+        {
+            "description": "Chain: insecure device permissions allows access to an IOCTL, allowing arbitrary memory to be overwritten.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0322",
+            "reference": "CVE-2008-0322"
+        },
+        {
+            "description": "Chain: anti-virus product uses weak permissions for a device, leading to resultant buffer overflow in an exposed IOCTL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4277",
+            "reference": "CVE-2007-4277"
+        },
+        {
+            "description": "Chain: sandbox allows opening of a TTY device, enabling shell commands through an exposed ioctl.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1400",
+            "reference": "CVE-2007-1400"
+        },
+        {
+            "description": "Anti-virus product uses insecure security descriptor for a device driver, allowing access to a privileged IOCTL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4926",
+            "reference": "CVE-2006-4926"
+        },
+        {
+            "description": "Unauthorized user can disable keyboard or mouse by directly invoking a privileged IOCTL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0728",
+            "reference": "CVE-1999-0728"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "In Windows environments, use proper access control for the associated device or device namespace. See References.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-701"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "749",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "781",
+            "nature": "CanPrecede"
+        }
+    ]
+}

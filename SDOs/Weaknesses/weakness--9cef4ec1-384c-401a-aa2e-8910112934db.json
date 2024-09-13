@@ -1,0 +1,156 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9cef4ec1-384c-401a-aa2e-8910112934db",
+    "created": "2024-08-13T14:46:48.803025Z",
+    "modified": "2024-08-13T14:46:48.803025Z",
+    "name": "Exposure of Sensitive Information caused by Shared Microarchitectural Predictor State that Influences Transient Execution",
+    "description": "Shared microarchitectural predictor state may allow code to influence\n\t\t\t\ttransient execution across a hardware boundary, potentially exposing\n\t\t\t\tdata that is accessible beyond the boundary over a covert channel.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1423"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2023-09-19",
+            "submission_name": "Scott D. Constable",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "method": "Automated Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Automated Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "(Branch Target Injection, BTI, Spectre v2). Shared\n\t\t\t\t\tmicroarchitectural indirect branch predictor state may allow code to\n\t\t\t\t\tinfluence transient execution across a process, VM, or privilege\n\t\t\t\t\tboundary, potentially exposing data that is accessible beyond the\n\t\t\t\t\tboundary.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5754",
+            "reference": "CVE-2017-5754"
+        },
+        {
+            "description": "(Branch History Injection, BHI, Spectre-BHB). Shared\n\t\t\t\t\tbranch history state may allow user-mode code to influence transient\n\t\t\t\t\texecution in the kernel, potentially exposing kernel data over a\n\t\t\t\t\tcovert channel.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-0001",
+            "reference": "CVE-2022-0001"
+        },
+        {
+            "description": "(RSB underflow, Retbleed). Shared return stack buffer\n\t\t\t\t\tstate may allow code that executes before a prediction barrier to\n\t\t\t\t\tinfluence transient execution after the prediction barrier,\n\t\t\t\t\tpotentially exposing data that is accessible beyond the barrier over a\n\t\t\t\t\tcovert channel.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-33149",
+            "reference": "CVE-2021-33149"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": null,
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Incidental",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "System Configuration"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Patching and Maintenance"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "phase": "Documentation"
+        },
+        {
+            "description": null,
+            "effectiveness": null,
+            "phase": "Requirements"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1414"
+        },
+        {
+            "external_reference_id": "REF-1415"
+        },
+        {
+            "external_reference_id": "REF-1416"
+        },
+        {
+            "external_reference_id": "REF-1398"
+        },
+        {
+            "external_reference_id": "REF-1389"
+        },
+        {
+            "external_reference_id": "REF-1400"
+        },
+        {
+            "external_reference_id": "REF-1401"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1420",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1420",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d0734ffa-4fbc-4a75-9cb0-d61e837906df",
+    "created": "2024-08-13T14:46:48.902953Z",
+    "modified": "2024-08-13T14:46:48.902953Z",
+    "name": "Insufficient Type Distinction",
+    "description": "The product does not properly distinguish between different types of elements in a way that leads to insecure behavior.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "351"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Browser user interface does not distinguish between user-initiated and synthetic events.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2260",
+            "reference": "CVE-2005-2260"
+        },
+        {
+            "description": "Product does not compare all required data in two separate elements, causing it to think they are the same, leading to loss of ACLs. Similar to Same Name error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2801",
+            "reference": "CVE-2005-2801"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "436",
+            "nature": "PeerOf"
+        }
+    ]
+}

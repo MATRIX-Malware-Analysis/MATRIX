@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--809d8246-4e06-4093-a04d-5756cfcc8a2b",
+    "created": "2024-08-13T14:46:48.905534Z",
+    "modified": "2024-08-13T14:46:48.905534Z",
+    "name": "Trust of System Event Data",
+    "description": "Security based on event locations are insecure and can be spoofed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "360"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Attacker uses Shatter attack to bypass GUI-enforced protection for CVE-2003-0908.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0213",
+            "reference": "CVE-2004-0213"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Never trust or rely any of the information in an Event for security.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        }
+    ]
+}

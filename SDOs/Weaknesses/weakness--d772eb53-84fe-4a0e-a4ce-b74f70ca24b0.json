@@ -1,0 +1,119 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d772eb53-84fe-4a0e-a4ce-b74f70ca24b0",
+    "created": "2024-08-13T14:46:48.991454Z",
+    "modified": "2024-08-13T14:46:48.991454Z",
+    "name": "Execution After Redirect (EAR)",
+    "description": "The web application sends a redirect to another location, but instead of exiting, it executes additional code.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "698"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This issue might not be detected if testing is performed using a web browser, because the browser might obey the redirect and move the user to a different page before the application has produced outputs that indicate something is amiss.",
+            "effectiveness": null,
+            "method": "Black Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Execution-after-redirect allows access to application configuration details.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-1402",
+            "reference": "CVE-2013-1402"
+        },
+        {
+            "description": "chain: library file sends a redirect if it is directly requested but continues to execute, allowing remote file inclusion and path traversal.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1936",
+            "reference": "CVE-2009-1936"
+        },
+        {
+            "description": "Remote attackers can obtain access to administrator functionality through EAR.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2713",
+            "reference": "CVE-2007-2713"
+        },
+        {
+            "description": "Remote attackers can obtain access to administrator functionality through EAR.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4932",
+            "reference": "CVE-2007-4932"
+        },
+        {
+            "description": "Bypass of authentication step through EAR.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5578",
+            "reference": "CVE-2007-5578"
+        },
+        {
+            "description": "Chain: Execution after redirect triggers eval injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2713",
+            "reference": "CVE-2007-2713"
+        },
+        {
+            "description": "chain: execution after redirect allows non-administrator to perform static code injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6652",
+            "reference": "CVE-2007-6652"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-565"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "705",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "670",
+            "nature": "ChildOf"
+        }
+    ]
+}

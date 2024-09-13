@@ -1,0 +1,86 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--acfae14b-15e6-4616-a229-8e6b0da5900b",
+    "created": "2024-08-13T14:46:48.919926Z",
+    "modified": "2024-08-13T14:46:48.919926Z",
+    "name": "Unprotected Alternate Channel",
+    "description": "The product protects a primary channel, but it does not use the same level of protection for an alternate channel.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "420"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "When the internal flash is protected by blocking access on the Data Bus (DBUS), it can still be indirectly accessed through the Instruction Bus (IBUS).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8004",
+            "reference": "CVE-2020-8004"
+        },
+        {
+            "description": "DB server assumes that local clients have performed authentication, allowing attacker to directly connect to a process to load libraries and execute commands; a socket interface also exists (another alternate channel), so attack can be remote.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0567",
+            "reference": "CVE-2002-0567"
+        },
+        {
+            "description": "Product does not restrict access to underlying database, so attacker can bypass restrictions by directly querying the database.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1578",
+            "reference": "CVE-2002-1578"
+        },
+        {
+            "description": "User can avoid lockouts by using an API instead of the GUI to conduct brute force password guessing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1035",
+            "reference": "CVE-2003-1035"
+        },
+        {
+            "description": "FTP service can not be disabled even when other access controls would require it.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1863",
+            "reference": "CVE-2002-1863"
+        },
+        {
+            "description": "Windows named pipe created without authentication/access control, allowing configuration modification.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0066",
+            "reference": "CVE-2002-0066"
+        },
+        {
+            "description": "Router management interface spawns a separate TCP connection after authentication, allowing hijacking by attacker coming from the same IP address.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1461",
+            "reference": "CVE-2004-1461"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Identify all alternate channels and use the same protection mechanisms that are used for the primary channels.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "923",
+            "nature": "ChildOf"
+        }
+    ]
+}

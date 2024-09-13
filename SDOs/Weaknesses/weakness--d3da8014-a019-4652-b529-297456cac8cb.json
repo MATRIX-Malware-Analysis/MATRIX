@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d3da8014-a019-4652-b529-297456cac8cb",
+    "created": "2024-08-13T14:46:48.758097Z",
+    "modified": "2024-08-13T14:46:48.758097Z",
+    "name": "DMA Device Enabled Too Early in Boot Phase",
+    "description": "The product enables a Direct Memory Access (DMA) capable device before the security configuration settings are established, which allows an attacker to extract data from or gain privileges on the product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1190"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-10-15",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Utilize an IOMMU to orchestrate IO access from\n                 the start of the boot process.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1038"
+        },
+        {
+            "external_reference_id": "REF-1039"
+        },
+        {
+            "external_reference_id": "REF-1040"
+        },
+        {
+            "external_reference_id": "REF-1041"
+        },
+        {
+            "external_reference_id": "REF-1042"
+        },
+        {
+            "external_reference_id": "REF-1044"
+        },
+        {
+            "external_reference_id": "REF-1046"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "696",
+            "nature": "ChildOf"
+        }
+    ]
+}

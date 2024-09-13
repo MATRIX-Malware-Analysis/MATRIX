@@ -1,0 +1,49 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--628502e1-e4a8-46d9-9b10-7ad213c4a1c1",
+    "created": "2024-08-13T14:46:48.953823Z",
+    "modified": "2024-08-13T14:46:48.953823Z",
+    "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization",
+    "description": "If a web server does not fully parse requested URLs before it examines them for authorization, it may be possible for an attacker to bypass authorization protection.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "551"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "URL Inputs should be decoded and canonicalized to the application's current internal representation before being validated and processed for authorization. Make sure that your application does not decode the same input twice. Such errors could be used to bypass allowlist schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "863",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "696",
+            "nature": "ChildOf"
+        }
+    ]
+}

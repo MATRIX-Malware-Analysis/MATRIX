@@ -1,0 +1,102 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--49f0b580-0b4d-4dc1-ae3b-0a536491915d",
+    "created": "2024-08-13T14:46:48.986707Z",
+    "modified": "2024-08-13T14:46:48.986707Z",
+    "name": "Incorrect Conversion between Numeric Types",
+    "description": "When converting from one data type to another, such as long to integer, data can be omitted or translated in a way that produces unexpected values. If the resulting values are used in a sensitive context, then dangerous behaviors may occur.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "681"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: integer coercion error (CWE-192) prevents a return value from indicating an error, leading to out-of-bounds write (CWE-787)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-2639",
+            "reference": "CVE-2022-2639"
+        },
+        {
+            "description": "Chain: in a web browser, an unsigned 64-bit integer is forcibly cast to a 32-bit integer (CWE-681) and potentially leading to an integer overflow (CWE-190). If an integer overflow occurs, this can cause heap memory corruption (CWE-122)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-43537",
+            "reference": "CVE-2021-43537"
+        },
+        {
+            "description": "Chain: integer signedness error (CWE-195) passes signed comparison, leading to heap overflow (CWE-122)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4268",
+            "reference": "CVE-2007-4268"
+        },
+        {
+            "description": "Chain: signed short width value in image processor is sign extended during conversion to unsigned int, which leads to integer overflow and heap-based buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4988",
+            "reference": "CVE-2007-4988"
+        },
+        {
+            "description": "Integer truncation of length value leads to heap-based buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0231",
+            "reference": "CVE-2009-0231"
+        },
+        {
+            "description": "Size of a particular type changes for 64-bit platforms, leading to an integer truncation in document processor causes incorrect index to be generated.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3282",
+            "reference": "CVE-2008-3282"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid making conversion between numeric types. Always check for the allowed ranges.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "704",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "704",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "CanPrecede"
+        }
+    ]
+}

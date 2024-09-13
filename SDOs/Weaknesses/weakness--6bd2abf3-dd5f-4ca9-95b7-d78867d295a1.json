@@ -1,0 +1,56 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6bd2abf3-dd5f-4ca9-95b7-d78867d295a1",
+    "created": "2024-08-13T14:46:49.028879Z",
+    "modified": "2024-08-13T14:46:49.028879Z",
+    "name": "Improper Authorization in Handler for Custom URL Scheme",
+    "description": "The product uses a handler for a custom URL scheme, but it does not properly restrict which actors can invoke the handler using the scheme.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "939"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2014-01-14",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "URL scheme has action replace which requires no user prompt and allows remote attackers to perform undesired actions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-5725",
+            "reference": "CVE-2013-5725"
+        },
+        {
+            "description": "URL scheme has action follow and favorite which allows remote attackers to force user to perform undesired actions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-5726",
+            "reference": "CVE-2013-5726"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-938"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "862",
+            "nature": "ChildOf"
+        }
+    ]
+}

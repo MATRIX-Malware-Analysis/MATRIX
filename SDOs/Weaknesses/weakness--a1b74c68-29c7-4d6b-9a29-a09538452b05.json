@@ -1,0 +1,57 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a1b74c68-29c7-4d6b-9a29-a09538452b05",
+    "created": "2024-08-13T14:46:48.813775Z",
+    "modified": "2024-08-13T14:46:48.813775Z",
+    "name": "Incorrect Behavior Order: Validate Before Filter",
+    "description": "The product validates data before it has been filtered, which prevents the product from detecting data that becomes invalid after the filtering step.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "181"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Directory traversal vulnerability allows remote attackers to read or modify arbitrary files via invalid characters between two . (dot) characters, which are filtered and result in a \"..\" sequence.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0934",
+            "reference": "CVE-2002-0934"
+        },
+        {
+            "description": "Directory traversal vulnerability allows attackers to overwrite arbitrary files via invalid characters between two . (dot) characters, which are filtered and result in a \"..\" sequence.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0282",
+            "reference": "CVE-2003-0282"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being filtered.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "179",
+            "nature": "ChildOf"
+        }
+    ]
+}

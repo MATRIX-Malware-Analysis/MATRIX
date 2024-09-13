@@ -1,0 +1,324 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8d967a7a-fa1e-47f7-9136-b2970c5a7122",
+    "created": "2024-08-13T14:46:48.757682Z",
+    "modified": "2024-08-13T14:46:48.757682Z",
+    "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+    "description": "The product performs operations on a memory buffer, but it reads from or writes to a memory location outside the buffer's intended boundary. This may result in read or write operations on unexpected memory locations that could be linked to other variables, data structures, or internal program data.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "119"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "This weakness can be detected using dynamic tools and techniques that interact with the software using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The software's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Incorrect URI normalization in application traffic product leads to buffer overflow, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22991",
+            "reference": "CVE-2021-22991"
+        },
+        {
+            "description": "Buffer overflow in Wi-Fi router web interface, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-29557",
+            "reference": "CVE-2020-29557"
+        },
+        {
+            "description": "Classic stack-based buffer overflow in media player using a long entry in a playlist",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2550",
+            "reference": "CVE-2009-2550"
+        },
+        {
+            "description": "Heap-based buffer overflow in media player using a long entry in a playlist",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2403",
+            "reference": "CVE-2009-2403"
+        },
+        {
+            "description": "large precision value in a format string triggers overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0689",
+            "reference": "CVE-2009-0689"
+        },
+        {
+            "description": "negative offset value leads to out-of-bounds read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0690",
+            "reference": "CVE-2009-0690"
+        },
+        {
+            "description": "malformed inputs cause accesses of uninitialized or previously-deleted objects, leading to memory corruption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1532",
+            "reference": "CVE-2009-1532"
+        },
+        {
+            "description": "chain: lack of synchronization leads to memory corruption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1528",
+            "reference": "CVE-2009-1528"
+        },
+        {
+            "description": "Chain: machine-learning product can have a heap-based\n\t      buffer overflow (CWE-122) when some integer-oriented bounds are\n\t      calculated by using ceiling() and floor() on floating point values\n\t      (CWE-1339)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-29529",
+            "reference": "CVE-2021-29529"
+        },
+        {
+            "description": "attacker-controlled array index leads to code execution",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0558",
+            "reference": "CVE-2009-0558"
+        },
+        {
+            "description": "chain: -1 value from a function call was intended to indicate an error, but is used as an array index instead.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0269",
+            "reference": "CVE-2009-0269"
+        },
+        {
+            "description": "chain: incorrect calculations lead to incorrect pointer dereference and memory corruption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0566",
+            "reference": "CVE-2009-0566"
+        },
+        {
+            "description": "product accepts crafted messages that lead to a dereference of an arbitrary pointer",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1350",
+            "reference": "CVE-2009-1350"
+        },
+        {
+            "description": "chain: malformed input causes dereference of uninitialized memory",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0191",
+            "reference": "CVE-2009-0191"
+        },
+        {
+            "description": "OS kernel trusts userland-supplied length value, allowing reading of sensitive information",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4113",
+            "reference": "CVE-2008-4113"
+        },
+        {
+            "description": "Chain: integer overflow in securely-coded mail program leads to buffer overflow. In 2005, this was regarded as unrealistic to exploit, but in 2020, it was rediscovered to be easier to exploit due to evolutions of the technology.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1513",
+            "reference": "CVE-2005-1513"
+        },
+        {
+            "description": "buffer overflow involving a regular expression with a large number of captures",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0542",
+            "reference": "CVE-2003-0542"
+        },
+        {
+            "description": "chain: unchecked message size metadata allows integer overflow (CWE-190) leading to buffer overflow (CWE-119).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-1000121",
+            "reference": "CVE-2017-1000121"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": " \n\t\t",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": " \n\t\t ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Operation"
+        },
+        {
+            "description": "Replace unbounded copy functions with analogous functions that support length arguments, such as strcpy with strncpy. Create these if they are not available.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1029"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-56"
+        },
+        {
+            "external_reference_id": "REF-57"
+        },
+        {
+            "external_reference_id": "REF-58"
+        },
+        {
+            "external_reference_id": "REF-59"
+        },
+        {
+            "external_reference_id": "REF-60"
+        },
+        {
+            "external_reference_id": "REF-61"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-64"
+        },
+        {
+            "external_reference_id": "REF-1332"
+        },
+        {
+            "external_reference_id": "REF-1333"
+        },
+        {
+            "external_reference_id": "REF-1334"
+        },
+        {
+            "external_reference_id": "REF-1335"
+        },
+        {
+            "external_reference_id": "REF-1336"
+        },
+        {
+            "external_reference_id": "REF-1337"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "118",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

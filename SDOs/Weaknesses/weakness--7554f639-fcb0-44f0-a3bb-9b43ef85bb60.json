@@ -1,0 +1,94 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7554f639-fcb0-44f0-a3bb-9b43ef85bb60",
+    "created": "2024-08-13T14:46:48.912797Z",
+    "modified": "2024-08-13T14:46:48.912797Z",
+    "name": "Missing Report of Error Condition",
+    "description": "The product encounters an error but does not provide a status code or return value to indicate that an error has occurred.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "392"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: JavaScript-based cryptocurrency library can fall back to the insecure Math.random() function instead of reporting a failure (CWE-392), thus reducing the entropy (CWE-332) and leading to generation of non-unique cryptographic keys for Bitcoin wallets (CWE-1391)",
+            "link": "https://www.unciphered.com/blog/randstorm-you-cant-patch-a-house-of-cards",
+            "reference": "[REF-1374]"
+        },
+        {
+            "description": "Function returns \"OK\" even if another function returns a different status code than expected, leading to accepting an invalid PIN number.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0063",
+            "reference": "CVE-2004-0063"
+        },
+        {
+            "description": "Error checking routine in PKCS#11 library returns \"OK\" status even when invalid signature is detected, allowing spoofed messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1446",
+            "reference": "CVE-2002-1446"
+        },
+        {
+            "description": "Kernel function truncates long pathnames without generating an error, leading to operation on wrong directory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0499",
+            "reference": "CVE-2002-0499"
+        },
+        {
+            "description": "Function returns non-error value when a particular erroneous condition is encountered, leading to resultant NULL dereference.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2459",
+            "reference": "CVE-2005-2459"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1374"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "755",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "684",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        }
+    ]
+}

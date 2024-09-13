@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--31bfbd42-cbf9-41ba-8da9-7506294e3564",
+    "created": "2024-08-13T14:46:48.891578Z",
+    "modified": "2024-08-13T14:46:48.891578Z",
+    "name": "Cleartext Storage in a File or on Disk",
+    "description": "The product stores sensitive information in cleartext in a file, or on disk.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "313"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cleartext credentials in world-readable file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1481",
+            "reference": "CVE-2001-1481"
+        },
+        {
+            "description": "Password in cleartext in config file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1828",
+            "reference": "CVE-2005-1828"
+        },
+        {
+            "description": "Password in cleartext in config file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2209",
+            "reference": "CVE-2005-2209"
+        },
+        {
+            "description": "Decrypted copy of a message written to disk given a combination of options and when user replies to an encrypted message.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1696",
+            "reference": "CVE-2002-1696"
+        },
+        {
+            "description": "Cleartext storage of private key and passphrase in log file when user imports the key.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2397",
+            "reference": "CVE-2004-2397"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "312",
+            "nature": "ChildOf"
+        }
+    ]
+}

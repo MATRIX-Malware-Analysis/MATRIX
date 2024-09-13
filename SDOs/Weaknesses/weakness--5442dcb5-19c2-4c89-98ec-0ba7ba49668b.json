@@ -1,0 +1,147 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5442dcb5-19c2-4c89-98ec-0ba7ba49668b",
+    "created": "2024-08-13T14:46:48.793671Z",
+    "modified": "2024-08-13T14:46:48.793671Z",
+    "name": "Improper Handling of Faults that Lead to Instruction Skips",
+    "description": "The device is missing or incorrectly implements circuitry or sensors that detect and mitigate the skipping of security-critical CPU instructions when they occur.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1332"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Authentication"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-10-14",
+            "submission_name": "Jasper van Woudenberg",
+            "submission_organization": "Riscure"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This weakness can be found using automated static analysis once a developer has indicated which code paths are critical to protect.",
+            "effectiveness": "Moderate",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "This weakness can be found using automated dynamic analysis. Both emulation of a CPU with instruction skips, as well as RTL simulation of a CPU IP, can indicate parts of the code that are sensitive to faults due to instruction skips.",
+            "effectiveness": "Moderate",
+            "method": "Simulation / Emulation"
+        },
+        {
+            "description": "This weakness can be found using manual (static) analysis. The analyst has security objectives that are matched against the high-level code. This method is less precise than emulation, especially if the analysis is done at the higher level language rather than at assembly level.",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "fault injection attack bypasses the verification mode, potentially allowing arbitrary code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-15894",
+            "reference": "CVE-2019-15894"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Design strategies for ensuring safe failure if\n                        inputs, such as Vcc, are modified out of acceptable\n                        ranges.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Design strategies for ensuring safe behavior if\n                        instructions attempt to be skipped.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Identify mission critical secrets that should\n                          be wiped if faulting is detected, and design a\n                          mechanism to do the deletion.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Add redundancy by performing an operation\n                          multiple times, either in space or time, and perform\n                          majority voting. Additionally, make conditional\n                          instruction timing unpredictable.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use redundant operations or canaries to\n                          detect and respond to faults.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that fault mitigations are strong enough\n                        in practice. For example, a low power detection\n                        mechanism that takes 50 clock cycles to trigger at lower\n                        voltages may be an insufficient security mechanism if\n                        the instruction counter has already progressed with no\n                        other CPU activity occurring.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1161"
+        },
+        {
+            "external_reference_id": "REF-1222"
+        },
+        {
+            "external_reference_id": "REF-1223"
+        },
+        {
+            "external_reference_id": "REF-1224"
+        },
+        {
+            "external_reference_id": "REF-1286"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1384",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1247",
+            "nature": "PeerOf"
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f6199dc6-1906-4047-b832-4ef3641605a9",
+    "created": "2024-08-13T14:46:49.018801Z",
+    "modified": "2024-08-13T14:46:49.018801Z",
+    "name": "Improper Neutralization of Encoded URI Schemes in a Web Page",
+    "description": "The web application improperly neutralizes user-controlled input for executable script disguised with URI encodings.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "84"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cross-site scripting (XSS) vulnerability in Microsoft Outlook Web Access (OWA) component in Exchange Server 5.5 allows remote attackers to inject arbitrary web script or HTML via an email message with an encoded javascript: URL (\"jav&#X41sc&#0010;ript:\") in an IMG tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0563",
+            "reference": "CVE-2005-0563"
+        },
+        {
+            "description": "Cross-site scripting (XSS) vulnerability in Novell Groupwise WebAccess 6.5 before July 11, 2005 allows remote attackers to inject arbitrary web script or HTML via an e-mail message with an encoded javascript URI (e.g. \"j&#X41vascript\" in an IMG tag).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2276",
+            "reference": "CVE-2005-2276"
+        },
+        {
+            "description": "Encoded script within BBcode IMG tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0692",
+            "reference": "CVE-2005-0692"
+        },
+        {
+            "description": "Encoded \"javascript\" in IMG tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0117",
+            "reference": "CVE-2002-0117"
+        },
+        {
+            "description": "Encoded \"javascript\" in IMG tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0118",
+            "reference": "CVE-2002-0118"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Resolve all URIs to absolute or canonical representations before processing.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Carefully check each input parameter against a rigorous positive specification (allowlist) defining the specific characters and format allowed. All input should be neutralized, not just parameters that the user is supposed to specify, but all data in the request, including tag attributes, hidden fields, cookies, headers, the URL itself, and so forth. A common mistake that leads to continuing XSS vulnerabilities is to validate only fields that are expected to be redisplayed by the site. We often encounter data from the request that is reflected by the application server or the application that the development team did not anticipate. Also, a field that is not currently reflected may be used by a future developer. Therefore, validating ALL parts of the HTTP request is recommended.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "With Struts, write all data from form beans with the bean's filter attribute set to true.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "To help mitigate XSS attacks against the user's session cookie, set the session cookie to be HttpOnly. In browsers that support the HttpOnly feature (such as more recent versions of Internet Explorer and Firefox), this attribute can prevent the user's session cookie from being accessible to malicious client-side scripts that use document.cookie. This is not a complete solution, since HttpOnly is not supported by all browsers. More importantly, XMLHTTPRequest and other powerful browser technologies provide read access to HTTP headers, including the Set-Cookie header in which the HttpOnly flag is set.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "79",
+            "nature": "ChildOf"
+        }
+    ]
+}

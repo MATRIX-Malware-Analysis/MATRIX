@@ -1,0 +1,67 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--95a7e7da-787a-449d-8969-0e761acc9983",
+    "created": "2024-08-13T14:46:48.763333Z",
+    "modified": "2024-08-13T14:46:48.763333Z",
+    "name": "Improper Prevention of Lock Bit Modification",
+    "description": "The product uses a trusted lock bit for restricting access to registers, address regions, or other resources, but the product does not prevent the value of the lock bit from being modified after it has been set.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1231"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-01-15",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Set the lock bit. Power cycle the\n\t     device. Attempt to clear the lock bit.  If the\n\t     information is changed, implement a design\n\t     fix. Retest. Also, attempt to indirectly clear the lock\n\t     bit or bypass it.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "chip reset clears critical read/write lock permissions for RSA function",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-6283",
+            "reference": "CVE-2017-6283"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1350"
+        },
+        {
+            "external_reference_id": "REF-1351"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

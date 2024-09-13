@@ -1,0 +1,207 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5f0f74e9-ac21-448b-a260-e539ad6f2c7a",
+    "created": "2024-08-13T14:46:48.92787Z",
+    "modified": "2024-08-13T14:46:48.92787Z",
+    "name": "User Interface (UI) Misrepresentation of Critical Information",
+    "description": "The user interface (UI) does not properly represent critical information to the user, allowing the information - or its source - to be obscured or spoofed. This is often a component in phishing attacks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "451"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Web browser's filename selection dialog only shows the beginning portion of long filenames, which can trick users into launching executables with dangerous extensions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2227",
+            "reference": "CVE-2004-2227"
+        },
+        {
+            "description": "Attachment with many spaces in filename bypasses \"dangerous content\" warning and uses different icon. Likely resultant.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0398",
+            "reference": "CVE-2001-0398"
+        },
+        {
+            "description": "Misrepresentation and equivalence issue.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0643",
+            "reference": "CVE-2001-0643"
+        },
+        {
+            "description": "Lock spoofing from several different weaknesses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0593",
+            "reference": "CVE-2005-0593"
+        },
+        {
+            "description": "Incorrect indicator: web browser can be tricked into presenting the wrong URL",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1104",
+            "reference": "CVE-2004-1104"
+        },
+        {
+            "description": "Incorrect indicator: Lock icon displayed when an insecure page loads a binary file loaded from a trusted site.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0143",
+            "reference": "CVE-2005-0143"
+        },
+        {
+            "description": "Incorrect indicator: Secure \"lock\" icon is presented for one channel, while an insecure page is being simultaneously loaded in another channel.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0144",
+            "reference": "CVE-2005-0144"
+        },
+        {
+            "description": "Incorrect indicator: Certain redirect sequences cause security lock icon to appear in web browser, even when page is not encrypted.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0761",
+            "reference": "CVE-2004-0761"
+        },
+        {
+            "description": "Incorrect indicator: Spoofing via multi-step attack that causes incorrect information to be displayed in browser address bar.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2219",
+            "reference": "CVE-2004-2219"
+        },
+        {
+            "description": "Overlay: Wide \"favorites\" icon can overlay and obscure address bar",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0537",
+            "reference": "CVE-2004-0537"
+        },
+        {
+            "description": "Visual distinction: Web browsers do not clearly associate a Javascript dialog box with the web page that generated it, allowing spoof of the source of the dialog. \"origin validation error\" of a sort?",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2271",
+            "reference": "CVE-2005-2271"
+        },
+        {
+            "description": "Visual distinction: Web browsers do not clearly associate a Javascript dialog box with the web page that generated it, allowing spoof of the source of the dialog. \"origin validation error\" of a sort?",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2272",
+            "reference": "CVE-2005-2272"
+        },
+        {
+            "description": "Visual distinction: Web browsers do not clearly associate a Javascript dialog box with the web page that generated it, allowing spoof of the source of the dialog. \"origin validation error\" of a sort?",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2273",
+            "reference": "CVE-2005-2273"
+        },
+        {
+            "description": "Visual distinction: Web browsers do not clearly associate a Javascript dialog box with the web page that generated it, allowing spoof of the source of the dialog. \"origin validation error\" of a sort?",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2274",
+            "reference": "CVE-2005-2274"
+        },
+        {
+            "description": "Visual distinction: Browser allows attackers to create chromeless windows and spoof victim's display using unprotected Javascript method.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1410",
+            "reference": "CVE-2001-1410"
+        },
+        {
+            "description": "Visual distinction: Chat client allows remote attackers to spoof encrypted, trusted messages with lines that begin with a special sequence, which makes the message appear legitimate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0197",
+            "reference": "CVE-2002-0197"
+        },
+        {
+            "description": "Visual distinction: Product allows spoofing names of other users by registering with a username containing hex-encoded characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0831",
+            "reference": "CVE-2005-0831"
+        },
+        {
+            "description": "Visual truncation: Special character in URL causes web browser to truncate the user portion of the \"user@domain\" URL, hiding real domain in the address bar.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1025",
+            "reference": "CVE-2003-1025"
+        },
+        {
+            "description": "Visual truncation: Chat client does not display long filenames in file dialog boxes, allowing dangerous extensions via manipulations including (1) many spaces and (2) multiple file extensions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0243",
+            "reference": "CVE-2005-0243"
+        },
+        {
+            "description": "Visual truncation: Web browser file download type can be hidden using whitespace.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1575",
+            "reference": "CVE-2005-1575"
+        },
+        {
+            "description": "Visual truncation: Visual truncation in chat client using whitespace to hide dangerous file extension.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2530",
+            "reference": "CVE-2004-2530"
+        },
+        {
+            "description": "Visual truncation: Dialog box in web browser allows user to spoof the hostname via a long \"user:pass\" sequence in the URL, which appears before the real hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0590",
+            "reference": "CVE-2005-0590"
+        },
+        {
+            "description": "Visual truncation: Null character in URL prevents entire URL from being displayed in web browser.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1451",
+            "reference": "CVE-2004-1451"
+        },
+        {
+            "description": "Miscellaneous -- [step-based attack, GUI] -- Password-protected tab can be bypassed by switching to another tab, then back to original tab.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2258",
+            "reference": "CVE-2004-2258"
+        },
+        {
+            "description": "Miscellaneous -- Dangerous file extensions not displayed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1678",
+            "reference": "CVE-2005-1678"
+        },
+        {
+            "description": "Miscellaneous -- Web browser allows remote attackers to misrepresent the source of a file in the File Download dialog box.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0722",
+            "reference": "CVE-2002-0722"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform data validation (e.g. syntax, length, etc.) before interpreting the data.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Create a strategy for presenting information, and plan for how to display unusual characters.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-434"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "684",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "221",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "346",
+            "nature": "PeerOf"
+        }
+    ]
+}

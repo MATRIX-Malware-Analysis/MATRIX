@@ -1,0 +1,180 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6b791858-1578-4c87-a3b8-1163bc42f32e",
+    "created": "2024-08-13T14:46:48.772207Z",
+    "modified": "2024-08-13T14:46:48.772207Z",
+    "name": "Improper Access Control for Register Interface",
+    "description": "The product uses memory-mapped I/O registers that act as an interface to hardware functionality from software, but there is improper access control to those registers.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1262"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-08",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This is applicable in the Architecture phase before implementation started. Make sure access policy is specified for the entire memory map. Manual analysis may not ensure the implementation is correct.",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "Registers controlling hardware should have access control implemented. This access control may be checked manually for correct implementation. Items to check consist of how are trusted parties set, how are trusted parties verified, how are accesses verified, etc. Effectiveness of a manual analysis will vary depending upon how complicated the interface is constructed.",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "Functional simulation is applicable during the Implementation Phase. Testcases must be created and executed for memory mapped registers to verify adherence to the access control policy. This method can be effective, since functional verification needs to be performed on the design, and verification for this weakness will be included. There can be difficulty covering the entire memory space during the test.",
+            "effectiveness": "Moderate",
+            "method": "Simulation / Emulation"
+        },
+        {
+            "description": "Formal verification is applicable during the Implementation phase. Assertions need to be created in order to capture illegal register access scenarios and prove that they cannot occur. Formal methods are exhaustive and can be very effective, but creating the cases for large designs may be complex and difficult.",
+            "effectiveness": "High",
+            "method": "Formal Verification"
+        },
+        {
+            "description": "Information flow tracking can be applicable during the Implementation phase. Security sensitive data (assets) - for example, as stored in registers - is automatically tracked over time through the design to verify the data doesn't reach illegal destinations that violate the access policies for the memory map. This method can be very effective when used together with simulation and emulation, since detecting violations doesn't rely on specific scenarios or data values. This method does rely on simulation and emulation, so testcases must exist in order to use this method.",
+            "effectiveness": "High",
+            "method": "Automated Analysis"
+        },
+        {
+            "description": "Manual documentation review of the system memory map, register specification, and permissions associated with accessing security-relevant functionality exposed via memory-mapped registers.",
+            "effectiveness": "Moderate",
+            "method": "Architecture or Design Review"
+        },
+        {
+            "description": "Perform penetration testing (either manual or semi-automated with fuzzing) to verify that access control mechanisms such as the memory protection units or on-chip bus firewall settings adequately protect critical hardware registers from software access.",
+            "effectiveness": "Moderate",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "virtualization product does not restrict access to debug and other processor registers in the hardware, allowing a crash of the host or guest OS",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-2915",
+            "reference": "CVE-2014-2915"
+        },
+        {
+            "description": "virtual interrupt controller in a virtualization product allows crash of host by writing a certain invalid value to a register, which triggers a fatal error instead of returning an error code",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3011",
+            "reference": "CVE-2021-3011"
+        },
+        {
+            "description": "Driver exposes access to Model Specific Register (MSR) registers, allowing admin privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-12446",
+            "reference": "CVE-2020-12446"
+        },
+        {
+            "description": "Virtualization product does not restrict access to PCI command registers, allowing host crash from the guest.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-2150",
+            "reference": "CVE-2015-2150"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Design proper policies for hardware register access from software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that access control policies for register access are implemented in accordance with the specified design.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1340"
+        },
+        {
+            "external_reference_id": "REF-1341"
+        },
+        {
+            "external_reference_id": "REF-1345"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

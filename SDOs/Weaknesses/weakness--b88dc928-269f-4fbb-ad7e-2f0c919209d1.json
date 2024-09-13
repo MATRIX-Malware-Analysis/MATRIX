@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b88dc928-269f-4fbb-ad7e-2f0c919209d1",
+    "created": "2024-08-13T14:46:48.904405Z",
+    "modified": "2024-08-13T14:46:48.904405Z",
+    "name": "Insufficient UI Warning of Dangerous Operations",
+    "description": "The user interface provides a warning to a user regarding dangerous or sensitive operations, but the warning is not noticeable enough to warrant attention.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "357"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "User not sufficiently warned if host key mismatch occurs",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1099",
+            "reference": "CVE-2007-1099"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

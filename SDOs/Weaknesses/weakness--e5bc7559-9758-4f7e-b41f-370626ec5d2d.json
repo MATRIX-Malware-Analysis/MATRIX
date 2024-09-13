@@ -1,0 +1,59 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e5bc7559-9758-4f7e-b41f-370626ec5d2d",
+    "created": "2024-08-13T14:46:48.729706Z",
+    "modified": "2024-08-13T14:46:48.729706Z",
+    "name": "Automated Recognition Mechanism with Inadequate Detection or Handling of Adversarial Input Perturbations",
+    "description": "The product uses an automated mechanism such as machine learning to recognize complex data inputs (e.g. image or audio) as a particular concept or category, but it does not properly detect or handle inputs that have been modified or constructed in a way that causes the mechanism to detect a different, incorrect concept.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1039"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-03-12",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-16"
+        },
+        {
+            "external_reference_id": "REF-17"
+        },
+        {
+            "external_reference_id": "REF-15"
+        },
+        {
+            "external_reference_id": "REF-13"
+        },
+        {
+            "external_reference_id": "REF-14"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "697",
+            "nature": "ChildOf"
+        }
+    ]
+}

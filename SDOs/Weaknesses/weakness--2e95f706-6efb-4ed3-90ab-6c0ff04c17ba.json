@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2e95f706-6efb-4ed3-90ab-6c0ff04c17ba",
+    "created": "2024-08-13T14:46:48.956906Z",
+    "modified": "2024-08-13T14:46:48.956906Z",
+    "name": "SQL Injection: Hibernate",
+    "description": "Using Hibernate to execute a dynamic SQL statement built with user-controlled input can allow an attacker to modify the statement's meaning or to execute arbitrary SQL commands.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "564"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "A non-SQL style database which is not subject to this flaw may be chosen.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Follow the principle of least privilege when creating user accounts to a SQL database. Users should only have the minimum privileges necessary to use their account. If the requirements of the system indicate that a user can read and modify their own data, then limit their privileges so they cannot read/write others' data.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Implement SQL strings using prepared statements that bind variables. Prepared statements that do not bind variables can be vulnerable to attack.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use vigorous allowlist style checking on any user input that may be used in a SQL command. Rather than escape meta-characters, it is safest to disallow them entirely. Reason: Later use of data that have been entered in the database may neglect to escape meta-characters before use. Narrowly define the set of safe characters based on the expected value of the parameter in the request.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "89",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "89",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "89",
+            "nature": "ChildOf"
+        }
+    ]
+}

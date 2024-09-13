@@ -1,0 +1,322 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a7e92caa-60b1-48b8-b57c-17f8d1ba59bb",
+    "created": "2024-08-13T14:46:48.883384Z",
+    "modified": "2024-08-13T14:46:48.883384Z",
+    "name": "Improper Authentication",
+    "description": "When an actor claims to have a given identity, the product does not prove or insufficiently proves that the claim is correct.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "287"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chat application skips validation when Central Authentication Service\n\t\t\t (CAS) is enabled, effectively removing the second factor from\n\t\t\t two-factor authentication",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-35248",
+            "reference": "CVE-2022-35248"
+        },
+        {
+            "description": "Python-based authentication proxy does not enforce password authentication during the initial handshake, allowing the client to bypass authentication by specifying a 'None' authentication type.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-36436",
+            "reference": "CVE-2022-36436"
+        },
+        {
+            "description": "Chain: Web UI for a Python RPC framework does not use regex anchors to validate user login emails (CWE-777), potentially allowing bypass of OAuth (CWE-1390).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30034",
+            "reference": "CVE-2022-30034"
+        },
+        {
+            "description": "TCP-based protocol in Programmable Logic Controller (PLC) has no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29951",
+            "reference": "CVE-2022-29951"
+        },
+        {
+            "description": "Condition Monitor uses a protocol that does not require authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29952",
+            "reference": "CVE-2022-29952"
+        },
+        {
+            "description": "Safety Instrumented System uses proprietary TCP protocols with no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30313",
+            "reference": "CVE-2022-30313"
+        },
+        {
+            "description": "Distributed Control System (DCS) uses a protocol that has no authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30317",
+            "reference": "CVE-2022-30317"
+        },
+        {
+            "description": "SCADA system only uses client-side authentication, allowing adversaries to impersonate other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-33139",
+            "reference": "CVE-2022-33139"
+        },
+        {
+            "description": "Chain: Python-based HTTP Proxy server uses the wrong boolean operators (CWE-480) causing an  incorrect comparison (CWE-697) that identifies an authN failure if all three conditions are met instead of only one, allowing bypass of the proxy authentication (CWE-1390)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3116",
+            "reference": "CVE-2021-3116"
+        },
+        {
+            "description": "Chain: Cloud computing virtualization platform does not require authentication for upload of a tar format file (CWE-306), then uses .. path traversal sequences (CWE-23) in the file to access unexpected files, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21972",
+            "reference": "CVE-2021-21972"
+        },
+        {
+            "description": "IT management product does not perform authentication for some REST API requests, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-37415",
+            "reference": "CVE-2021-37415"
+        },
+        {
+            "description": "Firmware for a WiFi router uses a hard-coded password for a BusyBox shell, allowing bypass of authentication through the UART port",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-35033",
+            "reference": "CVE-2021-35033"
+        },
+        {
+            "description": "Bluetooth speaker does not require authentication for the debug functionality on the UART port, allowing root shell access",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-10263",
+            "reference": "CVE-2020-10263"
+        },
+        {
+            "description": "Default setting in workflow management product allows all API requests without authentication, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-13927",
+            "reference": "CVE-2020-13927"
+        },
+        {
+            "description": "Stack-based buffer overflows in SFK for wifi chipset used for IoT/embedded devices, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-35395",
+            "reference": "CVE-2021-35395"
+        },
+        {
+            "description": "Mail server does not properly check an access token before executing a Powershell command, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-34523",
+            "reference": "CVE-2021-34523"
+        },
+        {
+            "description": "Chain: user is not prompted for a second authentication factor (CWE-287) when changing the case of their username (CWE-178), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-12812",
+            "reference": "CVE-2020-12812"
+        },
+        {
+            "description": "Authentication bypass by appending specific parameters and values to a URI, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-10148",
+            "reference": "CVE-2020-10148"
+        },
+        {
+            "description": "Mail server does not generate a unique key during installation, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0688",
+            "reference": "CVE-2020-0688"
+        },
+        {
+            "description": "LDAP Go package allows authentication bypass using an empty password, causing an unauthenticated LDAP bind",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-14623",
+            "reference": "CVE-2017-14623"
+        },
+        {
+            "description": "login script for guestbook allows bypassing authentication by setting a \"login_ok\" parameter to 1.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3421",
+            "reference": "CVE-2009-3421"
+        },
+        {
+            "description": "admin script allows authentication bypass by setting a cookie value to \"LOGGEDIN\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2382",
+            "reference": "CVE-2009-2382"
+        },
+        {
+            "description": "VOIP product allows authentication bypass using 127.0.0.1 in the Host header.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1048",
+            "reference": "CVE-2009-1048"
+        },
+        {
+            "description": "product uses default \"Allow\" action, instead of default deny, leading to authentication bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2213",
+            "reference": "CVE-2009-2213"
+        },
+        {
+            "description": "chain: redirect without exit (CWE-698) leads to resultant authentication bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2168",
+            "reference": "CVE-2009-2168"
+        },
+        {
+            "description": "product does not restrict access to a listening port for a critical service, allowing authentication to be bypassed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3107",
+            "reference": "CVE-2009-3107"
+        },
+        {
+            "description": "product does not properly implement a security-related configuration setting, allowing authentication bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1596",
+            "reference": "CVE-2009-1596"
+        },
+        {
+            "description": "authentication routine returns \"nil\" instead of \"false\" in some situations, allowing authentication bypass using an invalid username.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2422",
+            "reference": "CVE-2009-2422"
+        },
+        {
+            "description": "authentication update script does not properly handle when admin does not select any authentication modules, allowing authentication bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3232",
+            "reference": "CVE-2009-3232"
+        },
+        {
+            "description": "use of LDAP authentication with anonymous binds causes empty password to result in successful authentication",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3231",
+            "reference": "CVE-2009-3231"
+        },
+        {
+            "description": "product authentication succeeds if user-provided MD5 hash matches the hash in its database; this can be subjected to replay attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3435",
+            "reference": "CVE-2005-3435"
+        },
+        {
+            "description": "chain: product generates predictable MD5 hashes using a constant value combined with username, allowing authentication bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0408",
+            "reference": "CVE-2005-0408"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use an authentication framework or library such as the OWASP ESAPI Authentication feature.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-236"
+        },
+        {
+            "external_reference_id": "REF-237"
+        },
+        {
+            "external_reference_id": "REF-238"
+        },
+        {
+            "external_reference_id": "REF-239"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

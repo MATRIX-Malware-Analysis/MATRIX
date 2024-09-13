@@ -1,0 +1,91 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--890c8ed9-238b-4762-bce3-9a7c877d4e4c",
+    "created": "2024-08-13T14:46:48.810474Z",
+    "modified": "2024-08-13T14:46:48.810474Z",
+    "name": "Improper Handling of Inconsistent Special Elements",
+    "description": "The product does not properly handle input in which an inconsistency exists between two or more special characters or reserved words.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "168"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Developers should anticipate that inconsistent special elements will be injected/manipulated in the input vectors of their product. Use an appropriate combination of denylists and allowlists to ensure only valid, expected and appropriate input is processed by the system.",
+            "effectiveness": null,
+            "phase": null
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "159",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "228",
+            "nature": "ChildOf"
+        }
+    ]
+}

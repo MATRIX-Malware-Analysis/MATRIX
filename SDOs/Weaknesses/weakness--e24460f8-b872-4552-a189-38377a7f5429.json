@@ -1,0 +1,147 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e24460f8-b872-4552-a189-38377a7f5429",
+    "created": "2024-08-13T14:46:48.786617Z",
+    "modified": "2024-08-13T14:46:48.786617Z",
+    "name": "Improperly Preserved Integrity of Hardware Configuration State During a Power Save/Restore Operation",
+    "description": "The product performs a power save/restore\n            operation, but it does not ensure that the integrity of\n            the configuration state is maintained and/or verified between\n\t    the beginning and ending of the operation.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1304"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Instability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-07-16",
+            "submission_name": null,
+            "submission_organization": "Accellera Systems Initiative"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Inside the IP, incorporate integrity checking\n                        on the configuration state via a cryptographic\n                        hash. The hash can be protected inside the IP such as\n                        by storing it in internal registers which never lose\n                        power. Before powering down, the IP performs a hash of\n                        the configuration and saves it in these persistent\n                        registers. Upon restore, the IP performs a hash of the\n                        saved configuration and compares it with the\n                        saved hash. If they do not match, then the IP should\n                        not trust the configuration.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Outside the IP, incorporate integrity checking\n                        of the configuration state via a trusted agent. Before\n                        powering down, the trusted agent performs a hash of the\n                        configuration and saves the hash in persistent storage.\n                        Upon restore, the IP requests the trusted agent\n                        validate its current configuration. If the\n                        configuration hash is invalid, then the IP should not\n                        trust the configuration.\n                    ",
+            "effectiveness": null,
+            "phase": "Integration"
+        },
+        {
+            "description": "Outside the IP, incorporate a protected\n                        environment that prevents undetected modification of\n                        the configuration state by untrusted agents. Before\n                        powering down, a trusted agent saves the IP's\n                        configuration state in this protected location that\n                        only it is privileged to. Upon restore, the trusted\n                        agent loads the saved state into the IP.\n                    ",
+            "effectiveness": null,
+            "phase": "Integration"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "1271",
+            "nature": "PeerOf"
+        }
+    ]
+}

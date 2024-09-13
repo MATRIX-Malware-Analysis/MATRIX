@@ -1,0 +1,51 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6b858f57-68fb-41d7-96a9-69b63a84c449",
+    "created": "2024-08-13T14:46:48.98258Z",
+    "modified": "2024-08-13T14:46:48.98258Z",
+    "name": "Improper Control of a Resource Through its Lifetime",
+    "description": "The product does not maintain or incorrectly maintains control over a resource throughout its lifetime of creation, use, and release.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "664"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cryptography API uses unsafe reflection when deserializing a private key",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-1000613",
+            "reference": "CVE-2018-1000613"
+        },
+        {
+            "description": "Chain: Python library does not limit the resources used to process images that specify a very large number of bands (CWE-1284), leading to excessive memory consumption (CWE-789) or an integer overflow (CWE-190).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-21668",
+            "reference": "CVE-2022-21668"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use Static analysis tools to check for unreleased resources.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ]
+}

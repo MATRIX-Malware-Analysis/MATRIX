@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a2994c96-3b47-44b3-a64e-2e3737989259",
+    "created": "2024-08-13T14:46:48.878307Z",
+    "modified": "2024-08-13T14:46:48.878307Z",
+    "name": "Privilege Context Switching Error",
+    "description": "The product does not properly manage privileges while it is switching between different contexts that have different privileges or spheres of control.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "270"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Web browser cross domain problem when user hits \"back\" button.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1688",
+            "reference": "CVE-2002-1688"
+        },
+        {
+            "description": "Web browser cross domain problem when user hits \"back\" button.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1026",
+            "reference": "CVE-2003-1026"
+        },
+        {
+            "description": "Cross-domain issue - third party product passes code to web browser, which executes it in unsafe zone.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1770",
+            "reference": "CVE-2002-1770"
+        },
+        {
+            "description": "Run callback in different security context after it has been changed from untrusted to trusted. * note that \"context switch before actions are completed\" is one type of problem that happens frequently, espec. in browsers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2263",
+            "reference": "CVE-2005-2263"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider following the principle of separation of privilege. Require multiple conditions to be met before permitting access to a system resource.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-76"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "269",
+            "nature": "ChildOf"
+        }
+    ]
+}

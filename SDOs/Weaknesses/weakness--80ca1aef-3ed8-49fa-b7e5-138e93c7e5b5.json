@@ -1,0 +1,136 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--80ca1aef-3ed8-49fa-b7e5-138e93c7e5b5",
+    "created": "2024-08-13T14:46:48.986127Z",
+    "modified": "2024-08-13T14:46:48.986127Z",
+    "name": "Use of Potentially Dangerous Function",
+    "description": "The product invokes a potentially dangerous function that could introduce a vulnerability if it is used incorrectly, but the function can also be used safely.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "676"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Library has multiple buffer overflows using sprintf() and strcpy()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1470",
+            "reference": "CVE-2007-1470"
+        },
+        {
+            "description": "Buffer overflow using strcat()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3849",
+            "reference": "CVE-2009-3849"
+        },
+        {
+            "description": "Buffer overflow using strcpy()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2114",
+            "reference": "CVE-2006-2114"
+        },
+        {
+            "description": "Buffer overflow using strcpy()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-0963",
+            "reference": "CVE-2006-0963"
+        },
+        {
+            "description": "Vulnerable use of strcpy() changed to use safer strlcpy()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0712",
+            "reference": "CVE-2011-0712"
+        },
+        {
+            "description": "Buffer overflow using strcpy()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5005",
+            "reference": "CVE-2008-5005"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Identify a list of prohibited API functions and prohibit developers from using these functions, providing safer alternatives. In some cases, automatic code analysis tools or the compiler can be instructed to spot use of prohibited functions, such as the \"banned.h\" include file from Microsoft's SDL. [REF-554] [REF-7]",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-554"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1177",
+            "nature": "ChildOf"
+        }
+    ]
+}

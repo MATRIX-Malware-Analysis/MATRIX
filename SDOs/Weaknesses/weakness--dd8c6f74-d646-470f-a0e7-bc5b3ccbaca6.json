@@ -1,0 +1,242 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--dd8c6f74-d646-470f-a0e7-bc5b3ccbaca6",
+    "created": "2024-08-13T14:46:48.890857Z",
+    "modified": "2024-08-13T14:46:48.890857Z",
+    "name": "Missing Encryption of Sensitive Data",
+    "description": "The product does not encrypt sensitive or critical information before storage or transmission.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "311"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "The characterizaton of sensitive data often requires domain-specific understanding, so manual methods are useful. However, manual efforts might not achieve desired code coverage within limited time constraints. Black box methods may produce artifacts (e.g. stored data or unencrypted network transfer) that require manual evaluation.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "Automated measurement of the entropy of an input/output source may indicate the use or lack of encryption, but human analysis is still required to distinguish intentionally-unencrypted data (e.g. metadata) from sensitive data.",
+            "effectiveness": null,
+            "method": "Automated Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "password and username stored in cleartext in a cookie",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2272",
+            "reference": "CVE-2009-2272"
+        },
+        {
+            "description": "password stored in cleartext in a file with insecure permissions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1466",
+            "reference": "CVE-2009-1466"
+        },
+        {
+            "description": "chat program disables SSL in some circumstances even when the user says to use SSL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0152",
+            "reference": "CVE-2009-0152"
+        },
+        {
+            "description": "Chain: product uses an incorrect public exponent when generating an RSA key, which effectively disables the encryption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1603",
+            "reference": "CVE-2009-1603"
+        },
+        {
+            "description": "storage of unencrypted passwords in a database",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0964",
+            "reference": "CVE-2009-0964"
+        },
+        {
+            "description": "storage of unencrypted passwords in a database",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6157",
+            "reference": "CVE-2008-6157"
+        },
+        {
+            "description": "product stores a password in cleartext in memory",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6828",
+            "reference": "CVE-2008-6828"
+        },
+        {
+            "description": "storage of a secret key in cleartext in a temporary file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1567",
+            "reference": "CVE-2008-1567"
+        },
+        {
+            "description": "SCADA product uses HTTP Basic Authentication, which is not encrypted",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0174",
+            "reference": "CVE-2008-0174"
+        },
+        {
+            "description": "login credentials stored unencrypted in a registry key",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5778",
+            "reference": "CVE-2007-5778"
+        },
+        {
+            "description": "Passwords transmitted in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1949",
+            "reference": "CVE-2002-1949"
+        },
+        {
+            "description": "Chain: Use of HTTPS cookie without \"secure\" flag causes it to be transmitted across unencrypted HTTP.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4122",
+            "reference": "CVE-2008-4122"
+        },
+        {
+            "description": "Product sends password hash in cleartext in violation of intended policy.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3289",
+            "reference": "CVE-2008-3289"
+        },
+        {
+            "description": "Remote management feature sends sensitive information including passwords in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4390",
+            "reference": "CVE-2008-4390"
+        },
+        {
+            "description": "Backup routine sends password in cleartext in email.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5626",
+            "reference": "CVE-2007-5626"
+        },
+        {
+            "description": "Product transmits Blowfish encryption key in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1852",
+            "reference": "CVE-2004-1852"
+        },
+        {
+            "description": "Printer sends configuration information, including administrative password, in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0374",
+            "reference": "CVE-2008-0374"
+        },
+        {
+            "description": "Chain: cleartext transmission of the MD5 hash of password enables attacks against a server that is susceptible to replay (CWE-294).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4961",
+            "reference": "CVE-2007-4961"
+        },
+        {
+            "description": "Product sends passwords in cleartext to a log server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4786",
+            "reference": "CVE-2007-4786"
+        },
+        {
+            "description": "Product sends file with cleartext passwords in e-mail message intended for diagnostic purposes.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3140",
+            "reference": "CVE-2005-3140"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Clearly specify which data or resources are valuable enough that they should be protected by encryption. Require that any transmission or storage of this data/resource should use well-vetted encryption algorithms.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using industry-approved techniques, use them correctly. Don't cut corners by skipping resource-intensive steps (CWE-325). These steps are often essential for preventing common attacks.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use naming conventions and strong types to make it easier to spot when sensitive data is being used. When creating structures, objects, or other complex entities, separate the sensitive and non-sensitive data as much as possible.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-265"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-267"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

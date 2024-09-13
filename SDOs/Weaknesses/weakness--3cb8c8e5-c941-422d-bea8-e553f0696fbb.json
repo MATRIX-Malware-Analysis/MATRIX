@@ -1,0 +1,90 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3cb8c8e5-c941-422d-bea8-e553f0696fbb",
+    "created": "2024-08-13T14:46:48.988797Z",
+    "modified": "2024-08-13T14:46:48.988797Z",
+    "name": "Permission Race Condition During Resource Copy",
+    "description": "The product, while copying or cloning a resource, does not set the resource's permissions or access control until the copy is complete, leaving the resource exposed to other spheres while the copy is taking place.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "689"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Archive extractor decompresses files with world-readable permissions, then later sets permissions to what the archive specified.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0760",
+            "reference": "CVE-2002-0760"
+        },
+        {
+            "description": "Product inserts a new object into database before setting the object's permissions, introducing a race condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2174",
+            "reference": "CVE-2005-2174"
+        },
+        {
+            "description": "Error file has weak permissions before a chmod is performed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5214",
+            "reference": "CVE-2006-5214"
+        },
+        {
+            "description": "Archive permissions issue using hard link.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2475",
+            "reference": "CVE-2005-2475"
+        },
+        {
+            "description": "Database product creates files world-writable before initializing the setuid bits, leading to modification of executables.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0265",
+            "reference": "CVE-2003-0265"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "362",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "362",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "732",
+            "nature": "Requires"
+        }
+    ]
+}

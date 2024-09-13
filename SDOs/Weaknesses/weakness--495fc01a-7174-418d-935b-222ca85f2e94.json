@@ -1,0 +1,143 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--495fc01a-7174-418d-935b-222ca85f2e94",
+    "created": "2024-08-13T14:46:48.887198Z",
+    "modified": "2024-08-13T14:46:48.887198Z",
+    "name": "Improper Check for Certificate Revocation",
+    "description": "The product does not check or incorrectly checks the revocation status of a certificate, which may cause it to use a certificate that has been compromised.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "299"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "LDAP-over-SSL implementation does not check Certificate Revocation List (CRL), allowing spoofing using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-2014",
+            "reference": "CVE-2011-2014"
+        },
+        {
+            "description": "Operating system does not check Certificate Revocation List (CRL) in some cases, allowing spoofing using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0199",
+            "reference": "CVE-2011-0199"
+        },
+        {
+            "description": "Antivirus product does not check whether certificates from signed executables have been revoked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-5185",
+            "reference": "CVE-2010-5185"
+        },
+        {
+            "description": "Web browser does not check if any intermediate certificates are revoked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3046",
+            "reference": "CVE-2009-3046"
+        },
+        {
+            "description": "chain: Ruby module for OCSP misinterprets a response, preventing detection of a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0161",
+            "reference": "CVE-2009-0161"
+        },
+        {
+            "description": "chain: incorrect parsing of replies from OCSP responders allows bypass using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-2701",
+            "reference": "CVE-2011-2701"
+        },
+        {
+            "description": "Router can permanently cache certain public keys, which would allow bypass if the certificate is later revoked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0935",
+            "reference": "CVE-2011-0935"
+        },
+        {
+            "description": "chain: OS package manager does not properly check the return value, allowing bypass using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1358",
+            "reference": "CVE-2009-1358"
+        },
+        {
+            "description": "chain: language interpreter does not properly check the return value from an OSCP function, allowing bypass using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0642",
+            "reference": "CVE-2009-0642"
+        },
+        {
+            "description": "chain: web service component does not call the expected method, which prevents a check for revoked certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4679",
+            "reference": "CVE-2008-4679"
+        },
+        {
+            "description": "Certificate revocation list not searched for certain certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4410",
+            "reference": "CVE-2006-4410"
+        },
+        {
+            "description": "Product cannot access certificate revocation list when an HTTP proxy is being used.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4409",
+            "reference": "CVE-2006-4409"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that certificates are checked for revoked status.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If certificate pinning is being used, ensure that all relevant properties of the certificate are fully validated before the certificate is pinned, including the revoked status.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "295",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        }
+    ]
+}

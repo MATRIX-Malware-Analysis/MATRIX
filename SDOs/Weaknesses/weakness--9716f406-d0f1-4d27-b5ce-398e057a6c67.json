@@ -1,0 +1,64 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9716f406-d0f1-4d27-b5ce-398e057a6c67",
+    "created": "2024-08-13T14:46:48.901888Z",
+    "modified": "2024-08-13T14:46:48.901888Z",
+    "name": "Use of Less Trusted Source",
+    "description": "The product has two different sources of the same data or information, but it uses the source that has less support for verification, is less trusted, or is less resistant to attack.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "348"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product uses IP address provided by a client, instead of obtaining it from the packet headers, allowing easier spoofing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0860",
+            "reference": "CVE-2001-0860"
+        },
+        {
+            "description": "Web product uses the IP address in the X-Forwarded-For HTTP header instead of a server variable that uses the connecting IP address, allowing filter bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1950",
+            "reference": "CVE-2004-1950"
+        },
+        {
+            "description": "Product logs IP address specified by the client instead of obtaining it from the packet headers, allowing information hiding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0908",
+            "reference": "CVE-2001-0908"
+        },
+        {
+            "description": "PHP application uses IP address from X-Forwarded-For HTTP header, instead of REMOTE_ADDR.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-1126",
+            "reference": "CVE-2006-1126"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2f5646df-dcf4-4935-abc7-4456091a7039",
+    "created": "2024-08-13T14:46:49.014282Z",
+    "modified": "2024-08-13T14:46:49.014282Z",
+    "name": "Expired Pointer Dereference",
+    "description": "The product dereferences a pointer that contains a location for memory that was previously valid, but is no longer valid.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "825"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-09-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "access of expired memory address leads to arbitrary code execution",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5013",
+            "reference": "CVE-2008-5013"
+        },
+        {
+            "description": "stale pointer issue leads to denial of service and possibly other consequences",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3257",
+            "reference": "CVE-2010-3257"
+        },
+        {
+            "description": "Chain: a message having an unknown message type may cause a reference to uninitialized memory resulting in a null pointer dereference (CWE-476) or dangling pointer (CWE-825), possibly crashing the system or causing heap corruption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0062",
+            "reference": "CVE-2008-0062"
+        },
+        {
+            "description": "read of value at an offset into a structure after the offset is no longer valid",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1211",
+            "reference": "CVE-2007-1211"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Choose a language that provides automatic memory management.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When freeing pointers, be sure to set them to NULL once they are freed. However, the utilization of multiple or complex data structures may lower the usefulness of this strategy.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "125",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "787",
+            "nature": "CanPrecede"
+        }
+    ]
+}

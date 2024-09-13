@@ -1,0 +1,123 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--94dca67b-b8ef-47fb-8ebe-4c76950e73c4",
+    "created": "2024-08-13T14:46:48.789069Z",
+    "modified": "2024-08-13T14:46:48.789069Z",
+    "name": "Fabric-Address Map Allows Programming of Unwarranted Overlaps of Protected and Unprotected Ranges",
+    "description": "The address map of the on-chip fabric has protected and unprotected regions overlapping, allowing an attacker to bypass access control to the overlapping portion of the protected region.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1316"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authorization"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-01",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Review address map in specification to see if there are any overlapping ranges.",
+            "effectiveness": "High",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Negative testing of access control on overlapped ranges.",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Attacker can modify MCHBAR register to overlap with an attacker-controlled region, which modification prevents the SENTER instruction from properly applying VT-d protection while a Measured Launch Environment is being launched.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-4419",
+            "reference": "CVE-2009-4419"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When architecting the address map of the chip, ensure that protected and unprotected ranges are isolated and do not overlap. When designing, ensure that ranges hardcoded in Register-Transfer Level (RTL) do not overlap.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ranges configured by firmware should not overlap. If overlaps are mandatory because of constraints such as a limited number of registers, then ensure that no assets are present in the overlapped portion.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Validate mitigation actions with robust testing.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1137"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

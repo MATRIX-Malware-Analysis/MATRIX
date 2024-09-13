@@ -1,0 +1,79 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--655aae89-23b2-448d-9b6f-4a25d25e64e6",
+    "created": "2024-08-13T14:46:49.003804Z",
+    "modified": "2024-08-13T14:46:49.003804Z",
+    "name": "Logging of Excessive Data",
+    "description": "The product logs too much information, making log files hard to process and possibly hindering recovery efforts or forensic analysis after an attack.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "779"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "server records a large amount of data to the server log when it receives malformed headers",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0421",
+            "reference": "CVE-2007-0421"
+        },
+        {
+            "description": "chain: application does not restrict access to front-end for updates, which allows attacker to fill the error log",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1154",
+            "reference": "CVE-2002-1154"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Suppress large numbers of duplicate log messages and replace them with periodic summaries. For example, syslog may include an entry that states \"last message repeated X times\" when recording repeated events.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Support a maximum size for the log file that can be controlled by the administrator. If the maximum size is reached, the admin should be notified. Also, consider reducing functionality of the product. This may result in a denial-of-service to legitimate product users, but it will prevent the product from adversely impacting the entire system.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Adjust configurations appropriately when the product is transitioned from a debug state to production.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        }
+    ]
+}

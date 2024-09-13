@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a82137c9-c126-4e35-870e-fe67b9054345",
+    "created": "2024-08-13T14:46:48.904163Z",
+    "modified": "2024-08-13T14:46:48.904163Z",
+    "name": "Product UI does not Warn User of Unsafe Actions",
+    "description": "The product's user interface does not warn the user before undertaking an unsafe action on behalf of that user. This makes it easier for attackers to trick users into inflicting damage to their system.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "356"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not warn user when document contains certain dangerous functions or macros.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1055",
+            "reference": "CVE-1999-1055"
+        },
+        {
+            "description": "Product does not warn user when document contains certain dangerous functions or macros.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0794",
+            "reference": "CVE-1999-0794"
+        },
+        {
+            "description": "Product does not warn user when document contains certain dangerous functions or macros.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0277",
+            "reference": "CVE-2000-0277"
+        },
+        {
+            "description": "Product does not warn user about a certificate if it has already been accepted for a different site. Possibly resultant.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0517",
+            "reference": "CVE-2000-0517"
+        },
+        {
+            "description": "File extractor does not warn user if setuid/setgid files could be extracted. Overlaps privileges/permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0602",
+            "reference": "CVE-2005-0602"
+        },
+        {
+            "description": "E-mail client allows bypass of warning for dangerous attachments via a Windows .LNK file that refers to the attachment.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0342",
+            "reference": "CVE-2000-0342"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "221",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--feafb76d-11be-4681-82f5-dc970645d9c8",
+    "created": "2024-08-13T14:46:48.884879Z",
+    "modified": "2024-08-13T14:46:48.884879Z",
+    "name": "Reliance on IP Address for Authentication",
+    "description": "The product uses an IP address for authentication.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "291"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "S-bus functionality in a home automation product performs access control using an IP allowlist, which can be bypassed by a forged IP address.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30319",
+            "reference": "CVE-2022-30319"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use other means of identity verification that cannot be simply spoofed. Possibilities include a username/password or certificate.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-1371"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "290",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "923",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "471",
+            "nature": "ChildOf"
+        }
+    ]
+}

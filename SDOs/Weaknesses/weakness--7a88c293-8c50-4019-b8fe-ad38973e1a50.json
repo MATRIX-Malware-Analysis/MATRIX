@@ -1,0 +1,91 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7a88c293-8c50-4019-b8fe-ad38973e1a50",
+    "created": "2024-08-13T14:46:48.898859Z",
+    "modified": "2024-08-13T14:46:48.898859Z",
+    "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)",
+    "description": "The product uses a Pseudo-Random Number Generator (PRNG) in a security context, but the PRNG's algorithm is not cryptographically strong.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "338"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "PHP framework uses mt_rand() function (Marsenne Twister) when generating tokens",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3692",
+            "reference": "CVE-2021-3692"
+        },
+        {
+            "description": "Crypto product uses rand() library function to generate a recovery key, making it easier to conduct brute force attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3278",
+            "reference": "CVE-2009-3278"
+        },
+        {
+            "description": "Random number generator can repeatedly generate the same value.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3238",
+            "reference": "CVE-2009-3238"
+        },
+        {
+            "description": "Web application generates predictable session IDs, allowing session hijacking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2367",
+            "reference": "CVE-2009-2367"
+        },
+        {
+            "description": "SSL library uses a weak random number generator that only generates 65,536 unique keys.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0166",
+            "reference": "CVE-2008-0166"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use functions or hardware which use a hardware-based random number generation for all crypto. This is the recommended solution. Use CyptGenRandom on Windows, or hw_rand() on Linux.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e1064ada-9319-4fc2-9e91-a0a23b8564ea",
+    "created": "2024-08-13T14:46:49.024135Z",
+    "modified": "2024-08-13T14:46:49.024135Z",
+    "name": "Hidden Functionality",
+    "description": "The product contains functionality that is not documented, not part of the specification, and not accessible through an interface or command sequence that is obvious to the product's users or administrators.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "912"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2012-12-28",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: a digital asset management program has an undisclosed backdoor in the legacy version of a PHP script (CWE-912) that could allow an unauthenticated user to export metadata (CWE-306)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-31260",
+            "reference": "CVE-2022-31260"
+        },
+        {
+            "description": "A wireless access point manual specifies that the only method of configuration is via web interface (CWE-1059), but there is an undisclosed telnet server that was activated by default (CWE-912).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-3203",
+            "reference": "CVE-2022-3203"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Always verify the integrity of the product that is being installed.",
+            "effectiveness": null,
+            "phase": "Installation"
+        },
+        {
+            "description": "Conduct a code coverage analysis using live testing, then closely inspect any code that is not covered.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "684",
+            "nature": "ChildOf"
+        }
+    ]
+}

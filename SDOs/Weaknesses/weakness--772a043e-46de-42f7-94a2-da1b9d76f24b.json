@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--772a043e-46de-42f7-94a2-da1b9d76f24b",
+    "created": "2024-08-13T14:46:48.785776Z",
+    "modified": "2024-08-13T14:46:48.785776Z",
+    "name": "Insufficient or Incomplete Data Removal within Hardware Component",
+    "description": "The product's data removal process does not completely delete all data and potentially sensitive information within hardware components.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1301"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-29",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Firmware Data Deletion Vulnerability in which a base station factory reset might not delete all user information. The impact of this enables a new owner of a used device that has been \"factory-default reset\" with a vulnerable firmware version can still retrieve, at least, the previous owner's wireless network name, and the previous owner's wireless security (such as WPA2) key. This issue was addressed with improved, data deletion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-8575",
+            "reference": "CVE-2019-8575"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Apply blinding or masking techniques to implementations of cryptographic algorithms.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Alter the method of erasure, add protection of media, or destroy the media to protect the data.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1117"
+        },
+        {
+            "external_reference_id": "REF-1118"
+        },
+        {
+            "external_reference_id": "REF-1119"
+        },
+        {
+            "external_reference_id": "REF-1120"
+        },
+        {
+            "external_reference_id": "REF-1055"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "226",
+            "nature": "ChildOf"
+        }
+    ]
+}

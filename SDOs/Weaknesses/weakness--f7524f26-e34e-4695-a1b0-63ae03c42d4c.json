@@ -1,0 +1,86 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f7524f26-e34e-4695-a1b0-63ae03c42d4c",
+    "created": "2024-08-13T14:46:48.97309Z",
+    "modified": "2024-08-13T14:46:48.97309Z",
+    "name": "Variable Extraction Error",
+    "description": "The product uses external input to determine the names of variables into which information is extracted, without verifying that the names of the specified variables are valid. This could cause the program to overwrite unintended variables.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "621"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "extract issue enables file inclusion",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7135",
+            "reference": "CVE-2006-7135"
+        },
+        {
+            "description": "Chain: PHP app uses extract for register_globals compatibility layer (CWE-621), enabling path traversal (CWE-22)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7079",
+            "reference": "CVE-2006-7079"
+        },
+        {
+            "description": "extract() buried in include files makes post-disclosure analysis confusing; original report had seemed incorrect.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0649",
+            "reference": "CVE-2007-0649"
+        },
+        {
+            "description": "extract() enables static code injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6661",
+            "reference": "CVE-2006-6661"
+        },
+        {
+            "description": "import_request_variables() buried in include files makes post-disclosure analysis confusing",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2828",
+            "reference": "CVE-2006-2828"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use allowlists of variable names that can be extracted.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Consider refactoring your code to avoid extraction routines altogether.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "In PHP, call extract() with options such as EXTR_SKIP and EXTR_PREFIX_ALL; call import_request_variables() with a prefix argument. Note that these capabilities are not present in all PHP versions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "914",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "471",
+            "nature": "CanPrecede"
+        }
+    ]
+}

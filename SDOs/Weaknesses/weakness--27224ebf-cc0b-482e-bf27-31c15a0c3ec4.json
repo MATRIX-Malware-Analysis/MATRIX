@@ -1,0 +1,140 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--27224ebf-cc0b-482e-bf27-31c15a0c3ec4",
+    "created": "2024-08-13T14:46:48.817364Z",
+    "modified": "2024-08-13T14:46:48.817364Z",
+    "name": "Unexpected Sign Extension",
+    "description": "The product performs an operation on a number that causes it to be sign extended when it is transformed into a larger data type. When the original number is negative, this can produce unexpected values that lead to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "194"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: unexpected sign extension (CWE-194) leads to integer overflow (CWE-190), causing an out-of-bounds read (CWE-125)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-10887",
+            "reference": "CVE-2018-10887"
+        },
+        {
+            "description": "Sign extension error produces -1 value that is treated as a command separator, enabling OS command injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0234",
+            "reference": "CVE-1999-0234"
+        },
+        {
+            "description": "Product uses \"char\" type for input character. When char is implemented as a signed type, ASCII value 0xFF (255), a sign extension produces a -1 value that is treated as a program-specific separator value, effectively disabling a length check and leading to a buffer overflow. This is also a multiple interpretation error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0161",
+            "reference": "CVE-2003-0161"
+        },
+        {
+            "description": "chain: signed short width value in image processor is sign extended during conversion to unsigned int, which leads to integer overflow and heap-based buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4988",
+            "reference": "CVE-2007-4988"
+        },
+        {
+            "description": "chain: signedness error allows bypass of a length check; later sign extension makes exploitation easier.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-1834",
+            "reference": "CVE-2006-1834"
+        },
+        {
+            "description": "Sign extension when manipulating Pascal-style strings leads to integer overflow and improper memory copy.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2753",
+            "reference": "CVE-2005-2753"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid using signed variables if you don't need to represent negative values. When negative values are needed, perform validation after you save those values to larger data types, or before passing them to functions that are expecting unsigned values.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-161"
+        },
+        {
+            "external_reference_id": "REF-162"
+        },
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "681",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "681",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "681",
+            "nature": "ChildOf"
+        }
+    ]
+}

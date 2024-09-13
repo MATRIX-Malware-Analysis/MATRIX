@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--78567fdf-cfff-4776-bf44-e77862567093",
+    "created": "2024-08-13T14:46:48.969321Z",
+    "modified": "2024-08-13T14:46:48.969321Z",
+    "name": "Double-Checked Locking",
+    "description": "The product uses double-checked locking to access a resource without the overhead of explicit synchronization, but the locking is insufficient.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "609"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "While double-checked locking can be achieved in some languages, it is inherently flawed in Java before 1.5, and cannot be achieved without compromising platform independence. Before Java 1.5, only use of the synchronized keyword is known to work. Beginning in Java 1.5, use of the \"volatile\" keyword allows double-checked locking to work successfully, although there is some debate as to whether it achieves sufficient performance gains. See references.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-490"
+        },
+        {
+            "external_reference_id": "REF-491"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "367",
+            "nature": "CanPrecede"
+        }
+    ]
+}

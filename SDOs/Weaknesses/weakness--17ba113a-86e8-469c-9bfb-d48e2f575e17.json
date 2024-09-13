@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--17ba113a-86e8-469c-9bfb-d48e2f575e17",
+    "created": "2024-08-13T14:46:48.988294Z",
+    "modified": "2024-08-13T14:46:48.988294Z",
+    "name": "Function Call With Incorrectly Specified Argument Value",
+    "description": "The product calls a function, procedure, or routine, but the caller specifies an argument that contains the wrong value, which may lead to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "687"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This might require an understanding of intended program behavior or design to determine whether the value is incorrect.",
+            "effectiveness": null,
+            "method": "Manual Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "628",
+            "nature": "ChildOf"
+        }
+    ]
+}

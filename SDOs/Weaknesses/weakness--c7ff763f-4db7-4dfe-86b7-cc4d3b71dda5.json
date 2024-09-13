@@ -1,0 +1,100 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c7ff763f-4db7-4dfe-86b7-cc4d3b71dda5",
+    "created": "2024-08-13T14:46:48.915485Z",
+    "modified": "2024-08-13T14:46:48.915485Z",
+    "name": "Exposure of File Descriptor to Unintended Control Sphere ('File Descriptor Leak')",
+    "description": "A process does not close sensitive file descriptors before invoking a child process, which allows the child to perform unauthorized I/O operations using those descriptors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "403"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server leaks a privileged file descriptor, allowing the server to be hijacked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0740",
+            "reference": "CVE-2003-0740"
+        },
+        {
+            "description": "File descriptor leak allows read of restricted files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1033",
+            "reference": "CVE-2004-1033"
+        },
+        {
+            "description": "Access to restricted resource using modified file descriptor for stderr.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0094",
+            "reference": "CVE-2000-0094"
+        },
+        {
+            "description": "Open file descriptor used as alternate channel in complex race condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0638",
+            "reference": "CVE-2002-0638"
+        },
+        {
+            "description": "Program does not fully drop privileges after creating a file descriptor, which allows access to the descriptor via a separate vulnerability.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0489",
+            "reference": "CVE-2003-0489"
+        },
+        {
+            "description": "User bypasses restrictions by obtaining a file descriptor then calling setuid program, which does not close the descriptor.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0937",
+            "reference": "CVE-2003-0937"
+        },
+        {
+            "description": "Terminal manager does not properly close file descriptors, allowing attackers to access terminals of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2215",
+            "reference": "CVE-2004-2215"
+        },
+        {
+            "description": "Module opens a file for reading twice, allowing attackers to read files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5397",
+            "reference": "CVE-2006-5397"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-392"
+        },
+        {
+            "external_reference_id": "REF-393"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "402",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0cdfafbc-4061-43d8-af16-0d8f6c2fbe13",
+    "created": "2024-08-13T14:46:48.946919Z",
+    "modified": "2024-08-13T14:46:48.946919Z",
+    "name": "Cleartext Storage of Sensitive Information in an Environment Variable",
+    "description": "The product uses an environment variable to store unencrypted sensitive information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "526"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "CMS shows sensitive server-side information from environment variables when run in Debug mode.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-43691",
+            "reference": "CVE-2022-43691"
+        },
+        {
+            "description": "Plugin for an automation server inserts environment variable contents into build XML files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-27195",
+            "reference": "CVE-2022-27195"
+        },
+        {
+            "description": "CI/CD tool logs environment variables related to passwords add Contribution to content history.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-25264",
+            "reference": "CVE-2022-25264"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Encrypt information stored in the environment variable to protect it from being exposed to an unauthorized user. If encryption is not feasible or is considered too expensive for the business use of the application, then consider using a properly protected configuration file instead of an environment variable. It should be understood that unencrypted information in a config file is also not guaranteed to be protected, but it is still a better choice, because it reduces attack surface related to weaknesses such as CWE-214. In some settings, vaults might be a feasible option for safer data transfer. Users should be notified of the business choice made to not protect the sensitive information through encryption.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If the environment variable is not necessary for the desired behavior, then remove it entirely, or clear it to an empty value.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1318"
+        },
+        {
+            "external_reference_id": "REF-1319"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "312",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "214",
+            "nature": "PeerOf"
+        }
+    ]
+}

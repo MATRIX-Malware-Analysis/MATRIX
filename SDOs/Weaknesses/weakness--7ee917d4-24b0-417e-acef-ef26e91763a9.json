@@ -1,0 +1,92 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7ee917d4-24b0-417e-acef-ef26e91763a9",
+    "created": "2024-08-13T14:46:48.981731Z",
+    "modified": "2024-08-13T14:46:48.981731Z",
+    "name": "Improper Handling of File Names that Identify Virtual Resources",
+    "description": "The product does not handle or incorrectly handles a file name that identifies a \"virtual\" resource that is not directly specified within the directory that is associated with the file name, causing the product to perform file-based operations on a resource that is not a file.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "66"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "In IIS, remote attackers can obtain source code for ASP files by appending \"::$DATA\" to the URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0278",
+            "reference": "CVE-1999-0278"
+        },
+        {
+            "description": "Server allows remote attackers to read files and resource fork content via HTTP requests to certain special file names related to multiple data streams in HFS+.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1084",
+            "reference": "CVE-2004-1084"
+        },
+        {
+            "description": "Server allows remote attackers to cause a denial of service via a series of requests to .JSP files that contain an MS-DOS device name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0106",
+            "reference": "CVE-2002-0106"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "706",
+            "nature": "ChildOf"
+        }
+    ]
+}

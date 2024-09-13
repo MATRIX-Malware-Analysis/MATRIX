@@ -1,0 +1,302 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--313a6069-94b4-4ee0-adcc-b3b0d37e885a",
+    "created": "2024-08-13T14:46:48.776474Z",
+    "modified": "2024-08-13T14:46:48.776474Z",
+    "name": "Device Unlock Credential Sharing",
+    "description": "The credentials necessary for unlocking a device are shared across multiple parties and may expose sensitive information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1273"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-29",
+            "submission_name": "Parbati Kumar Manna, Hareesh Khattri, Arun Kanuparthi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure the unlock credentials are shared with the minimum number of parties and with utmost secrecy. To limit the risk associated with compromised credentials, where possible, the credentials should be part-specific.",
+            "effectiveness": null,
+            "phase": "Integration"
+        },
+        {
+            "description": "Ensure the unlock credentials are shared with the minimum number of parties and with utmost secrecy. To limit the risk associated with compromised credentials, where possible, the credentials should be part-specific.",
+            "effectiveness": null,
+            "phase": "Manufacturing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "200",
+            "nature": "ChildOf"
+        }
+    ]
+}

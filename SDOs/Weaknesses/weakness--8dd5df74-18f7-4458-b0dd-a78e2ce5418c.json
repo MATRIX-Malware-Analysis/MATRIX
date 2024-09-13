@@ -1,0 +1,168 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8dd5df74-18f7-4458-b0dd-a78e2ce5418c",
+    "created": "2024-08-13T14:46:48.905223Z",
+    "modified": "2024-08-13T14:46:48.905223Z",
+    "name": "Absolute Path Traversal",
+    "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as \"/abs/path\" that can resolve to a location that is outside of that directory.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "36"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Python package constructs filenames using an unsafe os.path.join call on untrusted input, allowing absolute path traversal because os.path.join resets the pathname to an absolute path that is specified as part of the input.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-31503",
+            "reference": "CVE-2022-31503"
+        },
+        {
+            "description": "Multiple FTP clients write arbitrary files via absolute paths in server responses",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1345",
+            "reference": "CVE-2002-1345"
+        },
+        {
+            "description": "ZIP file extractor allows full path",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1269",
+            "reference": "CVE-2001-1269"
+        },
+        {
+            "description": "Path traversal using absolute pathname",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1818",
+            "reference": "CVE-2002-1818"
+        },
+        {
+            "description": "Path traversal using absolute pathname",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1913",
+            "reference": "CVE-2002-1913"
+        },
+        {
+            "description": "Path traversal using absolute pathname",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2147",
+            "reference": "CVE-2005-2147"
+        },
+        {
+            "description": "Arbitrary files may be overwritten via compressed attachments that specify absolute path names for the decompressed output.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0614",
+            "reference": "CVE-2000-0614"
+        },
+        {
+            "description": "Mail client allows remote attackers to overwrite arbitrary files via an e-mail message containing a uuencoded attachment that specifies the full pathname for the file to be modified.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1263",
+            "reference": "CVE-1999-1263"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files via a full pathname to the target file in config parameter.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0753",
+            "reference": "CVE-2003-0753"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files via an absolute pathname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1525",
+            "reference": "CVE-2002-1525"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files by specifying the drive letter in the requested URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0038",
+            "reference": "CVE-2001-0038"
+        },
+        {
+            "description": "FTP server allows remote attackers to list arbitrary directories by using the \"ls\" command and including the drive letter name (e.g. C:) in the requested pathname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0255",
+            "reference": "CVE-2001-0255"
+        },
+        {
+            "description": "FTP server allows remote attackers to list the contents of arbitrary drives via a ls command that includes the drive letter as an argument.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0933",
+            "reference": "CVE-2001-0933"
+        },
+        {
+            "description": "Server allows remote attackers to browse arbitrary directories via a full pathname in the arguments to certain dynamic pages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0466",
+            "reference": "CVE-2002-0466"
+        },
+        {
+            "description": "Remote attackers can read arbitrary files via an HTTP request whose argument is a filename of the form \"C:\" (Drive letter), \"//absolute/path\", or \"..\" .",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1483",
+            "reference": "CVE-2002-1483"
+        },
+        {
+            "description": "FTP server read/access arbitrary files using \"C:\\\" filenames",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2488",
+            "reference": "CVE-2004-2488"
+        },
+        {
+            "description": "FTP server allows a remote attacker to retrieve privileged web server system information by specifying arbitrary paths in the UNC format (\\\\computername\\sharename).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0687",
+            "reference": "CVE-2001-0687"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1448"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "22",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "ChildOf"
+        }
+    ]
+}

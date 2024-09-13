@@ -1,0 +1,82 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--408a09e2-a0f7-46b3-b51b-6c4c589ba266",
+    "created": "2024-08-13T14:46:48.799457Z",
+    "modified": "2024-08-13T14:46:48.799457Z",
+    "name": "Use of Default Credentials",
+    "description": "The product uses default credentials (such as passwords or cryptographic keys) for potentially critical functionality.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1392"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2022-10-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Remote Terminal Unit (RTU) uses default credentials for some SSH accounts",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30270",
+            "reference": "CVE-2022-30270"
+        },
+        {
+            "description": "data visualization/sharing package uses default secret keys or cookie values if they are not specified in environment variables",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-41192",
+            "reference": "CVE-2021-41192"
+        },
+        {
+            "description": "microcontroller board has default password",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-38759",
+            "reference": "CVE-2021-38759"
+        },
+        {
+            "description": "Intrusion Detection System (IDS) uses the same static, private SSL keys for multiple devices and installations, allowing decryption of SSL traffic",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2306",
+            "reference": "CVE-2010-2306"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Prohibit use of default, hard-coded, or other values that do not vary for each installation of the product - especially for separate organizations.",
+            "effectiveness": "High",
+            "phase": "Requirements"
+        },
+        {
+            "description": "Force the administrator to change the credential upon installation.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The product administrator could change the defaults upon installation or during operation.",
+            "effectiveness": "Moderate",
+            "phase": "Installation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1283"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1391",
+            "nature": "ChildOf"
+        }
+    ]
+}

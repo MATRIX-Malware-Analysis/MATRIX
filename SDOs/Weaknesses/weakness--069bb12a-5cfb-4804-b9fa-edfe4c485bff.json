@@ -1,0 +1,81 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--069bb12a-5cfb-4804-b9fa-edfe4c485bff",
+    "created": "2024-08-13T14:46:48.945598Z",
+    "modified": "2024-08-13T14:46:48.945598Z",
+    "name": "Weak Password Requirements",
+    "description": "The product does not require that users should have strong passwords, which makes it easier for attackers to compromise user accounts.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "521"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "key server application does not require strong passwords",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-4574",
+            "reference": "CVE-2020-4574"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                 ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider a second\n                 authentication factor beyond the password, which prevents the\n                 password from being a single point of failure. See CWE-308 for\n                 further information.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider implementing a password complexity meter to inform users when a chosen password meets the required attributes.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1053"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1391",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        }
+    ]
+}

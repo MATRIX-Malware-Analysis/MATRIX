@@ -1,0 +1,127 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7cfc0e8c-6b5d-4a39-a8a5-bf201b1ead5d",
+    "created": "2024-08-13T14:46:48.967712Z",
+    "modified": "2024-08-13T14:46:48.967712Z",
+    "name": "Client-Side Enforcement of Server-Side Security",
+    "description": "The product is composed of a server that relies on the client to implement a mechanism that is intended to protect the server.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "602"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "SCADA system only uses client-side authentication, allowing adversaries to impersonate other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-33139",
+            "reference": "CVE-2022-33139"
+        },
+        {
+            "description": "ASP program allows upload of .asp files by bypassing client-side checks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6994",
+            "reference": "CVE-2006-6994"
+        },
+        {
+            "description": "steganography products embed password information in the carrier file, which can be extracted from a modified client.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0163",
+            "reference": "CVE-2007-0163"
+        },
+        {
+            "description": "steganography products embed password information in the carrier file, which can be extracted from a modified client.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0164",
+            "reference": "CVE-2007-0164"
+        },
+        {
+            "description": "client allows server to modify client's configuration and overwrite arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0100",
+            "reference": "CVE-2007-0100"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If some degree of trust is required between the two entities, then use integrity checking and strong authentication to ensure that the inputs are coming from a trusted source. Design the product so that this trust is managed in a centralized fashion, especially if there are complex or numerous communication channels, in order to reduce the risks that the implementer will mistakenly omit a check in a single code path.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use dynamic tools and techniques that interact with the software using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The software's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Use tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session. These may be more effective than strictly automated techniques. This is especially the case with weaknesses that are related to design and business rules.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "471",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "290",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "300",
+            "nature": "PeerOf"
+        }
+    ]
+}

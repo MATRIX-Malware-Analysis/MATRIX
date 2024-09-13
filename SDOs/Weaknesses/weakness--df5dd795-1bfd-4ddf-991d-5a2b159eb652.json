@@ -1,0 +1,57 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--df5dd795-1bfd-4ddf-991d-5a2b159eb652",
+    "created": "2024-08-13T14:46:48.987289Z",
+    "modified": "2024-08-13T14:46:48.987289Z",
+    "name": "Function Call With Incorrect Order of Arguments",
+    "description": "The product calls a function, procedure, or routine, but the caller specifies the arguments in an incorrect order, leading to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "683"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Application calls functions with arguments in the wrong order, allowing attacker to bypass intended access restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7049",
+            "reference": "CVE-2006-7049"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use the function, procedure, or routine as specified.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Because this function call often produces incorrect behavior it will usually be detected during testing or normal operation of the product. During testing exercise all possible control paths will typically expose this weakness except in rare cases when the incorrect function call accidentally produces the correct results or if the provided argument type is very similar to the expected argument type.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "628",
+            "nature": "ChildOf"
+        }
+    ]
+}

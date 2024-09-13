@@ -1,0 +1,75 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--00dee38f-d7a6-4c79-a961-f0ec165c9a72",
+    "created": "2024-08-13T14:46:48.823186Z",
+    "modified": "2024-08-13T14:46:48.823186Z",
+    "name": "Invocation of Process Using Visible Sensitive Information",
+    "description": "A process is invoked with sensitive command-line arguments, environment variables, or other elements that can be seen by other processes on the operating system.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "214"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "password passed on command line",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1387",
+            "reference": "CVE-2005-1387"
+        },
+        {
+            "description": "password passed on command line",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2291",
+            "reference": "CVE-2005-2291"
+        },
+        {
+            "description": "username/password on command line allows local users to view via \"ps\" or other process listing programs",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1565",
+            "reference": "CVE-2001-1565"
+        },
+        {
+            "description": "Username/password on command line allows local users to view via \"ps\" or other process listing programs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1948",
+            "reference": "CVE-2004-1948"
+        },
+        {
+            "description": "PGP passphrase provided as command line argument.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1270",
+            "reference": "CVE-1999-1270"
+        },
+        {
+            "description": "Kernel race condition allows reading of environment variables of a process that is still spawning.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1058",
+            "reference": "CVE-2004-1058"
+        },
+        {
+            "description": "Code analysis product passes access tokens as a command-line parameter or through an environment variable, making them visible to other processes via the ps command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-32638",
+            "reference": "CVE-2021-32638"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "497",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a72d4768-114b-479e-bcf0-df7f6c74ee49",
+    "created": "2024-08-13T14:46:48.778214Z",
+    "modified": "2024-08-13T14:46:48.778214Z",
+    "name": "Cryptographic Operations are run Before Supporting Units are Ready",
+    "description": "Performing cryptographic operations without ensuring that the supporting inputs are ready to supply valid data may compromise the cryptographic result.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1279"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Best practices should be used to design cryptographic systems.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Continuously ensuring that cryptographic inputs are supplying valid information is necessary to ensure that the encrypted output is secure. ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--abff8ee6-cedf-4854-9128-ab58fcca89a2",
+    "created": "2024-08-13T14:46:48.968314Z",
+    "modified": "2024-08-13T14:46:48.968314Z",
+    "name": "Multiple Binds to the Same Port",
+    "description": "When multiple sockets are allowed to bind to the same port, other services on that port may be stolen or spoofed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "605"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Restrict server socket address to known local addresses.",
+            "effectiveness": null,
+            "phase": "Policy"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "675",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "666",
+            "nature": "ChildOf"
+        }
+    ]
+}

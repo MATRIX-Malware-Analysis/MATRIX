@@ -1,0 +1,52 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8b7d752e-c8d7-496c-ba47-087e0bc4dcfb",
+    "created": "2024-08-13T14:46:48.755713Z",
+    "modified": "2024-08-13T14:46:48.755713Z",
+    "name": "Improper Use of Validation Framework",
+    "description": "The product does not use, or incorrectly uses, an input validation framework that is provided by the source language or an independent library.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1173"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-12-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Properly use provided input validation frameworks.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b880557a-eb86-42b3-a388-b57d4d899b98",
+    "created": "2024-08-13T14:46:48.941277Z",
+    "modified": "2024-08-13T14:46:48.941277Z",
+    "name": "Path Equivalence: '//multiple/leading/slash'",
+    "description": "The product accepts path input in the form of multiple leading slash ('//multiple/leading/slash') without appropriate validation, which can lead to ambiguous path resolution and allow an attacker to traverse the file system to unintended locations or access arbitrary files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "50"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Read files with full pathname using multiple internal slash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1483",
+            "reference": "CVE-2002-1483"
+        },
+        {
+            "description": "Server allows remote attackers to read arbitrary files via a GET request with more than one leading / (slash) character in the filename.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1456",
+            "reference": "CVE-1999-1456"
+        },
+        {
+            "description": "Server allows remote attackers to read arbitrary files via leading slash (//) characters in a URL request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0578",
+            "reference": "CVE-2004-0578"
+        },
+        {
+            "description": "Server allows remote attackers to bypass authentication and read restricted files via an extra / (slash) in the requested URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0275",
+            "reference": "CVE-2002-0275"
+        },
+        {
+            "description": "Product allows local users to delete arbitrary files or create arbitrary empty files via a target filename with a large number of leading slash (/) characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1032",
+            "reference": "CVE-2004-1032"
+        },
+        {
+            "description": "Server allows remote attackers to bypass access restrictions for files via an HTTP request with a sequence of multiple / (slash) characters such as http://www.example.com///file/.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1238",
+            "reference": "CVE-2002-1238"
+        },
+        {
+            "description": "Product allows remote attackers to bypass authentication, obtain sensitive information, or gain access via a direct request to admin/user.pl preceded by // (double leading slash).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1878",
+            "reference": "CVE-2004-1878"
+        },
+        {
+            "description": "Server allows remote attackers to execute arbitrary commands via a URL with multiple leading \"/\" (slash) characters and \"..\" sequences.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1365",
+            "reference": "CVE-2005-1365"
+        },
+        {
+            "description": "Access directory using multiple leading slash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1050",
+            "reference": "CVE-2000-1050"
+        },
+        {
+            "description": "Bypass access restrictions via multiple leading slash, which causes a regular expression to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1072",
+            "reference": "CVE-2001-1072"
+        },
+        {
+            "description": "Archive extracts to arbitrary files using multiple leading slash in filenames in the archive.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0235",
+            "reference": "CVE-2004-0235"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "41",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "161",
+            "nature": "ChildOf"
+        }
+    ]
+}

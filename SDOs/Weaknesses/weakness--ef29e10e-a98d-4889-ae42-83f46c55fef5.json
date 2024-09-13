@@ -1,0 +1,182 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ef29e10e-a98d-4889-ae42-83f46c55fef5",
+    "created": "2024-08-13T14:46:48.977219Z",
+    "modified": "2024-08-13T14:46:48.977219Z",
+    "name": "External Control of Critical State Data",
+    "description": "The product stores security-critical state information about its users, or the product itself, in a location that is accessible to unauthorized actors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "642"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Mail client stores password hashes for unrelated accounts in a hidden form field.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2428",
+            "reference": "CVE-2005-2428"
+        },
+        {
+            "description": "Privileged program trusts user-specified environment variable to modify critical configuration settings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0306",
+            "reference": "CVE-2008-0306"
+        },
+        {
+            "description": "Telnet daemon allows remote clients to specify critical environment variables for the server, leading to code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0073",
+            "reference": "CVE-1999-0073"
+        },
+        {
+            "description": "Untrusted search path vulnerability through modified LD_LIBRARY_PATH environment variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4432",
+            "reference": "CVE-2007-4432"
+        },
+        {
+            "description": "Untrusted search path vulnerability through modified LD_LIBRARY_PATH environment variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7191",
+            "reference": "CVE-2006-7191"
+        },
+        {
+            "description": "Calendar application allows bypass of authentication by setting a certain cookie value to 1.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5738",
+            "reference": "CVE-2008-5738"
+        },
+        {
+            "description": "Setting of a language preference in a cookie enables path traversal attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5642",
+            "reference": "CVE-2008-5642"
+        },
+        {
+            "description": "Application allows admin privileges by setting a cookie value to \"admin.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5125",
+            "reference": "CVE-2008-5125"
+        },
+        {
+            "description": "Application allows admin privileges by setting a cookie value to \"admin.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5065",
+            "reference": "CVE-2008-5065"
+        },
+        {
+            "description": "Application allows admin privileges by setting a cookie value to \"admin.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4752",
+            "reference": "CVE-2008-4752"
+        },
+        {
+            "description": "Shopping cart allows price modification via hidden form field.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0102",
+            "reference": "CVE-2000-0102"
+        },
+        {
+            "description": "Shopping cart allows price modification via hidden form field.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0253",
+            "reference": "CVE-2000-0253"
+        },
+        {
+            "description": "Server allows client to specify the search path, which can be modified to point to a program that the client has uploaded.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1319",
+            "reference": "CVE-2008-1319"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Understand all the potential locations that are accessible to attackers. For example, some programmers assume that cookies and hidden form fields cannot be modified by an attacker, or they may not consider that environment variables can be modified before a privileged program is invoked.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Store state information on the server side only. Ensure that the system definitively and unambiguously keeps track of its own state and user state and has rules defined for legitimate state transitions. Do not allow any application user to affect state directly in any way other than through legitimate actions leading to state transitions.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using PHP, configure the application so that it does not use register_globals. During implementation, develop the application so that it does not rely on this feature, but be wary of implementing a register_globals emulation that is subject to weaknesses such as CWE-95, CWE-621, and similar issues.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Use automated static analysis tools that target this type of weakness. Many modern techniques use data flow analysis to minimize the number of false positives. This is not a perfect solution, since 100% accuracy and coverage are not feasible.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Use dynamic tools and techniques that interact with the product using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The product's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Use tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session. These may be more effective than strictly automated techniques. This is especially the case with weaknesses that are related to design and business rules.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-528"
+        },
+        {
+            "external_reference_id": "REF-529"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

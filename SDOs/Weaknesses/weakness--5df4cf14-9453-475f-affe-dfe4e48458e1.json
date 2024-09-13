@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5df4cf14-9453-475f-affe-dfe4e48458e1",
+    "created": "2024-08-13T14:46:48.957968Z",
+    "modified": "2024-08-13T14:46:48.957968Z",
+    "name": "finalize() Method Without super.finalize()",
+    "description": "The product contains a finalize() method that does not call super.finalize().",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "568"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-12-15",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Call the super.finalize() method.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use static analysis tools to spot such issues in your code.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "459",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7327691a-f9cf-4936-9559-e8394cb58d45",
+    "created": "2024-08-13T14:46:48.789635Z",
+    "modified": "2024-08-13T14:46:48.789635Z",
+    "name": "Missing Support for Security Features in On-chip Fabrics or Buses",
+    "description": "On-chip fabrics or buses either do not support or are not configured to support privilege separation or other security features, such as access control.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1318"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-20",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Review the fabric specification and ensure that it contains signals to transfer security-sensitive signals. ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        },
+        {
+            "description": "Lack of security features can also be confirmed through manual RTL review of the fabric RTL. ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If fabric does not support security features, implement security checks in a bridge or any component that is between the master and the fabric.  Alternatively, connect all fabric slaves that do not have any security assets under one such fabric and connect peripherals with security assets to a different fabric that supports security features. ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1139"
+        },
+        {
+            "external_reference_id": "REF-1140"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

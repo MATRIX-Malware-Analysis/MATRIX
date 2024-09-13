@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--dbaee3e8-55f6-425e-96e1-2a5add70966e",
+    "created": "2024-08-13T14:46:48.943814Z",
+    "modified": "2024-08-13T14:46:48.943814Z",
+    "name": "Logic/Time Bomb",
+    "description": "The product contains code that is designed to disrupt the legitimate operation of the product (or its environment) when a certain time passes, or when a certain logical condition is met.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "511"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Landwehr",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Always verify the integrity of the product that is being installed.",
+            "effectiveness": null,
+            "phase": "Installation"
+        },
+        {
+            "description": "Conduct a code coverage analysis using live testing, then closely inspect any code that is not covered.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-172"
+        },
+        {
+            "external_reference_id": "REF-1431"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "506",
+            "nature": "ChildOf"
+        }
+    ]
+}

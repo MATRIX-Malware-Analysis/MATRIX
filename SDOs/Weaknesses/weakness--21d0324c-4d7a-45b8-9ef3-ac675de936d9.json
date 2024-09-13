@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--21d0324c-4d7a-45b8-9ef3-ac675de936d9",
+    "created": "2024-08-13T14:46:48.811182Z",
+    "modified": "2024-08-13T14:46:48.811182Z",
+    "name": "Encoding Error",
+    "description": "The product does not properly encode or decode the data, resulting in unexpected values.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "172"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Forum software improperly URL decodes the highlight parameter when extracting text to highlight, which allows remote attackers to execute arbitrary PHP code by double-encoding the highlight value so that special characters are inserted into the result.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1315",
+            "reference": "CVE-2004-1315"
+        },
+        {
+            "description": "XSS protection mechanism attempts to remove \"/\" that could be used to close tags, but it can be bypassed using double encoded slashes (%252F)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1939",
+            "reference": "CVE-2004-1939"
+        },
+        {
+            "description": "Server allows a remote attacker to obtain source code of ASP files via a URL encoded with Unicode.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0709",
+            "reference": "CVE-2001-0709"
+        },
+        {
+            "description": "Hex-encoded path traversal variants - \"%2e%2e\", \"%2e%2e%2f\", \"%5c%2e%2e\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2256",
+            "reference": "CVE-2005-2256"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "While it is risky to use dynamically-generated query strings, code, or commands that mix control and data together, sometimes it may be unavoidable. Properly quote arguments and escape any special characters within those arguments. The most conservative approach is to escape or filter all characters that do not pass an extremely strict allowlist (such as everything that is not alphanumeric or white space). If some special characters are still needed, such as white space, wrap each argument in quotes after the escaping/filtering step. Be careful of argument injection (CWE-88).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "707",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "41",
+            "nature": "CanPrecede"
+        }
+    ]
+}

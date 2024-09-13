@@ -1,0 +1,94 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--011f7199-b6a2-4b74-86ed-7e250901e760",
+    "created": "2024-08-13T14:46:48.8973Z",
+    "modified": "2024-08-13T14:46:48.8973Z",
+    "name": "Insufficient Entropy in PRNG",
+    "description": "The lack of entropy available for, or used by, a Pseudo-Random Number Generator (PRNG) can be a stability and security threat.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "332"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: JavaScript-based cryptocurrency library can fall back to the insecure Math.random() function instead of reporting a failure (CWE-392), thus reducing the entropy (CWE-332) and leading to generation of non-unique cryptographic keys for Bitcoin wallets (CWE-1391)",
+            "link": "https://www.unciphered.com/blog/randstorm-you-cant-patch-a-house-of-cards",
+            "reference": "[REF-1374]"
+        },
+        {
+            "description": "security product has insufficient entropy in the DRBG, allowing collisions and private key discovery",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1715",
+            "reference": "CVE-2019-1715"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems. Consult FIPS 140-2 Annex C (\"Approved Random Number Generators\").",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider a PRNG that re-seeds itself as needed from high-quality pseudo-random output, such as hardware devices.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When deciding which PRNG to use, look at its sources of entropy. Depending on what your security needs are, you may need to use a random number generator that always uses strong random data -- i.e., a random number generator that attempts to be strong but will fail in a weak way or will always provide some middle ground of protection through techniques like re-seeding. Generally, something that always provides a predictable amount of strength is preferable.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-1374"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "331",
+            "nature": "ChildOf"
+        }
+    ]
+}

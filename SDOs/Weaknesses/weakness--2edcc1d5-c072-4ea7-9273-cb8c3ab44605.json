@@ -1,0 +1,173 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2edcc1d5-c072-4ea7-9273-cb8c3ab44605",
+    "created": "2024-08-13T14:46:49.013973Z",
+    "modified": "2024-08-13T14:46:49.013973Z",
+    "name": "Access of Uninitialized Pointer",
+    "description": "The product accesses or uses a pointer that has not been initialized.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "824"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-09-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "LLM product has a free of an uninitialized pointer",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-32878",
+            "reference": "CVE-2024-32878"
+        },
+        {
+            "description": "chain: unchecked return value (CWE-252) leads to free of invalid, uninitialized pointer (CWE-824).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-0211",
+            "reference": "CVE-2010-0211"
+        },
+        {
+            "description": "Pointer in structure is not initialized, leading to NULL pointer dereference (CWE-476) and system crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2768",
+            "reference": "CVE-2009-2768"
+        },
+        {
+            "description": "Free of an uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1721",
+            "reference": "CVE-2009-1721"
+        },
+        {
+            "description": "Improper handling of invalid signatures leads to free of invalid pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1415",
+            "reference": "CVE-2009-1415"
+        },
+        {
+            "description": "Invalid encoding triggers free of uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0846",
+            "reference": "CVE-2009-0846"
+        },
+        {
+            "description": "Crafted PNG image leads to free of uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0040",
+            "reference": "CVE-2009-0040"
+        },
+        {
+            "description": "Crafted GIF image leads to free of uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2934",
+            "reference": "CVE-2008-2934"
+        },
+        {
+            "description": "Access of uninitialized pointer might lead to code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4682",
+            "reference": "CVE-2007-4682"
+        },
+        {
+            "description": "Step-based manipulation: invocation of debugging function before the primary initialization function leads to access of an uninitialized pointer and code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4639",
+            "reference": "CVE-2007-4639"
+        },
+        {
+            "description": "Unchecked return values can lead to a write to an uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4000",
+            "reference": "CVE-2007-4000"
+        },
+        {
+            "description": "zero-length input leads to free of uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2442",
+            "reference": "CVE-2007-2442"
+        },
+        {
+            "description": "Crafted font leads to uninitialized function pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1213",
+            "reference": "CVE-2007-1213"
+        },
+        {
+            "description": "Uninitialized function pointer in freed memory is invoked",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6143",
+            "reference": "CVE-2006-6143"
+        },
+        {
+            "description": "LDAP server mishandles malformed BER queries, leading to free of uninitialized memory",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4175",
+            "reference": "CVE-2006-4175"
+        },
+        {
+            "description": "Firewall can crash with certain ICMP packets that trigger access of an uninitialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-0054",
+            "reference": "CVE-2006-0054"
+        },
+        {
+            "description": "LDAP server does not initialize members of structs, which leads to free of uninitialized pointer if an LDAP request fails.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1201",
+            "reference": "CVE-2003-1201"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "125",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "787",
+            "nature": "CanPrecede"
+        }
+    ]
+}

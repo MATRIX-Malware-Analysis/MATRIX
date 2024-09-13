@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b438e8fd-3a53-4794-8848-ec5a3c312799",
+    "created": "2024-08-13T14:46:48.933004Z",
+    "modified": "2024-08-13T14:46:48.933004Z",
+    "name": "Modification of Assumed-Immutable Data (MAID)",
+    "description": "The product does not properly protect an assumed-immutable element from being modified by an attacker.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "471"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Relies on $PHP_SELF variable for authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1757",
+            "reference": "CVE-2002-1757"
+        },
+        {
+            "description": "Gain privileges by modifying assumed-immutable code addresses that are accessed by a driver.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1905",
+            "reference": "CVE-2005-1905"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When the data is stored or transmitted through untrusted sources that could modify the data, implement integrity checks to detect unauthorized modification, or store/transmit the data in a trusted location that is free from external influence.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

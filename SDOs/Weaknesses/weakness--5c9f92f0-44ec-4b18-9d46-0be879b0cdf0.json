@@ -1,0 +1,164 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5c9f92f0-44ec-4b18-9d46-0be879b0cdf0",
+    "created": "2024-08-13T14:46:48.768321Z",
+    "modified": "2024-08-13T14:46:48.768321Z",
+    "name": "Out-of-bounds Read",
+    "description": "The product reads data past the end, or before the beginning, of the intended buffer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "125"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Out-of-bounds read in IP stack used in embedded systems, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-11899",
+            "reference": "CVE-2020-11899"
+        },
+        {
+            "description": "Chain: \"Heartbleed\" bug receives an inconsistent length parameter (CWE-130) enabling an out-of-bounds read (CWE-126), returning memory that could include private cryptographic keys and other sensitive data.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-0160",
+            "reference": "CVE-2014-0160"
+        },
+        {
+            "description": "HTML conversion package has a buffer under-read, allowing a crash",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-40985",
+            "reference": "CVE-2021-40985"
+        },
+        {
+            "description": "Chain: unexpected sign extension (CWE-194) leads to integer overflow (CWE-190), causing an out-of-bounds read (CWE-125)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-10887",
+            "reference": "CVE-2018-10887"
+        },
+        {
+            "description": "Chain: product does not handle when an input string is not NULL terminated (CWE-170), leading to buffer over-read (CWE-125) or heap-based buffer overflow (CWE-122).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2523",
+            "reference": "CVE-2009-2523"
+        },
+        {
+            "description": "Chain: series of floating-point precision errors\n\t      (CWE-1339) in a web browser rendering engine causes out-of-bounds read\n\t      (CWE-125), giving access to cross-origin data",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-16069",
+            "reference": "CVE-2018-16069"
+        },
+        {
+            "description": "out-of-bounds read due to improper length check",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0112",
+            "reference": "CVE-2004-0112"
+        },
+        {
+            "description": "packet with large number of specified elements cause out-of-bounds read.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0183",
+            "reference": "CVE-2004-0183"
+        },
+        {
+            "description": "packet with large number of specified elements cause out-of-bounds read.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0221",
+            "reference": "CVE-2004-0221"
+        },
+        {
+            "description": "out-of-bounds read, resultant from integer underflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0184",
+            "reference": "CVE-2004-0184"
+        },
+        {
+            "description": "large length value causes out-of-bounds read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1940",
+            "reference": "CVE-2004-1940"
+        },
+        {
+            "description": "malformed image causes out-of-bounds read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0421",
+            "reference": "CVE-2004-0421"
+        },
+        {
+            "description": "OS kernel trusts userland-supplied length value, allowing reading of sensitive information",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4113",
+            "reference": "CVE-2008-4113"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a language that provides appropriate memory abstractions.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1034"
+        },
+        {
+            "external_reference_id": "REF-1035"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        }
+    ]
+}

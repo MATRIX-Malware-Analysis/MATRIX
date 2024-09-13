@@ -1,0 +1,139 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f79ef2b8-4b7a-474b-a1fd-b2cea7a885ae",
+    "created": "2024-08-13T14:46:48.99611Z",
+    "modified": "2024-08-13T14:46:48.99611Z",
+    "name": "Improper Check for Unusual or Exceptional Conditions",
+    "description": "The product does not check or incorrectly checks for unusual or exceptional conditions that are not expected to occur frequently during day to day operation of the product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "754"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-03-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis may be useful for detecting unusual conditions involving system resources or common programming idioms, but not for violations of business rules.",
+            "effectiveness": "Moderate",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Identify error conditions that are not likely to occur during normal usage and trigger them. For example, run the program under low memory conditions, run with insufficient privileges or permissions, interrupt a transaction before it is completed, or disable connectivity to basic network services such as DNS. Monitor the software for any unexpected behavior. If you trigger an unhandled exception or similar error that was discovered and handled by the application's environment, it may still indicate unexpected conditions that were not handled by the application itself.",
+            "effectiveness": null,
+            "method": "Manual Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: function in web caching proxy does not correctly check a return value (CWE-253) leading to a reachable assertion (CWE-617)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-49286",
+            "reference": "CVE-2023-49286"
+        },
+        {
+            "description": "Unchecked return value leads to resultant integer overflow and code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3798",
+            "reference": "CVE-2007-3798"
+        },
+        {
+            "description": "Program does not check return value when invoking functions to drop privileges, which could leave users with higher privileges than expected by forcing those functions to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4447",
+            "reference": "CVE-2006-4447"
+        },
+        {
+            "description": "Program does not check return value when invoking functions to drop privileges, which could leave users with higher privileges than expected by forcing those functions to fail.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2916",
+            "reference": "CVE-2006-2916"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Check the results of all functions that return a value and verify that the value is expected.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "If using exception handling, catch and throw specific exceptions instead of overly-general exceptions (CWE-396, CWE-397). Catch and handle exceptions as locally as possible so that exceptions do not propagate too far up the call stack (CWE-705). Avoid unchecked or uncaught exceptions where feasible (CWE-248).",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If the program must fail, ensure that it fails gracefully (fails closed). There may be a temptation to simply let the program fail poorly in cases such as low memory conditions, but an attacker may be able to assert control before the software has fully exited. Alternately, an uncontrolled failure could cause cascading problems with other downstream components; for example, the program could send a signal to a downstream process so the process immediately knows that a problem has occurred and has a better chance of recovery.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use system limits, which should help to prevent resource exhaustion. However, the product should still handle low resource conditions since they may still occur.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-622"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "416",
+            "nature": "CanPrecede"
+        }
+    ]
+}

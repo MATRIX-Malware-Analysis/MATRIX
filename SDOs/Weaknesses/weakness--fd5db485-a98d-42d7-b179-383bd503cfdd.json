@@ -1,0 +1,156 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fd5db485-a98d-42d7-b179-383bd503cfdd",
+    "created": "2024-08-13T14:46:48.969574Z",
+    "modified": "2024-08-13T14:46:48.969574Z",
+    "name": "UNIX Symbolic Link (Symlink) Following",
+    "description": "The product, when opening a file or directory, does not sufficiently account for when the file is a symbolic link that resolves to a target outside of the intended control sphere. This could allow an attacker to cause the product to operate on unauthorized files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "61"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Some versions of Perl follow symbolic links when running with the -e option, which allows local users to overwrite arbitrary files via a symlink attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1386",
+            "reference": "CVE-1999-1386"
+        },
+        {
+            "description": "Text editor follows symbolic links when creating a rescue copy during an abnormal exit, which allows local users to overwrite the files of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1178",
+            "reference": "CVE-2000-1178"
+        },
+        {
+            "description": "Antivirus update allows local users to create or append to arbitrary files via a symlink attack on a logfile.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0217",
+            "reference": "CVE-2004-0217"
+        },
+        {
+            "description": "Symlink attack allows local users to overwrite files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0517",
+            "reference": "CVE-2003-0517"
+        },
+        {
+            "description": "Possible interesting example",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0689",
+            "reference": "CVE-2004-0689"
+        },
+        {
+            "description": "Second-order symlink vulnerabilities",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1879",
+            "reference": "CVE-2005-1879"
+        },
+        {
+            "description": "Second-order symlink vulnerabilities",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1880",
+            "reference": "CVE-2005-1880"
+        },
+        {
+            "description": "Symlink in Python program",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1916",
+            "reference": "CVE-2005-1916"
+        },
+        {
+            "description": "Setuid product allows file reading by replacing a file being edited with a symlink to the targeted file, leaking the result in error messages when parsing fails.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0972",
+            "reference": "CVE-2000-0972"
+        },
+        {
+            "description": "Signal causes a dump that follows symlinks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0824",
+            "reference": "CVE-2005-0824"
+        },
+        {
+            "description": "A Libcontainer used in Docker Engine allows local users to escape containerization and write to an arbitrary file on the host system via a symlink attack in an image when respawning a container.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-3629",
+            "reference": "CVE-2015-3629"
+        },
+        {
+            "description": "In a MySQL database deployment tool, users may craft a maliciously packaged tarball that contains symlinks to files external to the target and once unpacked, will execute.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-26277",
+            "reference": "CVE-2020-26277"
+        },
+        {
+            "description": "\"Zip Slip\" vulnerability in Go-based Open Container Initiative (OCI) registries product allows writing arbitrary files outside intended directory via symbolic links or hard links in a gzipped tarball.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21272",
+            "reference": "CVE-2021-21272"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Symbolic link attacks often occur when a program creates a tmp directory that stores files/links. Access to the directory should be restricted to the program as to prevent attackers from manipulating the files.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-493"
+        },
+        {
+            "external_reference_id": "REF-494"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "59",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "362",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "340",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "386",
+            "nature": "Requires"
+        },
+        {
+            "cwe_id": "732",
+            "nature": "Requires"
+        }
+    ]
+}

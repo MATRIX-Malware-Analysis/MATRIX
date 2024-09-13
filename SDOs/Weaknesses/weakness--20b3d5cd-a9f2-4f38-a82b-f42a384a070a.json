@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--20b3d5cd-a9f2-4f38-a82b-f42a384a070a",
+    "created": "2024-08-13T14:46:48.931198Z",
+    "modified": "2024-08-13T14:46:48.931198Z",
+    "name": "Addition of Data Structure Sentinel",
+    "description": "The accidental addition of a data-structure sentinel can cause serious programming logic problems.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "464"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Encapsulate the user from interacting with data sentinels. Validate user input to verify that sentinels are not present.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Proper error checking can reduce the risk of inadvertently introducing sentinel values into data. For example, if a parsing function fails or encounters an error, it might return a value that is the same as the sentinel.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use an abstraction library to abstract away risky APIs. This is not a complete solution.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use OS-level preventative functionality. This is not a complete solution.",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "138",
+            "nature": "ChildOf"
+        }
+    ]
+}

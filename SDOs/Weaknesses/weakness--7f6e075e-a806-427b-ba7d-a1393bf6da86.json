@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7f6e075e-a806-427b-ba7d-a1393bf6da86",
+    "created": "2024-08-13T14:46:48.949791Z",
+    "modified": "2024-08-13T14:46:48.949791Z",
+    "name": "Java Runtime Error Message Containing Sensitive Information",
+    "description": "In many cases, an attacker can leverage the conditions that cause unhandled exception errors in order to gain unauthorized access to the system.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "537"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Do not expose sensitive error information to the user.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "211",
+            "nature": "ChildOf"
+        }
+    ]
+}

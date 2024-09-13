@@ -1,0 +1,77 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8c6852d6-5196-435d-89d7-059a4749d82e",
+    "created": "2024-08-13T14:46:48.973393Z",
+    "modified": "2024-08-13T14:46:48.973393Z",
+    "name": "Improper Validation of Function Hook Arguments",
+    "description": "The product adds hooks to user-accessible API functions, but it does not properly validate the arguments. This could lead to resultant vulnerabilities.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "622"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "DoS in firewall using standard Microsoft functions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0708",
+            "reference": "CVE-2007-0708"
+        },
+        {
+            "description": "DoS in firewall using standard Microsoft functions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7160",
+            "reference": "CVE-2006-7160"
+        },
+        {
+            "description": "function does not verify that its argument is the proper type, leading to arbitrary memory write",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1376",
+            "reference": "CVE-2007-1376"
+        },
+        {
+            "description": "invalid syscall arguments bypass code execution limits",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1220",
+            "reference": "CVE-2007-1220"
+        },
+        {
+            "description": "DoS in IDS via NULL argument",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4541",
+            "reference": "CVE-2006-4541"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that all arguments are verified, as defined by the API you are protecting.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Drop privileges before invoking such functions, if possible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

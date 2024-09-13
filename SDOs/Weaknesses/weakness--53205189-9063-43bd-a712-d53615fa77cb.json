@@ -1,0 +1,124 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--53205189-9063-43bd-a712-d53615fa77cb",
+    "created": "2024-08-13T14:46:48.895094Z",
+    "modified": "2024-08-13T14:46:48.895094Z",
+    "name": "Inadequate Encryption Strength",
+    "description": "The product stores or transmits sensitive data using an encryption scheme that is theoretically sound, but is not strong enough for the level of protection required.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "326"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Weak encryption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1546",
+            "reference": "CVE-2001-1546"
+        },
+        {
+            "description": "Weak encryption (chosen plaintext attack)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2172",
+            "reference": "CVE-2004-2172"
+        },
+        {
+            "description": "Weak encryption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1682",
+            "reference": "CVE-2002-1682"
+        },
+        {
+            "description": "Weak encryption produces same ciphertext from the same plaintext blocks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1697",
+            "reference": "CVE-2002-1697"
+        },
+        {
+            "description": "Weak encryption",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1739",
+            "reference": "CVE-2002-1739"
+        },
+        {
+            "description": "Weak encryption scheme",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2281",
+            "reference": "CVE-2005-2281"
+        },
+        {
+            "description": "Weak encryption (XOR)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1872",
+            "reference": "CVE-2002-1872"
+        },
+        {
+            "description": "Weak encryption (reversible algorithm).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1910",
+            "reference": "CVE-2002-1910"
+        },
+        {
+            "description": "Weak encryption (one-to-one mapping).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1946",
+            "reference": "CVE-2002-1946"
+        },
+        {
+            "description": "Encryption error uses fixed salt, simplifying brute force / dictionary attacks (overlaps randomness).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1975",
+            "reference": "CVE-2002-1975"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use an encryption scheme that is currently considered to be strong by experts in the field.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

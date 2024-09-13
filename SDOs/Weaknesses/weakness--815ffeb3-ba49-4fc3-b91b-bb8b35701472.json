@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--815ffeb3-ba49-4fc3-b91b-bb8b35701472",
+    "created": "2024-08-13T14:46:48.728677Z",
+    "modified": "2024-08-13T14:46:48.728677Z",
+    "name": "Comparison Using Wrong Factors",
+    "description": "The code performs a comparison between two entities, but the comparison examines the wrong factors or characteristics of the entities, which can lead to incorrect results and resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1025"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-01-04",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Thoroughly test the comparison scheme before deploying code into production. Perform positive testing as well as negative testing.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "697",
+            "nature": "ChildOf"
+        }
+    ]
+}

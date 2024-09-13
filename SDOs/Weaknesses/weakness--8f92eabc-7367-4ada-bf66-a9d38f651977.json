@@ -1,0 +1,322 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8f92eabc-7367-4ada-bf66-a9d38f651977",
+    "created": "2024-08-13T14:46:48.905833Z",
+    "modified": "2024-08-13T14:46:48.905833Z",
+    "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+    "description": "The product contains a code sequence that can run concurrently with other code, and the code sequence requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence that is operating concurrently.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "362"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Black box methods may be able to identify evidence of race conditions via methods such as multiple simultaneous connections, which may cause the software to become instable or crash. However, race conditions with very narrow timing windows would not be detectable.",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "Common idioms are detectable in white box analysis, such as time-of-check-time-of-use (TOCTOU) file operations (CWE-367), or double-checked locking (CWE-609).",
+            "effectiveness": null,
+            "method": "White Box"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Moderate",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Go application for cloud management creates a world-writable sudoers file that allows local attackers to inject sudo rules and escalate privileges to root by winning a race condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29527",
+            "reference": "CVE-2022-29527"
+        },
+        {
+            "description": "Chain: improper locking (CWE-667) leads to race condition (CWE-362), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-1782",
+            "reference": "CVE-2021-1782"
+        },
+        {
+            "description": "Chain: mobile platform race condition (CWE-362) leading to use-after-free (CWE-416), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-0920",
+            "reference": "CVE-2021-0920"
+        },
+        {
+            "description": "Chain: race condition (CWE-362) leads to use-after-free (CWE-416), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-6819",
+            "reference": "CVE-2020-6819"
+        },
+        {
+            "description": "chain: JTAG interface is not disabled (CWE-1191) during ROM code execution, introducing a race condition (CWE-362) to extract encryption keys",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-18827",
+            "reference": "CVE-2019-18827"
+        },
+        {
+            "description": "Chain: race condition (CWE-362) in anti-malware product allows deletion of files by creating a junction (CWE-1386) and using hard links during the time window in which a temporary file is created and deleted.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1161",
+            "reference": "CVE-2019-1161"
+        },
+        {
+            "description": "TOCTOU in sandbox process allows installation of untrusted browser add-ons by replacing a file after it has been verified, but before it is executed",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-1743",
+            "reference": "CVE-2015-1743"
+        },
+        {
+            "description": "Chain: chipset has a race condition (CWE-362) between when an interrupt handler detects an attempt to write-enable the BIOS (in violation of the lock bit), and when the handler resets the write-enable bit back to 0, allowing attackers to issue BIOS writes during the timing window [REF-1237].",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-8273",
+            "reference": "CVE-2014-8273"
+        },
+        {
+            "description": "Race condition leading to a crash by calling a hook removal procedure while other activities are occurring at the same time.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5044",
+            "reference": "CVE-2008-5044"
+        },
+        {
+            "description": "chain: time-of-check time-of-use (TOCTOU) race condition in program allows bypass of protection mechanism that was designed to prevent symlink attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2958",
+            "reference": "CVE-2008-2958"
+        },
+        {
+            "description": "chain: time-of-check time-of-use (TOCTOU) race condition in program allows bypass of protection mechanism that was designed to prevent symlink attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1570",
+            "reference": "CVE-2008-1570"
+        },
+        {
+            "description": "Unsynchronized caching operation enables a race condition that causes messages to be sent to a deallocated object.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0058",
+            "reference": "CVE-2008-0058"
+        },
+        {
+            "description": "Race condition during initialization triggers a buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0379",
+            "reference": "CVE-2008-0379"
+        },
+        {
+            "description": "Daemon crash by quickly performing operations and undoing them, which eventually leads to an operation that does not acquire a lock.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6599",
+            "reference": "CVE-2007-6599"
+        },
+        {
+            "description": "chain: race condition triggers NULL pointer dereference",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6180",
+            "reference": "CVE-2007-6180"
+        },
+        {
+            "description": "Race condition in library function could cause data to be sent to the wrong process.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5794",
+            "reference": "CVE-2007-5794"
+        },
+        {
+            "description": "Race condition in file parser leads to heap corruption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3970",
+            "reference": "CVE-2007-3970"
+        },
+        {
+            "description": "chain: race condition allows attacker to access an object while it is still being initialized, causing software to access uninitialized memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5021",
+            "reference": "CVE-2008-5021"
+        },
+        {
+            "description": "chain: race condition for an argument value, possibly resulting in NULL dereference",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-4895",
+            "reference": "CVE-2009-4895"
+        },
+        {
+            "description": "chain: race condition might allow resource to be released before operating on it, leading to NULL dereference",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3547",
+            "reference": "CVE-2009-3547"
+        },
+        {
+            "description": "Chain: Signal handler contains too much functionality (CWE-828), introducing a race condition (CWE-362) that leads to a double free (CWE-415).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5051",
+            "reference": "CVE-2006-5051"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "In languages that support it, use synchronization primitives. Only wrap these around critical code to minimize the impact on performance.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use thread-safe capabilities such as the data access abstraction in Spring.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using multithreading and operating on shared variables, only use thread-safe functions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use atomic operations on shared variables. Be wary of innocent-looking constructs such as \"x++\". This may appear atomic at the code layer, but it is actually non-atomic at the instruction layer, since it involves a read, followed by a computation, followed by a write.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a mutex if available, but be sure to avoid related weaknesses such as CWE-412.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Avoid double-checked locking (CWE-609) and other implementation errors that arise when trying to avoid the overhead of synchronization.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Disable interrupts or signals over critical parts of the code, but also make sure that the code does not go into a large or infinite loop.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use the volatile type modifier for critical variables to avoid unexpected compiler optimization or reordering. This does not necessarily solve the synchronization problem, but it can help.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-349"
+        },
+        {
+            "external_reference_id": "REF-350"
+        },
+        {
+            "external_reference_id": "REF-351"
+        },
+        {
+            "external_reference_id": "REF-352"
+        },
+        {
+            "external_reference_id": "REF-353"
+        },
+        {
+            "external_reference_id": "REF-354"
+        },
+        {
+            "external_reference_id": "REF-355"
+        },
+        {
+            "external_reference_id": "REF-356"
+        },
+        {
+            "external_reference_id": "REF-357"
+        },
+        {
+            "external_reference_id": "REF-76"
+        },
+        {
+            "external_reference_id": "REF-1237"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "416",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "476",
+            "nature": "CanPrecede"
+        }
+    ]
+}

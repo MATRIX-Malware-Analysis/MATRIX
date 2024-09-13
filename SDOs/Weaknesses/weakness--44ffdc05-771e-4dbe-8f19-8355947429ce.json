@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--44ffdc05-771e-4dbe-8f19-8355947429ce",
+    "created": "2024-08-13T14:46:48.914067Z",
+    "modified": "2024-08-13T14:46:48.914067Z",
+    "name": "Declaration of Throws for Generic Exception",
+    "description": "Throwing overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "397"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-961"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "705",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "221",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        }
+    ]
+}

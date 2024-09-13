@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7adb89cd-1e30-40c3-af13-4dc9ff63c3ac",
+    "created": "2024-08-13T14:46:48.928739Z",
+    "modified": "2024-08-13T14:46:48.928739Z",
+    "name": "Non-exit on Failed Initialization",
+    "description": "The product does not exit or otherwise modify its operation when security-relevant errors occur during initialization, such as when a configuration file has a format error or a hardware security module (HSM) cannot be activated, which can cause the product to execute in a less secure fashion than intended by the administrator.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "455"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not trigger a fatal error if missing or invalid ACLs are in a configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1345",
+            "reference": "CVE-2005-1345"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Follow the principle of failing securely when an error occurs. The system should enter a state where it is not vulnerable and will not display sensitive error messages to a potential attacker.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "705",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "636",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--de9f5701-9991-42d6-baef-6e7822af26a4",
+    "created": "2024-08-13T14:46:48.793971Z",
+    "modified": "2024-08-13T14:46:48.793971Z",
+    "name": "Inefficient Regular Expression Complexity",
+    "description": "The product uses a regular expression with an inefficient, possibly exponential worst-case computational complexity that consumes excessive CPU cycles.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1333"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-01-17",
+            "submission_name": "Anonymous External Contributor",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "server allows ReDOS with crafted User-Agent strings, due to overlapping capture groups that cause excessive backtracking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-5243",
+            "reference": "CVE-2020-5243"
+        },
+        {
+            "description": "npm package for user-agent parser prone to ReDoS due to overlapping capture groups",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21317",
+            "reference": "CVE-2021-21317"
+        },
+        {
+            "description": "Markdown parser uses inefficient regex when processing a message, allowing users to cause CPU consumption and delay preventing processing of other messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-16215",
+            "reference": "CVE-2019-16215"
+        },
+        {
+            "description": "Long string in a version control product allows DoS due to an inefficient regex.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-6785",
+            "reference": "CVE-2019-6785"
+        },
+        {
+            "description": "Javascript code allows ReDoS via a long string due to excessive backtracking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-12041",
+            "reference": "CVE-2019-12041"
+        },
+        {
+            "description": "ReDoS when parsing time.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-8315",
+            "reference": "CVE-2015-8315"
+        },
+        {
+            "description": "ReDoS when parsing documents.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-8854",
+            "reference": "CVE-2015-8854"
+        },
+        {
+            "description": "ReDoS when validating URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-16021",
+            "reference": "CVE-2017-16021"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use regular expressions that do not support backtracking, e.g. by removing nested quantifiers.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Set backtracking limits in the configuration of the regular expression implementation, such as PHP's pcre.backtrack_limit. Also consider limits on execution time for the process.",
+            "effectiveness": "Moderate",
+            "phase": "System Configuration"
+        },
+        {
+            "description": "Do not use regular expressions with untrusted input. If regular expressions must be used, avoid using backtracking in the expression.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Limit the length of the input that the regular expression will process.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1180"
+        },
+        {
+            "external_reference_id": "REF-1162"
+        },
+        {
+            "external_reference_id": "REF-1163"
+        },
+        {
+            "external_reference_id": "REF-1164"
+        },
+        {
+            "external_reference_id": "REF-1165"
+        },
+        {
+            "external_reference_id": "REF-1166"
+        },
+        {
+            "external_reference_id": "REF-1167"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "407",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "407",
+            "nature": "ChildOf"
+        }
+    ]
+}

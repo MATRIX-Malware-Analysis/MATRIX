@@ -1,0 +1,93 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a3cf3b64-1e19-4fd9-9621-5ea51ce660da",
+    "created": "2024-08-13T14:46:48.978876Z",
+    "modified": "2024-08-13T14:46:48.978876Z",
+    "name": "Incorrect Use of Privileged APIs",
+    "description": "The product does not conform to the API requirements for a function call that requires extra privileges. This could allow attackers to gain privileges by causing the function to be called incorrectly.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "648"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A Unix utility that displays online help files, if installed setuid, could allow a local attacker to gain privileges when a particular file-opening function is called.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0645",
+            "reference": "CVE-2003-0645"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Before calling privileged APIs, always ensure that the assumptions made by the privileged code hold true prior to making the call.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Know architecture and implementation weaknesses of the privileged APIs and make sure to account for these weaknesses before calling the privileged APIs to ensure that they can be called safely.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If privileged APIs make certain assumptions about data, context or state validity that are passed by the caller, the calling code must ensure that these assumptions have been validated prior to making the call.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If privileged APIs do not shed their privilege prior to returning to the calling code, then calling code needs to shed these privileges immediately and safely right after the call to the privileged APIs. In particular, the calling code needs to ensure that a privileged thread of execution will never be returned to the user or made available to user-controlled processes.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Only call privileged APIs from safe, consistent and expected state.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that a failure or an error will not leave a system in a state where privileges are not properly shed and privilege escalation is possible (i.e. fail securely with regards to handling of privileges).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "269",
+            "nature": "ChildOf"
+        }
+    ]
+}

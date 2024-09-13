@@ -1,0 +1,77 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1cf9ba4d-4c8b-464c-9d9c-117f149afc87",
+    "created": "2024-08-13T14:46:48.793141Z",
+    "modified": "2024-08-13T14:46:48.793141Z",
+    "name": "Remanent Data Readable after Memory Erase",
+    "description": "Confidential information stored in memory circuits is readable or recoverable after being cleared or erased.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1330"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-10",
+            "submission_name": "Hareesh Khattri, Arun Kanuparthi, Parbati K. Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n\t\t\t\t\t",
+            "effectiveness": null,
+            "method": "Architecture or Design Review"
+        },
+        {
+            "description": "\n\t\t\t\t\t",
+            "effectiveness": null,
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Firmware Data Deletion Vulnerability in which a base station factory reset might not delete all user information. The impact of this enables a new owner of a used device that has been \"factory-default reset\" with a vulnerable firmware version can still retrieve, at least, the previous owner's wireless network name, and the previous owner's wireless security (such as WPA2) key. This issue was addressed with improved, data deletion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-8575",
+            "reference": "CVE-2019-8575"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n\t\t\t\t\t",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1154"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1301",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1301",
+            "nature": "ChildOf"
+        }
+    ]
+}

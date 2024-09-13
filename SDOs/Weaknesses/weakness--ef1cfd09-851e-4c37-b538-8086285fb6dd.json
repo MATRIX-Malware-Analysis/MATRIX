@@ -1,0 +1,47 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ef1cfd09-851e-4c37-b538-8086285fb6dd",
+    "created": "2024-08-13T14:46:48.747094Z",
+    "modified": "2024-08-13T14:46:48.747094Z",
+    "name": "Reliance on Machine-Dependent Data Representation",
+    "description": "The code uses a data representation that relies on low-level\n\t\t\t\t\tdata representation or constructs that may vary across different processors,\n\t\t\t\t\tphysical machines, OSes, or other physical components.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1102"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-963"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "758",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1105",
+            "nature": "PeerOf"
+        }
+    ]
+}

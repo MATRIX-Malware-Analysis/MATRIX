@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6d823f39-71fa-412e-8b93-66e8874b1411",
+    "created": "2024-08-13T14:46:48.879459Z",
+    "modified": "2024-08-13T14:46:48.879459Z",
+    "name": "Improper Handling of Insufficient Privileges",
+    "description": "The product does not handle or incorrectly handles when it has insufficient privileges to perform an operation, leading to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "274"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "System limits are not properly enforced after privileges are dropped.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1564",
+            "reference": "CVE-2001-1564"
+        },
+        {
+            "description": "Firewall crashes when it can't read a critical memory block that was protected by a malicious process.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3286",
+            "reference": "CVE-2005-3286"
+        },
+        {
+            "description": "Does not give admin sufficient privileges to overcome otherwise legitimate user actions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1641",
+            "reference": "CVE-2005-1641"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "755",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "269",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "271",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "280",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

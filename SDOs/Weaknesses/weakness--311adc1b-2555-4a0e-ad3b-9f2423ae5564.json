@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--311adc1b-2555-4a0e-ad3b-9f2423ae5564",
+    "created": "2024-08-13T14:46:48.735043Z",
+    "modified": "2024-08-13T14:46:48.735043Z",
+    "name": "Insufficient Technical Documentation",
+    "description": "The product does not contain sufficient\n         technical or engineering documentation (whether on paper or\n         in electronic form) that contains descriptions of all the\n         relevant software/hardware elements of the product, such as\n         its usage, structure, architectural components, interfaces, design, implementation,\n         configuration, operation, etc.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1059"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Other"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Other"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A wireless access point manual specifies that the only method of configuration is via web interface (CWE-1059), but there is an undisclosed telnet server that was activated by default (CWE-912).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-3203",
+            "reference": "CVE-2022-3203"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that design documentation is detailed enough to allow for post-manufacturing verification.",
+            "effectiveness": null,
+            "phase": "Documentation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1248"
+        },
+        {
+            "external_reference_id": "REF-1254"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e5d38c93-83b7-42da-ac27-491df625427c",
+    "created": "2024-08-13T14:46:48.775099Z",
+    "modified": "2024-08-13T14:46:48.775099Z",
+    "name": "Product Released in Non-Release Configuration",
+    "description": "The product released to market is released in pre-production or manufacturing configuration.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1269"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Other",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Other",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-31",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Regarding SSA-686531, a hardware based manufacturing access on S7-1200 and\nS7-200 SMART has occurred. A vulnerability has been identified in SIMATIC S7-1200 CPU family (incl. SIPLUS variants) (All versions), SIMATIC S7-200 SMART CPU family (All versions). There is an access mode used during manufacturing of S7-1200 CPUs that allows additional diagnostic functionality. The security vulnerability could be exploited by an attacker with physical access to the UART interface during boot process. At the time of advisory publication, no public exploitation of this security vulnerability was known.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-13945",
+            "reference": "CVE-2019-13945"
+        },
+        {
+            "description": "Laptops with Intel chipsets were found to be running in Manufacturing Mode. After this information was reported to the OEM, the vulnerability (CVE-2018-4251) was patched disallowing access to the interface.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-4251",
+            "reference": "CVE-2018-4251"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that there exists a marker for denoting the Manufacturing Complete stage and that the Manufacturing Complete marker gets updated at the Manufacturing Complete stage (i.e., the Manufacturing Complete fuse gets blown).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that there exists a marker for denoting the Manufacturing Complete stage and that the Manufacturing Complete marker gets updated at the Manufacturing Complete stage (i.e., the Manufacturing Complete fuse gets blown).",
+            "effectiveness": null,
+            "phase": "Integration"
+        },
+        {
+            "description": "Ensure that there exists a marker for denoting the Manufacturing Complete stage and that the Manufacturing Complete marker gets updated at the Manufacturing Complete stage (i.e., the Manufacturing Complete fuse gets blown).",
+            "effectiveness": null,
+            "phase": "Manufacturing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1103"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

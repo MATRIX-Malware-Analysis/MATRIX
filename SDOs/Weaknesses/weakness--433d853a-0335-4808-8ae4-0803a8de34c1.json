@@ -1,0 +1,77 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--433d853a-0335-4808-8ae4-0803a8de34c1",
+    "created": "2024-08-13T14:46:48.812289Z",
+    "modified": "2024-08-13T14:46:48.812289Z",
+    "name": "Improper Handling of Unicode Encoding",
+    "description": "The product does not properly handle when an input contains Unicode encoding.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "176"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server allows remote attackers to read documents outside of the web root, and possibly execute arbitrary commands, via malformed URLs that contain Unicode encoded characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0884",
+            "reference": "CVE-2000-0884"
+        },
+        {
+            "description": "Server allows a remote attacker to obtain source code of ASP files via a URL encoded with Unicode.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0709",
+            "reference": "CVE-2001-0709"
+        },
+        {
+            "description": "Overlaps interaction error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0669",
+            "reference": "CVE-2001-0669"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid making decisions based on names of resources (e.g. files) if those resources can have alternate names.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "172",
+            "nature": "ChildOf"
+        }
+    ]
+}

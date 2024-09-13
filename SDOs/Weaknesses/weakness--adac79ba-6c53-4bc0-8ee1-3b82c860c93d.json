@@ -1,0 +1,121 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--adac79ba-6c53-4bc0-8ee1-3b82c860c93d",
+    "created": "2024-08-13T14:46:49.024685Z",
+    "modified": "2024-08-13T14:46:49.024685Z",
+    "name": "Improper Control of Dynamically-Identified Variables",
+    "description": "The product does not properly restrict reading from or writing to dynamically-identified variables.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "914"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-01-26",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "extract issue enables file inclusion",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7135",
+            "reference": "CVE-2006-7135"
+        },
+        {
+            "description": "Chain: extract used for register_globals compatibility layer, enables path traversal (CWE-22)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7079",
+            "reference": "CVE-2006-7079"
+        },
+        {
+            "description": "extract() buried in include files makes post-disclosure analysis confusing; original report had seemed incorrect.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0649",
+            "reference": "CVE-2007-0649"
+        },
+        {
+            "description": "extract() enables static code injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6661",
+            "reference": "CVE-2006-6661"
+        },
+        {
+            "description": "import_request_variables() buried in include files makes post-disclosure analysis confusing",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2828",
+            "reference": "CVE-2006-2828"
+        },
+        {
+            "description": "Chain: Dynamic variable evaluation allows resultant remote file inclusion and path traversal.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0422",
+            "reference": "CVE-2009-0422"
+        },
+        {
+            "description": "Chain: dynamic variable evaluation in PHP program used to modify critical, unexpected $_SERVER variable for resultant XSS.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2431",
+            "reference": "CVE-2007-2431"
+        },
+        {
+            "description": "Chain: dynamic variable evaluation in PHP program used to conduct remote file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4904",
+            "reference": "CVE-2006-4904"
+        },
+        {
+            "description": "Dynamic variable evaluation in mail program allows reading and modifying attachments and preferences of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4019",
+            "reference": "CVE-2006-4019"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "For any externally-influenced input, check the input against an allowlist of internal program variables that are allowed to be modified.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Refactor the code so that internal program variables do not need to be dynamically identified.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "99",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "913",
+            "nature": "ChildOf"
+        }
+    ]
+}

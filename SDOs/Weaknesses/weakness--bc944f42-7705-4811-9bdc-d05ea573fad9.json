@@ -1,0 +1,73 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bc944f42-7705-4811-9bdc-d05ea573fad9",
+    "created": "2024-08-13T14:46:48.980674Z",
+    "modified": "2024-08-13T14:46:48.980674Z",
+    "name": "Reliance on a Single Factor in a Security Decision",
+    "description": "A protection mechanism relies exclusively, or to a large extent, on the evaluation of a single condition or the integrity of a single object or entity in order to make a decision about granting access to restricted resources or functionality.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "654"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-18",
+            "submission_name": "Pascal Meunier",
+            "submission_organization": "Purdue University"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chat application skips validation when Central Authentication Service\n\t\t\t (CAS) is enabled, effectively removing the second factor from\n\t\t\t two-factor authentication",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-35248",
+            "reference": "CVE-2022-35248"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use multiple simultaneous checks before granting access to critical operations or granting critical privileges. A weaker but helpful mitigation is to use several successive checks (multiple layers of security).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use redundant access rules on different choke points (e.g., firewalls).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-196"
+        },
+        {
+            "external_reference_id": "REF-535"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "657",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

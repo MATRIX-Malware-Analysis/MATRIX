@@ -1,0 +1,38 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a4ac6a44-c645-47dd-9ec2-fd40be174705",
+    "created": "2024-08-13T14:46:49.00794Z",
+    "modified": "2024-08-13T14:46:49.00794Z",
+    "name": "Improper Filtering of Special Elements",
+    "description": "The product receives data from an upstream component, but does not filter or incorrectly filters special elements before sending it to a downstream component.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "790"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-12-04",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "138",
+            "nature": "ChildOf"
+        }
+    ]
+}

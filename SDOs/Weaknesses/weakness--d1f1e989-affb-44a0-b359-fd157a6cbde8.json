@@ -1,0 +1,272 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d1f1e989-affb-44a0-b359-fd157a6cbde8",
+    "created": "2024-08-13T14:46:48.963781Z",
+    "modified": "2024-08-13T14:46:48.963781Z",
+    "name": "Improper Link Resolution Before File Access ('Link Following')",
+    "description": "The product attempts to access a file based on the filename, but it does not properly prevent that filename from identifying a link or shortcut that resolves to an unintended resource.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "59"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Some versions of Perl follow symbolic links when running with the -e option, which allows local users to overwrite arbitrary files via a symlink attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1386",
+            "reference": "CVE-1999-1386"
+        },
+        {
+            "description": "Text editor follows symbolic links when creating a rescue copy during an abnormal exit, which allows local users to overwrite the files of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1178",
+            "reference": "CVE-2000-1178"
+        },
+        {
+            "description": "Antivirus update allows local users to create or append to arbitrary files via a symlink attack on a logfile.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0217",
+            "reference": "CVE-2004-0217"
+        },
+        {
+            "description": "Symlink attack allows local users to overwrite files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0517",
+            "reference": "CVE-2003-0517"
+        },
+        {
+            "description": "Window manager does not properly handle when certain symbolic links point to \"stale\" locations, which could allow local users to create or truncate arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0689",
+            "reference": "CVE-2004-0689"
+        },
+        {
+            "description": "Second-order symlink vulnerabilities",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1879",
+            "reference": "CVE-2005-1879"
+        },
+        {
+            "description": "Second-order symlink vulnerabilities",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1880",
+            "reference": "CVE-2005-1880"
+        },
+        {
+            "description": "Symlink in Python program",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1916",
+            "reference": "CVE-2005-1916"
+        },
+        {
+            "description": "Setuid product allows file reading by replacing a file being edited with a symlink to the targeted file, leaking the result in error messages when parsing fails.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0972",
+            "reference": "CVE-2000-0972"
+        },
+        {
+            "description": "Signal causes a dump that follows symlinks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0824",
+            "reference": "CVE-2005-0824"
+        },
+        {
+            "description": "Hard link attack, file overwrite; interesting because program checks against soft links",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1494",
+            "reference": "CVE-2001-1494"
+        },
+        {
+            "description": "Hard link and possibly symbolic link following vulnerabilities in embedded operating system allow local users to overwrite arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0793",
+            "reference": "CVE-2002-0793"
+        },
+        {
+            "description": "Server creates hard links and unlinks files as root, which allows local users to gain privileges by deleting and overwriting arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0578",
+            "reference": "CVE-2003-0578"
+        },
+        {
+            "description": "Operating system allows local users to conduct a denial of service by creating a hard link from a device special file to a file on an NFS file system.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0783",
+            "reference": "CVE-1999-0783"
+        },
+        {
+            "description": "Web hosting manager follows hard links, which allows local users to read or modify arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1603",
+            "reference": "CVE-2004-1603"
+        },
+        {
+            "description": "Package listing system allows local users to overwrite arbitrary files via a hard link attack on the lockfiles.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1901",
+            "reference": "CVE-2004-1901"
+        },
+        {
+            "description": "Hard link race condition",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1111",
+            "reference": "CVE-2005-1111"
+        },
+        {
+            "description": "Mail client allows remote attackers to bypass the user warning for executable attachments such as .exe, .com, and .bat by using a .lnk file that refers to the attachment, aka \"Stealth Attachment.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0342",
+            "reference": "CVE-2000-0342"
+        },
+        {
+            "description": "FTP server allows remote attackers to read arbitrary files and directories by uploading a .lnk (link) file that points to the target file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1042",
+            "reference": "CVE-2001-1042"
+        },
+        {
+            "description": "FTP server allows remote attackers to read arbitrary files and directories by uploading a .lnk (link) file that points to the target file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1043",
+            "reference": "CVE-2001-1043"
+        },
+        {
+            "description": "Browser allows remote malicious web sites to overwrite arbitrary files by tricking the user into downloading a .LNK (link) file twice, which overwrites the file that was referenced in the first .LNK file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0587",
+            "reference": "CVE-2005-0587"
+        },
+        {
+            "description": "\".LNK.\" - .LNK with trailing dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1386",
+            "reference": "CVE-2001-1386"
+        },
+        {
+            "description": "Rootkits can bypass file access restrictions to Windows kernel directories using NtCreateSymbolicLinkObject function to create symbolic link",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1233",
+            "reference": "CVE-2003-1233"
+        },
+        {
+            "description": "File system allows local attackers to hide file usage activities via a hard link to the target file, which causes the link to be recorded in the audit trail instead of the target file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0725",
+            "reference": "CVE-2002-0725"
+        },
+        {
+            "description": "Web server plugin allows local users to overwrite arbitrary files via a symlink attack on predictable temporary filenames.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0844",
+            "reference": "CVE-2003-0844"
+        },
+        {
+            "description": "A Libcontainer used in Docker Engine allows local users to escape containerization and write to an arbitrary file on the host system via a symlink attack in an image when respawning a container.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-3629",
+            "reference": "CVE-2015-3629"
+        },
+        {
+            "description": "\"Zip Slip\" vulnerability in Go-based Open Container Initiative (OCI) registries product allows writing arbitrary files outside intended directory via symbolic links or hard links in a gzipped tarball.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21272",
+            "reference": "CVE-2021-21272"
+        },
+        {
+            "description": "\"Zip Slip\" vulnerability in container management product allows writing arbitrary files outside intended directory via a container image (.tar format) with filenames that are symbolic links that point to other files within the same tar file; however, the files being pointed to can also be symbolic links to destinations outside the intended directory, bypassing the initial check.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-27833",
+            "reference": "CVE-2020-27833"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1282"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "706",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "706",
+            "nature": "ChildOf"
+        }
+    ]
+}

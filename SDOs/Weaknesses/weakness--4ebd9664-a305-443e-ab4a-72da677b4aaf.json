@@ -1,0 +1,59 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4ebd9664-a305-443e-ab4a-72da677b4aaf",
+    "created": "2024-08-13T14:46:48.78487Z",
+    "modified": "2024-08-13T14:46:48.78487Z",
+    "name": "ASP.NET Misconfiguration: Password in Configuration File",
+    "description": "Storing a plaintext password in a configuration file allows anyone who can read the file access to the password-protected resource making them an easy target for attackers.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "13"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Credentials stored in configuration files should be encrypted, Use standard APIs and industry accepted algorithms to encrypt the credentials stored in configuration files.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-103"
+        },
+        {
+            "external_reference_id": "REF-104"
+        },
+        {
+            "external_reference_id": "REF-105"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "260",
+            "nature": "ChildOf"
+        }
+    ]
+}

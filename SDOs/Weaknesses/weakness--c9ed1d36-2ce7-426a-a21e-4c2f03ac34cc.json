@@ -1,0 +1,105 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c9ed1d36-2ce7-426a-a21e-4c2f03ac34cc",
+    "created": "2024-08-13T14:46:48.888839Z",
+    "modified": "2024-08-13T14:46:48.888839Z",
+    "name": "Missing Critical Step in Authentication",
+    "description": "The product implements an authentication technique, but it skips a step that weakens the technique.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "304"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Shared secret not verified in a RADIUS response packet, allowing authentication bypass by spoofing server replies.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2163",
+            "reference": "CVE-2004-2163"
+        },
+        {
+            "description": "Chain: Authentication bypass by skipping the first startup step as required by the protocol.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3327",
+            "reference": "CVE-2005-3327"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "303",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--df8ad035-f93a-4917-acd0-112fa51750f7",
+    "created": "2024-08-13T14:46:48.924788Z",
+    "modified": "2024-08-13T14:46:48.924788Z",
+    "name": "Behavioral Change in New Version or Environment",
+    "description": "A's behavior or functionality changes with a new version of A, or a new environment, which is not known (or manageable) by B.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "439"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Linux kernel 2.2 and above allow promiscuous mode using a different method than previous versions, and ifconfig is not aware of the new method (alternate path property).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1976",
+            "reference": "CVE-2002-1976"
+        },
+        {
+            "description": "Product uses defunct method from another product that does not return an error code and allows detection avoidance.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1711",
+            "reference": "CVE-2005-1711"
+        },
+        {
+            "description": "chain: Code was ported from a case-sensitive Unix platform to a case-insensitive Windows platform where filetype handlers treat .jsp and .JSP as different extensions. JSP source code may be read because .JSP defaults to the filetype \"text\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0411",
+            "reference": "CVE-2003-0411"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "435",
+            "nature": "ChildOf"
+        }
+    ]
+}

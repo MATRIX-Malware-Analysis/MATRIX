@@ -1,0 +1,121 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--284152cb-a9ed-4ec2-be57-22e532206561",
+    "created": "2024-08-13T14:46:48.758401Z",
+    "modified": "2024-08-13T14:46:48.758401Z",
+    "name": "On-Chip Debug and Test Interface With Improper Access Control",
+    "description": "The chip does not implement or does not correctly perform access control to check whether users are authorized to access internal registers and test modes through the physical debug/test interface.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1191"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-10-15",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": null,
+            "effectiveness": null,
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": null,
+            "effectiveness": null,
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "Tests that fuzz Debug and Test Interfaces should ensure that no access without appropriate authentication and authorization is possible.",
+            "effectiveness": "Moderate",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "chain: JTAG interface is not disabled (CWE-1191) during ROM code execution, introducing a race condition (CWE-362) to extract encryption keys",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-18827",
+            "reference": "CVE-2019-18827"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n\t   If feasible, the manufacturer should disable the JTAG interface or implement authentication and authorization for the JTAG interface. If authentication logic is added, it should be resistant to timing attacks. Security-sensitive data stored in registers, such as keys, etc. should be cleared when entering debug mode.\n\t ",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1037"
+        },
+        {
+            "external_reference_id": "REF-1043"
+        },
+        {
+            "external_reference_id": "REF-1084"
+        },
+        {
+            "external_reference_id": "REF-1085"
+        },
+        {
+            "external_reference_id": "REF-1355"
+        },
+        {
+            "external_reference_id": "REF-1354"
+        },
+        {
+            "external_reference_id": "REF-1353"
+        },
+        {
+            "external_reference_id": "REF-1352"
+        },
+        {
+            "external_reference_id": "REF-1364"
+        },
+        {
+            "external_reference_id": "REF-1365"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

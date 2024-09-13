@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b01bdcd8-0fdb-46c8-8742-20a6f4ada5c1",
+    "created": "2024-08-13T14:46:48.975053Z",
+    "modified": "2024-08-13T14:46:48.975053Z",
+    "name": "Function Call with Incorrectly Specified Arguments",
+    "description": "The product calls a function, procedure, or routine with arguments that are not correctly specified, leading to always-incorrect behavior and resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "628"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Other"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Since these bugs typically introduce incorrect behavior that is obvious to users, they are found quickly, unless they occur in rarely-tested code paths. Managing the correct number of arguments can be made more difficult in cases where format strings are used, or when variable numbers of arguments are supported.",
+            "effectiveness": null,
+            "method": "Other"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "The method calls the functions with the wrong argument order, which allows remote attackers to bypass intended access restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7049",
+            "reference": "CVE-2006-7049"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Once found, these issues are easy to fix. Use code inspection tools and relevant compiler features to identify potential violations. Pay special attention to code that is not likely to be exercised heavily during QA.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "Make sure your API's are stable before you use them in production code.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        }
+    ]
+}

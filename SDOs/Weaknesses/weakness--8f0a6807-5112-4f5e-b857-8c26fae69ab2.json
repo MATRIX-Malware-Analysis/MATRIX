@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8f0a6807-5112-4f5e-b857-8c26fae69ab2",
+    "created": "2024-08-13T14:46:48.756201Z",
+    "modified": "2024-08-13T14:46:48.756201Z",
+    "name": "Inefficient CPU Computation",
+    "description": "The product performs CPU computations using\n         algorithms that are not as efficient as they could be for the\n         needs of the developer, i.e., the computations can be\n         optimized further.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1176"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-01-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: lexer in Java-based GraphQL server does not enforce maximum of tokens early enough (CWE-696), allowing excessive CPU consumption (CWE-1176)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-37734",
+            "reference": "CVE-2022-37734"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1008"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        }
+    ]
+}

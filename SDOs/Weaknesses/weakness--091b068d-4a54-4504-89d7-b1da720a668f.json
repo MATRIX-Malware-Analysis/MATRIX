@@ -1,0 +1,132 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--091b068d-4a54-4504-89d7-b1da720a668f",
+    "created": "2024-08-13T14:46:48.83579Z",
+    "modified": "2024-08-13T14:46:48.83579Z",
+    "name": "Use of Hard-coded Password",
+    "description": "The product contains a hard-coded password, which it uses for its own inbound authentication or for outbound communication to external components.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "259"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This weakness can be detected using tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Distributed Control System (DCS) has hard-coded passwords for local shell access",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29964",
+            "reference": "CVE-2022-29964"
+        },
+        {
+            "description": "Telnet service for IoT feeder for dogs and cats has hard-coded password [REF-1288]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-37555",
+            "reference": "CVE-2021-37555"
+        },
+        {
+            "description": "Firmware for a WiFi router uses a hard-coded password for a BusyBox shell, allowing bypass of authentication through the UART port",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-35033",
+            "reference": "CVE-2021-35033"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "For outbound authentication: store passwords outside of the code in a strongly-protected, encrypted configuration file or database that is protected from access by all outsiders, including other local users on the same system. Properly protect the key (CWE-320). If you cannot use encryption to protect the file, then make sure that the permissions are as restrictive as possible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For inbound authentication: Rather than hard-code a default username and password for first time logins, utilize a \"first login\" mode that requires the user to enter a unique strong password.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Perform access control checks and limit which entities can access the feature that requires the hard-coded password. For example, a feature might only be enabled through the system console instead of through a network connection.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        },
+        {
+            "external_reference_id": "REF-1288"
+        },
+        {
+            "external_reference_id": "REF-1304"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "798",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "798",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "798",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "321",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "257",
+            "nature": "PeerOf"
+        }
+    ]
+}

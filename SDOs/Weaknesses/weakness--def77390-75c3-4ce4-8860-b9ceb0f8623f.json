@@ -1,0 +1,168 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--def77390-75c3-4ce4-8860-b9ceb0f8623f",
+    "created": "2024-08-13T14:46:48.918748Z",
+    "modified": "2024-08-13T14:46:48.918748Z",
+    "name": "Double Free",
+    "description": "The product calls free() twice on the same memory address, potentially leading to modification of unexpected memory locations.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "415"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Signal handler contains too much functionality (CWE-828), introducing a race condition (CWE-362) that leads to a double free (CWE-415).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5051",
+            "reference": "CVE-2006-5051"
+        },
+        {
+            "description": "Double free resultant from certain error conditions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0642",
+            "reference": "CVE-2004-0642"
+        },
+        {
+            "description": "Double free resultant from certain error conditions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0772",
+            "reference": "CVE-2004-0772"
+        },
+        {
+            "description": "Double free resultant from certain error conditions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1689",
+            "reference": "CVE-2005-1689"
+        },
+        {
+            "description": "Double free from invalid ASN.1 encoding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0545",
+            "reference": "CVE-2003-0545"
+        },
+        {
+            "description": "Double free from malformed GIF.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1048",
+            "reference": "CVE-2003-1048"
+        },
+        {
+            "description": "Double free from malformed GIF.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0891",
+            "reference": "CVE-2005-0891"
+        },
+        {
+            "description": "Double free from malformed compressed data.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0059",
+            "reference": "CVE-2002-0059"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Choose a language that provides automatic memory management.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that each allocation is freed only once. After freeing a chunk, set the pointer to NULL to ensure the pointer cannot be freed again. In complicated error conditions, be sure that clean-up routines respect the state of allocation properly. If the language is object oriented, ensure that object destructors delete each chunk of memory only once.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a static analysis tool to find double free instances.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "825",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1341",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "666",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "416",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "123",
+            "nature": "PeerOf"
+        }
+    ]
+}

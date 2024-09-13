@@ -1,0 +1,122 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ce546753-49d0-4113-92ce-949f73412b0e",
+    "created": "2024-08-13T14:46:48.759848Z",
+    "modified": "2024-08-13T14:46:48.759848Z",
+    "name": "Generation of Weak Initialization Vector (IV)",
+    "description": "The product uses a cryptographic primitive that uses an Initialization\n\t\t\tVector (IV), but the product does not generate IVs that are\n\t\t\tsufficiently unpredictable or unique according to the expected\n\t\t\tcryptographic requirements for that primitive.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1204"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-03-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "ZeroLogon vulnerability - use of a static IV of all zeroes in AES-CFB8 mode",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-1472",
+            "reference": "CVE-2020-1472"
+        },
+        {
+            "description": "BEAST attack in SSL 3.0 / TLS 1.0. In CBC mode, chained initialization vectors are non-random, allowing decryption of HTTPS traffic using a chosen plaintext attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-3389",
+            "reference": "CVE-2011-3389"
+        },
+        {
+            "description": "wireless router does not use 6 of the 24 bits for WEP encryption, making it easier for attackers to decrypt traffic",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0161",
+            "reference": "CVE-2001-0161"
+        },
+        {
+            "description": "WEP card generates predictable IV values, making it easier for attackers to decrypt traffic",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0160",
+            "reference": "CVE-2001-0160"
+        },
+        {
+            "description": "device bootloader uses a zero initialization vector during AES-CBC",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-3225",
+            "reference": "CVE-2017-3225"
+        },
+        {
+            "description": "crypto framework uses PHP rand function - which is not cryptographically secure - for an initialization vector",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-6485",
+            "reference": "CVE-2016-6485"
+        },
+        {
+            "description": "encryption routine does not seed the random number generator, causing the same initialization vector to be generated repeatedly",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-5386",
+            "reference": "CVE-2014-5386"
+        },
+        {
+            "description": "encryption functionality in an authentication framework uses a fixed null IV with CBC mode, allowing attackers to decrypt traffic in applications that use this functionality",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-5408",
+            "reference": "CVE-2020-5408"
+        },
+        {
+            "description": "messages for a door-unlocking product use a fixed IV in CBC mode, which is the same after each restart ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-17704",
+            "reference": "CVE-2017-17704"
+        },
+        {
+            "description": "application uses AES in CBC mode, but the pseudo-random secret and IV are generated using math.random, which is not cryptographically strong.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-11133",
+            "reference": "CVE-2017-11133"
+        },
+        {
+            "description": "Blowfish-CBC implementation constructs an IV where each byte is calculated modulo 8 instead of modulo 256, resulting in less than 12 bits for the effective IV length, and less than 4096 possible IV values.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3528",
+            "reference": "CVE-2007-3528"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": null,
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1175"
+        },
+        {
+            "external_reference_id": "REF-1175"
+        },
+        {
+            "external_reference_id": "REF-1176"
+        },
+        {
+            "external_reference_id": "REF-1177"
+        },
+        {
+            "external_reference_id": "REF-1178"
+        },
+        {
+            "external_reference_id": "REF-1179"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        }
+    ]
+}

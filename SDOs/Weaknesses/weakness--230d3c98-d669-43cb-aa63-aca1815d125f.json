@@ -1,0 +1,102 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--230d3c98-d669-43cb-aa63-aca1815d125f",
+    "created": "2024-08-13T14:46:48.989102Z",
+    "modified": "2024-08-13T14:46:48.989102Z",
+    "name": "Improper Handling of Windows ::DATA Alternate Data Stream",
+    "description": "The product does not properly prevent access to, or detect usage of, alternate data streams (ADS).",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "69"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Other",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "In IIS, remote attackers can obtain source code for ASP files by appending \"::$DATA\" to the URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0278",
+            "reference": "CVE-1999-0278"
+        },
+        {
+            "description": "Product does not properly record file sizes if they are stored in alternative data streams, which allows users to bypass quota restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0927",
+            "reference": "CVE-2000-0927"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Software tools are capable of finding ADSs on your system.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Ensure that the source code correctly parses the filename to read or write to the correct stream.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-562"
+        },
+        {
+            "external_reference_id": "REF-7"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "66",
+            "nature": "ChildOf"
+        }
+    ]
+}

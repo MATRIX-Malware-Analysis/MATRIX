@@ -1,0 +1,57 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b3e3e58d-42b4-46aa-ae99-9da38c0b4a50",
+    "created": "2024-08-13T14:46:48.780089Z",
+    "modified": "2024-08-13T14:46:48.780089Z",
+    "name": "Improper Validation of Specified Index, Position, or Offset in Input",
+    "description": "The product receives input that is expected to specify an index, position, or offset into an indexable resource such as a buffer or file, but it does not validate or incorrectly validates that the specified index/position/offset has the required properties.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1285"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "large ID in packet used as array index",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0369",
+            "reference": "CVE-2005-0369"
+        },
+        {
+            "description": "negative array index as argument to POP LIST command",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1009",
+            "reference": "CVE-2001-1009"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

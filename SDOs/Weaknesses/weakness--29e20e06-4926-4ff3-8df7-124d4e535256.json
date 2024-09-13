@@ -1,0 +1,92 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--29e20e06-4926-4ff3-8df7-124d4e535256",
+    "created": "2024-08-13T14:46:48.913293Z",
+    "modified": "2024-08-13T14:46:48.913293Z",
+    "name": "Unexpected Status Code or Return Value",
+    "description": "The product does not properly check when a function or operation returns a value that is legitimate for the function, but is not expected by the product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "394"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Certain packets (zero byte and other lengths) cause a recvfrom call to produce an unexpected return code that causes a server's listening loop to exit.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1395",
+            "reference": "CVE-2004-1395"
+        },
+        {
+            "description": "Unchecked return code from recv() leads to infinite loop.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2124",
+            "reference": "CVE-2002-2124"
+        },
+        {
+            "description": "Kernel function does not properly handle when a null is returned by a function call, causing it to call another function that it shouldn't.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2553",
+            "reference": "CVE-2005-2553"
+        },
+        {
+            "description": "Memory not properly cleared when read() function call returns fewer bytes than expected.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1858",
+            "reference": "CVE-2005-1858"
+        },
+        {
+            "description": "Bypass access restrictions when connecting from IP whose DNS reverse lookup does not return a hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0536",
+            "reference": "CVE-2000-0536"
+        },
+        {
+            "description": "Bypass access restrictions when connecting from IP whose DNS reverse lookup does not return a hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0910",
+            "reference": "CVE-2001-0910"
+        },
+        {
+            "description": "Game server doesn't check return values for functions that handle text strings and associated size values.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2371",
+            "reference": "CVE-2004-2371"
+        },
+        {
+            "description": "Resultant infinite loop when function call returns -1 value.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1267",
+            "reference": "CVE-2005-1267"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        }
+    ]
+}

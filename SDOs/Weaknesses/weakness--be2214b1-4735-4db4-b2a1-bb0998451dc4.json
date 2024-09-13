@@ -1,0 +1,49 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--be2214b1-4735-4db4-b2a1-bb0998451dc4",
+    "created": "2024-08-13T14:46:48.731239Z",
+    "modified": "2024-08-13T14:46:48.731239Z",
+    "name": "Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor",
+    "description": "A parent class has a virtual destructor method, but the parent has a child class that does not have a virtual destructor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1045"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-961"
+        },
+        {
+            "external_reference_id": "REF-977"
+        },
+        {
+            "external_reference_id": "REF-978"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1076",
+            "nature": "ChildOf"
+        }
+    ]
+}

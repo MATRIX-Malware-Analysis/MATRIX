@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f855f3e3-dab3-4a06-86ba-a7e9c0eab5f1",
+    "created": "2024-08-13T14:46:48.813493Z",
+    "modified": "2024-08-13T14:46:48.813493Z",
+    "name": "Incorrect Behavior Order: Validate Before Canonicalize",
+    "description": "The product validates input before it is canonicalized, which prevents the product from detecting data that becomes invalid after the canonicalization step.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "180"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product allows remote attackers to view restricted files via an HTTP request containing a \"*\" (wildcard or asterisk) character.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0433",
+            "reference": "CVE-2002-0433"
+        },
+        {
+            "description": "Product modifies the first two letters of a filename extension after performing a security check, which allows remote attackers to bypass authentication via a filename with a .ats extension instead of a .hts extension.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0332",
+            "reference": "CVE-2003-0332"
+        },
+        {
+            "description": "Database consumes an extra character when processing a character that cannot be converted, which could remove an escape character from the query and make the application subject to SQL injection attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0802",
+            "reference": "CVE-2002-0802"
+        },
+        {
+            "description": "Overlaps \"fakechild/../realchild\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0191",
+            "reference": "CVE-2000-0191"
+        },
+        {
+            "description": "Product checks URI for \"<\" and other literal characters, but does it before hex decoding the URI, so \"%3E\" and other sequences are allowed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2363",
+            "reference": "CVE-2004-2363"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "179",
+            "nature": "ChildOf"
+        }
+    ]
+}

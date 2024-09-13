@@ -1,0 +1,92 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6b76e7fa-b80d-4fe0-b14a-99a729bc0797",
+    "created": "2024-08-13T14:46:48.904663Z",
+    "modified": "2024-08-13T14:46:48.904663Z",
+    "name": "Improperly Implemented Security Check for Standard",
+    "description": "The product does not implement or incorrectly implements one or more security-relevant checks as specified by the design of a standardized algorithm, protocol, or technique.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "358"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Browser does not verify Basic Constraints of a certificate, even though it is required, allowing spoofing of trusted certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0862",
+            "reference": "CVE-2002-0862"
+        },
+        {
+            "description": "Browser does not verify Basic Constraints of a certificate, even though it is required, allowing spoofing of trusted certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0970",
+            "reference": "CVE-2002-0970"
+        },
+        {
+            "description": "Browser does not verify Basic Constraints of a certificate, even though it is required, allowing spoofing of trusted certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1407",
+            "reference": "CVE-2002-1407"
+        },
+        {
+            "description": "Logic error prevents some required conditions from being enforced during Challenge-Response Authentication Mechanism with MD5 (CRAM-MD5).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0198",
+            "reference": "CVE-2005-0198"
+        },
+        {
+            "description": "Shared secret not verified in a RADIUS response packet, allowing authentication bypass by spoofing server replies.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2163",
+            "reference": "CVE-2004-2163"
+        },
+        {
+            "description": "Insufficient verification in VoIP implementation, in violation of standard, allows spoofed messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2181",
+            "reference": "CVE-2005-2181"
+        },
+        {
+            "description": "Insufficient verification in VoIP implementation, in violation of standard, allows spoofed messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2182",
+            "reference": "CVE-2005-2182"
+        },
+        {
+            "description": "Security check not applied to all components, allowing bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2298",
+            "reference": "CVE-2005-2298"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "290",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

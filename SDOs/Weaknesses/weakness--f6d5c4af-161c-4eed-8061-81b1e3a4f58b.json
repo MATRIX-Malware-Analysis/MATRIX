@@ -1,0 +1,93 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f6d5c4af-161c-4eed-8061-81b1e3a4f58b",
+    "created": "2024-08-13T14:46:48.89857Z",
+    "modified": "2024-08-13T14:46:48.89857Z",
+    "name": "Predictable Seed in Pseudo-Random Number Generator (PRNG)",
+    "description": "A Pseudo-Random Number Generator (PRNG) is initialized from a predictable seed, such as the process ID or system time.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "337"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cloud application on Kubernetes generates passwords using a weak random number generator based on deployment time.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-7010",
+            "reference": "CVE-2020-7010"
+        },
+        {
+            "description": "server uses erlang:now() to seed the PRNG, which\n\t\t\t results in a small search space for potential random\n\t\t\t seeds",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-11495",
+            "reference": "CVE-2019-11495"
+        },
+        {
+            "description": "The removal of a couple lines of code caused Debian's OpenSSL Package to only use the current process ID for seeding a PRNG",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0166",
+            "reference": "CVE-2008-0166"
+        },
+        {
+            "description": "Router's PIN generation is based on rand(time(0)) seeding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-10180",
+            "reference": "CVE-2016-10180"
+        },
+        {
+            "description": "cloud provider product uses a non-cryptographically secure PRNG and seeds it with the current time",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-9057",
+            "reference": "CVE-2018-9057"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use non-predictable inputs for seed generation.",
+            "effectiveness": null,
+            "phase": null
+        },
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems, or use the more recent FIPS 140-3 [REF-1192] if possible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a PRNG that periodically re-seeds itself using input from high-quality sources, such as hardware devices with high entropy. However, do not re-seed too frequently, or else the entropy source might block.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-1192"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "335",
+            "nature": "ChildOf"
+        }
+    ]
+}

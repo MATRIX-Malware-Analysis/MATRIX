@@ -1,0 +1,63 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--326cb5cb-6f05-4b6e-96af-78ca51474dfa",
+    "created": "2024-08-13T14:46:48.985872Z",
+    "modified": "2024-08-13T14:46:48.985872Z",
+    "name": "Multiple Operations on Resource in Single-Operation Context",
+    "description": "The product performs the same operation on a resource two or more times, when the operation should only be applied once.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "675"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Attacker provides invalid address to a memory-reading function, causing a mutex to be unlocked twice",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0935",
+            "reference": "CVE-2009-0935"
+        },
+        {
+            "description": "file descriptor double close can cause the wrong file to be associated with a file descriptor.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-13351",
+            "reference": "CVE-2019-13351"
+        },
+        {
+            "description": "XSS protection mechanism attempts to remove \"/\" that could be used to close tags, but it can be bypassed using double encoded slashes (%252F)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1939",
+            "reference": "CVE-2004-1939"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "586",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "102",
+            "nature": "PeerOf"
+        }
+    ]
+}

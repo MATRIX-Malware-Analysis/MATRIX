@@ -1,0 +1,57 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--958824de-5b3c-4bba-8f3d-fa7c3093fbe1",
+    "created": "2024-08-13T14:46:48.780346Z",
+    "modified": "2024-08-13T14:46:48.780346Z",
+    "name": "Improper Validation of Syntactic Correctness of Input",
+    "description": "The product receives input that is expected to be well-formed - i.e., to comply with a certain syntax - but it does not validate or incorrectly validates that the input complies with the syntax.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1286"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: incorrect validation of intended decimal-based IP address format (CWE-1286) enables parsing of octal or hexadecimal formats (CWE-1389), allowing bypass of an SSRF protection mechanism (CWE-918).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-4029",
+            "reference": "CVE-2016-4029"
+        },
+        {
+            "description": "HTTP request with missing protocol version number leads to crash",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5893",
+            "reference": "CVE-2007-5893"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

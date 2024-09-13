@@ -1,0 +1,140 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--15675bb2-d31b-44fb-8691-df0ab4ed1996",
+    "created": "2024-08-13T14:46:48.80268Z",
+    "modified": "2024-08-13T14:46:48.80268Z",
+    "name": "Exposure of Sensitive Information caused by Incorrect Data Forwarding during Transient Execution",
+    "description": "A processor event or prediction may allow incorrect or stale data to\n\t\t  be forwarded to transient operations, potentially exposing data over a\n\t\t  covert channel.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1422"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2023-09-19",
+            "submission_name": "Scott D. Constable",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "method": "Automated Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A fault, microcode assist, or abort may allow transient\n\t\t\t\tload operations to forward malicious stale data to dependent\n\t\t\t\toperations executed by a victim, causing the victim to unintentionally\n\t\t\t\taccess and potentially expose its own data over a covert channel.\n\t\t\t\t",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-0551",
+            "reference": "CVE-2020-0551"
+        },
+        {
+            "description": "A fast store forwarding predictor may allow store\n\t\t\t\toperations to forward incorrect data to transient load operations,\n\t\t\t\tpotentially exposing data over a covert channel.\n\t\t\t\t",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8698",
+            "reference": "CVE-2020-8698"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Defense in Depth",
+            "phase": "Requirements"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Requirements"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Requirements"
+        },
+        {
+            "description": null,
+            "effectiveness": "Incidental",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "phase": "Documentation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1389"
+        },
+        {
+            "external_reference_id": "REF-1390"
+        },
+        {
+            "external_reference_id": "REF-1391"
+        },
+        {
+            "external_reference_id": "REF-1392"
+        },
+        {
+            "external_reference_id": "REF-1393"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1420",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1420",
+            "nature": "ChildOf"
+        }
+    ]
+}

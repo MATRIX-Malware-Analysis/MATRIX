@@ -1,0 +1,63 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e76ed8d4-7a87-4302-a85d-718308572164",
+    "created": "2024-08-13T14:46:48.764918Z",
+    "modified": "2024-08-13T14:46:48.764918Z",
+    "name": "Improper Zeroization of Hardware Register",
+    "description": "The hardware product does not properly clear sensitive information from built-in registers when the user of the hardware block changes.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1239"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-08",
+            "submission_name": "Nicole Fern",
+            "submission_organization": "Tortuga Logic"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Every register potentially containing sensitive information must have a policy specifying how and when information is cleared, in addition to clarifying if it is the responsibility of the hardware logic or IP user to initiate the zeroization procedure at the appropriate time.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-1055"
+        },
+        {
+            "external_reference_id": "REF-1379"
+        },
+        {
+            "external_reference_id": "REF-1380"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "226",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "226",
+            "nature": "ChildOf"
+        }
+    ]
+}

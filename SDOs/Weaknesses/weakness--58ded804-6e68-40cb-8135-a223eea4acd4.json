@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--58ded804-6e68-40cb-8135-a223eea4acd4",
+    "created": "2024-08-13T14:46:48.974484Z",
+    "modified": "2024-08-13T14:46:48.974484Z",
+    "name": "Null Byte Interaction Error (Poison Null Byte)",
+    "description": "The product does not properly handle null bytes or NUL characters when passing data between different representations or components.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "626"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "NUL byte bypasses PHP regular expression check",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4155",
+            "reference": "CVE-2005-4155"
+        },
+        {
+            "description": "inserting SQL after a NUL byte bypasses allowlist regexp, enabling SQL injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3153",
+            "reference": "CVE-2005-3153"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Remove null bytes from all incoming strings.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-514"
+        },
+        {
+            "external_reference_id": "REF-515"
+        },
+        {
+            "external_reference_id": "REF-516"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "147",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "436",
+            "nature": "ChildOf"
+        }
+    ]
+}

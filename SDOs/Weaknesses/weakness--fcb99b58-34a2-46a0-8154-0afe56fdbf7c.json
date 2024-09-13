@@ -1,0 +1,214 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fcb99b58-34a2-46a0-8154-0afe56fdbf7c",
+    "created": "2024-08-13T14:46:48.784525Z",
+    "modified": "2024-08-13T14:46:48.784525Z",
+    "name": "Missing Protection Mechanism for Alternate Hardware Interface",
+    "description": "The lack of protections on alternate paths to access\n                control-protected assets (such as unprotected shadow registers\n                and other external facing unguarded interfaces) allows an\n                attacker to bypass existing protections to the asset that are\n\t\tonly performed against the primary path.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1299"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-10-02",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Missing protection mechanism on serial connection allows for arbitrary OS command execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-38399",
+            "reference": "CVE-2022-38399"
+        },
+        {
+            "description": "Mini-PCI Express slot does not restrict direct memory access.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9285",
+            "reference": "CVE-2020-9285"
+        },
+        {
+            "description": "When the internal flash is protected by blocking access on the Data Bus (DBUS), it can still be indirectly accessed through the Instruction Bus (IBUS).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8004",
+            "reference": "CVE-2020-8004"
+        },
+        {
+            "description": "When GPIO is protected by blocking access\n                        to corresponding GPIO resource registers,\n                        protection can be bypassed by writing to the\n                        corresponding banked GPIO registers instead.\n                    ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-18293",
+            "reference": "CVE-2017-18293"
+        },
+        {
+            "description": "monitor device allows access to physical UART debug port without authentication",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-15483",
+            "reference": "CVE-2020-15483"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Protect assets from accesses against all potential interfaces and alternate paths. ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Requirements"
+        },
+        {
+            "description": "Protect assets from accesses against all potential interfaces and alternate paths. ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Protect assets from accesses against all potential interfaces and alternate paths. ",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1191",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "420",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "288",
+            "nature": "ChildOf"
+        }
+    ]
+}

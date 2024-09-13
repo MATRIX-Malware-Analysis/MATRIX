@@ -1,0 +1,96 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a8a73d79-3bba-47d1-ab9d-f5be98cd01bf",
+    "created": "2024-08-13T14:46:48.920453Z",
+    "modified": "2024-08-13T14:46:48.920453Z",
+    "name": "Unprotected Windows Messaging Channel ('Shatter')",
+    "description": "The product does not properly verify the source of a message in the Windows Messaging System while running at elevated privileges, creating an alternate channel through which an attacker can directly send a message to the product.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "422"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Bypass GUI and access restricted dialog box.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0971",
+            "reference": "CVE-2002-0971"
+        },
+        {
+            "description": "Gain privileges via Windows message.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1230",
+            "reference": "CVE-2002-1230"
+        },
+        {
+            "description": "A control allows a change to a pointer for a callback function using Windows message.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0350",
+            "reference": "CVE-2003-0350"
+        },
+        {
+            "description": "Product launches Help functionality while running with raised privileges, allowing command execution using Windows message to access \"open file\" dialog.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0908",
+            "reference": "CVE-2003-0908"
+        },
+        {
+            "description": "Attacker uses Shatter attack to bypass GUI-enforced protection for CVE-2003-0908.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0213",
+            "reference": "CVE-2004-0213"
+        },
+        {
+            "description": "User can call certain API functions to modify certain properties of privileged programs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0207",
+            "reference": "CVE-2004-0207"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Always verify and authenticate the source of the message.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-402"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "420",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "360",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,238 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--305a5847-edff-4e3e-94c7-1a1340beef7d",
+    "created": "2024-08-13T14:46:49.029129Z",
+    "modified": "2024-08-13T14:46:49.029129Z",
+    "name": "Improper Control of Generation of Code ('Code Injection')",
+    "description": "The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "94"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Math component in an LLM framework translates user input into a Python\n\t\t\t   expression that is input into the Python exec() method, allowing code\n\t\t\t   execution - one variant of a \"prompt injection\" attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-29374",
+            "reference": "CVE-2023-29374"
+        },
+        {
+            "description": "Python-based library uses an LLM prompt containing user input to\n\t\t\t   dynamically generate code that is then fed as input into the Python\n\t\t\t   exec() method, allowing code execution - one variant of a \"prompt\n\t\t\t   injection\" attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-5565",
+            "reference": "CVE-2024-5565"
+        },
+        {
+            "description": "Framework for LLM applications allows eval injection via a crafted response from a hosting provider.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-4181",
+            "reference": "CVE-2024-4181"
+        },
+        {
+            "description": "Python compiler uses eval() to execute malicious strings as Python code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-2054",
+            "reference": "CVE-2022-2054"
+        },
+        {
+            "description": "Chain: regex in EXIF processor code does not correctly determine where a string ends (CWE-625), enabling eval injection (CWE-95), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22204",
+            "reference": "CVE-2021-22204"
+        },
+        {
+            "description": "\"Code injection\" in VPN product, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8218",
+            "reference": "CVE-2020-8218"
+        },
+        {
+            "description": "Eval injection in PHP program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5071",
+            "reference": "CVE-2008-5071"
+        },
+        {
+            "description": "Eval injection in Perl program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1750",
+            "reference": "CVE-2002-1750"
+        },
+        {
+            "description": "Eval injection in Perl program using an ID that should only contain hyphens and numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5305",
+            "reference": "CVE-2008-5305"
+        },
+        {
+            "description": "Direct code injection into Perl eval function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1752",
+            "reference": "CVE-2002-1752"
+        },
+        {
+            "description": "Eval injection in Perl program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1753",
+            "reference": "CVE-2002-1753"
+        },
+        {
+            "description": "Direct code injection into Perl eval function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1527",
+            "reference": "CVE-2005-1527"
+        },
+        {
+            "description": "Direct code injection into Perl eval function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2837",
+            "reference": "CVE-2005-2837"
+        },
+        {
+            "description": "MFV. code injection into PHP eval statement using nested constructs that should not be nested.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1921",
+            "reference": "CVE-2005-1921"
+        },
+        {
+            "description": "MFV. code injection into PHP eval statement using nested constructs that should not be nested.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2498",
+            "reference": "CVE-2005-2498"
+        },
+        {
+            "description": "Code injection into Python eval statement from a field in a formatted file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3302",
+            "reference": "CVE-2005-3302"
+        },
+        {
+            "description": "Eval injection in Python program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1253",
+            "reference": "CVE-2007-1253"
+        },
+        {
+            "description": "chain: Resultant eval injection. An invalid value prevents initialization of variables, which can be modified by attacker and later injected into PHP eval statement.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1471",
+            "reference": "CVE-2001-1471"
+        },
+        {
+            "description": "Perl code directly injected into CGI library file from parameters to another CGI program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0495",
+            "reference": "CVE-2002-0495"
+        },
+        {
+            "description": "Direct PHP code injection into supporting template file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1876",
+            "reference": "CVE-2005-1876"
+        },
+        {
+            "description": "Direct code injection into PHP script that can be accessed by attacker.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1894",
+            "reference": "CVE-2005-1894"
+        },
+        {
+            "description": "PHP code from User-Agent HTTP header directly inserted into log file implemented as PHP script.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0395",
+            "reference": "CVE-2003-0395"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Refactor your program so that you do not have to dynamically generate code.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use automated static analysis tools that target this type of weakness. Many modern techniques use data flow analysis to minimize the number of false positives. This is not a perfect solution, since 100% accuracy and coverage are not feasible.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Use dynamic tools and techniques that interact with the product using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The product's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Run the code in an environment that performs automatic taint propagation and prevents any command execution that uses tainted variables, such as Perl's \"-T\" switch. This will force the program to perform validation steps that remove the taint, although you must be careful to correctly validate your inputs so that you do not accidentally mark dangerous inputs as untainted (see CWE-183 and CWE-184).",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Run the code in an environment that performs automatic taint propagation and prevents any command execution that uses tainted variables, such as Perl's \"-T\" switch. This will force the program to perform validation steps that remove the taint, although you must be careful to correctly validate your inputs so that you do not accidentally mark dangerous inputs as untainted (see CWE-183 and CWE-184).",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Discouraged Common Practice",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1372"
+        },
+        {
+            "external_reference_id": "REF-1373"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "913",
+            "nature": "ChildOf"
+        }
+    ]
+}

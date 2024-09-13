@@ -1,0 +1,47 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--63686598-bde3-44fb-ba37-3c99be472bc7",
+    "created": "2024-08-13T14:46:48.743761Z",
+    "modified": "2024-08-13T14:46:48.743761Z",
+    "name": "Use of Object without Invoking Destructor Method",
+    "description": "The product contains a method that accesses an object but does not later invoke\n\t\t\t\t\tthe element's associated finalize/destructor method.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1091"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-959"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "772",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1076",
+            "nature": "ChildOf"
+        }
+    ]
+}

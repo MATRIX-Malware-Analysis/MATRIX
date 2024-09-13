@@ -1,0 +1,84 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--82d16bce-704a-4b31-af14-d184ccfc79df",
+    "created": "2024-08-13T14:46:48.918248Z",
+    "modified": "2024-08-13T14:46:48.918248Z",
+    "name": "Improper Resource Locking",
+    "description": "The product does not lock or does not correctly lock a resource when the product must have exclusive access to the resource.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "413"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: an operating system kernel has insufficent resource locking (CWE-413) leading to a use after free (CWE-416).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-20141",
+            "reference": "CVE-2022-20141"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a non-conflicting privilege scheme.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use synchronization when locking a resource.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        }
+    ]
+}

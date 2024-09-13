@@ -1,0 +1,105 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--56ed2736-c739-4d08-8270-f501464ddbe5",
+    "created": "2024-08-13T14:46:48.771942Z",
+    "modified": "2024-08-13T14:46:48.771942Z",
+    "name": "Improper Handling of Single Event Upsets",
+    "description": "The hardware logic does not effectively handle when single-event upsets (SEUs) occur.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1261"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n\t\t\t\t\t\t",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n\t\t\t\t\t\t",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1086"
+        },
+        {
+            "external_reference_id": "REF-1087"
+        },
+        {
+            "external_reference_id": "REF-1088"
+        },
+        {
+            "external_reference_id": "REF-1089"
+        },
+        {
+            "external_reference_id": "REF-1090"
+        },
+        {
+            "external_reference_id": "REF-1091"
+        },
+        {
+            "external_reference_id": "REF-1101"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1384",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1254",
+            "nature": "PeerOf"
+        }
+    ]
+}

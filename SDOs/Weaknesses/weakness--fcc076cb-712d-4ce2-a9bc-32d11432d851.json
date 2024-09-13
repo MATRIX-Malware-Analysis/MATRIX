@@ -1,0 +1,103 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fcc076cb-712d-4ce2-a9bc-32d11432d851",
+    "created": "2024-08-13T14:46:48.818202Z",
+    "modified": "2024-08-13T14:46:48.818202Z",
+    "name": "Numeric Truncation Error",
+    "description": "Truncation errors occur when a primitive is cast to a primitive of a smaller size and data is lost in the conversion.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "197"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: integer truncation (CWE-197) causes small buffer allocation (CWE-131) leading to out-of-bounds write (CWE-787) in kernel pool, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-17087",
+            "reference": "CVE-2020-17087"
+        },
+        {
+            "description": "Integer truncation of length value leads to heap-based buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0231",
+            "reference": "CVE-2009-0231"
+        },
+        {
+            "description": "Size of a particular type changes for 64-bit platforms, leading to an integer truncation in document processor causes incorrect index to be generated.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3282",
+            "reference": "CVE-2008-3282"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that no casts, implicit or explicit, take place that move from a larger size primitive or a smaller size primitive.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "681",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "681",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "681",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "195",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "196",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "192",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "194",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6bb9f87a-6c0d-4ae1-ba41-0ecc6497f55f",
+    "created": "2024-08-13T14:46:48.777663Z",
+    "modified": "2024-08-13T14:46:48.777663Z",
+    "name": "Firmware Not Updateable",
+    "description": "The product does not provide its\n\t\t\tusers with the ability to update or patch its\n\t\t\tfirmware to address any vulnerabilities or\n\t\t\tweaknesses that may be present.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1277"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Authorization"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-13",
+            "submission_name": "Paul A. Wortman",
+            "submission_organization": "Wells Fargo"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Create a new installable boot image of the current build with a minor version number change. Use the standard installation method to update the boot image. Verify that the minor version number has changed. Create a fake image. Verify that the boot updater will not install the fake image and generates an \"invalid image\" error message or equivalent.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "Check the consumer or maintainer documentation, the architecture/design documentation, or the original requirements to ensure that the documentation includes details for how to update the firmware.",
+            "effectiveness": "Moderate",
+            "method": "Architecture or Design Review"
+        },
+        {
+            "description": "Determine if there is a lack of a capability to update read-only memory (ROM) structure. This could manifest as a difference between the latest firmware version and the current version within the device.",
+            "effectiveness": "High",
+            "method": "Manual Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: network-attached storage (NAS) device has a critical OS command injection (CWE-78) vulnerability that is actively exploited to place IoT devices into a botnet, but some products are \"end-of-support\" and cannot be patched (CWE-1277). [REF-1097]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9054",
+            "reference": "CVE-2020-9054"
+        },
+        {
+            "description": "A hardware \"smart lock\" has weak key generation that allows attackers to steal the key by BLE sniffing, but the device's firmware cannot be upgraded and hence remains vulnerable [REF-1095].",
+            "link": "https://www.theregister.com/2019/12/11/f_secure_keywe/",
+            "reference": "[REF-1095]"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Specify requirements to include the ability to update the firmware. Include integrity checks and authentication to ensure that untrusted firmware cannot be installed.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Design the device to allow for updating the firmware. Ensure that the design specifies how to distribute the updates and ensure their integrity and authentication.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Implement the necessary functionality to allow the firmware to be updated.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1095"
+        },
+        {
+            "external_reference_id": "REF-1096"
+        },
+        {
+            "external_reference_id": "REF-1097"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1329",
+            "nature": "ChildOf"
+        }
+    ]
+}

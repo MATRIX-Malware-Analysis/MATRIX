@@ -1,0 +1,186 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--de44c186-5ae0-45ac-98d0-a63b6324a3fb",
+    "created": "2024-08-13T14:46:48.801992Z",
+    "modified": "2024-08-13T14:46:48.801992Z",
+    "name": "Exposure of Sensitive Information during Transient Execution",
+    "description": "A processor event or prediction may allow incorrect operations (or correct operations with incorrect data) to execute transiently, potentially exposing data over a covert channel.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1420"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2023-09-19",
+            "submission_name": "Scott D. Constable",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "Opportunistic",
+            "method": "Fuzzing"
+        },
+        {
+            "description": null,
+            "effectiveness": "Opportunistic",
+            "method": "Fuzzing"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "method": "Automated Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Microarchitectural conditional branch predictors may allow operations to execute transiently after a misprediction, potentially exposing data over a covert channel. ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-5753",
+            "reference": "CVE-2017-5753"
+        },
+        {
+            "description": "A machine clear triggered by self-modifying code may allow incorrect operations to execute transiently, potentially exposing data over a covert channel. ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-0089",
+            "reference": "CVE-2021-0089"
+        },
+        {
+            "description": "Microarchitectural indirect branch predictors may allow incorrect operations to execute transiently after a misprediction, potentially exposing data over a covert channel. ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-0002",
+            "reference": "CVE-2022-0002"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The hardware designer can attempt to prevent transient execution from causing observable discrepancies in specific covert channels.",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Requirements"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Requirements"
+        },
+        {
+            "description": null,
+            "effectiveness": "Defense in Depth",
+            "phase": "Requirements"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Moderate",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Limited",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "Incidental",
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": null,
+            "effectiveness": "High",
+            "phase": "Documentation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1389"
+        },
+        {
+            "external_reference_id": "REF-1417"
+        },
+        {
+            "external_reference_id": "REF-1418"
+        },
+        {
+            "external_reference_id": "REF-1419"
+        },
+        {
+            "external_reference_id": "REF-1420"
+        },
+        {
+            "external_reference_id": "REF-1421"
+        },
+        {
+            "external_reference_id": "REF-1398"
+        },
+        {
+            "external_reference_id": "REF-1414"
+        },
+        {
+            "external_reference_id": "REF-1390"
+        },
+        {
+            "external_reference_id": "REF-1425"
+        },
+        {
+            "external_reference_id": "REF-1427"
+        },
+        {
+            "external_reference_id": "REF-1428"
+        },
+        {
+            "external_reference_id": "REF-1429"
+        },
+        {
+            "external_reference_id": "REF-1415"
+        },
+        {
+            "external_reference_id": "REF-1400"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        }
+    ]
+}

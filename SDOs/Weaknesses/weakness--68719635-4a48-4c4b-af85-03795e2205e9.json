@@ -1,0 +1,113 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--68719635-4a48-4c4b-af85-03795e2205e9",
+    "created": "2024-08-13T14:46:48.799737Z",
+    "modified": "2024-08-13T14:46:48.799737Z",
+    "name": "Use of Default Password",
+    "description": "The product uses default passwords for potentially critical functionality.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1393"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2022-10-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Remote Terminal Unit (RTU) uses default credentials for some SSH accounts",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30270",
+            "reference": "CVE-2022-30270"
+        },
+        {
+            "description": "OPC Unified Architecture (OPC UA) industrial automation product has a default password",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-2336",
+            "reference": "CVE-2022-2336"
+        },
+        {
+            "description": "microcontroller board has default password",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-38759",
+            "reference": "CVE-2021-38759"
+        },
+        {
+            "description": "children's smart watch has default passwords allowing attackers to send SMS commands and listen to the device's surroundings",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-44480",
+            "reference": "CVE-2021-44480"
+        },
+        {
+            "description": "surveillance camera has default password for the admin account",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-11624",
+            "reference": "CVE-2020-11624"
+        },
+        {
+            "description": "medical dental records product installs a MySQL database with a blank default password",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-15719",
+            "reference": "CVE-2018-15719"
+        },
+        {
+            "description": "healthcare system for archiving patient images has default passwords for key management and storage databases",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-9736",
+            "reference": "CVE-2014-9736"
+        },
+        {
+            "description": "database product installs admin account with default null password, allowing privileges, as exploited by various worms ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1209",
+            "reference": "CVE-2000-1209"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Prohibit use of default, hard-coded, or other values that do not vary for each installation of the product - especially for separate organizations.",
+            "effectiveness": "High",
+            "phase": "Requirements"
+        },
+        {
+            "description": "Ensure that product documentation clearly emphasizes the presence of default passwords and provides steps for the administrator to change them.",
+            "effectiveness": "Limited",
+            "phase": "Documentation"
+        },
+        {
+            "description": "Force the administrator to change the credential upon installation.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The product administrator could change the defaults upon installation or during operation.",
+            "effectiveness": "Moderate",
+            "phase": "Installation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1283"
+        },
+        {
+            "external_reference_id": "REF-1303"
+        },
+        {
+            "external_reference_id": "REF-1446"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1392",
+            "nature": "ChildOf"
+        }
+    ]
+}

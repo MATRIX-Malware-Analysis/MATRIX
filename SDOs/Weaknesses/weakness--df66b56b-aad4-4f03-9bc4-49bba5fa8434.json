@@ -1,0 +1,52 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--df66b56b-aad4-4f03-9bc4-49bba5fa8434",
+    "created": "2024-08-13T14:46:48.968825Z",
+    "modified": "2024-08-13T14:46:48.968825Z",
+    "name": "Public Static Final Field References Mutable Object",
+    "description": "A public or protected static final field references a mutable object, which allows the object to be changed by malicious code, or accidentally from another package.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "607"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Protect mutable objects by making them private. Restrict access to the getter and setter as well.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "471",
+            "nature": "ChildOf"
+        }
+    ]
+}

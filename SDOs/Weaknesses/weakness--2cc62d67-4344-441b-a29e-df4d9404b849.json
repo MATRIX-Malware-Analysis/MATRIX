@@ -1,0 +1,46 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2cc62d67-4344-441b-a29e-df4d9404b849",
+    "created": "2024-08-13T14:46:48.738809Z",
+    "modified": "2024-08-13T14:46:48.738809Z",
+    "name": "Data Resource Access without Use of Connection Pooling",
+    "description": "The product accesses a data resource through a database without using a\n\t\t\t\t\tconnection pooling capability.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1072"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-959"
+        },
+        {
+            "external_reference_id": "REF-974"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        }
+    ]
+}

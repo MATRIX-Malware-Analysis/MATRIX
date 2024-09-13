@@ -1,0 +1,73 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e52152f3-cd8f-484c-ac6f-d62f97d5690c",
+    "created": "2024-08-13T14:46:48.893989Z",
+    "modified": "2024-08-13T14:46:48.893989Z",
+    "name": "Key Exchange without Entity Authentication",
+    "description": "The product performs a key exchange with an actor without verifying the identity of that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "322"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that proper authentication is included in the system design.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Understand and properly implement all checks necessary to ensure the identity of entities involved in encrypted communications.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "306",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "923",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "295",
+            "nature": "PeerOf"
+        }
+    ]
+}

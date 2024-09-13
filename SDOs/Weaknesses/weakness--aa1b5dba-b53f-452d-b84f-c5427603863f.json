@@ -1,0 +1,192 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--aa1b5dba-b53f-452d-b84f-c5427603863f",
+    "created": "2024-08-13T14:46:48.939433Z",
+    "modified": "2024-08-13T14:46:48.939433Z",
+    "name": "Download of Code Without Integrity Check",
+    "description": "The product downloads source code or an executable from a remote location and executes the code without sufficiently verifying the origin and integrity of the code.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "494"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Satellite phone does not validate its firmware image.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-9534",
+            "reference": "CVE-2019-9534"
+        },
+        {
+            "description": "Chain: router's firmware update procedure uses curl with \"-k\" (insecure) option that disables certificate validation (CWE-295), allowing adversary-in-the-middle (AITM) compromise with a malicious firmware image (CWE-494).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22909",
+            "reference": "CVE-2021-22909"
+        },
+        {
+            "description": "OS does not verify authenticity of its own updates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3438",
+            "reference": "CVE-2008-3438"
+        },
+        {
+            "description": "online poker client does not verify authenticity of its own updates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3324",
+            "reference": "CVE-2008-3324"
+        },
+        {
+            "description": "anti-virus product does not verify automatic updates for itself.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1125",
+            "reference": "CVE-2001-1125"
+        },
+        {
+            "description": "VOIP phone downloads applications from web sites without verifying integrity.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0671",
+            "reference": "CVE-2002-0671"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform proper forward and reverse DNS lookups to detect DNS spoofing.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-454"
+        },
+        {
+            "external_reference_id": "REF-455"
+        },
+        {
+            "external_reference_id": "REF-456"
+        },
+        {
+            "external_reference_id": "REF-457"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-459"
+        },
+        {
+            "external_reference_id": "REF-76"
+        },
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        }
+    ]
+}

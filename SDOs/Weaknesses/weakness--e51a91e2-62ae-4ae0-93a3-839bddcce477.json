@@ -1,0 +1,98 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e51a91e2-62ae-4ae0-93a3-839bddcce477",
+    "created": "2024-08-13T14:46:49.028581Z",
+    "modified": "2024-08-13T14:46:49.028581Z",
+    "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+    "description": "The product uses CRLF (carriage return line feeds) as a special element, e.g. to separate lines or records, but it does not neutralize or incorrectly neutralizes CRLF sequences from inputs.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "93"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "CRLF injection enables spam proxy (add mail headers) using email address or name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1771",
+            "reference": "CVE-2002-1771"
+        },
+        {
+            "description": "CRLF injection in API function arguments modify headers for outgoing requests.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1783",
+            "reference": "CVE-2002-1783"
+        },
+        {
+            "description": "Spoofed entries in web server log file via carriage returns",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1513",
+            "reference": "CVE-2004-1513"
+        },
+        {
+            "description": "Chain: inject fake log entries with fake timestamps using CRLF injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4624",
+            "reference": "CVE-2006-4624"
+        },
+        {
+            "description": "Chain: Application accepts CRLF in an object ID, allowing HTTP response splitting.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1951",
+            "reference": "CVE-2005-1951"
+        },
+        {
+            "description": "Chain: HTTP response splitting via CRLF in parameter related to URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1687",
+            "reference": "CVE-2004-1687"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid using CRLF as a special sequence.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Appropriately filter or quote CRLF sequences in user-controlled input.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-928"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "117",
+            "nature": "CanPrecede"
+        }
+    ]
+}

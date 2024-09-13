@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6ab20eb4-6a5e-410f-a332-f9d617c38a95",
+    "created": "2024-08-13T14:46:48.899915Z",
+    "modified": "2024-08-13T14:46:48.899915Z",
+    "name": "Predictable from Observable State",
+    "description": "A number or object is predictable based on observations that the attacker can make about the state of the system or network, such as time, process ID, etc.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "341"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Mail server stores private mail messages with predictable filenames in a world-executable directory, which allows local users to read private mailing list archives.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0389",
+            "reference": "CVE-2002-0389"
+        },
+        {
+            "description": "PRNG allows attackers to use the output of small PRNG requests to determine the internal state information, which could be used by attackers to predict future pseudo-random numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1141",
+            "reference": "CVE-2001-1141"
+        },
+        {
+            "description": "DNS resolver library uses predictable IDs, which allows a local attacker to spoof DNS query results.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0335",
+            "reference": "CVE-2000-0335"
+        },
+        {
+            "description": "MFV. predictable filename and insecure permissions allows file modification to execute SQL queries.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1636",
+            "reference": "CVE-2005-1636"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Increase the entropy used to seed a PRNG.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems. Consult FIPS 140-2 Annex C (\"Approved Random Number Generators\").",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a PRNG that periodically re-seeds itself using input from high-quality sources, such as hardware devices with high entropy. However, do not re-seed too frequently, or else the entropy source might block.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "340",
+            "nature": "ChildOf"
+        }
+    ]
+}

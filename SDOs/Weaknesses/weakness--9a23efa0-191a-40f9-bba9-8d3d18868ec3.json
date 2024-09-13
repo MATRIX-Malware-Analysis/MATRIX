@@ -1,0 +1,106 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9a23efa0-191a-40f9-bba9-8d3d18868ec3",
+    "created": "2024-08-13T14:46:49.00724Z",
+    "modified": "2024-08-13T14:46:49.00724Z",
+    "name": "Memory Allocation with Excessive Size Value",
+    "description": "The product allocates memory based on an untrusted, large size value, but it does not ensure that the size is within expected limits, allowing arbitrary amounts of memory to be allocated.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "789"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-10-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Python library does not limit the resources used to process images that specify a very large number of bands (CWE-1284), leading to excessive memory consumption (CWE-789) or an integer overflow (CWE-190).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-21668",
+            "reference": "CVE-2022-21668"
+        },
+        {
+            "description": "program uses ::alloca() for encoding messages, but large messages trigger segfault",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3701",
+            "reference": "CVE-2010-3701"
+        },
+        {
+            "description": "memory consumption and daemon exit by specifying a large value in a length field",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1708",
+            "reference": "CVE-2008-1708"
+        },
+        {
+            "description": "large value in a length field leads to memory consumption and crash when no more memory is available",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0977",
+            "reference": "CVE-2008-0977"
+        },
+        {
+            "description": "large key size in game program triggers crash when a resizing function cannot allocate enough memory",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3791",
+            "reference": "CVE-2006-3791"
+        },
+        {
+            "description": "large Content-Length HTTP header value triggers application crash in instant messaging application due to failure in memory allocation",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2589",
+            "reference": "CVE-2004-2589"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform adequate input validation against any value that influences the amount of memory that is allocated. Define an appropriate strategy for handling requests that exceed the limit, and consider supporting a configuration option so that the administrator can extend the amount of memory to be used if necessary.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run your program using system-provided resource limits for memory. This might still cause the program to crash or exit, but the impact to the rest of the system will be minimized.",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "770",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "476",
+            "nature": "CanPrecede"
+        }
+    ]
+}

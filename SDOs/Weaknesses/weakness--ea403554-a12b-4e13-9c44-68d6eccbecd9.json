@@ -1,0 +1,58 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ea403554-a12b-4e13-9c44-68d6eccbecd9",
+    "created": "2024-08-13T14:46:48.756453Z",
+    "modified": "2024-08-13T14:46:48.756453Z",
+    "name": "Use of Prohibited Code",
+    "description": "The product uses a function, library, or third party component\n\t     that has been explicitly prohibited, whether by the developer or\n\t     the customer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1177"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-01-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Library has multiple buffer overflows using sprintf() and strcpy()",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1470",
+            "reference": "CVE-2007-1470"
+        },
+        {
+            "description": "FTP client uses inherently insecure gets() function and is setuid root on some systems, allowing buffer overflow",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4004",
+            "reference": "CVE-2007-4004"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1009"
+        },
+        {
+            "external_reference_id": "REF-1010"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--02973bc4-e116-4ffc-92b5-0dd1bfcc5f1e",
+    "created": "2024-08-13T14:46:48.942593Z",
+    "modified": "2024-08-13T14:46:48.942593Z",
+    "name": "Trojan Horse",
+    "description": "The product appears to contain benign or useful functionality, but it also contains code that is hidden from normal operation that violates the intended security policy of the user or the system administrator.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "507"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Landwehr",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Most antivirus software scans for Trojan Horses.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Verify the integrity of the product that is being installed.",
+            "effectiveness": null,
+            "phase": "Installation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-1431"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "506",
+            "nature": "ChildOf"
+        }
+    ]
+}

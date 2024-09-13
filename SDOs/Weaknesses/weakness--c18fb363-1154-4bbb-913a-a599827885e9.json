@@ -1,0 +1,67 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c18fb363-1154-4bbb-913a-a599827885e9",
+    "created": "2024-08-13T14:46:48.821305Z",
+    "modified": "2024-08-13T14:46:48.821305Z",
+    "name": "Observable Behavioral Discrepancy With Equivalent Products",
+    "description": "The product operates in an environment in which its existence or specific identity should not be known, but it behaves differently than other products with equivalent functionality, in a way that is observable to an attacker.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "207"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product modifies TCP/IP stack and ICMP error messages in unusual ways that show the product is in use.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0208",
+            "reference": "CVE-2002-0208"
+        },
+        {
+            "description": "Behavioral infoleak by responding to SYN-FIN packets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2252",
+            "reference": "CVE-2004-2252"
+        },
+        {
+            "description": "Honeypot generates an error with a \"pwd\" command in a particular directory, allowing attacker to know they are in a honeypot system.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1142",
+            "reference": "CVE-2000-1142"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "205",
+            "nature": "ChildOf"
+        }
+    ]
+}

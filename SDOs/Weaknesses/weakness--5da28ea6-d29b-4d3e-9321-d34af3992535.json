@@ -1,0 +1,51 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5da28ea6-d29b-4d3e-9321-d34af3992535",
+    "created": "2024-08-13T14:46:49.015999Z",
+    "modified": "2024-08-13T14:46:49.015999Z",
+    "name": "Inclusion of Web Functionality from an Untrusted Source",
+    "description": "The product includes web functionality (such as a web widget) from another domain, which causes it to operate within the domain of the product, potentially granting total access and control of the product to the untrusted source.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "830"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-12-08",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-778"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "829",
+            "nature": "ChildOf"
+        }
+    ]
+}

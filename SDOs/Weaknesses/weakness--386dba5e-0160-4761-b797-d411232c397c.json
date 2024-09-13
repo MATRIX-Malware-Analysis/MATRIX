@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--386dba5e-0160-4761-b797-d411232c397c",
+    "created": "2024-08-13T14:46:49.019369Z",
+    "modified": "2024-08-13T14:46:49.019369Z",
+    "name": "Placement of User into Incorrect Group",
+    "description": "The product or the administrator places a user into an incorrect group.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "842"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Operating system assigns user to privileged wheel group, allowing the user to gain root privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1193",
+            "reference": "CVE-1999-1193"
+        },
+        {
+            "description": "Chain: drafted web request allows the creation of users with arbitrary group membership.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3716",
+            "reference": "CVE-2010-3716"
+        },
+        {
+            "description": "Chain: improper processing of configuration options causes users to contain unintended group memberships.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5397",
+            "reference": "CVE-2008-5397"
+        },
+        {
+            "description": "CMS does not prevent remote administrators from promoting other users to the administrator group, in violation of the intended security model.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6644",
+            "reference": "CVE-2007-6644"
+        },
+        {
+            "description": "Product assigns members to the root group, allowing escalation of privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3260",
+            "reference": "CVE-2007-3260"
+        },
+        {
+            "description": "Chain: daemon does not properly clear groups before dropping privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0080",
+            "reference": "CVE-2002-0080"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "286",
+            "nature": "ChildOf"
+        }
+    ]
+}

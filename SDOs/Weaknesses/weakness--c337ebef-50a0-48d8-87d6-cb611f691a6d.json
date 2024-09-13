@@ -1,0 +1,102 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c337ebef-50a0-48d8-87d6-cb611f691a6d",
+    "created": "2024-08-13T14:46:48.882478Z",
+    "modified": "2024-08-13T14:46:48.882478Z",
+    "name": "Improper Access Control",
+    "description": "The product does not restrict or incorrectly restricts access to a resource from an unauthorized actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "284"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A form hosting website only checks the session authentication status for a single form, making it possible to bypass authentication when there are multiple forms",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24985",
+            "reference": "CVE-2022-24985"
+        },
+        {
+            "description": "Access-control setting in web-based document collaboration tool is not properly implemented by the code, which prevents listing hidden directories but does not prevent direct requests to files in those directories.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29238",
+            "reference": "CVE-2022-29238"
+        },
+        {
+            "description": "Python-based HTTP library did not scope cookies to a particular domain such that \"supercookies\" could be sent to any domain on redirect",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-23607",
+            "reference": "CVE-2022-23607"
+        },
+        {
+            "description": "Chain: Cloud computing virtualization platform does not require authentication for upload of a tar format file (CWE-306), then uses .. path traversal sequences (CWE-23) in the file to access unexpected files, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21972",
+            "reference": "CVE-2021-21972"
+        },
+        {
+            "description": "IT management product does not perform authentication for some REST API requests, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-37415",
+            "reference": "CVE-2021-37415"
+        },
+        {
+            "description": "Firmware for a WiFi router uses a hard-coded password for a BusyBox shell, allowing bypass of authentication through the UART port",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-35033",
+            "reference": "CVE-2021-35033"
+        },
+        {
+            "description": "Bluetooth speaker does not require authentication for the debug functionality on the UART port, allowing root shell access",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-10263",
+            "reference": "CVE-2020-10263"
+        },
+        {
+            "description": "Default setting in workflow management product allows all API requests without authentication, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-13927",
+            "reference": "CVE-2020-13927"
+        },
+        {
+            "description": "Bulletin board applies restrictions on number of images during post creation, but does not enforce this on editing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4624",
+            "reference": "CVE-2010-4624"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1287"
+        }
+    ]
+}

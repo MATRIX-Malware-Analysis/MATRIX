@@ -1,0 +1,46 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a284e1ce-50cf-409d-9644-d8067dee44d1",
+    "created": "2024-08-13T14:46:49.026407Z",
+    "modified": "2024-08-13T14:46:49.026407Z",
+    "name": "Improper Restriction of Power Consumption",
+    "description": "The product operates in an environment in which power is a limited resource that cannot be automatically replenished, but the product does not properly restrict the amount of power that its operation consumes.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "920"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-06-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "400",
+            "nature": "ChildOf"
+        }
+    ]
+}

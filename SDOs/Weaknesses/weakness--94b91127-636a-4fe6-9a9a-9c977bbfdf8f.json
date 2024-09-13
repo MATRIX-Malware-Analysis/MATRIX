@@ -1,0 +1,98 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--94b91127-636a-4fe6-9a9a-9c977bbfdf8f",
+    "created": "2024-08-13T14:46:48.903864Z",
+    "modified": "2024-08-13T14:46:48.903864Z",
+    "name": "Improper Validation of Integrity Check Value",
+    "description": "The product does not validate or incorrectly validates the integrity check values or \"checksums\" of a message. This may prevent it from detecting if the data has been modified or corrupted in transmission.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "354"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Other",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that the checksums present in messages are properly checked in accordance with the protocol specification before they are parsed and used.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "754",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "353",
+            "nature": "PeerOf"
+        }
+    ]
+}

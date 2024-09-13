@@ -1,0 +1,85 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--86393e70-7708-421d-8aa0-1d0686aed4b3",
+    "created": "2024-08-13T14:46:48.782705Z",
+    "modified": "2024-08-13T14:46:48.782705Z",
+    "name": "Missing Source Correlation of Multiple Independent Data",
+    "description": "The product relies on one source of data, preventing the ability to detect if an adversary has compromised a data source.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1293"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-04-03",
+            "submission_name": "Kurt Seifried",
+            "submission_organization": "Cloud Security Alliance"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Design system to use a Practical Byzantine fault method, to request information from multiple sources to verify the data and report on potentially compromised information sources.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Failure to use a Practical Byzantine fault method when requesting data. Lack of place to report potentially compromised information sources. Relying on non-independent information sources for integrity checking. Failure to report information sources that respond in the minority to incident response procedures.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1125"
+        },
+        {
+            "external_reference_id": "REF-1126"
+        },
+        {
+            "external_reference_id": "REF-1127"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "654",
+            "nature": "PeerOf"
+        }
+    ]
+}

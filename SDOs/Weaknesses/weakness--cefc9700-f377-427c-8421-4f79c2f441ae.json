@@ -1,0 +1,240 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cefc9700-f377-427c-8421-4f79c2f441ae",
+    "created": "2024-08-13T14:46:48.89665Z",
+    "modified": "2024-08-13T14:46:48.89665Z",
+    "name": "Use of Insufficiently Random Values",
+    "description": "The product uses insufficiently random numbers or values in a security context that depends on unpredictable numbers.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "330"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "PHP framework uses mt_rand() function (Marsenne Twister) when generating tokens",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3692",
+            "reference": "CVE-2021-3692"
+        },
+        {
+            "description": "Cloud application on Kubernetes generates passwords using a weak random number generator based on deployment time.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-7010",
+            "reference": "CVE-2020-7010"
+        },
+        {
+            "description": "Crypto product uses rand() library function to generate a recovery key, making it easier to conduct brute force attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3278",
+            "reference": "CVE-2009-3278"
+        },
+        {
+            "description": "Random number generator can repeatedly generate the same value.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3238",
+            "reference": "CVE-2009-3238"
+        },
+        {
+            "description": "Web application generates predictable session IDs, allowing session hijacking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2367",
+            "reference": "CVE-2009-2367"
+        },
+        {
+            "description": "Password recovery utility generates a relatively small number of random passwords, simplifying brute force attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2158",
+            "reference": "CVE-2009-2158"
+        },
+        {
+            "description": "Cryptographic key created with a seed based on the system time.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0255",
+            "reference": "CVE-2009-0255"
+        },
+        {
+            "description": "Kernel function does not have a good entropy source just after boot.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5162",
+            "reference": "CVE-2008-5162"
+        },
+        {
+            "description": "Blogging software uses a hard-coded salt when calculating a password hash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4905",
+            "reference": "CVE-2008-4905"
+        },
+        {
+            "description": "Bulletin board application uses insufficiently random names for uploaded files, allowing other users to access private files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4929",
+            "reference": "CVE-2008-4929"
+        },
+        {
+            "description": "Handheld device uses predictable TCP sequence numbers, allowing spoofing or hijacking of TCP connections.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3612",
+            "reference": "CVE-2008-3612"
+        },
+        {
+            "description": "Web management console generates session IDs based on the login time, making it easier to conduct session hijacking.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2433",
+            "reference": "CVE-2008-2433"
+        },
+        {
+            "description": "SSL library uses a weak random number generator that only generates 65,536 unique keys.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0166",
+            "reference": "CVE-2008-0166"
+        },
+        {
+            "description": "Chain: insufficient precision causes extra zero bits to be assigned, reducing entropy for an API function that generates random numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2108",
+            "reference": "CVE-2008-2108"
+        },
+        {
+            "description": "Chain: insufficient precision (CWE-1339) in\n\t     random-number generator causes some zero bits to be reliably\n\t     generated, reducing the amount of entropy (CWE-331)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2108",
+            "reference": "CVE-2008-2108"
+        },
+        {
+            "description": "CAPTCHA implementation does not produce enough different images, allowing bypass using a database of all possible checksums.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2020",
+            "reference": "CVE-2008-2020"
+        },
+        {
+            "description": "DNS client uses predictable DNS transaction IDs, allowing DNS spoofing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0087",
+            "reference": "CVE-2008-0087"
+        },
+        {
+            "description": "Application generates passwords that are based on the time of day.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0141",
+            "reference": "CVE-2008-0141"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider a PRNG that re-seeds itself as needed from high quality pseudo-random output sources, such as hardware devices.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use automated static analysis tools that target this type of weakness. Many modern techniques use data flow analysis to minimize the number of false positives. This is not a perfect solution, since 100% accuracy and coverage are not feasible.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems. Consult FIPS 140-2 Annex C (\"Approved Random Number Generators\").",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session. These may be more effective than strictly automated techniques. This is especially the case with weaknesses that are related to design and business rules.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-207"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "804",
+            "nature": "CanPrecede"
+        }
+    ]
+}

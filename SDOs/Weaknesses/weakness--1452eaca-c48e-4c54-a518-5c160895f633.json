@@ -1,0 +1,81 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1452eaca-c48e-4c54-a518-5c160895f633",
+    "created": "2024-08-13T14:46:48.876896Z",
+    "modified": "2024-08-13T14:46:48.876896Z",
+    "name": "Incorrect Privilege Assignment",
+    "description": "A product incorrectly assigns a privilege to a particular actor, creating an unintended sphere of control for that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "266"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "untrusted user placed in unix \"wheel\" group",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1193",
+            "reference": "CVE-1999-1193"
+        },
+        {
+            "description": "Product allows users to grant themselves certain rights that can be used to escalate privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2741",
+            "reference": "CVE-2005-2741"
+        },
+        {
+            "description": "Product uses group ID of a user instead of the group, causing it to run with different privileges. This is resultant from some other unknown issue.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2496",
+            "reference": "CVE-2005-2496"
+        },
+        {
+            "description": "Product mistakenly assigns a particular status to an entity, leading to increased privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0274",
+            "reference": "CVE-2004-0274"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-76"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "269",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "286",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--77f70ae6-d983-4b43-b139-e498648b602d",
+    "created": "2024-08-13T14:46:48.88591Z",
+    "modified": "2024-08-13T14:46:48.88591Z",
+    "name": "Improper Certificate Validation",
+    "description": "The product does not validate, or incorrectly validates, a certificate.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "295"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A Go framework for robotics, drones, and IoT devices skips verification of root CA certificates by default.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-12496",
+            "reference": "CVE-2019-12496"
+        },
+        {
+            "description": "chain: incorrect \"goto\" in Apple SSL product bypasses certificate validation, allowing Adversary-in-the-Middle (AITM) attack (Apple \"goto fail\" bug). CWE-705 (Incorrect Control Flow Scoping) -> CWE-561 (Dead Code) -> CWE-295 (Improper Certificate Validation) -> CWE-393 (Return of Wrong Status Code) -> CWE-300 (Channel Accessible by Non-Endpoint).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-1266",
+            "reference": "CVE-2014-1266"
+        },
+        {
+            "description": "Chain: router's firmware update procedure uses curl with \"-k\" (insecure) option that disables certificate validation (CWE-295), allowing adversary-in-the-middle (AITM) compromise with a malicious firmware image (CWE-494).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22909",
+            "reference": "CVE-2021-22909"
+        },
+        {
+            "description": "Verification function trusts certificate chains in which the last certificate is self-signed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4989",
+            "reference": "CVE-2008-4989"
+        },
+        {
+            "description": "Web browser uses a TLS-related function incorrectly, preventing it from verifying that a server's certificate is signed by a trusted certification authority (CA)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5821",
+            "reference": "CVE-2012-5821"
+        },
+        {
+            "description": "Web browser does not check if any intermediate certificates are revoked.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3046",
+            "reference": "CVE-2009-3046"
+        },
+        {
+            "description": "Operating system does not check Certificate Revocation List (CRL) in some cases, allowing spoofing using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0199",
+            "reference": "CVE-2011-0199"
+        },
+        {
+            "description": "Mobile banking application does not verify hostname, leading to financial loss.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5810",
+            "reference": "CVE-2012-5810"
+        },
+        {
+            "description": "Cloud-support library written in Python uses incorrect regular expression when matching hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-3446",
+            "reference": "CVE-2012-3446"
+        },
+        {
+            "description": "Web browser does not correctly handle '\\0' character (NUL) in Common Name, allowing spoofing of https sites.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2408",
+            "reference": "CVE-2009-2408"
+        },
+        {
+            "description": "Smartphone device does not verify hostname, allowing spoofing of mail services.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-2993",
+            "reference": "CVE-2012-2993"
+        },
+        {
+            "description": "Application uses third-party library that does not validate hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5822",
+            "reference": "CVE-2012-5822"
+        },
+        {
+            "description": "Cloud storage management application does not validate hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5819",
+            "reference": "CVE-2012-5819"
+        },
+        {
+            "description": "Java library uses JSSE SSLSocket and SSLEngine classes, which do not verify the hostname.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5817",
+            "reference": "CVE-2012-5817"
+        },
+        {
+            "description": "chain: incorrect calculation allows attackers to bypass certificate checks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1378",
+            "reference": "CVE-2010-1378"
+        },
+        {
+            "description": "LDAP client accepts certificates even if they are not from a trusted CA.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3170",
+            "reference": "CVE-2005-3170"
+        },
+        {
+            "description": "chain: DNS server does not correctly check return value from the OpenSSL EVP_VerifyFinal function allows bypass of validation of the certificate chain.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0265",
+            "reference": "CVE-2009-0265"
+        },
+        {
+            "description": "chain: product checks if client is trusted when it intended to check if the server is trusted, allowing validation of signed code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1229",
+            "reference": "CVE-2003-1229"
+        },
+        {
+            "description": "Cryptographic API, as used in web browsers, mail clients, and other software, does not properly validate Basic Constraints.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0862",
+            "reference": "CVE-2002-0862"
+        },
+        {
+            "description": "chain: OS package manager does not check properly check the return value, allowing bypass using a revoked certificate.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1358",
+            "reference": "CVE-2009-1358"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Certificates should be carefully managed and checked to assure that data are encrypted with the intended owner's public key.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If certificate pinning is being used, ensure that all relevant properties of the certificate are fully validated before the certificate is pinned, including the hostname.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-243"
+        },
+        {
+            "external_reference_id": "REF-244"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "287",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "322",
+            "nature": "PeerOf"
+        }
+    ]
+}

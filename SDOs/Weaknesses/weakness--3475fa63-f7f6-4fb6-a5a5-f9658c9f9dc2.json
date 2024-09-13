@@ -1,0 +1,303 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3475fa63-f7f6-4fb6-a5a5-f9658c9f9dc2",
+    "created": "2024-08-13T14:46:49.021363Z",
+    "modified": "2024-08-13T14:46:49.021363Z",
+    "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')",
+    "description": "The product constructs a string for a command to be executed by a separate component\nin another control sphere, but it does not properly delimit the\nintended arguments, options, or switches within that command string.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "88"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Python-based dependency management tool avoids OS command injection  when generating Git commands but allows  injection of optional arguments with input beginning with a dash (CWE-88), potentially allowing for code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-36069",
+            "reference": "CVE-2022-36069"
+        },
+        {
+            "description": "Canonical Example - \"-froot\" argument is passed on to another program, where the \"-f\" causes execution as user \"root\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0113",
+            "reference": "CVE-1999-0113"
+        },
+        {
+            "description": "Web browser executes Telnet sessions using command line arguments that are specified by the web site, which could allow remote attackers to execute arbitrary commands.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0150",
+            "reference": "CVE-2001-0150"
+        },
+        {
+            "description": "Web browser allows remote attackers to execute commands by spawning Telnet with a log file option on the command line and writing arbitrary code into an executable file which is later executed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0667",
+            "reference": "CVE-2001-0667"
+        },
+        {
+            "description": "Argument injection vulnerability in the mail function for PHP may allow attackers to bypass safe mode restrictions and modify command line arguments to the MTA (e.g. sendmail) possibly executing commands.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0985",
+            "reference": "CVE-2002-0985"
+        },
+        {
+            "description": "Help and Support center in windows does not properly validate HCP URLs, which allows remote attackers to execute arbitrary code via quotation marks in an \"hcp://\" URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0907",
+            "reference": "CVE-2003-0907"
+        },
+        {
+            "description": "Mail client does not sufficiently filter parameters of mailto: URLs when using them as arguments to mail executable, which allows remote attackers to execute arbitrary programs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0121",
+            "reference": "CVE-2004-0121"
+        },
+        {
+            "description": "Web browser doesn't filter \"-\" when invoking various commands, allowing command-line switches to be specified.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0473",
+            "reference": "CVE-2004-0473"
+        },
+        {
+            "description": "Mail client allows remote attackers to execute arbitrary code via a URI that uses a UNC network share pathname to provide an alternate configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0480",
+            "reference": "CVE-2004-0480"
+        },
+        {
+            "description": "SSH URI handler for web browser allows remote attackers to execute arbitrary code or conduct port forwarding via the a command line option.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0489",
+            "reference": "CVE-2004-0489"
+        },
+        {
+            "description": "Web browser doesn't filter \"-\" when invoking various commands, allowing command-line switches to be specified.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0411",
+            "reference": "CVE-2004-0411"
+        },
+        {
+            "description": "Argument injection vulnerability in TellMe 1.2 and earlier allows remote attackers to modify command line arguments for the Whois program and obtain sensitive information via \"--\" style options in the q_Host parameter.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4699",
+            "reference": "CVE-2005-4699"
+        },
+        {
+            "description": "Beagle before 0.2.5 can produce certain insecure command lines to launch external helper applications while indexing, which allows attackers to execute arbitrary commands. NOTE: it is not immediately clear whether this issue involves argument injection, shell metacharacters, or other issues.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-1865",
+            "reference": "CVE-2006-1865"
+        },
+        {
+            "description": "Argument injection vulnerability in Internet Explorer 6 for Windows XP SP2 allows user-assisted remote attackers to modify command line arguments to an invoked mail client via \" (double quote) characters in a mailto: scheme handler, as demonstrated by launching Microsoft Outlook with an arbitrary filename as an attachment. NOTE: it is not clear whether this issue is implementation-specific or a problem in the Microsoft API.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2056",
+            "reference": "CVE-2006-2056"
+        },
+        {
+            "description": "Argument injection vulnerability in Mozilla Firefox 1.0.6 allows user-assisted remote attackers to modify command line arguments to an invoked mail client via \" (double quote) characters in a mailto: scheme handler, as demonstrated by launching Microsoft Outlook with an arbitrary filename as an attachment. NOTE: it is not clear whether this issue is implementation-specific or a problem in the Microsoft API.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2057",
+            "reference": "CVE-2006-2057"
+        },
+        {
+            "description": "Argument injection vulnerability in Avant Browser 10.1 Build 17 allows user-assisted remote attackers to modify command line arguments to an invoked mail client via \" (double quote) characters in a mailto: scheme handler, as demonstrated by launching Microsoft Outlook with an arbitrary filename as an attachment. NOTE: it is not clear whether this issue is implementation-specific or a problem in the Microsoft API.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2058",
+            "reference": "CVE-2006-2058"
+        },
+        {
+            "description": "Argument injection vulnerability in the URI handler in Skype 2.0.*.104 and 2.5.*.0 through 2.5.*.78 for Windows allows remote authorized attackers to download arbitrary files via a URL that contains certain command-line switches.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2312",
+            "reference": "CVE-2006-2312"
+        },
+        {
+            "description": "Argument injection vulnerability in WinSCP 3.8.1 build 328 allows remote attackers to upload or download arbitrary files via encoded spaces and double-quote characters in a scp or sftp URI.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3015",
+            "reference": "CVE-2006-3015"
+        },
+        {
+            "description": "Argument injection vulnerability in the Windows Object Packager (packager.exe) in Microsoft Windows XP SP1 and SP2 and Server 2003 SP1 and earlier allows remote user-assisted attackers to execute arbitrary commands via a crafted file with a \"/\" (slash) character in the filename of the Command Line property, followed by a valid file extension, which causes the command before the slash to be executed, aka \"Object Packager Dialogue Spoofing Vulnerability.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4692",
+            "reference": "CVE-2006-4692"
+        },
+        {
+            "description": "Argument injection vulnerability in HyperAccess 8.4 allows user-assisted remote attackers to execute arbitrary vbscript and commands via the /r option in a telnet:// URI, which is configured to use hawin32.exe.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6597",
+            "reference": "CVE-2006-6597"
+        },
+        {
+            "description": "Argument injection vulnerability in the telnet daemon (in.telnetd) in Solaris 10 and 11 (SunOS 5.10 and 5.11) misinterprets certain client \"-f\" sequences as valid requests for the login program to skip authentication, which allows remote attackers to log into certain accounts, as demonstrated by the bin account.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0882",
+            "reference": "CVE-2007-0882"
+        },
+        {
+            "description": "Language interpreter's mail function accepts another argument that is concatenated to a string used in a dangerous popen() call. Since there is no neutralization of this argument, both OS Command Injection (CWE-78) and Argument Injection (CWE-88) are possible.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1246",
+            "reference": "CVE-2001-1246"
+        },
+        {
+            "description": "Argument injection allows execution of arbitrary commands by injecting a \"-exec\" option, which is executed by the command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-13475",
+            "reference": "CVE-2019-13475"
+        },
+        {
+            "description": "Argument injection in mail-processing function allows writing unxpected files and executing programs using tecnically-valid email addresses that insert \"-o\" and \"-X\" switches.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-10033",
+            "reference": "CVE-2016-10033"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Where possible, avoid building a single string that contains the command and its arguments.  Some languages or frameworks have functions that support specifying independent arguments, e.g. as an array, which is used to automatically perform the appropriate quoting or escaping while building the command.  For example, in PHP, escapeshellarg() can be used to escape a single argument to system(), or exec() can be called with an array of arguments.  In C, code can often be refactored from using system() - which accepts a single string - to using exec(), which requires separate function arguments for each parameter.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Understand all the potential areas where untrusted inputs can enter your product: parameters or arguments, cookies, anything read from the network, environment variables, request headers as well as content, URL components, e-mail, files, databases, and any external systems that provide data to the application. Perform input validation at well-defined interfaces.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Directly convert your input type into the expected data type, such as using a conversion function that translates a string into a number. After converting to the expected data type, ensure that the input's values fall within the expected range of allowable values and that multi-field consistencies are maintained.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When exchanging data between components, ensure that both components are using the same character encoding. Ensure that the proper encoding is applied at each interface. Explicitly set the encoding you are using whenever the protocol allows you to do so.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When your application combines data from multiple sources, perform the validation after the sources have been combined. The individual data elements may pass the validation step but violate the intended restrictions after they have been combined.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use automated static analysis tools that target this type of weakness. Many modern techniques use data flow analysis to minimize the number of false positives. This is not a perfect solution, since 100% accuracy and coverage are not feasible.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Use dynamic tools and techniques that interact with the product using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The product's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-859"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1030"
+        },
+        {
+            "external_reference_id": "REF-1249"
+        },
+        {
+            "external_reference_id": "REF-1250"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        }
+    ]
+}

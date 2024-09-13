@@ -1,0 +1,266 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cc1fb344-3dbf-4739-946f-4189d2508c7b",
+    "created": "2024-08-13T14:46:48.827574Z",
+    "modified": "2024-08-13T14:46:48.827574Z",
+    "name": "Relative Path Traversal",
+    "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as \"..\" that can resolve to a location that is outside of that directory.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "23"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Large language model (LLM) management tool does not\n               validate the format of a digest value (CWE-1287) from a\n               private, untrusted model registry, enabling relative\n               path traversal (CWE-23), a.k.a. Probllama",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-37032",
+            "reference": "CVE-2024-37032"
+        },
+        {
+            "description": "Chain: a learning management tool debugger uses external input to locate previous session logs (CWE-73) and does not properly validate the given path (CWE-20), allowing for filesystem path traversal using \"../\" sequences (CWE-24)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-45918",
+            "reference": "CVE-2022-45918"
+        },
+        {
+            "description": "Python package manager does not correctly restrict the filename specified in a Content-Disposition header, allowing arbitrary file read using path traversal sequences such as \"../\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-20916",
+            "reference": "CVE-2019-20916"
+        },
+        {
+            "description": "directory traversal in Go-based Kubernetes operator app allows accessing data from the controller's pod file system via ../ sequences in a yaml file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24877",
+            "reference": "CVE-2022-24877"
+        },
+        {
+            "description": "a Kubernetes package manager written in Go allows malicious plugins to inject path traversal sequences into a plugin archive (\"Zip slip\") to copy a file outside the intended directory",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-4053",
+            "reference": "CVE-2020-4053"
+        },
+        {
+            "description": "Chain: Cloud computing virtualization platform does not require authentication for upload of a tar format file (CWE-306), then uses .. path traversal sequences (CWE-23) in the file to access unexpected files, as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21972",
+            "reference": "CVE-2021-21972"
+        },
+        {
+            "description": "Go-based archive library allows extraction of  files to locations outside of the target folder with \"../\" path traversal sequences in filenames in a zip file, aka \"Zip Slip\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10743",
+            "reference": "CVE-2019-10743"
+        },
+        {
+            "description": "Server allows remote attackers to cause a denial of service via certain HTTP GET requests containing a %2e%2e (encoded dot-dot), several \"/../\" sequences, or several \"../\" in a URI.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0298",
+            "reference": "CVE-2002-0298"
+        },
+        {
+            "description": "\"\\\" not in denylist for web server, allowing path traversal attacks when the server is run in Windows and other OSes.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0661",
+            "reference": "CVE-2002-0661"
+        },
+        {
+            "description": "Arbitrary files may be read files via ..\\ (dot dot) sequences in an HTTP request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0946",
+            "reference": "CVE-2002-0946"
+        },
+        {
+            "description": "Directory traversal vulnerability in search engine for web server allows remote attackers to read arbitrary files via \"..\\\" sequences in queries.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1042",
+            "reference": "CVE-2002-1042"
+        },
+        {
+            "description": "Directory traversal vulnerability in FTP server allows remote attackers to read arbitrary files via \"..\\\" sequences in a GET request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1209",
+            "reference": "CVE-2002-1209"
+        },
+        {
+            "description": "Directory traversal vulnerability in servlet allows remote attackers to execute arbitrary commands via \"..\\\" sequences in an HTTP request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1178",
+            "reference": "CVE-2002-1178"
+        },
+        {
+            "description": "Protection mechanism checks for \"/..\" but doesn't account for Windows-specific \"\\..\" allowing read of arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1987",
+            "reference": "CVE-2002-1987"
+        },
+        {
+            "description": "Directory traversal vulnerability in FTP server allows remote authenticated attackers to list arbitrary directories via a \"\\..\" sequence in an LS command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2142",
+            "reference": "CVE-2005-2142"
+        },
+        {
+            "description": "The administration function in Access Control Server allows remote attackers to read HTML, Java class, and image files outside the web root via a \"..\\..\" sequence in the URL to port 2002.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0160",
+            "reference": "CVE-2002-0160"
+        },
+        {
+            "description": "\"\\...\" in web server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0467",
+            "reference": "CVE-2001-0467"
+        },
+        {
+            "description": "\"...\" in cd command in FTP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0963",
+            "reference": "CVE-2001-0963"
+        },
+        {
+            "description": "\"...\" in cd command in FTP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1193",
+            "reference": "CVE-2001-1193"
+        },
+        {
+            "description": "\"...\" in cd command in FTP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1131",
+            "reference": "CVE-2001-1131"
+        },
+        {
+            "description": "read of arbitrary files and directories using GET or CD with \"...\" in Windows-based FTP server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0480",
+            "reference": "CVE-2001-0480"
+        },
+        {
+            "description": "read files using \".\" and Unicode-encoded \"/\" or \"\\\" characters in the URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0288",
+            "reference": "CVE-2002-0288"
+        },
+        {
+            "description": "Directory listing of web server using \"...\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0313",
+            "reference": "CVE-2003-0313"
+        },
+        {
+            "description": "Triple dot",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1658",
+            "reference": "CVE-2005-1658"
+        },
+        {
+            "description": "read files via \"/........../\" in URL",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0240",
+            "reference": "CVE-2000-0240"
+        },
+        {
+            "description": "read files via \"....\" in web server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0773",
+            "reference": "CVE-2000-0773"
+        },
+        {
+            "description": "read files via \"......\" in web server (doubled triple dot?)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1082",
+            "reference": "CVE-1999-1082"
+        },
+        {
+            "description": "read files via \"......\" in web server (doubled triple dot?)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2121",
+            "reference": "CVE-2004-2121"
+        },
+        {
+            "description": "multiple attacks using \"..\", \"...\", and \"....\" in different commands",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0491",
+            "reference": "CVE-2001-0491"
+        },
+        {
+            "description": "\"...\" or \"....\" in chat server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0615",
+            "reference": "CVE-2001-0615"
+        },
+        {
+            "description": "chain: \".../...//\" bypasses protection mechanism using regexp's that remove \"../\" resulting in collapse into an unsafe value \"../\" (CWE-182) and resultant path traversal.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2169",
+            "reference": "CVE-2005-2169"
+        },
+        {
+            "description": "\".../....///\" bypasses regexp's that remove \"./\" and \"../\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0202",
+            "reference": "CVE-2005-0202"
+        },
+        {
+            "description": "Mail server allows remote attackers to create arbitrary directories via a \"..\" or rename arbitrary files via a \"....//\" in user supplied parameters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1670",
+            "reference": "CVE-2004-1670"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-192"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1282"
+        },
+        {
+            "external_reference_id": "REF-1448"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "22",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "22",
+            "nature": "ChildOf"
+        }
+    ]
+}

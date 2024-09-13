@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bf75c62c-dd92-440c-b9d3-3c670e82f176",
+    "created": "2024-08-13T14:46:48.99253Z",
+    "modified": "2024-08-13T14:46:48.99253Z",
+    "name": "Incorrect Control Flow Scoping",
+    "description": "The product does not properly return control flow to the proper location after it has completed a task or detected an unusual condition.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "705"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Java code in a smartphone OS can encounter a \"boot loop\" due to an uncaught exception",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-21087",
+            "reference": "CVE-2023-21087"
+        },
+        {
+            "description": "chain: incorrect \"goto\" in Apple SSL product bypasses certificate validation, allowing Adversary-in-the-Middle (AITM) attack (Apple \"goto fail\" bug). CWE-705 (Incorrect Control Flow Scoping) -> CWE-561 (Dead Code) -> CWE-295 (Improper Certificate Validation) -> CWE-393 (Return of Wrong Status Code) -> CWE-300 (Channel Accessible by Non-Endpoint).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-1266",
+            "reference": "CVE-2014-1266"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        }
+    ]
+}

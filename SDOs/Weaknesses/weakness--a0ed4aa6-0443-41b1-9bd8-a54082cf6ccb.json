@@ -1,0 +1,89 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a0ed4aa6-0443-41b1-9bd8-a54082cf6ccb",
+    "created": "2024-08-13T14:46:49.017138Z",
+    "modified": "2024-08-13T14:46:49.017138Z",
+    "name": "Excessive Iteration",
+    "description": "The product performs an iteration or loop without sufficiently limiting the number of times that the loop is executed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "834"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: off-by-one error (CWE-193) leads to infinite loop (CWE-835) using invalid hex-encoded characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-1027",
+            "reference": "CVE-2011-1027"
+        },
+        {
+            "description": "Chain: web browser crashes due to infinite loop - \"bad\n\t      looping logic [that relies on] floating point math [CWE-1339] to exit\n\t      the loop [CWE-835]\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6499",
+            "reference": "CVE-2006-6499"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        }
+    ]
+}

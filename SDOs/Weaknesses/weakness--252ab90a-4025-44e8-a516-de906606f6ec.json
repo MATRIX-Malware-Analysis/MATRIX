@@ -1,0 +1,205 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--252ab90a-4025-44e8-a516-de906606f6ec",
+    "created": "2024-08-13T14:46:48.783599Z",
+    "modified": "2024-08-13T14:46:48.783599Z",
+    "name": "Incorrect Chaining or Granularity of Debug Components",
+    "description": "The product's debug components contain incorrect chaining or granularity of debug components.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1296"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Accountability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-31",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Appropriate Post-Si tests should be carried out at various authorization levels to ensure that debug components are properly chained and accessible only to users with appropriate credentials.",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        },
+        {
+            "description": "Appropriate Post-Si tests should be carried out at various authorization levels to ensure that debug components are properly chained and accessible only to users with appropriate credentials.",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Incorrect access control in RDP Level 1 on STMicroelectronics STM32F0 series devices allows physically present attackers to extract the device's protected firmware via a special sequence of Serial Wire Debug (SWD) commands because there is a race condition between full initialization of the SWD interface and the setup of flash protection. ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-18347",
+            "reference": "CVE-2017-18347"
+        },
+        {
+            "description": "There is an improper authorization vulnerability in several smartphones.  The system has a logic-judging error, and, under certain scenarios, a successful exploit could allow the attacker to switch to third desktop after a series of operations in ADB mode. (Vulnerability ID: HWPSIRT-2019-10114).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-1791",
+            "reference": "CVE-2020-1791"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that debug components are properly chained and their granularity is maintained at different authentication levels.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5826200a-5043-4d00-9ebb-ca9c8f080a37",
+    "created": "2024-08-13T14:46:49.013353Z",
+    "modified": "2024-08-13T14:46:49.013353Z",
+    "name": "Untrusted Pointer Dereference",
+    "description": "The product obtains a value from an untrusted source, converts this value to a pointer, and dereferences the resulting pointer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "822"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-09-22",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "message-passing framework interprets values in packets as pointers, causing a crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5655",
+            "reference": "CVE-2007-5655"
+        },
+        {
+            "description": "labeled as a \"type confusion\" issue, also referred to as a \"stale pointer.\" However, the bug ID says \"contents are simply interpreted as a pointer... renderer ordinarily doesn't supply this pointer directly\". The \"handle\" in the untrusted area is replaced in one function, but not another - thus also, effectively, exposure to wrong sphere (CWE-668).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2299",
+            "reference": "CVE-2010-2299"
+        },
+        {
+            "description": "Untrusted dereference using undocumented constructor.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1719",
+            "reference": "CVE-2009-1719"
+        },
+        {
+            "description": "An error code is incorrectly checked and interpreted as a pointer, leading to a crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1250",
+            "reference": "CVE-2009-1250"
+        },
+        {
+            "description": "An untrusted value is obtained from a packet and directly called as a function pointer, leading to code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0311",
+            "reference": "CVE-2009-0311"
+        },
+        {
+            "description": "Undocumented attribute in multimedia software allows \"unmarshaling\" of an untrusted pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1818",
+            "reference": "CVE-2010-1818"
+        },
+        {
+            "description": "ActiveX control for security software accepts a parameter that is assumed to be an initialized pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3189",
+            "reference": "CVE-2010-3189"
+        },
+        {
+            "description": "Spreadsheet software treats certain record values that lead to \"user-controlled pointer\" (might be untrusted offset, not untrusted pointer).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1253",
+            "reference": "CVE-2010-1253"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "125",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "787",
+            "nature": "CanPrecede"
+        }
+    ]
+}

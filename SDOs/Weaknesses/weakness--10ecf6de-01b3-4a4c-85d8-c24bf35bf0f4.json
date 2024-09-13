@@ -1,0 +1,67 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--10ecf6de-01b3-4a4c-85d8-c24bf35bf0f4",
+    "created": "2024-08-13T14:46:48.892116Z",
+    "modified": "2024-08-13T14:46:48.892116Z",
+    "name": "Cleartext Storage of Sensitive Information in a Cookie",
+    "description": "The product stores sensitive information in cleartext in a cookie.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "315"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Admin password in cleartext in a cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1800",
+            "reference": "CVE-2002-1800"
+        },
+        {
+            "description": "Default configuration has cleartext usernames/passwords in cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1537",
+            "reference": "CVE-2001-1537"
+        },
+        {
+            "description": "Usernames/passwords in cleartext in cookies.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1536",
+            "reference": "CVE-2001-1536"
+        },
+        {
+            "description": "Authentication information stored in cleartext in a cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2160",
+            "reference": "CVE-2005-2160"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "312",
+            "nature": "ChildOf"
+        }
+    ]
+}

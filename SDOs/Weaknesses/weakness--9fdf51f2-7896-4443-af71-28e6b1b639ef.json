@@ -1,0 +1,100 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9fdf51f2-7896-4443-af71-28e6b1b639ef",
+    "created": "2024-08-13T14:46:48.901336Z",
+    "modified": "2024-08-13T14:46:48.901336Z",
+    "name": "Origin Validation Error",
+    "description": "The product does not properly verify that the source of data or communication is valid.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "346"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "DNS server can accept DNS updates from hosts that it did not query, leading to cache poisoning",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1218",
+            "reference": "CVE-2000-1218"
+        },
+        {
+            "description": "DNS server can accept DNS updates from hosts that it did not query, leading to cache poisoning",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0877",
+            "reference": "CVE-2005-0877"
+        },
+        {
+            "description": "DNS server caches glue records received from non-delegated name servers",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1452",
+            "reference": "CVE-2001-1452"
+        },
+        {
+            "description": "user ID obtained from untrusted source (URL)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2188",
+            "reference": "CVE-2005-2188"
+        },
+        {
+            "description": "LDAP service does not verify if a particular attribute was set by the LDAP server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0174",
+            "reference": "CVE-2003-0174"
+        },
+        {
+            "description": "product does not sufficiently distinguish external HTML from internal, potentially dangerous HTML, allowing bypass using special strings in the page title. Overlaps special elements.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1549",
+            "reference": "CVE-1999-1549"
+        },
+        {
+            "description": "product records the reverse DNS name of a visitor in the logs, allowing spoofing and resultant XSS.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0981",
+            "reference": "CVE-2003-0981"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-324"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "345",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--47c8b473-dc90-4361-b5ec-f5d8b9f62c9a",
+    "created": "2024-08-13T14:46:48.940301Z",
+    "modified": "2024-08-13T14:46:48.940301Z",
+    "name": "Exposure of Sensitive System Information to an Unauthorized Control Sphere",
+    "description": "The product does not properly prevent sensitive system-level information from being accessed by unauthorized actors who do not have the same level of access to the underlying system as the product does.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "497"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Code analysis product passes access tokens as a command-line parameter or through an environment variable, making them visible to other processes via the ps command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-32638",
+            "reference": "CVE-2021-32638"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Production applications should never use methods that generate internal details such as stack traces and error messages unless that information is directly committed to a log that is not viewable by the end user. All error message text should be HTML entity encoded before being written to the log file to protect against potential cross-site scripting attacks against the viewer of the logs",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "200",
+            "nature": "ChildOf"
+        }
+    ]
+}

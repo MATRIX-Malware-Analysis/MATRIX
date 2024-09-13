@@ -1,0 +1,95 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1685a035-aa4e-4a2a-86f3-4d76182850b6",
+    "created": "2024-08-13T14:46:48.819603Z",
+    "modified": "2024-08-13T14:46:48.819603Z",
+    "name": "Insertion of Sensitive Information Into Sent Data",
+    "description": "The code transmits data to another actor, but a portion of the data includes sensitive information that should not be accessible to that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "201"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Collaboration platform does not clear team emails in a response, allowing leak of email addresses",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-0708",
+            "reference": "CVE-2022-0708"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Specify which data in the software should be regarded as sensitive. Consider which types of users should have access to which types of data.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Ensure that any possibly sensitive data specified in the requirements is verified with designers to ensure that it is either a calculated risk or mitigated elsewhere. Any information that is not necessary to the functionality should be removed in order to lower both the overhead and the possibility of security sensitive data being sent.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Setup default error messages so that unexpected errors do not disclose sensitive information.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "200",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "209",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "202",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

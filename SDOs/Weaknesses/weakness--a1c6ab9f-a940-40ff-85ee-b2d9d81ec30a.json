@@ -1,0 +1,137 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a1c6ab9f-a940-40ff-85ee-b2d9d81ec30a",
+    "created": "2024-08-13T14:46:48.914944Z",
+    "modified": "2024-08-13T14:46:48.914944Z",
+    "name": "Missing Release of Memory after Effective Lifetime",
+    "description": "The product does not sufficiently track and release allocated memory after it has been used, which slowly consumes remaining memory.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "401"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Memory leak because function does not free() an element of a data structure.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3119",
+            "reference": "CVE-2005-3119"
+        },
+        {
+            "description": "Memory leak when counter variable is not decremented.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0427",
+            "reference": "CVE-2004-0427"
+        },
+        {
+            "description": "chain: reference count is not decremented, leading to memory leak in OS by sending ICMP packets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0574",
+            "reference": "CVE-2002-0574"
+        },
+        {
+            "description": "Kernel uses wrong function to release a data structure, preventing data from being properly tracked by other code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3181",
+            "reference": "CVE-2005-3181"
+        },
+        {
+            "description": "Memory leak via unknown manipulations as part of protocol test suite.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0222",
+            "reference": "CVE-2004-0222"
+        },
+        {
+            "description": "Memory leak via a series of the same command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0136",
+            "reference": "CVE-2001-0136"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use an abstraction library to abstract away risky APIs. Not a complete solution.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "The Boehm-Demers-Weiser Garbage Collector or valgrind can be used to detect leaks in code.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-390"
+        },
+        {
+            "external_reference_id": "REF-391"
+        },
+        {
+            "external_reference_id": "REF-959"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "772",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        }
+    ]
+}

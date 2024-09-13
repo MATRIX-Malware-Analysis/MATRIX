@@ -1,0 +1,117 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--05fda836-ae82-4e4c-b942-eaac260be1c9",
+    "created": "2024-08-13T14:46:49.001918Z",
+    "modified": "2024-08-13T14:46:49.001918Z",
+    "name": "Missing Release of Resource after Effective Lifetime",
+    "description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "772"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-05-13",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: anti-virus product encounters a malformed file but returns from a function without closing a file descriptor (CWE-775) leading to file descriptor consumption (CWE-400) and failed scans.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0897",
+            "reference": "CVE-2007-0897"
+        },
+        {
+            "description": "Sockets not properly closed when attacker repeatedly connects and disconnects from server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0830",
+            "reference": "CVE-2001-0830"
+        },
+        {
+            "description": "Does not shut down named pipe connections if malformed data is sent.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1127",
+            "reference": "CVE-1999-1127"
+        },
+        {
+            "description": "Chain: memory leak (CWE-404) leads to resource exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2858",
+            "reference": "CVE-2009-2858"
+        },
+        {
+            "description": "Product allows exhaustion of file descriptors when processing a large number of TCP packets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2054",
+            "reference": "CVE-2009-2054"
+        },
+        {
+            "description": "Port scan triggers CPU consumption with processes that attempt to read data from closed sockets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2122",
+            "reference": "CVE-2008-2122"
+        },
+        {
+            "description": "Product allows resource exhaustion via a large number of calls that do not complete a 3-way handshake.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4103",
+            "reference": "CVE-2007-4103"
+        },
+        {
+            "description": "Chain: Return values of file/socket operations are not checked (CWE-252), allowing resultant consumption of file descriptors (CWE-772).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1372",
+            "reference": "CVE-2002-1372"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "It is good practice to be responsible for freeing all resources you allocate and to be consistent with how and where you free resources in a function. If you allocate resources that you intend to free upon completion of the function, you must be sure to free the resources at all exit points for that function including error conditions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-961"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "ChildOf"
+        }
+    ]
+}

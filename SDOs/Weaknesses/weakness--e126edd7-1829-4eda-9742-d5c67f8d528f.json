@@ -1,0 +1,220 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e126edd7-1829-4eda-9742-d5c67f8d528f",
+    "created": "2024-08-13T14:46:48.817024Z",
+    "modified": "2024-08-13T14:46:48.817024Z",
+    "name": "Off-by-one Error",
+    "description": "A product calculates or uses an incorrect maximum or minimum value that is 1 more, or 1 less, than the correct value.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "193"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Off-by-one error allows remote attackers to cause a denial of service and possibly execute arbitrary code via requests that do not contain newlines.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0252",
+            "reference": "CVE-2003-0252"
+        },
+        {
+            "description": "Off-by-one vulnerability in driver allows users to modify kernel memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1391",
+            "reference": "CVE-2001-1391"
+        },
+        {
+            "description": "Off-by-one error allows local users or remote malicious servers to gain privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0083",
+            "reference": "CVE-2002-0083"
+        },
+        {
+            "description": "Off-by-one buffer overflow in function usd by server allows local users to execute arbitrary code as the server user via .htaccess files with long entries.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0653",
+            "reference": "CVE-2002-0653"
+        },
+        {
+            "description": "Off-by-one buffer overflow in version control system allows local users to execute arbitrary code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0844",
+            "reference": "CVE-2002-0844"
+        },
+        {
+            "description": "Off-by-one error in FTP server allows a remote attacker to cause a denial of service (crash) via a long PORT command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1568",
+            "reference": "CVE-1999-1568"
+        },
+        {
+            "description": "Off-by-one buffer overflow in FTP server allows local users to gain privileges via a 1024 byte RETR command.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0346",
+            "reference": "CVE-2004-0346"
+        },
+        {
+            "description": "Multiple buffer overflows in chat client allow remote attackers to cause a denial of service and possibly execute arbitrary code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0005",
+            "reference": "CVE-2004-0005"
+        },
+        {
+            "description": "Multiple off-by-one vulnerabilities in product allow remote attackers to cause a denial of service and possibly execute arbitrary code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0356",
+            "reference": "CVE-2003-0356"
+        },
+        {
+            "description": "Off-by-one buffer overflow in server allows remote attackers to cause a denial of service and possibly execute arbitrary code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1496",
+            "reference": "CVE-2001-1496"
+        },
+        {
+            "description": "This is an interesting example that might not be an off-by-one.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0342",
+            "reference": "CVE-2004-0342"
+        },
+        {
+            "description": "An off-by-one enables a terminating null to be overwritten, which causes 2 strings to be merged and enable a format string.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0609",
+            "reference": "CVE-2001-0609"
+        },
+        {
+            "description": "Off-by-one error allows source code disclosure of files with 4 letter extensions that match an accepted 3-letter extension.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1745",
+            "reference": "CVE-2002-1745"
+        },
+        {
+            "description": "Off-by-one buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1816",
+            "reference": "CVE-2002-1816"
+        },
+        {
+            "description": "Off-by-one error causes an snprintf call to overwrite a critical internal variable with a null value.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1721",
+            "reference": "CVE-2002-1721"
+        },
+        {
+            "description": "Off-by-one error in function used in many products leads to a buffer overflow during pathname management, as demonstrated using multiple commands in an FTP server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0466",
+            "reference": "CVE-2003-0466"
+        },
+        {
+            "description": "Off-by-one error allows read of sensitive memory via a malformed request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0625",
+            "reference": "CVE-2003-0625"
+        },
+        {
+            "description": "Chain: security monitoring product has an off-by-one error that leads to unexpected length values, triggering an assertion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4574",
+            "reference": "CVE-2006-4574"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When copying character arrays or using character manipulation methods, the correct size parameter must be used to account for the null terminator that needs to be added at the end of the array. Some examples of functions susceptible to this weakness in C include strcpy(), strncpy(), strcat(), strncat(), printf(), sprintf(), scanf() and sscanf().",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-155"
+        },
+        {
+            "external_reference_id": "REF-156"
+        },
+        {
+            "external_reference_id": "REF-157"
+        },
+        {
+            "external_reference_id": "REF-140"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "617",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "170",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

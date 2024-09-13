@@ -1,0 +1,90 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e42b204e-4054-4cf3-a1b9-c80922cc9dd3",
+    "created": "2024-08-13T14:46:49.005403Z",
+    "modified": "2024-08-13T14:46:49.005403Z",
+    "name": "Operator Precedence Logic Error",
+    "description": "The product uses an expression in which operator precedence causes incorrect logic to be used.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "783"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-07-16",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Authentication module allows authentication bypass because it uses \"(x = call(args) == SUCCESS)\" instead of \"((x = call(args)) == SUCCESS)\".",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2516",
+            "reference": "CVE-2008-2516"
+        },
+        {
+            "description": "Chain: Language interpreter calculates wrong buffer size (CWE-131) by using \"size = ptr ? X : Y\" instead of \"size = (ptr ? X : Y)\" expression.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0599",
+            "reference": "CVE-2008-0599"
+        },
+        {
+            "description": "Chain: product does not properly check the result of a reverse DNS lookup because of operator precedence (CWE-783), allowing bypass of DNS-based access restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1155",
+            "reference": "CVE-2001-1155"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Regularly wrap sub-expressions in parentheses, especially in security-critical code.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-704"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "670",
+            "nature": "ChildOf"
+        }
+    ]
+}

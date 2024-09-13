@@ -1,0 +1,131 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6692f5e2-cb5a-4ce6-8d52-4cc601b0b504",
+    "created": "2024-08-13T14:46:48.982279Z",
+    "modified": "2024-08-13T14:46:48.982279Z",
+    "name": "Use of a Non-reentrant Function in a Concurrent Context",
+    "description": "The product calls a non-reentrant function in a concurrent context in which a competing code sequence (e.g. thread or signal handler) may have an opportunity to call the same function or otherwise influence its state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "663"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "unsafe calls to library functions from signal handler",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1349",
+            "reference": "CVE-2001-1349"
+        },
+        {
+            "description": "SIGCHLD signal to FTP server can cause crash under heavy load while executing non-reentrant functions like malloc/free.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2259",
+            "reference": "CVE-2004-2259"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use reentrant functions if available.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Add synchronization to your non-reentrant function.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "In Java, use the ReentrantLock Class.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-547"
+        },
+        {
+            "external_reference_id": "REF-548"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "662",
+            "nature": "ChildOf"
+        }
+    ]
+}

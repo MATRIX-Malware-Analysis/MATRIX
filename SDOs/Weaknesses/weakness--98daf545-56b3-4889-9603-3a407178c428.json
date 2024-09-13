@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--98daf545-56b3-4889-9603-3a407178c428",
+    "created": "2024-08-13T14:46:48.792545Z",
+    "modified": "2024-08-13T14:46:48.792545Z",
+    "name": "Security Version Number Mutable to Older Versions",
+    "description": "Security-version number in hardware is mutable, resulting in the ability to downgrade (roll-back) the boot firmware to vulnerable code versions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1328"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Other",
+            "scope": "Authorization"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-04-25",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Mutability of stored security version numbers and programming with older firmware images should be part of automated testing.",
+            "effectiveness": "High",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Anti-roll-back features should be reviewed as part of Architecture or Design review.",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When architecting the system, security version data should be designated for storage in registers that are either read-only or have access controls that prevent modification by an untrusted agent.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "During implementation and test, security version data should be demonstrated to be read-only and access controls should be validated.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "285",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "757",
+            "nature": "PeerOf"
+        }
+    ]
+}

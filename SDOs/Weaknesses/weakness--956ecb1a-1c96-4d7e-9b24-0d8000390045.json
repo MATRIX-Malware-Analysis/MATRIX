@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--956ecb1a-1c96-4d7e-9b24-0d8000390045",
+    "created": "2024-08-13T14:46:48.815226Z",
+    "modified": "2024-08-13T14:46:48.815226Z",
+    "name": "Overly Restrictive Regular Expression",
+    "description": "A regular expression is overly restrictive, which prevents dangerous values from being detected.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "186"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "MIE. \".php.ns\" bypasses \".php$\" regexp but is still parsed as PHP by Apache. (manipulates an equivalence property under Apache)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1604",
+            "reference": "CVE-2005-1604"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Regular expressions can become error prone when defining a complex language even for those experienced in writing grammars. Determine if several smaller regular expressions simplify one large regular expression. Also, subject your regular expression to thorough testing techniques such as equivalence partitioning, boundary value analysis, and robustness. After testing and a reasonable confidence level is achieved, a regular expression may not be foolproof. If an exploit is allowed to slip through, then record the exploit and refactor your regular expression.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "185",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "184",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "183",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

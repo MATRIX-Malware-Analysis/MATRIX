@@ -1,0 +1,110 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e8a14126-117e-4f36-af30-5e4d04b25f8a",
+    "created": "2024-08-13T14:46:48.794835Z",
+    "modified": "2024-08-13T14:46:48.794835Z",
+    "name": "Improper Neutralization of Special Elements Used in a Template Engine",
+    "description": "The product uses a template engine to insert or process externally-influenced input, but it does not neutralize or incorrectly neutralizes special elements or syntax that can be interpreted as template expressions or other code directives when processed by the engine.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1336"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-07-19",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Python bindings for LLM\n\t\t\t\t\tlibrary do not use a sandboxed environment when\n\t\t\t\t\tparsing a template and constructing a prompt,\n\t\t\t\t\tallowing jinja2 Server Side Template Injection and\n\t\t\t\t\tcode execution - one variant of a \"prompt\n\t\t\t\t\tinjection\" attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-34359",
+            "reference": "CVE-2024-34359"
+        },
+        {
+            "description": "server-side template injection in content management server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2017-16783",
+            "reference": "CVE-2017-16783"
+        },
+        {
+            "description": "authentication / identity management product has client-side template injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9437",
+            "reference": "CVE-2020-9437"
+        },
+        {
+            "description": "Server-Side Template Injection using a Twig template",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-12790",
+            "reference": "CVE-2020-12790"
+        },
+        {
+            "description": "devops platform allows SSTI",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21244",
+            "reference": "CVE-2021-21244"
+        },
+        {
+            "description": "bypass of Server-Side Template Injection protection mechanism with macros in Velocity templates",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-4027",
+            "reference": "CVE-2020-4027"
+        },
+        {
+            "description": "web browser proxy server allows Java EL expressions from Server-Side Template Injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-26282",
+            "reference": "CVE-2020-26282"
+        },
+        {
+            "description": "SSTI involving mail templates and JEXL expressions",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-1961",
+            "reference": "CVE-2020-1961"
+        },
+        {
+            "description": "product does not use a \"safe\" setting for a FreeMarker configuration, allowing SSTI",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-19999",
+            "reference": "CVE-2019-19999"
+        },
+        {
+            "description": "product allows read of sensitive database username/password variables using server-side template injection",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-20465",
+            "reference": "CVE-2018-20465"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Choose a template engine that offers a sandbox or restricted mode, or at least limits the power of any available expressions, function calls, or commands.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use the template engine's sandbox or restricted mode, if available.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1193"
+        },
+        {
+            "external_reference_id": "REF-1194"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "94",
+            "nature": "ChildOf"
+        }
+    ]
+}

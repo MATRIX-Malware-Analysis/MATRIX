@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7c0bdde9-8d5c-4fd8-9489-013e3e012d2a",
+    "created": "2024-08-13T14:46:48.922387Z",
+    "modified": "2024-08-13T14:46:48.922387Z",
+    "name": "Path Equivalence: 'filename....' (Multiple Trailing Dot)",
+    "description": "The product accepts path input in the form of multiple trailing dot ('filedir....') without appropriate validation, which can lead to ambiguous path resolution and allow an attacker to traverse the file system to unintended locations or access arbitrary files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "43"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Multiple trailing dot allows directory listing",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0281",
+            "reference": "CVE-2004-0281"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "42",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "163",
+            "nature": "ChildOf"
+        }
+    ]
+}

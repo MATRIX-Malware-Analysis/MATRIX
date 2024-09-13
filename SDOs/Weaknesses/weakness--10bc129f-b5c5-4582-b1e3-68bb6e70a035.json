@@ -1,0 +1,66 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--10bc129f-b5c5-4582-b1e3-68bb6e70a035",
+    "created": "2024-08-13T14:46:48.820769Z",
+    "modified": "2024-08-13T14:46:48.820769Z",
+    "name": "Observable Behavioral Discrepancy",
+    "description": "The product's behaviors indicate important differences that may be observed by unauthorized actors in a way that reveals (1) its internal state or decision process, or (2) differences from other products with equivalent functionality.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "205"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product modifies TCP/IP stack and ICMP error messages in unusual ways that show the product is in use.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0208",
+            "reference": "CVE-2002-0208"
+        },
+        {
+            "description": "Behavioral infoleak by responding to SYN-FIN packets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2252",
+            "reference": "CVE-2004-2252"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "203",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "514",
+            "nature": "CanPrecede"
+        }
+    ]
+}

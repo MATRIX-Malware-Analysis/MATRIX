@@ -1,0 +1,252 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--4f4a869b-f019-4288-b122-fb4d8e924858",
+    "created": "2024-08-13T14:46:48.810811Z",
+    "modified": "2024-08-13T14:46:48.810811Z",
+    "name": "Improper Null Termination",
+    "description": "The product does not terminate or incorrectly terminates a string or array with a null character or equivalent terminator.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "170"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Attacker does not null-terminate argv[] when invoking another program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0312",
+            "reference": "CVE-2000-0312"
+        },
+        {
+            "description": "Interrupted step causes resultant lack of null termination.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0777",
+            "reference": "CVE-2003-0777"
+        },
+        {
+            "description": "Fault causes resultant lack of null termination, leading to buffer expansion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1072",
+            "reference": "CVE-2004-1072"
+        },
+        {
+            "description": "Multiple vulnerabilities related to improper null termination.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1389",
+            "reference": "CVE-2001-1389"
+        },
+        {
+            "description": "Product does not null terminate a message buffer after snprintf-like call, leading to overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0143",
+            "reference": "CVE-2003-0143"
+        },
+        {
+            "description": "Chain: product does not handle when an input string is not NULL terminated (CWE-170), leading to buffer over-read (CWE-125) or heap-based buffer overflow (CWE-122).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2523",
+            "reference": "CVE-2009-2523"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a language that is not susceptible to these issues. However, be careful of null byte interaction errors (CWE-626) with lower-level constructs that may be written in a language that is susceptible.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Ensure that all string functions used are understood fully as to how they append null characters. Also, be wary of off-by-one errors when appending nulls to the end of strings.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If performance constraints permit, special code can be added that validates null-termination of string buffers, this is a rather naive and error-prone solution.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Switch to bounded string manipulation functions. Inspect buffer lengths involved in the buffer overrun trace reported with the defect.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Add code that fills buffers with nulls (however, the length of buffers still needs to be inspected, to ensure that the non null-terminated string is not written at the physical end of the buffer).",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "707",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "120",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "126",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "147",
+            "nature": "CanAlsoBe"
+        },
+        {
+            "cwe_id": "464",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "463",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

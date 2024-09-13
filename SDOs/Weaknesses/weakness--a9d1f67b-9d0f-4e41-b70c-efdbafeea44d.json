@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--a9d1f67b-9d0f-4e41-b70c-efdbafeea44d",
+    "created": "2024-08-13T14:46:48.918492Z",
+    "modified": "2024-08-13T14:46:48.918492Z",
+    "name": "Missing Lock Check",
+    "description": "A product does not check to see if a lock is present before performing sensitive operations on a resource.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "414"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not properly check if a lock is present, allowing other attackers to access functionality.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1056",
+            "reference": "CVE-2004-1056"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implement a reliable lock mechanism.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        }
+    ]
+}

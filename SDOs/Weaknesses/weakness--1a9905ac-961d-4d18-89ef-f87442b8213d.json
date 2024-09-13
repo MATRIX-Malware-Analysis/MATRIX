@@ -1,0 +1,226 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1a9905ac-961d-4d18-89ef-f87442b8213d",
+    "created": "2024-08-13T14:46:48.895389Z",
+    "modified": "2024-08-13T14:46:48.895389Z",
+    "name": "Use of a Broken or Risky Cryptographic Algorithm",
+    "description": "The product uses a broken or risky cryptographic algorithm or protocol.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "327"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated methods may be useful for recognizing commonly-used libraries or features that have become obsolete.",
+            "effectiveness": "Moderate",
+            "method": "Automated Analysis"
+        },
+        {
+            "description": "This weakness can be detected using tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session.",
+            "effectiveness": null,
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "SCADA-based protocol supports a legacy encryption mode that uses Tiny Encryption Algorithm (TEA) in ECB mode, which leaks patterns in messages and cannot protect integrity",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30273",
+            "reference": "CVE-2022-30273"
+        },
+        {
+            "description": "Programmable Logic Controller (PLC) uses a protocol with a cryptographically insecure hashing algorithm for passwords.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30320",
+            "reference": "CVE-2022-30320"
+        },
+        {
+            "description": "Product uses \"ROT-25\" to obfuscate the password in the registry.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3775",
+            "reference": "CVE-2008-3775"
+        },
+        {
+            "description": "product only uses \"XOR\" to obfuscate sensitive data",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4150",
+            "reference": "CVE-2007-4150"
+        },
+        {
+            "description": "product only uses \"XOR\" and a fixed key to obfuscate sensitive data",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5460",
+            "reference": "CVE-2007-5460"
+        },
+        {
+            "description": "Product substitutes characters with other characters in a fixed way, and also leaves certain input characters unchanged.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4860",
+            "reference": "CVE-2005-4860"
+        },
+        {
+            "description": "Attackers can infer private IP addresses by dividing each octet by the MD5 hash of '20'.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2058",
+            "reference": "CVE-2002-2058"
+        },
+        {
+            "description": "Product uses DES when MD5 has been specified in the configuration, resulting in weaker-than-expected password hashes.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3188",
+            "reference": "CVE-2008-3188"
+        },
+        {
+            "description": "Default configuration of product uses MD5 instead of stronger algorithms that are available, simplifying forgery of certificates.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2946",
+            "reference": "CVE-2005-2946"
+        },
+        {
+            "description": "Product uses the hash of a hash for authentication, allowing attackers to gain privileges if they can obtain the original hash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6013",
+            "reference": "CVE-2007-6013"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that the design allows one cryptographic algorithm to be replaced with another in the next generation or version. Where possible, use wrappers to make the interfaces uniform. This will make it easier to upgrade to stronger algorithms. With hardware, design the product at the Intellectual Property (IP) level so that one cryptographic algorithm can be replaced with another in the next generation of the hardware product.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Carefully manage and protect cryptographic keys (see CWE-320). If the keys can be guessed or stolen, then the strength of the cryptography itself is irrelevant.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using industry-approved techniques, use them correctly. Don't cut corners by skipping resource-intensive steps (CWE-325). These steps are often essential for preventing common attacks.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-280"
+        },
+        {
+            "external_reference_id": "REF-281"
+        },
+        {
+            "external_reference_id": "REF-282"
+        },
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-284"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-287"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-962"
+        },
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-1192"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "311",
+            "nature": "PeerOf"
+        }
+    ]
+}

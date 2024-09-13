@@ -1,0 +1,120 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e3d53132-bff0-49ee-9c57-c4adcabd7d5d",
+    "created": "2024-08-13T14:46:48.826591Z",
+    "modified": "2024-08-13T14:46:48.826591Z",
+    "name": "Sensitive Information in Resource Not Removed Before Reuse",
+    "description": "The product releases a resource such as memory or a file so that it can be made available for reuse, but it does not clear or \"zeroize\" the information contained in the resource before the product performs a critical state transition or makes the resource available for reuse by other entities.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "226"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Write a known pattern into each sensitive location. Trigger the release of the resource or cause the desired state transition to occur. Read data back from the sensitive locations. If the reads are successful, and the data is the same as the pattern that was originally written, the test fails and the product needs to be fixed. Note that this test can likely be automated.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cryptography library does not clear heap memory before release",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-3733",
+            "reference": "CVE-2019-3733"
+        },
+        {
+            "description": "Ethernet NIC drivers do not pad frames with null bytes, leading to infoleak from malformed packets.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0001",
+            "reference": "CVE-2003-0001"
+        },
+        {
+            "description": "router does not clear information from DHCP packets that have been previously used",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0291",
+            "reference": "CVE-2003-0291"
+        },
+        {
+            "description": "Products do not fully clear memory buffers when less data is stored into the buffer than previous.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1406",
+            "reference": "CVE-2005-1406"
+        },
+        {
+            "description": "Products do not fully clear memory buffers when less data is stored into the buffer than previous.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1858",
+            "reference": "CVE-2005-1858"
+        },
+        {
+            "description": "Products do not fully clear memory buffers when less data is stored into the buffer than previous.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3180",
+            "reference": "CVE-2005-3180"
+        },
+        {
+            "description": "Product does not clear a data structure before writing to part of it, yielding information leak of previously used memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3276",
+            "reference": "CVE-2005-3276"
+        },
+        {
+            "description": "Memory not properly cleared before reuse.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2077",
+            "reference": "CVE-2002-2077"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "During critical state transitions, information not needed in the next state should be removed or overwritten with fixed patterns (such as all 0's) or random data, before the transition to the next state.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When releasing, de-allocating, or deleting a resource, overwrite its data and relevant metadata with fixed patterns or random data. Be cautious about complex resource types whose underlying representation might be non-contiguous or change at a low level, such as how a file might be split into different chunks on a file system, even though \"logical\" file positions are contiguous at the application layer. Such resource types might require invocation of special modes or APIs to tell the underlying operating system to perform the necessary clearing, such as SDelete (Secure Delete) on Windows, although the appropriate functionality might not be available at the application layer.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1402"
+        },
+        {
+            "external_reference_id": "REF-1403"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "459",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "212",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "201",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5c387257-ca70-4e48-bb61-c5c40778d2fe",
+    "created": "2024-08-13T14:46:48.829275Z",
+    "modified": "2024-08-13T14:46:48.829275Z",
+    "name": "Improper Handling of Extra Parameters",
+    "description": "The product does not handle or incorrectly handles when the number of parameters, fields, or arguments with the same name exceeds the expected amount.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "235"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "MIE. multiple gateway/security products allow restriction bypass using multiple MIME fields with the same name, which are interpreted differently by clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1014",
+            "reference": "CVE-2003-1014"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "233",
+            "nature": "ChildOf"
+        }
+    ]
+}

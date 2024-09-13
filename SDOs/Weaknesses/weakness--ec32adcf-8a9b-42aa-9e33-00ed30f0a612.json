@@ -1,0 +1,69 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ec32adcf-8a9b-42aa-9e33-00ed30f0a612",
+    "created": "2024-08-13T14:46:48.977807Z",
+    "modified": "2024-08-13T14:46:48.977807Z",
+    "name": "Improper Neutralization of HTTP Headers for Scripting Syntax",
+    "description": "The product does not neutralize or incorrectly neutralizes web scripting syntax in HTTP headers that can be used by web browser components that can process raw headers, such as Flash.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "644"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-30",
+            "submission_name": "Evgeny Lebanidze",
+            "submission_organization": "Cigital"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Web server does not remove the Expect header from an HTTP request when it is reflected back in an error message, allowing a Flash SWF file to perform XSS attacks.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3918",
+            "reference": "CVE-2006-3918"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform output validation in order to filter/escape/encode unsafe data that is being passed from the server in an HTTP response header.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Disable script execution functionality in the clients' browser.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "116",
+            "nature": "ChildOf"
+        }
+    ]
+}

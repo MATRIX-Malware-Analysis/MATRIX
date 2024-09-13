@@ -1,0 +1,79 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1920066a-226d-4367-a86b-dce816c60b2f",
+    "created": "2024-08-13T14:46:48.880685Z",
+    "modified": "2024-08-13T14:46:48.880685Z",
+    "name": "Incorrect Execution-Assigned Permissions",
+    "description": "While it is executing, the product sets the permissions of an object in a way that violates the intended permissions that have been specified by the user.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "279"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Log files opened read/write.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0265",
+            "reference": "CVE-2002-0265"
+        },
+        {
+            "description": "Log files opened read/write.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0876",
+            "reference": "CVE-2003-0876"
+        },
+        {
+            "description": "Log files opened read/write.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1694",
+            "reference": "CVE-2002-1694"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "732",
+            "nature": "ChildOf"
+        }
+    ]
+}

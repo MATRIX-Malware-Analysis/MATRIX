@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fd4379a4-593d-41f1-a817-f0e693c49876",
+    "created": "2024-08-13T14:46:48.970442Z",
+    "modified": "2024-08-13T14:46:48.970442Z",
+    "name": "Improper Authorization of Index Containing Sensitive Information",
+    "description": "The product creates a search index of private or sensitive documents, but it does not properly limit index access to actors who are authorized to see the original information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "612"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A search application's access control rules are not properly applied to indices for data streams, allowing for the viewing of sensitive information.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-41918",
+            "reference": "CVE-2022-41918"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1050"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1230",
+            "nature": "ChildOf"
+        }
+    ]
+}

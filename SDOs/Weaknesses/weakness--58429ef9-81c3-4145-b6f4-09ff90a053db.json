@@ -1,0 +1,38 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--58429ef9-81c3-4145-b6f4-09ff90a053db",
+    "created": "2024-08-13T14:46:48.753512Z",
+    "modified": "2024-08-13T14:46:48.753512Z",
+    "name": "Declaration of Variable with Unnecessarily Wide Scope",
+    "description": "The source code declares a variable in one scope, but the\n\t\t\t\t\tvariable is only used within a narrower scope.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1126"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "710",
+            "nature": "ChildOf"
+        }
+    ]
+}

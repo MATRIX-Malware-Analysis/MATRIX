@@ -1,0 +1,232 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--987fe08a-c4ae-4332-bf37-adb38cc7335a",
+    "created": "2024-08-13T14:46:48.792803Z",
+    "modified": "2024-08-13T14:46:48.792803Z",
+    "name": "Reliance on Component That is Not Updateable",
+    "description": "The product contains a component that cannot be updated or patched in order to remove vulnerabilities or significant bugs.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1329"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Other"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-12-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Check the consumer or maintainer documentation, the architecture/design documentation, or the original requirements to ensure that the documentation includes details for how to update the firmware.",
+            "effectiveness": "Moderate",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: network-attached storage (NAS) device has a critical OS command injection (CWE-78) vulnerability that is actively exploited to place IoT devices into a botnet, but some products are \"end-of-support\" and cannot be patched (CWE-1277). [REF-1097]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9054",
+            "reference": "CVE-2020-9054"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Specify requirements that each component should be updateable, including ROM, firmware, etc.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Design the product to allow for updating of its components. Include the external infrastructure that might be necessary to support updates, such as distribution servers.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n\t\t\t\t\t    With hardware, support patches that can be programmed in-field or during manufacturing through hardware fuses. This feature can be used for limited patching of devices after shipping, or for the next batch of silicon devices manufactured, without changing the full device ROM.\n                    ",
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Implement the necessary functionality to allow each component to be updated.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1197"
+        },
+        {
+            "external_reference_id": "REF-1097"
+        },
+        {
+            "external_reference_id": "REF-1387"
+        },
+        {
+            "external_reference_id": "REF-1388"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1357",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

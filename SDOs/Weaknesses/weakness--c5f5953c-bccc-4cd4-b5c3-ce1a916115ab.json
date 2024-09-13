@@ -1,0 +1,71 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c5f5953c-bccc-4cd4-b5c3-ce1a916115ab",
+    "created": "2024-08-13T14:46:48.926609Z",
+    "modified": "2024-08-13T14:46:48.926609Z",
+    "name": "Unimplemented or Unsupported Feature in UI",
+    "description": "A UI function for a security feature appears to be supported and gives feedback to the user that suggests that it is supported, but the underlying functionality is not implemented.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "447"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "GUI configuration tool does not enable a security option when a checkbox is selected, although that option is honored when manually set in the configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0127",
+            "reference": "CVE-2000-0127"
+        },
+        {
+            "description": "Router does not implement a specific keyword when it is used in an ACL, allowing filter bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0863",
+            "reference": "CVE-2001-0863"
+        },
+        {
+            "description": "Router does not implement a specific keyword when it is used in an ACL, allowing filter bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0865",
+            "reference": "CVE-2001-0865"
+        },
+        {
+            "description": "Web browser does not properly modify security setting when the user sets it.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0979",
+            "reference": "CVE-2004-0979"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Perform functionality testing before deploying the application.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "446",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "671",
+            "nature": "ChildOf"
+        }
+    ]
+}

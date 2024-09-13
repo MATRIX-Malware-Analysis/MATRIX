@@ -1,0 +1,105 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fe6f8e7e-c117-4bbc-8b43-e96ca0c745fb",
+    "created": "2024-08-13T14:46:48.803339Z",
+    "modified": "2024-08-13T14:46:48.803339Z",
+    "name": "Improper Validation of Generative AI Output",
+    "description": "The product invokes a generative AI/ML\n\t\t\tcomponent whose behaviors and outputs cannot be directly\n\t\t\tcontrolled, but the product does not validate or\n\t\t\tinsufficiently validates the outputs to ensure that they\n\t\t\talign with the intended security, content, or privacy\n\t\t\tpolicy.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1426"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2024-07-02",
+            "submission_name": "Members of the CWE AI WG",
+            "submission_organization": "CWE Artificial Intelligence (AI) Working Group (WG)"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Use known techniques for prompt injection\n\t\t\t and other attacks, and adjust the attacks to be more\n\t\t\t specific to the model or system.",
+            "effectiveness": null,
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "Use known techniques for prompt injection\n\t\t\t and other attacks, and adjust the attacks to be more\n\t\t\t specific to the model or system.",
+            "effectiveness": null,
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "Review of the product design can be\n\t\t\t effective, but it works best in conjunction with dynamic\n\t\t\t analysis.",
+            "effectiveness": null,
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "chain: GUI for ChatGPT API performs\n\t\t\t\t\tinput validation but does not properly \"sanitize\"\n\t\t\t\t\tor validate model output data (CWE-1426), leading\n\t\t\t\t\tto XSS (CWE-79).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-3402",
+            "reference": "CVE-2024-3402"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Since the output from a generative AI component (such as an LLM) cannot be trusted, ensure that it operates in an untrusted or non-privileged space.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use \"semantic comparators,\" which are mechanisms that\n\t\t\t\t\tprovide semantic comparison to identify objects that might appear\n\t\t\t\t\tdifferent but are semantically similar.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": null,
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": null,
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1441"
+        },
+        {
+            "external_reference_id": "REF-1442"
+        },
+        {
+            "external_reference_id": "REF-1443"
+        },
+        {
+            "external_reference_id": "REF-1444"
+        },
+        {
+            "external_reference_id": "REF-1445"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "707",
+            "nature": "ChildOf"
+        }
+    ]
+}

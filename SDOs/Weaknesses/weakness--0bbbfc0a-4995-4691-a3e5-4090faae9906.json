@@ -1,0 +1,107 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0bbbfc0a-4995-4691-a3e5-4090faae9906",
+    "created": "2024-08-13T14:46:48.790697Z",
+    "modified": "2024-08-13T14:46:48.790697Z",
+    "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')",
+    "description": "The product receives input from an upstream component that specifies attributes that are to be initialized or updated in an object, but it does not properly control modifications of attributes of the object prototype.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1321"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-08-25",
+            "submission_name": "Anonymous External Contributor",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Prototype pollution by merging objects.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-3721",
+            "reference": "CVE-2018-3721"
+        },
+        {
+            "description": "Prototype pollution by setting default values to object attributes recursively.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10744",
+            "reference": "CVE-2019-10744"
+        },
+        {
+            "description": "Prototype pollution by merging objects recursively.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-11358",
+            "reference": "CVE-2019-11358"
+        },
+        {
+            "description": "Prototype pollution by setting object attributes based on dot-separated path.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8203",
+            "reference": "CVE-2020-8203"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "By freezing the object prototype first (for example, Object.freeze(Object.prototype)), modification of the prototype becomes impossible.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "By blocking modifications of attributes that resolve to object prototype, such as proto or prototype, this weakness can be mitigated.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When handling untrusted objects, validating using a schema can be used.",
+            "effectiveness": "Limited",
+            "phase": "Implementation"
+        },
+        {
+            "description": "By using an object without prototypes (via Object.create(null) ), adding object prototype attributes by accessing the prototype via the special attributes becomes impossible, mitigating this weakness.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Map can be used instead of objects in most cases. If Map methods are used instead of object attributes, it is not possible to access the object prototype or modify it.",
+            "effectiveness": "Moderate",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1148"
+        },
+        {
+            "external_reference_id": "REF-1149"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "915",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "913",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "471",
+            "nature": "CanPrecede"
+        }
+    ]
+}

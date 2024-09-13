@@ -1,0 +1,103 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--61faa2bb-09eb-4c6a-9959-aa3b75fb4fc5",
+    "created": "2024-08-13T14:46:49.025617Z",
+    "modified": "2024-08-13T14:46:49.025617Z",
+    "name": "Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')",
+    "description": "The product constructs all or part of an expression language (EL) statement in a framework such as a Java Server Page (JSP) using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended EL statement before it is executed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "917"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-02-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not neutralize ${xyz} style expressions, allowing remote code execution. (log4shell vulnerability in log4j)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-44228",
+            "reference": "CVE-2021-44228"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Avoid adding user-controlled data into an expression interpreter when possible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "The framework or tooling might allow the developer to disable or deactivate the processing of EL expressions, such as setting the isELIgnored attribute for a JSP page to \"true\".",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-911"
+        },
+        {
+            "external_reference_id": "REF-912"
+        },
+        {
+            "external_reference_id": "REF-1279"
+        },
+        {
+            "external_reference_id": "REF-1280"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1336",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        }
+    ]
+}

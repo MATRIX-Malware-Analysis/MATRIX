@@ -1,0 +1,197 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b63a98f4-2fc9-47bc-9fe3-363bc5faf7f2",
+    "created": "2024-08-13T14:46:48.921197Z",
+    "modified": "2024-08-13T14:46:48.921197Z",
+    "name": "Direct Request ('Forced Browsing')",
+    "description": "The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "425"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Access-control setting in web-based document collaboration tool is not properly implemented by the code, which prevents listing hidden directories but does not prevent direct requests to files in those directories.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29238",
+            "reference": "CVE-2022-29238"
+        },
+        {
+            "description": "Python-based HTTP library did not scope cookies to a particular domain such that \"supercookies\" could be sent to any domain on redirect.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-23607",
+            "reference": "CVE-2022-23607"
+        },
+        {
+            "description": "Bypass authentication via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2144",
+            "reference": "CVE-2004-2144"
+        },
+        {
+            "description": "Infinite loop or infoleak triggered by direct requests.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1892",
+            "reference": "CVE-2005-1892"
+        },
+        {
+            "description": "Bypass auth/auth via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2257",
+            "reference": "CVE-2004-2257"
+        },
+        {
+            "description": "Direct request leads to infoleak by error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1688",
+            "reference": "CVE-2005-1688"
+        },
+        {
+            "description": "Direct request leads to infoleak by error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1697",
+            "reference": "CVE-2005-1697"
+        },
+        {
+            "description": "Direct request leads to infoleak by error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1698",
+            "reference": "CVE-2005-1698"
+        },
+        {
+            "description": "Authentication bypass via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1685",
+            "reference": "CVE-2005-1685"
+        },
+        {
+            "description": "Authentication bypass via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1827",
+            "reference": "CVE-2005-1827"
+        },
+        {
+            "description": "Authorization bypass using direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1654",
+            "reference": "CVE-2005-1654"
+        },
+        {
+            "description": "Access privileged functionality using direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1668",
+            "reference": "CVE-2005-1668"
+        },
+        {
+            "description": "Upload arbitrary files via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1798",
+            "reference": "CVE-2002-1798"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Apply appropriate access control authorizations for each access to all restricted URLs, scripts or files.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider using MVC based frameworks such as Struts.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "862",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "862",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "288",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "424",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "471",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "98",
+            "nature": "CanPrecede"
+        }
+    ]
+}

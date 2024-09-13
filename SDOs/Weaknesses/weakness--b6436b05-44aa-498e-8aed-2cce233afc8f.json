@@ -1,0 +1,98 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b6436b05-44aa-498e-8aed-2cce233afc8f",
+    "created": "2024-08-13T14:46:49.014837Z",
+    "modified": "2024-08-13T14:46:49.014837Z",
+    "name": "Improper Control of Document Type Definition",
+    "description": "The product does not restrict a reference to a Document Type Definition (DTD) to the intended control sphere. This might allow attackers to reference arbitrary DTDs, possibly causing the product to expose files, consume excessive system resources, or execute arbitrary http requests on behalf of the attacker.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "827"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-10-25",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not properly reject DTDs in SOAP messages, which allows remote attackers to read arbitrary files, send HTTP requests to intranet servers, or cause a denial of service.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2076",
+            "reference": "CVE-2010-2076"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-773"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "706",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "829",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "776",
+            "nature": "CanPrecede"
+        }
+    ]
+}

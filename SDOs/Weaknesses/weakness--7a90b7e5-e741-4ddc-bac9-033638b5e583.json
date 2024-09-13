@@ -1,0 +1,103 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7a90b7e5-e741-4ddc-bac9-033638b5e583",
+    "created": "2024-08-13T14:46:48.917991Z",
+    "modified": "2024-08-13T14:46:48.917991Z",
+    "name": "Unrestricted Externally Accessible Lock",
+    "description": "The product properly checks for the existence of a lock, but the lock can be externally controlled or influenced by an actor that is outside of the intended sphere of control.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "412"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated code analysis techniques might not be able to reliably detect this weakness, since the application's behavior and general security model dictate which resource locks are critical. Interpretation of the weakness might require knowledge of the environment, e.g. if the existence of a file is used as a lock, but the file is created in a world-writable directory.",
+            "effectiveness": null,
+            "method": "White Box"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Program can not execute when attacker obtains a mutex.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0682",
+            "reference": "CVE-2001-0682"
+        },
+        {
+            "description": "Program can not execute when attacker obtains a lock on a critical output file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1914",
+            "reference": "CVE-2002-1914"
+        },
+        {
+            "description": "Program can not execute when attacker obtains a lock on a critical output file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1915",
+            "reference": "CVE-2002-1915"
+        },
+        {
+            "description": "Critical file can be opened with exclusive read access by user, preventing application of security policy. Possibly related to improper permissions, large-window race condition.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0051",
+            "reference": "CVE-2002-0051"
+        },
+        {
+            "description": "Chain: predictable file names used for locking, allowing attacker to create the lock beforehand. Resultant from permissions and randomness.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0338",
+            "reference": "CVE-2000-0338"
+        },
+        {
+            "description": "Chain: Lock files with predictable names. Resultant from randomness.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1198",
+            "reference": "CVE-2000-1198"
+        },
+        {
+            "description": "Product does not check if it can write to a log file, allowing attackers to avoid logging by accessing the file using an exclusive lock. Overlaps unchecked error condition. This is not quite CWE-412, but close.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1869",
+            "reference": "CVE-2002-1869"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use any access control that is offered by the functionality that is offering the lock.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use unpredictable names or identifiers for the locks. This might not always be possible or feasible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider modifying your code to use non-blocking synchronization methods.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "667",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "410",
+            "nature": "CanAlsoBe"
+        }
+    ]
+}

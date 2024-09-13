@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0bfb1456-9ea8-4ff4-a20f-62394f144900",
+    "created": "2024-08-13T14:46:48.79229Z",
+    "modified": "2024-08-13T14:46:48.79229Z",
+    "name": "Binding to an Unrestricted IP Address",
+    "description": "The product assigns the address 0.0.0.0 for a database server, a cloud service/instance, or any computing resource that communicates remotely.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1327"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-09-08",
+            "submission_name": "Akond Rahman",
+            "submission_organization": "Tennessee Technological University"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Desktop manager for Kubernetes and container management binds a service to 0.0.0.0, allowing users on the network to make requests to a dashboard API.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-21947",
+            "reference": "CVE-2022-21947"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Assign IP addresses that are not 0.0.0.0.",
+            "effectiveness": "High",
+            "phase": "System Configuration"
+        },
+        {
+            "description": "Unwanted connections to the configured server may be denied through a firewall or other packet filtering measures.",
+            "effectiveness": "High",
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1158"
+        },
+        {
+            "external_reference_id": "REF-1159"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

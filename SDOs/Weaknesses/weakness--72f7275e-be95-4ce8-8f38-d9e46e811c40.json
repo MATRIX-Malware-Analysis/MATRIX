@@ -1,0 +1,239 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--72f7275e-be95-4ce8-8f38-d9e46e811c40",
+    "created": "2024-08-13T14:46:49.015375Z",
+    "modified": "2024-08-13T14:46:49.015375Z",
+    "name": "Inclusion of Functionality from Untrusted Control Sphere",
+    "description": "The product imports, requires, or includes executable functionality (such as a library) from a source that is outside of the intended control sphere.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "829"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-11-29",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product does not properly reject DTDs in SOAP messages, which allows remote attackers to read arbitrary files, send HTTP requests to intranet servers, or cause a denial of service.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2076",
+            "reference": "CVE-2010-2076"
+        },
+        {
+            "description": "Modification of assumed-immutable configuration variable in include file allows file inclusion via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0285",
+            "reference": "CVE-2004-0285"
+        },
+        {
+            "description": "Modification of assumed-immutable configuration variable in include file allows file inclusion via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0030",
+            "reference": "CVE-2004-0030"
+        },
+        {
+            "description": "Modification of assumed-immutable configuration variable in include file allows file inclusion via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0068",
+            "reference": "CVE-2004-0068"
+        },
+        {
+            "description": "Modification of assumed-immutable configuration variable in include file allows file inclusion via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2157",
+            "reference": "CVE-2005-2157"
+        },
+        {
+            "description": "Modification of assumed-immutable configuration variable in include file allows file inclusion via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2162",
+            "reference": "CVE-2005-2162"
+        },
+        {
+            "description": "Modification of assumed-immutable configuration variable in include file allows file inclusion via direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2198",
+            "reference": "CVE-2005-2198"
+        },
+        {
+            "description": "Modification of assumed-immutable variable in configuration script leads to file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0128",
+            "reference": "CVE-2004-0128"
+        },
+        {
+            "description": "PHP file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1864",
+            "reference": "CVE-2005-1864"
+        },
+        {
+            "description": "PHP file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1869",
+            "reference": "CVE-2005-1869"
+        },
+        {
+            "description": "PHP file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1870",
+            "reference": "CVE-2005-1870"
+        },
+        {
+            "description": "PHP local file inclusion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2154",
+            "reference": "CVE-2005-2154"
+        },
+        {
+            "description": "PHP remote file include.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1704",
+            "reference": "CVE-2002-1704"
+        },
+        {
+            "description": "PHP remote file include.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1707",
+            "reference": "CVE-2002-1707"
+        },
+        {
+            "description": "PHP remote file include.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1964",
+            "reference": "CVE-2005-1964"
+        },
+        {
+            "description": "PHP remote file include.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1681",
+            "reference": "CVE-2005-1681"
+        },
+        {
+            "description": "PHP remote file include.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2086",
+            "reference": "CVE-2005-2086"
+        },
+        {
+            "description": "Directory traversal vulnerability in PHP include statement.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0127",
+            "reference": "CVE-2004-0127"
+        },
+        {
+            "description": "Directory traversal vulnerability in PHP include statement.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1971",
+            "reference": "CVE-2005-1971"
+        },
+        {
+            "description": "PHP file inclusion issue, both remote and local; local include uses \"..\" and \"%00\" characters as a manipulation, but many remote file inclusion issues probably have this vector.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3335",
+            "reference": "CVE-2005-3335"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "For any security checks that are performed on the client side, ensure that these checks are duplicated on the server side, in order to avoid CWE-602. Attackers can bypass the client-side checks by modifying values after the checks have been performed, or by changing the client to remove the client-side checks entirely. Then, these modified values would be submitted to the server.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Run your code using the lowest privileges that are required to accomplish the necessary tasks [REF-76]. If possible, create isolated accounts with limited privileges that are only used for a single task. That way, a successful attack will not immediately give the attacker access to the rest of the software or its environment. For example, database applications rarely need to run as the database administrator, especially in day-to-day operations.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use an application firewall that can detect attacks against this weakness. It can be beneficial in cases in which the code cannot be fixed (because it is controlled by a third party), as an emergency prevention measure while more comprehensive software assurance measures are applied, or to provide defense in depth.",
+            "effectiveness": "Moderate",
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-76"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "669",
+            "nature": "ChildOf"
+        }
+    ]
+}

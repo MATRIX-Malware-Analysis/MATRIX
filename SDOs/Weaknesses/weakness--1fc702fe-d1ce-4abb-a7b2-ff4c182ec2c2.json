@@ -1,0 +1,123 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1fc702fe-d1ce-4abb-a7b2-ff4c182ec2c2",
+    "created": "2024-08-13T14:46:48.794262Z",
+    "modified": "2024-08-13T14:46:48.794262Z",
+    "name": "Unauthorized Error Injection Can Degrade Hardware Redundancy",
+    "description": "An unauthorized agent can inject errors into a redundant block to deprive the system of redundancy or put the system in a degraded operating mode.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1334"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Performance",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-07-29",
+            "submission_name": "James Pangburn",
+            "submission_organization": "Accellera IP Security Assurance (IPSA) Working Group"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure the design does not allow error injection in modes intended for normal run-time operation. Provide access controls on interfaces for injecting errors.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Disallow error injection in modes which are expected to be used for normal run-time operation. Provide access controls on interfaces for injecting errors.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Add an access control layer atop any unprotected interfaces for injecting errors.",
+            "effectiveness": null,
+            "phase": "Integration"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

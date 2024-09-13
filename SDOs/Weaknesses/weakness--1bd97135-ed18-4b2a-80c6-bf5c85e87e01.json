@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1bd97135-ed18-4b2a-80c6-bf5c85e87e01",
+    "created": "2024-08-13T14:46:48.822183Z",
+    "modified": "2024-08-13T14:46:48.822183Z",
+    "name": "Self-generated Error Message Containing Sensitive Information",
+    "description": "The product identifies an error condition and creates its own diagnostic or error messages that contain sensitive information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "210"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Infoleak of sensitive information in error message (physical access required).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1745",
+            "reference": "CVE-2005-1745"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Debugging information should not make its way into a production release.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Debugging information should not make its way into a production release.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "209",
+            "nature": "ChildOf"
+        }
+    ]
+}

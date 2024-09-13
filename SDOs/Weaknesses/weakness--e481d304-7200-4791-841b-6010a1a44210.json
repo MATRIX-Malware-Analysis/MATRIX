@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e481d304-7200-4791-841b-6010a1a44210",
+    "created": "2024-08-13T14:46:48.942342Z",
+    "modified": "2024-08-13T14:46:48.942342Z",
+    "name": "Embedded Malicious Code",
+    "description": "The product contains code that appears to be malicious in nature.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "506"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Landwehr",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A command history tool was shipped with a code-execution backdoor inserted by a malicious party.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30877",
+            "reference": "CVE-2022-30877"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Remove the malicious code and start an effort to ensure that no more malicious code exists. This may require a detailed review of all code, as it is possible to hide a serious attack in only one or two lines of code. These lines may be located almost anywhere in an application and may have been intentionally obfuscated by the attacker.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1431"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "912",
+            "nature": "ChildOf"
+        }
+    ]
+}

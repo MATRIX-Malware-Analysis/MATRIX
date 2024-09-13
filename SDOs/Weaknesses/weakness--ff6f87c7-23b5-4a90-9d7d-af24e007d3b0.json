@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ff6f87c7-23b5-4a90-9d7d-af24e007d3b0",
+    "created": "2024-08-13T14:46:48.890268Z",
+    "modified": "2024-08-13T14:46:48.890268Z",
+    "name": "Use of Password System for Primary Authentication",
+    "description": "The use of password systems as the primary means of authentication may be subject to several flaws or shortcomings, each reducing the effectiveness of the mechanism.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "309"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a zero-knowledge password protocol, such as SRP.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that passwords are stored safely and are not reversible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Implement password aging functionality that requires passwords be changed after a certain point.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use a mechanism for determining the strength of a password and notify the user of weak password use.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Inform the user of why password protections are in place, how they work to protect data integrity, and why it is important to heed their warnings.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "654",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "308",
+            "nature": "PeerOf"
+        }
+    ]
+}

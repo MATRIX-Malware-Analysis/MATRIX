@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c2e7df81-8ff7-4b37-8bde-7f0619eecad7",
+    "created": "2024-08-13T14:46:49.017945Z",
+    "modified": "2024-08-13T14:46:49.017945Z",
+    "name": "Improper Enforcement of a Single, Unique Action",
+    "description": "The product requires that an actor should only be able to perform an action once, or to have only one unique action, but the product does not enforce or improperly enforces this restriction.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "837"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Ticket-booking web application allows a user to lock a seat more than once.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0294",
+            "reference": "CVE-2008-0294"
+        },
+        {
+            "description": "CMS allows people to rate downloads by voting more than once.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4051",
+            "reference": "CVE-2005-4051"
+        },
+        {
+            "description": "Polling software allows people to vote more than once by setting a cookie.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-216",
+            "reference": "CVE-2002-216"
+        },
+        {
+            "description": "Chain: lack of validation of a challenge key in a game allows a player to register multiple times and lock other players out of the game.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1433",
+            "reference": "CVE-2003-1433"
+        },
+        {
+            "description": "Library feature allows attackers to check out the same e-book multiple times, preventing other users from accessing copies of the e-book.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1018",
+            "reference": "CVE-2002-1018"
+        },
+        {
+            "description": "Protocol implementation allows remote attackers to cause a denial of service (call-number exhaustion) by initiating many message exchanges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2346",
+            "reference": "CVE-2009-2346"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "799",
+            "nature": "ChildOf"
+        }
+    ]
+}

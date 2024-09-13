@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--365678ab-ebcf-49a6-b3ac-634d0720b413",
+    "created": "2024-08-13T14:46:48.920955Z",
+    "modified": "2024-08-13T14:46:48.920955Z",
+    "name": "Improper Protection of Alternate Path",
+    "description": "The product does not sufficiently protect all possible paths that a user can take to access restricted functionality or resources.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "424"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Access-control setting in web-based document collaboration tool is not properly implemented by the code, which prevents listing hidden directories but does not prevent direct requests to files in those directories.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29238",
+            "reference": "CVE-2022-29238"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Deploy different layers of protection to implement security in depth.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "638",
+            "nature": "ChildOf"
+        }
+    ]
+}

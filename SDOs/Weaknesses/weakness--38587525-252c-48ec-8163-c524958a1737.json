@@ -1,0 +1,100 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--38587525-252c-48ec-8163-c524958a1737",
+    "created": "2024-08-13T14:46:49.024389Z",
+    "modified": "2024-08-13T14:46:49.024389Z",
+    "name": "Improper Control of Dynamically-Managed Code Resources",
+    "description": "The product does not properly restrict reading from or writing to dynamically-managed code resources such as variables, objects, classes, attributes, functions, or executable instructions or statements.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "913"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2013-01-26",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Python compiler uses eval() to execute malicious strings as Python code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-2054",
+            "reference": "CVE-2022-2054"
+        },
+        {
+            "description": "Cryptography API uses unsafe reflection when deserializing a private key",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-1000613",
+            "reference": "CVE-2018-1000613"
+        },
+        {
+            "description": "Deserialization issue in commonly-used Java library allows remote execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-8103",
+            "reference": "CVE-2015-8103"
+        },
+        {
+            "description": "Chain: extract used for register_globals compatibility layer, enables path traversal (CWE-22)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-7079",
+            "reference": "CVE-2006-7079"
+        },
+        {
+            "description": "Source version control product allows modification of trusted key using mass assignment.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-2055",
+            "reference": "CVE-2012-2055"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "For any externally-influenced input, check the input against an allowlist of acceptable values.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Refactor the code so that it does not need to be dynamically managed.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

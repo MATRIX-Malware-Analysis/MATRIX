@@ -1,0 +1,183 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--68e38eeb-637f-4ad3-9e4b-5b3942a57a85",
+    "created": "2024-08-13T14:46:48.893099Z",
+    "modified": "2024-08-13T14:46:48.893099Z",
+    "name": "Cleartext Transmission of Sensitive Information",
+    "description": "The product transmits sensitive or security-critical data in cleartext in a communication channel that can be sniffed by unauthorized actors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "319"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "method": "Black Box"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Programmable Logic Controller (PLC) sends sensitive information in plaintext, including passwords and session tokens.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-29519",
+            "reference": "CVE-2022-29519"
+        },
+        {
+            "description": "Building Controller uses a protocol that transmits authentication credentials in plaintext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-30312",
+            "reference": "CVE-2022-30312"
+        },
+        {
+            "description": "Programmable Logic Controller (PLC) sends password in plaintext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-31204",
+            "reference": "CVE-2022-31204"
+        },
+        {
+            "description": "Passwords transmitted in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1949",
+            "reference": "CVE-2002-1949"
+        },
+        {
+            "description": "Chain: Use of HTTPS cookie without \"secure\" flag causes it to be transmitted across unencrypted HTTP.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4122",
+            "reference": "CVE-2008-4122"
+        },
+        {
+            "description": "Product sends password hash in cleartext in violation of intended policy.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3289",
+            "reference": "CVE-2008-3289"
+        },
+        {
+            "description": "Remote management feature sends sensitive information including passwords in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4390",
+            "reference": "CVE-2008-4390"
+        },
+        {
+            "description": "Backup routine sends password in cleartext in email.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5626",
+            "reference": "CVE-2007-5626"
+        },
+        {
+            "description": "Product transmits Blowfish encryption key in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1852",
+            "reference": "CVE-2004-1852"
+        },
+        {
+            "description": "Printer sends configuration information, including administrative password, in cleartext.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0374",
+            "reference": "CVE-2008-0374"
+        },
+        {
+            "description": "Chain: cleartext transmission of the MD5 hash of password enables attacks against a server that is susceptible to replay (CWE-294).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4961",
+            "reference": "CVE-2007-4961"
+        },
+        {
+            "description": "Product sends passwords in cleartext to a log server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4786",
+            "reference": "CVE-2007-4786"
+        },
+        {
+            "description": "Product sends file with cleartext passwords in e-mail message intended for diagnostic purposes.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3140",
+            "reference": "CVE-2005-3140"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Before transmitting, encrypt the data using reliable, confidentiality-protecting cryptographic protocols.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When using web applications with SSL, use SSL for the entire session from login to logout, not just for the initial login page.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When designing hardware platforms, ensure that approved encryption algorithms (such as those recommended by NIST) protect paths from security critical data to trusted user applications.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use tools and techniques that require manual (human) analysis, such as penetration testing, threat modeling, and interactive tools that allow the tester to record and modify an active session. These may be more effective than strictly automated techniques. This is especially the case with weaknesses that are related to design and business rules.",
+            "effectiveness": null,
+            "phase": "Testing"
+        },
+        {
+            "description": "Configure servers to use encrypted channels for communication, which may include SSL or other secure protocols.",
+            "effectiveness": null,
+            "phase": "Operation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-271"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-172"
+        },
+        {
+            "external_reference_id": "REF-1283"
+        },
+        {
+            "external_reference_id": "REF-1307"
+        },
+        {
+            "external_reference_id": "REF-1309"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "311",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "311",
+            "nature": "ChildOf"
+        }
+    ]
+}

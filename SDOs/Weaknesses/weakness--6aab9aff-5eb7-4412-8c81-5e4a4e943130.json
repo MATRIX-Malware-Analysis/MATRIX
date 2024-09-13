@@ -1,0 +1,111 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--6aab9aff-5eb7-4412-8c81-5e4a4e943130",
+    "created": "2024-08-13T14:46:49.01909Z",
+    "modified": "2024-08-13T14:46:49.01909Z",
+    "name": "Improper Enforcement of Behavioral Workflow",
+    "description": "The product supports a session in which more than one behavior must be performed by an actor, but it does not properly ensure that the actor performs the behaviors in the required sequence.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "841"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Bypass of access/billing restrictions by sending traffic to an unrestricted destination before sending to a restricted destination.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0348",
+            "reference": "CVE-2011-0348"
+        },
+        {
+            "description": "Attacker can access portions of a restricted page by canceling out of a dialog.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3012",
+            "reference": "CVE-2007-3012"
+        },
+        {
+            "description": "Ticket-tracking system does not enforce a permission setting.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-5056",
+            "reference": "CVE-2009-5056"
+        },
+        {
+            "description": "Shopping cart does not close a database connection when user restores a previous order, leading to connection exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2164",
+            "reference": "CVE-2004-2164"
+        },
+        {
+            "description": "Chain: product does not properly handle dropped connections, leading to missing NULL terminator (CWE-170) and segmentation fault.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0777",
+            "reference": "CVE-2003-0777"
+        },
+        {
+            "description": "Chain: Authentication bypass by skipping the first startup step as required by the protocol.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3327",
+            "reference": "CVE-2005-3327"
+        },
+        {
+            "description": "Chain: File server crashes when sent a \"find next\" request without an initial \"find first.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0829",
+            "reference": "CVE-2004-0829"
+        },
+        {
+            "description": "FTP server allows remote attackers to bypass authentication by sending (1) LIST, (2) RETR, (3) STOR, or other commands without performing the required login steps first.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2620",
+            "reference": "CVE-2010-2620"
+        },
+        {
+            "description": "FTP server allows remote attackers to list arbitrary directories as root by running the LIST command before logging in.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3296",
+            "reference": "CVE-2005-3296"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-795"
+        },
+        {
+            "external_reference_id": "REF-796"
+        },
+        {
+            "external_reference_id": "REF-797"
+        },
+        {
+            "external_reference_id": "REF-806"
+        },
+        {
+            "external_reference_id": "REF-799"
+        },
+        {
+            "external_reference_id": "REF-667"
+        },
+        {
+            "external_reference_id": "REF-801"
+        },
+        {
+            "external_reference_id": "REF-802"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        }
+    ]
+}

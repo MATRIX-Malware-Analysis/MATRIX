@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5f471a45-a84f-4ad0-bf32-ff1152f56336",
+    "created": "2024-08-13T14:46:49.029741Z",
+    "modified": "2024-08-13T14:46:49.029741Z",
+    "name": "Incorrectly Specified Destination in a Communication Channel",
+    "description": "The product creates a communication channel to initiate an outgoing request to an actor, but it does not correctly specify the intended destination for that actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "941"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2014-02-13",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "composite: NTP feature generates large responses (high amplification factor) with spoofed UDP source addresses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-5211",
+            "reference": "CVE-2013-5211"
+        },
+        {
+            "description": "Classic \"Smurf\" attack, using spoofed ICMP packets to broadcast addresses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0513",
+            "reference": "CVE-1999-0513"
+        },
+        {
+            "description": "DNS query with spoofed source address causes more traffic to be returned to spoofed address than was sent by the attacker.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1379",
+            "reference": "CVE-1999-1379"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-941"
+        },
+        {
+            "external_reference_id": "REF-942"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "923",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "406",
+            "nature": "CanPrecede"
+        }
+    ]
+}

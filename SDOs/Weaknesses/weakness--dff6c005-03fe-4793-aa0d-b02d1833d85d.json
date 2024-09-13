@@ -1,0 +1,159 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--dff6c005-03fe-4793-aa0d-b02d1833d85d",
+    "created": "2024-08-13T14:46:48.828954Z",
+    "modified": "2024-08-13T14:46:48.828954Z",
+    "name": "Failure to Handle Missing Parameter",
+    "description": "If too few arguments are sent to a function, the function will still pop the expected number of arguments from the stack. Potentially, a variable number of arguments could be exhausted in a function as well.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "234"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Server earlier allows remote attackers to cause a denial of service (crash) via an HTTP request with a sequence of \"%\" characters and a missing Host field.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0276",
+            "reference": "CVE-2004-0276"
+        },
+        {
+            "description": "Chat client allows remote malicious IRC servers to cause a denial of service (crash) via a PART message with (1) a missing channel or (2) a channel that the user is not in.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1488",
+            "reference": "CVE-2002-1488"
+        },
+        {
+            "description": "Proxy allows remote attackers to cause a denial of service (crash) via an HTTP request to helpout.exe with a missing HTTP version numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1169",
+            "reference": "CVE-2002-1169"
+        },
+        {
+            "description": "Web server allows disclosure of CGI source code via an HTTP request without the version number.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0521",
+            "reference": "CVE-2000-0521"
+        },
+        {
+            "description": "Application server allows a remote attacker to read the source code to arbitrary 'jsp' files via a malformed URL request which does not end with an HTTP protocol specification.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0590",
+            "reference": "CVE-2001-0590"
+        },
+        {
+            "description": "Chat software allows remote attackers to cause a denial of service via malformed GIF89a headers that do not contain a GCT (Global Color Table) or an LCT (Local Color Table) after an Image Descriptor.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0239",
+            "reference": "CVE-2003-0239"
+        },
+        {
+            "description": "Server allows remote attackers to cause a denial of service (crash) via an HTTP GET request without a URI.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1023",
+            "reference": "CVE-2002-1023"
+        },
+        {
+            "description": "CGI crashes when called without any arguments.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1236",
+            "reference": "CVE-2002-1236"
+        },
+        {
+            "description": "CGI crashes when called without any arguments.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0422",
+            "reference": "CVE-2003-0422"
+        },
+        {
+            "description": "Crash in HTTP request without a Content-Length field.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1531",
+            "reference": "CVE-2002-1531"
+        },
+        {
+            "description": "Crash in HTTP request without a Content-Length field.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1077",
+            "reference": "CVE-2002-1077"
+        },
+        {
+            "description": "Empty elements/strings in protocol test suite affect many SSH2 servers/clients.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1358",
+            "reference": "CVE-2002-1358"
+        },
+        {
+            "description": "FTP server crashes in PORT command without an argument.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0477",
+            "reference": "CVE-2003-0477"
+        },
+        {
+            "description": "Resultant infoleak in web server via GET requests without HTTP/1.0 version string.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0107",
+            "reference": "CVE-2002-0107"
+        },
+        {
+            "description": "GET request with empty parameter leads to error message infoleak (path disclosure).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0596",
+            "reference": "CVE-2002-0596"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "This issue can be simply combated with the use of proper build process.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "Forward declare all functions. This is the recommended solution. Properly forward declaration of all used functions will result in a compiler error if too few arguments are sent to a function.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "233",
+            "nature": "ChildOf"
+        }
+    ]
+}

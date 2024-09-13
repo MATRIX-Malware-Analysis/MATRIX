@@ -1,0 +1,197 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0f1d7eaf-a964-4ea1-a1ed-38f1e59bb85e",
+    "created": "2024-08-13T14:46:49.030601Z",
+    "modified": "2024-08-13T14:46:49.030601Z",
+    "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')",
+    "description": "The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes code syntax before using the input in a dynamic evaluation call (e.g. \"eval\").",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "95"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Framework for LLM applications allows eval injection via a crafted response from a hosting provider.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-4181",
+            "reference": "CVE-2024-4181"
+        },
+        {
+            "description": "Python compiler uses eval() to execute malicious strings as Python code.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-2054",
+            "reference": "CVE-2022-2054"
+        },
+        {
+            "description": "Chain: regex in EXIF processor code does not correctly determine where a string ends (CWE-625), enabling eval injection (CWE-95), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22204",
+            "reference": "CVE-2021-22204"
+        },
+        {
+            "description": "Chain: backslash followed by a newline can bypass a validation step (CWE-20), leading to eval injection (CWE-95), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-22205",
+            "reference": "CVE-2021-22205"
+        },
+        {
+            "description": "Eval injection in PHP program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5071",
+            "reference": "CVE-2008-5071"
+        },
+        {
+            "description": "Eval injection in Perl program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1750",
+            "reference": "CVE-2002-1750"
+        },
+        {
+            "description": "Eval injection in Perl program using an ID that should only contain hyphens and numbers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5305",
+            "reference": "CVE-2008-5305"
+        },
+        {
+            "description": "Direct code injection into Perl eval function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1752",
+            "reference": "CVE-2002-1752"
+        },
+        {
+            "description": "Eval injection in Perl program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1753",
+            "reference": "CVE-2002-1753"
+        },
+        {
+            "description": "Direct code injection into Perl eval function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1527",
+            "reference": "CVE-2005-1527"
+        },
+        {
+            "description": "Direct code injection into Perl eval function.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2837",
+            "reference": "CVE-2005-2837"
+        },
+        {
+            "description": "MFV. code injection into PHP eval statement using nested constructs that should not be nested.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1921",
+            "reference": "CVE-2005-1921"
+        },
+        {
+            "description": "MFV. code injection into PHP eval statement using nested constructs that should not be nested.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2498",
+            "reference": "CVE-2005-2498"
+        },
+        {
+            "description": "Code injection into Python eval statement from a field in a formatted file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3302",
+            "reference": "CVE-2005-3302"
+        },
+        {
+            "description": "Eval injection in Python program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1253",
+            "reference": "CVE-2007-1253"
+        },
+        {
+            "description": "chain: Resultant eval injection. An invalid value prevents initialization of variables, which can be modified by attacker and later injected into PHP eval statement.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1471",
+            "reference": "CVE-2001-1471"
+        },
+        {
+            "description": "Chain: Execution after redirect triggers eval injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2713",
+            "reference": "CVE-2007-2713"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If possible, refactor your code so that it does not need to use eval() at all.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Discouraged Common Practice",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-1372"
+        },
+        {
+            "external_reference_id": "REF-1373"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "94",
+            "nature": "ChildOf"
+        }
+    ]
+}

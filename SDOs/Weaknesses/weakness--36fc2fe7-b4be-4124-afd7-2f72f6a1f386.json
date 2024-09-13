@@ -1,0 +1,89 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--36fc2fe7-b4be-4124-afd7-2f72f6a1f386",
+    "created": "2024-08-13T14:46:48.876625Z",
+    "modified": "2024-08-13T14:46:48.876625Z",
+    "name": "Password Aging with Long Expiration",
+    "description": "The product supports password aging, but the expiration period is too long.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "263"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that password aging is limited so that there is a defined maximum age for passwords. Note that if the expiration window is too short, it can cause users to generate poor or predictable passwords.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that the user is notified several times leading up to the password expiration.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Create mechanisms to prevent users from reusing passwords or creating similar passwords.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Developers might disable clipboard paste operations into password fields as a way to discourage users from pasting a password into a clipboard. However, this might encourage users to choose less-secure passwords that are easier to type, and it can reduce the usability of password managers [REF-1294].",
+            "effectiveness": "Discouraged Common Practice",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-1305"
+        },
+        {
+            "external_reference_id": "REF-1289"
+        },
+        {
+            "external_reference_id": "REF-1290"
+        },
+        {
+            "external_reference_id": "REF-1291"
+        },
+        {
+            "external_reference_id": "REF-1292"
+        },
+        {
+            "external_reference_id": "REF-1293"
+        },
+        {
+            "external_reference_id": "REF-1294"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--090d5b51-ecdf-43a1-b788-7fd05d9c0035",
+    "created": "2024-08-13T14:46:48.787375Z",
+    "modified": "2024-08-13T14:46:48.787375Z",
+    "name": "Missing Ability to Patch ROM Code",
+    "description": "Missing an ability to patch ROM code may leave a System or System-on-Chip (SoC) in a vulnerable state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1310"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Reduce Maintainability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-04-25",
+            "submission_name": "Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n\t\t\t\t\t  Secure patch support to allow ROM code to be patched on the next boot.\n                    ",
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n\t\t\t\t\t    Support patches that can be programmed in-field or during manufacturing through hardware fuses. This feature can be used for limited patching of devices after shipping, or for the next batch of silicon devices manufactured, without changing the full device ROM.\n                    ",
+            "effectiveness": "Moderate",
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1396"
+        },
+        {
+            "external_reference_id": "REF-1397"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1329",
+            "nature": "ChildOf"
+        }
+    ]
+}

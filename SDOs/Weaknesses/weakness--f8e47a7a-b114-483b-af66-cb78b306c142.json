@@ -1,0 +1,116 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f8e47a7a-b114-483b-af66-cb78b306c142",
+    "created": "2024-08-13T14:46:48.771668Z",
+    "modified": "2024-08-13T14:46:48.771668Z",
+    "name": "Improper Handling of Overlap Between Protected Memory Ranges",
+    "description": "The product allows address regions to overlap, which can result in the bypassing of intended memory protection.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1260"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Instability",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-10",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Create a high privilege memory block of any arbitrary size. Attempt to create a lower privilege memory block with an overlap of the high privilege memory block. If the creation attempt works, fix the hardware. Repeat the test.",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "virtualization product allows compromise of hardware product by accessing certain remapping registers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-7096",
+            "reference": "CVE-2008-7096"
+        },
+        {
+            "description": "processor design flaw allows ring 0 code to access more privileged rings by causing a register window to overlap a range of protected system RAM [REF-1100]",
+            "link": "https://github.com/xoreaxeaxeax/sinkhole/blob/master/us-15-Domas-TheMemorySinkhole-wp.pdf",
+            "reference": "[REF-1100]"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                   ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                 ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1100"
+        },
+        {
+            "external_reference_id": "REF-1338"
+        },
+        {
+            "external_reference_id": "REF-1339"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

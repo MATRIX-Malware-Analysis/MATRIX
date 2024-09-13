@@ -1,0 +1,66 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--47edb61f-d1fe-4fa2-97eb-e95abafa7aae",
+    "created": "2024-08-13T14:46:48.759219Z",
+    "modified": "2024-08-13T14:46:48.759219Z",
+    "name": "ASP.NET Misconfiguration: Missing Custom Error Page",
+    "description": "An ASP .NET application must enable custom error pages in order to prevent attackers from mining information from the framework's built-in responses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "12"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Handle exceptions appropriately in source code. ASP .NET applications should be configured to use custom error pages instead of the framework default page.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        },
+        {
+            "description": "Do not attempt to process an error or attempt to mask it.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Verify return values are correct and do not supply sensitive information about the system.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-65"
+        },
+        {
+            "external_reference_id": "REF-66"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "756",
+            "nature": "ChildOf"
+        }
+    ]
+}

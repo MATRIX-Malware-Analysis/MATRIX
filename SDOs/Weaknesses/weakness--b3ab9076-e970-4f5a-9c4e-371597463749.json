@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b3ab9076-e970-4f5a-9c4e-371597463749",
+    "created": "2024-08-13T14:46:48.794551Z",
+    "modified": "2024-08-13T14:46:48.794551Z",
+    "name": "Incorrect Bitwise Shift of Integer",
+    "description": "An integer value is specified to be shifted by a negative amount or an amount greater than or equal to the number of bits contained in the value causing an unexpected or indeterminate result.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1335"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-03-29",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "An unexpected large value in the ext4 filesystem causes an overshift condition resulting in a divide by zero.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-4307",
+            "reference": "CVE-2009-4307"
+        },
+        {
+            "description": "An unexpected large value in the ext4 filesystem causes an overshift condition resulting in a divide by zero - fix of CVE-2009-4307.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-2100",
+            "reference": "CVE-2012-2100"
+        },
+        {
+            "description": "An overshift in a kernel allowed out of bounds reads and writes resulting in a root takeover.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8835",
+            "reference": "CVE-2020-8835"
+        },
+        {
+            "description": "Program is not properly handling signed bitwise left-shifts causing an overlapping memcpy memory range error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-1607",
+            "reference": "CVE-2015-1607"
+        },
+        {
+            "description": "Compression function improperly executes a signed left shift of a negative integer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-9842",
+            "reference": "CVE-2016-9842"
+        },
+        {
+            "description": "Some kernels improperly handle right shifts of 32 bit numbers in a 64 bit register.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-18445",
+            "reference": "CVE-2018-18445"
+        },
+        {
+            "description": "Putty  has an incorrectly sized shift value resulting in an overshift.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-4206",
+            "reference": "CVE-2013-4206"
+        },
+        {
+            "description": "LED driver overshifts under certain conditions resulting in a DoS.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-20788",
+            "reference": "CVE-2018-20788"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implicitly or explicitly add checks and mitigation for negative or over-shift values.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        }
+    ]
+}

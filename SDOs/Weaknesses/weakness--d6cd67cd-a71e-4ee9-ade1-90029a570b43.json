@@ -1,0 +1,106 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d6cd67cd-a71e-4ee9-ade1-90029a570b43",
+    "created": "2024-08-13T14:46:48.766639Z",
+    "modified": "2024-08-13T14:46:48.766639Z",
+    "name": "Internal Asset Exposed to Unsafe Debug Access Level or State",
+    "description": "The product uses physical debug or test\n        interfaces with support for multiple access levels, but it\n        assigns the wrong debug access level to an internal asset,\n        providing unintended access to the asset from untrusted debug\n        agents.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1244"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Check 2 devices for their passcode to authenticate access to JTAG/debugging ports. If the passcodes are missing or the same, update the design to fix and retest. Check communications over JTAG/debugging ports for encryption. If the communications are not encrypted, fix the design and retest.",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "After ROM code execution, JTAG access is disabled. But before the ROM code is executed, JTAG access is possible, allowing a user full system access.  This allows a user to modify the boot flow and successfully bypass the secure-boot process.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-18827",
+            "reference": "CVE-2019-18827"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                    ",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Apply blinding [REF-1219] or masking techniques in strategic areas.",
+            "effectiveness": "Limited",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Add shielding or tamper-resistant protections to the device, which increases the difficulty and cost for accessing debug/test interfaces.",
+            "effectiveness": "Limited",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1056"
+        },
+        {
+            "external_reference_id": "REF-1057"
+        },
+        {
+            "external_reference_id": "REF-1219"
+        },
+        {
+            "external_reference_id": "REF-1377"
+        },
+        {
+            "external_reference_id": "REF-1378"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "863",
+            "nature": "ChildOf"
+        }
+    ]
+}

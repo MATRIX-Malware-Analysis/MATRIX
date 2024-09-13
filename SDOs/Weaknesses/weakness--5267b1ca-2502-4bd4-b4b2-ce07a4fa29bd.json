@@ -1,0 +1,49 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5267b1ca-2502-4bd4-b4b2-ce07a4fa29bd",
+    "created": "2024-08-13T14:46:48.984605Z",
+    "modified": "2024-08-13T14:46:48.984605Z",
+    "name": "Always-Incorrect Control Flow Implementation",
+    "description": "The code contains a control flow path that does not reflect the algorithm that the path is intended to implement, leading to incorrect behavior any time this path is navigated.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "670"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "virtual interrupt controller in a virtualization product allows crash of host by writing a certain invalid value to a register, which triggers a fatal error instead of returning an error code",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3011",
+            "reference": "CVE-2021-3011"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        }
+    ]
+}

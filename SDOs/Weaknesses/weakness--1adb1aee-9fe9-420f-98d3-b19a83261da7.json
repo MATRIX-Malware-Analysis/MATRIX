@@ -1,0 +1,64 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1adb1aee-9fe9-420f-98d3-b19a83261da7",
+    "created": "2024-08-13T14:46:48.835534Z",
+    "modified": "2024-08-13T14:46:48.835534Z",
+    "name": "Empty Password in Configuration File",
+    "description": "Using an empty string as a password is insecure.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "258"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Network access control (NAC) product has a configuration file with an empty password",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-26117",
+            "reference": "CVE-2022-26117"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Passwords should be at least eight characters long -- the longer the better. Avoid passwords that are in any way similar to other passwords you have. Avoid using words that may be found in a dictionary, names book, on a map, etc. Consider incorporating numbers and/or punctuation into your password. If you do use common words, consider replacing letters in that word with numbers and punctuation. However, do not use \"similar-looking\" punctuation. For example, it is not a good idea to change cat to c@t, ca+, (@+, or anything similar. Finally, it is never appropriate to use an empty string as a password.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-207"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "260",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "521",
+            "nature": "ChildOf"
+        }
+    ]
+}

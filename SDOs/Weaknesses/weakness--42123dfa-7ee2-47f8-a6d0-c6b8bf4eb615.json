@@ -1,0 +1,54 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--42123dfa-7ee2-47f8-a6d0-c6b8bf4eb615",
+    "created": "2024-08-13T14:46:48.790994Z",
+    "modified": "2024-08-13T14:46:48.790994Z",
+    "name": "Use of Blocking Code in Single-threaded, Non-blocking Context",
+    "description": "The product uses a non-blocking model that relies on a single threaded process\n\t\t\tfor features such as scalability, but it contains code that can block when it is invoked.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1322"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-10-25",
+            "submission_name": "Joe Harvey",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Generally speaking, blocking calls should be\n\t\t\t\t\treplaced with non-blocking alternatives that can be used asynchronously.\n\t\t\t\t\tExpensive computations should be passed off to worker threads, although\n\t\t\t\t\tthe correct approach depends on the framework being used.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "For expensive computations, consider breaking them up into\n\t\t\t\t\tmultiple smaller computations. Refer to the documentation of the\n\t\t\t\t\tframework being used for guidance.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "834",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "835",
+            "nature": "CanPrecede"
+        }
+    ]
+}

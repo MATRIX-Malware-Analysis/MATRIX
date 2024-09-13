@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3670a458-eec4-44e5-8fd8-c1f51b3f06f9",
+    "created": "2024-08-13T14:46:48.907873Z",
+    "modified": "2024-08-13T14:46:48.907873Z",
+    "name": "Divide By Zero",
+    "description": "The product divides a value by zero.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "369"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Invalid size value leads to divide by zero.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3268",
+            "reference": "CVE-2007-3268"
+        },
+        {
+            "description": "\"Empty\" content triggers divide by zero.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2723",
+            "reference": "CVE-2007-2723"
+        },
+        {
+            "description": "Height value of 0 triggers divide by zero.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2237",
+            "reference": "CVE-2007-2237"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-371"
+        },
+        {
+            "external_reference_id": "REF-372"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "ChildOf"
+        }
+    ]
+}

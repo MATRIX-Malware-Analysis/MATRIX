@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8f880862-a2bc-48d9-bb68-c315b6e7e82b",
+    "created": "2024-08-13T14:46:48.897826Z",
+    "modified": "2024-08-13T14:46:48.897826Z",
+    "name": "Small Space of Random Values",
+    "description": "The number of possible random values is smaller than needed by the product, making it more susceptible to brute force attacks.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "334"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Product uses 5 alphanumeric characters for filenames of expense claim reports, stored under web root.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0583",
+            "reference": "CVE-2002-0583"
+        },
+        {
+            "description": "Product uses small number of random numbers for a code to approve an action, and also uses predictable new user IDs, allowing attackers to hijack new accounts.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0903",
+            "reference": "CVE-2002-0903"
+        },
+        {
+            "description": "SYN cookies implementation only uses 32-bit keys, making it easier to brute force ISN.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1230",
+            "reference": "CVE-2003-1230"
+        },
+        {
+            "description": "Complex predictability / randomness (reduced space).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0230",
+            "reference": "CVE-2004-0230"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use products or modules that conform to FIPS 140-2 [REF-267] to avoid obvious entropy problems. Consult FIPS 140-2 Annex C (\"Approved Random Number Generators\").",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        }
+    ]
+}

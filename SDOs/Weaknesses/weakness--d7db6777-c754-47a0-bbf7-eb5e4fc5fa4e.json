@@ -1,0 +1,212 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--d7db6777-c754-47a0-bbf7-eb5e4fc5fa4e",
+    "created": "2024-08-13T14:46:48.765171Z",
+    "modified": "2024-08-13T14:46:48.765171Z",
+    "name": "Buffer Underwrite ('Buffer Underflow')",
+    "description": "The product writes to a buffer using an index or pointer that references a memory location prior to the beginning of the buffer.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "124"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "buffer underwrite in firmware verification routine allows code execution via a crafted firmware image",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-24018",
+            "reference": "CVE-2021-24018"
+        },
+        {
+            "description": "Unchecked length of SSLv2 challenge value leads to buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2227",
+            "reference": "CVE-2002-2227"
+        },
+        {
+            "description": "Buffer underflow from a small size value with a large buffer (length parameter inconsistency, CWE-130)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4580",
+            "reference": "CVE-2007-4580"
+        },
+        {
+            "description": "Buffer underflow from an all-whitespace string, which causes a counter to be decremented before the buffer while looking for a non-whitespace character.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-1584",
+            "reference": "CVE-2007-1584"
+        },
+        {
+            "description": "Buffer underflow resultant from encoded data that triggers an integer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-0886",
+            "reference": "CVE-2007-0886"
+        },
+        {
+            "description": "Product sets an incorrect buffer size limit, leading to \"off-by-two\" buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6171",
+            "reference": "CVE-2006-6171"
+        },
+        {
+            "description": "Negative value is used in a memcpy() operation, leading to buffer underflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4024",
+            "reference": "CVE-2006-4024"
+        },
+        {
+            "description": "Buffer underflow due to mishandled special characters",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2620",
+            "reference": "CVE-2004-2620"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Choose a language that is not susceptible to these issues.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "All calculated values that are used as index or for pointer arithmetic should be validated to ensure that they are within an expected range.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-90"
+        },
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "786",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "787",
+            "nature": "ChildOf"
+        }
+    ]
+}

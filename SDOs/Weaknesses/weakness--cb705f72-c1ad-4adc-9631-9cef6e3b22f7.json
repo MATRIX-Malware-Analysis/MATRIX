@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cb705f72-c1ad-4adc-9631-9cef6e3b22f7",
+    "created": "2024-08-13T14:46:48.830263Z",
+    "modified": "2024-08-13T14:46:48.830263Z",
+    "name": "Failure to Handle Incomplete Element",
+    "description": "The product does not properly handle when a particular element is not completely specified.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "239"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "HTTP GET without \\r\\n\\r\\n CRLF sequences causes product to wait indefinitely and prevents other users from accessing it.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1532",
+            "reference": "CVE-2002-1532"
+        },
+        {
+            "description": "Partial request is not timed out.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0195",
+            "reference": "CVE-2003-0195"
+        },
+        {
+            "description": "MFV. CPU exhaustion in printer via partial printing request then early termination of connection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2526",
+            "reference": "CVE-2005-2526"
+        },
+        {
+            "description": "CPU consumption by sending incomplete HTTP requests and leaving the connections open.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1906",
+            "reference": "CVE-2002-1906"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "237",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "404",
+            "nature": "PeerOf"
+        }
+    ]
+}

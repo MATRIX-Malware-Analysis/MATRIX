@@ -1,0 +1,78 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--0b7805cf-79df-49eb-9ea4-a50adfe246d0",
+    "created": "2024-08-13T14:46:48.773952Z",
+    "modified": "2024-08-13T14:46:48.773952Z",
+    "name": "Unintended Reentrant Invocation of Non-reentrant Code Via Nested Calls",
+    "description": "During execution of non-reentrant code, the product performs a call that unintentionally produces a nested invocation of the non-reentrant code.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1265"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-12-20",
+            "submission_name": "Simon Zuckerbraun",
+            "submission_organization": "Trend Micro"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "In this vulnerability, by registering a malicious onerror handler, an adversary can produce unexpected re-entrance of a CDOMRange object. [REF-1098]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-1772",
+            "reference": "CVE-2014-1772"
+        },
+        {
+            "description": "This CVE covers several vulnerable scenarios enabled by abuse of the Class_Terminate feature in Microsoft VBScript. In one scenario, Class_Terminate is used to produce an undesirable re-entrance of ScriptingDictionary during execution of that object's destructor. In another scenario, a vulnerable condition results from a recursive entrance of a property setter method. This recursive invocation produces a second, spurious call to the Release method of a reference-counted object, causing a UAF when that object is freed prematurely. This vulnerability pattern has been popularized as \"Double Kill\". [REF-1099]",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-8174",
+            "reference": "CVE-2018-8174"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "When architecting a system that will execute untrusted code in response to events, consider executing the untrusted event handlers asynchronously (asynchronous message passing) as opposed to executing them synchronously at the time each event fires. The untrusted code should execute at the start of the next iteration of the thread's message loop. In this way, calls into non-reentrant code are strictly serialized, so that each operation completes fully before the next operation begins. Special attention must be paid to all places where type coercion may result in script execution. Performing all needed coercions at the very beginning of an operation can help reduce the chance of operations executing at unexpected junctures.",
+            "effectiveness": "High",
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Make sure the code (e.g., function or class) in question is reentrant by not leveraging non-local data, not modifying its own code, and not calling other non-reentrant code.",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1098"
+        },
+        {
+            "external_reference_id": "REF-1099"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "663",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "416",
+            "nature": "CanPrecede"
+        }
+    ]
+}

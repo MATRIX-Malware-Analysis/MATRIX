@@ -1,0 +1,150 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2ce2dd05-b0c5-49a3-9481-d5b4a0a5dad9",
+    "created": "2024-08-13T14:46:48.929277Z",
+    "modified": "2024-08-13T14:46:48.929277Z",
+    "name": "Use of Uninitialized Variable",
+    "description": "The code uses a variable that has not been initialized, leading to unpredictable or unintended results.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "457"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: sscanf() call is used to check if a username and group exists, but the return value of sscanf() call is not checked (CWE-252), causing an uninitialized variable to be checked (CWE-457), returning success to allow authorization bypass for executing a privileged (CWE-863).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-15900",
+            "reference": "CVE-2019-15900"
+        },
+        {
+            "description": "Chain: A denial of service may be caused by an uninitialized variable (CWE-457) allowing an infinite loop (CWE-835) resulting from a connection to an unresponsive server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3688",
+            "reference": "CVE-2008-3688"
+        },
+        {
+            "description": "Uninitialized variable leads to code execution in popular desktop application.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0081",
+            "reference": "CVE-2008-0081"
+        },
+        {
+            "description": "Crafted input triggers dereference of an uninitialized object pointer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-4682",
+            "reference": "CVE-2007-4682"
+        },
+        {
+            "description": "Crafted audio file triggers crash when an uninitialized variable is used.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-3468",
+            "reference": "CVE-2007-3468"
+        },
+        {
+            "description": "Uninitialized random seed variable used.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2728",
+            "reference": "CVE-2007-2728"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Assign all variables to an initial value.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Most compilers will complain about the use of uninitialized variables if warnings are turned on.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        },
+        {
+            "description": "When using a language that does not require explicit declaration of variables, run or compile the software in a mode that reports undeclared or unknown variables. This may indicate the presence of a typographic error in the variable's name.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "The choice could be made to use a language that is not susceptible to these issues.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Mitigating technologies such as safe string libraries and container abstractions could be introduced.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-436"
+        },
+        {
+            "external_reference_id": "REF-437"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "908",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        }
+    ]
+}

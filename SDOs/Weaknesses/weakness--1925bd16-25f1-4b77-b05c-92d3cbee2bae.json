@@ -1,0 +1,83 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--1925bd16-25f1-4b77-b05c-92d3cbee2bae",
+    "created": "2024-08-13T14:46:48.913048Z",
+    "modified": "2024-08-13T14:46:48.913048Z",
+    "name": "Return of Wrong Status Code",
+    "description": "A function or operation returns an incorrect return value or status code that does not indicate an error, but causes the product to modify its behavior based on the incorrect result.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "393"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Fuzz testing (fuzzing) is a powerful technique for generating large numbers of diverse inputs - either randomly or algorithmically - and dynamically invoking the code with those inputs. Even with random inputs, it is often capable of generating unexpected results such as crashes, memory corruption, or resource consumption. Fuzzing effectively produces repeatable test cases that clearly indicate bugs, which helps developers to diagnose the issues.",
+            "effectiveness": "High",
+            "method": "Fuzzing"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "DNS server returns wrong response code for non-existent AAAA record, which effectively says that the domain is inaccessible.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1132",
+            "reference": "CVE-2003-1132"
+        },
+        {
+            "description": "Hardware-specific implementation of system call causes incorrect results from geteuid.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1509",
+            "reference": "CVE-2001-1509"
+        },
+        {
+            "description": "Chain: System call returns wrong value (CWE-393), leading to a resultant NULL dereference (CWE-476).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1559",
+            "reference": "CVE-2001-1559"
+        },
+        {
+            "description": "chain: incorrect \"goto\" in Apple SSL product bypasses certificate validation, allowing Adversary-in-the-Middle (AITM) attack (Apple \"goto fail\" bug). CWE-705 (Incorrect Control Flow Scoping) -> CWE-561 (Dead Code) -> CWE-295 (Improper Certificate Validation) -> CWE-393 (Return of Wrong Status Code) -> CWE-300 (Channel Accessible by Non-Endpoint).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-1266",
+            "reference": "CVE-2014-1266"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "684",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "703",
+            "nature": "ChildOf"
+        }
+    ]
+}

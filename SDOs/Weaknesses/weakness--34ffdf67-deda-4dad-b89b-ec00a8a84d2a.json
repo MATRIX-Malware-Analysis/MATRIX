@@ -1,0 +1,76 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--34ffdf67-deda-4dad-b89b-ec00a8a84d2a",
+    "created": "2024-08-13T14:46:48.933534Z",
+    "modified": "2024-08-13T14:46:48.933534Z",
+    "name": "PHP External Variable Modification",
+    "description": "A PHP application does not properly protect against the modification of variables from external sources, such as query parameters or cookies. This can expose the application to numerous weaknesses that would not exist otherwise.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "473"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "File upload allows arbitrary file read by setting hidden form variables to match internal variable names.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0860",
+            "reference": "CVE-2000-0860"
+        },
+        {
+            "description": "Mistakenly trusts $PHP_SELF variable to determine if include script was called by its parent.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0854",
+            "reference": "CVE-2001-0854"
+        },
+        {
+            "description": "PHP remote file inclusion by modified assumed-immutable variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0764",
+            "reference": "CVE-2002-0764"
+        },
+        {
+            "description": "Modify key variable when calling scripts that don't load a library that initializes it.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1025",
+            "reference": "CVE-2001-1025"
+        },
+        {
+            "description": "Authentication bypass by modifying array used for authentication.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0754",
+            "reference": "CVE-2003-0754"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Carefully identify which variables can be controlled or influenced by an external user, and consider adopting a naming convention to emphasize when externally modifiable variables are being used. An application should be reluctant to trust variables that have been initialized outside of its trust boundary. Ensure adequate checking is performed when relying on input from outside a trust boundary. Do not allow your application to run with register_globals enabled. If you implement a register_globals emulator, be extremely careful of variable extraction, dynamic evaluation, and similar issues, since weaknesses in your emulation could allow external variable modification to take place even without register_globals.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "471",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "98",
+            "nature": "CanPrecede"
+        }
+    ]
+}

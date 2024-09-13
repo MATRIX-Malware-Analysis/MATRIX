@@ -1,0 +1,88 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fba514af-33d6-4ddc-8179-19994db8880f",
+    "created": "2024-08-13T14:46:49.023034Z",
+    "modified": "2024-08-13T14:46:49.023034Z",
+    "name": "Missing Initialization of Resource",
+    "description": "The product does not initialize a critical resource.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "909"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2012-12-21",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A variable that has its value set in a conditional statement is sometimes used when the conditional fails, sometimes causing data leakage",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-20739",
+            "reference": "CVE-2020-20739"
+        },
+        {
+            "description": "Chain: Bypass of access restrictions due to improper authorization (CWE-862) of a user results from an improperly initialized (CWE-909) I/O permission bitmap",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1036",
+            "reference": "CVE-2005-1036"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Explicitly initialize the resource before use. If this is performed through an API function or standard procedure, follow all specified steps.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Pay close attention to complex conditionals that affect initialization, since some branches might not perform the initialization.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Avoid race conditions (CWE-362) during initialization routines.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run or compile your product with settings that generate warnings about uninitialized variables or data.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "908",
+            "nature": "CanPrecede"
+        }
+    ]
+}

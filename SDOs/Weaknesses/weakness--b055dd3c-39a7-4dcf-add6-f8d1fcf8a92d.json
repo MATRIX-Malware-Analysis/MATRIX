@@ -1,0 +1,68 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b055dd3c-39a7-4dcf-add6-f8d1fcf8a92d",
+    "created": "2024-08-13T14:46:48.894547Z",
+    "modified": "2024-08-13T14:46:48.894547Z",
+    "name": "Use of a Key Past its Expiration Date",
+    "description": "The product uses a cryptographic key or password past its expiration date, which diminishes its safety significantly by increasing the timing window for cracking attacks against that key.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "324"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Picture Archiving and Communication System (PACS) system for hospitals uses a cryptographic key or password past its expiration date",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-33020",
+            "reference": "CVE-2021-33020"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Adequate consideration should be put in to the user interface in order to notify users previous to the key's expiration, to explain the importance of new key generation and to walk users through the process as painlessly as possible.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-18"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "672",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "298",
+            "nature": "PeerOf"
+        }
+    ]
+}

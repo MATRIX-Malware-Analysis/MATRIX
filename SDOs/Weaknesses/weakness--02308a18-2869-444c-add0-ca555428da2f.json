@@ -1,0 +1,268 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--02308a18-2869-444c-add0-ca555428da2f",
+    "created": "2024-08-13T14:46:49.020459Z",
+    "modified": "2024-08-13T14:46:49.020459Z",
+    "name": "Missing Authorization",
+    "description": "The product does not perform an authorization check when an actor attempts to access a resource or perform an action.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "862"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-05-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Automated dynamic analysis may find many or all possible interfaces that do not require authorization, but manual analysis is required to determine if the lack of authorization violates business logic.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Go-based continuous deployment product does not check that a user has certain privileges to update or create an app, allowing adversaries to read sensitive repository information",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24730",
+            "reference": "CVE-2022-24730"
+        },
+        {
+            "description": "Web application does not restrict access to admin scripts, allowing authenticated users to reset administrative passwords.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3168",
+            "reference": "CVE-2009-3168"
+        },
+        {
+            "description": "Web application stores database file under the web root with insufficient access control (CWE-219), allowing direct request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3597",
+            "reference": "CVE-2009-3597"
+        },
+        {
+            "description": "Terminal server does not check authorization for guest access.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2282",
+            "reference": "CVE-2009-2282"
+        },
+        {
+            "description": "System monitoring software allows users to bypass authorization by creating custom forms.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5027",
+            "reference": "CVE-2008-5027"
+        },
+        {
+            "description": "Content management system does not check access permissions for private files, allowing others to view those files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3781",
+            "reference": "CVE-2009-3781"
+        },
+        {
+            "description": "Product does not check the ACL of a page accessed using an \"include\" directive, allowing attackers to read unauthorized files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6548",
+            "reference": "CVE-2008-6548"
+        },
+        {
+            "description": "Web application does not restrict access to admin scripts, allowing authenticated users to modify passwords of other users.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2960",
+            "reference": "CVE-2009-2960"
+        },
+        {
+            "description": "Database server does not use appropriate privileges for certain sensitive operations.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3230",
+            "reference": "CVE-2009-3230"
+        },
+        {
+            "description": "Gateway uses default \"Allow\" configuration for its authorization settings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2213",
+            "reference": "CVE-2009-2213"
+        },
+        {
+            "description": "Chain: product does not properly interpret a configuration option for a system group, allowing users to gain privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0034",
+            "reference": "CVE-2009-0034"
+        },
+        {
+            "description": "Chain: SNMP product does not properly parse a configuration option for which hosts are allowed to connect, allowing unauthorized IP addresses to connect.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6123",
+            "reference": "CVE-2008-6123"
+        },
+        {
+            "description": "Chain: reliance on client-side security (CWE-602) allows attackers to bypass authorization using a custom client.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-7109",
+            "reference": "CVE-2008-7109"
+        },
+        {
+            "description": "Chain: product does not properly handle wildcards in an authorization policy list, allowing unintended access.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3424",
+            "reference": "CVE-2008-3424"
+        },
+        {
+            "description": "Chain: Bypass of access restrictions due to improper authorization (CWE-862) of a user results from an improperly initialized (CWE-909) I/O permission bitmap",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1036",
+            "reference": "CVE-2005-1036"
+        },
+        {
+            "description": "ACL-based protection mechanism treats negative access rights as if they are positive, allowing bypass of intended restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4577",
+            "reference": "CVE-2008-4577"
+        },
+        {
+            "description": "Default ACL list for a DNS server does not set certain ACLs, allowing unauthorized DNS queries.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2925",
+            "reference": "CVE-2007-2925"
+        },
+        {
+            "description": "Product relies on the X-Forwarded-For HTTP header for authorization, allowing unintended access by spoofing the header.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6679",
+            "reference": "CVE-2006-6679"
+        },
+        {
+            "description": "OS kernel does not check for a certain privilege before setting ACLs for files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3623",
+            "reference": "CVE-2005-3623"
+        },
+        {
+            "description": "Chain: file-system code performs an incorrect comparison (CWE-697), preventing default ACLs from being properly applied.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2801",
+            "reference": "CVE-2005-2801"
+        },
+        {
+            "description": "Chain: product does not properly check the result of a reverse DNS lookup because of operator precedence (CWE-783), allowing bypass of DNS-based access restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1155",
+            "reference": "CVE-2001-1155"
+        },
+        {
+            "description": "Chain: unchecked return value (CWE-252) of some functions for policy enforcement leads to authorization bypass (CWE-862)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-17533",
+            "reference": "CVE-2020-17533"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that access control checks are performed related to the business logic. These checks may be different than the access control checks that are applied to more generic resources such as files, connections, processes, memory, and database records. For example, a database may restrict access for medical records to a specific database user, but each record might only be intended to be accessible to the patient and the patient's doctor [REF-7].",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use the access control capabilities of your operating system and server environment and define your access control lists accordingly. Use a \"default deny\" policy when defining these ACLs.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-229"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-231"
+        },
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-233"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "285",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

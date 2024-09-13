@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2f6764e2-a513-4d69-86e2-a3a669dc1ee6",
+    "created": "2024-08-13T14:46:48.926367Z",
+    "modified": "2024-08-13T14:46:48.926367Z",
+    "name": "UI Discrepancy for Security Feature",
+    "description": "The user interface does not correctly enable or configure a security feature, but the interface provides feedback that causes the user to believe that the feature is in a secure state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "446"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "UI inconsistency; visited URLs list not cleared when \"Clear History\" option is selected.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1446",
+            "reference": "CVE-1999-1446"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "684",
+            "nature": "ChildOf"
+        }
+    ]
+}

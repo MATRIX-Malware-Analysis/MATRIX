@@ -1,0 +1,235 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--54671dc6-a3c1-45f5-a334-bb475d1d1338",
+    "created": "2024-08-13T14:46:48.797968Z",
+    "modified": "2024-08-13T14:46:48.797968Z",
+    "name": "Missing Origin Validation in WebSockets",
+    "description": "The product uses a WebSocket, but it does not properly verify that the source of data or communication is valid.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1385"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2021-05-28",
+            "submission_name": "Anonymous External Contributor",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "web console for SIEM product does not check Origin header, allowing Cross Site WebSocket Hijacking (CSWH)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-25095",
+            "reference": "CVE-2020-25095"
+        },
+        {
+            "description": "Chain: gaming client attempts to validate the Origin header, but only uses a substring, allowing Cross-Site WebSocket hijacking by forcing requests from an origin whose hostname is a substring of the valid origin.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-6651",
+            "reference": "CVE-2018-6651"
+        },
+        {
+            "description": "WebSocket server does not check the origin of requests, allowing attackers to steal developer's code using a ws://127.0.0.1:3123/ connection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-14730",
+            "reference": "CVE-2018-14730"
+        },
+        {
+            "description": "WebSocket server does not check the origin of requests, allowing attackers to steal developer's code using a ws://127.0.0.1/ connection to a randomized port number.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-14731",
+            "reference": "CVE-2018-14731"
+        },
+        {
+            "description": "WebSocket server does not check the origin of requests, allowing attackers to steal developer's code using a ws://127.0.0.1:8080/ connection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-14732",
+            "reference": "CVE-2018-14732"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Enable CORS-like access restrictions by verifying the 'Origin' header during the WebSocket handshake.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a randomized CSRF token to verify requests.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use TLS to securely communicate using 'wss' (WebSocket Secure) instead of 'ws'.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Require user authentication prior to the WebSocket connection being established. For example, the WS library in Node has a 'verifyClient' function.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Leverage rate limiting to prevent against DoS. Use of the leaky bucket algorithm can help with this.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use a library that provides restriction of the payload size. For example, WS library for Node includes 'maxPayloadoption' that can be set.",
+            "effectiveness": "Defense in Depth",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Treat data/input as untrusted in both directions and apply the same data/input sanitization as XSS, SQLi, etc.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1257"
+        },
+        {
+            "external_reference_id": "REF-1251"
+        },
+        {
+            "external_reference_id": "REF-1252"
+        },
+        {
+            "external_reference_id": "REF-1256"
+        },
+        {
+            "external_reference_id": "REF-1253"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "346",
+            "nature": "ChildOf"
+        }
+    ]
+}

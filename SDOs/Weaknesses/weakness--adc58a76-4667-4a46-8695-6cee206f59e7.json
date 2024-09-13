@@ -1,0 +1,213 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--adc58a76-4667-4a46-8695-6cee206f59e7",
+    "created": "2024-08-13T14:46:49.020799Z",
+    "modified": "2024-08-13T14:46:49.020799Z",
+    "name": "Incorrect Authorization",
+    "description": "The product performs an authorization check when an actor attempts to access a resource or perform an action, but it does not correctly perform the check. This allows attackers to bypass intended access restrictions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "863"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Files or Directories",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-05-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "Limited",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Automated dynamic analysis may not be able to find interfaces that are protected by authorization checks, even if those checks contain weaknesses.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: A microservice integration and management platform compares the hostname in the HTTP Host header in a case-sensitive way (CWE-178, CWE-1289), allowing bypass of the authorization policy (CWE-863) using a hostname with mixed case or other variations.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-39155",
+            "reference": "CVE-2021-39155"
+        },
+        {
+            "description": "Chain: sscanf() call is used to check if a username and group exists, but the return value of sscanf() call is not checked (CWE-252), causing an uninitialized variable to be checked (CWE-457), returning success to allow authorization bypass for executing a privileged (CWE-863).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-15900",
+            "reference": "CVE-2019-15900"
+        },
+        {
+            "description": "Gateway uses default \"Allow\" configuration for its authorization settings.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-2213",
+            "reference": "CVE-2009-2213"
+        },
+        {
+            "description": "Chain: product does not properly interpret a configuration option for a system group, allowing users to gain privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0034",
+            "reference": "CVE-2009-0034"
+        },
+        {
+            "description": "Chain: SNMP product does not properly parse a configuration option for which hosts are allowed to connect, allowing unauthorized IP addresses to connect.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6123",
+            "reference": "CVE-2008-6123"
+        },
+        {
+            "description": "Chain: reliance on client-side security (CWE-602) allows attackers to bypass authorization using a custom client.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-7109",
+            "reference": "CVE-2008-7109"
+        },
+        {
+            "description": "Chain: product does not properly handle wildcards in an authorization policy list, allowing unintended access.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3424",
+            "reference": "CVE-2008-3424"
+        },
+        {
+            "description": "ACL-based protection mechanism treats negative access rights as if they are positive, allowing bypass of intended restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4577",
+            "reference": "CVE-2008-4577"
+        },
+        {
+            "description": "Product relies on the X-Forwarded-For HTTP header for authorization, allowing unintended access by spoofing the header.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6679",
+            "reference": "CVE-2006-6679"
+        },
+        {
+            "description": "Chain: file-system code performs an incorrect comparison (CWE-697), preventing default ACLs from being properly applied.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2801",
+            "reference": "CVE-2005-2801"
+        },
+        {
+            "description": "Chain: product does not properly check the result of a reverse DNS lookup because of operator precedence (CWE-783), allowing bypass of DNS-based access restrictions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1155",
+            "reference": "CVE-2001-1155"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Ensure that access control checks are performed related to the business logic. These checks may be different than the access control checks that are applied to more generic resources such as files, connections, processes, memory, and database records. For example, a database may restrict access for medical records to a specific database user, but each record might only be intended to be accessible to the patient and the patient's doctor [REF-7].",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use the access control capabilities of your operating system and server environment and define your access control lists accordingly. Use a \"default deny\" policy when defining these ACLs.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-229"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-231"
+        },
+        {
+            "external_reference_id": "REF-233"
+        },
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "285",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--773f5ff1-c74e-4fde-98f8-32b68e02697a",
+    "created": "2024-08-13T14:46:48.876341Z",
+    "modified": "2024-08-13T14:46:48.876341Z",
+    "name": "Not Using Password Aging",
+    "description": "The product does not have a mechanism in place for managing password aging.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "262"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "As part of a product's design, require users to change their passwords regularly and avoid reusing previous passwords.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Developers might disable clipboard paste operations into password fields as a way to discourage users from pasting a password into a clipboard. However, this might encourage users to choose less-secure passwords that are easier to type, and it can reduce the usability of password managers [REF-1294].",
+            "effectiveness": "Discouraged Common Practice",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1305"
+        },
+        {
+            "external_reference_id": "REF-1289"
+        },
+        {
+            "external_reference_id": "REF-1290"
+        },
+        {
+            "external_reference_id": "REF-1291"
+        },
+        {
+            "external_reference_id": "REF-1292"
+        },
+        {
+            "external_reference_id": "REF-1293"
+        },
+        {
+            "external_reference_id": "REF-1294"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "309",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "324",
+            "nature": "PeerOf"
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9cc5fbf3-c476-4970-84ca-96690eed87a0",
+    "created": "2024-08-13T14:46:49.018476Z",
+    "modified": "2024-08-13T14:46:49.018476Z",
+    "name": "Numeric Range Comparison Without Minimum Check",
+    "description": "The product checks a value to ensure that it is less than or equal to a maximum, but it does not also verify that the value is greater than or equal to the minimum.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "839"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-03-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: integer overflow (CWE-190) causes a negative signed value, which later bypasses a maximum-only check (CWE-839), leading to heap-based buffer overflow (CWE-122).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1866",
+            "reference": "CVE-2010-1866"
+        },
+        {
+            "description": "Chain: 16-bit counter can be interpreted as a negative value, compared to a 32-bit maximum value, leading to buffer under-write.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1099",
+            "reference": "CVE-2009-1099"
+        },
+        {
+            "description": "Chain: kernel's lack of a check for a negative value leads to memory corruption.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0521",
+            "reference": "CVE-2011-0521"
+        },
+        {
+            "description": "Chain: parser uses atoi() but does not check for a negative value, which can happen on some platforms, leading to buffer under-write.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3704",
+            "reference": "CVE-2010-3704"
+        },
+        {
+            "description": "Chain: Negative value stored in an int bypasses a size check and causes allocation of large amounts of memory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-2530",
+            "reference": "CVE-2010-2530"
+        },
+        {
+            "description": "Chain: negative offset value to IOCTL bypasses check for maximum index, then used as an array index for buffer under-read.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-3080",
+            "reference": "CVE-2009-3080"
+        },
+        {
+            "description": "chain: file transfer client performs signed comparison, leading to integer overflow and heap-based buffer overflow.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-6393",
+            "reference": "CVE-2008-6393"
+        },
+        {
+            "description": "chain: negative ID in media player bypasses check for maximum index, then used as an array index for buffer under-read.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4558",
+            "reference": "CVE-2008-4558"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If the number to be used is always expected to be positive, change the variable type from signed to unsigned or size_t.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "If the number to be used could have a negative value based on the specification (thus requiring a signed value), but the number should only be positive to preserve code correctness, then include a check to ensure that the value is positive.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1023",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "195",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "682",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "124",
+            "nature": "CanPrecede"
+        }
+    ]
+}

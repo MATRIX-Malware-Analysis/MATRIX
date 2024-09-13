@@ -1,0 +1,146 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8ba83b7b-7f80-4dd0-aa82-9cf5208e892d",
+    "created": "2024-08-13T14:46:48.87857Z",
+    "modified": "2024-08-13T14:46:48.87857Z",
+    "name": "Privilege Dropping / Lowering Errors",
+    "description": "The product does not drop privileges before passing control of a resource to an actor that does not have those privileges.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "271"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Program does not drop privileges after acquiring the raw socket.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1213",
+            "reference": "CVE-2000-1213"
+        },
+        {
+            "description": "Setuid program does not drop privileges after a parsing error occurs, then calls another program to handle the error.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0559",
+            "reference": "CVE-2001-0559"
+        },
+        {
+            "description": "Does not drop privileges in related groups when lowering privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0787",
+            "reference": "CVE-2001-0787"
+        },
+        {
+            "description": "Does not drop privileges in related groups when lowering privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0080",
+            "reference": "CVE-2002-0080"
+        },
+        {
+            "description": "Does not drop privileges before determining access to certain files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1029",
+            "reference": "CVE-2001-1029"
+        },
+        {
+            "description": "Finger daemon does not drop privileges when executing programs on behalf of the user being fingered.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0813",
+            "reference": "CVE-1999-0813"
+        },
+        {
+            "description": "FTP server does not drop privileges if a connection is aborted during file transfer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1326",
+            "reference": "CVE-1999-1326"
+        },
+        {
+            "description": "Program only uses seteuid to drop privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0172",
+            "reference": "CVE-2000-0172"
+        },
+        {
+            "description": "Windows program running as SYSTEM does not drop privileges before executing other programs (many others like this, especially involving the Help facility).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2504",
+            "reference": "CVE-2004-2504"
+        },
+        {
+            "description": "Utility Manager launches winhlp32.exe while running with raised privileges, which allows local users to gain system privileges.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0213",
+            "reference": "CVE-2004-0213"
+        },
+        {
+            "description": "Setuid program does not drop privileges before executing program specified in an environment variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0806",
+            "reference": "CVE-2004-0806"
+        },
+        {
+            "description": "Setuid program does not drop privileges before processing file specified on command line.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0828",
+            "reference": "CVE-2004-0828"
+        },
+        {
+            "description": "Service on Windows does not drop privileges before using \"view file\" option, allowing code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2070",
+            "reference": "CVE-2004-2070"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider following the principle of separation of privilege. Require multiple conditions to be met before permitting access to a system resource.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "269",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c105dbaf-1b61-4e18-b2c7-29368984481c",
+    "created": "2024-08-13T14:46:48.821574Z",
+    "modified": "2024-08-13T14:46:48.821574Z",
+    "name": "Observable Timing Discrepancy",
+    "description": "Two separate operations in a product require different amounts of time to complete, in a way that is observable to an actor and reveals security-relevant information about the state of the product, such as whether a particular operation was successful or not.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "208"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Java-oriented framework compares HMAC signatures  using  String.equals() instead of a constant-time algorithm, causing timing discrepancies",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10071",
+            "reference": "CVE-2019-10071"
+        },
+        {
+            "description": "Smartphone OS uses comparison functions that are not in constant time, allowing side channels",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-10482",
+            "reference": "CVE-2019-10482"
+        },
+        {
+            "description": "Password-checking function in router terminates validation of a password entry when it encounters the first incorrect character, which allows remote attackers to obtain passwords via a brute-force attack that relies on timing differences in responses to incorrect password guesses, aka a timing side-channel attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2014-0984",
+            "reference": "CVE-2014-0984"
+        },
+        {
+            "description": "SSL implementation does not perform a MAC computation if an incorrect block cipher padding is used, which causes an information leak (timing discrepancy) that may make it easier to launch cryptographic attacks that rely on distinguishing between padding and MAC verification errors, possibly leading to extraction of the original plaintext, aka the \"Vaudenay timing attack.\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0078",
+            "reference": "CVE-2003-0078"
+        },
+        {
+            "description": "Virtual machine allows malicious web site operators to determine the existence of files on the client by measuring delays in the execution of the getSystemResource method.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1117",
+            "reference": "CVE-2000-1117"
+        },
+        {
+            "description": "Product uses a shorter timeout for a non-existent user than a valid user, which makes it easier for remote attackers to guess usernames and conduct brute force password guessing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0637",
+            "reference": "CVE-2003-0637"
+        },
+        {
+            "description": "Product immediately sends an error message when a user does not exist, which allows remote attackers to determine valid usernames via a timing attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0190",
+            "reference": "CVE-2003-0190"
+        },
+        {
+            "description": "FTP server responds in a different amount of time when a given username exists, which allows remote attackers to identify valid usernames by timing the server response.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1602",
+            "reference": "CVE-2004-1602"
+        },
+        {
+            "description": "Browser allows remote attackers to determine the existence of arbitrary files by setting the src property to the target filename and using Javascript to determine if the web page immediately stops loading, which indicates whether the file exists or not.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-0918",
+            "reference": "CVE-2005-0918"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "203",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "385",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "327",
+            "nature": "CanPrecede"
+        }
+    ]
+}

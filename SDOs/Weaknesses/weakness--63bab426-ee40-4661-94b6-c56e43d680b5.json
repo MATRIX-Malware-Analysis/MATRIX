@@ -1,0 +1,193 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--63bab426-ee40-4661-94b6-c56e43d680b5",
+    "created": "2024-08-13T14:46:48.795697Z",
+    "modified": "2024-08-13T14:46:48.795697Z",
+    "name": "Use of Externally-Controlled Format String",
+    "description": "The product uses a function that accepts a format string as an argument, but the format string originates from an external source.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "134"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This weakness can often be detected using automated static analysis tools. Many modern tools use data flow analysis or constraint-based techniques to minimize the number of false positives.",
+            "effectiveness": null,
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "Since format strings often occur in rarely-occurring erroneous conditions (e.g. for error message logging), they can be difficult to detect using black box methods. It is highly likely that many latent issues exist in executables that do not have associated source code (or equivalent source.",
+            "effectiveness": "Limited",
+            "method": "Black Box"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Manual Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Automated Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "format string in Perl program",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1825",
+            "reference": "CVE-2002-1825"
+        },
+        {
+            "description": "format string in bad call to syslog function",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0717",
+            "reference": "CVE-2001-0717"
+        },
+        {
+            "description": "format string in bad call to syslog function",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0573",
+            "reference": "CVE-2002-0573"
+        },
+        {
+            "description": "format strings in NNTP server responses",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1788",
+            "reference": "CVE-2002-1788"
+        },
+        {
+            "description": "Format string vulnerability exploited by triggering errors or warnings, as demonstrated via format string specifiers in a .bmp filename.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2480",
+            "reference": "CVE-2006-2480"
+        },
+        {
+            "description": "Chain: untrusted search path enabling resultant format string by loading malicious internationalization messages",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-2027",
+            "reference": "CVE-2007-2027"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Choose a language that is not subject to this flaw.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Ensure that all format string functions are passed a static string which cannot be controlled by the user, and that the proper number of arguments are always sent to that function as well. If at all possible, use functions that do not support the %n operator in format strings. [REF-116] [REF-117]",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run compilers and linkers with high warning levels, since they may detect incorrect usage.",
+            "effectiveness": null,
+            "phase": "Build and Compilation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-116"
+        },
+        {
+            "external_reference_id": "REF-117"
+        },
+        {
+            "external_reference_id": "REF-118"
+        },
+        {
+            "external_reference_id": "REF-7"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-62"
+        },
+        {
+            "external_reference_id": "REF-962"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "123",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

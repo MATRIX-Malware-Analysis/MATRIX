@@ -1,0 +1,68 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ce187244-bcfe-4347-b5ff-ff704b865974",
+    "created": "2024-08-13T14:46:48.796872Z",
+    "modified": "2024-08-13T14:46:48.796872Z",
+    "name": "Improper Handling of Hardware Behavior in Exceptionally Cold Environments",
+    "description": "A hardware device, or the firmware running on it, is\n                missing or has incorrect protection features to maintain\n                goals of security primitives when the device is cooled below\n                standard operating temperatures.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1351"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Authentication"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Authentication"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-10-23",
+            "submission_name": "Paul A. Wortman",
+            "submission_organization": "Wells Fargo"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The system should account for security primitive behavior when cooled outside standard temperatures.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1181"
+        },
+        {
+            "external_reference_id": "REF-1182"
+        },
+        {
+            "external_reference_id": "REF-1183"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1384",
+            "nature": "ChildOf"
+        }
+    ]
+}

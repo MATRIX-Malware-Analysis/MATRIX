@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cd85d997-bc77-4b6b-84b1-a447b0e1f405",
+    "created": "2024-08-13T14:46:48.780829Z",
+    "modified": "2024-08-13T14:46:48.780829Z",
+    "name": "Improper Validation of Consistency within Input",
+    "description": "The product receives a complex input with multiple elements or fields that must be consistent with each other, but it does not validate or incorrectly validates that the input is actually consistent.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1288"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "product does not validate that the start block appears before the end block",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-16733",
+            "reference": "CVE-2018-16733"
+        },
+        {
+            "description": "size field that is inconsistent with packet size leads to buffer over-read",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3790",
+            "reference": "CVE-2006-3790"
+        },
+        {
+            "description": "system crash with offset value that is inconsistent with packet size",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4114",
+            "reference": "CVE-2008-4114"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        }
+    ]
+}

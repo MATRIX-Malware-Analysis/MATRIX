@@ -1,0 +1,82 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--28d96781-f572-4a20-a921-2e654acd35e0",
+    "created": "2024-08-13T14:46:48.910114Z",
+    "modified": "2024-08-13T14:46:48.910114Z",
+    "name": "Creation of Temporary File in Directory with Insecure Permissions",
+    "description": "The product creates a temporary file in a directory whose permissions allow unintended actors to determine the file's existence or otherwise access that file.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "379"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CLASP",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Low",
+    "x_mitre_observed_examples": [
+        {
+            "description": "A hotkey daemon written in Rust creates a domain socket file underneath /tmp, which is accessible by any user.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-27818",
+            "reference": "CVE-2022-27818"
+        },
+        {
+            "description": "A Java-based application for a rapid-development framework uses File.createTempFile() to create a random temporary file with insecure default permissions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-21290",
+            "reference": "CVE-2021-21290"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Many contemporary languages have functions which properly handle this condition. Older C temp file functions are especially susceptible.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Try to store sensitive tempfiles in a directory which is not world readable -- i.e., per-user directories.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Avoid using vulnerable temp file functions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-18"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "377",
+            "nature": "ChildOf"
+        }
+    ]
+}

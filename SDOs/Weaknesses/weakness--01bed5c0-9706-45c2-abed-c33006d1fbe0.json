@@ -1,0 +1,145 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--01bed5c0-9706-45c2-abed-c33006d1fbe0",
+    "created": "2024-08-13T14:46:49.001032Z",
+    "modified": "2024-08-13T14:46:49.001032Z",
+    "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+    "description": "The product constructs all or part of a command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended command when it is sent to a downstream component.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "77"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "7 Pernicious Kingdoms",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "injection of sed script syntax (\"sed injection\")",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-1509",
+            "reference": "CVE-2022-1509"
+        },
+        {
+            "description": "API service using a large generative AI model allows direct prompt injection to leak hard-coded system prompts or execute other prompts.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-5184",
+            "reference": "CVE-2024-5184"
+        },
+        {
+            "description": "anti-spam product allows injection of SNMP commands into confiuration file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-11698",
+            "reference": "CVE-2020-11698"
+        },
+        {
+            "description": "image program allows injection of commands in \"Magick Vector Graphics (MVG)\" language.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-12921",
+            "reference": "CVE-2019-12921"
+        },
+        {
+            "description": "Python-based dependency management tool avoids OS command injection when generating Git commands but allows injection of optional arguments with input beginning with a dash (CWE-88), potentially allowing for code execution.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-36069",
+            "reference": "CVE-2022-36069"
+        },
+        {
+            "description": "Canonical example of OS command injection. CGI program does not neutralize \"|\" metacharacter when invoking a phonebook program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0067",
+            "reference": "CVE-1999-0067"
+        },
+        {
+            "description": "Chain: improper input validation (CWE-20) in username parameter, leading to OS command injection (CWE-78), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-9054",
+            "reference": "CVE-2020-9054"
+        },
+        {
+            "description": "injection of sed script syntax (\"sed injection\")",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-41282",
+            "reference": "CVE-2021-41282"
+        },
+        {
+            "description": "injection of sed script syntax (\"sed injection\")",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-13398",
+            "reference": "CVE-2019-13398"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "If at all possible, use library calls rather than external processes to recreate the desired functionality.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "If possible, ensure that all external commands called from the program are statically created.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Run time: Run time policy enforcement may be used in an allowlist fashion to prevent use of any non-sanctioned commands.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Assign permissions that prevent the user from accessing/opening privileged files.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-6"
+        },
+        {
+            "external_reference_id": "REF-140"
+        },
+        {
+            "external_reference_id": "REF-44"
+        },
+        {
+            "external_reference_id": "REF-1287"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        }
+    ]
+}

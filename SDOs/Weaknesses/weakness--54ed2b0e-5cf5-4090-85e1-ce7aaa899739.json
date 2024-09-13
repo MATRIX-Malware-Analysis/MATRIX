@@ -1,0 +1,66 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--54ed2b0e-5cf5-4090-85e1-ce7aaa899739",
+    "created": "2024-08-13T14:46:49.011049Z",
+    "modified": "2024-08-13T14:46:49.011049Z",
+    "name": "Guessable CAPTCHA",
+    "description": "The product uses a CAPTCHA challenge, but the challenge can be guessed or automatically recognized by a non-human actor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "804"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-01-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: appointment booking app uses a weak hash (CWE-328) for generating a CAPTCHA, making it guessable  (CWE-804)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-4036",
+            "reference": "CVE-2022-4036"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-731"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "863",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1390",
+            "nature": "ChildOf"
+        }
+    ]
+}

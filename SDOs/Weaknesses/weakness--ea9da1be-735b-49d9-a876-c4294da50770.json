@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ea9da1be-735b-49d9-a876-c4294da50770",
+    "created": "2024-08-13T14:46:48.825346Z",
+    "modified": "2024-08-13T14:46:48.825346Z",
+    "name": "Information Loss or Omission",
+    "description": "The product does not record, or improperly records, security-relevant information that leads to an incorrect decision or hampers later analysis.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "221"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Web browser's filename selection dialog only shows the beginning portion of long filenames, which can trick users into launching executables with dangerous extensions.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2227",
+            "reference": "CVE-2004-2227"
+        },
+        {
+            "description": "application server does not log complete URI of a long request (truncation).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0412",
+            "reference": "CVE-2003-0412"
+        },
+        {
+            "description": "Login attempts are not recorded if the user disconnects before the maximum number of tries.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1029",
+            "reference": "CVE-1999-1029"
+        },
+        {
+            "description": "Attacker performs malicious actions on a hard link to a file, obscuring the real target file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0725",
+            "reference": "CVE-2002-0725"
+        },
+        {
+            "description": "Product does not warn user when document contains certain dangerous functions or macros.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1055",
+            "reference": "CVE-1999-1055"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

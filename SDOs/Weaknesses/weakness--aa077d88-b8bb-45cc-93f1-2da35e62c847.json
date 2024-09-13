@@ -1,0 +1,43 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--aa077d88-b8bb-45cc-93f1-2da35e62c847",
+    "created": "2024-08-13T14:46:48.742506Z",
+    "modified": "2024-08-13T14:46:48.742506Z",
+    "name": "Class with Virtual Method without a Virtual Destructor",
+    "description": "A class contains a virtual method, but the method does not have an associated virtual destructor.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1087"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Reliability",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-961"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1076",
+            "nature": "ChildOf"
+        }
+    ]
+}

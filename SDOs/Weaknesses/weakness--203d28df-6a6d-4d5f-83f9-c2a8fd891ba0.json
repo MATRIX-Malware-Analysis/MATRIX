@@ -1,0 +1,97 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--203d28df-6a6d-4d5f-83f9-c2a8fd891ba0",
+    "created": "2024-08-13T14:46:48.982003Z",
+    "modified": "2024-08-13T14:46:48.982003Z",
+    "name": "Improper Synchronization",
+    "description": "The product utilizes multiple threads or processes to allow temporary access to a shared resource that can only be exclusive to one process at a time, but it does not properly synchronize these actions, which might cause simultaneous accesses of this resource by multiple threads or processes.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "662"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Other"
+        },
+        {
+            "impact": "Alter Execution Logic",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: improper locking (CWE-667) leads to race condition (CWE-362), as exploited in the wild per CISA KEV.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-1782",
+            "reference": "CVE-2021-1782"
+        },
+        {
+            "description": "Attacker provides invalid address to a memory-reading function, causing a mutex to be unlocked twice",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-0935",
+            "reference": "CVE-2009-0935"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use industry standard APIs to synchronize your code.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "691",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "362",
+            "nature": "CanPrecede"
+        }
+    ]
+}

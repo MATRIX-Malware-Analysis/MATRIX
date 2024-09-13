@@ -1,0 +1,151 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--80f4bb23-c101-4e3a-85a9-5fc67abb2dcf",
+    "created": "2024-08-13T14:46:48.926072Z",
+    "modified": "2024-08-13T14:46:48.926072Z",
+    "name": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')",
+    "description": "The product acts as an intermediary HTTP agent\n         (such as a proxy or firewall) in the data flow between two\n         entities such as a client and server, but it does not\n         interpret malformed HTTP requests or responses in ways that\n         are consistent with how the messages will be processed by\n         those entities that are at the ultimate destination.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "444"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Non-Repudiation"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "SSL/TLS-capable proxy allows HTTP smuggling when used in tandem with HTTP/1.0 services, due to inconsistent interpretation and input sanitization of HTTP messages within the body of another message",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24766",
+            "reference": "CVE-2022-24766"
+        },
+        {
+            "description": "Chain: caching proxy server has improper input validation (CWE-20) of headers, allowing HTTP response smuggling (CWE-444) using an \"LF line ending\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-37147",
+            "reference": "CVE-2021-37147"
+        },
+        {
+            "description": "Node.js platform allows request smuggling via two Transfer-Encoding headers",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-8287",
+            "reference": "CVE-2020-8287"
+        },
+        {
+            "description": "Web servers allow request smuggling via inconsistent HTTP headers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-6276",
+            "reference": "CVE-2006-6276"
+        },
+        {
+            "description": "HTTP server allows request smuggling with both a \"Transfer-Encoding: chunked\" header and a Content-Length header",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2088",
+            "reference": "CVE-2005-2088"
+        },
+        {
+            "description": "HTTP server allows request smuggling with both a \"Transfer-Encoding: chunked\" header and a Content-Length header",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2089",
+            "reference": "CVE-2005-2089"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Use a web server that employs a strict HTTP parsing procedure, such as Apache [REF-433].",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use only SSL communication.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Terminate the client session after each request.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Turn all pages to non-cacheable.",
+            "effectiveness": null,
+            "phase": "System Configuration"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-433"
+        },
+        {
+            "external_reference_id": "REF-1273"
+        },
+        {
+            "external_reference_id": "REF-1274"
+        },
+        {
+            "external_reference_id": "REF-1275"
+        },
+        {
+            "external_reference_id": "REF-1276"
+        },
+        {
+            "external_reference_id": "REF-1277"
+        },
+        {
+            "external_reference_id": "REF-1278"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "436",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "436",
+            "nature": "ChildOf"
+        }
+    ]
+}

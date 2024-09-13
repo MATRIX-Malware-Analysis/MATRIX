@@ -1,0 +1,65 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--9ed4b4ce-375c-4994-90b9-36ba8fc0ac7e",
+    "created": "2024-08-13T14:46:48.967125Z",
+    "modified": "2024-08-13T14:46:48.967125Z",
+    "name": "Uncaught Exception in Servlet ",
+    "description": "The Servlet does not catch all exceptions, which may reveal sensitive debugging information.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "600"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-12-15",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implement Exception blocks to handle all types of Exceptions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "248",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "209",
+            "nature": "CanPrecede"
+        },
+        {
+            "cwe_id": "390",
+            "nature": "PeerOf"
+        }
+    ]
+}

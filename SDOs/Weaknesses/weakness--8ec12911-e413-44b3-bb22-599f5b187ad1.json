@@ -1,0 +1,123 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8ec12911-e413-44b3-bb22-599f5b187ad1",
+    "created": "2024-08-13T14:46:48.915742Z",
+    "modified": "2024-08-13T14:46:48.915742Z",
+    "name": "Improper Resource Shutdown or Release",
+    "description": "The product does not release or incorrectly releases a resource before it is made available for re-use.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "404"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Other"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "Moderate",
+            "method": "Automated Dynamic Analysis"
+        },
+        {
+            "description": "Identify error conditions that are not likely to occur during normal usage and trigger them. For example, run the product under low memory conditions, run with insufficient privileges or permissions, interrupt a transaction before it is completed, or disable connectivity to basic network services such as DNS. Monitor the software for any unexpected behavior. If you trigger an unhandled exception or similar error that was discovered and handled by the application's environment, it may still indicate unexpected conditions that were not handled by the application itself.",
+            "effectiveness": null,
+            "method": "Manual Dynamic Analysis"
+        },
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Medium",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Does not shut down named pipe connections if malformed data is sent.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1127",
+            "reference": "CVE-1999-1127"
+        },
+        {
+            "description": "Sockets not properly closed when attacker repeatedly connects and disconnects from server.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0830",
+            "reference": "CVE-2001-0830"
+        },
+        {
+            "description": "Chain: Return values of file/socket operations are not checked (CWE-252), allowing resultant consumption of file descriptors (CWE-772).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1372",
+            "reference": "CVE-2002-1372"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "It is good practice to be responsible for freeing all resources you allocate and to be consistent with how and where you free memory in a function. If you allocate memory that you intend to free upon completion of the function, you must be sure to free the memory at all exit points for that function including error conditions.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Memory should be allocated/freed using matching functions such as malloc/free, new/delete, and new[]/delete[].",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "When releasing a complex object or structure, ensure that you properly dispose of all of its member components, not just the object itself.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "405",
+            "nature": "PeerOf"
+        },
+        {
+            "cwe_id": "619",
+            "nature": "CanPrecede"
+        }
+    ]
+}

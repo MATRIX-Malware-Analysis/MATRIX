@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f23db407-b6a5-4bae-9e5b-190e14668d43",
+    "created": "2024-08-13T14:46:48.990419Z",
+    "modified": "2024-08-13T14:46:48.990419Z",
+    "name": "Use of Multiple Resources with Duplicate Identifier",
+    "description": "The product uses multiple resources that can have the same identifier, in a context in which unique identifiers are required.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "694"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Quality Degradation",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "chain: mobile OS verifies cryptographic signature of file in an archive, but then installs a different file with the same name that is also listed in the archive.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2013-4787",
+            "reference": "CVE-2013-4787"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Where possible, use unique identifiers. If non-unique identifiers are detected, then do not operate any resource with a non-unique identifier and report the error appropriately.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "99",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "573",
+            "nature": "ChildOf"
+        }
+    ]
+}

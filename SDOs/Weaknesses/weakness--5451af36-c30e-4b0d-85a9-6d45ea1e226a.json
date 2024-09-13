@@ -1,0 +1,101 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5451af36-c30e-4b0d-85a9-6d45ea1e226a",
+    "created": "2024-08-13T14:46:48.793397Z",
+    "modified": "2024-08-13T14:46:48.793397Z",
+    "name": "Improper Isolation of Shared Resources in Network On Chip (NoC)",
+    "description": "The Network On Chip (NoC) does not isolate or incorrectly isolates its on-chip-fabric and internal resources such that they are shared between trusted and untrusted agents, creating timing channels.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1331"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Other",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Other)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-05-23",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati K. Manna",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Providing marker flags to send through the interfaces coupled with examination of which users are able to read or manipulate the flags will help verify that the proper isolation has been achieved and is effective.",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Improper isolation of shared resource in a network-on-chip leads to denial of service",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-33096",
+            "reference": "CVE-2021-33096"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Implement priority-based arbitration inside the NoC and have dedicated buffers or virtual channels for routing secret data from trusted agents.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1155"
+        },
+        {
+            "external_reference_id": "REF-1241"
+        },
+        {
+            "external_reference_id": "REF-1242"
+        },
+        {
+            "external_reference_id": "REF-1245"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "653",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "1189",
+            "nature": "PeerOf"
+        }
+    ]
+}

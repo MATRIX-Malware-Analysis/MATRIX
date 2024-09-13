@@ -1,0 +1,60 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--dd8fce15-26b2-47cb-8442-2f88502cd235",
+    "created": "2024-08-13T14:46:48.827953Z",
+    "modified": "2024-08-13T14:46:48.827953Z",
+    "name": "Improper Handling of Missing Values",
+    "description": "The product does not handle or incorrectly handles when a parameter, field, or argument name is specified, but the associated value is missing, i.e. it is empty, blank, or null.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "230"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Blank Host header triggers resultant infoleak.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0422",
+            "reference": "CVE-2002-0422"
+        },
+        {
+            "description": "Blank \"charset\" attribute in MIME header triggers crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1006",
+            "reference": "CVE-2000-1006"
+        },
+        {
+            "description": "Blank parameter causes external error infoleak.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-1504",
+            "reference": "CVE-2004-1504"
+        },
+        {
+            "description": "Blank parameter causes external error infoleak.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2053",
+            "reference": "CVE-2005-2053"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "229",
+            "nature": "ChildOf"
+        }
+    ]
+}

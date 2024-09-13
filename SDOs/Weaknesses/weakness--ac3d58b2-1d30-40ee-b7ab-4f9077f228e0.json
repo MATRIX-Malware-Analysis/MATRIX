@@ -1,0 +1,58 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--ac3d58b2-1d30-40ee-b7ab-4f9077f228e0",
+    "created": "2024-08-13T14:46:48.768078Z",
+    "modified": "2024-08-13T14:46:48.768078Z",
+    "name": "Application-Level Admin Tool with Inconsistent View of Underlying Operating System",
+    "description": "The product provides an application for administrators to manage parts of the underlying operating system, but the application does not accurately identify all of the relevant entities or resources that exist in the OS; that is, the application's model of the OS's state is inconsistent with the OS's actual state.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1249"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Accountability"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2019-06-06",
+            "submission_name": "Tony Martin",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                        ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1070"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1250",
+            "nature": "ChildOf"
+        }
+    ]
+}

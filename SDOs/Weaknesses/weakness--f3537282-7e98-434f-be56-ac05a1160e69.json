@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f3537282-7e98-434f-be56-ac05a1160e69",
+    "created": "2024-08-13T14:46:48.996901Z",
+    "modified": "2024-08-13T14:46:48.996901Z",
+    "name": "Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')",
+    "description": "A protocol or its implementation supports interaction between multiple actors and allows those actors to negotiate which algorithm should be used as a protection mechanism such as encryption or authentication, but it does not select the strongest algorithm that is available to both parties.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "757"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2009-03-03",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Attacker can select an older version of the software to exploit its vulnerabilities.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4302",
+            "reference": "CVE-2006-4302"
+        },
+        {
+            "description": "Improper prioritization of encryption ciphers during negotiation leads to use of a weaker cipher.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4407",
+            "reference": "CVE-2006-4407"
+        },
+        {
+            "description": "chain: SSL/TLS implementation disables a verification step (CWE-325) that enables a downgrade attack to a weaker protocol.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2969",
+            "reference": "CVE-2005-2969"
+        },
+        {
+            "description": "Telnet protocol implementation allows downgrade to weaker authentication and encryption using an Adversary-in-the-Middle AITM attack.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1444",
+            "reference": "CVE-2001-1444"
+        },
+        {
+            "description": "SSH server implementation allows override of configuration setting to use weaker authentication schemes. This may be a composite with CWE-642.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1646",
+            "reference": "CVE-2002-1646"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

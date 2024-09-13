@@ -1,0 +1,193 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e07f6dd3-8a40-43ac-a8fe-945d756f9685",
+    "created": "2024-08-13T14:46:48.767455Z",
+    "modified": "2024-08-13T14:46:48.767455Z",
+    "name": "Improper Protection Against Voltage and Clock Glitches",
+    "description": "The device does not contain or contains incorrectly implemented circuitry or sensors to detect and mitigate voltage and clock glitches and protect sensitive information or software contained on the device.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1247"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-02-12",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n\t\t\t\n\t\t\t",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n\t\t    During the implementation phase where actual hardware is available, specialized hardware tools and apparatus such as ChipWhisperer may be used to check if the platform is indeed susceptible to voltage and clock glitching attacks.\n\t\t  ",
+            "effectiveness": null,
+            "method": "Dynamic Analysis with Manual Results Interpretation"
+        },
+        {
+            "description": "\n\t\t    Review if the protections against glitching merely transfer the attack target. For example, suppose a critical authentication routine that an attacker would want to bypass is given the protection of modifying certain artifacts from within that specific routine (so that if the routine is bypassed, one can examine the artifacts and figure out that an attack must have happened). However, if the attacker has the ability to bypass the critical authentication routine, they might also have the ability to bypass the other protection routine that checks the artifacts. Basically, depending on these kind of protections is akin to resorting to \"Security by Obscurity\".\n\t\t  ",
+            "effectiveness": null,
+            "method": "Architecture or Design Review"
+        },
+        {
+            "description": "\n\t\t    Many SoCs come equipped with a built-in Dynamic Voltage and Frequency Scaling (DVFS) that can control the voltage and clocks via software alone. However, there have been demonstrated attacks (like Plundervolt and CLKSCREW) that target this DVFS [REF-1081] [REF-1082]. During the design and implementation phases, one needs to check if the interface to this power management feature is available from unprivileged SW (CWE-1256), which would make the attack very easy.\n\t\t  ",
+            "effectiveness": null,
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Lack of anti-glitch protections allows an attacker to launch a physical attack to bypass the secure boot and read protected eFuses.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-17391",
+            "reference": "CVE-2019-17391"
+        },
+        {
+            "description": "IP communication firmware allows access to a boot shell via certain impulses",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-33478",
+            "reference": "CVE-2021-33478"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n            ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1061"
+        },
+        {
+            "external_reference_id": "REF-1062"
+        },
+        {
+            "external_reference_id": "REF-1063"
+        },
+        {
+            "external_reference_id": "REF-1064"
+        },
+        {
+            "external_reference_id": "REF-1065"
+        },
+        {
+            "external_reference_id": "REF-1066"
+        },
+        {
+            "external_reference_id": "REF-1217"
+        },
+        {
+            "external_reference_id": "REF-1217"
+        },
+        {
+            "external_reference_id": "REF-1081"
+        },
+        {
+            "external_reference_id": "REF-1082"
+        },
+        {
+            "external_reference_id": "REF-1285"
+        },
+        {
+            "external_reference_id": "REF-1286"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1384",
+            "nature": "ChildOf"
+        }
+    ]
+}

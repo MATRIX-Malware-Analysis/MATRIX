@@ -1,0 +1,45 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b81cac54-8250-4e3f-9ba4-d32b1bd34640",
+    "created": "2024-08-13T14:46:48.948424Z",
+    "modified": "2024-08-13T14:46:48.948424Z",
+    "name": "Inclusion of Sensitive Information in Test Code",
+    "description": "Accessible test applications can pose a variety of security risks. Since developers or administrators rarely consider that someone besides themselves would even know about the existence of these applications, it is common for them to contain sensitive information or functions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "531"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Remove test code before deploying the application into production.",
+            "effectiveness": null,
+            "phase": "Distribution"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "540",
+            "nature": "ChildOf"
+        }
+    ]
+}

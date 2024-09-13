@@ -1,0 +1,110 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c7c2edb4-d599-4465-8909-32c881be54cc",
+    "created": "2024-08-13T14:46:49.015101Z",
+    "modified": "2024-08-13T14:46:49.015101Z",
+    "name": "Signal Handler with Functionality that is not Asynchronous-Safe",
+    "description": "The product defines a signal handler that contains code sequences that are not asynchronous-safe, i.e., the functionality is not reentrant, or it can be interrupted.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "828"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2010-11-08",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Signal handler uses functions that ultimately call the unsafe syslog/malloc/s*printf, leading to denial of service via multiple login attempts",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4109",
+            "reference": "CVE-2008-4109"
+        },
+        {
+            "description": "Chain: Signal handler contains too much functionality (CWE-828), introducing a race condition (CWE-362) that leads to a double free (CWE-415).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-5051",
+            "reference": "CVE-2006-5051"
+        },
+        {
+            "description": "unsafe calls to library functions from signal handler",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1349",
+            "reference": "CVE-2001-1349"
+        },
+        {
+            "description": "SIGURG can be used to remotely interrupt signal handler; other variants exist.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0794",
+            "reference": "CVE-2004-0794"
+        },
+        {
+            "description": "SIGCHLD signal to FTP server can cause crash under heavy load while executing non-reentrant functions like malloc/free.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2259",
+            "reference": "CVE-2004-2259"
+        },
+        {
+            "description": "SIGCHLD not blocked in a daemon loop while counter is modified, causing counter to get out of sync.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1563",
+            "reference": "CVE-2002-1563"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        },
+        {
+            "description": "Where non-reentrant functionality must be leveraged within a signal handler, be sure to block or mask signals appropriately. This includes blocking other signals within the signal handler itself that may also leverage the functionality. It also includes blocking all signals reliant upon the functionality when it is being accessed or modified by the normal behaviors of the product.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-360"
+        },
+        {
+            "external_reference_id": "REF-361"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "364",
+            "nature": "ChildOf"
+        }
+    ]
+}

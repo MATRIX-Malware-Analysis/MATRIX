@@ -1,0 +1,280 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f6aa7e9f-e25e-4b01-b21f-e64ba178ed1f",
+    "created": "2024-08-13T14:46:48.921794Z",
+    "modified": "2024-08-13T14:46:48.921794Z",
+    "name": "Uncontrolled Search Path Element",
+    "description": "The product uses a fixed or controlled search path to find resources, but one or more locations in that path can be under the control of unintended actors.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "427"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "chain: a change in an underlying package causes the gettext function to use implicit initialization with a hard-coded path (CWE-1419) under the user-writable C:\\ drive, introducing an untrusted search path element (CWE-427) that enables spoofing of messages. ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-25815",
+            "reference": "CVE-2023-25815"
+        },
+        {
+            "description": "Go-based git extension on Windows can search for and execute a malicious \"..exe\" in a repository because Go searches the current working directory if git.exe is not found in the PATH",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-4826",
+            "reference": "CVE-2022-4826"
+        },
+        {
+            "description": "A Static Site Generator built in Go, when running on Windows, searches the current working directory for a command, possibly allowing code execution using a malicious .exe or .bat file with the name being searched",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-26284",
+            "reference": "CVE-2020-26284"
+        },
+        {
+            "description": "Windows-based fork of git creates a \".git\" folder in the C: drive, allowing local attackers to create a .git folder with a malicious config file",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-24765",
+            "reference": "CVE-2022-24765"
+        },
+        {
+            "description": "SSL package searches under \"C:/usr/local\" for configuration files and other critical data, but C:/usr/local might be world-writable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-1552",
+            "reference": "CVE-2019-1552"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in document editor.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3402",
+            "reference": "CVE-2010-3402"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in encryption software.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3397",
+            "reference": "CVE-2010-3397"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in library used by multiple media players.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3138",
+            "reference": "CVE-2010-3138"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in illustration program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3152",
+            "reference": "CVE-2010-3152"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in address book.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3147",
+            "reference": "CVE-2010-3147"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in network monitoring software.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3135",
+            "reference": "CVE-2010-3135"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in web browser.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3131",
+            "reference": "CVE-2010-3131"
+        },
+        {
+            "description": "\"DLL hijacking\" issue in music player/organizer.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-1795",
+            "reference": "CVE-2010-1795"
+        },
+        {
+            "description": "Product uses the current working directory to find and execute a program, which allows local users to gain privileges by creating a symlink that points to a malicious version of the program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1576",
+            "reference": "CVE-2002-1576"
+        },
+        {
+            "description": "Product trusts the PATH environmental variable to find and execute a program, which allows local users to obtain root access by modifying the PATH to point to a malicous version of that program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1461",
+            "reference": "CVE-1999-1461"
+        },
+        {
+            "description": "Software uses a search path that includes the current working directory (.), which allows local users to gain privileges via malicious programs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1318",
+            "reference": "CVE-1999-1318"
+        },
+        {
+            "description": "Admin software trusts the user-supplied -uv.install command line option to find and execute the uv.install program, which allows local users to gain privileges by providing a pathname that is under control of the user.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0579",
+            "reference": "CVE-2003-0579"
+        },
+        {
+            "description": "When a document is opened, the directory of that document is first used to locate DLLs , which could allow an attacker to execute arbitrary commands by inserting malicious DLLs into the same directory as the document.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0854",
+            "reference": "CVE-2000-0854"
+        },
+        {
+            "description": "Database trusts the PATH environment variable to find and execute programs, which allows local users to modify the PATH to point to malicious programs.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0943",
+            "reference": "CVE-2001-0943"
+        },
+        {
+            "description": "Database uses an environment variable to find and execute a program, which allows local users to execute arbitrary programs by changing the environment variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0942",
+            "reference": "CVE-2001-0942"
+        },
+        {
+            "description": "Server uses relative paths to find system files that will run in-process, which allows local users to gain privileges via a malicious file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0507",
+            "reference": "CVE-2001-0507"
+        },
+        {
+            "description": "Product allows local users to execute arbitrary code by setting an environment variable to reference a malicious program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2017",
+            "reference": "CVE-2002-2017"
+        },
+        {
+            "description": "Product includes the current directory in root's PATH variable.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-0690",
+            "reference": "CVE-1999-0690"
+        },
+        {
+            "description": "Error during packaging causes product to include a hard-coded, non-standard directory in search path.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0912",
+            "reference": "CVE-2001-0912"
+        },
+        {
+            "description": "Product searches current working directory for configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0289",
+            "reference": "CVE-2001-0289"
+        },
+        {
+            "description": "Product searches current working directory for configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1705",
+            "reference": "CVE-2005-1705"
+        },
+        {
+            "description": "Product executable other program from current working directory.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1307",
+            "reference": "CVE-2005-1307"
+        },
+        {
+            "description": "Untrusted path.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-2040",
+            "reference": "CVE-2002-2040"
+        },
+        {
+            "description": "Modification of trusted environment variable leads to untrusted path vulnerability.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2072",
+            "reference": "CVE-2005-2072"
+        },
+        {
+            "description": "Product searches /tmp for modules before other paths.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1632",
+            "reference": "CVE-2005-1632"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Hard-code the search path to a set of known-safe values (such as system directories), or only allow them to be specified by the administrator in a configuration file. Do not allow these settings to be modified by an external party. Be careful to avoid related weaknesses such as CWE-426 and CWE-428.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "When invoking other programs, specify those programs using fully-qualified pathnames. While this is an effective approach, code that uses fully-qualified pathnames might not be portable to other systems that do not use the same pathnames. The portability can be improved by locating the full-qualified paths in a centralized, easily-modifiable location within the source code, and having the code refer to these paths.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Remove or restrict all environment settings before invoking other programs. This includes the PATH environment variable, LD_LIBRARY_PATH, and other settings that identify the location of code libraries, and any application-specific search paths.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Check your search path before use and remove any elements that are likely to be unsafe, such as the current working directory or a temporary files directory. Since this is a denylist approach, it might not be a complete solution.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Use other functions that require explicit paths. Making use of any of the other readily available functions that require explicit paths is a safe way to avoid this problem. For example, system() in C does not require a full path since the shell can take care of finding the program using the PATH environment variable, while execl() and execv() require a full path.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-409"
+        },
+        {
+            "external_reference_id": "REF-410"
+        },
+        {
+            "external_reference_id": "REF-411"
+        },
+        {
+            "external_reference_id": "REF-412"
+        },
+        {
+            "external_reference_id": "REF-413"
+        },
+        {
+            "external_reference_id": "REF-414"
+        },
+        {
+            "external_reference_id": "REF-415"
+        },
+        {
+            "external_reference_id": "REF-416"
+        },
+        {
+            "external_reference_id": "REF-417"
+        },
+        {
+            "external_reference_id": "REF-1168"
+        },
+        {
+            "external_reference_id": "REF-1169"
+        },
+        {
+            "external_reference_id": "REF-1170"
+        },
+        {
+            "external_reference_id": "REF-1325"
+        },
+        {
+            "external_reference_id": "REF-1326"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "668",
+            "nature": "ChildOf"
+        }
+    ]
+}

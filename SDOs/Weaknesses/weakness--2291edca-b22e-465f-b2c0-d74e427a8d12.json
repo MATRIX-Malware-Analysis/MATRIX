@@ -1,0 +1,50 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--2291edca-b22e-465f-b2c0-d74e427a8d12",
+    "created": "2024-08-13T14:46:48.900814Z",
+    "modified": "2024-08-13T14:46:48.900814Z",
+    "name": "Use of Invariant Value in Dynamically Changing Context",
+    "description": "The product uses a constant value, name, or reference, but this value can (or should) vary across different environments.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "344"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Component for web browser writes an error message to a known location, which can then be referenced by attackers to process HTML/script in a less restrictive context",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0980",
+            "reference": "CVE-2002-0980"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-267"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--549ef7ec-f4da-421b-924e-d9324980e579",
+    "created": "2024-08-13T14:46:48.989939Z",
+    "modified": "2024-08-13T14:46:48.989939Z",
+    "name": "Incomplete Denylist to Cross-Site Scripting",
+    "description": "The product uses a denylist-based protection mechanism to defend against XSS attacks, but the denylist is incomplete, allowing XSS variants to succeed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "692"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-04-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Denylist only removes <SCRIPT> tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-5727",
+            "reference": "CVE-2007-5727"
+        },
+        {
+            "description": "Denylist only removes <SCRIPT> tag.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-3617",
+            "reference": "CVE-2006-3617"
+        },
+        {
+            "description": "Denylist only checks \"javascript:\" tag",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-4308",
+            "reference": "CVE-2006-4308"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-714"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "184",
+            "nature": "StartsWith"
+        },
+        {
+            "cwe_id": "184",
+            "nature": "ChildOf"
+        }
+    ]
+}

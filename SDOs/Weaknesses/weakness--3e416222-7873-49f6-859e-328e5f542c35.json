@@ -1,0 +1,70 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3e416222-7873-49f6-859e-328e5f542c35",
+    "created": "2024-08-13T14:46:48.995853Z",
+    "modified": "2024-08-13T14:46:48.995853Z",
+    "name": "Failure to Sanitize Special Elements into a Different Plane (Special Element Injection)",
+    "description": "The product does not adequately filter user-controlled input for special elements with control implications.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "75"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Programming languages and supporting technologies might be chosen which are not subject to these issues.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "Utilize an appropriate mix of allowlist and denylist parsing to filter special element syntax from all input.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "74",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--f0a62535-ea04-461e-8f7a-de48a994dcbc",
+    "created": "2024-08-13T14:46:48.991212Z",
+    "modified": "2024-08-13T14:46:48.991212Z",
+    "name": "Incorrect Comparison",
+    "description": "The product compares two entities in a security-relevant context, but the comparison is incorrect, which may lead to resultant weaknesses.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "697"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-09-09",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: Python-based HTTP Proxy server uses the wrong boolean operators (CWE-480) causing an  incorrect comparison (CWE-697) that identifies an authN failure if all three conditions are met instead of only one, allowing bypass of the proxy authentication (CWE-1390)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-3116",
+            "reference": "CVE-2021-3116"
+        },
+        {
+            "description": "Chain: Proxy uses a substring search instead of parsing the Transfer-Encoding header (CWE-697), allowing request splitting (CWE-113) and cache poisoning",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-15811",
+            "reference": "CVE-2020-15811"
+        },
+        {
+            "description": "Proxy performs incorrect comparison of request headers, leading to infoleak",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-10003",
+            "reference": "CVE-2016-10003"
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--8153c488-b79d-4a08-b9d5-ab2def0035e6",
+    "created": "2024-08-13T14:46:48.75484Z",
+    "modified": "2024-08-13T14:46:48.75484Z",
+    "name": "Improper Encoding or Escaping of Output",
+    "description": "The product prepares a structured message for communication with another component, but encoding or escaping of the data is either missing or done incorrectly. As a result, the intended structure of the message is not preserved.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "116"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "CWE Community",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "This weakness can often be detected using automated static analysis tools. Many modern tools use data flow analysis or constraint-based techniques to minimize the number of false positives.",
+            "effectiveness": "Moderate",
+            "method": "Automated Static Analysis"
+        },
+        {
+            "description": "This weakness can be detected using dynamic tools and techniques that interact with the software using large test suites with many diverse inputs, such as fuzz testing (fuzzing), robustness testing, and fault injection. The software's operation may slow down, but it should not become unstable, crash, or generate incorrect results.",
+            "effectiveness": null,
+            "method": "Automated Dynamic Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "High",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: authentication routine in Go-based agile development product does not escape user name (CWE-116), allowing LDAP injection (CWE-90)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-41232",
+            "reference": "CVE-2021-41232"
+        },
+        {
+            "description": "OS command injection in backup software using shell metacharacters in a filename; correct behavior would require that this filename could not be changed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-4636",
+            "reference": "CVE-2008-4636"
+        },
+        {
+            "description": "Web application does not set the charset when sending a page to a browser, allowing for XSS exploitation when a browser chooses an unexpected encoding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0769",
+            "reference": "CVE-2008-0769"
+        },
+        {
+            "description": "Program does not set the charset when sending a page to a browser, allowing for XSS exploitation when a browser chooses an unexpected encoding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0005",
+            "reference": "CVE-2008-0005"
+        },
+        {
+            "description": "SQL injection via password parameter; a strong password might contain \"&\"",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-5573",
+            "reference": "CVE-2008-5573"
+        },
+        {
+            "description": "Cross-site scripting in chat application via a message subject, which normally might contain \"&\" and other XSS-related characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-3773",
+            "reference": "CVE-2008-3773"
+        },
+        {
+            "description": "Cross-site scripting in chat application via a message, which normally might be allowed to contain arbitrary content.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-0757",
+            "reference": "CVE-2008-0757"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Understand the context in which your data will be used and the encoding that will be expected. This is especially important when transmitting data between different components, or when generating outputs that can contain multiple encodings at the same time, such as web pages or multi-part mail messages. Study all expected communication protocols and data representations to determine the required encoding strategies.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "In some cases, input validation may be an important strategy when output encoding is not a complete solution. For example, you may be providing the same output that will be processed by multiple consumers that use different encodings or representations. In other cases, you may be required to allow user-supplied input to contain control information, such as limited HTML tags that support formatting in a wiki or bulletin board. When this type of requirement must be met, use an extremely strict allowlist to limit which control sequences can be used. Verify that the resulting syntactic structure is what you expect. Use your normal encoding methods for the remainder of the input.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Use input validation as a defense-in-depth measure to reduce the likelihood of output encoding errors (see CWE-20).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Fully specify which encodings are required by components that will be communicating with each other.",
+            "effectiveness": null,
+            "phase": "Requirements"
+        },
+        {
+            "description": "When exchanging data between components, ensure that both components are using the same character encoding. Ensure that the proper encoding is applied at each interface. Explicitly set the encoding you are using whenever the protocol allows you to do so.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-45"
+        },
+        {
+            "external_reference_id": "REF-46"
+        },
+        {
+            "external_reference_id": "REF-47"
+        },
+        {
+            "external_reference_id": "REF-48"
+        },
+        {
+            "external_reference_id": "REF-49"
+        },
+        {
+            "external_reference_id": "REF-50"
+        },
+        {
+            "external_reference_id": "REF-7"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "707",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "74",
+            "nature": "CanPrecede"
+        }
+    ]
+}

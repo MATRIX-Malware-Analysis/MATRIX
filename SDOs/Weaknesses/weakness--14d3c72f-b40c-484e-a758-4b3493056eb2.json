@@ -1,0 +1,89 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--14d3c72f-b40c-484e-a758-4b3493056eb2",
+    "created": "2024-08-13T14:46:48.776847Z",
+    "modified": "2024-08-13T14:46:48.776847Z",
+    "name": "Improper Access Control for Volatile Memory Containing Boot Code",
+    "description": "The product conducts a secure-boot process that transfers bootloader code from Non-Volatile Memory (NVM) into Volatile Memory (VM), but it does not have sufficient access control or other protections for the Volatile Memory.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1274"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Modify Memory",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-04-25",
+            "submission_name": "Arun Kanuparthi, Hareesh Khattri, Parbati Kumar Manna, Narasimha Kumar V Mangipudi",
+            "submission_organization": "Intel Corporation"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Ensure the volatile memory is lockable or has locks. Ensure the volatile memory is locked for writes from untrusted agents or adversaries. Try modifying the volatile memory from an untrusted agent, and ensure these writes are dropped.\n\t\t\t     ",
+            "effectiveness": "High",
+            "method": "Manual Analysis"
+        },
+        {
+            "description": "\n\t\t\t      ",
+            "effectiveness": "Moderate",
+            "method": "Manual Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Locked memory regions may be modified through other interfaces in a secure-boot-loader image due to improper access control.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-2267",
+            "reference": "CVE-2019-2267"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Ensure that the design of volatile-memory protections is enough to prevent modification from an adversary or untrusted code.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Test the volatile-memory protections to ensure they are safe from modification or untrusted code.",
+            "effectiveness": null,
+            "phase": "Testing"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        }
+    ]
+}

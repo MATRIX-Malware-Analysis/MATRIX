@@ -1,0 +1,118 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--3bdbde01-be2d-4c9d-bb69-78725ef9230f",
+    "created": "2024-08-13T14:46:48.801432Z",
+    "modified": "2024-08-13T14:46:48.801432Z",
+    "name": "Incorrect Initialization of Resource",
+    "description": "The product attempts to initialize a resource but does not correctly do so, which might leave the resource in an unexpected, incorrect, or insecure state when it is accessed.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1419"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Unexpected State",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Authorization"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2023-10-11",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Chain: microcontroller system-on-chip uses a register value stored in flash to set product protection state on the memory bus and does not contain protection against fault injection (CWE-1319) which leads to an incorrect initialization of the memory bus (CWE-1419) causing the product to be in an unprotected state.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-27211",
+            "reference": "CVE-2020-27211"
+        },
+        {
+            "description": "chain: a change in an underlying package causes the gettext function to use implicit initialization with a hard-coded path (CWE-1419) under the user-writable C:\\ drive, introducing an untrusted search path element (CWE-427) that enables spoofing of messages. ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2023-25815",
+            "reference": "CVE-2023-25815"
+        },
+        {
+            "description": "WordPress module sets internal variables based on external inputs, allowing false reporting of the number of views ",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-43468",
+            "reference": "CVE-2022-43468"
+        },
+        {
+            "description": "insecure default variable initialization in BIOS firmware for a hardware board allows DoS",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-36349",
+            "reference": "CVE-2022-36349"
+        },
+        {
+            "description": "distributed filesystem only initializes part of the variable-length padding for a packet, allowing attackers to read sensitive information from previously-sent packets in the same memory location",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2015-7763",
+            "reference": "CVE-2015-7763"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Choose the safest-possible initialization for security-related resources.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that each resource (whether variable, memory buffer, register, etc.) is fully initialized.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Pay close attention to complex conditionals or reset sources   that affect initialization, since some paths might not perform the initialization.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Ensure that the design and architecture clearly identify what the initialization should be, and that the initialization does not have security implications.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-1437"
+        },
+        {
+            "external_reference_id": "REF-1438"
+        },
+        {
+            "external_reference_id": "REF-1439"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "665",
+            "nature": "ChildOf"
+        }
+    ]
+}

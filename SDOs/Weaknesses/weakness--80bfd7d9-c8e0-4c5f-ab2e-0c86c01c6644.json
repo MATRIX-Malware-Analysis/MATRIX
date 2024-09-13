@@ -1,0 +1,83 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--80bfd7d9-c8e0-4c5f-ab2e-0c86c01c6644",
+    "created": "2024-08-13T14:46:48.973936Z",
+    "modified": "2024-08-13T14:46:48.973936Z",
+    "name": "Executable Regular Expression Error",
+    "description": "The product uses a regular expression that either (1) contains an executable component with user-controlled inputs, or (2) allows a user to enable execution by inserting pattern modifiers.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "624"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Executable regexp in PHP by inserting \"e\" modifier into first argument to preg_replace",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2059",
+            "reference": "CVE-2006-2059"
+        },
+        {
+            "description": "Executable regexp in PHP by inserting \"e\" modifier into first argument to preg_replace",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3420",
+            "reference": "CVE-2005-3420"
+        },
+        {
+            "description": "Complex curly syntax inserted into the replacement argument to PHP preg_replace(), which uses the \"/e\" modifier",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2878",
+            "reference": "CVE-2006-2878"
+        },
+        {
+            "description": "Function allows remote attackers to execute arbitrary PHP code via the username field, which is used in a preg_replace function call with a /e (executable) modifier.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2006-2908",
+            "reference": "CVE-2006-2908"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "The regular expression feature in some languages allows inputs to be quoted or escaped before insertion, such as \\Q and \\E in Perl.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "77",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--cb3c3fa5-af6d-4883-b95d-54f519364211",
+    "created": "2024-08-13T14:46:48.807838Z",
+    "modified": "2024-08-13T14:46:48.807838Z",
+    "name": "Improper Neutralization of Null Byte or NUL Character",
+    "description": "The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes NUL characters or null bytes when they are sent to a downstream component.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "158"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Unexpected State",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "NUL byte in theme name causes directory traversal impact to be worse",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-1284",
+            "reference": "CVE-2008-1284"
+        },
+        {
+            "description": "Source code disclosure using trailing null.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2008",
+            "reference": "CVE-2005-2008"
+        },
+        {
+            "description": "Source code disclosure using trailing null.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3293",
+            "reference": "CVE-2005-3293"
+        },
+        {
+            "description": "Trailing null allows file include.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-2061",
+            "reference": "CVE-2005-2061"
+        },
+        {
+            "description": "Null character in MIME header allows detection bypass.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1774",
+            "reference": "CVE-2002-1774"
+        },
+        {
+            "description": "Web server allows remote attackers to view the source code for CGI programs via a null character (%00) at the end of a URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0149",
+            "reference": "CVE-2000-0149"
+        },
+        {
+            "description": "Web server earlier allows allows remote attackers to bypass access restrictions, list directory contents, and read source code by inserting a null character (%00) in the URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-0671",
+            "reference": "CVE-2000-0671"
+        },
+        {
+            "description": "Logging system allows an attacker to cause a denial of service (hang) by causing null bytes to be placed in log messages.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-0738",
+            "reference": "CVE-2001-0738"
+        },
+        {
+            "description": "Web server allows source code for executable programs to be read via a null character (%00) at the end of a request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1140",
+            "reference": "CVE-2001-1140"
+        },
+        {
+            "description": "Protection mechanism for limiting file access can be bypassed using a null character (%00) at the end of the directory name.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1031",
+            "reference": "CVE-2002-1031"
+        },
+        {
+            "description": "Application server allows remote attackers to read JSP source code via an encoded null byte in an HTTP GET request, which causes the server to send the .JSP file unparsed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-1025",
+            "reference": "CVE-2002-1025"
+        },
+        {
+            "description": "XSS protection mechanism only checks for sequences with an alphabetical character following a (<), so a non-alphabetical or null character (%00) following a < may be processed.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0768",
+            "reference": "CVE-2003-0768"
+        },
+        {
+            "description": "Decoding function in proxy allows regular expression bypass in ACLs via URLs with null characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-0189",
+            "reference": "CVE-2004-0189"
+        },
+        {
+            "description": "Null byte bypasses PHP regexp check (interaction error).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-3153",
+            "reference": "CVE-2005-3153"
+        },
+        {
+            "description": "Null byte bypasses PHP regexp check (interaction error).",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-4155",
+            "reference": "CVE-2005-4155"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Developers should anticipate that null characters or null bytes will be injected/removed/manipulated in the input vectors of their product. Use an appropriate combination of denylists and allowlists to ensure only valid, expected and appropriate input is processed by the system.",
+            "effectiveness": null,
+            "phase": null
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Inputs should be decoded and canonicalized to the application's current internal representation before being validated (CWE-180). Make sure that the application does not decode the same input twice (CWE-174). Such errors could be used to bypass allowlist validation schemes by introducing dangerous inputs after they have been checked.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "138",
+            "nature": "ChildOf"
+        }
+    ]
+}

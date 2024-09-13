@@ -1,0 +1,93 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--67f41abd-001e-4aa3-9bab-0fa47e74b143",
+    "created": "2024-08-13T14:46:48.980405Z",
+    "modified": "2024-08-13T14:46:48.980405Z",
+    "name": "Improper Isolation or Compartmentalization",
+    "description": "The product does not properly compartmentalize or isolate functionality, processes, or resources that require different privilege levels, rights, or permissions.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "653"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2008-01-18",
+            "submission_name": "Pascal Meunier",
+            "submission_organization": "Purdue University"
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "SOAR Partial",
+            "method": "Automated Static Analysis - Binary or Bytecode"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Manual Static Analysis - Source Code"
+        },
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "method": "Architecture or Design Review"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Improper isolation of shared resource in a network-on-chip leads to denial of service",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2021-33096",
+            "reference": "CVE-2021-33096"
+        },
+        {
+            "description": "Baseboard Management Controller (BMC) device implements Advanced High-performance Bus (AHB) bridges that do not require authentication for arbitrary read and write access to the BMC's physical address space from the host, and possibly the network [REF-1138].",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-6260",
+            "reference": "CVE-2019-6260"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Break up privileges between different modules, objects, or entities. Minimize the interfaces between modules and require strong access control between them.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-196"
+        },
+        {
+            "external_reference_id": "REF-535"
+        },
+        {
+            "external_reference_id": "REF-1138"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "657",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "693",
+            "nature": "ChildOf"
+        }
+    ]
+}

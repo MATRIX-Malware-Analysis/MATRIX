@@ -1,0 +1,81 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--5b8f8cb9-0202-4416-9b9e-bb9b3c7e25dc",
+    "created": "2024-08-13T14:46:48.898072Z",
+    "modified": "2024-08-13T14:46:48.898072Z",
+    "name": "Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)",
+    "description": "The product uses a Pseudo-Random Number Generator (PRNG) but does not correctly manage seeds.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "335"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Other",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Cloud application on Kubernetes generates passwords using a weak random number generator based on deployment time.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-7010",
+            "reference": "CVE-2020-7010"
+        },
+        {
+            "description": "server uses erlang:now() to seed the PRNG, which\n\t\t\t results in a small search space for potential random\n\t\t\t seeds",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2019-11495",
+            "reference": "CVE-2019-11495"
+        },
+        {
+            "description": "Product's PRNG is not seeded for the generation of session IDs",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-12520",
+            "reference": "CVE-2018-12520"
+        },
+        {
+            "description": "Router's PIN generation is based on rand(time(0)) seeding.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2016-10180",
+            "reference": "CVE-2016-10180"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-44"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "330",
+            "nature": "ChildOf"
+        }
+    ]
+}

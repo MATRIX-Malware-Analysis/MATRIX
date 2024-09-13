@@ -1,0 +1,115 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--e19e08a0-9521-44d5-ba3c-78c894141f44",
+    "created": "2024-08-13T14:46:49.019629Z",
+    "modified": "2024-08-13T14:46:49.019629Z",
+    "name": "Access of Resource Using Incompatible Type ('Type Confusion')",
+    "description": "The product allocates or initializes a resource such as a pointer, object, or variable using one type, but it later accesses that resource using a type that is incompatible with the original type.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "843"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Read Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Memory",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Confidentiality"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2011-05-15",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Type confusion in CSS sequence leads to out-of-bounds read.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-4577",
+            "reference": "CVE-2010-4577"
+        },
+        {
+            "description": "Size inconsistency allows code execution, first discovered when it was actively exploited in-the-wild.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-0611",
+            "reference": "CVE-2011-0611"
+        },
+        {
+            "description": "Improperly-parsed file containing records of different types leads to code execution when a memory location is interpreted as a different object than intended.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-0258",
+            "reference": "CVE-2010-0258"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-811"
+        },
+        {
+            "external_reference_id": "REF-62"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "704",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "704",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "119",
+            "nature": "CanPrecede"
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b5ec506d-ce26-4a93-bf3d-d2327d130319",
+    "created": "2024-08-13T14:46:49.030954Z",
+    "modified": "2024-08-13T14:46:49.030954Z",
+    "name": "Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')",
+    "description": "The product receives input from an upstream component, but it does not neutralize or incorrectly neutralizes code syntax before inserting the input into an executable resource, such as a library, configuration file, or template.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "96"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Gain Privileges or Assume Identity",
+            "scope": "Access Control"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Execute Unauthorized Code or Commands",
+            "scope": "Other"
+        },
+        {
+            "impact": "Hide Activities",
+            "scope": "Non-Repudiation"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Perl code directly injected into CGI library file from parameters to another CGI program.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0495",
+            "reference": "CVE-2002-0495"
+        },
+        {
+            "description": "Direct PHP code injection into supporting template file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1876",
+            "reference": "CVE-2005-1876"
+        },
+        {
+            "description": "Direct code injection into PHP script that can be accessed by attacker.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1894",
+            "reference": "CVE-2005-1894"
+        },
+        {
+            "description": "PHP code from User-Agent HTTP header directly inserted into log file implemented as PHP script.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0395",
+            "reference": "CVE-2003-0395"
+        },
+        {
+            "description": "chain: execution after redirect allows non-administrator to perform static code injection.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2007-6652",
+            "reference": "CVE-2007-6652"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Perform proper output validation and escaping to neutralize all code syntax from data written to code files.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "94",
+            "nature": "ChildOf"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--fb46e3f1-41ef-4663-9653-71591fb96e78",
+    "created": "2024-08-13T14:46:48.734528Z",
+    "modified": "2024-08-13T14:46:48.734528Z",
+    "name": "Data Access Operations Outside of Expected Data Manager Component",
+    "description": "The product uses a dedicated, central data manager component as required by design, but it contains code that performs data-access operations that do not use this data manager.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1057"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Reduce Performance",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2018-07-02",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-959"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "1061",
+            "nature": "ChildOf"
+        }
+    ]
+}

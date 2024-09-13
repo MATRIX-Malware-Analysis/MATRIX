@@ -1,0 +1,111 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b5941eaf-20c0-43fe-919a-4e5c9dc0c9d1",
+    "created": "2024-08-13T14:46:48.91771Z",
+    "modified": "2024-08-13T14:46:48.91771Z",
+    "name": "Insufficient Resource Pool",
+    "description": "The product's resource pool is not large enough to handle peak demand, which allows an attacker to prevent others from accessing the resource by using a (relatively) large number of requests for resources.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "410"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "Other",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Other",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Other"
+        },
+        {
+            "impact": "Other",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Large number of locks on file exhausts the pool and causes crash.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1363",
+            "reference": "CVE-1999-1363"
+        },
+        {
+            "description": "Product supports only one connection and does not disconnect a user who does not provide credentials.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2001-1340",
+            "reference": "CVE-2001-1340"
+        },
+        {
+            "description": "Large number of connections without providing credentials allows connection exhaustion.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0406",
+            "reference": "CVE-2002-0406"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Do not perform resource-intensive transactions for unauthenticated users and/or invalid requests.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider implementing a velocity check mechanism which would detect abusive behavior.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        },
+        {
+            "description": "Consider load balancing as an option to handle heavy loads.",
+            "effectiveness": null,
+            "phase": "Operation"
+        },
+        {
+            "description": "Make sure that resource handles are properly closed when no longer needed.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        },
+        {
+            "description": "Identify the system's resource intensive operations and consider protecting them from abuse (e.g. malicious automated script which runs the resources out).",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-7"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "400",
+            "nature": "CanPrecede"
+        }
+    ]
+}

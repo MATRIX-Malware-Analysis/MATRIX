@@ -1,0 +1,61 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--c8f20fee-823d-4298-8927-1b34c7db4d30",
+    "created": "2024-08-13T14:46:48.780588Z",
+    "modified": "2024-08-13T14:46:48.780588Z",
+    "name": "Improper Validation of Specified Type of Input",
+    "description": "The product receives input that is expected to be of a certain type, but it does not validate or incorrectly validates that the input is actually of the expected type.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "1287"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Varies by Context",
+            "scope": "Other"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2020-06-24",
+            "submission_name": "CWE Content Team",
+            "submission_organization": "MITRE"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Large language model (LLM) management tool does not\n               validate the format of a digest value (CWE-1287) from a\n               private, untrusted model registry, enabling relative\n               path traversal (CWE-23), a.k.a. Probllama",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2024-37032",
+            "reference": "CVE-2024-37032"
+        },
+        {
+            "description": "SQL injection through an ID that was supposed to be numeric.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2008-2223",
+            "reference": "CVE-2008-2223"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "\n                  ",
+            "effectiveness": "High",
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "20",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "843",
+            "nature": "PeerOf"
+        }
+    ]
+}

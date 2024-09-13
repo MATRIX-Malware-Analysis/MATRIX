@@ -1,0 +1,82 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--b98d42d0-8f0c-400a-ba23-e1693b57a9fe",
+    "created": "2024-08-13T14:46:48.969877Z",
+    "modified": "2024-08-13T14:46:48.969877Z",
+    "name": "Externally Controlled Reference to a Resource in Another Sphere",
+    "description": "The product uses an externally controlled name or reference that resolves to a resource that is outside of the intended control sphere.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "610"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Application Data",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "Modify Application Data",
+            "scope": "Integrity"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "An email client does not block loading of remote objects in a nested document.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-3032",
+            "reference": "CVE-2022-3032"
+        },
+        {
+            "description": "Chain: a learning management tool debugger uses external input to locate previous session logs (CWE-73) and does not properly validate the given path (CWE-20), allowing for filesystem path traversal using \"../\" sequences (CWE-24)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-45918",
+            "reference": "CVE-2022-45918"
+        },
+        {
+            "description": "Cryptography API uses unsafe reflection when deserializing a private key",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2018-1000613",
+            "reference": "CVE-2018-1000613"
+        },
+        {
+            "description": "Chain: Go-based Oauth2 reverse proxy can send the authenticated user to another site at the end of the authentication flow. A redirect URL with HTML-encoded whitespace characters can bypass the validation (CWE-1289) to redirect to a malicious site (CWE-601)",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2020-11053",
+            "reference": "CVE-2020-11053"
+        },
+        {
+            "description": "Recruiter software allows reading arbitrary files using XXE",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-42745",
+            "reference": "CVE-2022-42745"
+        },
+        {
+            "description": "Database system allows attackers to bypass sandbox restrictions by using the Reflection API.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2004-2331",
+            "reference": "CVE-2004-2331"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "664",
+            "nature": "ChildOf"
+        }
+    ]
+}

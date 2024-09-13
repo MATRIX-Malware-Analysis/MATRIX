@@ -1,0 +1,153 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--09541d58-1afd-465d-9c51-c1a24ca02678",
+    "created": "2024-08-13T14:46:48.970141Z",
+    "modified": "2024-08-13T14:46:48.970141Z",
+    "name": "Improper Restriction of XML External Entity Reference",
+    "description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "611"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Read Application Data",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Read Files or Directories",
+            "scope": "Confidentiality"
+        },
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Integrity"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2007-05-07",
+            "submission_name": "Anonymous Tool Vendor (under NDA)",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_detection_methods": [
+        {
+            "description": "Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)",
+            "effectiveness": "High",
+            "method": "Automated Static Analysis"
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Recruiter software allows reading arbitrary files using XXE",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2022-42745",
+            "reference": "CVE-2022-42745"
+        },
+        {
+            "description": "A browser control can allow remote attackers to determine the existence of files via Javascript containing XML script.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2005-1306",
+            "reference": "CVE-2005-1306"
+        },
+        {
+            "description": "XXE during SVG image conversion",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-5656",
+            "reference": "CVE-2012-5656"
+        },
+        {
+            "description": "XXE in PHP application allows reading the application's configuration file.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-2239",
+            "reference": "CVE-2012-2239"
+        },
+        {
+            "description": "XXE in database server",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-3489",
+            "reference": "CVE-2012-3489"
+        },
+        {
+            "description": "XXE in rapid web application development framework allows reading arbitrary files.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-4399",
+            "reference": "CVE-2012-4399"
+        },
+        {
+            "description": "XXE via XML-RPC request.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-3363",
+            "reference": "CVE-2012-3363"
+        },
+        {
+            "description": "XXE in office document product using RDF.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2012-0037",
+            "reference": "CVE-2012-0037"
+        },
+        {
+            "description": "XXE in web-based administration tool for database.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2011-4107",
+            "reference": "CVE-2011-4107"
+        },
+        {
+            "description": "XXE in product that performs large-scale data analysis.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2010-3322",
+            "reference": "CVE-2010-3322"
+        },
+        {
+            "description": "XXE in XSL stylesheet functionality in a common library used by some web browsers.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1699",
+            "reference": "CVE-2009-1699"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Many XML parsers and validators can be configured to disable external entity expansion.",
+            "effectiveness": null,
+            "phase": "Implementation"
+        }
+    ],
+    "x_mitre_references": [
+        {
+            "external_reference_id": "REF-496"
+        },
+        {
+            "external_reference_id": "REF-497"
+        },
+        {
+            "external_reference_id": "REF-498"
+        },
+        {
+            "external_reference_id": "REF-499"
+        },
+        {
+            "external_reference_id": "REF-500"
+        },
+        {
+            "external_reference_id": "REF-501"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "610",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "441",
+            "nature": "PeerOf"
+        }
+    ]
+}

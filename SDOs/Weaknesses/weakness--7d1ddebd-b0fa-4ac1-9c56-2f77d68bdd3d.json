@@ -1,0 +1,62 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--7d1ddebd-b0fa-4ac1-9c56-2f77d68bdd3d",
+    "created": "2024-08-13T14:46:48.917051Z",
+    "modified": "2024-08-13T14:46:48.917051Z",
+    "name": "Improper Handling of Highly Compressed Data (Data Amplification)",
+    "description": "The product does not handle or incorrectly handles a compressed input with a very high compression ratio that produces a large output.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "409"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "DoS: Amplification",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Crash, Exit, or Restart",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (CPU)",
+            "scope": "Availability"
+        },
+        {
+            "impact": "DoS: Resource Consumption (Memory)",
+            "scope": "Availability"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "XML bomb in web server module",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2009-1955",
+            "reference": "CVE-2009-1955"
+        },
+        {
+            "description": "Parsing library allows XML bomb",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1564",
+            "reference": "CVE-2003-1564"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "405",
+            "nature": "ChildOf"
+        }
+    ]
+}

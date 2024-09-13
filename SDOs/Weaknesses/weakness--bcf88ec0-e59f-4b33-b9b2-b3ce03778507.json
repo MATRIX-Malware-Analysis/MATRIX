@@ -1,0 +1,90 @@
+{
+    "type": "weakness",
+    "spec_version": "2.1",
+    "id": "weakness--bcf88ec0-e59f-4b33-b9b2-b3ce03778507",
+    "created": "2024-08-13T14:46:48.883801Z",
+    "modified": "2024-08-13T14:46:48.883801Z",
+    "name": "Authentication Bypass Using an Alternate Path or Channel",
+    "description": "A product requires authentication, but the product has an alternate path or channel that does not require authentication.",
+    "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+    ],
+    "external_references": [
+        {
+            "source_name": "CWE",
+            "external_id": "288"
+        }
+    ],
+    "x_mitre_common_consequences": [
+        {
+            "impact": "Bypass Protection Mechanism",
+            "scope": "Access Control"
+        }
+    ],
+    "x_mitre_content_history": [
+        {
+            "submission_date": "2006-07-19",
+            "submission_name": "PLOVER",
+            "submission_organization": null
+        }
+    ],
+    "x_mitre_likelihood_of_exploit": "Unknown",
+    "x_mitre_observed_examples": [
+        {
+            "description": "Router allows remote attackers to read system logs without authentication by directly connecting to the login screen and typing certain control characters.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2000-1179",
+            "reference": "CVE-2000-1179"
+        },
+        {
+            "description": "Attackers with physical access to the machine may bypass the password prompt by pressing the ESC (Escape) key.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1454",
+            "reference": "CVE-1999-1454"
+        },
+        {
+            "description": "OS allows local attackers to bypass the password protection of idled sessions via the programmer's switch or CMD-PWR keyboard sequence, which brings up a debugger that the attacker can use to disable the lock.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-1999-1077",
+            "reference": "CVE-1999-1077"
+        },
+        {
+            "description": "Direct request of installation file allows attacker to create administrator accounts.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-0304",
+            "reference": "CVE-2003-0304"
+        },
+        {
+            "description": "Attackers may gain additional privileges by directly requesting the web management URL.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0870",
+            "reference": "CVE-2002-0870"
+        },
+        {
+            "description": "Bypass authentication via direct request to named pipe.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2002-0066",
+            "reference": "CVE-2002-0066"
+        },
+        {
+            "description": "User can avoid lockouts by using an API instead of the GUI to conduct brute force password guessing.",
+            "link": "https://www.cve.org/CVERecord?id=CVE-2003-1035",
+            "reference": "CVE-2003-1035"
+        }
+    ],
+    "x_mitre_potential_mitigations": [
+        {
+            "description": "Funnel all access through a single choke point to simplify how users can access a resource. For every access, perform a check to determine if the user has permissions to access the resource.",
+            "effectiveness": null,
+            "phase": "Architecture and Design"
+        }
+    ],
+    "x_mitre_related_weaknesses": [
+        {
+            "cwe_id": "306",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "284",
+            "nature": "ChildOf"
+        },
+        {
+            "cwe_id": "420",
+            "nature": "PeerOf"
+        }
+    ]
+}
