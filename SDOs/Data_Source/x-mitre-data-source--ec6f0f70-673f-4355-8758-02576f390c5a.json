@@ -1,0 +1,42 @@
+{
+    "type": "x-mitre-data-source",
+    "spec_version": "2.1",
+    "id": "x-mitre-data-source--ec6f0f70-673f-4355-8758-02576f390c5a",
+    "created": "2024-08-13T14:51:14.450706Z",
+    "modified": "2024-08-13T14:51:14.450709Z",
+    "name": "Logon Session",
+    "description": "Logon occurring on a system or resource (local, domain, or cloud) to which a user/device is gaining access after successful authentication and authorization(Citation: Microsoft Audit Logon Events)",
+    "labels": [],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/datasources/DS0028",
+            "external_id": "DS0028"
+        },
+        {
+            "source_name": "Microsoft Audit Logon Events",
+            "description": "Microsoft. (2021, September 6). Audit logon events. Retrieved September 28, 2021.",
+            "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/basic-audit-logon-events"
+        }
+    ],
+    "x_mitre_platforms": [
+        "Azure AD",
+        "Google Workspace",
+        "IaaS",
+        "Linux",
+        "Office 365",
+        "SaaS",
+        "Windows",
+        "macOS"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.1",
+    "x_mitre_contributors": [
+        "Center for Threat-Informed Defense (CTID)"
+    ]
+}

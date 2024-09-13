@@ -1,0 +1,41 @@
+{
+    "type": "x-mitre-data-source",
+    "spec_version": "2.1",
+    "id": "x-mitre-data-source--71aef90f-f465-414e-98f1-c3f0ab683378",
+    "created": "2024-08-13T14:51:14.450361Z",
+    "modified": "2024-08-13T14:51:14.450363Z",
+    "name": "Kernel",
+    "description": "A computer program, at the core of a computer OS, that resides in memory and facilitates interactions between hardware and software components(Citation: STIG Audit Kernel Modules)(Citation: Init Man Page)",
+    "labels": [],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/datasources/DS0008",
+            "external_id": "DS0008"
+        },
+        {
+            "source_name": "STIG Audit Kernel Modules",
+            "description": "Unified Compliance Framework. (2016, December 20). The audit system must be configured to audit the loading and unloading of dynamic kernel modules.. Retrieved September 28, 2021.",
+            "url": "https://www.stigviewer.com/stig/oracle_linux_5/2016-12-20/finding/V-22383"
+        },
+        {
+            "source_name": "Init Man Page",
+            "description": "Kerrisk, M. (2021, March 22). INIT_MODULE(2). Retrieved September 28, 2021.",
+            "url": "https://man7.org/linux/man-pages/man2/init_module.2.html"
+        }
+    ],
+    "x_mitre_platforms": [
+        "Linux",
+        "macOS"
+    ],
+    "x_mitre_domains": [
+        "enterprise-attack"
+    ],
+    "x_mitre_version": "1.0",
+    "x_mitre_contributors": [
+        "Center for Threat-Informed Defense (CTID)"
+    ]
+}

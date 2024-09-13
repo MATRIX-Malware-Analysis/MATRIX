@@ -1,0 +1,34 @@
+{
+    "type": "tool",
+    "spec_version": "2.1",
+    "id": "tool--77c1aa55-4dff-45a5-8c26-8f9372bca1c2",
+    "created": "2024-08-13T14:50:59.930921Z",
+    "modified": "2024-08-13T14:50:59.930923Z",
+    "name": "Net",
+    "description": "The [Net](https://attack.mitre.org/software/S0039) utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. (Citation: Microsoft Net Utility)\n\n[Net](https://attack.mitre.org/software/S0039) has a great deal of functionality, (Citation: Savill 1999) much of which is useful for an adversary, such as gathering system and network information for Discovery, moving laterally through [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002) using <code>net use</code> commands, and interacting with services. The net1.exe utility is executed for certain functionality when net.exe is run and can be used directly in commands such as <code>net1 user</code>.",
+    "labels": [
+        "tool"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "aliases": [],
+    "tool_version": "",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/software/S0039",
+            "external_id": "S0039"
+        },
+        {
+            "source_name": "Microsoft Net Utility",
+            "description": "Microsoft. (2006, October 18). Net.exe Utility. Retrieved September 22, 2015.",
+            "url": "https://msdn.microsoft.com/en-us/library/aa939914"
+        },
+        {
+            "source_name": "Savill 1999",
+            "description": "Savill, J. (1999, March 4). Net.exe reference. Retrieved September 22, 2015.",
+            "url": "https://web.archive.org/web/20150511162820/http://windowsitpro.com/windows/netexe-reference"
+        }
+    ]
+}

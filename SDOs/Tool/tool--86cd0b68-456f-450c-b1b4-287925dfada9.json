@@ -1,0 +1,29 @@
+{
+    "type": "tool",
+    "spec_version": "2.1",
+    "id": "tool--86cd0b68-456f-450c-b1b4-287925dfada9",
+    "created": "2024-08-13T14:50:59.920282Z",
+    "modified": "2024-08-13T14:50:59.920285Z",
+    "name": "Invoke-PSImage",
+    "description": "[Invoke-PSImage](https://attack.mitre.org/software/S0231) takes a PowerShell script and embeds the bytes of the script into the pixels of a PNG image. It generates a one liner for executing either from a file of from the web. Example of usage is embedding the PowerShell code from the Invoke-Mimikatz module and embed it into an image file. By calling the image file from a macro for example, the macro will download the picture and execute the PowerShell code, which in this case will dump the passwords. (Citation: GitHub Invoke-PSImage)",
+    "labels": [
+        "tool"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "aliases": [],
+    "tool_version": "",
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/software/S0231",
+            "external_id": "S0231"
+        },
+        {
+            "source_name": "GitHub Invoke-PSImage",
+            "description": "Adams, B. (2017, December 17). Invoke-PSImage. Retrieved April 10, 2018.",
+            "url": "https://github.com/peewpw/Invoke-PSImage"
+        }
+    ]
+}

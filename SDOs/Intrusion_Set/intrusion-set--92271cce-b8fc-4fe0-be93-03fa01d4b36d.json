@@ -1,0 +1,61 @@
+{
+    "type": "intrusion-set",
+    "spec_version": "2.1",
+    "id": "intrusion-set--92271cce-b8fc-4fe0-be93-03fa01d4b36d",
+    "created": "2024-08-13T14:50:42.077001Z",
+    "modified": "2024-08-13T14:50:42.077004Z",
+    "name": "Akira",
+    "description": "[Akira](https://attack.mitre.org/groups/G1024) is a ransomware variant and ransomware deployment entity active since at least March 2023.(Citation: Arctic Wolf Akira 2023) [Akira](https://attack.mitre.org/groups/G1024) uses compromised credentials to access single-factor external access mechanisms such as VPNs for initial access, then various publicly-available tools and techniques for lateral movement.(Citation: Arctic Wolf Akira 2023)(Citation: Secureworks GOLD SAHARA) [Akira](https://attack.mitre.org/groups/G1024) operations are associated with \"double extortion\" ransomware activity, where data is exfiltrated from victim environments prior to encryption, with threats to publish files if a ransom is not paid. Technical analysis of [Akira](https://attack.mitre.org/software/S1129) ransomware indicates multiple overlaps with and similarities to [Conti](https://attack.mitre.org/software/S0575) malware.(Citation: BushidoToken Akira 2023)",
+    "labels": [
+        "intrusion-set"
+    ],
+    "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+    ],
+    "aliases": [
+        "Akira",
+        "GOLD SAHARA",
+        "PUNK SPIDER"
+    ],
+    "first_seen": "",
+    "last_seen": "",
+    "goals": [],
+    "resource_level": "",
+    "primary_motivation": "",
+    "secondary_motivations": [],
+    "external_references": [
+        {
+            "source_name": "mitre-attack",
+            "url": "https://attack.mitre.org/groups/G1024",
+            "external_id": "G1024"
+        },
+        {
+            "source_name": "PUNK SPIDER",
+            "description": "(Citation: CrowdStrike PUNK SPIDER)"
+        },
+        {
+            "source_name": "GOLD SAHARA",
+            "description": "(Citation: Secureworks GOLD SAHARA)"
+        },
+        {
+            "source_name": "CrowdStrike PUNK SPIDER",
+            "description": "CrowdStrike. (n.d.). Punk Spider. Retrieved February 20, 2024.",
+            "url": "https://www.crowdstrike.com/adversaries/punk-spider/"
+        },
+        {
+            "source_name": "Secureworks GOLD SAHARA",
+            "description": "Secureworks. (n.d.). GOLD SAHARA. Retrieved February 20, 2024.",
+            "url": "https://www.secureworks.com/research/threat-profiles/gold-sahara"
+        },
+        {
+            "source_name": "Arctic Wolf Akira 2023",
+            "description": "Steven Campbell, Akshay Suthar, & Connor Belfiorre. (2023, July 26). Conti and Akira: Chained Together. Retrieved February 20, 2024.",
+            "url": "https://arcticwolf.com/resources/blog/conti-and-akira-chained-together/"
+        },
+        {
+            "source_name": "BushidoToken Akira 2023",
+            "description": "Will Thomas. (2023, September 15). Tracking Adversaries: Akira, another descendent of Conti. Retrieved February 21, 2024.",
+            "url": "https://blog.bushidotoken.net/2023/09/tracking-adversaries-akira-another.html"
+        }
+    ]
+}
