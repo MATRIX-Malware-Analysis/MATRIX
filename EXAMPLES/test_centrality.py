@@ -4,12 +4,10 @@ import random
 from collections import defaultdict
 from tqdm import tqdm 
 
-# Carica i valori di centralità dal file
 input_file = "malware_behavior_importance_centrality.json"
 with open(input_file, 'r', encoding='utf-8') as f:
     malware_data = json.load(f)
 
-# Creazione di un dizionario di centralità
 malware_centrality = defaultdict(dict)
 for entry in malware_data:
     malware = entry['malware']
@@ -18,7 +16,6 @@ for entry in malware_data:
         importance = behavior_info['importance']
         malware_centrality[malware][behavior] = importance
 
-# Creazione del dataset con combinazioni limitate di 3 comportamenti per ogni malware
 dataset = []
 for malware, behaviors in tqdm(malware_centrality.items(), desc='Building dataset ...'):
     behavior_list = list(behaviors.keys())
@@ -28,11 +25,9 @@ for malware, behaviors in tqdm(malware_centrality.items(), desc='Building datase
         for combo in selected_combinations:
             dataset.append((malware, combo))
 
-# Funzione per calcolare il punteggio di centralità di un sample per un dato malware
 def calculate_centrality_score(sample_behaviors, malware, malware_centrality):
     return sum(malware_centrality[malware].get(behavior, 0) for behavior in sample_behaviors)
 
-# Test del classificatore
 correct_first = 0
 correct_second = 0
 correct_third = 0
@@ -55,7 +50,6 @@ for true_label, sample_behaviors in tqdm(dataset, desc='Computing centrality for
     else:
         none_correct += 1
 
-# Stampa dei risultati
 total_samples = len(dataset)
 print(f"Total samples: {total_samples}")
 print(f"Correct as first choice: {correct_first} ({correct_first / total_samples:.2%})")

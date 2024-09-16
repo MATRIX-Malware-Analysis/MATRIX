@@ -24,7 +24,6 @@ def get_influential_data_components(tx):
 with driver.session() as session:
     data_components = session.execute_read(get_influential_data_components)
 
-# Stampa i risultati
 with open("Detection_Worm.txt", "a") as f:
     for data_component, influence in data_components:
         print(f'Data Component: {data_component}, Influence: {influence}')

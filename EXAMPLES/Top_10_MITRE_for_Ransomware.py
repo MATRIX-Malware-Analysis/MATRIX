@@ -28,7 +28,6 @@ with driver.session() as session:
 
 HASHES = [pattern.split('= ', 1)[1].replace(" ]", '').replace("'", "") for pattern in patterns]
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -37,7 +36,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere tutti i documenti per verifica
 query = {
     "query": {
         "match_all": {}
@@ -45,10 +43,8 @@ query = {
     "_source": ["data.id", "data.attributes.mitre_attack_techniques.id"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Conta le occorrenze di ogni tecnica MITRE ATT&CK
 mitre_techniques_counter = Counter()
 
 for hit in response['hits']['hits']:
@@ -63,10 +59,8 @@ for hit in response['hits']['hits']:
                 if technique_id:
                     mitre_techniques_counter.update([technique_id])
 
-# Ottieni le top 10 tecniche MITRE ATT&CK
 top_10_mitre_techniques = mitre_techniques_counter.most_common(10)
 
-# Stampa i risultati
 print(json.dumps(top_10_mitre_techniques, indent=4))
 
 with open("10_MITRE_Worm.txt", "w") as f:

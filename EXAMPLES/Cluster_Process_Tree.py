@@ -5,7 +5,6 @@ import json
 from neo4j import GraphDatabase
 from tqdm import tqdm
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -14,14 +13,12 @@ es = Elasticsearch(
     }]
 )
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
 
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
-# Estrazione degli indicatori
 def extract_indicators(tx):
     query = """
     MATCH (m:Malware)<-[:indicates]-(b:Indicator)
@@ -38,10 +35,8 @@ def extract_indicators(tx):
 with driver.session() as session:
     patterns = session.read_transaction(extract_indicators)
 
-# Estrarre gli hash dai pattern
 HASHES = [pattern.split('= ', 1)[1].replace(" ]", '').replace("'", "") for pattern in patterns]
 
-# Query per ottenere i documenti con processes_tree
 query = {
     "query": {
         "exists": {
@@ -51,10 +46,8 @@ query = {
     "_source": ["data.attributes.processes_tree", "data.id"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Estrazione e preparazione dei process tree
 process_trees = []
 hashes = []
 
@@ -67,7 +60,6 @@ for hit in response['hits']['hits']:
             processes_tree = data_item.get('attributes', {}).get('processes_tree', [])
             if processes_tree:  # Aggiungi questo controllo
                 hashes.append(id)
-                # Converti il process tree in una stringa univoca
                 process_tree_str = []
                 def process_to_str(process):
                     if 'name' in process:
@@ -79,23 +71,18 @@ for hit in response['hits']['hits']:
                     process_to_str(process)
                 process_trees.append(' '.join(process_tree_str))
 
-# Debug: Stampa i process_trees e hashes per verifica
 print(f"Process Trees: {process_trees}")
 print(f"Hashes: {hashes}")
 
-# Verifica se ci sono process_trees
 if not process_trees:
     print("No process trees found.")
 else:
-    # Esegui la vectorizzazione TF-IDF
     vectorizer = TfidfVectorizer(stop_words='english')
     X = vectorizer.fit_transform(process_trees)
 
-    # Clustering con KMeans
     num_clusters = 5  # Cambia il numero di cluster secondo necessità
     kmeans = KMeans(n_clusters=num_clusters, random_state=0).fit(X)
 
-    # Recupera i nomi dei malware con gli hash
     def get_malware_name(tx, hash_value):
         query = """
         MATCH (m:Malware)<-[:indicates]-(b:Indicator)
@@ -109,7 +96,6 @@ else:
             return record["malware"]
         return None
 
-    # Stampa i risultati della clusterizzazione
     with open('Cluster_by_processes.txt', 'a') as f:
         for i in range(num_clusters):
             cluster_hashes = [hashes[j] for j in range(len(hashes)) if kmeans.labels_[j] == i]

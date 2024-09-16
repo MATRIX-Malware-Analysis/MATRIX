@@ -27,7 +27,6 @@ def extract_graph(tx):
             technique_dict = eval(technique_id)
             external_id = technique_dict["external_id"]
             edges.append((malware, external_id))
-            #edges.append((record["behavior_id"], record["malware"]))
             names[external_id] = behavior
         except Exception as e:
             print(e)
@@ -39,17 +38,12 @@ with driver.session() as session:
 G = nx.DiGraph()
 G.add_edges_from(edges)
 
-# Calcola il PageRank
 page_rank = nx.pagerank(G)
 
-# Estrai solo i nodi di tipo MalwareBehavior
-# Assumiamo che gli ID dei nodi di tipo MalwareBehavior contengano "malware-behavior"
 malware_behavior_ranks = {behavior_names[node]: rank for node, rank in page_rank.items() if node in behavior_names}
 
-# Ordina i MalwareBehavior per PageRank
 sorted_behaviors = sorted(malware_behavior_ranks.items(), key=lambda item: item[1], reverse=True)
 
-# Salva i risultati su un file JSON
 output_file = "MalwareBehavior_Spyware.json"
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(sorted_behaviors, f, indent=4)
@@ -61,5 +55,4 @@ end_time = time.time()
 final_time = end_time - start_time
 
 print(f'Final Time -> {final_time}')
-# Chiudi la connessione a Neo4j
 driver.close()

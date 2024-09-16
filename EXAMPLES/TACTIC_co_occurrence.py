@@ -2,7 +2,6 @@ from neo4j import GraphDatabase
 from collections import defaultdict, Counter
 import json
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -32,7 +31,6 @@ from elasticsearch import Elasticsearch
 from collections import defaultdict
 import json
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -41,7 +39,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere documenti con tecniche MITRE ATT&CK
 query = {
     "query": {
         "exists": {"field": "data.attributes.mitre_attack_techniques.id"}
@@ -49,10 +46,8 @@ query = {
     "_source": ["data.id", "data.attributes.mitre_attack_techniques.id"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Raccogliere le tecniche MITRE dai report e mapparle alle tattiche
 tactic_sequences = []
 
 for hit in response['hits']['hits']:
@@ -63,7 +58,6 @@ for hit in response['hits']['hits']:
         if tactic_sequence:
             tactic_sequences.append(tactic_sequence)
 
-# Costruisci la matrice di co-occorrenza delle tattiche
 co_occurrence_matrix = defaultdict(lambda: defaultdict(int))
 
 for sequence in tactic_sequences:
@@ -72,7 +66,6 @@ for sequence in tactic_sequences:
             co_occurrence_matrix[sequence[i]][sequence[j]] += 1
             co_occurrence_matrix[sequence[j]][sequence[i]] += 1
 
-# Calcolo delle percentuali di co-occorrenza
 results = {}
 
 for tactic, co_occurrences in co_occurrence_matrix.items():
@@ -81,10 +74,8 @@ for tactic, co_occurrences in co_occurrence_matrix.items():
     sorted_percentages = dict(sorted(percentages.items(), key=lambda item: item[1], reverse=True))
     results[tactic] = sorted_percentages
 
-# Stampa i risultati
 print("MITRE ATT&CK Tactics e Tactics correlati:")
 print(json.dumps(results, indent=4))
 
-# Salva i risultati in un file
 with open("tactic_to_tactic_correlations.json", "w") as f:
     json.dump(results, f, indent=4)

@@ -3,14 +3,12 @@ import json
 from collections import defaultdict, Counter
 from tqdm import tqdm
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
 
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
-# Funzione per estrarre i comportamenti del malware e i loro ID esterni e obiettivi
 def extract_malware_behaviors(tx):
     query = """
     MATCH (m:Malware)-[:uses]->(b:Malware_Behavior)-[:related_to]->(o:Malware_Objective)
@@ -30,16 +28,13 @@ def extract_malware_behaviors(tx):
         behavior_objectives[external_id].append(objective)
     return malware_behaviors, behavior_objectives
 
-# Esegui la query e ottieni i comportamenti del malware
 with driver.session() as session:
     malware_behaviors, behavior_objectives = session.read_transaction(extract_malware_behaviors)
 
 print("[!] Extracting CommandLines ...")
-# Carica il file JSON contenente le CommandLines utilizzate per ogni tecnica
 with open("technique_commands_with_rules.json", 'r', encoding='utf-8') as f:
     technique_commands = json.load(f)
 
-# Conta le CommandLines utilizzate per i malware Trojan e i loro obiettivi
 commandline_counter = Counter()
 commandline_objectives = defaultdict(set)
 
@@ -55,10 +50,8 @@ for malware, external_ids in tqdm(malware_behaviors.items(), desc='Processing ma
                     for commandline in commandlines:
                         commandline_objectives[commandline].update(objectives)
 
-# Estrai le CommandLines più utilizzate
 most_common_commandlines = commandline_counter.most_common()
 
-# Stampa i risultati
 with open("CommandLines_Trojan_Objectives.txt", "w") as f:
     print("Most common CommandLines used by Trojan and their associated Objectives:")
     f.write("Most common CommandLines used by Trojan and their associated Objectives:\n")
@@ -67,5 +60,4 @@ with open("CommandLines_Trojan_Objectives.txt", "w") as f:
         print(f"{commandline}: {count} (Objectives: {associated_objectives})")
         f.write(f"{commandline}: {count} (Objectives: {associated_objectives})\n")
 
-# Chiudi la connessione a Neo4j
 driver.close()

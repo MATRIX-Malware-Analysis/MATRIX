@@ -4,12 +4,10 @@ import random
 from collections import defaultdict
 from tqdm import tqdm 
 
-# Carica i TF-IDF dal file
 input_file = "malware_behavior_importance.json"
 with open(input_file, 'r', encoding='utf-8') as f:
     malware_data = json.load(f)
 
-# Creazione di un dizionario di TF-IDF
 malware_tfidf = defaultdict(dict)
 for entry in malware_data:
     malware = entry['malware']
@@ -18,7 +16,6 @@ for entry in malware_data:
         importance = behavior_info['importance']
         malware_tfidf[malware][behavior] = importance
 
-# Creazione del dataset con tutte le combinazioni di 3 comportamenti per ogni malware
 dataset = []
 for malware, behaviors in tqdm(malware_tfidf.items(), desc='Building dataset ...'):
     behavior_list = list(behaviors.keys())
@@ -27,11 +24,9 @@ for malware, behaviors in tqdm(malware_tfidf.items(), desc='Building dataset ...
         for combo in combinations:
             dataset.append((malware, combo))
 
-# Funzione per calcolare il punteggio TF-IDF di un sample per un dato malware
 def calculate_tfidf_score(sample_behaviors, malware, malware_tfidf):
     return sum(malware_tfidf[malware].get(behavior, 0) for behavior in sample_behaviors)
 
-# Test del classificatore
 correct_first = 0
 correct_second = 0
 correct_third = 0
@@ -54,7 +49,6 @@ for true_label, sample_behaviors in tqdm(dataset, desc='Computing TFIDF for the 
     else:
         none_correct += 1
 
-# Stampa dei risultati
 total_samples = len(dataset)
 print(f"Total samples: {total_samples}")
 print(f"Correct as first choice: {correct_first} ({correct_first / total_samples:.2%})")

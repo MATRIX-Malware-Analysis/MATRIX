@@ -4,17 +4,14 @@ import random
 from collections import defaultdict, Counter
 from tqdm import tqdm
 
-# Carica i TF-IDF dal file
 tfidf_file = "malware_behavior_importance_tfidf.json"
 with open(tfidf_file, 'r', encoding='utf-8') as f:
     tfidf_data = json.load(f)
 
-# Carica i PageRank dal file
 pagerank_file = "malware_behavior_importance_pagerank.json"
 with open(pagerank_file, 'r', encoding='utf-8') as f:
     pagerank_data = json.load(f)
 
-# Creazione di un dizionario combinato di TF-IDF e PageRank
 malware_combined = defaultdict(dict)
 for entry in tfidf_data:
     malware = entry['malware']
@@ -33,7 +30,6 @@ for entry in pagerank_data:
         else:
             malware_combined[malware][behavior] = pagerank_importance
 
-# Creazione del dataset con combinazioni di 3 comportamenti per ogni malware
 dataset = []
 for malware, behaviors in tqdm(malware_combined.items(), desc='Building dataset ...'):
     behavior_list = list(behaviors.keys())
@@ -42,11 +38,9 @@ for malware, behaviors in tqdm(malware_combined.items(), desc='Building dataset 
         for combo in combinations:
             dataset.append((malware, combo))
 
-# Funzione per calcolare il punteggio combinato di un sample per un dato malware
 def calculate_combined_score(sample_behaviors, malware, malware_combined):
     return sum(malware_combined[malware].get(behavior, 0) for behavior in sample_behaviors)
 
-# Test del classificatore
 correct_first = 0
 correct_second = 0
 correct_third = 0
@@ -69,7 +63,6 @@ for true_label, sample_behaviors in tqdm(dataset, desc='Computing combined score
     else:
         none_correct += 1
 
-# Stampa dei risultati
 total_samples = len(dataset)
 print(f"Total samples: {total_samples}")
 print(f"Correct as first choice: {correct_first} ({correct_first / total_samples:.2%})")

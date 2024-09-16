@@ -5,13 +5,11 @@ from neo4j import GraphDatabase
 from sklearn.metrics import jaccard_score
 import json
 
-# Database connection details
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
-# Funzione per estrarre indicatori da Neo4j
 def extract_indicators(tx):
     query = """
     MATCH (m:Malware)<-[:indicates]-(b:Indicator)
@@ -25,14 +23,11 @@ def extract_indicators(tx):
         patterns.append(pattern)
     return patterns
 
-# Estrai indicatori da Neo4j
 with driver.session() as session:
     patterns = session.execute_read(extract_indicators)
 
-# Estrai hash dagli indicatori
 HASHES = [pattern.split('= ', 1)[1].replace(" ]", '').replace("'", "") for pattern in tqdm(patterns, desc='Extract Hashes ...')]
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -41,7 +36,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere documenti con tecniche MITRE ATT&CK e chiamate evidenziate
 query = {
     "query": {
         "bool": {
@@ -54,14 +48,11 @@ query = {
     "_source": ["data.id", "data.attributes.mitre_attack_techniques.id", "data.attributes.calls_highlighted"]
 }
 
-# Esegui la query su Elasticsearch
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Dizionario per correlare hash e calls_highlighted
 hash_to_calls = {}
 
 print(f"Total number of Results -> {len(response['hits']['hits'])}")
-# Costruisci il dizionario hash -> calls_highlighted
 for hit in response['hits']['hits']:
     data_list = hit['_source'].get('data', [])
     for data_item in data_list:
@@ -73,13 +64,11 @@ for hit in response['hits']['hits']:
                 if calls_highlighted:
                     hash_to_calls[doc_id] = set(calls_highlighted)  # Usare set per la similarità
 
-# Funzione per calcolare la Jaccard Similarity tra due insiemi
 def jaccard_similarity(set1, set2):
     if not set1 and not set2:
         return 1.0  # Se entrambi gli insiemi sono vuoti, sono identici
     return len(set1.intersection(set2)) / len(set1.union(set2))
 
-# Genera coppie di hash e calcola la similarità tra le calls_highlighted
 hash_pairs_similarity = []
 hashes = list(hash_to_calls.keys())
 
@@ -91,16 +80,13 @@ for i in range(len(hashes)):
         common_calls = calls1.intersection(calls2)
         hash_pairs_similarity.append((hash1, hash2, similarity, common_calls))
 
-# Ordina le coppie per similarità decrescente
 hash_pairs_similarity.sort(key=lambda x: x[2], reverse=True)
 
-# Stampa le prime 10 coppie più simili e le loro chiamate in comune
 print("Top 10 most similar hash pairs based on calls_highlighted:")
 for hash1, hash2, similarity, common_calls in hash_pairs_similarity[:10]:
     print(f"{hash1} - {hash2}: Similarity = {similarity:.2f}")
     print(f"Common calls_highlighted: {common_calls}\n")
 
-# Salva i risultati in un file JSON
 results = []
 for hash1, hash2, similarity, common_calls in hash_pairs_similarity:
     results.append({

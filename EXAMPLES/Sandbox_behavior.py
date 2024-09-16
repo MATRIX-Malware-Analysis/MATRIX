@@ -4,7 +4,6 @@ import json
 from collections import Counter
 
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -13,7 +12,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere comportamenti in diverse sandbox
 query = {
     "query": {
         "exists": {
@@ -23,10 +21,8 @@ query = {
     "_source": ["data.attributes.sandbox_name", "data.attributes.processes_tree"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Aggrega i comportamenti per sandbox
 sandbox_behaviors = defaultdict(list)
 
 for hit in response['hits']['hits']:
@@ -37,7 +33,6 @@ for hit in response['hits']['hits']:
         processes_tree = attributes.get('processes_tree', [])
         sandbox_behaviors[sandbox_name].append(processes_tree)
 
-# Confronta i comportamenti tra sandbox
 for sandbox, behaviors in sandbox_behaviors.items():
     print(f"Sandbox: {sandbox}")
     process_counter = Counter()

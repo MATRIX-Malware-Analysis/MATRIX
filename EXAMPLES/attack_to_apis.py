@@ -2,13 +2,10 @@ import os
 import yaml
 import json
 
-# Directory principale contenente le capa-rules
 base_dir = os.path.expanduser("~/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/capa-rules/")
 
-# Dizionario per contenere le associazioni ATT&CK -> APIs
 attack_to_apis = {}
 
-# Funzione per estrarre tecniche ATT&CK e API da una capa-rule
 def process_rule(rule):
     attack_techniques = rule.get('meta', {}).get('att&ck', [])
     features = rule.get('features', [])
@@ -41,7 +38,6 @@ def process_rule(rule):
             attack_to_apis[technique_name] = set()
         attack_to_apis[technique_name].update(apis)
 
-# Legge ricorsivamente tutti i file YAML nelle sottodirectory di base_dir
 for root, dirs, files in os.walk(base_dir):
     for filename in files:
         if filename.endswith(".yml") or filename.endswith(".yaml"):
@@ -54,10 +50,8 @@ for root, dirs, files in os.walk(base_dir):
                 except yaml.YAMLError as e:
                     print(f"Errore nel leggere il file {filepath}: {e}")
 
-# Convertire i set di API in liste e preparare il dizionario finale
 final_attack_to_apis = {k: list(v) for k, v in attack_to_apis.items()}
 
-# Scrivere il dizionario in un file JSON
 output_filepath = os.path.expanduser("attack_to_apis.json")
 with open(output_filepath, 'w') as json_file:
     json.dump(final_attack_to_apis, json_file, indent=4)

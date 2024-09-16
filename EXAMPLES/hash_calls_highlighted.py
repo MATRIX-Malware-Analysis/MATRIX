@@ -2,7 +2,6 @@ from elasticsearch import Elasticsearch
 from collections import defaultdict, Counter
 import json
 import time
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -11,7 +10,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere documenti con tecniche MITRE ATT&CK e chiamate evidenziate
 query = {
     "query": {
         "bool": {
@@ -25,10 +23,8 @@ query = {
 }
 
 start_time = time.time()
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Analisi delle tecniche MITRE ATT&CK e chiamate evidenziate
 technique_to_calls_counter = defaultdict(Counter)
 
 for hit in response['hits']['hits']:
@@ -43,7 +39,6 @@ for hit in response['hits']['hits']:
                 for call in calls_highlighted:
                     technique_to_calls_counter[technique_id].update([call])
 
-# Calcolo delle percentuali
 results = {}
 for technique, counter in technique_to_calls_counter.items():
     total = sum(counter.values())
@@ -51,11 +46,9 @@ for technique, counter in technique_to_calls_counter.items():
     results[technique] = percentages
 
 end_time = time.time()
-# Stampa i risultati
 print("MITRE ATT&CK Techniques e Calls Highlighted correlati:")
 print(json.dumps(results, indent=4))
 
-# Salva i risultati in un file
 with open("technique_to_calls_correlations.json", "w") as f:
     json.dump(results, f, indent=4)
 

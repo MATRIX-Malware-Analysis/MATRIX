@@ -2,7 +2,6 @@ from neo4j import GraphDatabase
 from collections import defaultdict
 import json
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -33,7 +32,6 @@ from elasticsearch import Elasticsearch
 from collections import defaultdict, Counter
 import json
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -42,7 +40,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere documenti con tecniche MITRE ATT&CK e mutexes creati
 query = {
     "query": {
         "bool": {
@@ -55,10 +52,8 @@ query = {
     "_source": ["data.id", "data.attributes.mitre_attack_techniques.id", "data.attributes.mutexes_created"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Analisi delle tecniche MITRE ATT&CK e operazioni sui mutexes
 tactic_to_mutex_counter = defaultdict(Counter)
 
 for hit in response['hits']['hits']:
@@ -75,17 +70,14 @@ for hit in response['hits']['hits']:
                     if mutex:
                         tactic_to_mutex_counter[tactic_name].update([mutex])
 
-# Calcolo delle percentuali
 results = {}
 for tactic, counter in tactic_to_mutex_counter.items():
     total = sum(counter.values())
     percentages = {mutex: f"{(count / total) * 100:.2f}%" for mutex, count in counter.items()}
     results[tactic] = percentages
 
-# Stampa i risultati
 print("MITRE ATT&CK Tactics e Mutexes creati correlati:")
 print(json.dumps(results, indent=4))
 
-# Salva i risultati in un file
 with open("tactic_to_mutexes_created_correlations.json", "w") as f:
     json.dump(results, f, indent=4)

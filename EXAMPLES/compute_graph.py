@@ -8,7 +8,6 @@ from torch_geometric.nn import GCNConv
 import torch.nn as nn
 import torch.optim as optim
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -30,14 +29,11 @@ with driver.session() as session:
 G = nx.Graph()
 G.add_edges_from(edges)
 
-# Converti il grafo in un formato utilizzabile da PyTorch Geometric
 data = from_networkx(G)
 
-# Dummy node features and labels (da modificare con dati reali)
 data.x = torch.randn((G.number_of_nodes(), 16))  # 16-dimension feature vector for each node
 data.y = torch.randint(0, 2, (G.number_of_nodes(),))  # Binary labels for each node
 
-# Masks for training and testing (da modificare con dati reali)
 data.train_mask = torch.rand(G.number_of_nodes()) < 0.8
 data.test_mask = ~data.train_mask
 
@@ -66,11 +62,9 @@ class GCN(torch.nn.Module):
 
 model = GCN()
 
-# Definisci la funzione di perdita e l'ottimizzatore
 loss_fn = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
 
-# Addestramento del modello
 model.train()
 for epoch in range(200):
     optimizer.zero_grad()
@@ -80,7 +74,6 @@ for epoch in range(200):
     optimizer.step()
     print(f'Epoch {epoch+1}, Loss: {loss.item()}')
 
-# Valutazione del modello
 model.eval()
 _, pred = model(data).max(dim=1)
 correct = (pred[data.test_mask] == data.y[data.test_mask]).sum()

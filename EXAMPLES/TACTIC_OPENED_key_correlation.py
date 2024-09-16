@@ -1,7 +1,6 @@
 from neo4j import GraphDatabase
 from collections import defaultdict
 import json
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -34,7 +33,6 @@ from elasticsearch import Elasticsearch
 from collections import defaultdict, Counter
 import json
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -43,7 +41,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere documenti con tecniche MITRE ATT&CK e modifiche al registro
 query = {
     "query": {
         "bool": {
@@ -56,10 +53,8 @@ query = {
     "_source": ["data.id", "data.attributes.mitre_attack_techniques.id", "data.attributes.registry_keys_opened"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Analisi delle tecniche MITRE ATT&CK e operazioni sul registro
 tactic_to_registry_counter = defaultdict(Counter)
 
 for hit in response['hits']['hits']:
@@ -79,17 +74,14 @@ for hit in response['hits']['hits']:
                         if main_key != "":
                             tactic_to_registry_counter[tactic_name].update([main_key])
 
-# Calcolo delle percentuali
 results = {}
 for tactic, counter in tactic_to_registry_counter.items():
     total = sum(counter.values())
     percentages = {key: f"{(count / total) * 100:.2f}%" for key, count in counter.items()}
     results[tactic] = percentages
 
-# Stampa i risultati
 print("MITRE ATT&CK Tactics e Registry Keys correlati:")
 print(json.dumps(results, indent=4))
 
-# Salva i risultati in un file
 with open("tactic_spyware_to_main_opened_registry_correlations_NEW.json", "w") as f:
     json.dump(results, f, indent=4)

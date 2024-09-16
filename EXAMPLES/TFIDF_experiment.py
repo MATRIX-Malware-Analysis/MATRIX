@@ -3,7 +3,6 @@ from collections import defaultdict
 import json
 import math
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -32,7 +31,6 @@ def extract_data(tx):
 with driver.session() as session:
     malware_behaviors, behavior_counts, malware_counts = session.read_transaction(extract_data)
 
-# Calcolo del TF-IDF
 total_malwares = len(malware_counts)
 malware_behavior_importance = defaultdict(dict)
 
@@ -43,7 +41,6 @@ for malware, behaviors in malware_behaviors.items():
         tf_idf = tf * idf
         malware_behavior_importance[malware][behavior] = tf_idf
 
-# Creazione del dataset JSON
 malware_data = []
 for malware, behaviors in malware_behavior_importance.items():
     behavior_list = [{"behavior": behavior, "importance": importance} for behavior, importance in behaviors.items()]
@@ -55,5 +52,4 @@ with open(output_file, 'w', encoding='utf-8') as f:
 
 print(f"Results saved to {output_file}")
 
-# Chiusura della connessione a Neo4j
 driver.close()

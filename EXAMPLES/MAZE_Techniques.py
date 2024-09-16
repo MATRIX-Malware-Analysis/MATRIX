@@ -29,7 +29,6 @@ with driver.session() as session:
 
 HASHES = [pattern.split('= ', 1)[1].replace(" ]", '').replace("'", "") for pattern in patterns]
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -38,7 +37,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere tutti i documenti per verifica
 query = {
     "query": {
         "match_all": {}
@@ -46,10 +44,8 @@ query = {
     "_source": ["data.id", "data.attributes.mitre_attack_techniques.id"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Conta le occorrenze di ogni tecnica MITRE ATT&CK
 mitre_techniques_counter = Counter()
 
 for hit in response['hits']['hits']:
@@ -64,10 +60,8 @@ for hit in response['hits']['hits']:
                 if technique_id:
                     mitre_techniques_counter.update([technique_id])
 
-# Ottieni le top 10 tecniche MITRE ATT&CK
 top_10_mitre_techniques = mitre_techniques_counter.most_common(100)
 
-# Stampa i risultati
 print(json.dumps(top_10_mitre_techniques, indent=4))
 
 with open("MITRE_MAZE.txt", "w") as f:
@@ -90,17 +84,14 @@ with driver.session() as session:
     behaviors = session.read_transaction(get_techniques)
 
 mitre_official_techniques = behaviors
-# Frequenza delle tecniche MITRE ufficiali (assumendo distribuzione uniforme)
 official_technique_counts = Counter(mitre_official_techniques)
 total_official_counts = sum(official_technique_counts.values())
 official_technique_importance = {technique: count / total_official_counts for technique, count in official_technique_counts.items()}
 
-# Frequenza delle tecniche estratte dai rapporti
 extracted_techniques_counts = Counter({technique: count for technique, count in top_10_mitre_techniques})
 total_extracted_counts = sum(extracted_techniques_counts.values())
 extracted_technique_importance = {technique: count / total_extracted_counts for technique, count in extracted_techniques_counts.items()}
 
-# Confronto delle tecniche estratte con quelle ufficiali
 extracted_techniques = [technique for technique in extracted_techniques_counts]
 missing_techniques = set(mitre_official_techniques) - set(extracted_techniques)
 additional_techniques = set(extracted_techniques) - set(mitre_official_techniques)
@@ -108,32 +99,25 @@ additional_techniques = set(extracted_techniques) - set(mitre_official_technique
 print("Techniche MITRE ATT&CK mancanti:", missing_techniques)
 print("Techniche MITRE ATT&CK aggiuntive:", additional_techniques)
 
-# Creazione del grafico a barre per importanza delle tecniche estratte vs ufficiali
 fig, ax = plt.subplots(figsize=(12, 8))
 
-# Importanza delle tecniche estratte
 extracted_techniques_sorted = sorted(extracted_technique_importance.items(), key=lambda x: x[1], reverse=True)
 techniques, importance = zip(*extracted_techniques_sorted)
 ax.barh(techniques, importance, color='skyblue', label='Estratto dai rapporti')
 
-# Importanza delle tecniche ufficiali (aggiungere zero per le tecniche mancanti)
 official_importance_sorted = [official_technique_importance.get(technique, 0) for technique in techniques]
 ax.barh(techniques, official_importance_sorted, color='orange', alpha=0.5, label='MITRE ufficiali')
 
-# Aggiungi etichette e titolo
 ax.set_xlabel('Importanza')
 ax.set_title('Importanza delle Tecniche MITRE ATT&CK: Estratte dai Rapporti vs Ufficiali')
 ax.legend()
 plt.gca().invert_yaxis()
 plt.tight_layout()
 
-# Salva il grafico come immagine
 plt.savefig("MITRE_Techniques_Importance_Comparison.png")
 
-# Mostra il grafico
 plt.show()
 
-# Salva i dati in un file JSON per analisi aggiuntive
 comparison_data = {
     "extracted_techniques": extracted_techniques_sorted,
     "official_importance": official_importance_sorted

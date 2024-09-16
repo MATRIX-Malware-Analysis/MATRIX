@@ -3,14 +3,12 @@ import json
 from collections import defaultdict, Counter
 from tqdm import tqdm
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
 
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
-# Funzione per categorizzare il malware in base alla descrizione
 def categorize_malware(description):
     description = description.lower()
     if 'ransomware' in description:
@@ -27,7 +25,6 @@ def categorize_malware(description):
         return 'downloader'
     return 'unknown'
 
-# Funzione per estrarre i comportamenti del malware con focus su "Discovery"
 def extract_malware_behaviors(tx):
     query = """
     MATCH (m:Malware)-[:uses]->(b:Malware_Behavior)-[:related_to]->(o:Malware_Objective)
@@ -53,7 +50,6 @@ def extract_malware_behaviors(tx):
         external_id = technique_dict["external_id"]
         objective = record["objective"]
         
-        # Categorizza il malware
         category = categorize_malware(description)
         malware_behaviors[malware].append(external_id)
         behavior_objectives[external_id].append(objective)
@@ -61,16 +57,13 @@ def extract_malware_behaviors(tx):
         
     return malware_behaviors, behavior_objectives, malware_categories
 
-# Esegui la query e ottieni i comportamenti del malware relativi all'obiettivo "Discovery"
 with driver.session() as session:
     malware_behaviors, behavior_objectives, malware_categories = session.read_transaction(extract_malware_behaviors)
 
 print("[!] Extracting APIs ...")
-# Carica il file JSON contenente le API utilizzate per ogni tecnica
 with open("attack_to_apis.json", 'r', encoding='utf-8') as f:
     attack_to_apis = json.load(f)
 
-# Conta le API utilizzate per ciascuna categoria di malware per l'obiettivo "Discovery"
 api_counter_per_category = defaultdict(Counter)
 api_objectives_per_category = defaultdict(lambda: defaultdict(set))
 
@@ -85,7 +78,6 @@ for category, malwares in malware_categories.items():
                 for api in apis:
                     api_objectives_per_category[category][api].update(objectives)
 
-# Estrai le API più utilizzate per ciascuna categoria, salva le prime 15 e calcola la percentuale sui top 50%
 with open("Discovery_APIs_Per_Category_Percentages_Top50.txt", "w") as f:
     print("Most common APIs (Top 15) used by each malware category for the 'Discovery' objective (with percentages):")
     f.write("Most common APIs (Top 15) used by each malware category for the 'Discovery' objective (with percentages):\n")
@@ -94,11 +86,9 @@ with open("Discovery_APIs_Per_Category_Percentages_Top50.txt", "w") as f:
         f.write(f"\nMalware Category: {category.capitalize()}\n")
         f.write("-----------------------------\n")
         
-        # Ordina le API per il loro conteggio
         most_common_apis = api_counter.most_common()
         total_apis = sum(api_counter.values())  # Calcola il totale delle API per la categoria
         
-        # Calcola il 50% superiore
         cumulative_count = 0
         top_50_percent_apis = []
         
@@ -108,10 +98,8 @@ with open("Discovery_APIs_Per_Category_Percentages_Top50.txt", "w") as f:
             if cumulative_count >= total_apis * 0.10:
                 break
 
-        # Calcola il totale delle API selezionate (top 50%)
         total_top_50_apis = sum(count for _, count in top_50_percent_apis)
 
-        # Ora salva le prime 15 API e calcola la percentuale in base al top 50% delle API
         top_15_apis = top_50_percent_apis[:15]  # Seleziona le prime 15 API dalle top 50%
 
         for api, count in top_15_apis:
@@ -120,5 +108,4 @@ with open("Discovery_APIs_Per_Category_Percentages_Top50.txt", "w") as f:
             f.write(f"{api}: {percentage:.2f}% (Objectives: {associated_objectives})\n")
             print(f"{category.capitalize()} -> {api}: {percentage:.2f}% (Objectives: {associated_objectives})\n")
 
-# Chiudi la connessione a Neo4j
 driver.close()

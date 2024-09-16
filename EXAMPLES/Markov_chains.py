@@ -2,11 +2,9 @@ import numpy as np
 import json
 import heapq
 
-# Carica la matrice di co-occorrenza
 with open("co_occurrence_matrix.json", "r") as f:
     co_occurrence_matrix = json.load(f)
 
-# Normalizza la matrice di co-occorrenza per ottenere le probabilità di transizione
 def normalize_co_occurrence_matrix(co_occurrence_matrix):
     transition_matrix = {}
     for key, neighbors in co_occurrence_matrix.items():
@@ -16,9 +14,7 @@ def normalize_co_occurrence_matrix(co_occurrence_matrix):
 
 transition_matrix = normalize_co_occurrence_matrix(co_occurrence_matrix)
 
-# Funzione per generare i 3 percorsi più probabili usando un modello di Markov
 def top_k_markov_sequences(transition_matrix, start_technique, k=3, max_length=5, repeat_penalty=0.2):
-    # Usare un heap per memorizzare i percorsi più probabili
     heap = []
     heapq.heappush(heap, (-1.0, [start_technique]))  # (-probabilità, percorso)
     
@@ -41,7 +37,6 @@ def top_k_markov_sequences(transition_matrix, start_technique, k=3, max_length=5
                 if tech in current_sequence:
                     probabilities[i] *= repeat_penalty
 
-            # Normalizza le probabilità
             probabilities_sum = sum(probabilities)
             probabilities = [p / probabilities_sum for p in probabilities]
 
@@ -50,14 +45,12 @@ def top_k_markov_sequences(transition_matrix, start_technique, k=3, max_length=5
                 new_sequence = current_sequence + [tech]
                 heapq.heappush(heap, (-new_prob, new_sequence))
                 
-                # Se la sequenza è completa o non può essere estesa ulteriormente
                 if len(new_sequence) >= max_length or not transition_matrix.get(tech):
                     top_k_paths.append((new_sequence, new_prob))
                     top_k_paths = sorted(top_k_paths, key=lambda x: x[1], reverse=True)[:k]
     
     return top_k_paths
 
-# Definisci la tecnica di partenza
 start_technique = 'T1129'
 top_3_paths = top_k_markov_sequences(transition_matrix, start_technique, max_length=5)
 

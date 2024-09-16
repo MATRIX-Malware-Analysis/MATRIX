@@ -4,7 +4,6 @@ from networkx.algorithms.community import louvain_communities
 from collections import Counter
 import json
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -44,7 +43,6 @@ with driver.session() as session:
 G = nx.Graph()
 G.add_edges_from(edges)
 
-# Algoritmo di clustering Louvain
 communities = louvain_communities(G)
 
 community_results = []
@@ -69,12 +67,10 @@ for i, community in enumerate(communities):
         "top_behaviors": top_behaviors
     })
 
-# Salva i risultati in un file JSON
 output_file = "Campaign_community_results_MalwareBahvior.json"
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(community_results, f, indent=4)
 
 print(f"Results saved to {output_file}")
 
-# Chiusura della connessione a Neo4j
 driver.close()

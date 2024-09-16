@@ -5,7 +5,6 @@ user = "neo4j"
 password = "malware_profiler"
 
 driver = GraphDatabase.driver(uri, auth=(user, password))
-#AND (i.description CONTAINS 'China' OR i.description CONTAINS 'china')
 def get_influential_intrusion_sets(tx):
     query = """
     MATCH (m:Malware)-[:uses]->(b:Malware_Behavior)<-[:uses]-(i:Intrusion_Set)
@@ -24,7 +23,6 @@ def get_influential_intrusion_sets(tx):
 with driver.session() as session:
     intrusion_sets = session.execute_read(get_influential_intrusion_sets)
 
-# Stampa i risultati
 with open("IntrusionSet_Spyware.txt", "a") as f:
     for intrusion_set, influence in intrusion_sets:
         print(f'Intrusion Set: {intrusion_set}, Influence: {influence}')

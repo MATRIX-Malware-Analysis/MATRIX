@@ -113,7 +113,7 @@ def load_relationships(directory):
 
 # Main function to start loading elements and relationships into the database
 def main():
-    base_path = "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/ELEMENTS2"
+    base_path = "./SDOs"
     
     # List of node labels to load
     labels = [

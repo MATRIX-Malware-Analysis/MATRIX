@@ -3,10 +3,8 @@ import yaml
 import json
 from collections import defaultdict
 
-# Percorso alla directory contenente le regole Sigma
 sigma_rules_dir = "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules"
 
-# Funzione per attraversare tutte le sottodirectory e file YAML
 def parse_sigma_rules(directory):
     technique_commands = defaultdict(list)
 
@@ -36,10 +34,8 @@ def parse_sigma_rules(directory):
 
     return technique_commands
 
-# Parsing delle regole Sigma
 technique_commands = parse_sigma_rules(sigma_rules_dir)
 
-# Creazione del file JSON con i comandi per ogni tecnica
 output_file = "technique_commands_with_rules.json"
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(technique_commands, f, indent=4)

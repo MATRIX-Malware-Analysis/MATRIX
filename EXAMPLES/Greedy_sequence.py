@@ -1,11 +1,9 @@
 import numpy as np
 import json
 
-# Carica la matrice di co-occorrenza
 with open("co_occurrence_matrix.json", "r") as f:
     co_occurrence_matrix = json.load(f)
 
-# Funzione per generare una sequenza usando un approccio greedy
 def generate_greedy_sequence(co_occurrence_matrix, start_technique, max_length=20):
     current_technique = start_technique
     sequence = [current_technique]
@@ -24,7 +22,6 @@ def generate_greedy_sequence(co_occurrence_matrix, start_technique, max_length=2
 
     return sequence
 
-# Definisci la tecnica di partenza
 start_technique = 'T1082'
 sequence = generate_greedy_sequence(co_occurrence_matrix, start_technique)
 

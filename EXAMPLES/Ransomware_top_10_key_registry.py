@@ -4,7 +4,6 @@ import json
 from neo4j import GraphDatabase
 from tqdm import tqdm
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -29,7 +28,6 @@ with driver.session() as session:
 
 HASHES = [pattern.split('= ', 1)[1].replace(" ]", '').replace("'", "") for pattern in patterns]
 
-# Connessione a Elasticsearch
 es = Elasticsearch(
     hosts=[{
         'host': 'localhost',
@@ -38,7 +36,6 @@ es = Elasticsearch(
     }]
 )
 
-# Query per ottenere documenti con registry_keys_set
 query = {
     "query": {
         "exists": {
@@ -48,10 +45,8 @@ query = {
     "_source": ["data.id", "data.attributes.registry_keys_set"]
 }
 
-# Esegui la query
 response = es.search(index="malware_reports", body=query, size=10000)
 
-# Conta le occorrenze di ogni chiave di registro impostata
 registry_keys_counter = Counter()
 
 for hit in response['hits']['hits']:
@@ -66,10 +61,8 @@ for hit in response['hits']['hits']:
                 if key and "ffffffffffffffffffffffffffffff" not in key:
                     registry_keys_counter.update([key])
 
-# Ottieni le top 10 chiavi di registro impostate
 top_10_registry_keys_set = registry_keys_counter.most_common(10)
 
-# Stampa i risultati
 print(json.dumps(top_10_registry_keys_set, indent=4))
 
 with open('Top_10_Spyware_set_Registry.txt', 'w') as f:

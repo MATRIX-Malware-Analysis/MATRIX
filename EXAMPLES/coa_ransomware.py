@@ -25,7 +25,6 @@ def get_influential_course_of_action(tx):
 with driver.session() as session:
     actions = session.execute_read(get_influential_course_of_action)
 
-# Stampa i risultati
 with open("CoA_Trojan.txt", "a") as f:
     for course_of_action, influence in actions:
         print(f'Course of Action: {course_of_action}, Influence: {influence}')

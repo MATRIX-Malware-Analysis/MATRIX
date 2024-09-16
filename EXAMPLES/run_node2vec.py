@@ -12,7 +12,6 @@ import json
 import itertools
 import csv
 
-# Connessione a Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
@@ -41,12 +40,10 @@ with driver.session() as session:
 G = nx.Graph()
 G.add_edges_from(edges)
 
-# Node2Vec embedding
 node2vec = Node2Vec(G, dimensions=64, walk_length=30, num_walks=200, workers=4)
 print("[!] Node2Vec model fitting ...")
 model = node2vec.fit(window=10, min_count=1, batch_words=4)
 
-# Creazione del dataset con combinazioni di 3 comportamenti per ogni malware
 X = []
 y = []
 for malware, behaviors in tqdm(malware_behaviors.items(), desc='Building Dataset ...'):
@@ -62,7 +59,6 @@ for malware, behaviors in tqdm(malware_behaviors.items(), desc='Building Dataset
 X = np.array(X)
 y = np.array(y)
 
-# Salva il dataset su file
 dataset_file = "malware_dataset.csv"
 with open(dataset_file, 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
@@ -72,10 +68,8 @@ with open(dataset_file, 'w', newline='') as csvfile:
 
 print(f"Dataset saved to {dataset_file}")
 
-# Divisione dei dati in training e test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Lista dei modelli da testare
 models = {
     "RandomForest": RandomForestClassifier(n_estimators=100, random_state=42),
     "SVM": SVC(probability=True, random_state=42),
@@ -83,7 +77,6 @@ models = {
     "GradientBoosting": GradientBoostingClassifier(n_estimators=100, random_state=42)
 }
 
-# Addestramento e valutazione dei modelli
 for model_name, model in tqdm(models.items()):
     print(f"Training {model_name}...")
     model.fit(X_train, y_train)
@@ -91,7 +84,6 @@ for model_name, model in tqdm(models.items()):
     print(f"Classification Report for {model_name}:")
     print(classification_report(y_test, y_pred))
 
-# Creazione del file behaviors_input.json
 behaviors_input = []
 for malware, behaviors in malware_behaviors.items():
     if len(behaviors) >= 3:
@@ -100,7 +92,6 @@ for malware, behaviors in malware_behaviors.items():
 with open("behaviors_input.json", 'w') as f:
     json.dump(behaviors_input, f, indent=4)
 
-# Funzione per predire malware data una lista di comportamenti
 def predict_malware(model, behaviors):
     behavior_embeddings = []
     for behavior in behaviors:
@@ -115,7 +106,6 @@ def predict_malware(model, behaviors):
     top_malware = [(model.classes_[i], probabilities[i]) for i in top_malware_indices]
     return top_malware
 
-# Test con comportamenti da un file
 input_file = "behaviors_input.json"
 with open(input_file, 'r') as f:
     behaviors_list = json.load(f)
@@ -128,5 +118,4 @@ for model_name, model in models.items():
         for malware, prob in top_malware:
             print(f"  - {malware}: {prob:.4f}")
 
-# Chiudi la connessione a Neo4j
 driver.close()

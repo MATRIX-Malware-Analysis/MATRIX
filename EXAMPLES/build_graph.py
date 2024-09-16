@@ -3,15 +3,11 @@ import os
 import json
 from tqdm import tqdm
 
-# Connessione al database Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
-# def read_json_file(file_path):
-#     with open(file_path, 'r', encoding='utf-8') as file:
-#         return json.load(file)
 def read_json_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -29,18 +25,14 @@ def flatten_dict(d, parent_key='', sep='_'):
     
     for k, v in d.items():
         if parent_key:
-            # Raggruppiamo tutto sotto lo stesso parent_key
             if parent_key not in items:
                 items[parent_key] = {}
             items[parent_key][k] = v
         else:
             if isinstance(v, dict):
-                # Ricorsivamente flattiamo i dizionari annidati
                 items.update(flatten_dict(v, k, sep))
             elif isinstance(v, list):
-                # Per le liste, flattiamo ogni elemento
                 for index, item in enumerate(v):
-                    # Controlla se item è un dizionario prima di chiamare flatten_dict
                     if isinstance(item, dict):
                         items.update(flatten_dict(item, f"{k}{sep}{index}", sep))
                     else:
@@ -48,7 +40,6 @@ def flatten_dict(d, parent_key='', sep='_'):
             else:
                 items[k] = v
 
-    # Se abbiamo raggruppato campi sotto lo stesso parent_key, stringifichiamo il risultato
     if parent_key and isinstance(items[parent_key], dict):
         return {parent_key: json.dumps(items[parent_key])}
     else:
@@ -111,17 +102,14 @@ def load_relationships(directory):
 def main():
     base_path = "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/ELEMENTS2"
     
-    # Lista delle etichette dei nodi da caricare
     labels = [
         "Malware", "Malware_Behavior", "Malware_Objective", "Course_of_Action",
         "Intrusion_Set", "Campaign", "Tool", "Data_Source", "Data_Component",
         "Malware_Method", "Indicator", "Vulnerabilities", "Weaknesses", "Exploit"
     ]
     
-    # Caricamento dei nodi
     load_elements(base_path, labels)
 
-    # Caricamento delle relazioni
     load_relationships(os.path.join(base_path, "Relationships"))
 
 if __name__ == "__main__":

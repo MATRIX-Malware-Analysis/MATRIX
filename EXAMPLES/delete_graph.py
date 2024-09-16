@@ -1,6 +1,5 @@
 from neo4j import GraphDatabase
 
-# Connessione al database Neo4j
 uri = "bolt://localhost:7688"
 user = "neo4j"
 password = "malware_profiler"
