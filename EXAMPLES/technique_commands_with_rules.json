@@ -1,0 +1,4380 @@
+{
+    "T1083": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_susp_find_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-perm -4000",
+                "-perm -2000",
+                "-perm 0777",
+                "-perm -222",
+                "-perm -o w",
+                "-perm -o x",
+                "-perm -u=s",
+                "-perm -g=s"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_susp_find_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-perm -4000",
+                "-perm -2000",
+                "-perm 0777",
+                "-perm -222",
+                "-perm -o w",
+                "-perm -o x",
+                "-perm -u=s",
+                "-perm -g=s"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_gtfobin_apt.yml",
+            "key": "CommandLine|contains",
+            "values": "APT::Update::Pre-Invoke::="
+        }
+    ],
+    "T1059/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_suspicious_applet_behaviour.yml",
+            "key": "CommandLine|contains",
+            "values": "osacompile"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_applescript.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -e ",
+                ".scpt",
+                ".js"
+            ]
+        }
+    ],
+    "T1105": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_nscurl_usage.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "--download ",
+                "--download-directory ",
+                "--output ",
+                "-dir ",
+                "-dl ",
+                "-ld",
+                "-o "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_gfxdownloadwrapper_arbitrary_file_download.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "http://",
+                "https://"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_download_cradles.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                ".DownloadString(",
+                ".DownloadFile(",
+                "Invoke-WebRequest ",
+                "iwr "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_desktopimgdownldr_remote_file_download.yml",
+            "key": "CommandLine|contains",
+            "values": "/lockscreenurl:http"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_browsers_chromium_headless_exec.yml",
+            "key": "CommandLine|contains",
+            "values": "--headless"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_download_dll.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Invoke-WebRequest ",
+                "IWR "
+            ]
+        }
+    ],
+    "T1518/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_csrutil_disable.yml",
+            "key": "CommandLine|contains",
+            "values": "disable"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_csrutil_status.yml",
+            "key": "CommandLine|contains",
+            "values": "status"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_security_software_discovery.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "nessusd",
+                "td-agent",
+                "packetbeat",
+                "filebeat",
+                "auditbeat",
+                "osqueryd",
+                "cbagentd",
+                "falcond"
+            ]
+        }
+    ],
+    "T1543/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_persistence_via_plistbuddy.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "LaunchAgents",
+                "LaunchDaemons"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_launchctl_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "submit",
+                "load",
+                "start"
+            ]
+        }
+    ],
+    "T1543/004": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_persistence_via_plistbuddy.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "LaunchAgents",
+                "LaunchDaemons"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_launchctl_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "submit",
+                "load",
+                "start"
+            ]
+        }
+    ],
+    "T1053/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_schedule_task_job_cron.yml",
+            "key": "CommandLine|contains",
+            "values": "/tmp/"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_schedule_task_job_cron.yml",
+            "key": "CommandLine|contains",
+            "values": "/tmp/"
+        }
+    ],
+    "T1552/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_susp_histfile_operations.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                ".bash_history",
+                ".zsh_history",
+                ".zhistory",
+                ".history",
+                ".sh_history",
+                "fish_history"
+            ]
+        }
+    ],
+    "T1027": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_base64_decode.yml",
+            "key": "CommandLine|contains",
+            "values": "-d"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_ping_hex_ip.yml",
+            "key": "CommandLine|contains",
+            "values": "0x"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_invoke_obfuscation_clip.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/c",
+                "/r"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_obfuscation_via_utf8.yml",
+            "key": "CommandLine|contains",
+            "values": "(WCHAR)0x"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_invoke_obfuscation_via_var.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "{0}",
+                "{1}",
+                "{2}",
+                "{3}",
+                "{4}",
+                "{5}"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_invoke_obfuscation_via_compress.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "system.io.compression.deflatestream",
+                "system.io.streamreader",
+                "readtoend("
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_base64_reflection_assembly_load_obfusc.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "OgA6ACgAIgBMACIAKwAiAG8AYQBkACIAKQ",
+                "oAOgAoACIATAAiACsAIgBvAGEAZAAiACkA",
+                "6ADoAKAAiAEwAIgArACIAbwBhAGQAIgApA",
+                "OgA6ACgAIgBMAG8AIgArACIAYQBkACIAKQ",
+                "oAOgAoACIATABvACIAKwAiAGEAZAAiACkA",
+                "6ADoAKAAiAEwAbwAiACsAIgBhAGQAIgApA",
+                "OgA6ACgAIgBMAG8AYQAiACsAIgBkACIAKQ",
+                "oAOgAoACIATABvAGEAIgArACIAZAAiACkA",
+                "6ADoAKAAiAEwAbwBhACIAKwAiAGQAIgApA",
+                "OgA6ACgAJwBMACcAKwAnAG8AYQBkACcAKQ",
+                "oAOgAoACcATAAnACsAJwBvAGEAZAAnACkA",
+                "6ADoAKAAnAEwAJwArACcAbwBhAGQAJwApA",
+                "OgA6ACgAJwBMAG8AJwArACcAYQBkACcAKQ",
+                "oAOgAoACcATABvACcAKwAnAGEAZAAnACkA",
+                "6ADoAKAAnAEwAbwAnACsAJwBhAGQAJwApA",
+                "OgA6ACgAJwBMAG8AYQAnACsAJwBkACcAKQ",
+                "oAOgAoACcATABvAGEAJwArACcAZAAnACkA",
+                "6ADoAKAAnAEwAbwBhACcAKwAnAGQAJwApA"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_frombase64string.yml",
+            "key": "CommandLine|contains",
+            "values": "::FromBase64String("
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_base64_reflection_assembly_load.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKA",
+                "sAUgBlAGYAbABlAGMAdABpAG8AbgAuAEEAcwBzAGUAbQBiAGwAeQBdADoAOgBMAG8AYQBkACgA",
+                "bAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoA",
+                "AFsAcgBlAGYAbABlAGMAdABpAG8AbgAuAGEAcwBzAGUAbQBiAGwAeQBdADoAOgAoACIATABvAGEAZAAiAC",
+                "BbAHIAZQBmAGwAZQBjAHQAaQBvAG4ALgBhAHMAcwBlAG0AYgBsAHkAXQA6ADoAKAAiAEwAbwBhAGQAIgAp",
+                "AWwByAGUAZgBsAGUAYwB0AGkAbwBuAC4AYQBzAHMAZQBtAGIAbAB5AF0AOgA6ACgAIgBMAG8AYQBkACIAK",
+                "WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6ACgAIgBMAG8AYQBkACIAKQ",
+                "sAUgBlAGYAbABlAGMAdABpAG8AbgAuAEEAcwBzAGUAbQBiAGwAeQBdADoAOgAoACIATABvAGEAZAAiACkA",
+                "bAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoAKAAiAEwAbwBhAGQAIgApA",
+                "WwByAGUAZgBsAGUAYwB0AGkAbwBuAC4AYQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKA",
+                "sAcgBlAGYAbABlAGMAdABpAG8AbgAuAGEAcwBzAGUAbQBiAGwAeQBdADoAOgBMAG8AYQBkACgA",
+                "bAHIAZQBmAGwAZQBjAHQAaQBvAG4ALgBhAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoA"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_base64_decode.yml",
+            "key": "CommandLine|contains",
+            "values": "-d"
+        }
+    ],
+    "T1070/006": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_change_file_time_attr.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-t",
+                "-acmr",
+                "-d",
+                "-r"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_touch_susp.yml",
+            "key": "CommandLine|contains",
+            "values": " -t "
+        }
+    ],
+    "T1569/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/macos/process_creation/proc_creation_macos_launchctl_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "submit",
+                "load",
+                "start"
+            ]
+        }
+    ],
+    "T1003/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_seclogon_access.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_seclogon_access.yml",
+            "key": "SourceImage|endswith",
+            "values": "\\svchost.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_werfault.yml",
+            "key": "SourceImage|endswith",
+            "values": "\\WerFault.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_werfault.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_hktl_handlekatz_lsass_access.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_whitelisted_process_names.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_whitelisted_process_names.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\TrolleyExpress.exe",
+                "\\ProcessDump.exe",
+                "\\dump64.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+            "key": "SourceImage|endswith",
+            "values": ":\\Windows\\system32\\wsmprovhost.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_python_based_tool.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_dump_keyword_image.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_dump_comsvcs_dll.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_dump_comsvcs_dll.yml",
+            "key": "SourceImage|endswith",
+            "values": "\\rundll32.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_memdump.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_powershell_lsass.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\powershell.exe",
+                "\\pwsh.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_powershell_lsass.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_susp_password_dumper_lsass.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_citrix_trolleyexpress_procdump.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\TrolleyExpress 7",
+                "\\TrolleyExpress 8",
+                "\\TrolleyExpress 9",
+                "\\TrolleyExpress.exe 7",
+                "\\TrolleyExpress.exe 8",
+                "\\TrolleyExpress.exe 9",
+                "\\TrolleyExpress.exe -ma "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_susp_sqldumper_activity.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "0x0110",
+                "0x01100:40"
+            ]
+        }
+    ],
+    "T1548": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_svchost_credential_dumping.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\svchost.exe"
+        }
+    ],
+    "T1055/011": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_susp_all_access_uncommon_target.yml",
+            "key": "TargetImage|endswith",
+            "values": [
+                "\\calc.exe",
+                "\\calculator.exe",
+                "\\mspaint.exe",
+                "\\notepad.exe",
+                "\\ping.exe",
+                "\\wordpad.exe",
+                "\\write.exe"
+            ]
+        }
+    ],
+    "T1106": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_hktl_handlekatz_lsass_access.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_inline_win_api_access.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "AddSecurityPackage",
+                "AdjustTokenPrivileges",
+                "Advapi32",
+                "CloseHandle",
+                "CreateProcessWithToken",
+                "CreatePseudoConsole",
+                "CreateRemoteThread",
+                "CreateThread",
+                "CreateUserThread",
+                "DangerousGetHandle",
+                "DuplicateTokenEx",
+                "EnumerateSecurityPackages",
+                "FreeHGlobal",
+                "FreeLibrary",
+                "GetDelegateForFunctionPointer",
+                "GetLogonSessionData",
+                "GetModuleHandle",
+                "GetProcAddress",
+                "GetProcessHandle",
+                "GetTokenInformation",
+                "ImpersonateLoggedOnUser",
+                "kernel32",
+                "LoadLibrary",
+                "memcpy",
+                "MiniDumpWriteDump",
+                "ntdll",
+                "OpenDesktop",
+                "OpenProcess",
+                "OpenProcessToken",
+                "OpenThreadToken",
+                "OpenWindowStation",
+                "PtrToString",
+                "QueueUserApc",
+                "ReadProcessMemory",
+                "RevertToSelf",
+                "RtlCreateUserThread",
+                "secur32",
+                "SetThreadToken",
+                "VirtualAlloc",
+                "VirtualFree",
+                "VirtualProtect",
+                "WaitForSingleObject",
+                "WriteInt32",
+                "WriteProcessMemory",
+                "ZeroFreeGlobalAllocUnicode"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_redmimicry_winnti_playbook.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "gthread-3.6.dll",
+                "\\Windows\\Temp\\tmp.bat",
+                "sigcmm-2.4.dll"
+            ]
+        }
+    ],
+    "T1059/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+            "key": "SourceImage|endswith",
+            "values": ":\\Windows\\system32\\wsmprovhost.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_powershell_susp_targets.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\powershell.exe",
+                "\\pwsh.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_powershell_susp_targets.yml",
+            "key": "TargetImage|endswith",
+            "values": [
+                "\\rundll32.exe",
+                "\\regsvr32.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_download_cradles.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                ".DownloadString(",
+                ".DownloadFile(",
+                "Invoke-WebRequest ",
+                "iwr "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_public_folder.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-f C:\\Users\\Public",
+                "-f \"C:\\Users\\Public",
+                "-f %Public%",
+                "-fi C:\\Users\\Public",
+                "-fi \"C:\\Users\\Public",
+                "-fi %Public%",
+                "-fil C:\\Users\\Public",
+                "-fil \"C:\\Users\\Public",
+                "-fil %Public%",
+                "-file C:\\Users\\Public",
+                "-file \"C:\\Users\\Public",
+                "-file %Public%"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_encode.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -e ",
+                " -en ",
+                " -enc ",
+                " -enco",
+                " -ec "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution_patterns.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "cmd.exe /Q /c * 1> \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > *\\\\Temp\\\\* 2>&1",
+                "powershell.exe -exec bypass -noni -nop -w 1 -C \"",
+                "powershell.exe -noni -nop -w 1 -enc "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_import_module_susp_dirs.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Import-Module \"$Env:Temp\\",
+                "Import-Module '$Env:Temp\\",
+                "Import-Module $Env:Temp\\",
+                "Import-Module \"$Env:Appdata\\",
+                "Import-Module '$Env:Appdata\\",
+                "Import-Module $Env:Appdata\\",
+                "Import-Module C:\\Users\\Public\\",
+                "ipmo \"$Env:Temp\\",
+                "ipmo '$Env:Temp\\",
+                "ipmo $Env:Temp\\",
+                "ipmo \"$Env:Appdata\\",
+                "ipmo '$Env:Appdata\\",
+                "ipmo $Env:Appdata\\",
+                "ipmo C:\\Users\\Public\\"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_schtasks_appdata_local_system.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "NT AUT",
+                " SYSTEM "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_invoke_obfuscation_clip.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/c",
+                "/r"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_obfuscation_via_utf8.yml",
+            "key": "CommandLine|contains",
+            "values": "(WCHAR)0x"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_webdav_lnk_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "\\DavWWWRoot\\"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_invoke_obfuscation_via_var.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "{0}",
+                "{1}",
+                "{2}",
+                "{3}",
+                "{4}",
+                "{5}"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_dsinternals_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-ADDBSidHistory",
+                "Add-ADNgcKey",
+                "Add-ADReplNgcKey",
+                "ConvertFrom-ADManagedPasswordBlob",
+                "ConvertFrom-GPPrefPassword",
+                "ConvertFrom-ManagedPasswordBlob",
+                "ConvertFrom-UnattendXmlPassword",
+                "ConvertFrom-UnicodePassword",
+                "ConvertTo-AADHash",
+                "ConvertTo-GPPrefPassword",
+                "ConvertTo-KerberosKey",
+                "ConvertTo-LMHash",
+                "ConvertTo-MsoPasswordHash",
+                "ConvertTo-NTHash",
+                "ConvertTo-OrgIdHash",
+                "ConvertTo-UnicodePassword",
+                "Disable-ADDBAccount",
+                "Enable-ADDBAccount",
+                "Get-ADDBAccount",
+                "Get-ADDBBackupKey",
+                "Get-ADDBDomainController",
+                "Get-ADDBGroupManagedServiceAccount",
+                "Get-ADDBKdsRootKey",
+                "Get-ADDBSchemaAttribute",
+                "Get-ADDBServiceAccount",
+                "Get-ADDefaultPasswordPolicy",
+                "Get-ADKeyCredential",
+                "Get-ADPasswordPolicy",
+                "Get-ADReplAccount",
+                "Get-ADReplBackupKey",
+                "Get-ADReplicationAccount",
+                "Get-ADSIAccount",
+                "Get-AzureADUserEx",
+                "Get-BootKey",
+                "Get-KeyCredential",
+                "Get-LsaBackupKey",
+                "Get-LsaPolicy",
+                "Get-SamPasswordPolicy",
+                "Get-SysKey",
+                "Get-SystemKey",
+                "New-ADDBRestoreFromMediaScript",
+                "New-ADKeyCredential",
+                "New-ADNgcKey",
+                "New-NTHashSet",
+                "Remove-ADDBObject",
+                "Save-DPAPIBlob",
+                "Set-ADAccountPasswordHash",
+                "Set-ADDBAccountPassword",
+                "Set-ADDBBootKey",
+                "Set-ADDBDomainController",
+                "Set-ADDBPrimaryGroup",
+                "Set-ADDBSysKey",
+                "Set-AzureADUserEx",
+                "Set-LsaPolicy",
+                "Set-SamAccountPasswordHash",
+                "Set-WinUserPasswordHash",
+                "Test-ADDBPasswordQuality",
+                "Test-ADPasswordQuality",
+                "Test-ADReplPasswordQuality",
+                "Test-PasswordQuality",
+                "Unlock-ADDBAccount",
+                "Write-ADNgcKey",
+                "Write-ADReplNgcKey"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_susp_download_patterns.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "IEX ((New-Object Net.WebClient).DownloadString",
+                "IEX (New-Object Net.WebClient).DownloadString",
+                "IEX((New-Object Net.WebClient).DownloadString",
+                "IEX(New-Object Net.WebClient).DownloadString",
+                " -command (New-Object System.Net.WebClient).DownloadFile(",
+                " -c (New-Object System.Net.WebClient).DownloadFile("
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_invoke_obfuscation_via_compress.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "system.io.compression.deflatestream",
+                "system.io.streamreader",
+                "readtoend("
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_base64_reflection_assembly_load_obfusc.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "OgA6ACgAIgBMACIAKwAiAG8AYQBkACIAKQ",
+                "oAOgAoACIATAAiACsAIgBvAGEAZAAiACkA",
+                "6ADoAKAAiAEwAIgArACIAbwBhAGQAIgApA",
+                "OgA6ACgAIgBMAG8AIgArACIAYQBkACIAKQ",
+                "oAOgAoACIATABvACIAKwAiAGEAZAAiACkA",
+                "6ADoAKAAiAEwAbwAiACsAIgBhAGQAIgApA",
+                "OgA6ACgAIgBMAG8AYQAiACsAIgBkACIAKQ",
+                "oAOgAoACIATABvAGEAIgArACIAZAAiACkA",
+                "6ADoAKAAiAEwAbwBhACIAKwAiAGQAIgApA",
+                "OgA6ACgAJwBMACcAKwAnAG8AYQBkACcAKQ",
+                "oAOgAoACcATAAnACsAJwBvAGEAZAAnACkA",
+                "6ADoAKAAnAEwAJwArACcAbwBhAGQAJwApA",
+                "OgA6ACgAJwBMAG8AJwArACcAYQBkACcAKQ",
+                "oAOgAoACcATABvACcAKwAnAGEAZAAnACkA",
+                "6ADoAKAAnAEwAbwAnACsAJwBhAGQAJwApA",
+                "OgA6ACgAJwBMAG8AYQAnACsAJwBkACcAKQ",
+                "oAOgAoACcATABvAGEAJwArACcAZAAnACkA",
+                "6ADoAKAAnAEwAbwBhACcAKwAnAGQAJwApA"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_empire_powershell_launch.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -NoP -sta -NonI -W Hidden -Enc ",
+                " -noP -sta -w 1 -enc ",
+                " -NoP -NonI -W Hidden -enc ",
+                " -noP -sta -w 1 -enc",
+                " -enc  SQB",
+                " -nop -exec bypass -EncodedCommand "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/SC ONLOGON",
+                "/SC DAILY /ST",
+                "/SC ONIDLE",
+                "/SC HOURLY"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_susp_parameter_variation.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -windowstyle h ",
+                " -windowstyl h",
+                " -windowsty h",
+                " -windowst h",
+                " -windows h",
+                " -windo h",
+                " -wind h",
+                " -win h",
+                " -wi h",
+                " -win h ",
+                " -win hi ",
+                " -win hid ",
+                " -win hidd ",
+                " -win hidde ",
+                " -NoPr ",
+                " -NoPro ",
+                " -NoProf ",
+                " -NoProfi ",
+                " -NoProfil ",
+                " -nonin ",
+                " -nonint ",
+                " -noninte ",
+                " -noninter ",
+                " -nonintera ",
+                " -noninterac ",
+                " -noninteract ",
+                " -noninteracti ",
+                " -noninteractiv ",
+                " -ec ",
+                " -encodedComman ",
+                " -encodedComma ",
+                " -encodedComm ",
+                " -encodedCom ",
+                " -encodedCo ",
+                " -encodedC ",
+                " -encoded ",
+                " -encode ",
+                " -encod ",
+                " -enco ",
+                " -en ",
+                " -executionpolic ",
+                " -executionpoli ",
+                " -executionpol ",
+                " -executionpo ",
+                " -executionp ",
+                " -execution bypass",
+                " -executio bypass",
+                " -executi bypass",
+                " -execut bypass",
+                " -execu bypass",
+                " -exec bypass",
+                " -exe bypass",
+                " -ex bypass",
+                " -ep bypass",
+                " /windowstyle h ",
+                " /windowstyl h",
+                " /windowsty h",
+                " /windowst h",
+                " /windows h",
+                " /windo h",
+                " /wind h",
+                " /win h",
+                " /wi h",
+                " /win h ",
+                " /win hi ",
+                " /win hid ",
+                " /win hidd ",
+                " /win hidde ",
+                " /NoPr ",
+                " /NoPro ",
+                " /NoProf ",
+                " /NoProfi ",
+                " /NoProfil ",
+                " /nonin ",
+                " /nonint ",
+                " /noninte ",
+                " /noninter ",
+                " /nonintera ",
+                " /noninterac ",
+                " /noninteract ",
+                " /noninteracti ",
+                " /noninteractiv ",
+                " /ec ",
+                " /encodedComman ",
+                " /encodedComma ",
+                " /encodedComm ",
+                " /encodedCom ",
+                " /encodedCo ",
+                " /encodedC ",
+                " /encoded ",
+                " /encode ",
+                " /encod ",
+                " /enco ",
+                " /en ",
+                " /executionpolic ",
+                " /executionpoli ",
+                " /executionpol ",
+                " /executionpo ",
+                " /executionp ",
+                " /execution bypass",
+                " /executio bypass",
+                " /executi bypass",
+                " /execut bypass",
+                " /execu bypass",
+                " /exec bypass",
+                " /exe bypass",
+                " /ex bypass",
+                " /ep bypass"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_downgrade_attack.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -version 2 ",
+                " -versio 2 ",
+                " -versi 2 ",
+                " -vers 2 ",
+                " -ver 2 ",
+                " -ve 2 ",
+                " -v 2 "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_download_dll.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Invoke-WebRequest ",
+                "IWR "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_web_request_cmd_and_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "[System.Net.WebRequest]::create",
+                "curl ",
+                "Invoke-RestMethod",
+                "Invoke-WebRequest",
+                "iwr ",
+                "Net.WebClient",
+                "Resume-BitsTransfer",
+                "Start-BitsTransfer",
+                "wget ",
+                "WinHttp.WinHttpRequest"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_frombase64string.yml",
+            "key": "CommandLine|contains",
+            "values": "::FromBase64String("
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_export_certificate.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Export-PfxCertificate ",
+                "Export-Certificate "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_base64_reflection_assembly_load.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKA",
+                "sAUgBlAGYAbABlAGMAdABpAG8AbgAuAEEAcwBzAGUAbQBiAGwAeQBdADoAOgBMAG8AYQBkACgA",
+                "bAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoA",
+                "AFsAcgBlAGYAbABlAGMAdABpAG8AbgAuAGEAcwBzAGUAbQBiAGwAeQBdADoAOgAoACIATABvAGEAZAAiAC",
+                "BbAHIAZQBmAGwAZQBjAHQAaQBvAG4ALgBhAHMAcwBlAG0AYgBsAHkAXQA6ADoAKAAiAEwAbwBhAGQAIgAp",
+                "AWwByAGUAZgBsAGUAYwB0AGkAbwBuAC4AYQBzAHMAZQBtAGIAbAB5AF0AOgA6ACgAIgBMAG8AYQBkACIAK",
+                "WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6ACgAIgBMAG8AYQBkACIAKQ",
+                "sAUgBlAGYAbABlAGMAdABpAG8AbgAuAEEAcwBzAGUAbQBiAGwAeQBdADoAOgAoACIATABvAGEAZAAiACkA",
+                "bAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoAKAAiAEwAbwBhAGQAIgApA",
+                "WwByAGUAZgBsAGUAYwB0AGkAbwBuAC4AYQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKA",
+                "sAcgBlAGYAbABlAGMAdABpAG8AbgAuAGEAcwBzAGUAbQBiAGwAeQBdADoAOgBMAG8AYQBkACgA",
+                "bAHIAZQBmAGwAZQBjAHQAaQBvAG4ALgBhAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoA"
+            ]
+        }
+    ],
+    "T1021/006": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\lsass.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+            "key": "SourceImage|endswith",
+            "values": ":\\Windows\\system32\\wsmprovhost.exe"
+        }
+    ],
+    "T1204/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_hktl_littlecorporal_generated_maldoc.yml",
+            "key": "SourceImage|endswith",
+            "values": "\\winword.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_browser_launch_from_document_reader_process.yml",
+            "key": "CommandLine|contains",
+            "values": "http"
+        }
+    ],
+    "T1055/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_hktl_littlecorporal_generated_maldoc.yml",
+            "key": "SourceImage|endswith",
+            "values": "\\winword.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_susp_uncommon_target_image.yml",
+            "key": "TargetImage|endswith",
+            "values": [
+                "\\calc.exe",
+                "\\calculator.exe",
+                "\\mspaint.exe",
+                "\\notepad.exe",
+                "\\ping.exe",
+                "\\sethc.exe",
+                "\\spoolsv.exe",
+                "\\wordpad.exe",
+                "\\write.exe"
+            ]
+        }
+    ],
+    "T1562/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_access/proc_access_win_svchost_susp_access_request.yml",
+            "key": "TargetImage|endswith",
+            "values": ":\\Windows\\System32\\svchost.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_auditpol_nt_resource_kit_usage.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/logon:none",
+                "/system:none",
+                "/sam:none",
+                "/privilege:none",
+                "/object:none",
+                "/process:none",
+                "/policy:none"
+            ]
+        }
+    ],
+    "T1055": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_susp_target_shell_application.yml",
+            "key": "TargetImage|endswith",
+            "values": [
+                "\\cmd.exe",
+                "\\powershell.exe",
+                "\\pwsh.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_susp_uncommon_source_image.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\explorer.exe",
+                "\\iexplore.exe",
+                "\\msiexec.exe",
+                "\\powerpnt.exe",
+                "\\schtasks.exe",
+                "\\winlogon.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_susp_relevant_source_image.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\bash.exe",
+                "\\cscript.exe",
+                "\\cvtres.exe",
+                "\\defrag.exe",
+                "\\dialer.exe",
+                "\\dnx.exe",
+                "\\esentutl.exe",
+                "\\excel.exe",
+                "\\expand.exe",
+                "\\find.exe",
+                "\\findstr.exe",
+                "\\forfiles.exe",
+                "\\gpupdate.exe",
+                "\\hh.exe",
+                "\\installutil.exe",
+                "\\lync.exe",
+                "\\makecab.exe",
+                "\\mDNSResponder.exe",
+                "\\monitoringhost.exe",
+                "\\msbuild.exe",
+                "\\mshta.exe",
+                "\\mspaint.exe",
+                "\\outlook.exe",
+                "\\ping.exe",
+                "\\provtool.exe",
+                "\\python.exe",
+                "\\regsvr32.exe",
+                "\\robocopy.exe",
+                "\\runonce.exe",
+                "\\sapcimc.exe",
+                "\\smartscreen.exe",
+                "\\spoolsv.exe",
+                "\\tstheme.exe",
+                "\\userinit.exe",
+                "\\vssadmin.exe",
+                "\\vssvc.exe",
+                "\\w3wp.exe",
+                "\\winscp.exe",
+                "\\winword.exe",
+                "\\wmic.exe",
+                "\\wscript.exe"
+            ]
+        }
+    ],
+    "T1127": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_ttdinjec.yml",
+            "key": "SourceImage|endswith",
+            "values": "\\ttdinject.exe"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_aspnet_compiler_susp_paths.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\Users\\Public\\",
+                "\\AppData\\Local\\Temp\\",
+                "\\AppData\\Local\\Roaming\\",
+                ":\\Temp\\",
+                ":\\Windows\\Temp\\",
+                ":\\Windows\\System32\\Tasks\\",
+                ":\\Windows\\Tasks\\"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_kavremover_uncommon_execution.yml",
+            "key": "CommandLine|contains",
+            "values": " run run-cmd "
+        }
+    ],
+    "T1555/005": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_keepass.yml",
+            "key": "TargetImage|endswith",
+            "values": "\\KeePass.exe"
+        }
+    ],
+    "T1055/012": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\System32\\cscript.exe",
+                "\\System32\\wscript.exe",
+                "\\System32\\mshta.exe",
+                "\\winword.exe",
+                "\\excel.exe"
+            ]
+        }
+    ],
+    "T1059/005": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\System32\\cscript.exe",
+                "\\System32\\wscript.exe",
+                "\\System32\\mshta.exe",
+                "\\winword.exe",
+                "\\excel.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_gather_network_info_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "gatherNetworkInfo.vbs"
+        }
+    ],
+    "T1059/007": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\System32\\cscript.exe",
+                "\\System32\\wscript.exe",
+                "\\System32\\mshta.exe",
+                "\\winword.exe",
+                "\\excel.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_mshta_susp_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "vbscript",
+                ".jpg",
+                ".png",
+                ".lnk",
+                ".xls",
+                ".doc",
+                ".zip",
+                ".dll"
+            ]
+        }
+    ],
+    "T1218/005": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\System32\\cscript.exe",
+                "\\System32\\wscript.exe",
+                "\\System32\\mshta.exe",
+                "\\winword.exe",
+                "\\excel.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_mshta_susp_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "vbscript",
+                ".jpg",
+                ".png",
+                ".lnk",
+                ".xls",
+                ".doc",
+                ".zip",
+                ".dll"
+            ]
+        }
+    ],
+    "T1218/011": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_powershell_susp_targets.yml",
+            "key": "SourceImage|endswith",
+            "values": [
+                "\\powershell.exe",
+                "\\pwsh.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/create_remote_thread/create_remote_thread_win_powershell_susp_targets.yml",
+            "key": "TargetImage|endswith",
+            "values": [
+                "\\rundll32.exe",
+                "\\regsvr32.exe"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_redmimicry_winnti_playbook.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "gthread-3.6.dll",
+                "\\Windows\\Temp\\tmp.bat",
+                "sigcmm-2.4.dll"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_citrix_trolleyexpress_procdump.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\TrolleyExpress 7",
+                "\\TrolleyExpress 8",
+                "\\TrolleyExpress 9",
+                "\\TrolleyExpress.exe 7",
+                "\\TrolleyExpress.exe 8",
+                "\\TrolleyExpress.exe 9",
+                "\\TrolleyExpress.exe -ma "
+            ]
+        }
+    ],
+    "T1218": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/network_connection/net_connection_win_wuauclt_network_connection.yml",
+            "key": "CommandLine|contains",
+            "values": " /RunHandlerComServer"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_remotefxvgpudisablement_abuse.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Invoke-ATHRemoteFXvGPUDisablementCommand",
+                "Invoke-ATHRemoteFXvGPUDisableme"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_pcwrun_follina.yml",
+            "key": "CommandLine|contains",
+            "values": "../"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_devtoolslauncher.yml",
+            "key": "CommandLine|contains",
+            "values": "LaunchForDeploy"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_openwith.yml",
+            "key": "CommandLine|contains",
+            "values": "/c"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_sftp.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -D ..",
+                " -D C:\\"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_vslsagent_agentextensionpath_load.yml",
+            "key": "CommandLine|contains",
+            "values": "--agentExtensionPath"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_link_uncommon_parent_process.yml",
+            "key": "CommandLine|contains",
+            "values": "LINK /"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_registry_provlaunch_provisioning_command.yml",
+            "key": "CommandLine|contains",
+            "values": "SOFTWARE\\Microsoft\\Provisioning\\Commands\\"
+        }
+    ],
+    "T1190": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/file/file_event/file_event_win_exchange_webshell_drop_suspicious.yml",
+            "key": "CommandLine|contains",
+            "values": "MSExchange"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executescript.yml",
+            "key": "CommandLine|contains",
+            "values": "/etc/opt/microsoft/scx/conf/tmpdir/scx"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_cve_2022_26134_atlassian_confluence.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/bin/sh",
+                "bash",
+                "dash",
+                "ksh",
+                "zsh",
+                "csh",
+                "fish",
+                "curl",
+                "wget",
+                "python"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executeshellcommand.yml",
+            "key": "CommandLine|contains",
+            "values": "/bin/sh"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_cve_2022_33891_spark_shell_command_injection.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "id -Gn `",
+                "id -Gn '"
+            ]
+        }
+    ],
+    "T1505/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/file/file_event/file_event_win_exchange_webshell_drop_suspicious.yml",
+            "key": "CommandLine|contains",
+            "values": "MSExchange"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/file/file_event/file_event_win_exchange_webshell_drop.yml",
+            "key": "CommandLine|contains",
+            "values": "MSExchange"
+        }
+    ],
+    "T1505/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_msexchange_transport_agent.yml",
+            "key": "CommandLine|contains",
+            "values": "Install-TransportAgent"
+        }
+    ],
+    "T1564/004": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_ntfs_short_name_path_use_cli.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "~1\\",
+                "~2\\"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_ntfs_short_name_use_cli.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "~1.exe",
+                "~1.bat",
+                "~1.msi",
+                "~1.vbe",
+                "~1.vbs",
+                "~1.dll",
+                "~1.ps1",
+                "~1.js",
+                "~1.hta",
+                "~2.exe",
+                "~2.bat",
+                "~2.msi",
+                "~2.vbe",
+                "~2.vbs",
+                "~2.dll",
+                "~2.ps1",
+                "~2.js",
+                "~2.hta"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_hidden_dir_index_allocation.yml",
+            "key": "CommandLine|contains",
+            "values": "::$index_allocation"
+        }
+    ],
+    "T1110": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_hydra.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "^USER^",
+                "^PASS^"
+            ]
+        }
+    ],
+    "T1110/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_hydra.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "^USER^",
+                "^PASS^"
+            ]
+        }
+    ],
+    "T1615": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_gather_network_info_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "gatherNetworkInfo.vbs"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_gpresult_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/z",
+                "/v"
+            ]
+        }
+    ],
+    "T1090": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_qemu_suspicious_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-m 1M",
+                "-m 2M",
+                "-m 3M"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cloudflared_tunnel_cleanup.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-config ",
+                "-connector-id "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cloudflared_tunnel_run.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-config ",
+                "-credentials-contents ",
+                "-credentials-file ",
+                "-token "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_proxy_connection.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "http_proxy=",
+                "https_proxy="
+            ]
+        }
+    ],
+    "T1572": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_qemu_suspicious_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-m 1M",
+                "-m 2M",
+                "-m 3M"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_plink_port_forwarding.yml",
+            "key": "CommandLine|contains",
+            "values": " -R "
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cloudflared_tunnel_cleanup.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-config ",
+                "-connector-id "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_ssh_rdp_tunneling.yml",
+            "key": "CommandLine|contains",
+            "values": ":3389"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cloudflared_tunnel_run.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-config ",
+                "-credentials-contents ",
+                "-credentials-file ",
+                "-token "
+            ]
+        }
+    ],
+    "T1140": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_ping_hex_ip.yml",
+            "key": "CommandLine|contains",
+            "values": "0x"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_mshta_susp_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "vbscript",
+                ".jpg",
+                ".png",
+                ".lnk",
+                ".xls",
+                ".doc",
+                ".zip",
+                ".dll"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_cli_obfuscation_escape_char.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "h^t^t^p",
+                "h\"t\"t\"p"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_frombase64string.yml",
+            "key": "CommandLine|contains",
+            "values": "::FromBase64String("
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_base64_shebang_cli.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "IyEvYmluL2Jhc2",
+                "IyEvYmluL2Rhc2",
+                "IyEvYmluL3pza",
+                "IyEvYmluL2Zpc2",
+                "IyEvYmluL3No"
+            ]
+        }
+    ],
+    "T1216": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_cl_loadassembly.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "LoadAssemblyFromPath ",
+                "LoadAssemblyFromNS "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_cl_invocation.yml",
+            "key": "CommandLine|contains",
+            "values": "SyncInvoke "
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_utilityfunctions.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "UtilityFunctions.ps1",
+                "RegSnapin "
+            ]
+        }
+    ],
+    "T1059": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_runscripthelper.yml",
+            "key": "CommandLine|contains",
+            "values": "surfacecheck"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.yml",
+            "key": "CommandLine|contains",
+            "values": "\\Outlook\\Security\\EnableUnsafeClientMailRules"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cmd_dosfuscation.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "^^",
+                "^|^",
+                ",;,",
+                ";;;;",
+                ";; ;;",
+                "(,(,",
+                "%COMSPEC:~",
+                " c^m^d",
+                "^c^m^d",
+                " c^md",
+                " cm^d",
+                "^cm^d",
+                " s^et ",
+                " s^e^t ",
+                " se^t "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_sysprep_appdata.yml",
+            "key": "CommandLine|contains",
+            "values": "\\AppData\\"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_sliver_c2_execution_pattern.yml",
+            "key": "CommandLine|contains",
+            "values": "-NoExit -Command [Console]::OutputEncoding=[Text.UTF8Encoding]::UTF8"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_pcalua.yml",
+            "key": "CommandLine|contains",
+            "values": " -a"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_script_exec_from_temp.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\Windows\\Temp",
+                "\\Temporary Internet",
+                "\\AppData\\Local\\Temp",
+                "\\AppData\\Roaming\\Temp",
+                "%TEMP%",
+                "%TMP%",
+                "%LocalAppData%\\Temp"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_cve_2022_26134_atlassian_confluence.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/bin/sh",
+                "bash",
+                "dash",
+                "ksh",
+                "zsh",
+                "csh",
+                "fish",
+                "curl",
+                "wget",
+                "python"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_susp_java_children.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/bin/sh",
+                "bash",
+                "dash",
+                "ksh",
+                "zsh",
+                "csh",
+                "fish",
+                "curl",
+                "wget",
+                "python"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_xterm_reverse_shell.yml",
+            "key": "CommandLine|contains",
+            "values": "-display"
+        }
+    ],
+    "T1202": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_runscripthelper.yml",
+            "key": "CommandLine|contains",
+            "values": "surfacecheck"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.yml",
+            "key": "CommandLine|contains",
+            "values": "\\Outlook\\Security\\EnableUnsafeClientMailRules"
+        }
+    ],
+    "T1033": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_whoami_as_param.yml",
+            "key": "CommandLine|contains",
+            "values": ".exe whoami"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_esxcli_vm_discovery.yml",
+            "key": "CommandLine|contains",
+            "values": "vm process"
+        }
+    ],
+    "T1552/004": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_getprocess_lsass.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Get-Process lsas",
+                "ps lsas",
+                "gps lsas"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_export_certificate.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Export-PfxCertificate ",
+                "Export-Certificate "
+            ]
+        }
+    ],
+    "T1562": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_etw_modification_cmdline.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "COMPlus_ETWEnabled",
+                "COMPlus_ETWFlags"
+            ]
+        }
+    ],
+    "T1018": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "domainlist",
+                "trustdmp",
+                "dcmodes",
+                "adinfo",
+                " dclist ",
+                "computer_pwdnotreqd",
+                "objectcategory=",
+                "-subnets -f",
+                "name=\"Domain Admins\"",
+                "-sc u:",
+                "domainncs",
+                "dompol",
+                " oudmp ",
+                "subnetdmp",
+                "gpodmp",
+                "fspdmp",
+                "users_noexpire",
+                "computers_active",
+                "computers_pwdnotreqd"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_python_adidnsdump.yml",
+            "key": "CommandLine|contains",
+            "values": "adidnsdump"
+        }
+    ],
+    "T1087/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "domainlist",
+                "trustdmp",
+                "dcmodes",
+                "adinfo",
+                " dclist ",
+                "computer_pwdnotreqd",
+                "objectcategory=",
+                "-subnets -f",
+                "name=\"Domain Admins\"",
+                "-sc u:",
+                "domainncs",
+                "dompol",
+                " oudmp ",
+                "subnetdmp",
+                "gpodmp",
+                "fspdmp",
+                "users_noexpire",
+                "computers_active",
+                "computers_pwdnotreqd"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1482": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "domainlist",
+                "trustdmp",
+                "dcmodes",
+                "adinfo",
+                " dclist ",
+                "computer_pwdnotreqd",
+                "objectcategory=",
+                "-subnets -f",
+                "name=\"Domain Admins\"",
+                "-sc u:",
+                "domainncs",
+                "dompol",
+                " oudmp ",
+                "subnetdmp",
+                "gpodmp",
+                "fspdmp",
+                "users_noexpire",
+                "computers_active",
+                "computers_pwdnotreqd"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1069/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "domainlist",
+                "trustdmp",
+                "dcmodes",
+                "adinfo",
+                " dclist ",
+                "computer_pwdnotreqd",
+                "objectcategory=",
+                "-subnets -f",
+                "name=\"Domain Admins\"",
+                "-sc u:",
+                "domainncs",
+                "dompol",
+                " oudmp ",
+                "subnetdmp",
+                "gpodmp",
+                "fspdmp",
+                "users_noexpire",
+                "computers_active",
+                "computers_pwdnotreqd"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1021/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_mmc_mmc20_lateral_movement.yml",
+            "key": "CommandLine|contains",
+            "values": "-Embedding"
+        }
+    ],
+    "T1486": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_reg_bitlocker.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "EnableBDEWithNoTPM",
+                "UseAdvancedStartup",
+                "UseTPM",
+                "UseTPMKey",
+                "UseTPMKeyPIN",
+                "RecoveryKeyMessageSource",
+                "UseTPMPIN",
+                "RecoveryKeyMessage"
+            ]
+        }
+    ],
+    "T1176": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_browsers_chromium_load_extension.yml",
+            "key": "CommandLine|contains",
+            "values": "--load-extension="
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml",
+            "key": "CommandLine|contains",
+            "values": "--load-extension="
+        }
+    ],
+    "T1123": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_soundrecorder_audio_capture.yml",
+            "key": "CommandLine|contains",
+            "values": "/FILE"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_audio_capture.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "WindowsAudioDevice-Powershell-Cmdlet",
+                "Toggle-AudioDevice",
+                "Get-AudioDevice ",
+                "Set-AudioDevice ",
+                "Write-AudioDevice "
+            ]
+        }
+    ],
+    "T1566/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_double_extension.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                ".doc.exe",
+                ".docx.exe",
+                ".xls.exe",
+                ".xlsx.exe",
+                ".ppt.exe",
+                ".pptx.exe",
+                ".rtf.exe",
+                ".pdf.exe",
+                ".txt.exe",
+                "      .exe",
+                "______.exe",
+                ".doc.js",
+                ".docx.js",
+                ".xls.js",
+                ".xlsx.js",
+                ".ppt.js",
+                ".pptx.js",
+                ".rtf.js",
+                ".pdf.js",
+                ".txt.js"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_arbitrary_shell_execution_via_settingcontent.yml",
+            "key": "CommandLine|contains",
+            "values": ".SettingContent-ms"
+        }
+    ],
+    "T1055/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_mavinject_process_injection.yml",
+            "key": "CommandLine|contains",
+            "values": " /INJECTRUNNING "
+        }
+    ],
+    "T1218/013": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_mavinject_process_injection.yml",
+            "key": "CommandLine|contains",
+            "values": " /INJECTRUNNING "
+        }
+    ],
+    "T1053/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_at_interactive_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "interactive"
+        }
+    ],
+    "T1529": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_shutdown_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/r ",
+                "/s "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_shutdown_logoff.yml",
+            "key": "CommandLine|contains",
+            "values": "/l"
+        }
+    ],
+    "T1047": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution_patterns.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "cmd.exe /Q /c * 1> \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > *\\\\Temp\\\\* 2>&1",
+                "powershell.exe -exec bypass -noni -nop -w 1 -C \"",
+                "powershell.exe -noni -nop -w 1 -enc "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_wmic_susp_process_creation.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "rundll32",
+                "bitsadmin",
+                "regsvr32",
+                "cmd.exe /c ",
+                "cmd.exe /k ",
+                "cmd.exe /r ",
+                "cmd /c ",
+                "cmd /k ",
+                "cmd /r ",
+                "powershell",
+                "pwsh",
+                "certutil",
+                "cscript",
+                "wscript",
+                "mshta",
+                "\\Users\\Public\\",
+                "\\Windows\\Temp\\",
+                "\\AppData\\Local\\",
+                "%temp%",
+                "%tmp%",
+                "%ProgramData%",
+                "%appdata%",
+                "%comspec%",
+                "%localappdata%"
+            ]
+        }
+    ],
+    "T1053": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution_patterns.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "cmd.exe /Q /c * 1> \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > *\\\\Temp\\\\* 2>&1",
+                "powershell.exe -exec bypass -noni -nop -w 1 -C \"",
+                "powershell.exe -noni -nop -w 1 -enc "
+            ]
+        }
+    ],
+    "T1059/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution_patterns.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "cmd.exe /Q /c * 1> \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > \\\\\\\\*\\\\*\\\\* 2>&1",
+                "cmd.exe /C * > *\\\\Temp\\\\* 2>&1",
+                "powershell.exe -exec bypass -noni -nop -w 1 -C \"",
+                "powershell.exe -noni -nop -w 1 -enc "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_conhost_path_traversal.yml",
+            "key": "CommandLine|contains",
+            "values": "/../../"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_redmimicry_winnti_playbook.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "gthread-3.6.dll",
+                "\\Windows\\Temp\\tmp.bat",
+                "sigcmm-2.4.dll"
+            ]
+        }
+    ],
+    "T1048/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_rundll32_webdav_client_susp_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "C:\\windows\\system32\\davclnt.dll,DavSetCookie"
+        }
+    ],
+    "T1553/004": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_import_cert_susp_locations.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\AppData\\Local\\Temp\\",
+                ":\\Windows\\TEMP\\",
+                "\\Desktop\\",
+                "\\Downloads\\",
+                "\\Perflogs\\",
+                ":\\Users\\Public\\"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_x509enrollment.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "X509Enrollment.CBinaryConverter",
+                "884e2002-217d-11da-b2a4-000e7bbb2b09"
+            ]
+        }
+    ],
+    "T1115": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_get_clipboard.yml",
+            "key": "CommandLine|contains",
+            "values": "Get-Clipboard"
+        }
+    ],
+    "T1569/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_pua_nircmd_as_system.yml",
+            "key": "CommandLine|contains",
+            "values": " runassystem "
+        }
+    ],
+    "T1053/005": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_schtasks_appdata_local_system.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "NT AUT",
+                " SYSTEM "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/SC ONLOGON",
+                "/SC DAILY /ST",
+                "/SC ONIDLE",
+                "/SC HOURLY"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_schtasks_creation.yml",
+            "key": "CommandLine|contains",
+            "values": " /create "
+        }
+    ],
+    "T1220": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_msxsl_remote_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "http"
+        }
+    ],
+    "T1496": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_crypto_mining_monero.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " --cpu-priority=",
+                "--donate-level=0",
+                " -o pool.",
+                " --nicehash",
+                " --algo=rx/0 ",
+                "stratum+tcp://",
+                "stratum+udp://",
+                "LS1kb25hdGUtbGV2ZWw9",
+                "0tZG9uYXRlLWxldmVsP",
+                "tLWRvbmF0ZS1sZXZlbD",
+                "c3RyYXR1bSt0Y3A6Ly",
+                "N0cmF0dW0rdGNwOi8v",
+                "zdHJhdHVtK3RjcDovL",
+                "c3RyYXR1bSt1ZHA6Ly",
+                "N0cmF0dW0rdWRwOi8v",
+                "zdHJhdHVtK3VkcDovL"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_crypto_mining.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " --cpu-priority=",
+                "--donate-level=0",
+                " -o pool.",
+                " --nicehash",
+                " --algo=rx/0 ",
+                "stratum+tcp://",
+                "stratum+udp://",
+                "sh -c /sbin/modprobe msr allow_writes=on",
+                "LS1kb25hdGUtbGV2ZWw9",
+                "0tZG9uYXRlLWxldmVsP",
+                "tLWRvbmF0ZS1sZXZlbD",
+                "c3RyYXR1bSt0Y3A6Ly",
+                "N0cmF0dW0rdGNwOi8v",
+                "zdHJhdHVtK3RjcDovL",
+                "c3RyYXR1bSt1ZHA6Ly",
+                "N0cmF0dW0rdWRwOi8v",
+                "zdHJhdHVtK3VkcDovL"
+            ]
+        }
+    ],
+    "T1021/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_plink_port_forwarding.yml",
+            "key": "CommandLine|contains",
+            "values": " -R "
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_tscon_rdp_redirect.yml",
+            "key": "CommandLine|contains",
+            "values": " /dest:rdp-tcp#"
+        }
+    ],
+    "T1016": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_network_command.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "ipconfig /all",
+                "netsh interface show interface",
+                "arp -a",
+                "nbtstat -n",
+                "net config",
+                "route print"
+            ]
+        }
+    ],
+    "T1547": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_susp_grpconv.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "grpconv.exe -o",
+                "grpconv -o"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_lolbin_susp_driver_installed_by_pnputil.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-i",
+                "/install",
+                "-a",
+                "/add-driver",
+                ".inf"
+            ]
+        }
+    ],
+    "T1046": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        }
+    ],
+    "T1082": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_malware_gobrat_grep_payload_discovery.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "apached",
+                "frpc",
+                "sshd.sh",
+                "zone.arm"
+            ]
+        }
+    ],
+    "T1518": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        }
+    ],
+    "T1548/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_empire_powershell_uac_bypass.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -NoP -NonI -w Hidden -c $x=$((gp HKCU:Software\\Microsoft\\Windows Update).Update)",
+                " -NoP -NonI -c $x=$((gp HKCU:Software\\Microsoft\\Windows Update).Update);"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_explorer_nouaccheck.yml",
+            "key": "CommandLine|contains",
+            "values": "/NOUACCHECK"
+        }
+    ],
+    "T1552/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_susp_recon_indicators.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -name .htpasswd",
+                " -perm -4000 "
+            ]
+        }
+    ],
+    "T1555": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        }
+    ],
+    "T1555/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Offline_Winpwn",
+                "WinPwn ",
+                "WinPwn.exe",
+                "WinPwn.ps1"
+            ]
+        }
+    ],
+    "T1543/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_sc_new_kernel_driver.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "create",
+                "config"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_sc_service_path_modification.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "powershell",
+                "cmd ",
+                "mshta",
+                "wscript",
+                "cscript",
+                "rundll32",
+                "svchost",
+                "dllhost",
+                "cmd.exe /c",
+                "cmd.exe /k",
+                "cmd.exe /r",
+                "cmd /c",
+                "cmd /k",
+                "cmd /r",
+                "C:\\Users\\Public",
+                "\\Downloads\\",
+                "\\Desktop\\",
+                "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\",
+                "C:\\Windows\\TEMP\\",
+                "\\AppData\\Local\\Temp"
+            ]
+        }
+    ],
+    "T1489": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_schtasks_delete.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\Windows\\BitLocker",
+                "\\Windows\\ExploitGuard",
+                "\\Windows\\SystemRestore\\SR",
+                "\\Windows\\UpdateOrchestrator\\",
+                "\\Windows\\Windows Defender\\",
+                "\\Windows\\WindowsBackup\\",
+                "\\Windows\\WindowsUpdate\\"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_schtasks_disable.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\Windows\\BitLocker",
+                "\\Windows\\ExploitGuard",
+                "\\Windows\\SystemRestore\\SR",
+                "\\Windows\\UpdateOrchestrator\\",
+                "\\Windows\\Windows Defender\\",
+                "\\Windows\\WindowsBackup\\",
+                "\\Windows\\WindowsUpdate\\"
+            ]
+        }
+    ],
+    "T1563/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_tscon_rdp_redirect.yml",
+            "key": "CommandLine|contains",
+            "values": " /dest:rdp-tcp#"
+        }
+    ],
+    "T1204": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_webdav_lnk_execution.yml",
+            "key": "CommandLine|contains",
+            "values": "\\DavWWWRoot\\"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_arbitrary_shell_execution_via_settingcontent.yml",
+            "key": "CommandLine|contains",
+            "values": ".SettingContent-ms"
+        }
+    ],
+    "T1036/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_right_to_left_override.yml",
+            "key": "CommandLine|contains",
+            "values": "\u202e"
+        }
+    ],
+    "T1552/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_registry_enumeration_for_credentials_cli.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\Software\\SimonTatham\\PuTTY\\Sessions",
+                "\\Software\\\\SimonTatham\\PuTTY\\SshHostKeys\\",
+                "\\Software\\Mobatek\\MobaXterm\\",
+                "\\Software\\WOW6432Node\\Radmin\\v3.0\\Server\\Parameters\\Radmin",
+                "\\Software\\Aerofox\\FoxmailPreview",
+                "\\Software\\Aerofox\\Foxmail\\V3.1",
+                "\\Software\\IncrediMail\\Identities",
+                "\\Software\\Qualcomm\\Eudora\\CommandLine",
+                "\\Software\\RimArts\\B2\\Settings",
+                "\\Software\\OpenVPN-GUI\\configs",
+                "\\Software\\Martin Prikryl\\WinSCP 2\\Sessions",
+                "\\Software\\FTPWare\\COREFTP\\Sites",
+                "\\Software\\DownloadManager\\Passwords",
+                "\\Software\\OpenSSH\\Agent\\Keys",
+                "\\Software\\TightVNC\\Server",
+                "\\Software\\ORL\\WinVNC3\\Password",
+                "\\Software\\RealVNC\\WinVNC4"
+            ]
+        }
+    ],
+    "T1560/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_rar_compress_data.yml",
+            "key": "CommandLine|contains",
+            "values": " a "
+        }
+    ],
+    "T1057": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_findstr_recon_pipe_output.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "ipconfig*|*find",
+                "net*|*find",
+                "netstat*|*find",
+                "ping*|*find",
+                "systeminfo*|*find",
+                "tasklist*|*find",
+                "whoami*|*find"
+            ]
+        }
+    ],
+    "T1562/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_amsi_null_bits_bypass.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "if(0){{{0}}}' -f $(0 -as [char]) +",
+                "#<NULL>"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_reg_defender_exclusion.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "SOFTWARE\\Microsoft\\Windows Defender\\Exclusions\\Paths",
+                "SOFTWARE\\Microsoft\\Microsoft Antimalware\\Exclusions\\Paths"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_esxcli_syslog_config_change.yml",
+            "key": "CommandLine|contains",
+            "values": " set"
+        }
+    ],
+    "T1102": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cloudflared_tunnel_cleanup.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-config ",
+                "-connector-id "
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cloudflared_tunnel_run.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "-config ",
+                "-credentials-contents ",
+                "-credentials-file ",
+                "-token "
+            ]
+        }
+    ],
+    "T1528": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_office_token_search.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "eyJ0eXAiOi",
+                " eyJ0eX",
+                " \"eyJ0eX\"",
+                " 'eyJ0eX'"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_teams_suspicious_command_line_cred_access.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\Microsoft\\Teams\\Cookies",
+                "\\Microsoft\\Teams\\Local Storage\\leveldb"
+            ]
+        }
+    ],
+    "T1021": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_susp_remote_desktop_tunneling.yml",
+            "key": "CommandLine|contains",
+            "values": ":3389"
+        }
+    ],
+    "T1087": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1087/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1069/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1069": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_malicious_cmdlets.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Add-Exfiltration",
+                "Add-Persistence",
+                "Add-RegBackdoor",
+                "Add-RemoteRegBackdoor",
+                "Add-ScrnSaveBackdoor",
+                "Check-VM",
+                "ConvertTo-Rc4ByteStream",
+                "Decrypt-Hash",
+                "Disable-ADIDNSNode",
+                "Disable-MachineAccount",
+                "Do-Exfiltration",
+                "Enable-ADIDNSNode",
+                "Enable-MachineAccount",
+                "Enabled-DuplicateToken",
+                "Exploit-Jboss",
+                "Export-ADR",
+                "Export-ADRCSV",
+                "Export-ADRExcel",
+                "Export-ADRHTML",
+                "Export-ADRJSON",
+                "Export-ADRXML",
+                "Find-Fruit",
+                "Find-GPOLocation",
+                "Find-TrustedDocuments",
+                "Get-ADIDNS",
+                "Get-ApplicationHost",
+                "Get-ChromeDump",
+                "Get-ClipboardContents",
+                "Get-FoxDump",
+                "Get-GPPPassword",
+                "Get-IndexedItem",
+                "Get-KerberosAESKey",
+                "Get-Keystrokes",
+                "Get-LSASecret",
+                "Get-MachineAccountAttribute",
+                "Get-MachineAccountCreator",
+                "Get-PassHashes",
+                "Get-RegAlwaysInstallElevated",
+                "Get-RegAutoLogon",
+                "Get-RemoteBootKey",
+                "Get-RemoteCachedCredential",
+                "Get-RemoteLocalAccountHash",
+                "Get-RemoteLSAKey",
+                "Get-RemoteMachineAccountHash",
+                "Get-RemoteNLKMKey",
+                "Get-RickAstley",
+                "Get-Screenshot",
+                "Get-SecurityPackages",
+                "Get-ServiceFilePermission",
+                "Get-ServicePermission",
+                "Get-ServiceUnquoted",
+                "Get-SiteListPassword",
+                "Get-System",
+                "Get-TimedScreenshot",
+                "Get-UnattendedInstallFile",
+                "Get-Unconstrained",
+                "Get-USBKeystrokes",
+                "Get-VaultCredential",
+                "Get-VulnAutoRun",
+                "Get-VulnSchTask",
+                "Grant-ADIDNSPermission",
+                "Gupt-Backdoor",
+                "HTTP-Login",
+                "Install-ServiceBinary",
+                "Install-SSP",
+                "Invoke-ACLScanner",
+                "Invoke-ADRecon",
+                "Invoke-ADSBackdoor",
+                "Invoke-AgentSmith",
+                "Invoke-AllChecks",
+                "Invoke-ARPScan",
+                "Invoke-AzureHound",
+                "Invoke-BackdoorLNK",
+                "Invoke-BadPotato",
+                "Invoke-BetterSafetyKatz",
+                "Invoke-BypassUAC",
+                "Invoke-Carbuncle",
+                "Invoke-Certify",
+                "Invoke-ConPtyShell",
+                "Invoke-CredentialInjection",
+                "Invoke-DAFT",
+                "Invoke-DCSync",
+                "Invoke-DinvokeKatz",
+                "Invoke-DllInjection",
+                "Invoke-DNSUpdate",
+                "Invoke-DomainPasswordSpray",
+                "Invoke-DowngradeAccount",
+                "Invoke-EgressCheck",
+                "Invoke-Eyewitness",
+                "Invoke-FakeLogonScreen",
+                "Invoke-Farmer",
+                "Invoke-Get-RBCD-Threaded",
+                "Invoke-Gopher",
+                "Invoke-Grouper",
+                "Invoke-HandleKatz",
+                "Invoke-ImpersonatedProcess",
+                "Invoke-ImpersonateSystem",
+                "Invoke-InteractiveSystemPowerShell",
+                "Invoke-Internalmonologue",
+                "Invoke-Inveigh",
+                "Invoke-InveighRelay",
+                "Invoke-KrbRelay",
+                "Invoke-LdapSignCheck",
+                "Invoke-Lockless",
+                "Invoke-MalSCCM",
+                "Invoke-Mimikatz",
+                "Invoke-Mimikittenz",
+                "Invoke-MITM6",
+                "Invoke-NanoDump",
+                "Invoke-NetRipper",
+                "Invoke-Nightmare",
+                "Invoke-NinjaCopy",
+                "Invoke-OfficeScrape",
+                "Invoke-OxidResolver",
+                "Invoke-P0wnedshell",
+                "Invoke-Paranoia",
+                "Invoke-PortScan",
+                "Invoke-PoshRatHttp",
+                "Invoke-PostExfil",
+                "Invoke-PowerDump",
+                "Invoke-PowerShellTCP",
+                "Invoke-PowerShellWMI",
+                "Invoke-PPLDump",
+                "Invoke-PsExec",
+                "Invoke-PSInject",
+                "Invoke-PsUaCme",
+                "Invoke-ReflectivePEInjection",
+                "Invoke-ReverseDNSLookup",
+                "Invoke-Rubeus",
+                "Invoke-RunAs",
+                "Invoke-SafetyKatz",
+                "Invoke-SauronEye",
+                "Invoke-SCShell",
+                "Invoke-Seatbelt",
+                "Invoke-ServiceAbuse",
+                "Invoke-ShadowSpray",
+                "Invoke-Sharp",
+                "Invoke-Shellcode",
+                "Invoke-SMBScanner",
+                "Invoke-Snaffler",
+                "Invoke-Spoolsample",
+                "Invoke-SpraySinglePassword",
+                "Invoke-SSHCommand",
+                "Invoke-StandIn",
+                "Invoke-StickyNotesExtract",
+                "Invoke-SystemCommand",
+                "Invoke-Tasksbackdoor",
+                "Invoke-Tater",
+                "Invoke-Thunderfox",
+                "Invoke-ThunderStruck",
+                "Invoke-TokenManipulation",
+                "Invoke-Tokenvator",
+                "Invoke-TotalExec",
+                "Invoke-UrbanBishop",
+                "Invoke-UserHunter",
+                "Invoke-VoiceTroll",
+                "Invoke-Whisker",
+                "Invoke-WinEnum",
+                "Invoke-winPEAS",
+                "Invoke-WireTap",
+                "Invoke-WmiCommand",
+                "Invoke-WMIExec",
+                "Invoke-WScriptBypassUAC",
+                "Invoke-Zerologon",
+                "MailRaider",
+                "New-ADIDNSNode",
+                "New-DNSRecordArray",
+                "New-HoneyHash",
+                "New-InMemoryModule",
+                "New-MachineAccount",
+                "New-SOASerialNumberArray",
+                "Out-Minidump",
+                "Port-Scan",
+                "PowerBreach",
+                "powercat ",
+                "PowerUp",
+                "PowerView",
+                "Remove-ADIDNSNode",
+                "Remove-MachineAccount",
+                "Remove-Update",
+                "Rename-ADIDNSNode",
+                "Revoke-ADIDNSPermission",
+                "Set-ADIDNSNode",
+                "Set-MacAttribute",
+                "Set-MachineAccountAttribute",
+                "Set-Wallpaper",
+                "Show-TargetScreen",
+                "Start-CaptureServer",
+                "Start-Dnscat2",
+                "Start-WebcamRecorder",
+                "VolumeShadowCopyTools"
+            ]
+        }
+    ],
+    "T1546/008": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_cmd_sticky_key_like_backdoor_execution.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "sethc.exe",
+                "utilman.exe",
+                "osk.exe",
+                "Magnify.exe",
+                "Narrator.exe",
+                "DisplaySwitch.exe"
+            ]
+        }
+    ],
+    "T1113": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_psr_capture_screenshots.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/start",
+                "-start"
+            ]
+        }
+    ],
+    "T1037/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_registry_logon_script.yml",
+            "key": "CommandLine|contains",
+            "values": "UserInitMprLogonScript"
+        }
+    ],
+    "T1134/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_pua_advancedrun_priv_user.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/EXEFilename",
+                "/CommandLine"
+            ]
+        }
+    ],
+    "T1574/011": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_registry_privilege_escalation_via_service_key.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "\\ImagePath",
+                "\\FailureCommand",
+                "\\ServiceDll"
+            ]
+        }
+    ],
+    "T1074/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_zip_compress.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "Compress-Archive -Path*-DestinationPath $env:TEMP",
+                "Compress-Archive -Path*-DestinationPath*\\AppData\\Local\\Temp\\",
+                "Compress-Archive -Path*-DestinationPath*:\\Windows\\Temp\\"
+            ]
+        }
+    ],
+    "T1620": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/windows/process_creation/proc_creation_win_powershell_base64_reflection_assembly_load.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKA",
+                "sAUgBlAGYAbABlAGMAdABpAG8AbgAuAEEAcwBzAGUAbQBiAGwAeQBdADoAOgBMAG8AYQBkACgA",
+                "bAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoA",
+                "AFsAcgBlAGYAbABlAGMAdABpAG8AbgAuAGEAcwBzAGUAbQBiAGwAeQBdADoAOgAoACIATABvAGEAZAAiAC",
+                "BbAHIAZQBmAGwAZQBjAHQAaQBvAG4ALgBhAHMAcwBlAG0AYgBsAHkAXQA6ADoAKAAiAEwAbwBhAGQAIgAp",
+                "AWwByAGUAZgBsAGUAYwB0AGkAbwBuAC4AYQBzAHMAZQBtAGIAbAB5AF0AOgA6ACgAIgBMAG8AYQBkACIAK",
+                "WwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6ACgAIgBMAG8AYQBkACIAKQ",
+                "sAUgBlAGYAbABlAGMAdABpAG8AbgAuAEEAcwBzAGUAbQBiAGwAeQBdADoAOgAoACIATABvAGEAZAAiACkA",
+                "bAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoAKAAiAEwAbwBhAGQAIgApA",
+                "WwByAGUAZgBsAGUAYwB0AGkAbwBuAC4AYQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKA",
+                "sAcgBlAGYAbABlAGMAdABpAG8AbgAuAGEAcwBzAGUAbQBiAGwAeQBdADoAOgBMAG8AYQBkACgA",
+                "bAHIAZQBmAGwAZQBjAHQAaQBvAG4ALgBhAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoA"
+            ]
+        }
+    ],
+    "T1068": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executescript.yml",
+            "key": "CommandLine|contains",
+            "values": "/etc/opt/microsoft/scx/conf/tmpdir/scx"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_sudo_cve_2019_14287.yml",
+            "key": "CommandLine|contains",
+            "values": " -u#"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executeshellcommand.yml",
+            "key": "CommandLine|contains",
+            "values": "/bin/sh"
+        }
+    ],
+    "T1203": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executescript.yml",
+            "key": "CommandLine|contains",
+            "values": "/etc/opt/microsoft/scx/conf/tmpdir/scx"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executeshellcommand.yml",
+            "key": "CommandLine|contains",
+            "values": "/bin/sh"
+        }
+    ],
+    "T1071/001": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_susp_curl_useragent.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -A ",
+                " --user-agent "
+            ]
+        }
+    ],
+    "T1592/004": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_cat_sudoers.yml",
+            "key": "CommandLine|contains",
+            "values": " /etc/sudoers"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_susp_recon_indicators.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " -name .htpasswd",
+                " -perm -4000 "
+            ]
+        }
+    ],
+    "T1014": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_triple_cross_rootkit_install.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                " qdisc ",
+                " filter "
+            ]
+        }
+    ],
+    "T1548/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_sudo_cve_2019_14287.yml",
+            "key": "CommandLine|contains",
+            "values": " -u#"
+        }
+    ],
+    "T1059/004": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_bpftrace_unsafe_option_usage.yml",
+            "key": "CommandLine|contains",
+            "values": "--unsafe"
+        }
+    ],
+    "T1562/003": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_esxcli_syslog_config_change.yml",
+            "key": "CommandLine|contains",
+            "values": " set"
+        }
+    ],
+    "T1222/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_susp_chmod_directories.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/tmp/",
+                "/.Library/",
+                "/etc/",
+                "/opt/"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_chattr_immutable_removal.yml",
+            "key": "CommandLine|contains",
+            "values": " -i "
+        }
+    ],
+    "T1007": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_crontab_enumeration.yml",
+            "key": "CommandLine|contains",
+            "values": " -l"
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_esxcli_vm_discovery.yml",
+            "key": "CommandLine|contains",
+            "values": "vm process"
+        }
+    ],
+    "T1070/002": [
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_clear_logs.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "/var/log",
+                "/var/spool/mail"
+            ]
+        },
+        {
+            "rule": "/home/marcos/CyberGraphDB/CyberGraphDB/CAPEC/BUILDING_FOLDER/sigma/rules/linux/process_creation/proc_creation_lnx_clear_syslog.yml",
+            "key": "CommandLine|contains",
+            "values": [
+                "rm /var/log/syslog",
+                "rm -r /var/log/syslog",
+                "rm -f /var/log/syslog",
+                "rm -rf /var/log/syslog",
+                "unlink /var/log/syslog",
+                "unlink -r /var/log/syslog",
+                "unlink -f /var/log/syslog",
+                "unlink -rf /var/log/syslog",
+                "mv /var/log/syslog",
+                " >/var/log/syslog",
+                " > /var/log/syslog"
+            ]
+        }
+    ]
+}
