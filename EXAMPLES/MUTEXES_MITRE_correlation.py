@@ -1,0 +1,91 @@
+from neo4j import GraphDatabase
+from collections import defaultdict
+import json
+
+# Connessione a Neo4j
+uri = "bolt://localhost:7688"
+user = "neo4j"
+password = "malware_profiler"
+
+driver = GraphDatabase.driver(uri, auth=(user, password))
+
+def extract_tactics(tx):
+    query = """
+    MATCH (b:MalwareBehavior)-[:related_to]->(i:MalwareObjective)
+    RETURN b.external_references_0_external_id AS technique_id, i.name AS tactic_name
+    """
+    result = tx.run(query)
+    technique_to_tactic = {}
+    for record in result:
+        technique_id = record["technique_id"]
+        tactic_name = record["tactic_name"]
+        technique_to_tactic[technique_id] = tactic_name
+    return technique_to_tactic
+
+with driver.session() as session:
+    technique_to_tactic = session.read_transaction(extract_tactics)
+
+print("Extracted Tactics:")
+print(json.dumps(technique_to_tactic, indent=4))
+
+
+from elasticsearch import Elasticsearch
+from collections import defaultdict, Counter
+import json
+
+# Connessione a Elasticsearch
+es = Elasticsearch(
+    hosts=[{
+        'host': 'localhost',
+        'port': 9200,
+        'scheme': 'http'
+    }]
+)
+
+# Query per ottenere documenti con tecniche MITRE ATT&CK e mutexes creati
+query = {
+    "query": {
+        "bool": {
+            "must": [
+                {"exists": {"field": "data.attributes.mitre_attack_techniques.id"}},
+                {"exists": {"field": "data.attributes.mutexes_created"}},
+            ]
+        }
+    },
+    "_source": ["data.id", "data.attributes.mitre_attack_techniques.id", "data.attributes.mutexes_created"]
+}
+
+# Esegui la query
+response = es.search(index="malware_reports", body=query, size=10000)
+
+# Analisi delle tecniche MITRE ATT&CK e operazioni sui mutexes
+tactic_to_mutex_counter = defaultdict(Counter)
+
+for hit in response['hits']['hits']:
+    data_list = hit['_source'].get('data', [])
+    for data_item in data_list:
+        mitre_techniques = data_item.get('attributes', {}).get('mitre_attack_techniques', [])
+        mutexes_created = data_item.get('attributes', {}).get('mutexes_created', [])
+        
+        for technique in mitre_techniques:
+            technique_id = technique.get('id')
+            tactic_name = technique_to_tactic.get(technique_id)
+            if tactic_name:
+                for mutex in mutexes_created:
+                    if mutex:
+                        tactic_to_mutex_counter[tactic_name].update([mutex])
+
+# Calcolo delle percentuali
+results = {}
+for tactic, counter in tactic_to_mutex_counter.items():
+    total = sum(counter.values())
+    percentages = {mutex: f"{(count / total) * 100:.2f}%" for mutex, count in counter.items()}
+    results[tactic] = percentages
+
+# Stampa i risultati
+print("MITRE ATT&CK Tactics e Mutexes creati correlati:")
+print(json.dumps(results, indent=4))
+
+# Salva i risultati in un file
+with open("tactic_to_mutexes_created_correlations.json", "w") as f:
+    json.dump(results, f, indent=4)
